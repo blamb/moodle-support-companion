@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moodle Support Companion — TRU Learning Technology &amp; Innovation</title>
+  <meta name="description" content="A diagnostic support tool for learning technologists at Thompson Rivers University. Investigate, diagnose, and resolve Moodle issues through structured AI-powered conversations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --purple-dark: #1a0e3e;
+      --purple: #2d1b69;
+      --purple-mid: #4a2d8a;
+      --purple-light: #f0eef7;
+      --gold: #f5a623;
+      --gold-hover: #e09410;
+      --gold-light: #fef9ee;
+      --navy: #241c55;
+      --charcoal: #424242;
+      --gray-light: #f7f6fa;
+      --teal: #00b18f;
+      --blue: #1d8cef;
+      --pink: #f22e8a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--charcoal);
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    /* ---- Layout ---- */
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+    .container-wide { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* ---- Gold top bar ---- */
+    .gold-bar { height: 4px; background: var(--gold); }
+
+    /* ---- Header / Hero ---- */
+    .hero {
+      background: linear-gradient(135deg, #1a0e3e 0%, #2d1b69 40%, #4a2d8a 70%, #6b3fa0 100%);
+      color: #fff;
+      padding: 48px 0 56px;
+    }
+    .hero-inner { display: flex; align-items: center; gap: 24px; margin-bottom: 32px; }
+    .hero-logo { height: 56px; }
+    .hero-title-group { }
+    .hero-subtitle {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 2px;
+    }
+    .hero-title { font-size: 2rem; font-weight: 800; line-height: 1.2; }
+    .hero-desc {
+      font-size: 1.1rem; line-height: 1.7; color: rgba(255,255,255,0.85);
+      max-width: 680px;
+    }
+    .hero-desc strong { color: #fff; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .hero-badge {
+      font-size: 0.75rem; font-weight: 600; padding: 4px 14px;
+      border-radius: 999px; background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    /* ---- Nav ---- */
+    .nav {
+      background: #fff; border-bottom: 1px solid #e8e5f0;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-inner {
+      display: flex; gap: 4px; padding: 8px 0;
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+    }
+    .nav a {
+      font-size: 0.82rem; font-weight: 500; color: var(--navy);
+      text-decoration: none; padding: 8px 16px; border-radius: 8px;
+      white-space: nowrap; transition: all 0.15s;
+    }
+    .nav a:hover { background: var(--purple-light); color: var(--purple); }
+
+    /* ---- Sections ---- */
+    section { padding: 56px 0; }
+    section:nth-child(even) { background: var(--gray-light); }
+    .section-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: 1.6rem; font-weight: 800; color: var(--navy);
+      margin-bottom: 12px; line-height: 1.25;
+    }
+    .section-desc {
+      font-size: 1rem; color: #6b7280; max-width: 640px; margin-bottom: 32px;
+    }
+
+    /* ---- Feature cards ---- */
+    .features-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .feature-card {
+      background: #fff; border: 1px solid #e8e5f0; border-radius: 12px;
+      padding: 24px; transition: box-shadow 0.2s;
+    }
+    .feature-card:hover { box-shadow: 0 4px 20px rgba(45,27,105,0.08); }
+    .feature-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; margin-bottom: 14px;
+    }
+    .feature-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .feature-card p { font-size: 0.88rem; color: #6b7280; line-height: 1.55; }
+
+    /* ---- How-to guide ---- */
+    .guide-section { margin-bottom: 40px; }
+    .guide-section h3 {
+      font-size: 1.15rem; font-weight: 700; color: var(--navy);
+      margin-bottom: 16px; padding-bottom: 8px;
+      border-bottom: 2px solid var(--gold);
+    }
+    .step {
+      display: flex; gap: 16px; margin-bottom: 24px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%;
+      background: var(--purple); color: #fff; font-size: 0.85rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; margin-top: 2px;
+    }
+    .step-content { flex: 1; }
+    .step-content h4 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+    .step-content p { font-size: 0.88rem; color: #6b7280; margin-bottom: 8px; }
+
+    /* ---- Code blocks ---- */
+    .code-block {
+      background: #1e1b2e; color: #e2dff0; border-radius: 10px;
+      padding: 16px 20px; font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 0.82rem; line-height: 1.7; overflow-x: auto;
+      position: relative; margin: 8px 0 12px;
+    }
+    .code-block .comment { color: #7c78a0; }
+    .code-block .cmd { color: #c4b5fd; }
+    .code-block .url { color: var(--gold); }
+
+    .copy-btn {
+      position: absolute; top: 8px; right: 8px;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.6); border-radius: 6px; padding: 4px 10px;
+      font-size: 0.7rem; cursor: pointer; transition: all 0.15s;
+    }
+    .copy-btn:hover { background: rgba(255,255,255,0.2); color: #fff; }
+    .copy-btn.copied { background: var(--teal); color: #fff; border-color: var(--teal); }
+
+    /* ---- Callout boxes ---- */
+    .callout {
+      border-radius: 10px; padding: 16px 20px;
+      font-size: 0.88rem; line-height: 1.6; margin: 16px 0;
+    }
+    .callout-info {
+      background: #eef6ff; border-left: 4px solid var(--blue); color: #1e3a5f;
+    }
+    .callout-warning {
+      background: #fef9ee; border-left: 4px solid var(--gold); color: #7a5c1a;
+    }
+    .callout-success {
+      background: #e6f7f4; border-left: 4px solid var(--teal); color: #0a5c4a;
+    }
+    .callout strong { font-weight: 600; }
+
+    /* ---- Tabs (Mac / Windows) ---- */
+    .os-tabs { display: flex; gap: 4px; margin-bottom: 0; }
+    .os-tab {
+      padding: 10px 24px; font-size: 0.85rem; font-weight: 600;
+      border: 1px solid #e8e5f0; border-bottom: none;
+      border-radius: 10px 10px 0 0; background: var(--gray-light);
+      color: #9ca3af; cursor: pointer; transition: all 0.15s;
+    }
+    .os-tab.active {
+      background: #fff; color: var(--navy);
+      border-color: #e8e5f0;
+    }
+    .os-panel {
+      display: none; background: #fff; border: 1px solid #e8e5f0;
+      border-radius: 0 10px 10px 10px; padding: 28px;
+    }
+    .os-panel.active { display: block; }
+
+    /* ---- Workflow diagram ---- */
+    .workflow {
+      display: flex; align-items: center; justify-content: center;
+      gap: 12px; flex-wrap: wrap; margin: 24px 0;
+    }
+    .workflow-step {
+      text-align: center; padding: 16px 20px; border-radius: 12px;
+      min-width: 140px;
+    }
+    .workflow-step .emoji { font-size: 1.5rem; margin-bottom: 4px; }
+    .workflow-step .label { font-size: 0.82rem; font-weight: 700; }
+    .workflow-step .desc { font-size: 0.72rem; color: rgba(255,255,255,0.7); margin-top: 2px; }
+    .workflow-arrow { font-size: 1.2rem; color: #d1d5db; }
+    .wf-explore { background: var(--blue); color: #fff; }
+    .wf-diagnose { background: var(--navy); color: #fff; }
+    .wf-resolve { background: var(--teal); color: #fff; }
+
+    /* ---- Footer ---- */
+    footer {
+      background: var(--purple-dark); color: rgba(255,255,255,0.6);
+      padding: 32px 0; text-align: center; font-size: 0.82rem;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 640px) {
+      .hero-title { font-size: 1.5rem; }
+      .hero-inner { flex-direction: column; align-items: flex-start; }
+      .section-title { font-size: 1.3rem; }
+      .workflow { flex-direction: column; }
+      .workflow-arrow { transform: rotate(90deg); }
+      .step { gap: 12px; }
+      .os-tab { padding: 8px 14px; font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="gold-bar"></div>
+
+<!-- ==================== HERO ==================== -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <img src="lti-logo.png" alt="LT&I Logo" class="hero-logo">
+      <div class="hero-title-group">
+        <p class="hero-subtitle">Thompson Rivers University</p>
+        <h1 class="hero-title">Moodle Support Companion</h1>
+      </div>
+    </div>
+    <p class="hero-desc">
+      A diagnostic support tool for the <strong>Learning Technology &amp; Innovation</strong> team.
+      Not a chatbot &mdash; a deliberative diagnostic tool that helps learning technologists
+      <strong>investigate before solving</strong>, track issues over time, and build institutional knowledge.
+    </p>
+    <div class="hero-badges">
+      <span class="hero-badge">AI-Powered Diagnostics</span>
+      <span class="hero-badge">Knowledge Base Search</span>
+      <span class="hero-badge">Case Tracking &amp; Analytics</span>
+      <span class="hero-badge">Course Health Analysis</span>
+      <span class="hero-badge">TeamDynamix Integration</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== NAV ==================== -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#guide">Using the Tool</a>
+      <a href="#install">Installation</a>
+      <a href="#architecture">Architecture</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ==================== FEATURES ==================== -->
+<section id="features">
+  <div class="container-wide">
+    <p class="section-label">Capabilities</p>
+    <h2 class="section-title">What the Companion Does</h2>
+    <p class="section-desc">
+      Built specifically for the LT&I workflow &mdash; from the initial support email through diagnosis to resolution and team learning.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon" style="background: #eef6ff; color: var(--blue);">&#x1F50D;</div>
+        <h3>Diagnostic Conversations</h3>
+        <p>Structured EXPLORE &rarr; DIAGNOSE &rarr; RESOLVE phases. The Companion asks follow-up questions instead of jumping to conclusions, because users often report symptoms, not root causes.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: var(--gold-light); color: var(--gold-hover);">&#x1F4DA;</div>
+        <h3>Knowledge Base Search</h3>
+        <p>Semantic search across Moodle documentation, TRU FAQs, WordPress content, and internal guides. Relevant documentation is automatically pulled into every diagnostic conversation.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: #f0eef7; color: var(--purple);">&#x1F517;</div>
+        <h3>Moodle URL Parsing</h3>
+        <p>Paste any <code>moodle.tru.ca</code> URL and the Companion automatically extracts the course ID, module type, and activity — giving instant context for the conversation.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: #e6f7f4; color: var(--teal);">&#x1F4E6;</div>
+        <h3>Course Context Upload</h3>
+        <p>Upload <code>.mbz</code> course backups, screenshots, or saved Moodle HTML pages. The Companion analyzes course structure, settings, and configuration without needing admin access.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: #fde8f2; color: var(--pink);">&#x1FA7A;</div>
+        <h3>Course Health Checks</h3>
+        <p>Automated detection of common configuration issues: completion tracking gaps, gradebook inconsistencies, generic activity names, format mismatches, and more.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: var(--purple-light); color: var(--navy);">&#x1F4CB;</div>
+        <h3>Case Tracking</h3>
+        <p>Save diagnostic sessions as cases with tags, difficulty ratings, and full conversation history. Build institutional memory your team can search and learn from.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: #eef6ff; color: var(--blue);">&#x1F4CA;</div>
+        <h3>Analytics Dashboard</h3>
+        <p>See common issues at a glance: trending categories, difficulty distribution, resolution times, top Moodle modules, and a 12-week timeline of team activity.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: var(--gold-light); color: var(--gold-hover);">&#x2709;&#xFE0F;</div>
+        <h3>Draft Reply Generator</h3>
+        <p>Generate professional replies ready to paste into TeamDynamix. Choose the audience (instructor, student, or admin) and tone (professional, friendly, or brief).</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: #e6f7f4; color: var(--teal);">&#x1F91D;</div>
+        <h3>Sharing &amp; Export</h3>
+        <p>Share a conversation with a colleague via a direct link. Export sessions as Markdown for training materials. Export all cases as CSV for reporting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== HOW IT WORKS ==================== -->
+<section id="how-it-works">
+  <div class="container">
+    <p class="section-label">Methodology</p>
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-desc">
+      The Companion follows a structured diagnostic methodology &mdash; it resists jumping to solutions until it understands the problem.
+    </p>
+
+    <div class="workflow">
+      <div class="workflow-step wf-explore">
+        <div class="emoji">&#x1F50D;</div>
+        <div class="label">EXPLORE</div>
+        <div class="desc">Gather info, ask questions</div>
+      </div>
+      <div class="workflow-arrow">&rarr;</div>
+      <div class="workflow-step wf-diagnose">
+        <div class="emoji">&#x1F9E0;</div>
+        <div class="label">DIAGNOSE</div>
+        <div class="desc">Analyze, rank causes</div>
+      </div>
+      <div class="workflow-arrow">&rarr;</div>
+      <div class="workflow-step wf-resolve">
+        <div class="emoji">&#x2705;</div>
+        <div class="label">RESOLVE</div>
+        <div class="desc">Fix steps, draft reply</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 32px;">
+      <h3 style="font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 12px;">For each support issue, the Companion:</h3>
+      <ol style="font-size: 0.9rem; color: #6b7280; line-height: 2; padding-left: 20px;">
+        <li>Searches the knowledge base for relevant Moodle documentation and past cases</li>
+        <li>Parses any Moodle URLs to identify the course, module, and activity involved</li>
+        <li>Suggests checks for the <strong>technologist to perform</strong> and questions to <strong>ask the end user</strong></li>
+        <li>Cross-references the knowledge base and similar past cases before diagnosing</li>
+        <li>Ranks possible causes by likelihood and provides step-by-step resolution</li>
+        <li>Offers to draft a reply for the user, save the case for team learning, or create a KB article</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== USING THE TOOL ==================== -->
+<section id="guide">
+  <div class="container">
+    <p class="section-label">User Guide</p>
+    <h2 class="section-title">Using the Companion</h2>
+    <p class="section-desc">
+      The tool has three main tabs: Diagnose, Search, and Cases.
+    </p>
+
+    <!-- Diagnose tab -->
+    <div class="guide-section">
+      <h3>&#x1F4A1; Diagnose Tab &mdash; Diagnostic Conversations</h3>
+      <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 20px;">
+        This is where you investigate support issues. Start by describing the problem as you understand it.
+      </p>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Describe the issue</h4>
+          <p>Type the support issue into the message box. Include as much context as you have: what the user reported, the course name, and any Moodle URLs.</p>
+          <div class="callout callout-info">
+            <strong>Tip:</strong> Pasting a <code>moodle.tru.ca</code> URL will automatically be detected and parsed for course/activity context.
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Add course context (optional)</h4>
+          <p>Use the toolbar buttons to upload additional context:</p>
+          <ul style="font-size: 0.88rem; color: #6b7280; padding-left: 20px; margin-top: 4px;">
+            <li><strong>.mbz Backup</strong> &mdash; Upload a Moodle course backup for full structure analysis and health checks</li>
+            <li><strong>Screenshot</strong> &mdash; Upload a screenshot of the problem. The Companion can analyze images visually.</li>
+            <li><strong>Saved Page</strong> &mdash; Save a Moodle page (Cmd+S / Ctrl+S in your browser) and upload the HTML file for settings extraction</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Follow the diagnostic flow</h4>
+          <p>The Companion will guide you through investigation. Watch for the mode badge:</p>
+          <ul style="font-size: 0.88rem; color: #6b7280; padding-left: 20px; margin-top: 4px;">
+            <li><span style="color: var(--blue); font-weight: 600;">EXPLORE</span> &mdash; Gathering information. It will suggest things for you to check and questions to ask the user.</li>
+            <li><span style="color: var(--navy); font-weight: 600;">DIAGNOSE</span> &mdash; Analyzing the evidence and ranking possible causes.</li>
+            <li><span style="color: var(--teal); font-weight: 600;">RESOLVE</span> &mdash; Providing fix instructions and next steps.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>After resolution</h4>
+          <p>Once the issue is resolved, a prompt will appear with next steps:</p>
+          <ul style="font-size: 0.88rem; color: #6b7280; padding-left: 20px; margin-top: 4px;">
+            <li><strong>Save as Case</strong> &mdash; Add to the team's case database with tags and difficulty rating</li>
+            <li><strong>Draft Reply</strong> &mdash; Generate a professional reply for TeamDynamix, tailored to the audience</li>
+            <li><strong>Export</strong> &mdash; Download the session as a Markdown file for training or documentation</li>
+            <li><strong>Share</strong> &mdash; Copy a link so a colleague can view the conversation</li>
+            <li><strong>Draft KB Article</strong> &mdash; Have the Companion draft a knowledge base article about the issue</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search tab -->
+    <div class="guide-section">
+      <h3>&#x1F50E; Search Tab &mdash; Knowledge Base</h3>
+      <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 12px;">
+        Search across all ingested documentation using natural language. Results are ranked by semantic relevance, not just keyword matching. You can filter by source and click "Diagnose this issue" on any result to start a diagnostic conversation with that context pre-loaded.
+      </p>
+    </div>
+
+    <!-- Cases tab -->
+    <div class="guide-section">
+      <h3>&#x1F4CB; Cases Tab &mdash; Case Tracking &amp; Analytics</h3>
+      <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 12px;">
+        Browse and search past cases. Click any tag to filter. Switch to the <strong>Analytics</strong> view for aggregate insights across all cases: weekly trends, difficulty distribution, top modules, and common tags.
+      </p>
+      <p style="font-size: 0.9rem; color: #6b7280;">
+        Use the <strong>Export CSV</strong> button to download all case data for reporting in Excel or importing into TeamDynamix.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== INSTALLATION ==================== -->
+<section id="install">
+  <div class="container">
+    <p class="section-label">Setup</p>
+    <h2 class="section-title">Installation Guide</h2>
+    <p class="section-desc">
+      Step-by-step instructions to get the Companion running on your computer. Choose your operating system below. No prior experience with Terminal or command line is needed &mdash; just copy and paste each command exactly as shown.
+    </p>
+
+    <div class="callout callout-warning">
+      <strong>Before you start:</strong> You will need an <strong>Anthropic API key</strong> to power the AI features. Get one at <a href="https://console.anthropic.com/" target="_blank" style="color: var(--purple); font-weight: 600;">console.anthropic.com</a> &mdash; you'll need to create an account and add billing. The cost is roughly $0.01&ndash;0.05 per diagnostic conversation.
+    </div>
+
+    <!-- OS Tabs -->
+    <div class="os-tabs">
+      <button class="os-tab active" onclick="switchOS('mac')">&#x1F34E; Mac</button>
+      <button class="os-tab" onclick="switchOS('win')">&#x1FAA9; Windows</button>
+    </div>
+
+    <!-- ========== MAC PANEL ========== -->
+    <div id="panel-mac" class="os-panel active">
+
+      <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 20px;">Mac Installation</h3>
+
+      <!-- Step 1: Open Terminal -->
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Open Terminal</h4>
+          <p>Press <strong>Cmd + Space</strong> to open Spotlight, type <strong>Terminal</strong>, and press Enter. A window with a command prompt will appear. All the commands below are typed (or pasted) here.</p>
+        </div>
+      </div>
+
+      <!-- Step 2: Install Homebrew -->
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Install Homebrew (Mac package manager)</h4>
+          <p>If you're not sure whether you have Homebrew, run this first to check:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">brew --version</span>
+          </div>
+          <p>If you see a version number, skip to Step 3. If you see "command not found", install Homebrew by pasting this command and pressing Enter:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</span>
+          </div>
+          <p>Follow the on-screen prompts. It may ask for your Mac password (you won't see characters as you type &mdash; that's normal).</p>
+        </div>
+      </div>
+
+      <!-- Step 3: Install Python -->
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Install Python</h4>
+          <p>Check if you already have Python 3.11 or later:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">python3 --version</span>
+          </div>
+          <p>If the version is 3.11 or higher, skip to Step 4. Otherwise, install it:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">brew install python</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4: Install Node.js -->
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Install Node.js</h4>
+          <p>Check if you have Node.js 18 or later:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">node --version</span>
+          </div>
+          <p>If the version is 18 or higher, skip to Step 5. Otherwise:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">brew install node</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5: Get the project -->
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <h4>Download the project</h4>
+          <p><strong>Option A &mdash; From GitHub</strong> (if you have git):</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">cd ~/Desktop</span><br>
+            <span class="cmd">git clone https://github.com/blamb/moodle-support-companion.git</span><br>
+            <span class="cmd">cd moodle-support-companion</span>
+          </div>
+          <p><strong>Option B &mdash; From a Zip file:</strong></p>
+          <ol style="font-size: 0.88rem; color: #6b7280; padding-left: 20px;">
+            <li>Download the Zip file and save it to your Desktop</li>
+            <li>Double-click to extract it</li>
+            <li>In Terminal, run:</li>
+          </ol>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">cd ~/Desktop/moodle-support-companion</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 6: Install backend dependencies -->
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <h4>Install backend dependencies</h4>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">cd backend</span><br>
+            <span class="cmd">pip3 install -r requirements.txt</span>
+          </div>
+          <div class="callout callout-info">
+            <strong>Note:</strong> The first run downloads AI model files (~90MB) for the knowledge base search. This is a one-time download.
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 7: Install frontend dependencies -->
+      <div class="step">
+        <div class="step-num">7</div>
+        <div class="step-content">
+          <h4>Install frontend dependencies</h4>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">cd ../frontend</span><br>
+            <span class="cmd">npm install</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 8: Set your API key -->
+      <div class="step">
+        <div class="step-num">8</div>
+        <div class="step-content">
+          <h4>Set your API key</h4>
+          <p>Go back to the backend folder and set your Anthropic API key. Replace <code>your-key-here</code> with your actual key:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">cd ../backend</span><br>
+            <span class="cmd">export ANTHROPIC_API_KEY="your-key-here"</span>
+          </div>
+          <div class="callout callout-warning">
+            <strong>Important:</strong> You need to run the <code>export</code> command every time you open a new Terminal window. To make it permanent, you can add it to your shell profile &mdash; ask your team lead if unsure.
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 9: Start the backend -->
+      <div class="step">
+        <div class="step-num">9</div>
+        <div class="step-content">
+          <h4>Start the backend server</h4>
+          <p>Make sure you are in the <code>backend</code> folder, then run:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">python3 -m uvicorn app.main:app --port 8000 --reload</span>
+          </div>
+          <p>You should see output ending with something like <code>Uvicorn running on http://127.0.0.1:8000</code>. <strong>Leave this Terminal window open.</strong></p>
+        </div>
+      </div>
+
+      <!-- Step 10: Start the frontend -->
+      <div class="step">
+        <div class="step-num">10</div>
+        <div class="step-content">
+          <h4>Start the frontend (in a new Terminal window)</h4>
+          <p>Open a <strong>new</strong> Terminal window (<strong>Cmd + N</strong>) and run:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">cd ~/Desktop/moodle-support-companion/frontend</span><br>
+            <span class="cmd">npm run dev</span>
+          </div>
+          <p>You should see output with a URL like <code>http://localhost:5173</code>. <strong>Leave this window open too.</strong></p>
+        </div>
+      </div>
+
+      <!-- Step 11: Open the app -->
+      <div class="step">
+        <div class="step-num">11</div>
+        <div class="step-content">
+          <h4>Open the app</h4>
+          <p>Open your web browser and go to:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="url">http://localhost:5173</span>
+          </div>
+          <div class="callout callout-success">
+            <strong>You're ready!</strong> You should see the Moodle Support Companion with the LT&I logo and three tabs: Diagnose, Search, and Cases.
+          </div>
+        </div>
+      </div>
+
+      <!-- Stopping -->
+      <div style="margin-top: 32px; padding: 20px; background: var(--gray-light); border-radius: 10px;">
+        <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Stopping the app</h4>
+        <p style="font-size: 0.88rem; color: #6b7280;">
+          To stop the app, press <strong>Ctrl + C</strong> in each of the two Terminal windows. To start it again later, repeat Steps 8&ndash;11 (set the API key, start backend, start frontend, open browser).
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ========== WINDOWS PANEL ========== -->
+    <div id="panel-win" class="os-panel">
+
+      <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 20px;">Windows Installation</h3>
+
+      <!-- Step 1: Open PowerShell -->
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Open PowerShell</h4>
+          <p>Press the <strong>Windows key</strong>, type <strong>PowerShell</strong>, and click <strong>Windows PowerShell</strong>. A blue command window will appear. All the commands below are typed (or pasted) here.</p>
+          <div class="callout callout-info">
+            <strong>Tip:</strong> To paste in PowerShell, right-click in the window.
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Install Python -->
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Install Python</h4>
+          <p>Check if you already have Python 3.11 or later:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">python --version</span>
+          </div>
+          <p>If the version is 3.11 or higher, skip to Step 3. Otherwise:</p>
+          <ol style="font-size: 0.88rem; color: #6b7280; padding-left: 20px;">
+            <li>Go to <a href="https://www.python.org/downloads/" target="_blank" style="color: var(--purple); font-weight: 500;">python.org/downloads</a></li>
+            <li>Click the big yellow <strong>"Download Python"</strong> button</li>
+            <li>Run the installer</li>
+            <li><strong>IMPORTANT:</strong> Check the box that says <strong>"Add Python to PATH"</strong> at the bottom of the installer before clicking Install</li>
+            <li>After installation, <strong>close and reopen PowerShell</strong></li>
+          </ol>
+          <div class="callout callout-warning">
+            <strong>Don't skip the PATH checkbox!</strong> If you miss it, the <code>python</code> command won't work. You'd need to uninstall and reinstall Python with the box checked.
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Install Node.js -->
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Install Node.js</h4>
+          <p>Check if you have Node.js 18 or later:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">node --version</span>
+          </div>
+          <p>If the version is 18 or higher, skip to Step 4. Otherwise:</p>
+          <ol style="font-size: 0.88rem; color: #6b7280; padding-left: 20px;">
+            <li>Go to <a href="https://nodejs.org/" target="_blank" style="color: var(--purple); font-weight: 500;">nodejs.org</a></li>
+            <li>Click the <strong>LTS</strong> (Long Term Support) download button</li>
+            <li>Run the installer with all default options</li>
+            <li><strong>Close and reopen PowerShell</strong> after installation</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Step 4: Install Git (optional) -->
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Install Git (only if downloading from GitHub)</h4>
+          <p>Check if you have git:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">git --version</span>
+          </div>
+          <p>If you see a version number, great. If not, go to <a href="https://git-scm.com/download/win" target="_blank" style="color: var(--purple); font-weight: 500;">git-scm.com/download/win</a>, download and install with all defaults. Then <strong>close and reopen PowerShell</strong>.</p>
+          <p style="margin-top: 8px;">If you're using the Zip file instead, you can skip this.</p>
+        </div>
+      </div>
+
+      <!-- Step 5: Get the project -->
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <h4>Download the project</h4>
+          <p><strong>Option A &mdash; From GitHub:</strong></p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">cd ~\Desktop</span><br>
+            <span class="cmd">git clone https://github.com/blamb/moodle-support-companion.git</span><br>
+            <span class="cmd">cd moodle-support-companion</span>
+          </div>
+          <p><strong>Option B &mdash; From a Zip file:</strong></p>
+          <ol style="font-size: 0.88rem; color: #6b7280; padding-left: 20px;">
+            <li>Download the Zip file and save it to your Desktop</li>
+            <li>Right-click the Zip &rarr; <strong>Extract All</strong> &rarr; Extract</li>
+            <li>In PowerShell, run:</li>
+          </ol>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">cd ~\Desktop\moodle-support-companion</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 6: Install backend dependencies -->
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <h4>Install backend dependencies</h4>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">cd backend</span><br>
+            <span class="cmd">pip install -r requirements.txt</span>
+          </div>
+          <div class="callout callout-info">
+            <strong>Note:</strong> If <code>pip</code> isn't recognized, try <code>pip3</code> instead. The first run downloads AI model files (~90MB) &mdash; this is a one-time download.
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 7: Install frontend dependencies -->
+      <div class="step">
+        <div class="step-num">7</div>
+        <div class="step-content">
+          <h4>Install frontend dependencies</h4>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">cd ..\frontend</span><br>
+            <span class="cmd">npm install</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 8: Set your API key -->
+      <div class="step">
+        <div class="step-num">8</div>
+        <div class="step-content">
+          <h4>Set your API key</h4>
+          <p>Go back to the backend folder and set your Anthropic API key. Replace <code>your-key-here</code> with your actual key:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">cd ..\backend</span><br>
+            <span class="cmd">$env:ANTHROPIC_API_KEY="your-key-here"</span>
+          </div>
+          <div class="callout callout-warning">
+            <strong>Important:</strong> You need to run the <code>$env:</code> command every time you open a new PowerShell window. To make it permanent, search for "Environment Variables" in Windows Settings and add <code>ANTHROPIC_API_KEY</code> as a user variable.
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 9: Start the backend -->
+      <div class="step">
+        <div class="step-num">9</div>
+        <div class="step-content">
+          <h4>Start the backend server</h4>
+          <p>Make sure you are in the <code>backend</code> folder, then run:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">python -m uvicorn app.main:app --port 8000 --reload</span>
+          </div>
+          <p>You should see output ending with <code>Uvicorn running on http://127.0.0.1:8000</code>. <strong>Leave this PowerShell window open.</strong></p>
+          <div class="callout callout-info">
+            <strong>Note:</strong> If <code>python</code> isn't recognized, try <code>python3</code> instead.
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 10: Start the frontend -->
+      <div class="step">
+        <div class="step-num">10</div>
+        <div class="step-content">
+          <h4>Start the frontend (in a new PowerShell window)</h4>
+          <p>Open a <strong>new</strong> PowerShell window and run:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="cmd">cd ~\Desktop\moodle-support-companion\frontend</span><br>
+            <span class="cmd">npm run dev</span>
+          </div>
+          <p>You should see a URL like <code>http://localhost:5173</code>. <strong>Leave this window open too.</strong></p>
+        </div>
+      </div>
+
+      <!-- Step 11: Open the app -->
+      <div class="step">
+        <div class="step-num">11</div>
+        <div class="step-content">
+          <h4>Open the app</h4>
+          <p>Open your web browser and go to:</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <span class="url">http://localhost:5173</span>
+          </div>
+          <div class="callout callout-success">
+            <strong>You're ready!</strong> You should see the Moodle Support Companion with the LT&I logo and three tabs: Diagnose, Search, and Cases.
+          </div>
+        </div>
+      </div>
+
+      <!-- Stopping -->
+      <div style="margin-top: 32px; padding: 20px; background: var(--gray-light); border-radius: 10px;">
+        <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Stopping the app</h4>
+        <p style="font-size: 0.88rem; color: #6b7280;">
+          To stop the app, press <strong>Ctrl + C</strong> in each of the two PowerShell windows. To start it again later, repeat Steps 8&ndash;11 (set the API key, start backend, start frontend, open browser).
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Troubleshooting -->
+    <div style="margin-top: 40px;">
+      <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gold);">
+        Troubleshooting
+      </h3>
+
+      <details style="margin-bottom: 12px;">
+        <summary style="font-size: 0.9rem; font-weight: 600; color: var(--navy); cursor: pointer; padding: 8px 0;">
+          "No module named app" when starting the backend
+        </summary>
+        <div style="font-size: 0.88rem; color: #6b7280; padding: 8px 0 8px 16px;">
+          Make sure you are in the <code>backend</code> folder when you run the uvicorn command. Run <code>pwd</code> (Mac) or <code>Get-Location</code> (Windows) to check &mdash; it should end with <code>/backend</code> or <code>\backend</code>.
+        </div>
+      </details>
+
+      <details style="margin-bottom: 12px;">
+        <summary style="font-size: 0.9rem; font-weight: 600; color: var(--navy); cursor: pointer; padding: 8px 0;">
+          "Could not resolve authentication method" or API key errors
+        </summary>
+        <div style="font-size: 0.88rem; color: #6b7280; padding: 8px 0 8px 16px;">
+          Your API key isn't set. Run the <code>export</code> (Mac) or <code>$env:</code> (Windows) command from Step 8 again in the same terminal window where you start the backend. Make sure there are no extra spaces in the key.
+        </div>
+      </details>
+
+      <details style="margin-bottom: 12px;">
+        <summary style="font-size: 0.9rem; font-weight: 600; color: var(--navy); cursor: pointer; padding: 8px 0;">
+          "Cannot connect to the backend" in the app
+        </summary>
+        <div style="font-size: 0.88rem; color: #6b7280; padding: 8px 0 8px 16px;">
+          The backend server isn't running. Check the first Terminal/PowerShell window. If it closed or shows an error, go back to Step 9 and start it again.
+        </div>
+      </details>
+
+      <details style="margin-bottom: 12px;">
+        <summary style="font-size: 0.9rem; font-weight: 600; color: var(--navy); cursor: pointer; padding: 8px 0;">
+          The app loads but shows a blank page
+        </summary>
+        <div style="font-size: 0.88rem; color: #6b7280; padding: 8px 0 8px 16px;">
+          Make sure you ran <code>npm install</code> in the frontend folder (Step 7) and that the frontend dev server is running (Step 10). Check the second Terminal/PowerShell window for errors.
+        </div>
+      </details>
+
+      <details style="margin-bottom: 12px;">
+        <summary style="font-size: 0.9rem; font-weight: 600; color: var(--navy); cursor: pointer; padding: 8px 0;">
+          pip or npm command not found
+        </summary>
+        <div style="font-size: 0.88rem; color: #6b7280; padding: 8px 0 8px 16px;">
+          Close and reopen your Terminal/PowerShell after installing Python or Node.js. On Windows, make sure you checked "Add Python to PATH" during installation. On Mac, try <code>pip3</code> instead of <code>pip</code>.
+        </div>
+      </details>
+
+      <details style="margin-bottom: 12px;">
+        <summary style="font-size: 0.9rem; font-weight: 600; color: var(--navy); cursor: pointer; padding: 8px 0;">
+          Port already in use
+        </summary>
+        <div style="font-size: 0.88rem; color: #6b7280; padding: 8px 0 8px 16px;">
+          Another program is using port 8000 or 5173. Either close that program, or use a different port. For the backend: <code>python3 -m uvicorn app.main:app --port 8001 --reload</code>. You'll also need to update the frontend proxy settings if you change the backend port.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== ARCHITECTURE ==================== -->
+<section id="architecture">
+  <div class="container">
+    <p class="section-label">Technical Details</p>
+    <h2 class="section-title">Architecture</h2>
+    <p class="section-desc">
+      For those interested in the technical underpinnings.
+    </p>
+
+    <div class="code-block" style="font-size: 0.78rem; line-height: 1.8;">
+<span class="comment">┌─────────────────────────────────┐</span>
+<span class="comment">│</span>  React + Tailwind + TypeScript  <span class="comment">│</span>  <span class="comment">&larr; Frontend (Vite, port 5173)</span>
+<span class="comment">└───────────────┬─────────────────┘</span>
+                <span class="comment">│ SSE streaming</span>
+<span class="comment">┌───────────────┴─────────────────┐</span>
+<span class="comment">│</span>          FastAPI Backend         <span class="comment">│</span>  <span class="comment">&larr; API server (port 8000)</span>
+<span class="comment">├──────────┬──────────┬───────────┤</span>
+<span class="comment">│</span> ChromaDB <span class="comment">│</span> SQLite   <span class="comment">│</span> Claude    <span class="comment">│</span>
+<span class="comment">│</span> vectors  <span class="comment">│</span> cases    <span class="comment">│</span> API       <span class="comment">│</span>
+<span class="comment">│</span> (384d)   <span class="comment">│</span> + FTS5   <span class="comment">│</span> (Sonnet)  <span class="comment">│</span>
+<span class="comment">└──────────┴──────────┴───────────┘</span>
+    </div>
+
+    <div class="features-grid" style="margin-top: 28px;">
+      <div class="feature-card">
+        <h3>Backend</h3>
+        <p>Python / FastAPI with Server-Sent Events for real-time streaming. Uvicorn ASGI server with hot-reload for development.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Vector Store</h3>
+        <p>ChromaDB with <code>all-MiniLM-L6-v2</code> sentence-transformer embeddings (384 dimensions). 1000-character chunks with 200-character overlap.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Case Database</h3>
+        <p>SQLite with FTS5 full-text search. Automatic triggers keep the search index in sync. Cases include conversation history as JSON.</p>
+      </div>
+      <div class="feature-card">
+        <h3>AI</h3>
+        <p>Anthropic Claude API (Sonnet) with vision support for screenshot analysis. Custom system prompt enforcing the diagnostic methodology.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Frontend</h3>
+        <p>React 19 with TypeScript, Tailwind CSS v4, and Vite. Custom hooks for conversation lifecycle and debounced search. SSE streaming for real-time responses.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Knowledge Pipeline</h3>
+        <p>Ingests from 4 source types: MediaWiki HTML, WordPress WXR XML, DOCX, and Moodle page exports. Recursive text chunking with file-hash deduplication.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="container">
+    <p style="margin-bottom: 8px;">
+      <strong style="color: var(--gold);">Moodle Support Companion</strong>
+    </p>
+    <p>
+      Learning Technology &amp; Innovation &bull; Thompson Rivers University<br>
+      <a href="https://github.com/blamb/moodle-support-companion">GitHub Repository</a> &bull;
+      <a href="https://ltitest.trubox.ca/">LT&I Website</a>
+    </p>
+  </div>
+</footer>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script>
+  // OS tab switching
+  function switchOS(os) {
+    document.querySelectorAll('.os-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.os-panel').forEach(p => p.classList.remove('active'));
+
+    if (os === 'mac') {
+      document.querySelectorAll('.os-tab')[0].classList.add('active');
+      document.getElementById('panel-mac').classList.add('active');
+    } else {
+      document.querySelectorAll('.os-tab')[1].classList.add('active');
+      document.getElementById('panel-win').classList.add('active');
+    }
+  }
+
+  // Copy code blocks
+  function copyCode(btn) {
+    const block = btn.parentElement;
+    const text = block.innerText.replace('Copy', '').replace('Copied!', '').trim();
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copy';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
