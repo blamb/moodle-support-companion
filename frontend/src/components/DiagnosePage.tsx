@@ -160,7 +160,12 @@ export function DiagnosePage({ initialMessage, onInitialMessageConsumed, sharedS
               <button onClick={handleExport} className="lti-btn-outline" title="Export as Markdown">
                 Export
               </button>
-              <button onClick={handleShare} className="lti-btn-outline" title="Share with a colleague">
+              <button
+                onClick={handleShare}
+                className="lti-btn-outline"
+                title="Share with a colleague"
+                aria-label={shareCopied ? 'Link copied to clipboard' : 'Share conversation'}
+              >
                 {shareCopied ? '✓ Copied!' : 'Share'}
               </button>
               <button onClick={() => setShowDraftDialog(true)} className="lti-btn-outline">
@@ -170,7 +175,7 @@ export function DiagnosePage({ initialMessage, onInitialMessageConsumed, sharedS
                 Save as Case
               </button>
               {savedCaseId && (
-                <span className="text-xs text-emerald-600">Saved</span>
+                <span className="text-xs text-emerald-600" role="status">Saved</span>
               )}
             </>
           )}
@@ -189,9 +194,9 @@ export function DiagnosePage({ initialMessage, onInitialMessageConsumed, sharedS
       {/* Messages area */}
       <div className="flex-1 overflow-y-auto bg-slate-50 rounded-xl border border-slate-200 p-4">
         {messages.length === 0 && !streamingText ? (
-          <div className="flex items-center justify-center h-full text-slate-400">
+          <div className="flex items-center justify-center h-full text-slate-500">
             <div className="text-center">
-              <svg className="mx-auto h-12 w-12 mb-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="mx-auto h-12 w-12 mb-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
                   d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
               </svg>
@@ -199,7 +204,7 @@ export function DiagnosePage({ initialMessage, onInitialMessageConsumed, sharedS
               <p className="text-sm mt-1">
                 Describe the support issue, paste a Moodle URL, or upload a course backup
               </p>
-              <div className="mt-4 text-xs text-slate-400 max-w-sm mx-auto">
+              <div className="mt-4 text-xs text-slate-500 max-w-sm mx-auto">
                 <p className="mb-1">Try something like:</p>
                 <p className="italic">"A teacher reports that students can't see their quiz grades after completing the quiz. The course is HEAL_1150."</p>
               </div>
@@ -294,9 +299,15 @@ export function DiagnosePage({ initialMessage, onInitialMessageConsumed, sharedS
         )}
       </div>
 
+      {/* Visually-hidden live region for streaming status */}
+      <div className="sr-only" aria-live="polite" aria-atomic="true">
+        {isStreaming ? 'Assistant is responding...' : ''}
+        {error ? `Error: ${getErrorMessage(error)}` : ''}
+      </div>
+
       {/* Error display — with actionable messages */}
       {error && (
-        <div className="mt-2 p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700">
+        <div className="mt-2 p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700" role="alert">
           <p className="font-medium">Something went wrong</p>
           <p className="text-xs mt-1">{getErrorMessage(error)}</p>
         </div>

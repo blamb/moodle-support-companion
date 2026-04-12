@@ -14,6 +14,7 @@ export function SearchBar({ query, onQueryChange, loading }: SearchBarProps) {
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
+          aria-hidden="true"
         >
           <path
             strokeLinecap="round"
@@ -27,6 +28,7 @@ export function SearchBar({ query, onQueryChange, loading }: SearchBarProps) {
         type="text"
         value={query}
         onChange={(e) => onQueryChange(e.target.value)}
+        aria-label="Search the knowledge base"
         placeholder="Describe the issue or search documentation..."
         className="w-full pl-12 pr-12 py-4 text-lg border border-slate-200 rounded-xl
                    bg-white shadow-sm focus:outline-none focus:ring-2

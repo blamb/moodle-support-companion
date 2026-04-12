@@ -53,7 +53,7 @@ def save_session_as_case(
                 diagnosis = msg["content"][:2000]
                 break
 
-    return database.save_case(
+    case_id = database.save_case(
         summary=summary,
         problem_description=problem_description,
         diagnosis=diagnosis,
@@ -64,6 +64,77 @@ def save_session_as_case(
         moodle_module=moodle_module,
         course_id=course_id,
     )
+
+    # Ingest the resolved case back into ChromaDB as a synthetic document
+    # so future KB searches can find past resolutions
+    _ingest_case_to_kb(
+        case_id=case_id,
+        summary=summary,
+        problem_description=problem_description,
+        diagnosis=diagnosis,
+        resolution=resolution,
+        tags=tags,
+        moodle_module=moodle_module,
+    )
+
+    return case_id
+
+
+def _ingest_case_to_kb(
+    case_id: str,
+    summary: str,
+    problem_description: str,
+    diagnosis: str,
+    resolution: str,
+    tags: Optional[List[str]] = None,
+    moodle_module: str = "",
+) -> None:
+    """Ingest a resolved case into ChromaDB as a synthetic document.
+
+    This makes past resolutions discoverable via knowledge base search,
+    so future similar issues can benefit from the team's experience.
+    """
+    import logging
+    logger = logging.getLogger(__name__)
+
+    # Build a synthetic document from the case
+    parts = [f"Resolved Case: {summary}"]
+    if problem_description:
+        parts.append(f"Problem: {problem_description[:800]}")
+    if diagnosis:
+        parts.append(f"Diagnosis: {diagnosis[:800]}")
+    if resolution:
+        parts.append(f"Resolution: {resolution[:800]}")
+    if moodle_module:
+        parts.append(f"Moodle module: {moodle_module}")
+    if tags:
+        parts.append(f"Tags: {', '.join(tags)}")
+
+    synthetic_text = "\n\n".join(parts)
+
+    try:
+        from ..search.vector_store import get_collection
+
+        collection = get_collection()
+        collection.upsert(
+            ids=[f"resolved_case::{case_id}"],
+            documents=[synthetic_text],
+            metadatas=[{
+                "source": "resolved_cases",
+                "title": f"Past Case: {summary[:100]}",
+                "slug": case_id,
+                "canonical_url": "",
+                "categories": ", ".join(tags) if tags else "",
+                "chunk_index": 0,
+                "total_chunks": 1,
+                "author": "LT&I Team",
+                "date_modified": "",
+            }],
+        )
+        logger.info(f"Ingested case {case_id} into knowledge base")
+    except Exception as e:
+        # Non-critical — case is still saved in SQLite
+        logger.warning(f"Failed to ingest case into KB: {e}")
 
 
 def search_cases(query: str, limit: int = 20) -> List[Dict]:

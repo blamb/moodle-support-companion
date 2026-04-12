@@ -56,12 +56,12 @@ function App() {
             <div className="flex items-center gap-4">
               <img
                 src="/lti-logo.png"
-                alt="LT&I"
+                alt="Learning Technology and Innovation logo"
                 className="h-9"
               />
               <div className="hidden sm:block">
                 <p className="text-xs font-semibold uppercase tracking-widest"
-                   style={{ color: 'var(--lti-gold)' }}>
+                   style={{ color: '#9a6a00' }}>
                   Thompson Rivers University
                 </p>
                 <h1 className="text-lg font-bold leading-tight"
@@ -73,7 +73,9 @@ function App() {
 
             {/* Right: Tab switcher */}
             <nav className="flex items-center gap-1 rounded-lg p-1"
-                 style={{ backgroundColor: 'var(--lti-purple-light)' }}>
+                 style={{ backgroundColor: 'var(--lti-purple-light)' }}
+                 role="tablist"
+                 aria-label="Main navigation">
               {([
                 { key: 'diagnose', label: 'Diagnose', icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z' },
                 { key: 'search', label: 'Search', icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' },
@@ -82,13 +84,17 @@ function App() {
                 <button
                   key={tab.key}
                   onClick={() => setActiveTab(tab.key)}
+                  role="tab"
+                  id={`tab-${tab.key}`}
+                  aria-selected={activeTab === tab.key}
+                  aria-controls={`panel-${tab.key}`}
                   className="flex items-center gap-1.5 px-4 py-2 rounded-md text-sm font-medium transition-all"
                   style={{
                     backgroundColor: activeTab === tab.key ? 'var(--lti-purple)' : 'transparent',
                     color: activeTab === tab.key ? 'white' : 'var(--lti-navy)',
                   }}
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={tab.icon} />
                   </svg>
                   {tab.label}
@@ -102,17 +108,25 @@ function App() {
       {/* Main content */}
       <main className="max-w-6xl mx-auto px-4 py-6">
         {activeTab === 'diagnose' && (
-          <DiagnosePage
-            initialMessage={diagnoseInitialMessage}
-            onInitialMessageConsumed={handleDiagnoseMessageConsumed}
-            sharedSessionId={sharedSessionId}
-            onSharedSessionConsumed={() => setSharedSessionId(null)}
-          />
+          <div role="tabpanel" id="panel-diagnose" aria-labelledby="tab-diagnose">
+            <DiagnosePage
+              initialMessage={diagnoseInitialMessage}
+              onInitialMessageConsumed={handleDiagnoseMessageConsumed}
+              sharedSessionId={sharedSessionId}
+              onSharedSessionConsumed={() => setSharedSessionId(null)}
+            />
+          </div>
         )}
         {activeTab === 'search' && (
-          <SearchPage onStartDiagnosis={handleStartDiagnosis} />
+          <div role="tabpanel" id="panel-search" aria-labelledby="tab-search">
+            <SearchPage onStartDiagnosis={handleStartDiagnosis} />
+          </div>
         )}
-        {activeTab === 'cases' && <CasesPage />}
+        {activeTab === 'cases' && (
+          <div role="tabpanel" id="panel-cases" aria-labelledby="tab-cases">
+            <CasesPage />
+          </div>
+        )}
       </main>
     </div>
   );

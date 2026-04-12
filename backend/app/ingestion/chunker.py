@@ -1,4 +1,4 @@
-"""Text chunking for vector search indexing."""
+"""Text chunking for vector search indexing — heading-aware with title prepending."""
 
 import logging
 import re
@@ -8,12 +8,17 @@ from ..models.schemas import Document, Chunk
 
 logger = logging.getLogger(__name__)
 
+# Heading patterns (Markdown and common wiki formats)
+_HEADING_RE = re.compile(r"^(#{1,4}\s+.+|={2,}.+=+)$", re.MULTILINE)
+
 
 def chunk_document(doc: Document) -> list[Chunk]:
     """Split a document into chunks suitable for embedding.
 
     Short documents stay as single chunks. Longer documents are split
-    at paragraph boundaries with overlap for context preservation.
+    at heading boundaries first, then paragraph boundaries, with overlap
+    for context preservation. Each chunk is prepended with the document
+    title for better embedding quality.
     """
     text = doc.text.strip()
     if not text:
@@ -21,19 +26,59 @@ def chunk_document(doc: Document) -> list[Chunk]:
 
     # Short documents: keep as single chunk
     if len(text) <= SINGLE_CHUNK_THRESHOLD:
-        return [_make_chunk(doc, text, 0, 1)]
+        return [_make_chunk(doc, _prepend_title(doc.title, text), 0, 1)]
 
-    # Split into chunks
-    texts = _recursive_split(text, CHUNK_SIZE, CHUNK_OVERLAP)
+    # Split at heading boundaries first, then recursively within sections
+    sections = _split_by_headings(text)
+    texts = []
+    for section in sections:
+        if len(section) <= CHUNK_SIZE:
+            texts.append(section)
+        else:
+            texts.extend(_recursive_split(section, CHUNK_SIZE, CHUNK_OVERLAP))
 
     # Filter out tiny chunks
     texts = [t for t in texts if len(t.strip()) >= MIN_CHUNK_SIZE]
 
     if not texts:
-        return [_make_chunk(doc, text, 0, 1)]
+        return [_make_chunk(doc, _prepend_title(doc.title, text), 0, 1)]
 
     total = len(texts)
-    return [_make_chunk(doc, t, i, total) for i, t in enumerate(texts)]
+    return [
+        _make_chunk(doc, _prepend_title(doc.title, t), i, total)
+        for i, t in enumerate(texts)
+    ]
+
+
+def _prepend_title(title: str, text: str) -> str:
+    """Prepend document title to chunk text for better embedding context."""
+    if not title or text.startswith(title):
+        return text
+    return f"[{title}] {text}"
+
+
+def _split_by_headings(text: str) -> list[str]:
+    """Split text at heading boundaries, keeping headings with their content."""
+    matches = list(_HEADING_RE.finditer(text))
+    if not matches:
+        return [text]
+
+    sections = []
+    prev_start = 0
+
+    for match in matches:
+        # Content before this heading (part of previous section)
+        before = text[prev_start:match.start()].strip()
+        if before:
+            sections.append(before)
+        prev_start = match.start()
+
+    # Last section (from final heading to end)
+    remaining = text[prev_start:].strip()
+    if remaining:
+        sections.append(remaining)
+
+    return sections
 
 
 def _make_chunk(doc: Document, text: str, index: int, total: int) -> Chunk:

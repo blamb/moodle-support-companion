@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface SaveCaseDialogProps {
   sessionId: string;
@@ -12,6 +12,16 @@ export function SaveCaseDialog({ sessionId, onClose, onSaved }: SaveCaseDialogPr
   const [difficulty, setDifficulty] = useState(3);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
+  const summaryInputRef = useRef<HTMLInputElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    previousFocusRef.current = document.activeElement as HTMLElement;
+    summaryInputRef.current?.focus();
+    return () => {
+      previousFocusRef.current?.focus();
+    };
+  }, []);
 
   const handleSave = async () => {
     if (!summary.trim()) {
@@ -49,16 +59,25 @@ export function SaveCaseDialog({ sessionId, onClose, onSaved }: SaveCaseDialogPr
   };
 
   return (
-    <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6">
-        <h3 className="text-lg font-semibold text-slate-900 mb-4">Save as Case</h3>
+    <div
+      className="fixed inset-0 bg-black/30 flex items-center justify-center z-50 p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="save-case-title"
+      onKeyDown={(e) => { if (e.key === 'Escape') onClose(); }}
+      onClick={onClose}
+    >
+      <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6" onClick={(e) => e.stopPropagation()}>
+        <h2 id="save-case-title" className="text-lg font-semibold text-slate-900 mb-4">Save as Case</h2>
 
         {/* Summary */}
         <div className="mb-4">
-          <label className="block text-sm font-medium text-slate-700 mb-1">
+          <label htmlFor="save-case-summary" className="block text-sm font-medium text-slate-700 mb-1">
             Summary *
           </label>
           <input
+            ref={summaryInputRef}
+            id="save-case-summary"
             type="text"
             value={summary}
             onChange={(e) => setSummary(e.target.value)}
@@ -71,10 +90,11 @@ export function SaveCaseDialog({ sessionId, onClose, onSaved }: SaveCaseDialogPr
 
         {/* Tags */}
         <div className="mb-4">
-          <label className="block text-sm font-medium text-slate-700 mb-1">
+          <label htmlFor="save-case-tags" className="block text-sm font-medium text-slate-700 mb-1">
             Tags (comma-separated)
           </label>
           <input
+            id="save-case-tags"
             type="text"
             value={tags}
             onChange={(e) => setTags(e.target.value)}

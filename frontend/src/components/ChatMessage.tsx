@@ -62,14 +62,14 @@ export function ChatMessage({
                         prose-code:bg-slate-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-slate-700 prose-code:before:content-none prose-code:after:content-none">
           <Markdown>{content}</Markdown>
           {isStreaming && (
-            <span className="inline-block w-2 h-4 bg-orange-400 ml-0.5 animate-pulse rounded-sm" />
+            <span className="inline-block w-2 h-4 bg-orange-400 ml-0.5 animate-pulse rounded-sm" aria-hidden="true" />
           )}
         </div>
 
         {/* Source references */}
         {sources && sources.length > 0 && (
           <details className="mt-1">
-            <summary className="text-xs text-slate-400 cursor-pointer hover:text-slate-600">
+            <summary className="text-xs text-slate-500 cursor-pointer hover:text-slate-600">
               {sources.length} source{sources.length > 1 ? 's' : ''} consulted
             </summary>
             <div className="mt-1 space-y-1">

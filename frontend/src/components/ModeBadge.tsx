@@ -29,6 +29,7 @@ export function ModeBadge({ mode }: ModeBadgeProps) {
   return (
     <span
       className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-bold uppercase tracking-wider border"
+      aria-label={`Current diagnostic mode: ${config.label}`}
       style={{
         color: config.color,
         backgroundColor: config.bg,

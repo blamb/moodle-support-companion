@@ -157,21 +157,34 @@ async def send_message(
 
     # 2. Search knowledge base for relevant documentation
     kb_results = []
+    kb_results_full = []  # Full text for Claude injection
     try:
+        # Dynamic threshold: more inclusive on first message, stricter later
+        relevance_threshold = 0.25 if len(session.messages) == 0 else 0.40
+
         search_response = search_knowledge_base(
             query=user_message, limit=MAX_CONTEXT_CHUNKS
         )
-        kb_results = [
-            {
+        for r in search_response.results:
+            if r.score <= relevance_threshold:
+                continue
+            # Full text for Claude context injection
+            kb_results_full.append({
                 "title": r.title,
                 "source": r.source,
-                "text": r.text[:500],  # Truncate for SSE
+                "text": r.text,  # Full text for Claude
                 "score": r.score,
                 "canonical_url": r.canonical_url,
-            }
-            for r in search_response.results
-            if r.score > 0.35  # Only include reasonably relevant results
-        ]
+            })
+            # Truncated version for SSE event to frontend
+            kb_results.append({
+                "title": r.title,
+                "source": r.source,
+                "text": r.text[:500],
+                "score": r.score,
+                "canonical_url": r.canonical_url,
+            })
+
         if kb_results:
             yield _sse_event("sources", kb_results)
     except Exception as e:
@@ -188,9 +201,9 @@ async def send_message(
     # 2c. Detect diagnostic template
     template = get_template_for_message(user_message)
 
-    # 3. Build the augmented user message with context
+    # 3. Build the augmented user message with context (using full-text KB results)
     augmented_message = _build_augmented_message(
-        user_message, url_contexts, kb_results, past_cases, template
+        user_message, url_contexts, kb_results_full, past_cases, template
     )
 
     # 4. Add user message to session history
@@ -276,50 +289,66 @@ def _build_augmented_message(
     past_cases: list = None,
     template=None,
 ) -> str:
-    """Build the user message with injected context for Claude."""
+    """Build the user message with injected context for Claude.
+
+    Puts the user's message FIRST so Claude knows the question before
+    reading reference material. Uses tiered truncation for KB results
+    to focus attention on the most relevant documents.
+    """
     parts = []
 
-    # Diagnostic template (if detected)
-    if template:
-        parts.append(template.to_prompt_text())
+    # User message FIRST — Claude attends better when it knows the question
+    parts.append("## Support Issue")
+    parts.append(user_message)
 
     # URL context
     url_text = format_url_context_for_llm(url_contexts)
     if url_text:
         parts.append(url_text)
 
-    # Past similar cases
+    # Diagnostic template (if detected)
+    if template:
+        parts.append("Use this diagnostic framework to structure your response:")
+        parts.append(template.to_prompt_text())
+
+    # Past similar cases — prioritize high-match cases
     if past_cases:
         parts.append("## Similar Past Cases")
         parts.append("The team has handled similar issues before:\n")
-        for case in past_cases[:3]:
+        for i, case in enumerate(past_cases[:3]):
             parts.append(f"### Case: {case.get('summary', 'Untitled')}")
+            # More text for the top match, less for subsequent
+            max_len = 600 if i == 0 else 300
             if case.get("diagnosis"):
-                parts.append(f"**Diagnosis**: {case['diagnosis'][:300]}")
+                parts.append(f"**Diagnosis**: {case['diagnosis'][:max_len]}")
             if case.get("resolution"):
-                parts.append(f"**Resolution**: {case['resolution'][:300]}")
+                parts.append(f"**Resolution**: {case['resolution'][:max_len]}")
             if case.get("tags"):
                 tags = case["tags"] if isinstance(case["tags"], list) else [case["tags"]]
                 parts.append(f"Tags: {', '.join(tags)}")
             parts.append("")
 
-    # Knowledge base context
+    # Knowledge base context — tiered truncation by relevance rank
     if kb_results:
         parts.append("## Relevant Documentation")
         parts.append("The following documentation may be relevant:\n")
-        for r in kb_results:
+        for i, r in enumerate(kb_results):
+            # Top 2 results: full text (up to 2000 chars)
+            # Results 3-4: moderate truncation (1000 chars)
+            # Result 5+: summary only (500 chars)
+            if i < 2:
+                max_text = 2000
+            elif i < 4:
+                max_text = 1000
+            else:
+                max_text = 500
+            text = r["text"][:max_text]
+
             parts.append(f"### {r['title']} ({r['source']})")
-            parts.append(r["text"])
+            parts.append(text)
             if r.get("canonical_url"):
                 parts.append(f"Source: {r['canonical_url']}")
             parts.append("")
-
-    # The actual user message
-    if parts:
-        parts.append("---")
-        parts.append("## User's message")
-
-    parts.append(user_message)
 
     return "\n\n".join(parts)
 

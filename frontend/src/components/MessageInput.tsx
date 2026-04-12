@@ -46,6 +46,7 @@ export function MessageInput({ onSend, disabled, placeholder }: MessageInputProp
             onKeyDown={handleKeyDown}
             disabled={disabled}
             rows={1}
+            aria-label="Describe the support issue or type a message"
             placeholder={placeholder || "Describe the issue, paste a Moodle URL, or respond to questions..."}
             className="w-full resize-none rounded-lg border border-slate-200 px-4 py-3
                        text-sm focus:outline-none focus:ring-2
@@ -74,7 +75,7 @@ export function MessageInput({ onSend, disabled, placeholder }: MessageInputProp
           )}
         </button>
       </div>
-      <p className="text-xs text-slate-400 mt-1 ml-1">
+      <p className="text-xs text-slate-500 mt-1 ml-1">
         Press Enter to send, Shift+Enter for new line
       </p>
     </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface DraftReplyDialogProps {
   sessionId: string;
@@ -12,6 +12,16 @@ export function DraftReplyDialog({ sessionId, onClose }: DraftReplyDialogProps) 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    previousFocusRef.current = document.activeElement as HTMLElement;
+    dialogRef.current?.focus();
+    return () => {
+      previousFocusRef.current?.focus();
+    };
+  }, []);
 
   const handleGenerate = async () => {
     setLoading(true);
@@ -64,18 +74,30 @@ export function DraftReplyDialog({ sessionId, onClose }: DraftReplyDialogProps) 
   });
 
   return (
-    <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-xl shadow-xl max-w-2xl w-full p-6 max-h-[80vh] flex flex-col">
-        <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--lti-navy)' }}>
+    <div
+      className="fixed inset-0 bg-black/30 flex items-center justify-center z-50 p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="draft-reply-title"
+      onKeyDown={(e) => { if (e.key === 'Escape') onClose(); }}
+      onClick={onClose}
+    >
+      <div
+        ref={dialogRef}
+        tabIndex={-1}
+        className="bg-white rounded-xl shadow-xl max-w-2xl w-full p-6 max-h-[80vh] flex flex-col"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <h2 id="draft-reply-title" className="text-lg font-semibold mb-4" style={{ color: 'var(--lti-navy)' }}>
           Draft Reply for TeamDynamix
-        </h3>
+        </h2>
 
         {!draft ? (
           <>
             <div className="grid grid-cols-2 gap-4 mb-4">
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Audience</label>
-                <div className="space-y-1">
+                <label className="block text-sm font-medium text-slate-700 mb-2" id="audience-label">Audience</label>
+                <div className="space-y-1" role="radiogroup" aria-labelledby="audience-label">
                   {[
                     { value: 'instructor', label: 'Instructor / Faculty' },
                     { value: 'student', label: 'Student' },
@@ -84,6 +106,8 @@ export function DraftReplyDialog({ sessionId, onClose }: DraftReplyDialogProps) 
                     <button
                       key={opt.value}
                       onClick={() => setAudience(opt.value)}
+                      role="radio"
+                      aria-checked={audience === opt.value}
                       className="w-full text-left px-3 py-2 rounded-lg text-sm transition-colors border"
                       style={optionStyle(audience === opt.value)}
                     >
@@ -94,8 +118,8 @@ export function DraftReplyDialog({ sessionId, onClose }: DraftReplyDialogProps) 
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Tone</label>
-                <div className="space-y-1">
+                <label className="block text-sm font-medium text-slate-700 mb-2" id="tone-label">Tone</label>
+                <div className="space-y-1" role="radiogroup" aria-labelledby="tone-label">
                   {[
                     { value: 'professional', label: 'Professional' },
                     { value: 'friendly', label: 'Friendly' },
@@ -104,6 +128,8 @@ export function DraftReplyDialog({ sessionId, onClose }: DraftReplyDialogProps) 
                     <button
                       key={opt.value}
                       onClick={() => setTone(opt.value)}
+                      role="radio"
+                      aria-checked={tone === opt.value}
                       className="w-full text-left px-3 py-2 rounded-lg text-sm transition-colors border"
                       style={optionStyle(tone === opt.value)}
                     >

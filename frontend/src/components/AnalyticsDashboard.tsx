@@ -37,7 +37,7 @@ export function AnalyticsDashboard() {
 
   if (loading) {
     return (
-      <div className="text-center py-8 text-slate-400">
+      <div className="text-center py-8 text-slate-500" role="status">
         <div className="h-8 w-8 border-2 border-orange-400 border-t-transparent rounded-full animate-spin mx-auto mb-3" />
         <p>Loading analytics...</p>
       </div>
@@ -46,7 +46,7 @@ export function AnalyticsDashboard() {
 
   if (error || !analytics) {
     return (
-      <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700">
+      <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700" role="alert">
         {error || 'No analytics data available'}
       </div>
     );
@@ -70,13 +70,13 @@ export function AnalyticsDashboard() {
       {/* KPI cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="bg-white rounded-xl border border-slate-200 p-4">
-          <p className="text-xs font-medium text-slate-400 uppercase tracking-wide">Total Cases</p>
+          <p className="text-xs font-medium text-slate-500 uppercase tracking-wide">Total Cases</p>
           <p className="text-2xl font-bold mt-1" style={{ color: 'var(--lti-navy)' }}>
             {analytics.total_cases}
           </p>
         </div>
         <div className="bg-white rounded-xl border border-slate-200 p-4">
-          <p className="text-xs font-medium text-slate-400 uppercase tracking-wide">Last 30 Days</p>
+          <p className="text-xs font-medium text-slate-500 uppercase tracking-wide">Last 30 Days</p>
           <p className="text-2xl font-bold mt-1" style={{ color: 'var(--lti-navy)' }}>
             {analytics.recent_30d}
           </p>
@@ -87,7 +87,7 @@ export function AnalyticsDashboard() {
           )}
         </div>
         <div className="bg-white rounded-xl border border-slate-200 p-4">
-          <p className="text-xs font-medium text-slate-400 uppercase tracking-wide">Avg Resolution</p>
+          <p className="text-xs font-medium text-slate-500 uppercase tracking-wide">Avg Resolution</p>
           <p className="text-2xl font-bold mt-1" style={{ color: 'var(--lti-navy)' }}>
             {analytics.avg_resolution_hours < 24
               ? `${analytics.avg_resolution_hours}h`
@@ -96,12 +96,12 @@ export function AnalyticsDashboard() {
           </p>
         </div>
         <div className="bg-white rounded-xl border border-slate-200 p-4">
-          <p className="text-xs font-medium text-slate-400 uppercase tracking-wide">Status</p>
+          <p className="text-xs font-medium text-slate-500 uppercase tracking-wide">Status</p>
           <div className="flex gap-3 mt-2">
             {Object.entries(analytics.by_status).map(([status, count]) => (
               <div key={status} className="text-center">
                 <p className="text-lg font-bold" style={{ color: 'var(--lti-navy)' }}>{count}</p>
-                <p className="text-xs text-slate-400 capitalize">{status}</p>
+                <p className="text-xs text-slate-500 capitalize">{status}</p>
               </div>
             ))}
           </div>
@@ -111,7 +111,7 @@ export function AnalyticsDashboard() {
       {/* Timeline chart */}
       <div className="bg-white rounded-xl border border-slate-200 p-4">
         <h3 className="text-sm font-semibold text-slate-700 mb-3">Cases per Week (12 weeks)</h3>
-        <div className="flex items-end gap-1 h-32">
+        <div className="flex items-end gap-1 h-32" role="img" aria-label={`Cases per week chart. ${analytics.timeline.filter(w => w.count > 0).length} active weeks out of 12.`}>
           {analytics.timeline.map((week, i) => (
             <div key={i} className="flex-1 flex flex-col items-center gap-1">
               <div
@@ -123,7 +123,7 @@ export function AnalyticsDashboard() {
                 }}
                 title={`${week.week}: ${week.count} cases`}
               />
-              <span className="text-[10px] text-slate-400 leading-tight whitespace-nowrap">
+              <span className="text-[10px] text-slate-500 leading-tight whitespace-nowrap">
                 {week.week}
               </span>
             </div>
@@ -135,7 +135,7 @@ export function AnalyticsDashboard() {
       <div className="grid md:grid-cols-2 gap-4">
         {/* Difficulty distribution */}
         {Object.keys(analytics.by_difficulty).length > 0 && (
-          <div className="bg-white rounded-xl border border-slate-200 p-4">
+          <div className="bg-white rounded-xl border border-slate-200 p-4" role="img" aria-label={`Difficulty distribution chart. ${Object.entries(analytics.by_difficulty).map(([level, count]) => `${difficultyLabels[level] || 'Level ' + level}: ${count}`).join(', ')}.`}>
             <h3 className="text-sm font-semibold text-slate-700 mb-3">Difficulty Distribution</h3>
             <div className="space-y-2">
               {Object.entries(analytics.by_difficulty).map(([level, count]) => {
@@ -159,7 +159,7 @@ export function AnalyticsDashboard() {
 
         {/* Top modules */}
         {Object.keys(analytics.by_module).length > 0 && (
-          <div className="bg-white rounded-xl border border-slate-200 p-4">
+          <div className="bg-white rounded-xl border border-slate-200 p-4" role="img" aria-label={`Top Moodle modules chart. ${Object.entries(analytics.by_module).slice(0, 8).map(([mod, count]) => `${mod}: ${count}`).join(', ')}.`}>
             <h3 className="text-sm font-semibold text-slate-700 mb-3">Top Moodle Modules</h3>
             <div className="space-y-2">
               {Object.entries(analytics.by_module).slice(0, 8).map(([mod, count]) => {
@@ -207,7 +207,7 @@ export function AnalyticsDashboard() {
 
       {/* Empty state */}
       {analytics.total_cases === 0 && (
-        <div className="text-center py-8 text-slate-400">
+        <div className="text-center py-8 text-slate-500">
           <p className="text-lg">No cases tracked yet</p>
           <p className="text-sm mt-1">Analytics will populate as your team saves diagnostic sessions as cases.</p>
         </div>

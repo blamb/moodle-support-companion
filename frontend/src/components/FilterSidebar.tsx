@@ -22,7 +22,7 @@ export function FilterSidebar({
   if (!sources || sources.sources.length === 0) {
     return (
       <div className="bg-white rounded-lg border border-slate-200 p-4">
-        <p className="text-sm text-slate-400">
+        <p className="text-sm text-slate-500">
           No sources indexed yet. Run ingestion first.
         </p>
       </div>
@@ -44,7 +44,7 @@ export function FilterSidebar({
           }`}
         >
           All sources
-          <span className="float-right text-xs text-slate-400">
+          <span className="float-right text-xs text-slate-500">
             {sources.total_chunks} chunks
           </span>
         </button>
@@ -62,7 +62,7 @@ export function FilterSidebar({
             }`}
           >
             {SOURCE_LABELS[s.source] || s.source}
-            <span className="float-right text-xs text-slate-400">
+            <span className="float-right text-xs text-slate-500">
               {s.document_count} docs
             </span>
           </button>
