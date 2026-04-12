@@ -40,7 +40,6 @@ export function DiagnosePage({ initialMessage, onInitialMessageConsumed, sharedS
   const [showDraftDialog, setShowDraftDialog] = useState(false);
   const [savedCaseId, setSavedCaseId] = useState<string | null>(null);
   const [followUpDismissed, setFollowUpDismissed] = useState(false);
-  const [shareLink, setShareLink] = useState<string | null>(null);
   const [shareCopied, setShareCopied] = useState(false);
 
   // Auto-scroll to bottom
@@ -83,7 +82,6 @@ export function DiagnosePage({ initialMessage, onInitialMessageConsumed, sharedS
       if (!res.ok) throw new Error('Share failed');
       const data = await res.json();
       const link = `${window.location.origin}?shared=${data.share_id}`;
-      setShareLink(link);
       await navigator.clipboard.writeText(link);
       setShareCopied(true);
       setTimeout(() => setShareCopied(false), 3000);

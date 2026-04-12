@@ -1,5 +1,4 @@
 import type { SourcesResponse } from '../types';
-import { SourceBadge } from './SourceBadge';
 
 const SOURCE_LABELS: Record<string, string> = {
   moodle_docs: 'Moodle Docs',

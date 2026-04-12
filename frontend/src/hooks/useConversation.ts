@@ -67,7 +67,7 @@ export function useConversation() {
 
     // Track sources and URL contexts for this message
     let messageSources: Message['sources'] = [];
-    let messageUrlContexts: Message['urlContexts'] = [];
+    // URL contexts tracked via setPendingUrlContexts
 
     try {
       abortRef.current = new AbortController();
@@ -127,7 +127,6 @@ export function useConversation() {
                 break;
 
               case 'url_context':
-                messageUrlContexts = data;
                 setPendingUrlContexts(data);
                 // Also update the user message with URL contexts
                 setMessages(prev => {
