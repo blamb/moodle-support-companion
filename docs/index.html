@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moodle Support Companion — TRU Learning Technology &amp; Innovation</title>
-  <meta name="description" content="A diagnostic support tool for learning technologists at Thompson Rivers University. Investigate, diagnose, and resolve Moodle issues through structured AI-powered conversations.">
+  <meta name="description" content="User guide for the Moodle Support Companion — a diagnostic support tool for learning technologists at Thompson Rivers University.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
+      --purple-deep: #0f0a26;
       --purple-dark: #1a0e3e;
       --purple: #2d1b69;
       --purple-mid: #4a2d8a;
@@ -17,220 +18,649 @@
       --gold: #f5a623;
       --gold-hover: #e09410;
       --gold-light: #fef9ee;
+      --gold-muted: #9a6a00;
       --navy: #241c55;
-      --charcoal: #424242;
+      --charcoal: #3a3a3a;
+      --text-secondary: #5f6368;
       --gray-light: #f7f6fa;
+      --gray-warm: #f4f2ef;
       --teal: #00b18f;
+      --teal-deep: #008f73;
       --blue: #1d8cef;
-      --pink: #f22e8a;
+      --blue-deep: #1565c0;
+      --coral: #e8604c;
+      --border: #e2dfd8;
+      --card-shadow: 0 1px 3px rgba(15,10,38,0.06), 0 8px 24px rgba(15,10,38,0.04);
+      --card-shadow-hover: 0 4px 12px rgba(15,10,38,0.1), 0 16px 40px rgba(15,10,38,0.06);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       color: var(--charcoal);
-      line-height: 1.6;
-      background: #fff;
+      line-height: 1.65;
+      background: var(--gray-warm);
+      -webkit-font-smoothing: antialiased;
     }
 
     /* ---- Layout ---- */
-    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-    .container-wide { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .container { max-width: 880px; margin: 0 auto; padding: 0 28px; }
+    .container-wide { max-width: 1060px; margin: 0 auto; padding: 0 28px; }
 
-    /* ---- Gold top bar ---- */
-    .gold-bar { height: 4px; background: var(--gold); }
+    /* ---- Gold top accent ---- */
+    .gold-accent { height: 3px; background: linear-gradient(90deg, var(--gold) 0%, var(--gold-hover) 50%, var(--coral) 100%); }
 
-    /* ---- Header / Hero ---- */
-    .hero {
-      background: linear-gradient(135deg, #1a0e3e 0%, #2d1b69 40%, #4a2d8a 70%, #6b3fa0 100%);
+    /* ---- Header ---- */
+    .header {
+      background: var(--purple-deep);
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 60%;
+      height: 180%;
+      background: radial-gradient(ellipse, rgba(74,45,138,0.35) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -5%;
+      width: 40%;
+      height: 140%;
+      background: radial-gradient(ellipse, rgba(245,166,35,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .header-inner {
+      position: relative;
+      z-index: 1;
+      padding: 52px 0 60px;
+    }
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 36px;
+    }
+    .header-logo { height: 50px; }
+    .header-org {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .header-title {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 2.6rem;
+      font-weight: 400;
       color: #fff;
-      padding: 48px 0 56px;
+      line-height: 1.15;
+      margin-bottom: 20px;
     }
-    .hero-inner { display: flex; align-items: center; gap: 24px; margin-bottom: 32px; }
-    .hero-logo { height: 56px; }
-    .hero-title-group { }
-    .hero-subtitle {
-      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 2px;
+    .header-desc {
+      font-size: 1.08rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.82);
+      max-width: 620px;
     }
-    .hero-title { font-size: 2rem; font-weight: 800; line-height: 1.2; }
-    .hero-desc {
-      font-size: 1.1rem; line-height: 1.7; color: rgba(255,255,255,0.95);
-      max-width: 680px;
+    .header-desc strong { color: #fff; }
+    .header-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 28px;
     }
-    .hero-desc strong { color: #fff; }
-    .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
-    .hero-badge {
-      font-size: 0.75rem; font-weight: 600; padding: 4px 14px;
-      border-radius: 999px; background: rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.15);
+    .chip {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 5px 14px;
+      border-radius: 100px;
+      background: rgba(255,255,255,0.07);
+      color: rgba(255,255,255,0.8);
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
     /* ---- Nav ---- */
     .nav {
-      background: #fff; border-bottom: 1px solid #e8e5f0;
-      position: sticky; top: 0; z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     .nav-inner {
-      display: flex; gap: 4px; padding: 8px 0;
-      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      display: flex;
+      gap: 2px;
+      padding: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
     .nav a {
-      font-size: 0.82rem; font-weight: 500; color: var(--navy);
-      text-decoration: none; padding: 8px 16px; border-radius: 8px;
-      white-space: nowrap; transition: all 0.15s;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 14px 18px;
+      white-space: nowrap;
+      transition: color 0.15s, box-shadow 0.15s;
+      border-bottom: 2px solid transparent;
     }
-    .nav a:hover { background: var(--purple-light); color: var(--purple); }
+    .nav a:hover {
+      color: var(--purple);
+      border-bottom-color: var(--purple-mid);
+    }
 
     /* ---- Sections ---- */
-    section { padding: 56px 0; scroll-margin-top: 64px; }
-    section:nth-child(even) { background: var(--gray-light); }
-    .section-label {
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+    section {
+      padding: 64px 0;
+      scroll-margin-top: 56px;
     }
-    .section-title {
-      font-size: 1.6rem; font-weight: 800; color: var(--navy);
-      margin-bottom: 12px; line-height: 1.25;
+    .section-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold-muted);
+      margin-bottom: 8px;
     }
-    .section-desc {
-      font-size: 1rem; color: #6b7280; max-width: 640px; margin-bottom: 32px;
+    .section-heading {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    .section-lead {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin-bottom: 36px;
     }
 
-    /* ---- Feature cards ---- */
-    .features-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* ---- Scenario cards (Getting Started) ---- */
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: 1fr;
       gap: 20px;
     }
-    .feature-card {
-      background: #fff; border: 1px solid #e8e5f0; border-radius: 12px;
-      padding: 24px; transition: box-shadow 0.2s;
+    .scenario {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 28px 24px;
+      box-shadow: var(--card-shadow);
+      transition: box-shadow 0.25s, transform 0.25s;
     }
-    .feature-card:hover { box-shadow: 0 4px 20px rgba(45,27,105,0.08); }
-    .feature-icon {
-      width: 40px; height: 40px; border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.2rem; margin-bottom: 14px;
+    .scenario:hover {
+      box-shadow: var(--card-shadow-hover);
+      transform: translateY(-2px);
     }
-    .feature-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
-    .feature-card p { font-size: 0.88rem; color: #6b7280; line-height: 1.55; }
+    .scenario-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+    .scenario-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+    .scenario h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+    .scenario-context {
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--text-secondary);
+    }
+    .scenario-body {
+      font-size: 0.88rem;
+      color: var(--charcoal);
+      line-height: 1.7;
+    }
+    .scenario-body ol, .scenario-body ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+    .scenario-body li {
+      margin-bottom: 6px;
+    }
+    .scenario-body strong {
+      color: var(--navy);
+    }
+    .scenario-result {
+      margin-top: 14px;
+      padding: 12px 16px;
+      background: #f0faf7;
+      border-left: 3px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      font-size: 0.84rem;
+      color: var(--teal-deep);
+    }
 
-    /* ---- How-to guide ---- */
-    .guide-section { margin-bottom: 40px; }
-    .guide-section h3 {
-      font-size: 1.15rem; font-weight: 700; color: var(--navy);
-      margin-bottom: 16px; padding-bottom: 8px;
+    /* ---- Phase diagram ---- */
+    .phases {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin: 32px 0 24px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+    }
+    .phase {
+      padding: 28px 24px;
+      text-align: center;
+      position: relative;
+    }
+    .phase::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 25%;
+      height: 50%;
+      width: 1px;
+      background: rgba(255,255,255,0.2);
+    }
+    .phase:last-child::after { display: none; }
+    .phase-explore { background: var(--blue); color: #fff; }
+    .phase-diagnose { background: var(--navy); color: #fff; }
+    .phase-resolve { background: var(--teal-deep); color: #fff; }
+    .phase-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 4px;
+    }
+    .phase-title {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+    .phase-desc {
+      font-size: 0.78rem;
+      opacity: 0.85;
+      line-height: 1.5;
+    }
+
+    /* ---- Guide steps ---- */
+    .guide-block {
+      margin-bottom: 48px;
+    }
+    .guide-block h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+      padding-bottom: 10px;
       border-bottom: 2px solid var(--gold);
     }
+    .guide-intro {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
     .step {
-      display: flex; gap: 16px; margin-bottom: 24px;
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
     }
-    .step-num {
-      flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%;
-      background: var(--purple); color: #fff; font-size: 0.85rem; font-weight: 700;
-      display: flex; align-items: center; justify-content: center; margin-top: 2px;
+    .step-marker {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--purple);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
     }
-    .step-content { flex: 1; }
-    .step-content h4 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
-    .step-content p { font-size: 0.88rem; color: #6b7280; margin-bottom: 8px; }
+    .step-body { flex: 1; }
+    .step-body h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .step-body p, .step-body li {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+    .step-body ul, .step-body ol {
+      padding-left: 18px;
+      margin-top: 6px;
+    }
+    .step-body li { margin-bottom: 5px; }
+
+    /* ---- Callouts ---- */
+    .callout {
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 0.86rem;
+      line-height: 1.6;
+      margin: 12px 0;
+    }
+    .callout strong { font-weight: 600; }
+    .callout-tip {
+      background: #eef6ff;
+      border-left: 3px solid var(--blue);
+      color: #1e3a5f;
+    }
+    .callout-important {
+      background: var(--gold-light);
+      border-left: 3px solid var(--gold);
+      color: #7a5c1a;
+    }
+    .callout-example {
+      background: #f0eef7;
+      border-left: 3px solid var(--purple-mid);
+      color: var(--navy);
+    }
+    .callout-success {
+      background: #e6f7f4;
+      border-left: 3px solid var(--teal);
+      color: #0a5c4a;
+    }
+
+    /* ---- Example messages (chat bubbles) ---- */
+    .chat-example {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin: 16px 0;
+      box-shadow: var(--card-shadow);
+    }
+    .chat-msg {
+      margin-bottom: 12px;
+      display: flex;
+      gap: 10px;
+    }
+    .chat-msg:last-child { margin-bottom: 0; }
+    .chat-avatar {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .chat-avatar-user { background: var(--purple); }
+    .chat-avatar-ai { background: var(--teal-deep); }
+    .chat-bubble {
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.84rem;
+      line-height: 1.6;
+      max-width: 85%;
+    }
+    .chat-bubble-user {
+      background: var(--purple-light);
+      color: var(--navy);
+    }
+    .chat-bubble-ai {
+      background: #f0faf7;
+      color: var(--charcoal);
+    }
+
+    /* ---- Feature grid ---- */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .feature-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: var(--card-shadow);
+      transition: box-shadow 0.25s;
+    }
+    .feature-card:hover { box-shadow: var(--card-shadow-hover); }
+    .feature-card h3 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .feature-card p {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* ---- Workflow list ---- */
+    .workflow-list {
+      counter-reset: workflow;
+      list-style: none;
+      padding: 0;
+    }
+    .workflow-list li {
+      counter-increment: workflow;
+      padding: 14px 0 14px 52px;
+      position: relative;
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      border-bottom: 1px solid #eee;
+    }
+    .workflow-list li:last-child { border-bottom: none; }
+    .workflow-list li::before {
+      content: counter(workflow);
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--purple-light);
+      color: var(--purple);
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .workflow-list li strong { color: var(--navy); }
 
     /* ---- Code blocks ---- */
     .code-block {
-      background: #1e1b2e; color: #e2dff0; border-radius: 10px;
-      padding: 16px 20px; font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
-      font-size: 0.82rem; line-height: 1.7; overflow-x: auto;
-      position: relative; margin: 8px 0 12px;
+      background: #1a1728;
+      color: #d4d0e4;
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.8rem;
+      line-height: 1.7;
+      overflow-x: auto;
+      position: relative;
+      margin: 8px 0 12px;
     }
-    .code-block .comment { color: #a09abf; }
+    .code-block .comment { color: #7a7490; }
     .code-block .cmd { color: #c4b5fd; }
     .code-block .url { color: var(--gold); }
-
     .copy-btn {
-      position: absolute; top: 8px; right: 8px;
-      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
-      color: rgba(255,255,255,0.6); border-radius: 6px; padding: 8px 14px;
-      font-size: 0.7rem; cursor: pointer; transition: all 0.15s;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.5);
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
     }
-    .copy-btn:hover { background: rgba(255,255,255,0.2); color: #fff; }
+    .copy-btn:hover { background: rgba(255,255,255,0.15); color: #fff; }
     .copy-btn.copied { background: var(--teal); color: #fff; border-color: var(--teal); }
 
-    /* ---- Callout boxes ---- */
-    .callout {
-      border-radius: 10px; padding: 16px 20px;
-      font-size: 0.88rem; line-height: 1.6; margin: 16px 0;
+    /* ---- Best practices grid ---- */
+    .bp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
     }
-    .callout-info {
-      background: #eef6ff; border-left: 4px solid var(--blue); color: #1e3a5f;
+    .bp-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: var(--card-shadow);
     }
-    .callout-warning {
-      background: #fef9ee; border-left: 4px solid var(--gold); color: #7a5c1a;
+    .bp-card h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    .callout-success {
-      background: #e6f7f4; border-left: 4px solid var(--teal); color: #0a5c4a;
+    .bp-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
     }
-    .callout strong { font-weight: 600; }
+    .bp-do { background: #e6f7f4; color: var(--teal-deep); }
+    .bp-avoid { background: #fef0f0; color: #b33a3a; }
+    .bp-card p {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
 
-    /* ---- Tabs (Mac / Windows) ---- */
+    /* ---- Install tabs ---- */
     .os-tabs { display: flex; gap: 4px; margin-bottom: 0; }
     .os-tab {
-      padding: 10px 24px; font-size: 0.85rem; font-weight: 600;
-      border: 1px solid #e8e5f0; border-bottom: none;
-      border-radius: 10px 10px 0 0; background: var(--gray-light);
-      color: #6b7280; cursor: pointer; transition: all 0.15s;
+      padding: 10px 22px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      border-radius: 10px 10px 0 0;
+      background: var(--gray-light);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s;
     }
     .os-tab.active {
-      background: #fff; color: var(--navy);
-      border-color: #e8e5f0;
+      background: #fff;
+      color: var(--navy);
+      border-color: var(--border);
     }
     .os-panel {
-      display: none; background: #fff; border: 1px solid #e8e5f0;
-      border-radius: 0 10px 10px 10px; padding: 28px;
+      display: none;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 0 10px 10px 10px;
+      padding: 28px;
     }
     .os-panel.active { display: block; }
 
-    /* ---- Workflow diagram ---- */
-    .workflow {
-      display: flex; align-items: center; justify-content: center;
-      gap: 12px; flex-wrap: wrap; margin: 24px 0;
+    /* ---- Expandable details ---- */
+    details {
+      margin-bottom: 10px;
     }
-    .workflow-step {
-      text-align: center; padding: 16px 20px; border-radius: 12px;
-      min-width: 140px;
+    summary {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--navy);
+      cursor: pointer;
+      padding: 10px 0;
     }
-    .workflow-step .emoji { font-size: 1.5rem; margin-bottom: 4px; }
-    .workflow-step .label { font-size: 0.82rem; font-weight: 700; }
-    .workflow-step .desc { font-size: 0.72rem; color: rgba(255,255,255,0.92); margin-top: 2px; }
-    .workflow-arrow { font-size: 1.2rem; color: #d1d5db; }
-    .wf-explore { background: var(--blue); color: #fff; }
-    .wf-diagnose { background: var(--navy); color: #fff; }
-    .wf-resolve { background: var(--teal); color: #fff; }
+    summary:hover { color: var(--purple); }
+    details > div {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      padding: 4px 0 12px 16px;
+      line-height: 1.6;
+    }
+
+    /* ---- Architecture ---- */
+    .arch-block {
+      background: #1a1728;
+      border-radius: 14px;
+      padding: 24px 28px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      line-height: 1.9;
+      color: #d4d0e4;
+      overflow-x: auto;
+    }
+    .arch-block .dim { color: #5c5678; }
+    .arch-block .hi { color: var(--gold); }
 
     /* ---- Footer ---- */
     footer {
-      background: var(--purple-dark); color: rgba(255,255,255,0.6);
-      padding: 32px 0; text-align: center; font-size: 0.82rem;
+      background: var(--purple-deep);
+      color: rgba(255,255,255,0.5);
+      padding: 36px 0;
+      text-align: center;
+      font-size: 0.82rem;
     }
+    footer strong { color: var(--gold); }
     footer a { color: var(--gold); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
 
     /* ---- Skip link ---- */
     .skip-link {
-      position: absolute; top: -100px; left: 8px; z-index: 200;
-      background: var(--purple); color: #fff; padding: 8px 16px;
-      border-radius: 0 0 8px 8px; font-size: 0.85rem; font-weight: 600;
+      position: absolute;
+      top: -100px;
+      left: 8px;
+      z-index: 200;
+      background: var(--purple);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 0 0 8px 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
       text-decoration: none;
     }
     .skip-link:focus { top: 0; }
 
-    /* ---- Focus visible ---- */
+    /* ---- Focus ---- */
     .nav a:focus-visible, .os-tab:focus-visible, .copy-btn:focus-visible,
     summary:focus-visible {
       outline: 2px solid var(--gold);
       outline-offset: 2px;
     }
 
-    /* ---- Reduced motion ---- */
+    /* ---- Motion ---- */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -241,249 +671,461 @@
 
     /* ---- Responsive ---- */
     @media (max-width: 640px) {
-      .hero-title { font-size: 1.5rem; }
-      .hero-inner { flex-direction: column; align-items: flex-start; }
-      .section-title { font-size: 1.3rem; }
-      .workflow { flex-direction: column; }
-      .workflow-arrow { transform: rotate(90deg); }
+      .header-title { font-size: 1.8rem; }
+      .header-brand { flex-direction: column; align-items: flex-start; }
+      .section-heading { font-size: 1.4rem; }
+      .phases { grid-template-columns: 1fr; }
+      .phase::after { display: none; }
       .step { gap: 12px; }
       .os-tab { padding: 8px 14px; font-size: 0.78rem; }
+      .chat-bubble { max-width: 100%; }
     }
   </style>
 </head>
 <body>
 
-<div class="gold-bar"></div>
+<div class="gold-accent"></div>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- ==================== HERO ==================== -->
-<header class="hero">
+<!-- ==================== HEADER ==================== -->
+<header class="header">
   <div class="container">
-    <div class="hero-inner">
-      <img src="lti-logo.png" alt="Learning Technology and Innovation logo" class="hero-logo">
-      <div class="hero-title-group">
-        <p class="hero-subtitle">Thompson Rivers University</p>
-        <h1 class="hero-title">Moodle Support Companion</h1>
+    <div class="header-inner">
+      <div class="header-brand">
+        <img src="lti-logo.png" alt="Learning Technology and Innovation logo" class="header-logo">
+        <span class="header-org">Thompson Rivers University</span>
       </div>
-    </div>
-    <p class="hero-desc">
-      A diagnostic support tool for the <strong>Learning Technology &amp; Innovation</strong> team.
-      Not a chatbot &mdash; a deliberative diagnostic tool that helps learning technologists
-      <strong>investigate before solving</strong>, track issues over time, and build institutional knowledge.
-    </p>
-    <div class="hero-badges">
-      <span class="hero-badge">AI-Powered Diagnostics</span>
-      <span class="hero-badge">Knowledge Base Search</span>
-      <span class="hero-badge">Case Tracking &amp; Analytics</span>
-      <span class="hero-badge">Course Health Analysis</span>
-      <span class="hero-badge">TeamDynamix Integration</span>
+      <h1 class="header-title">Moodle Support Companion</h1>
+      <p class="header-desc">
+        A diagnostic tool for the <strong>Learning Technology &amp; Innovation</strong> team.
+        Not a chatbot &mdash; a structured investigation partner that helps you
+        <strong>ask the right questions before jumping to solutions</strong>.
+      </p>
+      <div class="header-chips">
+        <span class="chip">AI-Powered Diagnostics</span>
+        <span class="chip">Knowledge Base</span>
+        <span class="chip">Case Tracking</span>
+        <span class="chip">Course Analysis</span>
+        <span class="chip">TeamDynamix Integration</span>
+      </div>
     </div>
   </div>
 </header>
 
 <!-- ==================== NAV ==================== -->
-<nav class="nav">
+<nav class="nav" aria-label="Page sections">
   <div class="container">
     <div class="nav-inner">
-      <a href="#features">Features</a>
-      <a href="#how-it-works">How It Works</a>
-      <a href="#guide">Using the Tool</a>
+      <a href="#getting-started">Getting Started</a>
+      <a href="#methodology">How It Works</a>
+      <a href="#diagnose-guide">Diagnosing Issues</a>
+      <a href="#knowledge-base">Knowledge Base</a>
+      <a href="#cases">Case Tracking</a>
+      <a href="#best-practices">Best Practices</a>
       <a href="#install">Installation</a>
-      <a href="#architecture">Architecture</a>
     </div>
   </div>
 </nav>
 
 <main id="main-content">
 
-<!-- ==================== FEATURES ==================== -->
-<section id="features">
-  <div class="container-wide">
-    <p class="section-label">Capabilities</p>
-    <h2 class="section-title">What the Companion Does</h2>
-    <p class="section-desc">
-      Built specifically for the LT&I workflow &mdash; from the initial support email through diagnosis to resolution and team learning.
-    </p>
-
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true" style="background: #eef6ff; color: var(--blue);">&#x1F50D;</div>
-        <h3>Diagnostic Conversations</h3>
-        <p>Structured EXPLORE &rarr; DIAGNOSE &rarr; RESOLVE phases. The Companion asks follow-up questions instead of jumping to conclusions, because users often report symptoms, not root causes.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true" style="background: var(--gold-light); color: var(--gold-hover);">&#x1F4DA;</div>
-        <h3>Knowledge Base Search</h3>
-        <p>Semantic search across Moodle documentation, TRU FAQs, WordPress content, and internal guides. Relevant documentation is automatically pulled into every diagnostic conversation.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true" style="background: #f0eef7; color: var(--purple);">&#x1F517;</div>
-        <h3>Moodle URL Parsing</h3>
-        <p>Paste any <code>moodle.tru.ca</code> URL and the Companion automatically extracts the course ID, module type, and activity — giving instant context for the conversation.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true" style="background: #e6f7f4; color: var(--teal);">&#x1F4E6;</div>
-        <h3>Course Context Upload</h3>
-        <p>Upload <code>.mbz</code> course backups, screenshots, or saved Moodle HTML pages. The Companion analyzes course structure, settings, and configuration without needing admin access.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true" style="background: #fde8f2; color: var(--pink);">&#x1FA7A;</div>
-        <h3>Course Health Checks</h3>
-        <p>Automated detection of common configuration issues: completion tracking gaps, gradebook inconsistencies, generic activity names, format mismatches, and more.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true" style="background: var(--purple-light); color: var(--navy);">&#x1F4CB;</div>
-        <h3>Case Tracking</h3>
-        <p>Save diagnostic sessions as cases with tags, difficulty ratings, and full conversation history. Build institutional memory your team can search and learn from.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true" style="background: #eef6ff; color: var(--blue);">&#x1F4CA;</div>
-        <h3>Analytics Dashboard</h3>
-        <p>See common issues at a glance: trending categories, difficulty distribution, resolution times, top Moodle modules, and a 12-week timeline of team activity.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true" style="background: var(--gold-light); color: var(--gold-hover);">&#x2709;&#xFE0F;</div>
-        <h3>Draft Reply Generator</h3>
-        <p>Generate professional replies ready to paste into TeamDynamix. Choose the audience (instructor, student, or admin) and tone (professional, friendly, or brief).</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true" style="background: #e6f7f4; color: var(--teal);">&#x1F91D;</div>
-        <h3>Sharing &amp; Export</h3>
-        <p>Share a conversation with a colleague via a direct link. Export sessions as Markdown for training materials. Export all cases as CSV for reporting.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== HOW IT WORKS ==================== -->
-<section id="how-it-works">
+<!-- ==================== GETTING STARTED ==================== -->
+<section id="getting-started">
   <div class="container">
-    <p class="section-label">Methodology</p>
-    <h2 class="section-title">How It Works</h2>
-    <p class="section-desc">
-      The Companion follows a structured diagnostic methodology &mdash; it resists jumping to solutions until it understands the problem.
+    <p class="section-eyebrow">Getting Started</p>
+    <h2 class="section-heading">What Can the Companion Do for You?</h2>
+    <p class="section-lead">
+      Here are the kinds of situations where the Companion makes your work easier and more consistent.
     </p>
 
-    <div class="workflow">
-      <div class="workflow-step wf-explore">
-        <div class="emoji" aria-hidden="true">&#x1F50D;</div>
-        <div class="label">EXPLORE</div>
-        <div class="desc">Gather info, ask questions</div>
-      </div>
-      <div class="workflow-arrow" aria-hidden="true">&rarr;</div>
-      <div class="workflow-step wf-diagnose">
-        <div class="emoji" aria-hidden="true">&#x1F9E0;</div>
-        <div class="label">DIAGNOSE</div>
-        <div class="desc">Analyze, rank causes</div>
-      </div>
-      <div class="workflow-arrow" aria-hidden="true">&rarr;</div>
-      <div class="workflow-step wf-resolve">
-        <div class="emoji" aria-hidden="true">&#x2705;</div>
-        <div class="label">RESOLVE</div>
-        <div class="desc">Fix steps, draft reply</div>
-      </div>
-    </div>
+    <div class="scenario-grid">
 
-    <div style="margin-top: 32px;">
-      <h3 style="font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 12px;">For each support issue, the Companion:</h3>
-      <ol style="font-size: 0.9rem; color: #6b7280; line-height: 2; padding-left: 20px;">
-        <li>Searches the knowledge base for relevant Moodle documentation and past cases</li>
-        <li>Parses any Moodle URLs to identify the course, module, and activity involved</li>
-        <li>Suggests checks for the <strong>technologist to perform</strong> and questions to <strong>ask the end user</strong></li>
-        <li>Cross-references the knowledge base and similar past cases before diagnosing</li>
-        <li>Ranks possible causes by likelihood and provides step-by-step resolution</li>
-        <li>Offers to draft a reply for the user, save the case for team learning, or create a KB article</li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== USING THE TOOL ==================== -->
-<section id="guide">
-  <div class="container">
-    <p class="section-label">User Guide</p>
-    <h2 class="section-title">Using the Companion</h2>
-    <p class="section-desc">
-      The tool has three main tabs: Diagnose, Search, and Cases.
-    </p>
-
-    <!-- Diagnose tab -->
-    <div class="guide-section">
-      <h3><span aria-hidden="true">&#x1F4A1; </span>Diagnose Tab &mdash; Diagnostic Conversations</h3>
-      <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 20px;">
-        This is where you investigate support issues. Start by describing the problem as you understand it.
-      </p>
-
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <h4>Describe the issue</h4>
-          <p>Type the support issue into the message box. Include as much context as you have: what the user reported, the course name, and any Moodle URLs.</p>
-          <div class="callout callout-info" role="note">
-            <strong>Tip:</strong> Pasting a <code>moodle.tru.ca</code> URL will automatically be detected and parsed for course/activity context.
+      <div class="scenario">
+        <div class="scenario-header">
+          <div class="scenario-icon" aria-hidden="true" style="background: #eef6ff; color: var(--blue);">&#x1F4E8;</div>
+          <div>
+            <h3>A user reports a problem you haven't seen before</h3>
+            <p class="scenario-context">"Grades aren't showing up for students in BIOL 1110"</p>
+          </div>
+        </div>
+        <div class="scenario-body">
+          <ol>
+            <li>Open the <strong>Diagnose</strong> tab and type (or paste) the issue description</li>
+            <li>If you have a Moodle URL, paste it &mdash; the Companion automatically extracts the course ID, module type, and activity</li>
+            <li>The Companion searches the knowledge base, finds relevant documentation, and walks you through a structured investigation</li>
+            <li>It suggests <strong>specific checks for you to perform</strong> in Moodle and <strong>questions to ask the instructor</strong></li>
+          </ol>
+          <div class="scenario-result">
+            <strong>Result:</strong> Instead of guessing, you have a systematic path to the root cause &mdash; and documentation backing up your diagnosis.
           </div>
         </div>
       </div>
 
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <h4>Add course context (optional)</h4>
-          <p>Use the toolbar buttons to upload additional context:</p>
-          <ul style="font-size: 0.88rem; color: #6b7280; padding-left: 20px; margin-top: 4px;">
-            <li><strong>.mbz Backup</strong> &mdash; Upload a Moodle course backup for full structure analysis and health checks</li>
-            <li><strong>Screenshot</strong> &mdash; Upload a screenshot of the problem. The Companion can analyze images visually.</li>
-            <li><strong>Saved Page</strong> &mdash; Save a Moodle page (Cmd+S / Ctrl+S in your browser) and upload the HTML file for settings extraction</li>
-          </ul>
+      <div class="scenario">
+        <div class="scenario-header">
+          <div class="scenario-icon" aria-hidden="true" style="background: var(--gold-light); color: var(--gold-hover);">&#x1F504;</div>
+          <div>
+            <h3>You're working a ticket you've seen variations of before</h3>
+            <p class="scenario-context">"Quiz won't let students reattempt after first try"</p>
+          </div>
+        </div>
+        <div class="scenario-body">
+          <ol>
+            <li>Start a diagnosis &mdash; the Companion automatically checks <strong>past cases</strong> your team has resolved</li>
+            <li>If a similar case exists, it surfaces the previous resolution steps so you don't reinvent the wheel</li>
+            <li>The more cases your team saves, the smarter the Companion gets at connecting new issues to known solutions</li>
+          </ol>
+          <div class="scenario-result">
+            <strong>Result:</strong> Team knowledge compounds over time. A fix discovered by one person helps everyone on the team.
+          </div>
         </div>
       </div>
 
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <h4>Follow the diagnostic flow</h4>
-          <p>The Companion will guide you through investigation. Watch for the mode badge:</p>
-          <ul style="font-size: 0.88rem; color: #6b7280; padding-left: 20px; margin-top: 4px;">
-            <li><span style="color: var(--blue); font-weight: 600;">EXPLORE</span> &mdash; Gathering information. It will suggest things for you to check and questions to ask the user.</li>
-            <li><span style="color: var(--navy); font-weight: 600;">DIAGNOSE</span> &mdash; Analyzing the evidence and ranking possible causes.</li>
-            <li><span style="color: var(--teal); font-weight: 600;">RESOLVE</span> &mdash; Providing fix instructions and next steps.</li>
-          </ul>
+      <div class="scenario">
+        <div class="scenario-header">
+          <div class="scenario-icon" aria-hidden="true" style="background: #e6f7f4; color: var(--teal-deep);">&#x2709;&#xFE0F;</div>
+          <div>
+            <h3>You need to reply to a ticket in TeamDynamix</h3>
+            <p class="scenario-context">Crafting a clear, helpful response for an instructor or student</p>
+          </div>
+        </div>
+        <div class="scenario-body">
+          <ol>
+            <li>After diagnosing the issue, click <strong>Draft Reply</strong></li>
+            <li>Choose your <strong>audience</strong> (instructor, student, or admin) and <strong>tone</strong> (professional, friendly, or brief)</li>
+            <li>The Companion generates a reply you can copy directly into TDX, edit as needed, and send</li>
+          </ol>
+          <div class="scenario-result">
+            <strong>Result:</strong> Professional, consistent replies in seconds &mdash; no more staring at a blank response box.
+          </div>
         </div>
       </div>
 
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <h4>After resolution</h4>
-          <p>Once the issue is resolved, a prompt will appear with next steps:</p>
-          <ul style="font-size: 0.88rem; color: #6b7280; padding-left: 20px; margin-top: 4px;">
-            <li><strong>Save as Case</strong> &mdash; Add to the team's case database with tags and difficulty rating</li>
-            <li><strong>Draft Reply</strong> &mdash; Generate a professional reply for TeamDynamix, tailored to the audience</li>
-            <li><strong>Export</strong> &mdash; Download the session as a Markdown file for training or documentation</li>
-            <li><strong>Share</strong> &mdash; Copy a link so a colleague can view the conversation</li>
-            <li><strong>Draft KB Article</strong> &mdash; Have the Companion draft a knowledge base article about the issue</li>
-          </ul>
+      <div class="scenario">
+        <div class="scenario-header">
+          <div class="scenario-icon" aria-hidden="true" style="background: #f0eef7; color: var(--purple);">&#x1F4E6;</div>
+          <div>
+            <h3>An instructor says "something is wrong with my course"</h3>
+            <p class="scenario-context">Vague reports with no specific details</p>
+          </div>
+        </div>
+        <div class="scenario-body">
+          <ol>
+            <li>Ask the instructor (or do it yourself) to download a <strong>.mbz backup</strong> of the course</li>
+            <li>Upload it in the Diagnose tab &mdash; the Companion analyzes the course structure and runs <strong>automated health checks</strong></li>
+            <li>It detects issues like: completion tracking gaps, gradebook inconsistencies, generic activity names, misconfigured settings</li>
+          </ol>
+          <div class="scenario-result">
+            <strong>Result:</strong> You find configuration problems that a user would never think to report, without needing admin access to their course.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== METHODOLOGY ==================== -->
+<section id="methodology" style="background: #fff;">
+  <div class="container">
+    <p class="section-eyebrow">Methodology</p>
+    <h2 class="section-heading">The Diagnostic Flow</h2>
+    <p class="section-lead">
+      The Companion follows a three-phase methodology. A mode badge in the interface shows you which phase is active.
+    </p>
+
+    <div class="phases">
+      <div class="phase phase-explore">
+        <p class="phase-label">Phase 1</p>
+        <p class="phase-title">Explore</p>
+        <p class="phase-desc">Gather information. Suggest checks for you to perform. Ask clarifying questions.</p>
+      </div>
+      <div class="phase phase-diagnose">
+        <p class="phase-label">Phase 2</p>
+        <p class="phase-title">Diagnose</p>
+        <p class="phase-desc">Analyze evidence. Rank possible causes by likelihood. Cross-reference knowledge base.</p>
+      </div>
+      <div class="phase phase-resolve">
+        <p class="phase-label">Phase 3</p>
+        <p class="phase-title">Resolve</p>
+        <p class="phase-desc">Provide fix steps. Draft reply for the user. Save the case for team learning.</p>
+      </div>
+    </div>
+
+    <div class="callout callout-important" role="note">
+      <strong>Why this matters:</strong> Support conversations often jump straight to solutions. The Companion resists this &mdash; it investigates first, because users typically report <em>symptoms</em>, not root causes. A "grades aren't showing" report could be a gradebook setup issue, a completion tracking problem, a group override, or six other things.
+    </div>
+
+    <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--navy); margin: 28px 0 14px;">What happens behind the scenes</h3>
+    <ol class="workflow-list">
+      <li><strong>Knowledge base search</strong> &mdash; Your message is matched against Moodle documentation, TRU FAQs, internal guides, and past cases</li>
+      <li><strong>URL parsing</strong> &mdash; Any <code>moodle.tru.ca</code> URLs are automatically decoded to extract course ID, module type, and activity</li>
+      <li><strong>Context assembly</strong> &mdash; Relevant documentation, uploaded files, and past case matches are assembled into context</li>
+      <li><strong>Structured response</strong> &mdash; The AI generates a response that follows the diagnostic methodology, citing specific documentation when available</li>
+      <li><strong>Confidence signaling</strong> &mdash; The Companion tells you when it's drawing from documented knowledge vs. general Moodle expertise</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== DIAGNOSE GUIDE ==================== -->
+<section id="diagnose-guide">
+  <div class="container">
+    <p class="section-eyebrow">The Diagnose Tab</p>
+    <h2 class="section-heading">Walking Through a Diagnosis</h2>
+    <p class="section-lead">
+      The Diagnose tab is where you spend most of your time. Here's what a typical session looks like.
+    </p>
+
+    <div class="guide-block">
+      <h3>Step 1 &mdash; Describe the Issue</h3>
+      <p class="guide-intro">Type or paste the support issue. The more context you include, the better the diagnosis.</p>
+
+      <div class="chat-example">
+        <div class="chat-msg">
+          <div class="chat-avatar chat-avatar-user" aria-hidden="true">You</div>
+          <div class="chat-bubble chat-bubble-user">
+            An instructor reports students can't see their grades in BIOL 1110. The gradebook shows grades on her end but students see dashes. Here's the course: https://moodle.tru.ca/course/view.php?id=12345
+          </div>
+        </div>
+        <div class="chat-msg">
+          <div class="chat-avatar chat-avatar-ai" aria-hidden="true">SC</div>
+          <div class="chat-bubble chat-bubble-ai">
+            I've identified this as <strong>BIOL 1110 (course ID: 12345)</strong>. This is a common gradebook visibility issue. Before diagnosing, I need to narrow down the cause. Could you check a few things?<br><br>
+            1. In <strong>Gradebook setup</strong>, what is the aggregation method for the course total?<br>
+            2. Under <strong>Course administration &rarr; Grades &rarr; User report</strong>, are there any items showing a lock icon?<br>
+            3. Are the affected students in a specific <strong>group</strong>?
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-tip" role="note">
+        <strong>Tip:</strong> You can paste Moodle URLs directly into your message. The Companion automatically extracts the course ID, module type, and activity &mdash; saving you from having to describe the location manually.
+      </div>
+    </div>
+
+    <div class="guide-block">
+      <h3>Step 2 &mdash; Add Context (Optional)</h3>
+      <p class="guide-intro">The toolbar below the message box has buttons to attach additional context:</p>
+
+      <div class="bp-grid">
+        <div class="bp-card">
+          <h4><span aria-hidden="true">&#x1F4E6;</span> .mbz Course Backup</h4>
+          <p>Upload a Moodle backup file. The Companion analyzes the full course structure, activity settings, and completion configuration. Also runs automated health checks for common issues.</p>
+        </div>
+        <div class="bp-card">
+          <h4><span aria-hidden="true">&#x1F4F8;</span> Screenshot</h4>
+          <p>Upload a screenshot of the problem. The Companion can read and analyze images &mdash; useful for error messages, unexpected layouts, or "it looks like this" reports.</p>
+        </div>
+        <div class="bp-card">
+          <h4><span aria-hidden="true">&#x1F4C4;</span> Saved HTML Page</h4>
+          <p>Save a Moodle page with Cmd+S (Mac) or Ctrl+S (Windows), then upload the HTML file. The Companion extracts settings and configuration details from the page.</p>
         </div>
       </div>
     </div>
 
-    <!-- Search tab -->
-    <div class="guide-section">
-      <h3><span aria-hidden="true">&#x1F50E; </span>Search Tab &mdash; Knowledge Base</h3>
-      <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 12px;">
-        Search across all ingested documentation using natural language. Results are ranked by semantic relevance, not just keyword matching. You can filter by source and click "Diagnose this issue" on any result to start a diagnostic conversation with that context pre-loaded.
-      </p>
+    <div class="guide-block">
+      <h3>Step 3 &mdash; Follow the Investigation</h3>
+      <p class="guide-intro">Respond to the Companion's questions as you gather information. You'll see the mode badge change as the conversation progresses:</p>
+
+      <div class="chat-example">
+        <div class="chat-msg">
+          <div class="chat-avatar chat-avatar-user" aria-hidden="true">You</div>
+          <div class="chat-bubble chat-bubble-user">
+            The aggregation is "Natural" and there are no lock icons. But I noticed the "Course total" column has a visibility icon that looks hidden. The affected students are all in Group B.
+          </div>
+        </div>
+        <div class="chat-msg">
+          <div class="chat-avatar chat-avatar-ai" aria-hidden="true">SC</div>
+          <div class="chat-bubble chat-bubble-ai">
+            That narrows it down significantly. Two likely causes:<br><br>
+            <strong>1. Hidden course total (most likely):</strong> If the course total column visibility is set to "Hidden", students see dashes even though grades exist. The instructor can see them because the "hidden" setting doesn't apply to teachers.<br><br>
+            <strong>2. Group override:</strong> If there's a group override on any grade items specific to Group B, it could affect visibility.<br><br>
+            <strong>To fix:</strong> Go to <strong>Gradebook setup &rarr; Edit &rarr; Edit settings</strong> on the Course total row. Under "Grade category", check that "Hidden" is <strong>unchecked</strong>.
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Cases tab -->
-    <div class="guide-section">
-      <h3><span aria-hidden="true">&#x1F4CB; </span>Cases Tab &mdash; Case Tracking &amp; Analytics</h3>
-      <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 12px;">
-        Browse and search past cases. Click any tag to filter. Switch to the <strong>Analytics</strong> view for aggregate insights across all cases: weekly trends, difficulty distribution, top modules, and common tags.
-      </p>
-      <p style="font-size: 0.9rem; color: #6b7280;">
-        Use the <strong>Export CSV</strong> button to download all case data for reporting in Excel or importing into TeamDynamix.
-      </p>
+    <div class="guide-block">
+      <h3>Step 4 &mdash; After Resolution</h3>
+      <p class="guide-intro">Once the issue is resolved, a prompt appears with your next options:</p>
+
+      <div class="bp-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+        <div class="bp-card">
+          <h4><span aria-hidden="true">&#x1F4BE;</span> Save as Case</h4>
+          <p>Add a title, tags, and difficulty rating. The full conversation is saved so your team can learn from it later.</p>
+        </div>
+        <div class="bp-card">
+          <h4><span aria-hidden="true">&#x2709;&#xFE0F;</span> Draft Reply</h4>
+          <p>Generate a reply for TeamDynamix. Choose audience (instructor, student, admin) and tone (professional, friendly, brief).</p>
+        </div>
+        <div class="bp-card">
+          <h4><span aria-hidden="true">&#x1F4E4;</span> Export</h4>
+          <p>Download the session as Markdown for documentation or training materials.</p>
+        </div>
+        <div class="bp-card">
+          <h4><span aria-hidden="true">&#x1F517;</span> Share</h4>
+          <p>Copy a link so a colleague can view the full conversation &mdash; useful for handoffs or second opinions.</p>
+        </div>
+        <div class="bp-card">
+          <h4><span aria-hidden="true">&#x1F4D6;</span> Draft KB Article</h4>
+          <p>Have the Companion draft a knowledge base article about the issue, ready for review and publishing.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== KNOWLEDGE BASE ==================== -->
+<section id="knowledge-base" style="background: #fff;">
+  <div class="container">
+    <p class="section-eyebrow">The Search Tab</p>
+    <h2 class="section-heading">Knowledge Base</h2>
+    <p class="section-lead">
+      The Search tab lets you browse and search all indexed documentation using natural language &mdash; not just keywords.
+    </p>
+
+    <div class="guide-block">
+      <h3>How to Search</h3>
+      <div class="step">
+        <div class="step-marker">1</div>
+        <div class="step-body">
+          <h4>Type a natural question</h4>
+          <p>Instead of searching for "quiz attempts", you can ask <strong>"how do I let students retake a quiz?"</strong> &mdash; the semantic search understands meaning, not just keywords.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-marker">2</div>
+        <div class="step-body">
+          <h4>Filter by source</h4>
+          <p>Use the sidebar to narrow results to specific sources: Moodle Docs, TRU FAQs, internal guides, or resolved cases.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-marker">3</div>
+        <div class="step-body">
+          <h4>Jump to diagnosis</h4>
+          <p>Found something relevant? Click <strong>"Diagnose this issue"</strong> on any search result to start a diagnostic conversation with that documentation pre-loaded as context.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-tip" role="note">
+      <strong>The knowledge base grows automatically.</strong> Every time your team saves a resolved case, it gets indexed and becomes searchable. Over time, the Companion builds a library of TRU-specific solutions that no generic Moodle documentation can match.
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CASES ==================== -->
+<section id="cases">
+  <div class="container">
+    <p class="section-eyebrow">The Cases Tab</p>
+    <h2 class="section-heading">Case Tracking &amp; Analytics</h2>
+    <p class="section-lead">
+      Cases are the team's institutional memory. Every resolved issue that gets saved makes the whole team stronger.
+    </p>
+
+    <div class="guide-block">
+      <h3>Saving Cases</h3>
+      <p class="guide-intro">When you save a case from the Diagnose tab, you're asked for:</p>
+      <ul style="font-size: 0.9rem; color: var(--charcoal); padding-left: 20px; line-height: 2;">
+        <li><strong>Title</strong> &mdash; A short description (e.g., "Gradebook total hidden from students in BIOL 1110")</li>
+        <li><strong>Tags</strong> &mdash; Keywords for filtering later (e.g., <code>gradebook</code>, <code>visibility</code>, <code>grades</code>)</li>
+        <li><strong>Difficulty</strong> &mdash; How hard was this to solve? (helps identify areas where the team needs training)</li>
+        <li><strong>Resolution</strong> &mdash; The fix, in your own words (auto-filled from the conversation)</li>
+      </ul>
+    </div>
+
+    <div class="guide-block">
+      <h3>Browsing &amp; Filtering Cases</h3>
+      <div class="step">
+        <div class="step-marker">1</div>
+        <div class="step-body">
+          <h4>Search by text</h4>
+          <p>The search bar uses full-text search across case titles, descriptions, and resolutions.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-marker">2</div>
+        <div class="step-body">
+          <h4>Filter by tag</h4>
+          <p>Click any tag pill to filter cases. Tags are shown as coloured pills on each case card and as a filter bar at the top.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-marker">3</div>
+        <div class="step-body">
+          <h4>View full details</h4>
+          <p>Click a case card to see the complete conversation, resolution, and metadata.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="guide-block">
+      <h3>Analytics Dashboard</h3>
+      <p class="guide-intro">Switch to the <strong>Analytics</strong> sub-tab for aggregate insights:</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Weekly Trends</h3>
+          <p>A 12-week bar chart showing case volume over time. Spot busy periods and seasonal patterns.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Difficulty Distribution</h3>
+          <p>See how many issues are easy vs. hard. Identifies areas where the team may need additional training or documentation.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Top Modules</h3>
+          <p>Which Moodle modules generate the most support issues? Quiz, Assignment, Gradebook? Data-driven prioritization.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Common Tags</h3>
+          <p>A tag cloud showing the most frequent issue categories. Click any tag to jump to filtered cases.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-tip" role="note" style="margin-top: 20px;">
+        <strong>For reporting:</strong> Use the <strong>Export CSV</strong> button to download all case data. This works in Excel and can be imported into TeamDynamix for management reporting.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BEST PRACTICES ==================== -->
+<section id="best-practices" style="background: #fff;">
+  <div class="container">
+    <p class="section-eyebrow">Tips</p>
+    <h2 class="section-heading">Getting the Most Out of the Companion</h2>
+
+    <div class="bp-grid" style="margin-bottom: 24px;">
+      <div class="bp-card">
+        <h4><span class="bp-label bp-do">Do</span> Include context upfront</h4>
+        <p>"Instructor in BIOL 1110 reports students can't see quiz grades. URL: moodle.tru.ca/mod/quiz/view.php?id=98765" gives much better results than "grades not showing".</p>
+      </div>
+      <div class="bp-card">
+        <h4><span class="bp-label bp-do">Do</span> Answer its questions</h4>
+        <p>The Companion asks follow-up questions for a reason. Performing the checks it suggests and reporting back gives it the data it needs to diagnose accurately.</p>
+      </div>
+      <div class="bp-card">
+        <h4><span class="bp-label bp-do">Do</span> Save resolved cases</h4>
+        <p>This is how the knowledge base grows. Even "simple" fixes are worth saving &mdash; they save time for the next person who encounters the same issue.</p>
+      </div>
+      <div class="bp-card">
+        <h4><span class="bp-label bp-do">Do</span> Use specific tags</h4>
+        <p>Tags like <code>gradebook</code>, <code>quiz-attempts</code>, <code>completion-tracking</code> are more useful than generic tags like <code>moodle</code> or <code>problem</code>.</p>
+      </div>
+      <div class="bp-card">
+        <h4><span class="bp-label bp-avoid">Avoid</span> Treating it as a search engine</h4>
+        <p>One-word queries like "gradebook" won't trigger the diagnostic methodology. Describe the actual problem or question you're investigating.</p>
+      </div>
+      <div class="bp-card">
+        <h4><span class="bp-label bp-avoid">Avoid</span> Skipping the explore phase</h4>
+        <p>If the Companion asks you to check something, it's building evidence for a diagnosis. Jumping ahead to "just tell me the fix" produces less reliable results.</p>
+      </div>
+    </div>
+
+    <div class="callout callout-example" role="note">
+      <strong>Remember:</strong> The Companion is a diagnostic <em>partner</em>, not an oracle. It works best when you bring your expertise (you know TRU, Moodle admin, and the instructor) and it brings structured investigation, documentation lookup, and pattern recognition from past cases.
     </div>
   </div>
 </section>
@@ -491,533 +1133,236 @@
 <!-- ==================== INSTALLATION ==================== -->
 <section id="install">
   <div class="container">
-    <p class="section-label">Setup</p>
-    <h2 class="section-title">Installation Guide</h2>
-    <p class="section-desc">
-      Step-by-step instructions to get the Companion running on your computer. Choose your operating system below. No prior experience with Terminal or command line is needed &mdash; just copy and paste each command exactly as shown.
+    <p class="section-eyebrow">Self-Hosted Setup</p>
+    <h2 class="section-heading">Installation Guide</h2>
+    <p class="section-lead">
+      The Companion is available as a hosted service. If you need to run your own instance, follow these steps. No prior command-line experience needed.
     </p>
 
-    <div class="callout callout-warning" role="note">
-      <strong>Before you start:</strong> You will need an <strong>Anthropic API key</strong> to power the AI features. Get one at <a href="https://console.anthropic.com/" target="_blank" rel="noopener noreferrer" style="color: var(--purple); font-weight: 600;">console.anthropic.com</a> &mdash; you'll need to create an account and add billing. The cost is roughly $0.01&ndash;0.05 per diagnostic conversation.
+    <div class="callout callout-important" role="note">
+      <strong>Before you start:</strong> You need an <strong>Anthropic API key</strong> for the AI features. Get one at <a href="https://console.anthropic.com/" target="_blank" rel="noopener noreferrer" style="color: var(--purple); font-weight: 600;">console.anthropic.com</a> (requires an account with billing). Cost is roughly $0.01&ndash;0.05 per conversation.
     </div>
 
     <!-- OS Tabs -->
     <div class="os-tabs" role="tablist">
-      <button class="os-tab active" role="tab" id="tab-mac" aria-selected="true" aria-controls="panel-mac" onclick="switchOS('mac')">&#x1F34E; Mac</button>
-      <button class="os-tab" role="tab" id="tab-win" aria-selected="false" aria-controls="panel-win" onclick="switchOS('win')">&#x1FAA9; Windows</button>
+      <button class="os-tab active" role="tab" id="tab-mac" aria-selected="true" aria-controls="panel-mac" onclick="switchOS('mac')">Mac</button>
+      <button class="os-tab" role="tab" id="tab-win" aria-selected="false" aria-controls="panel-win" onclick="switchOS('win')">Windows</button>
     </div>
 
-    <!-- ========== MAC PANEL ========== -->
+    <!-- MAC PANEL -->
     <div id="panel-mac" class="os-panel active" role="tabpanel" aria-labelledby="tab-mac">
+      <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 20px;">Mac Installation</h3>
 
-      <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 20px;">Mac Installation</h3>
-
-      <!-- Step 1: Open Terminal -->
       <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-content">
+        <div class="step-marker">1</div>
+        <div class="step-body">
           <h4>Open Terminal</h4>
-          <p>Press <strong>Cmd + Space</strong> to open Spotlight, type <strong>Terminal</strong>, and press Enter. A window with a command prompt will appear. All the commands below are typed (or pasted) here.</p>
+          <p>Press <strong>Cmd + Space</strong>, type <strong>Terminal</strong>, press Enter.</p>
         </div>
       </div>
 
-      <!-- Step 2: Install Homebrew -->
       <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <h4>Install Homebrew (Mac package manager)</h4>
-          <p>If you're not sure whether you have Homebrew, run this first to check:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">brew --version</span>
-          </pre>
-          <p>If you see a version number, skip to Step 3. If you see "command not found", install Homebrew by pasting this command and pressing Enter:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</span>
-          </pre>
-          <p>Follow the on-screen prompts. It may ask for your Mac password (you won't see characters as you type &mdash; that's normal).</p>
+        <div class="step-marker">2</div>
+        <div class="step-body">
+          <h4>Install Homebrew (if needed)</h4>
+          <p>Check first: <code>brew --version</code>. If it shows a version, skip to step 3. Otherwise:</p>
+          <pre class="code-block" role="group" aria-label="Terminal command"><button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button><span class="cmd">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</span></pre>
         </div>
       </div>
 
-      <!-- Step 3: Install Python -->
       <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <h4>Install Python</h4>
-          <p>Check if you already have Python 3.11 or later:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">python3 --version</span>
-          </pre>
-          <p>If the version is 3.11 or higher, skip to Step 4. Otherwise, install it:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">brew install python</span>
-          </pre>
+        <div class="step-marker">3</div>
+        <div class="step-body">
+          <h4>Install Python &amp; Node.js</h4>
+          <p>Check versions: <code>python3 --version</code> (need 3.11+) and <code>node --version</code> (need 18+). Install any missing:</p>
+          <pre class="code-block" role="group" aria-label="Terminal command"><button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button><span class="cmd">brew install python node</span></pre>
         </div>
       </div>
 
-      <!-- Step 4: Install Node.js -->
       <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <h4>Install Node.js</h4>
-          <p>Check if you have Node.js 18 or later:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">node --version</span>
-          </pre>
-          <p>If the version is 18 or higher, skip to Step 5. Otherwise:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">brew install node</span>
-          </pre>
+        <div class="step-marker">4</div>
+        <div class="step-body">
+          <h4>Download and set up the project</h4>
+          <pre class="code-block" role="group" aria-label="Terminal commands"><button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button><span class="cmd">cd ~/Desktop</span>
+<span class="cmd">git clone https://github.com/blamb/moodle-support-companion.git</span>
+<span class="cmd">cd moodle-support-companion/backend</span>
+<span class="cmd">pip3 install -r requirements.txt</span>
+<span class="cmd">cd ../frontend</span>
+<span class="cmd">npm install</span></pre>
         </div>
       </div>
 
-      <!-- Step 5: Get the project -->
       <div class="step">
-        <div class="step-num">5</div>
-        <div class="step-content">
-          <h4>Download the project</h4>
-          <p><strong>Option A &mdash; From GitHub</strong> (if you have git):</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">cd ~/Desktop</span><br>
-            <span class="cmd">git clone https://github.com/blamb/moodle-support-companion.git</span><br>
-            <span class="cmd">cd moodle-support-companion</span>
-          </pre>
-          <p><strong>Option B &mdash; From a Zip file:</strong></p>
-          <ol style="font-size: 0.88rem; color: #6b7280; padding-left: 20px;">
-            <li>Download the Zip file and save it to your Desktop</li>
-            <li>Double-click to extract it</li>
-            <li>In Terminal, run:</li>
-          </ol>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">cd ~/Desktop/moodle-support-companion</span>
-          </pre>
+        <div class="step-marker">5</div>
+        <div class="step-body">
+          <h4>Set your API key and start the backend</h4>
+          <pre class="code-block" role="group" aria-label="Terminal commands"><button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button><span class="cmd">cd ../backend</span>
+<span class="cmd">export ANTHROPIC_API_KEY="your-key-here"</span>
+<span class="cmd">python3 -m uvicorn app.main:app --port 8000 --reload</span></pre>
+          <p>Leave this window open. You should see <code>Uvicorn running on http://127.0.0.1:8000</code>.</p>
         </div>
       </div>
 
-      <!-- Step 6: Install backend dependencies -->
       <div class="step">
-        <div class="step-num">6</div>
-        <div class="step-content">
-          <h4>Install backend dependencies</h4>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">cd backend</span><br>
-            <span class="cmd">pip3 install -r requirements.txt</span>
-          </pre>
-          <div class="callout callout-info" role="note">
-            <strong>Note:</strong> The first run downloads AI model files (~90MB) for the knowledge base search. This is a one-time download.
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 7: Install frontend dependencies -->
-      <div class="step">
-        <div class="step-num">7</div>
-        <div class="step-content">
-          <h4>Install frontend dependencies</h4>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">cd ../frontend</span><br>
-            <span class="cmd">npm install</span>
-          </pre>
-        </div>
-      </div>
-
-      <!-- Step 8: Set your API key -->
-      <div class="step">
-        <div class="step-num">8</div>
-        <div class="step-content">
-          <h4>Set your API key</h4>
-          <p>Go back to the backend folder and set your Anthropic API key. Replace <code>your-key-here</code> with your actual key:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">cd ../backend</span><br>
-            <span class="cmd">export ANTHROPIC_API_KEY="your-key-here"</span>
-          </pre>
-          <div class="callout callout-warning" role="note">
-            <strong>Important:</strong> You need to run the <code>export</code> command every time you open a new Terminal window. To make it permanent, you can add it to your shell profile &mdash; ask your team lead if unsure.
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 9: Start the backend -->
-      <div class="step">
-        <div class="step-num">9</div>
-        <div class="step-content">
-          <h4>Start the backend server</h4>
-          <p>Make sure you are in the <code>backend</code> folder, then run:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">python3 -m uvicorn app.main:app --port 8000 --reload</span>
-          </pre>
-          <p>You should see output ending with something like <code>Uvicorn running on http://127.0.0.1:8000</code>. <strong>Leave this Terminal window open.</strong></p>
-        </div>
-      </div>
-
-      <!-- Step 10: Start the frontend -->
-      <div class="step">
-        <div class="step-num">10</div>
-        <div class="step-content">
-          <h4>Start the frontend (in a new Terminal window)</h4>
-          <p>Open a <strong>new</strong> Terminal window (<strong>Cmd + N</strong>) and run:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">cd ~/Desktop/moodle-support-companion/frontend</span><br>
-            <span class="cmd">npm run dev</span>
-          </pre>
-          <p>You should see output with a URL like <code>http://localhost:5173</code>. <strong>Leave this window open too.</strong></p>
-        </div>
-      </div>
-
-      <!-- Step 11: Open the app -->
-      <div class="step">
-        <div class="step-num">11</div>
-        <div class="step-content">
-          <h4>Open the app</h4>
-          <p>Open your web browser and go to:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="url">http://localhost:5173</span>
-          </pre>
+        <div class="step-marker">6</div>
+        <div class="step-body">
+          <h4>Start the frontend (new Terminal window)</h4>
+          <p>Open a <strong>new</strong> Terminal window (<strong>Cmd + N</strong>):</p>
+          <pre class="code-block" role="group" aria-label="Terminal commands"><button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button><span class="cmd">cd ~/Desktop/moodle-support-companion/frontend</span>
+<span class="cmd">npm run dev</span></pre>
+          <p>Open <a href="http://localhost:5173" style="color: var(--purple); font-weight: 600;">http://localhost:5173</a> in your browser.</p>
           <div class="callout callout-success" role="note">
-            <strong>You're ready!</strong> You should see the Moodle Support Companion with the LT&I logo and three tabs: Diagnose, Search, and Cases.
+            <strong>Done!</strong> You should see the Companion with the LT&amp;I branding and three tabs.
           </div>
         </div>
       </div>
-
-      <!-- Stopping -->
-      <div style="margin-top: 32px; padding: 20px; background: var(--gray-light); border-radius: 10px;">
-        <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Stopping the app</h4>
-        <p style="font-size: 0.88rem; color: #6b7280;">
-          To stop the app, press <strong>Ctrl + C</strong> in each of the two Terminal windows. To start it again later, repeat Steps 8&ndash;11 (set the API key, start backend, start frontend, open browser).
-        </p>
-      </div>
-
     </div>
 
-    <!-- ========== WINDOWS PANEL ========== -->
+    <!-- WINDOWS PANEL -->
     <div id="panel-win" class="os-panel" role="tabpanel" aria-labelledby="tab-win">
+      <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 20px;">Windows Installation</h3>
 
-      <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 20px;">Windows Installation</h3>
-
-      <!-- Step 1: Open PowerShell -->
       <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-content">
+        <div class="step-marker">1</div>
+        <div class="step-body">
           <h4>Open PowerShell</h4>
-          <p>Press the <strong>Windows key</strong>, type <strong>PowerShell</strong>, and click <strong>Windows PowerShell</strong>. A blue command window will appear. All the commands below are typed (or pasted) here.</p>
-          <div class="callout callout-info" role="note">
-            <strong>Tip:</strong> To paste in PowerShell, right-click in the window.
-          </div>
+          <p>Press the <strong>Windows key</strong>, type <strong>PowerShell</strong>, click <strong>Windows PowerShell</strong>.</p>
         </div>
       </div>
 
-      <!-- Step 2: Install Python -->
       <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-content">
+        <div class="step-marker">2</div>
+        <div class="step-body">
           <h4>Install Python</h4>
-          <p>Check if you already have Python 3.11 or later:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">python --version</span>
-          </pre>
-          <p>If the version is 3.11 or higher, skip to Step 3. Otherwise:</p>
-          <ol style="font-size: 0.88rem; color: #6b7280; padding-left: 20px;">
-            <li>Go to <a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer" style="color: var(--purple); font-weight: 500;">python.org/downloads</a></li>
-            <li>Click the big yellow <strong>"Download Python"</strong> button</li>
-            <li>Run the installer</li>
-            <li><strong>IMPORTANT:</strong> Check the box that says <strong>"Add Python to PATH"</strong> at the bottom of the installer before clicking Install</li>
-            <li>After installation, <strong>close and reopen PowerShell</strong></li>
-          </ol>
-          <div class="callout callout-warning" role="note">
-            <strong>Don't skip the PATH checkbox!</strong> If you miss it, the <code>python</code> command won't work. You'd need to uninstall and reinstall Python with the box checked.
+          <p>Check: <code>python --version</code>. If 3.11+, skip to step 3. Otherwise, download from <a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer" style="color: var(--purple); font-weight: 500;">python.org/downloads</a>.</p>
+          <div class="callout callout-important" role="note">
+            <strong>Critical:</strong> During installation, check <strong>"Add Python to PATH"</strong> at the bottom of the installer. Then close and reopen PowerShell.
           </div>
         </div>
       </div>
 
-      <!-- Step 3: Install Node.js -->
       <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-content">
+        <div class="step-marker">3</div>
+        <div class="step-body">
           <h4>Install Node.js</h4>
-          <p>Check if you have Node.js 18 or later:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">node --version</span>
-          </pre>
-          <p>If the version is 18 or higher, skip to Step 4. Otherwise:</p>
-          <ol style="font-size: 0.88rem; color: #6b7280; padding-left: 20px;">
-            <li>Go to <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" style="color: var(--purple); font-weight: 500;">nodejs.org</a></li>
-            <li>Click the <strong>LTS</strong> (Long Term Support) download button</li>
-            <li>Run the installer with all default options</li>
-            <li><strong>Close and reopen PowerShell</strong> after installation</li>
-          </ol>
+          <p>Check: <code>node --version</code>. If 18+, skip to step 4. Otherwise, download from <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" style="color: var(--purple); font-weight: 500;">nodejs.org</a> (LTS version). Close and reopen PowerShell after install.</p>
         </div>
       </div>
 
-      <!-- Step 4: Install Git (optional) -->
       <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <h4>Install Git (only if downloading from GitHub)</h4>
-          <p>Check if you have git:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">git --version</span>
-          </pre>
-          <p>If you see a version number, great. If not, go to <a href="https://git-scm.com/download/win" target="_blank" rel="noopener noreferrer" style="color: var(--purple); font-weight: 500;">git-scm.com/download/win</a>, download and install with all defaults. Then <strong>close and reopen PowerShell</strong>.</p>
-          <p style="margin-top: 8px;">If you're using the Zip file instead, you can skip this.</p>
+        <div class="step-marker">4</div>
+        <div class="step-body">
+          <h4>Download and set up the project</h4>
+          <pre class="code-block" role="group" aria-label="Terminal commands"><button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button><span class="cmd">cd ~\Desktop</span>
+<span class="cmd">git clone https://github.com/blamb/moodle-support-companion.git</span>
+<span class="cmd">cd moodle-support-companion\backend</span>
+<span class="cmd">pip install -r requirements.txt</span>
+<span class="cmd">cd ..\frontend</span>
+<span class="cmd">npm install</span></pre>
+          <div class="callout callout-tip" role="note">If <code>pip</code> isn't recognized, try <code>pip3</code> instead.</div>
         </div>
       </div>
 
-      <!-- Step 5: Get the project -->
       <div class="step">
-        <div class="step-num">5</div>
-        <div class="step-content">
-          <h4>Download the project</h4>
-          <p><strong>Option A &mdash; From GitHub:</strong></p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">cd ~\Desktop</span><br>
-            <span class="cmd">git clone https://github.com/blamb/moodle-support-companion.git</span><br>
-            <span class="cmd">cd moodle-support-companion</span>
-          </pre>
-          <p><strong>Option B &mdash; From a Zip file:</strong></p>
-          <ol style="font-size: 0.88rem; color: #6b7280; padding-left: 20px;">
-            <li>Download the Zip file and save it to your Desktop</li>
-            <li>Right-click the Zip &rarr; <strong>Extract All</strong> &rarr; Extract</li>
-            <li>In PowerShell, run:</li>
-          </ol>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">cd ~\Desktop\moodle-support-companion</span>
-          </pre>
+        <div class="step-marker">5</div>
+        <div class="step-body">
+          <h4>Set your API key and start the backend</h4>
+          <pre class="code-block" role="group" aria-label="Terminal commands"><button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button><span class="cmd">cd ..\backend</span>
+<span class="cmd">$env:ANTHROPIC_API_KEY="your-key-here"</span>
+<span class="cmd">python -m uvicorn app.main:app --port 8000 --reload</span></pre>
+          <p>Leave this window open.</p>
         </div>
       </div>
 
-      <!-- Step 6: Install backend dependencies -->
       <div class="step">
-        <div class="step-num">6</div>
-        <div class="step-content">
-          <h4>Install backend dependencies</h4>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">cd backend</span><br>
-            <span class="cmd">pip install -r requirements.txt</span>
-          </pre>
-          <div class="callout callout-info" role="note">
-            <strong>Note:</strong> If <code>pip</code> isn't recognized, try <code>pip3</code> instead. The first run downloads AI model files (~90MB) &mdash; this is a one-time download.
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 7: Install frontend dependencies -->
-      <div class="step">
-        <div class="step-num">7</div>
-        <div class="step-content">
-          <h4>Install frontend dependencies</h4>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">cd ..\frontend</span><br>
-            <span class="cmd">npm install</span>
-          </pre>
-        </div>
-      </div>
-
-      <!-- Step 8: Set your API key -->
-      <div class="step">
-        <div class="step-num">8</div>
-        <div class="step-content">
-          <h4>Set your API key</h4>
-          <p>Go back to the backend folder and set your Anthropic API key. Replace <code>your-key-here</code> with your actual key:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">cd ..\backend</span><br>
-            <span class="cmd">$env:ANTHROPIC_API_KEY="your-key-here"</span>
-          </pre>
-          <div class="callout callout-warning" role="note">
-            <strong>Important:</strong> You need to run the <code>$env:</code> command every time you open a new PowerShell window. To make it permanent, search for "Environment Variables" in Windows Settings and add <code>ANTHROPIC_API_KEY</code> as a user variable.
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 9: Start the backend -->
-      <div class="step">
-        <div class="step-num">9</div>
-        <div class="step-content">
-          <h4>Start the backend server</h4>
-          <p>Make sure you are in the <code>backend</code> folder, then run:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">python -m uvicorn app.main:app --port 8000 --reload</span>
-          </pre>
-          <p>You should see output ending with <code>Uvicorn running on http://127.0.0.1:8000</code>. <strong>Leave this PowerShell window open.</strong></p>
-          <div class="callout callout-info" role="note">
-            <strong>Note:</strong> If <code>python</code> isn't recognized, try <code>python3</code> instead.
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 10: Start the frontend -->
-      <div class="step">
-        <div class="step-num">10</div>
-        <div class="step-content">
-          <h4>Start the frontend (in a new PowerShell window)</h4>
-          <p>Open a <strong>new</strong> PowerShell window and run:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="cmd">cd ~\Desktop\moodle-support-companion\frontend</span><br>
-            <span class="cmd">npm run dev</span>
-          </pre>
-          <p>You should see a URL like <code>http://localhost:5173</code>. <strong>Leave this window open too.</strong></p>
-        </div>
-      </div>
-
-      <!-- Step 11: Open the app -->
-      <div class="step">
-        <div class="step-num">11</div>
-        <div class="step-content">
-          <h4>Open the app</h4>
-          <p>Open your web browser and go to:</p>
-          <pre class="code-block" role="group" aria-label="Terminal command">
-            <button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button>
-            <span class="url">http://localhost:5173</span>
-          </pre>
+        <div class="step-marker">6</div>
+        <div class="step-body">
+          <h4>Start the frontend (new PowerShell window)</h4>
+          <pre class="code-block" role="group" aria-label="Terminal commands"><button class="copy-btn" aria-live="polite" onclick="copyCode(this)">Copy</button><span class="cmd">cd ~\Desktop\moodle-support-companion\frontend</span>
+<span class="cmd">npm run dev</span></pre>
+          <p>Open <a href="http://localhost:5173" style="color: var(--purple); font-weight: 600;">http://localhost:5173</a> in your browser.</p>
           <div class="callout callout-success" role="note">
-            <strong>You're ready!</strong> You should see the Moodle Support Companion with the LT&I logo and three tabs: Diagnose, Search, and Cases.
+            <strong>Done!</strong> You should see the Companion with the LT&amp;I branding and three tabs.
           </div>
         </div>
       </div>
-
-      <!-- Stopping -->
-      <div style="margin-top: 32px; padding: 20px; background: var(--gray-light); border-radius: 10px;">
-        <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Stopping the app</h4>
-        <p style="font-size: 0.88rem; color: #6b7280;">
-          To stop the app, press <strong>Ctrl + C</strong> in each of the two PowerShell windows. To start it again later, repeat Steps 8&ndash;11 (set the API key, start backend, start frontend, open browser).
-        </p>
-      </div>
-
     </div>
 
     <!-- Troubleshooting -->
     <div style="margin-top: 40px;">
-      <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gold);">
+      <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gold);">
         Troubleshooting
       </h3>
 
-      <details style="margin-bottom: 12px;">
-        <summary style="font-size: 0.9rem; font-weight: 600; color: var(--navy); cursor: pointer; padding: 8px 0;">
-          "No module named app" when starting the backend
-        </summary>
-        <div style="font-size: 0.88rem; color: #6b7280; padding: 8px 0 8px 16px;">
-          Make sure you are in the <code>backend</code> folder when you run the uvicorn command. Run <code>pwd</code> (Mac) or <code>Get-Location</code> (Windows) to check &mdash; it should end with <code>/backend</code> or <code>\backend</code>.
-        </div>
+      <details>
+        <summary>"No module named app" when starting the backend</summary>
+        <div>Make sure you are in the <code>backend</code> folder. Run <code>pwd</code> (Mac) or <code>Get-Location</code> (Windows) to check.</div>
       </details>
-
-      <details style="margin-bottom: 12px;">
-        <summary style="font-size: 0.9rem; font-weight: 600; color: var(--navy); cursor: pointer; padding: 8px 0;">
-          "Could not resolve authentication method" or API key errors
-        </summary>
-        <div style="font-size: 0.88rem; color: #6b7280; padding: 8px 0 8px 16px;">
-          Your API key isn't set. Run the <code>export</code> (Mac) or <code>$env:</code> (Windows) command from Step 8 again in the same terminal window where you start the backend. Make sure there are no extra spaces in the key.
-        </div>
+      <details>
+        <summary>API key or authentication errors</summary>
+        <div>Run the <code>export</code> (Mac) or <code>$env:</code> (Windows) command again in the same terminal window where you start the backend.</div>
       </details>
-
-      <details style="margin-bottom: 12px;">
-        <summary style="font-size: 0.9rem; font-weight: 600; color: var(--navy); cursor: pointer; padding: 8px 0;">
-          "Cannot connect to the backend" in the app
-        </summary>
-        <div style="font-size: 0.88rem; color: #6b7280; padding: 8px 0 8px 16px;">
-          The backend server isn't running. Check the first Terminal/PowerShell window. If it closed or shows an error, go back to Step 9 and start it again.
-        </div>
+      <details>
+        <summary>"Cannot connect to the backend"</summary>
+        <div>The backend server isn't running. Check the first Terminal window and restart it if needed (step 5).</div>
       </details>
-
-      <details style="margin-bottom: 12px;">
-        <summary style="font-size: 0.9rem; font-weight: 600; color: var(--navy); cursor: pointer; padding: 8px 0;">
-          The app loads but shows a blank page
-        </summary>
-        <div style="font-size: 0.88rem; color: #6b7280; padding: 8px 0 8px 16px;">
-          Make sure you ran <code>npm install</code> in the frontend folder (Step 7) and that the frontend dev server is running (Step 10). Check the second Terminal/PowerShell window for errors.
-        </div>
+      <details>
+        <summary>Blank page after loading</summary>
+        <div>Make sure you ran <code>npm install</code> in the frontend folder and that <code>npm run dev</code> is running in the second terminal window.</div>
       </details>
-
-      <details style="margin-bottom: 12px;">
-        <summary style="font-size: 0.9rem; font-weight: 600; color: var(--navy); cursor: pointer; padding: 8px 0;">
-          pip or npm command not found
-        </summary>
-        <div style="font-size: 0.88rem; color: #6b7280; padding: 8px 0 8px 16px;">
-          Close and reopen your Terminal/PowerShell after installing Python or Node.js. On Windows, make sure you checked "Add Python to PATH" during installation. On Mac, try <code>pip3</code> instead of <code>pip</code>.
-        </div>
-      </details>
-
-      <details style="margin-bottom: 12px;">
-        <summary style="font-size: 0.9rem; font-weight: 600; color: var(--navy); cursor: pointer; padding: 8px 0;">
-          Port already in use
-        </summary>
-        <div style="font-size: 0.88rem; color: #6b7280; padding: 8px 0 8px 16px;">
-          Another program is using port 8000 or 5173. Either close that program, or use a different port. For the backend: <code>python3 -m uvicorn app.main:app --port 8001 --reload</code>. You'll also need to update the frontend proxy settings if you change the backend port.
-        </div>
+      <details>
+        <summary>pip or npm command not found</summary>
+        <div>Close and reopen Terminal/PowerShell after installing Python or Node.js. On Mac, try <code>pip3</code>. On Windows, make sure you checked "Add to PATH".</div>
       </details>
     </div>
-
   </div>
 </section>
 
 <!-- ==================== ARCHITECTURE ==================== -->
-<section id="architecture">
+<section id="architecture" style="background: #fff;">
   <div class="container">
-    <p class="section-label">Technical Details</p>
-    <h2 class="section-title">Architecture</h2>
-    <p class="section-desc">
-      For those interested in the technical underpinnings.
-    </p>
+    <p class="section-eyebrow">Technical Details</p>
+    <h2 class="section-heading">Architecture</h2>
+    <p class="section-lead">For those interested in the technical underpinnings.</p>
 
-    <pre class="code-block" role="group" aria-label="Terminal command" style="font-size: 0.78rem; line-height: 1.8;">
-<span class="comment">┌─────────────────────────────────┐</span>
-<span class="comment">│</span>  React + Tailwind + TypeScript  <span class="comment">│</span>  <span class="comment">&larr; Frontend (Vite, port 5173)</span>
-<span class="comment">└───────────────┬─────────────────┘</span>
-                <span class="comment">│ SSE streaming</span>
-<span class="comment">┌───────────────┴─────────────────┐</span>
-<span class="comment">│</span>          FastAPI Backend         <span class="comment">│</span>  <span class="comment">&larr; API server (port 8000)</span>
-<span class="comment">├──────────┬──────────┬───────────┤</span>
-<span class="comment">│</span> ChromaDB <span class="comment">│</span> SQLite   <span class="comment">│</span> Claude    <span class="comment">│</span>
-<span class="comment">│</span> vectors  <span class="comment">│</span> cases    <span class="comment">│</span> API       <span class="comment">│</span>
-<span class="comment">│</span> (384d)   <span class="comment">│</span> + FTS5   <span class="comment">│</span> (Sonnet)  <span class="comment">│</span>
-<span class="comment">└──────────┴──────────┴───────────┘</span>
+    <pre class="arch-block" role="img" aria-label="Architecture diagram showing React frontend connecting via SSE streaming to FastAPI backend, which connects to ChromaDB, SQLite, and Claude API">
+<span class="dim">┌─────────────────────────────────┐</span>
+<span class="dim">│</span>  React + Tailwind + TypeScript  <span class="dim">│</span>  <span class="hi">&larr; Frontend</span>
+<span class="dim">└───────────────┬─────────────────┘</span>
+                <span class="dim">│ SSE streaming</span>
+<span class="dim">┌───────────────┴─────────────────┐</span>
+<span class="dim">│</span>          FastAPI Backend         <span class="dim">│</span>  <span class="hi">&larr; API server</span>
+<span class="dim">├──────────┬──────────┬───────────┤</span>
+<span class="dim">│</span> ChromaDB <span class="dim">│</span> SQLite   <span class="dim">│</span> Claude    <span class="dim">│</span>
+<span class="dim">│</span> vectors  <span class="dim">│</span> cases    <span class="dim">│</span> API       <span class="dim">│</span>
+<span class="dim">│</span> (384d)   <span class="dim">│</span> + FTS5   <span class="dim">│</span> (Sonnet)  <span class="dim">│</span>
+<span class="dim">└──────────┴──────────┴───────────┘</span>
     </pre>
 
-    <div class="features-grid" style="margin-top: 28px;">
+    <div class="features-grid" style="margin-top: 24px;">
       <div class="feature-card">
         <h3>Backend</h3>
-        <p>Python / FastAPI with Server-Sent Events for real-time streaming. Uvicorn ASGI server with hot-reload for development.</p>
+        <p>Python / FastAPI with SSE streaming. Uvicorn ASGI server.</p>
       </div>
       <div class="feature-card">
         <h3>Vector Store</h3>
-        <p>ChromaDB with <code>all-MiniLM-L6-v2</code> sentence-transformer embeddings (384 dimensions). 1000-character chunks with 200-character overlap.</p>
+        <p>ChromaDB with sentence-transformer embeddings (384 dimensions). Heading-aware chunking.</p>
       </div>
       <div class="feature-card">
         <h3>Case Database</h3>
-        <p>SQLite with FTS5 full-text search. Automatic triggers keep the search index in sync. Cases include conversation history as JSON.</p>
+        <p>SQLite with FTS5 full-text search. Resolved cases auto-indexed for RAG retrieval.</p>
       </div>
       <div class="feature-card">
         <h3>AI</h3>
-        <p>Anthropic Claude API (Sonnet) with vision support for screenshot analysis. Custom system prompt enforcing the diagnostic methodology.</p>
+        <p>Anthropic Claude API with vision support. Custom diagnostic methodology prompt.</p>
       </div>
       <div class="feature-card">
         <h3>Frontend</h3>
-        <p>React 19 with TypeScript, Tailwind CSS v4, and Vite. Custom hooks for conversation lifecycle and debounced search. SSE streaming for real-time responses.</p>
+        <p>React 19, TypeScript, Tailwind CSS v4, Vite. Custom hooks for conversation lifecycle.</p>
       </div>
       <div class="feature-card">
         <h3>Knowledge Pipeline</h3>
-        <p>Ingests from 4 source types: MediaWiki HTML, WordPress WXR XML, DOCX, and Moodle page exports. Recursive text chunking with file-hash deduplication.</p>
+        <p>Ingests MediaWiki HTML, WordPress WXR, DOCX, and Moodle page exports. Deduplication by file hash.</p>
       </div>
     </div>
   </div>
@@ -1029,80 +1374,65 @@
 <footer>
   <div class="container">
     <p style="margin-bottom: 8px;">
-      <strong style="color: var(--gold);">Moodle Support Companion</strong>
+      <strong>Moodle Support Companion</strong>
     </p>
     <p>
       Learning Technology &amp; Innovation &bull; Thompson Rivers University<br>
-      <a href="https://github.com/blamb/moodle-support-companion">GitHub Repository</a> &bull;
-      <a href="https://ltitest.trubox.ca/">LT&I Website</a>
+      <a href="https://github.com/blamb/moodle-support-companion">GitHub</a> &bull;
+      <a href="https://ltitest.trubox.ca/">LT&amp;I Website</a>
     </p>
   </div>
 </footer>
 
 <!-- ==================== SCRIPTS ==================== -->
 <script>
-  // OS tab switching
   function switchOS(os) {
     document.querySelectorAll('.os-tab').forEach(t => {
       t.classList.remove('active');
       t.setAttribute('aria-selected', 'false');
     });
     document.querySelectorAll('.os-panel').forEach(p => p.classList.remove('active'));
-
     if (os === 'mac') {
-      document.querySelectorAll('.os-tab')[0].classList.add('active');
-      document.querySelectorAll('.os-tab')[0].setAttribute('aria-selected', 'true');
+      document.getElementById('tab-mac').classList.add('active');
+      document.getElementById('tab-mac').setAttribute('aria-selected', 'true');
       document.getElementById('panel-mac').classList.add('active');
     } else {
-      document.querySelectorAll('.os-tab')[1].classList.add('active');
-      document.querySelectorAll('.os-tab')[1].setAttribute('aria-selected', 'true');
+      document.getElementById('tab-win').classList.add('active');
+      document.getElementById('tab-win').setAttribute('aria-selected', 'true');
       document.getElementById('panel-win').classList.add('active');
     }
   }
 
-  // Keyboard arrow navigation for OS tabs
-  document.querySelector('.os-tabs').addEventListener('keydown', (e) => {
+  document.querySelector('.os-tabs')?.addEventListener('keydown', (e) => {
     const tabs = Array.from(document.querySelectorAll('.os-tab'));
     const current = tabs.indexOf(document.activeElement);
     if (current === -1) return;
-
     let next;
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-      next = (current + 1) % tabs.length;
-    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-      next = (current - 1 + tabs.length) % tabs.length;
-    } else {
-      return;
-    }
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = (current + 1) % tabs.length;
+    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = (current - 1 + tabs.length) % tabs.length;
+    else return;
     e.preventDefault();
     tabs[next].focus();
     tabs[next].click();
   });
 
-  // Copy code blocks
   function copyCode(btn) {
     const block = btn.parentElement;
     const text = block.innerText.replace('Copy', '').replace('Copied!', '').trim();
     navigator.clipboard.writeText(text).then(() => {
       btn.textContent = 'Copied!';
       btn.classList.add('copied');
-      setTimeout(() => {
-        btn.textContent = 'Copy';
-        btn.classList.remove('copied');
-      }, 2000);
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
     });
   }
 
-  // Smooth scroll for nav links
   document.querySelectorAll('.nav a').forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const target = document.querySelector(link.getAttribute('href'));
       if (target) {
         const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
-        target.scrollIntoView({ behavior: behavior, block: 'start' });
-        target.setAttribute('tabindex', '-1');
-        target.focus({ preventScroll: true });
+        target.scrollIntoView({ behavior, block: 'start' });
       }
     });
   });
