@@ -704,8 +704,9 @@
       <div class="header-chips">
         <span class="chip">AI-Powered Diagnostics</span>
         <span class="chip">Knowledge Base</span>
+        <span class="chip">Question Import</span>
+        <span class="chip">Activity Recommender</span>
         <span class="chip">Case Tracking</span>
-        <span class="chip">Course Analysis</span>
         <span class="chip">TeamDynamix Integration</span>
       </div>
     </div>
@@ -720,6 +721,8 @@
       <a href="#methodology">How It Works</a>
       <a href="#diagnose-guide">Diagnosing Issues</a>
       <a href="#knowledge-base">Knowledge Base</a>
+      <a href="#import-guide">Importing Questions</a>
+      <a href="#recommend-guide">Activity Recommender</a>
       <a href="#cases">Case Tracking</a>
       <a href="#best-practices">Best Practices</a>
       <a href="#install">Installation</a>
@@ -1017,6 +1020,160 @@
   </div>
 </section>
 
+<!-- ==================== IMPORT QUESTIONS ==================== -->
+<section id="import-guide">
+  <div class="container">
+    <p class="section-eyebrow">The Import Tab</p>
+    <h2 class="section-heading">Importing Questions into Moodle</h2>
+    <p class="section-lead">
+      When an instructor sends a pile of quiz questions &mdash; often in inconsistent or
+      malformed formats &mdash; the Import tab turns them into a clean file Moodle can import,
+      without the manual cleanup.
+    </p>
+
+    <div class="guide-block">
+      <h3>Step 1 &mdash; Paste or Upload the Questions</h3>
+      <p class="guide-intro">
+        Paste the questions into the box, or click <strong>Upload .docx / .txt</strong> to pull
+        them straight from a Word document. The tool understands the formats instructors actually use:
+      </p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Question types</h3>
+          <p>Multiple choice (single &amp; multiple answer), true/false, short answer, essay, matching, and numerical.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Flexible answer marking</h3>
+          <p>"Correct answer: B", "Ans: B", an asterisk (<code>*B) Paris</code>), or a <strong>bold</strong> option are all recognised.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Word documents</h3>
+          <p>Uploading a <code>.docx</code> reconstructs the question numbering and keeps bolded correct answers intact.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Other types</h3>
+          <p>Start a line with <code>SHORT:</code>, <code>ESSAY:</code>, <code>MATCH:</code>, or <code>NUM:</code> to set the type explicitly.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-tip" role="note" style="margin-top: 16px;">
+        <strong>Tip:</strong> Don't worry about getting the formatting perfect. The whole point of the
+        tool is to handle messy input &mdash; just paste what you were sent.
+      </div>
+    </div>
+
+    <div class="guide-block">
+      <h3>Step 2 &mdash; Choose How It Reads Them</h3>
+      <p class="guide-intro">Three modes, depending on how tidy the input is:</p>
+      <div class="bp-grid">
+        <div class="bp-card">
+          <h4>Smart <span class="bp-label bp-do">Default</span></h4>
+          <p>Reads everything with the fast built-in rules first, then uses AI to clean up only the bits the rules couldn't parse. The best all-round choice.</p>
+        </div>
+        <div class="bp-card">
+          <h4>Rules only</h4>
+          <p>Deterministic, instant, and fully private &mdash; no AI involved. Great for already-tidy question sets.</p>
+        </div>
+        <div class="bp-card">
+          <h4>AI cleanup</h4>
+          <p>Sends everything to the AI. Best for genuinely messy input, like a whole Word document pasted as prose.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="guide-block">
+      <h3>Step 3 &mdash; Review the Preview</h3>
+      <p class="guide-intro">
+        Every detected question is shown with its type and the correct answer highlighted. Crucially,
+        nothing is silently dropped:
+      </p>
+      <div class="step">
+        <div class="step-marker">!</div>
+        <div class="step-body">
+          <h4>"Needs review" flags</h4>
+          <p>Questions the tool wasn't fully sure about &mdash; an unmarked answer, a guessed multiple-answer split &mdash; are kept and highlighted in <strong>amber</strong> with a note explaining what to check.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-marker">&#x2713;</div>
+        <div class="step-body">
+          <h4>Anything unparseable is reported</h4>
+          <p>If a block of text couldn't be turned into a question, it's listed separately with the reason &mdash; so you always know what made it in and what didn't.</p>
+        </div>
+      </div>
+      <div class="callout callout-important" role="note">
+        <strong>Always glance at the amber items before importing.</strong> The tool is good at flagging
+        its own uncertainty, but a human should confirm the right answer where it says so.
+      </div>
+    </div>
+
+    <div class="guide-block">
+      <h3>Step 4 &mdash; Download &amp; Import into Moodle</h3>
+      <p class="guide-intro">Pick a format, download, and import it in Moodle:</p>
+      <div class="bp-grid">
+        <div class="bp-card">
+          <h4>GIFT <span class="bp-label bp-do">Recommended</span></h4>
+          <p>Plain-text format that handles every question type. The safe default for most imports.</p>
+        </div>
+        <div class="bp-card">
+          <h4>Moodle XML</h4>
+          <p>The most complete format &mdash; best when questions have rich text or feedback.</p>
+        </div>
+        <div class="bp-card">
+          <h4>Aiken</h4>
+          <p>Simplest format, but only supports multiple choice and true/false. The tool tells you which questions it can't include.</p>
+        </div>
+      </div>
+      <div class="callout callout-success" role="note">
+        <strong>In Moodle:</strong> go to <strong>Question bank &rarr; Import</strong>, choose the matching
+        format (e.g. GIFT), and upload the file. Your questions land in the question bank, ready to add to a quiz.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ACTIVITY RECOMMENDER ==================== -->
+<section id="recommend-guide" style="background: #fff;">
+  <div class="container">
+    <p class="section-eyebrow">The Activities Tab</p>
+    <h2 class="section-heading">Activity Recommender</h2>
+    <p class="section-lead">
+      Paste in a course's learning objectives and get Moodle activity suggestions based on the
+      Bloom's-taxonomy verbs they contain &mdash; each with a justification and setup steps.
+    </p>
+
+    <div class="guide-block">
+      <h3>How to Use It</h3>
+      <div class="step">
+        <div class="step-marker">1</div>
+        <div class="step-body">
+          <h4>Enter your objectives</h4>
+          <p>Add one or more learning objectives (e.g. <em>"Students will be able to <strong>analyze</strong> data and <strong>evaluate</strong> competing hypotheses"</em>). Course name, level, and area are optional.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-marker">2</div>
+        <div class="step-body">
+          <h4>Generate recommendations</h4>
+          <p>The tool finds every Bloom's verb in each objective and suggests matching Moodle activities &mdash; Assignment, Forum, Workshop, Quiz, H5P, and more.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-marker">3</div>
+        <div class="step-body">
+          <h4>Review and copy</h4>
+          <p>Each suggested activity comes with <strong>why</strong> it fits and a short <strong>how-to</strong> for setting it up in Moodle. Use <strong>Copy all</strong> to paste the full set into a course-design doc or an email to the instructor.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-tip" role="note">
+      <strong>No setup needed.</strong> The recommender runs entirely in your browser and doesn't use AI
+      &mdash; it's instant and works the same whether or not an API key is configured.
+    </div>
+  </div>
+</section>
+
 <!-- ==================== CASES ==================== -->
 <section id="cases">
   <div class="container">
@@ -1212,7 +1369,7 @@
 <span class="cmd">npm run dev</span></pre>
           <p>Open <a href="http://localhost:5173" style="color: var(--purple); font-weight: 600;">http://localhost:5173</a> in your browser.</p>
           <div class="callout callout-success" role="note">
-            <strong>Done!</strong> You should see the Companion with the LT&amp;I branding and three tabs.
+            <strong>Done!</strong> You should see the Companion with the LT&amp;I branding and its tabs.
           </div>
         </div>
       </div>
@@ -1282,7 +1439,7 @@
 <span class="cmd">npm run dev</span></pre>
           <p>Open <a href="http://localhost:5173" style="color: var(--purple); font-weight: 600;">http://localhost:5173</a> in your browser.</p>
           <div class="callout callout-success" role="note">
-            <strong>Done!</strong> You should see the Companion with the LT&amp;I branding and three tabs.
+            <strong>Done!</strong> You should see the Companion with the LT&amp;I branding and its tabs.
           </div>
         </div>
       </div>
