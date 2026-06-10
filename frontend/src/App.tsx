@@ -2,9 +2,11 @@ import { useState, useCallback, useEffect } from 'react';
 import { SearchPage } from './components/SearchPage';
 import { DiagnosePage } from './components/DiagnosePage';
 import { CasesPage } from './components/CasesPage';
+import { ImportPage } from './components/ImportPage';
+import { RecommendPage } from './components/RecommendPage';
 import './index.css';
 
-type Tab = 'diagnose' | 'search' | 'cases';
+type Tab = 'diagnose' | 'search' | 'import' | 'recommend' | 'cases';
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('diagnose');
@@ -94,6 +96,8 @@ function App() {
               {([
                 { key: 'diagnose', label: 'Diagnose', icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z' },
                 { key: 'search', label: 'Search', icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' },
+                { key: 'import', label: 'Import', icon: 'M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4' },
+                { key: 'recommend', label: 'Activities', icon: 'M9.663 17h4.673M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z' },
                 { key: 'cases', label: 'Cases', icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10' },
               ] as const).map((tab) => (
                 <button
@@ -135,6 +139,16 @@ function App() {
         {activeTab === 'search' && (
           <div role="tabpanel" id="panel-search" aria-labelledby="tab-search">
             <SearchPage onStartDiagnosis={handleStartDiagnosis} />
+          </div>
+        )}
+        {activeTab === 'import' && (
+          <div role="tabpanel" id="panel-import" aria-labelledby="tab-import">
+            <ImportPage />
+          </div>
+        )}
+        {activeTab === 'recommend' && (
+          <div role="tabpanel" id="panel-recommend" aria-labelledby="tab-recommend">
+            <RecommendPage />
           </div>
         )}
         {activeTab === 'cases' && (

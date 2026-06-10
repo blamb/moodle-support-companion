@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from .routers import search, sources, ingest, conversation, cases
+from .routers import search, sources, ingest, conversation, cases, questions
 from .cases.database import init_database
 from .config import FRONTEND_DIST
 
@@ -37,6 +37,7 @@ app.include_router(sources.router, prefix="/api", tags=["sources"])
 app.include_router(ingest.router, prefix="/api", tags=["ingest"])
 app.include_router(conversation.router, prefix="/api", tags=["conversation"])
 app.include_router(cases.router, prefix="/api", tags=["cases"])
+app.include_router(questions.router, prefix="/api", tags=["questions"])
 
 
 @app.on_event("startup")
