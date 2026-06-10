@@ -52,6 +52,65 @@ export interface MbzInfo {
   summary: string;
 }
 
+// Question import types
+export interface QImportOption {
+  text: string;
+  fraction: number;
+  feedback: string;
+}
+
+export interface QImportAnswer {
+  text: string;
+  fraction: number;
+  tolerance?: number;
+}
+
+export interface QImportPair {
+  question: string;
+  answer: string;
+}
+
+export interface ParsedQuestion {
+  number: number;
+  qtype: string;
+  type_label: string;
+  text: string;
+  name: string;
+  single: boolean;
+  options: QImportOption[];
+  answers: QImportAnswer[];
+  pairs: QImportPair[];
+  correct: string | null;
+  feedback: string;
+  warnings: string[];
+}
+
+export interface ParseSummary {
+  total: number;
+  by_type: Record<string, number>;
+  needs_review: number;
+  unparsed: number;
+}
+
+export interface QuestionExports {
+  gift: string;
+  xml: string;
+  aiken: string;
+  aiken_skipped: string[];
+}
+
+export interface ParseResponse {
+  questions: ParsedQuestion[];
+  warnings: string[];
+  unparsed: Array<{ text: string; reason: string }>;
+  used_ai: boolean;
+  summary: ParseSummary;
+  exports: QuestionExports;
+}
+
+export type ImportMode = 'auto' | 'rules' | 'ai';
+export type ExportFormat = 'gift' | 'xml' | 'aiken';
+
 export interface CaseRecord {
   id: string;
   created_at: number;
