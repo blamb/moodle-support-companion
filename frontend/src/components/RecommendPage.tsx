@@ -7,13 +7,27 @@ interface Recommendation {
   activities: string[];
 }
 
+interface AIIdea {
+  activity: string;
+  why: string;
+  how: string;
+  underused: boolean;
+}
+interface AISuggestion {
+  objective: string;
+  ideas: AIIdea[];
+}
+interface AIData {
+  suggestions: AISuggestion[];
+  note: string;
+}
+
 const DEFAULT_ACTIVITIES = ['Assignment', 'Forum', 'Quiz (Multiple Choice)'];
 const MAX_ACTIVITIES = 4;
 
 function buildRecommendations(objectives: string[]): Recommendation[] {
   return objectives.map((objective) => {
     const verbs = findVerbs(objective);
-    // Merge the activity lists for every matched verb, in order, de-duplicated.
     const merged: string[] = [];
     for (const verb of verbs) {
       for (const activity of activityMapping[verb]) {
@@ -30,7 +44,10 @@ export function RecommendPage() {
   const [courseLevel, setCourseLevel] = useState('');
   const [courseArea, setCourseArea] = useState('');
   const [objectives, setObjectives] = useState<string[]>(['']);
+  const [aiMode, setAiMode] = useState(false);
   const [results, setResults] = useState<Recommendation[] | null>(null);
+  const [aiData, setAiData] = useState<AIData | null>(null);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
 
@@ -41,32 +58,86 @@ export function RecommendPage() {
   const removeObjective = (i: number) =>
     setObjectives((prev) => (prev.length > 1 ? prev.filter((_, idx) => idx !== i) : prev));
 
-  const generate = () => {
+  const generate = async () => {
     const filled = objectives.map((o) => o.trim()).filter(Boolean);
     if (filled.length === 0) {
       setError('Enter at least one learning objective.');
       setResults(null);
+      setAiData(null);
       return;
     }
     setError(null);
-    setResults(buildRecommendations(filled));
+
+    if (!aiMode) {
+      setAiData(null);
+      setResults(buildRecommendations(filled));
+      return;
+    }
+
+    // AI mode — tailored suggestions from the backend.
+    setLoading(true);
+    setResults(null);
+    try {
+      const res = await fetch('/api/activities/suggest', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          objectives: filled,
+          course_name: courseName,
+          course_level: courseLevel,
+          course_area: courseArea,
+        }),
+      });
+      if (!res.ok) {
+        let detail = `Request failed (${res.status})`;
+        try {
+          const b = await res.json();
+          if (b?.detail) detail = b.detail;
+        } catch {
+          /* keep default */
+        }
+        throw new Error(detail);
+      }
+      const data: AIData = await res.json();
+      setAiData(data);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to get AI ideas.');
+      setAiData(null);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const copyResults = async () => {
-    if (!results) return;
     const lines: string[] = [];
     const header = [courseName, courseLevel, courseArea].filter(Boolean).join(' · ');
     if (header) lines.push(header, '');
-    results.forEach((r, i) => {
-      lines.push(`Objective ${i + 1}: ${r.objective}`);
-      if (r.verbs.length) lines.push(`Bloom's verbs: ${r.verbs.join(', ')}`);
-      r.activities.forEach((a) => {
-        const d = describeActivity(a);
-        lines.push(`  • ${a} — ${d.justification}`);
-        lines.push(`    How: ${d.implementation}`);
+
+    if (aiData) {
+      if (aiData.note) lines.push(aiData.note, '');
+      aiData.suggestions.forEach((s, i) => {
+        lines.push(`Objective ${i + 1}: ${s.objective}`);
+        s.ideas.forEach((idea) => {
+          lines.push(`  • ${idea.activity}${idea.underused ? ' (under-used)' : ''} — ${idea.why}`);
+          lines.push(`    How: ${idea.how}`);
+        });
+        lines.push('');
       });
-      lines.push('');
-    });
+    } else if (results) {
+      results.forEach((r, i) => {
+        lines.push(`Objective ${i + 1}: ${r.objective}`);
+        if (r.verbs.length) lines.push(`Bloom's verbs: ${r.verbs.join(', ')}`);
+        r.activities.forEach((a) => {
+          const d = describeActivity(a);
+          lines.push(`  • ${a} — ${d.justification}`);
+          lines.push(`    How: ${d.implementation}`);
+        });
+        lines.push('');
+      });
+    } else {
+      return;
+    }
+
     try {
       await navigator.clipboard.writeText(lines.join('\n'));
       setCopied(true);
@@ -84,8 +155,10 @@ export function RecommendPage() {
           Activity Recommender
         </h2>
         <p className="text-sm text-slate-600">
-          Enter course learning objectives and get Moodle activity suggestions based on the{' '}
-          Bloom&apos;s-taxonomy verbs they contain — with a justification and setup steps for each.
+          Turn course learning objectives into Moodle activity suggestions. The{' '}
+          <strong>Bloom&apos;s map</strong> is instant and offline; <strong>AI ideas</strong> gives
+          tailored, course-specific suggestions that deliberately surface effective but under-used
+          activities — to help instructors move beyond just quizzes, assignments, and forums.
         </p>
       </div>
 
@@ -155,18 +228,48 @@ export function RecommendPage() {
           Add another objective
         </button>
 
+        {/* Suggestion style */}
+        <div className="mt-4">
+          <p className="text-xs font-medium text-slate-500 mb-1.5">Suggestion style</p>
+          <div className="flex flex-wrap gap-2">
+            {([
+              { key: false, label: "Bloom's map", hint: 'Instant, offline, verb-based' },
+              { key: true, label: 'AI ideas', hint: 'Tailored & course-specific (uses Claude)' },
+            ] as const).map((m) => (
+              <button
+                key={String(m.key)}
+                onClick={() => setAiMode(m.key)}
+                title={m.hint}
+                className={`px-3 py-1.5 rounded-md text-sm font-medium border transition-colors ${
+                  aiMode === m.key
+                    ? 'text-white border-transparent'
+                    : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
+                }`}
+                style={aiMode === m.key ? { backgroundColor: 'var(--lti-purple)' } : undefined}
+              >
+                {m.label}
+              </button>
+            ))}
+          </div>
+          <p className="text-xs text-slate-400 mt-1.5">
+            {aiMode
+              ? 'Tailored, course-specific ideas that surface under-used activities.'
+              : 'Instant suggestions from a Bloom’s-verb → activity map. No AI.'}
+          </p>
+        </div>
+
         {error && (
           <div className="mt-3 p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700" role="alert">
             {error}
           </div>
         )}
 
-        <button onClick={generate} className="lti-btn-gold mt-4 w-full">
-          Generate recommendations
+        <button onClick={generate} disabled={loading} className="lti-btn-gold mt-4 w-full">
+          {loading ? 'Thinking…' : aiMode ? 'Get AI ideas' : 'Generate recommendations'}
         </button>
       </div>
 
-      {/* Results */}
+      {/* Bloom's-map results */}
       {results && (
         <div className="bg-white rounded-lg border border-slate-200 p-5">
           <div className="flex items-center justify-between mb-4">
@@ -219,6 +322,75 @@ export function RecommendPage() {
               </div>
             ))}
           </div>
+        </div>
+      )}
+
+      {/* AI ideas results */}
+      {aiData && (
+        <div className="bg-white rounded-lg border border-slate-200 p-5">
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2">
+              <h3 className="text-base font-bold" style={{ color: 'var(--lti-navy)' }}>
+                Tailored ideas
+              </h3>
+              <span className="text-xs px-2 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200">
+                AI-assisted
+              </span>
+            </div>
+            <button onClick={copyResults} className="lti-btn-outline">
+              {copied ? 'Copied!' : 'Copy all'}
+            </button>
+          </div>
+
+          {aiData.note && (
+            <div className="mb-4 p-3 bg-purple-50 border border-purple-200 rounded-lg text-sm text-purple-800">
+              {aiData.note}
+            </div>
+          )}
+
+          <div className="space-y-5">
+            {aiData.suggestions.map((s, i) => (
+              <div key={i}>
+                <div className="rounded px-3 py-2 mb-2 border-l-4"
+                     style={{ backgroundColor: 'var(--lti-purple-light)', borderColor: 'var(--lti-purple)' }}>
+                  <p className="text-sm font-medium text-slate-800">
+                    <span className="text-slate-500">Objective {i + 1}:</span> {s.objective}
+                  </p>
+                </div>
+
+                <div className="space-y-3 pl-3 border-l-2 border-slate-100">
+                  {s.ideas.map((idea, j) => (
+                    <div key={j} className="pl-2">
+                      <p className="font-semibold text-sm flex items-center gap-2"
+                         style={{ color: 'var(--lti-purple-mid)' }}>
+                        {idea.activity}
+                        {idea.underused && (
+                          <span className="text-[10px] font-semibold uppercase px-1.5 py-0.5 rounded
+                                           bg-teal-50 text-teal-700 border border-teal-200">
+                            under-used
+                          </span>
+                        )}
+                      </p>
+                      {idea.why && (
+                        <p className="text-xs text-slate-600 mt-0.5">
+                          <span className="font-medium text-slate-700">Why:</span> {idea.why}
+                        </p>
+                      )}
+                      {idea.how && (
+                        <p className="text-xs text-slate-500 mt-0.5">
+                          <span className="font-medium text-slate-700">How:</span> {idea.how}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-xs text-slate-400 mt-4">
+            AI suggestions are a starting point — adapt them to your course and learners.
+          </p>
         </div>
       )}
     </div>
