@@ -46,6 +46,16 @@ def _renumber(questions) -> None:
         q.number = i
 
 
+# Warnings the rules parser attaches when it found options but couldn't determine
+# the correct answer. In Smart mode these trigger a full-text AI pass, because the
+# answer is usually elsewhere (a separate answer key, or bold lost on paste).
+_MISSING_ANSWER_PREFIXES = ("No correct answer", "True/False answer not marked")
+
+
+def _missing_answer(question) -> bool:
+    return any(w.startswith(_MISSING_ANSWER_PREFIXES) for w in question.warnings)
+
+
 @router.post("/questions/extract")
 async def extract_question_file(file: UploadFile = File(...)):
     """Extract question text from an uploaded .docx or .txt file.
@@ -123,9 +133,38 @@ async def parse_questions(request: ParseRequest):
         elif mode == "rules":
             result = parse_text(text)
 
-        else:  # auto — deterministic first, Claude only for the leftovers
+        else:  # auto — deterministic first, escalate to Claude when needed
             result = parse_text(text)
-            if result.unparsed and have_ai:
+            missing_answers = any(_missing_answer(q) for q in result.questions)
+
+            if have_ai and missing_answers:
+                # Rules parsed the questions but couldn't find the correct answer(s)
+                # for some — the marking is non-standard (a separate answer key, or
+                # bold lost on paste). A full-text AI pass can cross-reference the
+                # whole document the way a person would.
+                try:
+                    ai_result = await normalize_with_ai(text)
+                    # Guard against the AI dropping most of the set; only adopt its
+                    # result if it found a comparable number of questions.
+                    if ai_result.questions and len(ai_result.questions) >= max(
+                        1, len(result.questions) // 2
+                    ):
+                        result = ai_result
+                        result.used_ai = True
+                    else:
+                        result.warnings.append(
+                            "Some answers weren't detected and AI couldn't confidently "
+                            "re-read them — showing the rules result. Click the correct "
+                            "option on any flagged question to fix it."
+                        )
+                except (anthropic.AnthropicError, ValueError) as e:
+                    result.warnings.append(
+                        f"Tried to recover missing answers with AI but it failed: {e}. "
+                        "Click the correct option on any flagged question to fix it."
+                    )
+
+            elif have_ai and result.unparsed:
+                # Only unparsed leftovers — a cheap, targeted pass on those blocks.
                 leftover = "\n\n".join(u["text"] for u in result.unparsed)
                 try:
                     ai_result = await normalize_with_ai(
@@ -139,12 +178,13 @@ async def parse_questions(request: ParseRequest):
                     result.warnings.append(
                         f"Couldn't AI-clean {len(result.unparsed)} leftover block(s): {e}"
                     )
-            elif result.unparsed and not have_ai:
+
+            elif not have_ai and (result.unparsed or missing_answers):
                 # Auto mode degrades gracefully when no key is configured.
                 result.warnings.append(
-                    f"{len(result.unparsed)} block(s) couldn't be parsed by the rules engine. "
-                    "AI cleanup is unavailable (no Anthropic API key configured) — reformat "
-                    "those blocks, or configure a key to let Claude interpret them."
+                    "Some questions are missing a correct answer or couldn't be parsed, and "
+                    "AI cleanup is unavailable (no Anthropic API key configured). Click the "
+                    "correct option in the preview to set answers, or configure a key."
                 )
 
     except HTTPException:
