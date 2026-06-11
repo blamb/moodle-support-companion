@@ -1,42 +1,46 @@
-"""Conversation service — orchestrates diagnostic sessions with Claude API."""
+"""Conversation service — orchestrates diagnostic sessions with Claude API.
+
+The model drives its own investigation via tools (knowledge-base search,
+past-case search, course context) instead of receiving a single up-front
+context injection. Sessions are persisted to SQLite so they survive restarts.
+"""
 
 from __future__ import annotations
 
-import asyncio
 import json
 import logging
+import re
 import time
 import uuid
 from typing import AsyncGenerator, Optional, Dict, List
 
 import anthropic
 
-from ..config import CLAUDE_MODEL, CLAUDE_MAX_TOKENS, MAX_CONTEXT_CHUNKS
-from ..search.query import search_knowledge_base
-from ..cases.database import search_cases as search_past_cases, init_database
+from ..config import (
+    CLAUDE_MODEL,
+    CLAUDE_MAX_TOKENS,
+    MAX_TOOL_ITERATIONS,
+)
+from . import session_store
 from .moodle_url import parse_urls_from_text, format_url_context_for_llm
-from .prompts import build_system_prompt
+from .prompts import SYSTEM_PROMPT
 from .templates import get_template_for_message
+from .tools import TOOL_DEFINITIONS, execute_tool
 
 logger = logging.getLogger(__name__)
 
-# In-memory session storage
+# In-memory session cache (backed by SQLite via session_store)
 _sessions: Dict[str, ConversationSession] = {}
-
-# Shared conversation links: share_id -> session_id
-_shared_links: Dict[str, str] = {}
-
-# Session expiry: 2 hours
-SESSION_TTL = 7200
 
 
 class ConversationMessage:
     """A single message in a conversation."""
 
-    def __init__(self, role: str, content: str, metadata: Optional[dict] = None):
+    def __init__(self, role: str, content: str, metadata: Optional[dict] = None,
+                 timestamp: Optional[float] = None):
         self.role = role  # "user" or "assistant"
         self.content = content
-        self.timestamp = time.time()
+        self.timestamp = timestamp if timestamp is not None else time.time()
         self.metadata = metadata or {}
 
     def to_dict(self) -> dict:
@@ -67,6 +71,8 @@ class ConversationSession:
         """Store an image to be included with the next user message."""
         idx = str(len(self.messages))  # Will be attached to the next message
         self.images[idx] = {"media_type": media_type, "data": base64_data}
+        self.updated_at = time.time()
+        persist_session(self)
 
     def get_claude_messages(self) -> list:
         """Convert message history to Claude API format."""
@@ -84,23 +90,66 @@ class ConversationSession:
             "updated_at": self.updated_at,
         }
 
+    def to_state_dict(self) -> dict:
+        """Full state for persistence (includes context and images)."""
+        return {
+            "id": self.id,
+            "messages": [m.to_dict() for m in self.messages],
+            "mbz_context": self.mbz_context,
+            "images": self.images,
+            "created_at": self.created_at,
+            "updated_at": self.updated_at,
+        }
+
+    @classmethod
+    def from_state_dict(cls, state: dict) -> "ConversationSession":
+        session = cls()
+        session.id = state["id"]
+        session.messages = [
+            ConversationMessage(
+                role=m["role"],
+                content=m["content"],
+                metadata=m.get("metadata") or {},
+                timestamp=m.get("timestamp"),
+            )
+            for m in state.get("messages", [])
+        ]
+        session.mbz_context = state.get("mbz_context", "")
+        session.images = state.get("images", {})
+        session.created_at = state.get("created_at", time.time())
+        session.updated_at = state.get("updated_at", time.time())
+        return session
+
+
+def persist_session(session: ConversationSession):
+    """Write-through a session to the SQLite store."""
+    session_store.save_session(
+        session.id, session.to_state_dict(), session.created_at, session.updated_at
+    )
+
 
 def create_session() -> ConversationSession:
     """Create a new diagnostic conversation session."""
-    _cleanup_expired_sessions()
+    session_store.cleanup_expired()
     session = ConversationSession()
     _sessions[session.id] = session
+    persist_session(session)
     logger.info(f"Created session {session.id}")
     return session
 
 
 def get_session(session_id: str) -> Optional[ConversationSession]:
-    """Get a session by ID."""
+    """Get a session by ID — from memory, falling back to the SQLite store."""
     session = _sessions.get(session_id)
-    if session and (time.time() - session.updated_at) > SESSION_TTL:
-        del _sessions[session_id]
-        return None
-    return session
+    if session:
+        return session
+
+    state = session_store.load_session(session_id)
+    if state:
+        session = ConversationSession.from_state_dict(state)
+        _sessions[session.id] = session
+        return session
+    return None
 
 
 def set_mbz_context(session_id: str, context: str):
@@ -109,6 +158,17 @@ def set_mbz_context(session_id: str, context: str):
     if session:
         session.mbz_context = context
         session.updated_at = time.time()
+        persist_session(session)
+
+
+def append_page_context(session_id: str, context: str):
+    """Append parsed page context (e.g. saved HTML) to a session."""
+    session = get_session(session_id)
+    if session:
+        separator = "\n\n---\n\n" if session.mbz_context else ""
+        session.mbz_context = session.mbz_context + separator + context
+        session.updated_at = time.time()
+        persist_session(session)
 
 
 def create_share_link(session_id: str) -> Optional[str]:
@@ -116,21 +176,80 @@ def create_share_link(session_id: str) -> Optional[str]:
     session = get_session(session_id)
     if not session:
         return None
-    # Check if already shared
-    for share_id, sid in _shared_links.items():
-        if sid == session_id:
-            return share_id
+    existing = session_store.get_share_link_for_session(session_id)
+    if existing:
+        return existing
     share_id = str(uuid.uuid4())[:8]
-    _shared_links[share_id] = session_id
+    session_store.save_share_link(share_id, session_id)
     return share_id
 
 
 def get_session_by_share_id(share_id: str) -> Optional[ConversationSession]:
     """Get a session via its share ID."""
-    session_id = _shared_links.get(share_id)
+    session_id = session_store.resolve_share_link(share_id)
     if not session_id:
         return None
     return get_session(session_id)
+
+
+_MODE_RE = re.compile(
+    r"^\s*MODE:\s*(explore|diagnose|resolve)\b[^\n]*\n?", re.IGNORECASE
+)
+
+
+class _ModeMarkerFilter:
+    """Strips a leading 'MODE: <mode>' line from a streamed text sequence.
+
+    The model is instructed to begin each response with a machine-readable
+    mode declaration. This filter buffers just enough of the stream to detect
+    and remove it, passing everything else through unchanged.
+    """
+
+    MAX_BUFFER = 32
+
+    def __init__(self):
+        self._buffer = ""
+        self._active = True
+        self.mode: Optional[str] = None
+
+    def feed(self, text: str) -> str:
+        if not self._active:
+            return text
+        self._buffer += text
+
+        if "\n" in self._buffer:
+            match = _MODE_RE.match(self._buffer)
+            self._active = False
+            out = self._buffer[match.end():] if match else self._buffer
+            if match:
+                self.mode = match.group(1).lower()
+                out = out.lstrip("\n")
+            self._buffer = ""
+            return out
+
+        # No newline yet — keep buffering only while this could still be a marker
+        probe = self._buffer.lstrip().upper()
+        could_be_marker = (
+            "MODE:".startswith(probe) if len(probe) < 5 else probe.startswith("MODE:")
+        )
+        if not could_be_marker or len(self._buffer) > self.MAX_BUFFER:
+            self._active = False
+            out, self._buffer = self._buffer, ""
+            return out
+        return ""
+
+    def flush(self) -> str:
+        """Return any remaining buffered text at end of stream."""
+        self._active = False
+        if not self._buffer:
+            return ""
+        match = _MODE_RE.match(self._buffer + "\n")
+        if match:
+            self.mode = match.group(1).lower()
+            self._buffer = ""
+            return ""
+        out, self._buffer = self._buffer, ""
+        return out
 
 
 async def send_message(
@@ -138,11 +257,14 @@ async def send_message(
 ) -> AsyncGenerator[str, None]:
     """Process a user message and stream the assistant response.
 
-    Yields SSE-formatted events:
+    Runs an agentic loop: Claude searches the knowledge base and past cases
+    via tools as needed, then answers. Yields SSE-formatted events:
     - event: token\ndata: {text}\n\n
-    - event: sources\ndata: {json}\n\n
-    - event: url_context\ndata: {json}\n\n
-    - event: done\ndata: {json}\n\n
+    - event: sources\ndata: {json}            (cumulative KB sources)
+    - event: url_context\ndata: {json}
+    - event: tool_activity\ndata: {json}      (informational; safe to ignore)
+    - event: done\ndata: {json}
+    - event: error\ndata: {json}
     """
     session = get_session(session_id)
     if not session:
@@ -155,70 +277,168 @@ async def send_message(
         url_data = [ctx.to_dict() for ctx in url_contexts]
         yield _sse_event("url_context", url_data)
 
-    # 2. Search knowledge base for relevant documentation
-    kb_results = []
-    kb_results_full = []  # Full text for Claude injection
-    try:
-        # Dynamic threshold: more inclusive on first message, stricter later
-        relevance_threshold = 0.25 if len(session.messages) == 0 else 0.40
-
-        search_response = search_knowledge_base(
-            query=user_message, limit=MAX_CONTEXT_CHUNKS
-        )
-        for r in search_response.results:
-            if r.score <= relevance_threshold:
-                continue
-            # Full text for Claude context injection
-            kb_results_full.append({
-                "title": r.title,
-                "source": r.source,
-                "text": r.text,  # Full text for Claude
-                "score": r.score,
-                "canonical_url": r.canonical_url,
-            })
-            # Truncated version for SSE event to frontend
-            kb_results.append({
-                "title": r.title,
-                "source": r.source,
-                "text": r.text[:500],
-                "score": r.score,
-                "canonical_url": r.canonical_url,
-            })
-
-        if kb_results:
-            yield _sse_event("sources", kb_results)
-    except Exception as e:
-        logger.warning(f"KB search failed: {e}")
-
-    # 2b. Search past cases for similar issues
-    past_cases = []
-    try:
-        init_database()
-        past_cases = search_past_cases(user_message, limit=3)
-    except Exception as e:
-        logger.debug(f"Case search failed (may be empty): {e}")
-
-    # 2c. Detect diagnostic template
+    # 2. Detect diagnostic template
     template = get_template_for_message(user_message)
 
-    # 3. Build the augmented user message with context (using full-text KB results)
+    # 3. Build the augmented user message
     augmented_message = _build_augmented_message(
-        user_message, url_contexts, kb_results_full, past_cases, template
+        user_message, url_contexts, template, bool(session.mbz_context)
     )
 
     # 4. Add user message to session history
     session.add_message("user", user_message, {
         "url_contexts": [ctx.to_dict() for ctx in url_contexts] if url_contexts else [],
-        "kb_sources": [{"title": r["title"], "source": r["source"]} for r in kb_results],
+    })
+    persist_session(session)
+
+    # 5. Build Claude API messages from history
+    messages = _build_api_messages(session, augmented_message)
+
+    # System prompt is static — mark it cacheable (covers tools + system prefix)
+    system_blocks = [{
+        "type": "text",
+        "text": SYSTEM_PROMPT,
+        "cache_control": {"type": "ephemeral"},
+    }]
+
+    # 6. Agentic loop: stream, execute tools, repeat until the model answers
+    client = anthropic.AsyncAnthropic()
+    response_parts: List[str] = []
+    all_sources: List[dict] = []
+    seen_source_keys = set()
+    mode: Optional[str] = None
+    stop_reason: Optional[str] = None
+
+    try:
+        for iteration in range(MAX_TOOL_ITERATIONS):
+            # On the last allowed iteration, force a final answer (no tools)
+            last_chance = iteration == MAX_TOOL_ITERATIONS - 1
+            request_kwargs = dict(
+                model=CLAUDE_MODEL,
+                max_tokens=CLAUDE_MAX_TOKENS,
+                system=system_blocks,
+                tools=TOOL_DEFINITIONS,
+                messages=messages,
+            )
+            if last_chance:
+                request_kwargs["tool_choice"] = {"type": "none"}
+
+            marker_filter = _ModeMarkerFilter()
+            async with client.messages.stream(**request_kwargs) as stream:
+                async for text in stream.text_stream:
+                    out = marker_filter.feed(text)
+                    if out:
+                        response_parts.append(out)
+                        yield _sse_event("token", {"text": out})
+                remaining = marker_filter.flush()
+                if remaining:
+                    response_parts.append(remaining)
+                    yield _sse_event("token", {"text": remaining})
+                response = await stream.get_final_message()
+
+            if marker_filter.mode:
+                mode = marker_filter.mode
+            stop_reason = response.stop_reason
+
+            if stop_reason == "tool_use":
+                # Echo the assistant turn (including tool_use blocks), execute
+                # each tool, and feed results back
+                messages.append({"role": "assistant", "content": response.content})
+                tool_results = []
+                for block in response.content:
+                    if block.type != "tool_use":
+                        continue
+                    yield _sse_event("tool_activity", {
+                        "tool": block.name,
+                        "input": block.input,
+                    })
+                    result_text, sources, is_error = execute_tool(
+                        block.name, block.input or {}, session
+                    )
+                    tool_results.append({
+                        "type": "tool_result",
+                        "tool_use_id": block.id,
+                        "content": result_text,
+                        "is_error": is_error,
+                    })
+                    new_sources = [
+                        s for s in sources
+                        if (s["title"], s["source"]) not in seen_source_keys
+                    ]
+                    if new_sources:
+                        for s in new_sources:
+                            seen_source_keys.add((s["title"], s["source"]))
+                        all_sources.extend(new_sources)
+                        yield _sse_event("sources", all_sources)
+                if not tool_results:
+                    break  # defensive: tool_use stop with no tool blocks
+                messages.append({"role": "user", "content": tool_results})
+                # Separate text written before tool calls from what follows
+                if response_parts and response_parts[-1].strip():
+                    response_parts.append("\n\n")
+                    yield _sse_event("token", {"text": "\n\n"})
+                continue
+
+            if stop_reason == "pause_turn":
+                # Server paused the turn — re-send to resume
+                messages.append({"role": "assistant", "content": response.content})
+                continue
+
+            break  # end_turn, max_tokens, refusal, etc.
+
+    except anthropic.APIError as e:
+        logger.error(f"Claude API error: {e}")
+        yield _sse_event("error", {"message": f"API error: {str(e)}"})
+        return
+    except Exception as e:
+        logger.error(f"Unexpected error in conversation: {e}")
+        yield _sse_event("error", {"message": f"Error: {str(e)}"})
+        return
+
+    full_response = "".join(response_parts).strip()
+
+    # 7. Handle refusal — the model (or its safety layer) declined to answer
+    if stop_reason == "refusal":
+        yield _sse_event("error", {
+            "message": "The model declined to respond to this request. "
+                       "Try rephrasing the issue.",
+        })
+        if not full_response:
+            return
+
+    if not full_response:
+        yield _sse_event("error", {"message": "The model returned an empty response."})
+        return
+
+    # 8. Determine mode: model-declared marker, falling back to heuristics
+    if not mode:
+        mode = _detect_mode(full_response)
+
+    # 9. Save assistant response to session
+    session.add_message("assistant", full_response, {
+        "mode": mode,
+        "kb_sources": [
+            {"title": s["title"], "source": s["source"]} for s in all_sources
+        ],
+    })
+    persist_session(session)
+
+    # 10. Send completion event
+    yield _sse_event("done", {
+        "mode": mode,
+        "full_response": full_response,
+        "truncated": stop_reason == "max_tokens",
     })
 
-    # 5. Build Claude API messages
-    system_prompt = build_system_prompt(session.mbz_context)
 
-    # Use augmented message for the current turn, plain history for previous turns
+def _build_api_messages(session: ConversationSession, augmented_message: str) -> list:
+    """Build the Claude messages array from session history.
+
+    Previous turns use their plain text; the current turn uses the augmented
+    message. Images attach to the user message they were uploaded for.
+    """
     messages = []
     for i, msg in enumerate(session.messages[:-1]):  # All previous messages
-        # Check if this message had an image attachment
         img = session.images.get(str(i))
         if img and msg.role == "user":
             messages.append({
@@ -231,7 +451,7 @@ async def send_message(
         else:
             messages.append({"role": msg.role, "content": msg.content})
 
-    # Current user message with context injection — may include images
+    # Current user message — may include an image
     current_msg_idx = str(len(session.messages) - 1)
     current_image = session.images.get(current_msg_idx)
     if current_image:
@@ -245,116 +465,48 @@ async def send_message(
     else:
         messages.append({"role": "user", "content": augmented_message})
 
-    # 6. Stream response from Claude
-    full_response = ""
-    try:
-        client = anthropic.AsyncAnthropic()
-
-        async with client.messages.stream(
-            model=CLAUDE_MODEL,
-            max_tokens=CLAUDE_MAX_TOKENS,
-            system=system_prompt,
-            messages=messages,
-        ) as stream:
-            async for text in stream.text_stream:
-                full_response += text
-                yield _sse_event("token", {"text": text})
-
-    except anthropic.APIError as e:
-        logger.error(f"Claude API error: {e}")
-        yield _sse_event("error", {"message": f"API error: {str(e)}"})
-        return
-    except Exception as e:
-        logger.error(f"Unexpected error in conversation: {e}")
-        yield _sse_event("error", {"message": f"Error: {str(e)}"})
-        return
-
-    # 7. Detect mode from response
-    mode = _detect_mode(full_response)
-
-    # 8. Save assistant response to session
-    session.add_message("assistant", full_response, {"mode": mode})
-
-    # 9. Send completion event
-    yield _sse_event("done", {
-        "mode": mode,
-        "full_response": full_response,
-    })
+    return messages
 
 
 def _build_augmented_message(
     user_message: str,
     url_contexts: list,
-    kb_results: list,
-    past_cases: list = None,
     template=None,
+    has_course_context: bool = False,
 ) -> str:
-    """Build the user message with injected context for Claude.
+    """Build the user message with deterministic context for Claude.
 
-    Puts the user's message FIRST so Claude knows the question before
-    reading reference material. Uses tiered truncation for KB results
-    to focus attention on the most relevant documents.
+    Knowledge-base and past-case lookups are no longer injected here — the
+    model fetches them via tools. Only cheap, deterministic context rides
+    along with the message: parsed URLs, a detected diagnostic template, and
+    a note about uploaded course context.
     """
     parts = []
 
-    # User message FIRST — Claude attends better when it knows the question
     parts.append("## Support Issue")
     parts.append(user_message)
 
-    # URL context
     url_text = format_url_context_for_llm(url_contexts)
     if url_text:
         parts.append(url_text)
 
-    # Diagnostic template (if detected)
     if template:
         parts.append("Use this diagnostic framework to structure your response:")
         parts.append(template.to_prompt_text())
 
-    # Past similar cases — prioritize high-match cases
-    if past_cases:
-        parts.append("## Similar Past Cases")
-        parts.append("The team has handled similar issues before:\n")
-        for i, case in enumerate(past_cases[:3]):
-            parts.append(f"### Case: {case.get('summary', 'Untitled')}")
-            # More text for the top match, less for subsequent
-            max_len = 600 if i == 0 else 300
-            if case.get("diagnosis"):
-                parts.append(f"**Diagnosis**: {case['diagnosis'][:max_len]}")
-            if case.get("resolution"):
-                parts.append(f"**Resolution**: {case['resolution'][:max_len]}")
-            if case.get("tags"):
-                tags = case["tags"] if isinstance(case["tags"], list) else [case["tags"]]
-                parts.append(f"Tags: {', '.join(tags)}")
-            parts.append("")
-
-    # Knowledge base context — tiered truncation by relevance rank
-    if kb_results:
-        parts.append("## Relevant Documentation")
-        parts.append("The following documentation may be relevant:\n")
-        for i, r in enumerate(kb_results):
-            # Top 2 results: full text (up to 2000 chars)
-            # Results 3-4: moderate truncation (1000 chars)
-            # Result 5+: summary only (500 chars)
-            if i < 2:
-                max_text = 2000
-            elif i < 4:
-                max_text = 1000
-            else:
-                max_text = 500
-            text = r["text"][:max_text]
-
-            parts.append(f"### {r['title']} ({r['source']})")
-            parts.append(text)
-            if r.get("canonical_url"):
-                parts.append(f"Source: {r['canonical_url']}")
-            parts.append("")
+    if has_course_context:
+        parts.append(
+            "*Note: course context (from an uploaded .mbz backup or saved "
+            "page) is available — use the get_course_context tool if the "
+            "issue relates to course configuration.*"
+        )
 
     return "\n\n".join(parts)
 
 
 def _detect_mode(response: str) -> str:
-    """Detect the conversation mode from the response content."""
+    """Heuristic mode detection — fallback when the model omits its
+    MODE marker."""
     response_lower = response.lower()
 
     # Check for RESOLVE indicators
@@ -409,7 +561,6 @@ def _detect_mode(response: str) -> str:
     if any(indicator in response_lower for indicator in diagnose_indicators):
         return "diagnose"
 
-    # Default to explore for early conversation, diagnose for later
     return "explore"
 
 
@@ -417,16 +568,3 @@ def _sse_event(event_type: str, data) -> str:
     """Format an SSE event string."""
     json_data = json.dumps(data, ensure_ascii=False)
     return f"event: {event_type}\ndata: {json_data}\n\n"
-
-
-def _cleanup_expired_sessions():
-    """Remove sessions older than TTL."""
-    now = time.time()
-    expired = [
-        sid for sid, session in _sessions.items()
-        if (now - session.updated_at) > SESSION_TTL
-    ]
-    for sid in expired:
-        del _sessions[sid]
-    if expired:
-        logger.info(f"Cleaned up {len(expired)} expired sessions")

@@ -31,14 +31,14 @@ This is **not a chatbot**. It's a deliberative diagnostic tool designed for tech
 ├──────────┬──────────┬───────────┤
 │ ChromaDB │ SQLite   │ Claude    │
 │ vectors  │ cases    │ API       │
-│ (384d)   │ + FTS5   │ (Sonnet)  │
+│ (384d)   │ + FTS5   │ (Haiku)   │
 └──────────┴──────────┴───────────┘
 ```
 
 - **Backend**: Python / FastAPI with Server-Sent Events for real-time streaming
 - **Vector Store**: ChromaDB with `all-MiniLM-L6-v2` sentence-transformer embeddings (384 dimensions)
 - **Case Database**: SQLite with FTS5 full-text search
-- **AI**: Anthropic Claude API with vision support for screenshot analysis
+- **AI**: Anthropic Claude API (`claude-haiku-4-5` by default — set the `CLAUDE_MODEL` env var to use e.g. `claude-sonnet-4-6`). The model investigates via tools: semantic knowledge-base search, past-case lookup, and on-demand course context. Vision support for screenshot analysis.
 - **Frontend**: React, TypeScript, Tailwind CSS, Vite
 
 ## Getting Started

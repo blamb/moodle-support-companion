@@ -43,6 +43,9 @@ app.include_router(questions.router, prefix="/api", tags=["questions"])
 @app.on_event("startup")
 async def startup():
     init_database()
+    from .conversation.session_store import init_store, cleanup_expired
+    init_store()
+    cleanup_expired()
 
 
 @app.get("/api/health")
