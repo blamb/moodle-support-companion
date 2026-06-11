@@ -49,13 +49,20 @@ DEFAULT_SEARCH_LIMIT = 10
 MAX_SEARCH_LIMIT = 50
 
 # Claude API (conversation)
-CLAUDE_MODEL = "claude-sonnet-4-20250514"
+# Default is Haiku for cost; set CLAUDE_MODEL=claude-sonnet-4-6 (or any other
+# model alias) in the environment to upgrade without code changes.
+CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-haiku-4-5")
 CLAUDE_MAX_TOKENS = 4096
-MAX_CONTEXT_CHUNKS = 5  # KB results to inject per message
+MAX_CONTEXT_CHUNKS = 5  # KB results returned per knowledge-base tool call
+MAX_TOOL_ITERATIONS = 6  # cap on tool-use rounds within a single reply
 MAX_CONVERSATION_TURNS = 50
 
 # Case tracking
 CASE_DB_PATH = DATA_DIR / "cases.db"
+
+# Conversation session persistence
+SESSION_DB_PATH = DATA_DIR / "sessions.db"
+SESSION_TTL = 7 * 24 * 3600  # sessions survive restarts; expire after 7 days
 
 # .mbz uploads
 MBZ_UPLOAD_DIR = DATA_DIR / "mbz_uploads"

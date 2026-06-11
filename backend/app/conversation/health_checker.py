@@ -2,11 +2,22 @@
 
 Runs proactive diagnostics on course structure extracted from .mbz backups
 to surface potential issues before they become support tickets.
+
+Two layers:
+- Rule-based checks (instant, free): hardcoded detection of known patterns
+- AI audit (on demand): Claude reviews the full course structure for issues
+  the rules don't cover — cross-referencing gradebook config, completion
+  settings, and activity setup
 """
 
 from __future__ import annotations
 
+import json
+import logging
+import re
 from typing import List, Dict
+
+logger = logging.getLogger(__name__)
 
 
 class HealthIssue:
@@ -219,3 +230,119 @@ def _check_structure(ctx) -> List[HealthIssue]:
         ))
 
     return issues
+
+
+# ---------------------------------------------------------------------------
+# AI audit — open-ended review of the course structure by Claude
+# ---------------------------------------------------------------------------
+
+_AUDIT_SYSTEM = """You are a Moodle 4.5 course configuration auditor for Thompson Rivers University's LT&I team. You review parsed course structure (from a .mbz backup) and identify configuration problems that could generate support tickets.
+
+Focus on issues a rule-based checker would miss: cross-cutting problems (e.g. gradebook aggregation inconsistent with how activities are weighted, completion conditions that can never be satisfied, restricted-access chains that lock students out, quiz/assignment settings that conflict with the course's apparent design), not generic style advice.
+
+Respond with ONLY a JSON array (no prose, no code fences). Each element:
+{
+  "severity": "high" | "medium" | "low" | "info",
+  "category": "completion" | "gradebook" | "structure" | "activities" | "access",
+  "title": "short title",
+  "description": "what the problem is and why it matters",
+  "suggestion": "specific fix, with the Moodle navigation path where possible"
+}
+
+Only report findings you have concrete evidence for in the provided structure. If the configuration looks healthy, return []."""
+
+_VALID_SEVERITIES = {"high", "medium", "low", "info"}
+
+
+async def ai_audit_course(
+    course_context_text: str,
+    rule_issues: List[HealthIssue] = None,
+) -> List[HealthIssue]:
+    """Run an open-ended AI audit of the course structure.
+
+    Sends the parsed course summary to Claude and asks for findings beyond
+    the rule-based checks. Returns additional HealthIssues (deduplicated
+    against the rule-based findings by title). Fails soft: returns [] on
+    any API or parsing error.
+    """
+    import anthropic
+    from ..config import CLAUDE_MODEL
+
+    already_found = ""
+    if rule_issues:
+        titles = "\n".join(f"- {i.title}" for i in rule_issues)
+        already_found = (
+            f"\n\nThe rule-based checker already reported these — do NOT repeat them:\n{titles}"
+        )
+
+    prompt = (
+        "Audit this Moodle course configuration:\n\n"
+        f"{course_context_text}{already_found}"
+    )
+
+    try:
+        client = anthropic.AsyncAnthropic()
+        response = await client.messages.create(
+            model=CLAUDE_MODEL,
+            max_tokens=2000,
+            system=_AUDIT_SYSTEM,
+            messages=[{"role": "user", "content": prompt}],
+        )
+    except Exception as e:
+        logger.warning(f"AI audit API call failed: {e}")
+        return []
+
+    if response.stop_reason == "refusal":
+        logger.warning("AI audit was refused by the model")
+        return []
+
+    text = next((b.text for b in response.content if b.type == "text"), "")
+    findings = _parse_audit_json(text)
+
+    rule_titles = {i.title.lower() for i in (rule_issues or [])}
+    issues = []
+    for f in findings:
+        if not isinstance(f, dict):
+            continue
+        title = str(f.get("title", "")).strip()
+        if not title or title.lower() in rule_titles:
+            continue
+        severity = str(f.get("severity", "info")).lower()
+        if severity not in _VALID_SEVERITIES:
+            severity = "info"
+        issues.append(HealthIssue(
+            severity=severity,
+            category=str(f.get("category", "general")),
+            title=title,
+            description=str(f.get("description", "")),
+            suggestion=str(f.get("suggestion", "")),
+        ))
+
+    severity_order = {"high": 0, "medium": 1, "low": 2, "info": 3}
+    issues.sort(key=lambda i: severity_order.get(i.severity, 3))
+    return issues
+
+
+def _parse_audit_json(text: str) -> list:
+    """Parse the audit response as a JSON array, tolerating code fences
+    and surrounding prose."""
+    text = text.strip()
+    # Strip markdown code fences if present
+    fence = re.match(r"^```(?:json)?\s*(.*?)\s*```$", text, re.DOTALL)
+    if fence:
+        text = fence.group(1)
+    try:
+        data = json.loads(text)
+        return data if isinstance(data, list) else []
+    except json.JSONDecodeError:
+        pass
+    # Last resort: extract the first [...] block
+    start, end = text.find("["), text.rfind("]")
+    if start != -1 and end > start:
+        try:
+            data = json.loads(text[start:end + 1])
+            return data if isinstance(data, list) else []
+        except json.JSONDecodeError:
+            pass
+    logger.warning("AI audit returned unparseable JSON")
+    return []
