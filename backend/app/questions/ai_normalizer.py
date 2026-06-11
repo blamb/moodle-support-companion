@@ -21,15 +21,7 @@ from typing import List, Optional
 import anthropic
 
 from ..config import CLAUDE_MODEL
-from .models import (
-    Answer,
-    Option,
-    Pair,
-    ParseResult,
-    Question,
-    ALL_QTYPES,
-    QTYPE_MULTICHOICE,
-)
+from .models import ParseResult, question_from_dict
 
 logger = logging.getLogger(__name__)
 
@@ -121,61 +113,6 @@ def _strip_json(text: str) -> str:
     return t
 
 
-def _question_from_dict(d: dict, number: int) -> Optional[Question]:
-    qtype = str(d.get("type", "")).strip().lower()
-    if qtype not in ALL_QTYPES:
-        # Unknown type — best effort: treat as multichoice if it has options.
-        qtype = QTYPE_MULTICHOICE if d.get("options") else "essay"
-
-    text = str(d.get("text", "")).strip()
-    if not text:
-        return None
-
-    warnings = [str(w) for w in (d.get("warnings") or []) if str(w).strip()]
-
-    options = [
-        Option(text=str(o.get("text", "")).strip(),
-               fraction=float(o.get("fraction", 0) or 0),
-               feedback=str(o.get("feedback", "")).strip())
-        for o in (d.get("options") or [])
-        if str(o.get("text", "")).strip()
-    ]
-
-    answers = []
-    for a in (d.get("answers") or []):
-        atext = str(a.get("text", "")).strip()
-        if not atext:
-            continue
-        tol = a.get("tolerance")
-        answers.append(Answer(text=atext,
-                              fraction=float(a.get("fraction", 100) or 100),
-                              tolerance=float(tol) if tol is not None else None))
-
-    pairs = [
-        Pair(question=str(p.get("question", "")).strip(),
-             answer=str(p.get("answer", "")).strip())
-        for p in (d.get("pairs") or [])
-        if str(p.get("question", "")).strip() and str(p.get("answer", "")).strip()
-    ]
-
-    correct = d.get("correct")
-    correct = str(correct).strip().lower() if correct is not None else None
-
-    return Question(
-        qtype=qtype,
-        text=text,
-        number=number,
-        name=str(d.get("name", "")).strip(),
-        single=bool(d.get("single", True)),
-        options=options,
-        answers=answers,
-        pairs=pairs,
-        correct=correct,
-        feedback=str(d.get("feedback", "")).strip(),
-        warnings=warnings,
-    )
-
-
 async def normalize_with_ai(text: str, start_number: int = 1) -> ParseResult:
     """Ask Claude to normalize messy ``text`` into a :class:`ParseResult`.
 
@@ -204,7 +141,7 @@ async def normalize_with_ai(text: str, start_number: int = 1) -> ParseResult:
 
     number = start_number
     for qd in data.get("questions", []):
-        q = _question_from_dict(qd, number)
+        q = question_from_dict(qd, number)
         if q is not None:
             result.questions.append(q)
             number += 1

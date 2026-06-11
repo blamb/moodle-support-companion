@@ -129,6 +129,69 @@ class Question:
         }
 
 
+def question_from_dict(d: dict, number: int = 0) -> Optional["Question"]:
+    """Build a :class:`Question` from a plain dict.
+
+    Accepts both the ``to_dict()`` shape (``qtype`` key, used when the frontend
+    sends edited questions back for re-serialization) and the AI normalizer's
+    output shape (``type`` key). Returns None if there's no usable question text.
+    """
+    qtype = str(d.get("qtype") or d.get("type") or "").strip().lower()
+    if qtype not in ALL_QTYPES:
+        qtype = QTYPE_MULTICHOICE if d.get("options") else QTYPE_ESSAY
+
+    text = str(d.get("text", "")).strip()
+    if not text:
+        return None
+
+    options = [
+        Option(
+            text=str(o.get("text", "")).strip(),
+            fraction=float(o.get("fraction", 0) or 0),
+            feedback=str(o.get("feedback", "")).strip(),
+        )
+        for o in (d.get("options") or [])
+        if str(o.get("text", "")).strip()
+    ]
+
+    answers = []
+    for a in (d.get("answers") or []):
+        atext = str(a.get("text", "")).strip()
+        if not atext:
+            continue
+        tol = a.get("tolerance")
+        answers.append(
+            Answer(
+                text=atext,
+                fraction=float(a.get("fraction", 100) or 100),
+                tolerance=float(tol) if tol is not None else None,
+            )
+        )
+
+    pairs = [
+        Pair(question=str(p.get("question", "")).strip(), answer=str(p.get("answer", "")).strip())
+        for p in (d.get("pairs") or [])
+        if str(p.get("question", "")).strip() and str(p.get("answer", "")).strip()
+    ]
+
+    correct = d.get("correct")
+    correct = str(correct).strip().lower() if correct is not None else None
+
+    return Question(
+        qtype=qtype,
+        text=text,
+        number=number,
+        name=str(d.get("name", "")).strip(),
+        single=bool(d.get("single", True)),
+        options=options,
+        answers=answers,
+        pairs=pairs,
+        correct=correct,
+        feedback=str(d.get("feedback", "")).strip(),
+        warnings=[str(w) for w in (d.get("warnings") or []) if str(w).strip()],
+    )
+
+
 @dataclass
 class ParseResult:
     """The outcome of parsing a block of pasted text."""

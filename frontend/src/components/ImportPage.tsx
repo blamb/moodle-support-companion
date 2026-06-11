@@ -40,9 +40,16 @@ SHORT: Who wrote Romeo and Juliet?
 
 ESSAY: Explain why photosynthesis matters to life on Earth.`;
 
-function QuestionCard({ q }: { q: ParsedQuestion }) {
+interface QuestionCardProps {
+  q: ParsedQuestion;
+  onSelectOption: (optIndex: number) => void;
+  onSelectTF: (value: 'true' | 'false') => void;
+}
+
+function QuestionCard({ q, onSelectOption, onSelectTF }: QuestionCardProps) {
   const badge = BADGE_STYLES[q.qtype] ?? 'bg-slate-100 text-slate-600 border-slate-200';
   const needsReview = q.warnings.length > 0;
+  const editableMC = q.qtype === 'multichoice' && q.options.length > 0;
 
   return (
     <div
@@ -63,34 +70,63 @@ function QuestionCard({ q }: { q: ParsedQuestion }) {
         </span>
       </div>
 
-      {/* Options */}
-      {q.options.length > 0 && (
-        <ul className="space-y-1 ml-1">
-          {q.options.map((o, i) => {
-            const correct = o.fraction > 0;
-            return (
-              <li
-                key={i}
-                className={`text-sm flex items-baseline gap-1.5 ${
-                  correct ? 'text-green-700 font-medium' : 'text-slate-500'
-                }`}
-              >
-                <span aria-hidden className="w-3 inline-block">{correct ? '✓' : '·'}</span>
-                <span>{o.text}</span>
-                {o.fraction !== 0 && o.fraction !== 100 && (
-                  <span className="text-xs text-slate-400">[{o.fraction}%]</span>
-                )}
-              </li>
-            );
-          })}
-        </ul>
+      {/* Multiple-choice options — click to set/change the correct answer */}
+      {editableMC && (
+        <div className="ml-1">
+          <ul className="space-y-0.5">
+            {q.options.map((o, i) => {
+              const correct = o.fraction > 0;
+              return (
+                <li key={i}>
+                  <button
+                    type="button"
+                    onClick={() => onSelectOption(i)}
+                    title={q.single ? 'Click to mark this the correct answer' : 'Click to toggle this answer'}
+                    className={`w-full text-left text-sm flex items-baseline gap-1.5 px-1.5 py-1 rounded
+                                hover:bg-slate-50 transition-colors ${
+                                  correct ? 'text-green-700 font-medium' : 'text-slate-500'
+                                }`}
+                  >
+                    <span aria-hidden className="w-3 inline-block">{correct ? '✓' : '○'}</span>
+                    <span>{o.text}</span>
+                    {o.fraction !== 0 && o.fraction !== 100 && (
+                      <span className="text-xs text-slate-400">[{o.fraction}%]</span>
+                    )}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+          <p className="text-[11px] text-slate-400 mt-1 ml-1.5">
+            {q.single
+              ? 'Click an option to set the correct answer.'
+              : 'Click options to toggle which are correct.'}
+          </p>
+        </div>
       )}
 
-      {/* True/False answer */}
+      {/* True/False — click to set the answer */}
       {q.qtype === 'truefalse' && (
-        <p className="text-sm text-green-700 font-medium ml-1">
-          ✓ Answer: {q.correct === 'true' ? 'True' : 'False'}
-        </p>
+        <div className="ml-1 flex items-center gap-2">
+          {(['true', 'false'] as const).map((v) => {
+            const sel = q.correct === v;
+            return (
+              <button
+                key={v}
+                type="button"
+                onClick={() => onSelectTF(v)}
+                className={`px-3 py-1 rounded text-sm border transition-colors ${
+                  sel
+                    ? 'bg-green-50 text-green-700 border-green-300 font-medium'
+                    : 'bg-white text-slate-500 border-slate-200 hover:border-slate-300'
+                }`}
+              >
+                {sel ? '✓ ' : ''}
+                {v === 'true' ? 'True' : 'False'}
+              </button>
+            );
+          })}
+        </div>
       )}
 
       {/* Short answer / numerical accepted answers */}
@@ -136,8 +172,10 @@ function QuestionCard({ q }: { q: ParsedQuestion }) {
 }
 
 export function ImportPage() {
-  const { text, setText, mode, setMode, result, loading, error, note, uploading, convert, extractFromFile } =
-    useQuestionImport();
+  const {
+    text, setText, mode, setMode, result, questions, exports, loading, error, note, uploading,
+    convert, extractFromFile, setCorrectOption, setTrueFalse,
+  } = useQuestionImport();
   const [format, setFormat] = useState<ExportFormat>('gift');
   const [showHelp, setShowHelp] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -149,8 +187,9 @@ export function ImportPage() {
     e.target.value = ''; // allow re-uploading the same file
   };
 
-  const exportContent = result ? result.exports[format] : '';
+  const exportContent = exports ? exports[format] : '';
   const fmtMeta = FORMAT_OPTIONS.find((f) => f.key === format)!;
+  const needsReviewCount = questions.filter((q) => q.warnings.length > 0).length;
 
   const download = () => {
     if (!exportContent) return;
@@ -188,7 +227,9 @@ export function ImportPage() {
         <p className="text-sm text-slate-600">
           Paste questions an instructor sent — even messy or inconsistently formatted — and get a
           clean Moodle import file (GIFT, XML, or Aiken). Anything the parser is unsure about is{' '}
-          <span className="font-medium text-amber-700">flagged for review</span> rather than dropped.
+          <span className="font-medium text-amber-700">flagged for review</span> rather than dropped —
+          and you can <span className="font-medium text-slate-700">click any option in the preview to
+          set the correct answer</span>, which updates the download instantly.
         </p>
         <button
           onClick={() => setShowHelp((s) => !s)}
@@ -324,11 +365,11 @@ export function ImportPage() {
           {/* Summary bar */}
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-4">
             <h3 className="text-base font-bold" style={{ color: 'var(--lti-navy)' }}>
-              {result.summary.total} question{result.summary.total === 1 ? '' : 's'} detected
+              {questions.length} question{questions.length === 1 ? '' : 's'} detected
             </h3>
-            {result.summary.needs_review > 0 && (
+            {needsReviewCount > 0 && (
               <span className="text-sm text-amber-700 font-medium">
-                {'⚠'} {result.summary.needs_review} need review
+                {'⚠'} {needsReviewCount} need review
               </span>
             )}
             {result.used_ai && (
@@ -380,13 +421,18 @@ export function ImportPage() {
 
           {/* Question preview */}
           <div className="space-y-2.5 max-h-[480px] overflow-y-auto pr-1">
-            {result.questions.map((q) => (
-              <QuestionCard key={q.number} q={q} />
+            {questions.map((q, qi) => (
+              <QuestionCard
+                key={qi}
+                q={q}
+                onSelectOption={(oi) => setCorrectOption(qi, oi)}
+                onSelectTF={(v) => setTrueFalse(qi, v)}
+              />
             ))}
           </div>
 
           {/* Export controls */}
-          {result.questions.length > 0 && (
+          {questions.length > 0 && (
             <div className="mt-5 pt-4 border-t border-slate-100">
               <p className="text-xs font-medium text-slate-500 mb-1.5">Download as</p>
               <div className="flex flex-wrap gap-2 mb-2">
@@ -408,9 +454,9 @@ export function ImportPage() {
               </div>
               <p className="text-xs text-slate-400 mb-3">{fmtMeta.note}.</p>
 
-              {format === 'aiken' && result.exports.aiken_skipped.length > 0 && (
+              {format === 'aiken' && exports && exports.aiken_skipped.length > 0 && (
                 <div className="mb-3 p-2.5 bg-amber-50 border border-amber-200 rounded text-xs text-amber-700">
-                  Aiken can&apos;t hold {result.exports.aiken_skipped.length} of these questions
+                  Aiken can&apos;t hold {exports.aiken_skipped.length} of these questions
                   (short answer, essay, matching, etc.). Use GIFT or XML to include everything.
                 </div>
               )}

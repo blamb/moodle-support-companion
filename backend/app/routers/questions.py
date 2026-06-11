@@ -18,6 +18,7 @@ from ..questions.parser import parse_text
 from ..questions.ai_normalizer import normalize_with_ai, ai_configured
 from ..questions.serializers import serialize_all
 from ..questions.docx_extract import extract_file
+from ..questions.models import question_from_dict
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -32,6 +33,12 @@ class ParseRequest(BaseModel):
     # "rules" — deterministic parser only (free, fully private)
     # "ai"    — send everything to Claude (best for very messy input)
     mode: str = Field("auto", pattern="^(auto|rules|ai)$")
+
+
+class SerializeRequest(BaseModel):
+    # Accepts the question dicts as returned by /parse, after the user has
+    # edited them in the preview (e.g. marked the correct answer).
+    questions: list
 
 
 def _renumber(questions) -> None:
@@ -160,3 +167,25 @@ async def parse_questions(request: ParseRequest):
     payload = result.to_dict()
     payload["exports"] = serialize_all(result.questions)
     return payload
+
+
+@router.post("/questions/serialize")
+async def serialize_questions(request: SerializeRequest):
+    """Re-generate the GIFT/XML/Aiken files from (possibly edited) questions.
+
+    Called when the user fixes a question in the preview — e.g. clicks the
+    correct answer on one the parser couldn't determine — so the downloaded
+    file reflects their corrections.
+    """
+    questions = []
+    for i, d in enumerate(request.questions, start=1):
+        if not isinstance(d, dict):
+            continue
+        q = question_from_dict(d, i)
+        if q is not None:
+            questions.append(q)
+
+    if not questions:
+        raise HTTPException(status_code=400, detail="No valid questions to serialize.")
+
+    return {"exports": serialize_all(questions)}
