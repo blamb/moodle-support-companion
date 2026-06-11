@@ -12,13 +12,18 @@ from fastapi.responses import StreamingResponse, PlainTextResponse
 from pydantic import BaseModel
 
 from ..conversation.service import (
+    append_page_context,
     create_session,
     get_session,
     send_message,
     set_mbz_context,
 )
 from ..conversation.mbz_parser import parse_mbz_file
-from ..conversation.health_checker import check_course_health, format_health_report
+from ..conversation.health_checker import (
+    ai_audit_course,
+    check_course_health,
+    format_health_report,
+)
 from ..conversation.html_page_parser import parse_moodle_html
 
 logger = logging.getLogger(__name__)
@@ -137,6 +142,35 @@ async def upload_mbz(session_id: str, file: UploadFile = File(...)):
             os.unlink(tmp_path)
 
 
+@router.post("/conversation/{session_id}/health-audit")
+async def run_health_audit(session_id: str):
+    """Run an AI audit of the uploaded course structure.
+
+    Goes beyond the instant rule-based checks: Claude reviews the full course
+    context (from the .mbz backup and/or saved pages) for cross-cutting
+    configuration problems — gradebook/completion mismatches, access chains
+    that lock students out, conflicting activity settings.
+    """
+    session = get_session(session_id)
+    if not session:
+        raise HTTPException(status_code=404, detail="Session not found or expired")
+
+    if not session.mbz_context:
+        raise HTTPException(
+            status_code=400,
+            detail="No course context uploaded. Upload a .mbz backup or saved HTML page first.",
+        )
+
+    issues = await ai_audit_course(session.mbz_context)
+    report = format_health_report(issues)
+
+    return {
+        "status": "ok",
+        "issues": [i.to_dict() for i in issues],
+        "report": report,
+    }
+
+
 @router.post("/conversation/{session_id}/screenshot")
 async def upload_screenshot(session_id: str, file: UploadFile = File(...)):
     """Upload a screenshot for the Companion to analyze visually.
@@ -212,11 +246,8 @@ async def upload_html_page(session_id: str, file: UploadFile = File(...)):
         html_text = content.decode("utf-8", errors="replace")
         page_context = parse_moodle_html(html_text)
 
-        # Add the parsed context to the session's mbz_context (append to existing)
-        existing = session.mbz_context
-        separator = "\n\n---\n\n" if existing else ""
-        session.mbz_context = existing + separator + page_context.summary_text
-        session.updated_at = __import__("time").time()
+        # Add the parsed context to the session (appends + persists)
+        append_page_context(session_id, page_context.summary_text)
 
         return {
             "status": "ok",
@@ -293,7 +324,19 @@ Sign off as "Moodle Support — Learning Technology & Innovation, TRU"
             max_tokens=1500,
             messages=[{"role": "user", "content": draft_prompt}],
         )
-        draft_text = response.content[0].text
+
+        # Check stop_reason before reading content — a refusal can return
+        # an empty content array
+        if response.stop_reason == "refusal":
+            raise HTTPException(
+                status_code=502,
+                detail="The model declined to draft this reply. Try adjusting the conversation.",
+            )
+        draft_text = next(
+            (b.text for b in response.content if b.type == "text"), ""
+        )
+        if not draft_text:
+            raise HTTPException(status_code=502, detail="Empty draft returned")
 
         return {
             "draft": draft_text,
@@ -301,6 +344,8 @@ Sign off as "Moodle Support — Learning Technology & Innovation, TRU"
             "tone": request.tone,
         }
 
+    except HTTPException:
+        raise
     except anthropic.APIError as e:
         raise HTTPException(status_code=502, detail=f"API error: {str(e)}")
     except Exception as e:
