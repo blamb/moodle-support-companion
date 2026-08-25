@@ -1,4 +1,7 @@
-"""Parser for Moodle 4.5 official documentation (MediaWiki HTML export)."""
+"""Parser for the official MoodleDocs documentation (MediaWiki HTML export).
+
+The export version is set by MOODLE_VERSION in config; see MOODLE_DOCS_DIR.
+"""
 
 from __future__ import annotations
 
@@ -8,6 +11,7 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
+from ...config import MOODLE_DOCS_BASE_URL
 from ...models.schemas import Document
 
 logger = logging.getLogger(__name__)
@@ -89,8 +93,22 @@ def _extract_url_and_slug(soup: BeautifulSoup, file_path: Path) -> tuple[str | N
         parts = canonical_url.rstrip("/").split("/")
         if parts:
             slug = parts[-1]
+        canonical_url = _pin_url_to_version(canonical_url)
 
     return canonical_url, slug
+
+
+def _pin_url_to_version(url: str) -> str:
+    """Rewrite an unversioned MoodleDocs URL to the configured release.
+
+    The export writes canonical links as https://docs.moodle.org/en/Page, which
+    upstream resolves to the newest release. Technologists following a link
+    should land on the docs for the version TRU is actually running.
+    """
+    unversioned = "https://docs.moodle.org/en/"
+    if url.startswith(unversioned):
+        return f"{MOODLE_DOCS_BASE_URL}/{url[len(unversioned):]}"
+    return url
 
 
 def _extract_categories(soup: BeautifulSoup) -> list[str]:
@@ -150,11 +168,16 @@ def parse_moodle_docs(docs_dir: Path) -> list[Document]:
 
     Recursively scans for .html files, skipping non-content files.
     """
-    documents = []
     html_files = list(docs_dir.rglob("*.html"))
     logger.info(f"Found {len(html_files)} HTML files in {docs_dir}")
 
     skipped = 0
+    duplicates = 0
+    # The export saves the same wiki page under several hashes (once per link
+    # that reached it, including anchor links). Keep the longest copy of each
+    # page so repeated content doesn't crowd out search results.
+    by_page: dict[str, Document] = {}
+
     for file_path in html_files:
         # Skip image directories and resource files
         if "images_en" in str(file_path) or "resources" in str(file_path):
@@ -162,12 +185,34 @@ def parse_moodle_docs(docs_dir: Path) -> list[Document]:
             continue
 
         doc = parse_moodle_html_file(file_path)
-        if doc:
-            documents.append(doc)
-        else:
+        if not doc:
             skipped += 1
+            continue
+
+        key = _page_key(doc)
+        existing = by_page.get(key)
+        if existing is None:
+            by_page[key] = doc
+        else:
+            duplicates += 1
+            if len(doc.text) > len(existing.text):
+                by_page[key] = doc
+
+    documents = list(by_page.values())
 
     logger.info(
-        f"Parsed {len(documents)} Moodle docs, skipped {skipped} files"
+        f"Parsed {len(documents)} Moodle docs, skipped {skipped} files, "
+        f"dropped {duplicates} duplicate copies"
     )
     return documents
+
+
+def _page_key(doc: Document) -> str:
+    """Identity of the underlying wiki page, ignoring anchors.
+
+    Two files are the same page when they share a canonical URL up to the
+    fragment; without a canonical URL, fall back to the title.
+    """
+    if doc.canonical_url:
+        return doc.canonical_url.split("#", 1)[0]
+    return f"title::{doc.title}"

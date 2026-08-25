@@ -33,3 +33,7 @@ Thumbs.db
 
 # Uploads
 data/mbz_uploads/
+
+# Knowledge sources (large local exports, ingested into the vector store)
+moodledocs_en/
+

@@ -9,7 +9,7 @@ This is **not a chatbot**. It's a deliberative diagnostic tool designed for tech
 ## What It Does
 
 - **Diagnostic Conversations** — Guides technologists through structured EXPLORE → DIAGNOSE → RESOLVE phases, prompting follow-up questions before jumping to conclusions
-- **Knowledge Base Search** — Semantic search across Moodle documentation, TRU FAQs, WordPress content, and internal DOCX files using vector embeddings
+- **Knowledge Base Search** — Semantic search across the Moodle 5.2 documentation, TRU FAQs, WordPress content, and internal DOCX files using vector embeddings
 - **Moodle URL Parsing** — Automatically extracts course IDs, module types, and activity IDs from pasted `moodle.tru.ca` URLs
 - **Course Context Upload** — Analyze `.mbz` course backups, screenshots (via Claude vision), or saved HTML pages to understand course configuration
 - **Course Health Checks** — Automated detection of common configuration issues (completion tracking gaps, gradebook problems, naming issues)
@@ -70,18 +70,49 @@ Open **http://localhost:5173** in your browser.
 
 ### Knowledge Base Ingestion
 
-Place your source documents in the `data/` directory:
+Source documents are read from the paths defined in `backend/app/config.py`:
 
-- `data/moodle-html/` — Moodle documentation HTML exports
-- `data/wordpress-xml/` — WordPress WXR XML exports
-- `data/tru-box-xml/` — TRU Box WordPress XML exports
-- `data/faq-docx/` — FAQ documents in DOCX format
+- `moodledocs_en/<version>/en/` — the official MoodleDocs HTML export (looked for
+  next to the repo, in `backend/knowledge_sources/`, and in the parent
+  "Moodle Help" folder, in that order)
+- `olproduction.WordPress.*.xml` — OL Production WordPress export
+- `trubox.WordPress.*.xml` — TRU Box WordPress export
+- `TRU Moodle FAQ.docx` — the FAQ document
 
 Then trigger ingestion:
 
 ```bash
 curl -X POST http://localhost:8000/api/ingest
 ```
+
+Or run the pipeline directly:
+
+```bash
+cd backend && python -m app.ingestion.pipeline
+```
+
+Ingestion resets the vector store and rebuilds it from scratch, so keep a copy
+of `data/chroma_db/` if you need to roll back.
+
+### Upgrading to a new Moodle release
+
+The Moodle version lives in one place — `MOODLE_VERSION` in
+`backend/app/config.py` (overridable with the `MOODLE_VERSION` env var). It
+drives the system prompt, the knowledge-base tool description, the course-health
+auditor, which documentation export gets ingested, and the `docs.moodle.org`
+links handed back to technologists.
+
+To upgrade:
+
+1. Download the MoodleDocs HTML export for the new release and unpack it as
+   `moodledocs_en/<code>/en/` — the code is `major * 100 + minor`, so 5.2 is
+   `502`. (`MOODLE_DOCS_DIR` in the environment overrides the lookup entirely.)
+2. Set `MOODLE_VERSION` to the new release.
+3. Re-run ingestion.
+
+The export stores the same wiki page under several hashes (once per link that
+reached it, anchors included); the parser keeps the longest copy of each page so
+duplicates don't crowd out search results.
 
 ## Project Structure
 
