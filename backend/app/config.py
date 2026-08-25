@@ -82,9 +82,24 @@ def _resolve_moodle_docs_dir() -> Path:
 
 
 MOODLE_DOCS_DIR = _resolve_moodle_docs_dir()
-OL_PRODUCTION_XML = MOODLE_HELP_DIR / "olproduction.WordPress.2026-04-07.xml"
-TRUBOX_XML = MOODLE_HELP_DIR / "trubox.WordPress.2026-04-07.xml"
-TRU_FAQ_DOCX = MOODLE_HELP_DIR / "TRU Moodle FAQ.docx"
+def _resolve_source_file(filename: str) -> Path:
+    """Locate a single knowledge source file.
+
+    Prefers the copy committed under backend/knowledge_sources/ (the one that
+    ships in the container) and falls back to the parent "Moodle Help" folder
+    for local dev. Returns the knowledge_sources path when neither exists so
+    the pipeline logs a clear miss.
+    """
+    for root in (KNOWLEDGE_DIR, MOODLE_HELP_DIR):
+        candidate = root / filename
+        if candidate.is_file():
+            return candidate
+    return KNOWLEDGE_DIR / filename
+
+
+OL_PRODUCTION_XML = _resolve_source_file("olproduction.WordPress.2026-04-07.xml")
+TRUBOX_XML = _resolve_source_file("trubox.WordPress.2026-04-07.xml")
+TRU_FAQ_DOCX = _resolve_source_file("TRU Moodle FAQ.docx")
 
 # Static frontend build (for production serving)
 FRONTEND_DIST = BACKEND_ROOT.parent / "frontend" / "dist"

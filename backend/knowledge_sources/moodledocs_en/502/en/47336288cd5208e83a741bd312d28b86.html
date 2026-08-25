@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Caching - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"166f9668a421d7cd5803ca13","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Caching","wgTitle":"Caching","wgCurRevisionId":154783,"wgRevisionId":154783,"wgArticleId":16470,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Performance"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Caching","wgRelevantArticleId":16470,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Caching">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Caching rootpage-Caching layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhle6inw"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhle6inw" id="igdhle6inw">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Caching" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Caching">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Caching">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Caching">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="47336288cd5208e83a741bd312d28b86.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Caching" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Caching&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Caching&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Caching</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a>  ► <a href="7a58329819b7734d857d3e22b0a64aee.html" title="Performance">Performance</a>  ►  <a class="mw-selflink selflink">Caching</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="7a58329819b7734d857d3e22b0a64aee.html" title="Performance">Performance</a></div>	
+<div class="content">
+<ul><li><a href="d2fef13d731df9445395a9c2e0a9fd89.html" title="Performance recommendations">Performance recommendations</a></li>
+<li><a href="05642fc14b4b5693d5b9f5f1b41457c2.html" title="Performance settings">Performance settings</a></li>
+<li><a href="3b9888b802def8a854abd442a794d782.html" title="Performance overview">Performance overview</a></li>
+<li><a class="mw-selflink selflink">Caching</a></li>
+<li><a href="feb17c47f320c7a15f1a8c7227d5cb24.html" title="Performance FAQ">Performance FAQ</a></li>
+<li><a href="3fd917476a40e649c2b898555d692120.html" title="MUC FAQ">MUC FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p>A cache is a collection of processed data that is kept on hand and re-used to avoid costly repeated database queries.
+</p><p>Moodle 2.4 saw the implementation of MUC, the Moodle Universal Cache. This new system allows certain functions of Moodle (e.g. string fetching) to take advantage of different installed cache services (e.g. files, ram, memcached).
+</p><p>In future versions of Moodle, we will continue expanding the number of Moodle functions that use MUC, which will continue improving performance, but you can already start using it to improve your site.
+</p><p>This is quite a long document, so if you're just looking for what the additional <b>caching</b> options that you can add to Moodle to improve performance are, head down to either Adding Cache Store Instances, or <a href="d2fef13d731df9445395a9c2e0a9fd89.html" title="Performance recommendations">Performance recommendations</a>. If you want to know more about how caching works in Moodle, read on below.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#General_approach_to_performance_testing"><span class="tocnumber">1</span> <span class="toctext">General approach to performance testing</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Cache_configuration_in_Moodle"><span class="tocnumber">2</span> <span class="toctext">Cache configuration in Moodle</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#The_basic_cache_concepts_in_Moodle"><span class="tocnumber">3</span> <span class="toctext">The basic cache concepts in Moodle</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Cache_types"><span class="tocnumber">3.1</span> <span class="toctext">Cache types</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Cache_types_and_multiple-server_systems"><span class="tocnumber">3.1.1</span> <span class="toctext">Cache types and multiple-server systems</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#Cache_backends"><span class="tocnumber">3.2</span> <span class="toctext">Cache backends</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Cache_stores"><span class="tocnumber">3.3</span> <span class="toctext">Cache stores</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Caches:_what_happens_in_code"><span class="tocnumber">3.4</span> <span class="toctext">Caches: what happens in code</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#How_it_ties_together"><span class="tocnumber">3.5</span> <span class="toctext">How it ties together</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Advanced_concepts"><span class="tocnumber">4</span> <span class="toctext">Advanced concepts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Locking"><span class="tocnumber">4.1</span> <span class="toctext">Locking</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Sharing"><span class="tocnumber">4.2</span> <span class="toctext">Sharing</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#The_cache_configuration_screen"><span class="tocnumber">5</span> <span class="toctext">The cache configuration screen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Accessing_the_cache_configuration_screen"><span class="tocnumber">5.1</span> <span class="toctext">Accessing the cache configuration screen</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Installed_cache_stores"><span class="tocnumber">5.2</span> <span class="toctext">Installed cache stores</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Configured_store_instances"><span class="tocnumber">5.3</span> <span class="toctext">Configured store instances</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Known_cache_definitions"><span class="tocnumber">5.4</span> <span class="toctext">Known cache definitions</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Summary_of_cache_lock_instances"><span class="tocnumber">5.5</span> <span class="toctext">Summary of cache lock instances</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Stores_used_when_no_mapping_is_present"><span class="tocnumber">5.6</span> <span class="toctext">Stores used when no mapping is present</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#Adding_cache_store_instances"><span class="tocnumber">6</span> <span class="toctext">Adding cache store instances</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#File_cache"><span class="tocnumber">6.1</span> <span class="toctext">File cache</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Memcached"><span class="tocnumber">6.2</span> <span class="toctext">Memcached</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#MongoDB"><span class="tocnumber">6.3</span> <span class="toctext">MongoDB</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Redis"><span class="tocnumber">6.4</span> <span class="toctext">Redis</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#Mapping_a_cache_to_a_store_instance"><span class="tocnumber">7</span> <span class="toctext">Mapping a cache to a store instance</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#Setting_the_stores_that_get_used_when_no_mapping_is_present"><span class="tocnumber">8</span> <span class="toctext">Setting the stores that get used when no mapping is present</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#Configuring_caching_for_your_site"><span class="tocnumber">9</span> <span class="toctext">Configuring caching for your site</span></a>
+<ul>
+<li class="toclevel-2 tocsection-28"><a href="#More_on_performance_testing"><span class="tocnumber">9.1</span> <span class="toctext">More on performance testing</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Performance_advice_for_load-balanced_web_servers"><span class="tocnumber">9.2</span> <span class="toctext">Performance advice for load-balanced web servers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-30"><a href="#More_information"><span class="tocnumber">10</span> <span class="toctext">More information</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="#See_also"><span class="tocnumber">11</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="General_approach_to_performance_testing">General approach to performance testing</span></h2>
+<p>Here is the general strategy you should be taking:
+</p>
+<ol><li>Build a test environment that is as close to your real production instance as possible (e.g. hardware, software, networking, etc.)</li>
+<li>Make sure to remove as many uncontrolled variables as you can from this environment (e.g. other services)</li>
+<li>Use a tool to place a realistic but simulated and repeatable load upon your server. (e.g. jmeter or selenium).</li>
+<li>Decide on a way to measure the performance of the server by capturing data (ram, load, time taken, etc.)</li>
+<li>Run your load and measure a baseline performance result.</li>
+<li>Change one variable at a time and re-run the load to see if performance gets better or worse. Repeat as necessary.</li>
+<li>When you discover settings that result in consistent performance improvement, apply to your production site.</li></ol>
+<h2><span class="mw-headline" id="Cache_configuration_in_Moodle">Cache configuration in Moodle</span></h2>
+<p>Since Moodle 2.4, Moodle has provided a caching plugin framework to give administrators the ability to control where Moodle stores cached data. For most Moodle sites, the default configuration should be sufficient, and it is not necessary to change the configuration. For larger Moodle sites with multiple servers, administrators may wish to use memcached, mongodb or other systems to store cache data. The cache plugin screen provides administrators with the ability to configure what cache data is stored where.<br>
+Caching in Moodle is controlled by what is known as the Moodle Universal Cache. Commonly referred to as MUC.
+</p><p>This document explains briefly what MUC is before proceeding into detail about the concepts and configuration options it offers.
+</p>
+<h2><span class="mw-headline" id="The_basic_cache_concepts_in_Moodle">The basic cache concepts in Moodle</span></h2>
+<p>Caching in Moodle isn't as complex as it first appears. A little background knowledge will go a long way in understanding how cache configuration works.
+</p>
+<h3><span class="mw-headline" id="Cache_types">Cache types</span></h3>
+<p>Let's start with cache types (sometimes referred to as mode). There are three basic types of caches in Moodle.
+</p><p>The first is the application cache. This is by far the most commonly used cache type in code. All users share its information, and its data persists between requests. Information stored here is usually cached for one of two reasons, either it is required information for the majority of requests and saves us one or more database interactions, or it is information that is accessed less frequently but is resource intensive to generate.<br>
+By default, this information is stored in an organised structure within your Moodle data directory.
+</p><p>The second cache type is the session cache. This is just like the PHP session that you will already be familiar with; it uses the PHP session by default. You may be wondering why we have this cache type at all, but the answer is simple. MUC provides a managed means of storing and removing information that is required between requests. It offers developers a framework to use rather than having to re-invent the wheel and ensures that we have access to a controlled means of managing the cache as required.<br>
+It is important to note that this isn't a frequently used cache type as, by default, session cache data is stored in the PHP session, and the PHP session is stored in the database. Uses of the session cache type are limited to small datasets as we don't want to bloat sessions and thus put a strain on the database.
+</p><p>The third and final type is the request cache. Data stored in this cache type only persists for the lifetime of the request. If you're a PHP developer, think of it like a managed static variable.<br>
+This is by far the least used of the three cache types. Uses are often limited to information that will be accessed several times within the same request, usually by more than an area of code.
+Cached information is stored in memory by default.
+</p>
+<h4><span class="mw-headline" id="Cache_types_and_multiple-server_systems">Cache types and multiple-server systems</span></h4>
+<p>If you have a system with multiple front-end web servers, the application cache must be shared between the servers. In other words, you cannot use fast local storage for the application cache but must use shared storage or some other form of shared cache such as a shared memcached.
+</p><p>The same applies to session cache unless you use a 'sticky sessions' mechanism to ensure that users always access the same front-end server within a session.
+</p>
+<h3><span class="mw-headline" id="Cache_backends">Cache backends</span></h3>
+<p>Cache backends are where data actually gets stored. These include things like the file system, PHP session, Memcached, and memory.<br>
+By default, just file system, PHP session, and memory are used within Moodle.<br>
+We don't require that a site has access to any other systems such a Memcached. Instead, that is something you are responsible for installing and configuring yourself.<br>
+When cache backends are mentioned, think of systems outside of Moodle that can store data. The MongoDB server, the Memcached server and similar "server" applications.
+</p>
+<h3><span class="mw-headline" id="Cache_stores">Cache stores</span></h3>
+<p>Cache stores are a plugin type within Moodle. They facilitate connecting Moodle to the cache backends discussed above. The standard Moodle has the three defaults mentioned above as well as Memcached, MongoDB, <a href="a9f6bd3d4eaafbd0fdc98ef9d25029c8.html" title="APC user cache (APCu)">APC user cache (APCu)</a> and <a href="83650e1458408d473e108837eda43ce6.html" title="Redis cache store">Redis</a>.
+</p><p>You can find other cache store plugins in the <a rel="nofollow" class="external text" href="https://moodle.org/plugins/browse.php?list=category&amp;id=48">plugins database</a>.
+</p><p>The code for these is located within cache/stores in your Moodle directory root.
+</p><p>Within Moodle, you can configure as many cache stores as your architecture requires. If you have several Memcached servers, for instance, you can create a cache store instance for each. By default, Moodle contains three cache store instances that get used when you've made no other configuration.
+</p>
+<ul><li>A file store instance is created, which gets used for all application caches. It stores its data in your moodledata directory.</li>
+<li>A session store instance is created, which gets used for all session caches. It stores its data in the PHP session, which, by default, is stored in your database.</li>
+<li>A static memory store instance is created, which gets used for all request cache types. Data exists in memory for just the lifetime of a request.</li></ul>
+<h3><span class="mw-headline" id="Caches:_what_happens_in_code">Caches: what happens in code</span></h3>
+<p>Caches are created in code and are used by the developer to store data they see a need to cache.<br>
+Let's keep this section nice and short because perhaps you are not a developer. There is one very important point you must know about.<br>
+The developer does not get any say in where the data gets cached. They must specify the following information when creating a cache to use.
+</p>
+<ol><li>The type of cache they require.</li>
+<li>The area of code this cache will belong to (the API, if you will).</li>
+<li>The cache's name, something they make up to describe in one word what the cache stores.</li></ol>
+<p>There are several optional requirements and settings they can specify as well, but don't worry about that at this point.<br>
+The important point is that they can't choose which cache backend to use; they can only choose the type of cache they want from the three detailed above.
+</p>
+<h3><span class="mw-headline" id="How_it_ties_together">How it ties together</span></h3>
+<p>This is best described in relation to roles played in an organisation.
+</p>
+<ol><li>The system administrator installs the cache backends you wish to use. Memcached, XCache, APC and so on.<br>Moodle doesn't know about these; they are outside of Moodle's scope and purely the responsibility of your system administrator.</li>
+<li>The Moodle administrator creates a cache store instance in Moodle for each backend the site will make use of.<br>There can be one or more cache store instances for each backend. Some backends like Memcached have settings to create separated spaces within one backend.</li>
+<li>The developer has created caches in code and is using them to store data.<br>He doesn't know anything about how you will use your caches; he just creates a "cache" and tells Moodle what type it is best for.</li>
+<li>The Moodle administrator creates a mapping between a cache store instance and a cache.<br>That mapping tells Moodle to use the backend you specify to store the data the developer wants cached.</li></ol>
+<p>In addition to that, you can take things further still.
+</p>
+<ul><li>You can map many caches to a single cache store instance.</li>
+<li>You can map multiple cache store instances to a single cache with priority (primary ... final)</li>
+<li>You can map a cache store instance to be the default store used for all caches of a specific type that don't otherwise have specific mappings.</li></ul>
+<p>If this is the first time you are reading about the Moodle Universal Cache, this probably sounds pretty complex but don't worry; it will be discussed in better detail as we work through how to configure the caching in Moodle.
+</p>
+<h2><span class="mw-headline" id="Advanced_concepts">Advanced concepts</span></h2>
+<p>These concepts are things that most sites will not need to know or concern themselves about.
+</p><p>You should only start looking here if you are looking to maximise performance on large sites running over clustered services with shared cache backends or on multi-site architecture again where information is being shared between sites.
+</p>
+<h3><span class="mw-headline" id="Locking">Locking</span></h3>
+<p>The idea of locking is nothing new; it is the process of controlling access to avoid concurrency issues.
+</p><p>MUC has a second type of plugin; a cache lock plugin used when caches require it. To date, no caches have required it. A cache by nature is volatile, and any information that is absolutely mission-critical should be a more permanent data store, likely the database.
+</p><p>Nonetheless, there is a locking system that cache definitions can require within their options, and that will be applied when interacting with a cache store instance.
+</p>
+<h3><span class="mw-headline" id="Sharing">Sharing</span></h3>
+<p>Every bit of data that gets stored within a cache has a calculated unique key associated with it.<br>
+By default, part of that key is the site identifier making any content stored in the cache specific to the site that stored it. For most sites, this is exactly what you want.<br>
+However, it's beneficial to allow multiple sites or somehow linked sites to share cached data in some situations.<br>
+Of course, not all caches can be shared, however some certainly can and by sharing, you can further reduce load and increase performance by maximising resource use.
+</p><p>This is an advanced feature; if you choose to configure sharing, please do so carefully.
+</p><p>To make use of sharing, you need to first configure identical cache store instances in the sites you want to share information, and then on each site, set the sharing for the cache to the same value.
+</p>
+<dl><dt>Sites with the same site ID</dt>
+<dd>This is the default, it allows for sites with the same site ID to share cached information. It is the most restrictive but is going to work for all caches. All other options carry an element of risk in that you have to ensure the cache's information is applicable to all sites that will be accessing it.</dd>
+<dt>Sites running the same version</dt>
+<dd>All sites accessing the backend that have the same Moodle version can share the information this cache has stored in the cache store.</dd>
+<dt>Custom key</dt>
+<dd>For this, you manually enter a key to use for sharing. You must then enter the exact same key into the other sites you want to share information.</dd>
+<dt>Everyone</dt>
+<dd>The cached data is accessible to all other sites accessing the data. This option puts the ball entirely in the Moodle administrators court.</dd></dl>
+<p>For example, if you had several Moodle sites all the same version running on a server with APC installed you could decide to map the language cache to the APC store and configure sharing for all sites running the same version.<br>
+The language cache for sites on the same version is safe to share in many situations, it is used on practically every page, and APC is extremely fast. These three points may result in a nice wee performance boost for your sites.<br>
+It is important to consider with the language cache that by sharing it between sites any language customisations will also be shared.
+</p>
+<h2><span class="mw-headline" id="The_cache_configuration_screen">The cache configuration screen</span></h2>
+<p>The cache configuration screen is your one stop shop for configuring caching in Moodle.<br>
+It gives you an overview of how caching is currently configured for your site and it provides links to all of the actions you can perform to configure caching to your specific needs.
+</p>
+<h3><span class="mw-headline" id="Accessing_the_cache_configuration_screen">Accessing the cache configuration screen</span></h3>
+<figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:cacheadmin29.png" class="mw-file-description"><img src="images_en/thumb/7/70/cacheadmin29.png/3941ada22404c40e255659167deba4aa.png" decoding="async" width="200" height="616" class="mw-file-element" srcset="/502/en/images_en/thumb/7/70/cacheadmin29.png/300px-cacheadmin29.png 1.5x, /502/en/images_en/thumb/7/70/cacheadmin29.png/400px-cacheadmin29.png 2x" data-file-width="840" data-file-height="2588"></a><figcaption>The cache configuration screen</figcaption></figure>
+<p>The cache configuration screen can only be accessed by users with the <i>moodle/site:config</i> capability. By default this is only admins.<br>
+Once logged in the configuration screen can be found in <b>Site Administration &gt; Plugins &gt; Caching &gt; Configuration</b>.
+</p>
+<h3><span class="mw-headline" id="Installed_cache_stores">Installed cache stores</span></h3>
+<figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:ist29.png" class="mw-file-description"><img src="images_en/thumb/e/e1/ist29.png/08ec50940cf642b6c2942eb75cc01384.png" decoding="async" width="500" height="349" class="mw-file-element" srcset="/502/en/images_en/thumb/e/e1/ist29.png/750px-ist29.png 1.5x, /502/en/images_en/e/e1/ist29.png 2x" data-file-width="840" data-file-height="586"></a><figcaption>Installed cache stores screenshot</figcaption></figure>
+<p>This is showing you a list of cache store plugins that you have installed.<br>
+For each plugin you can quickly see whether it is ready to be used (any PHP requirements have been met), how many store instances already exist on this site, the cache types that this store can be used for, what features it supports (advanced) and any actions you can perform relating to this store.
+</p><p>Often the only action available is to create a new store instance.<br>
+Most stores support having multiple instances, however not all as you will see that that the session cache and static request cache do not. For those two stores, it does not make sense to have multiple instances.
+</p>
+<h3><span class="mw-headline" id="Configured_store_instances">Configured store instances</span></h3>
+<figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:csi29.png" class="mw-file-description"><img src="images_en/thumb/3/3d/csi29.png/074c23d399766eb55dad1de709bd528f.png" decoding="async" width="500" height="409" class="mw-file-element" srcset="/502/en/images_en/thumb/3/3d/csi29.png/750px-csi29.png 1.5x, /502/en/images_en/3/3d/csi29.png 2x" data-file-width="845" data-file-height="692"></a><figcaption>Configured store instances screenshot</figcaption></figure>
+<p>Here you get a list of the cache store instances on this site.
+</p>
+<dl><dt><b>Store name</b></dt>
+<dd>The name given to this cache store instance when it is created so that you can recognise it. It can be anything you want and is only used so that you can identify the store instance.</dd>
+<dt><b>Plugin</b></dt>
+<dd>The cache store plugin of which this is an instance of.</dd>
+<dt><b>Ready </b></dt>
+<dd>A tick gets shown when all PHP requirements have been met as well as any connection or set-up requirements have been verified.</dd>
+<dt><b>Store mappings</b></dt>
+<dd>The number of caches this store instance has been mapped to explicitly. Does not include any uses through default mappings (discussed below).</dd>
+<dt><b>Modes</b></dt>
+<dd>The modes that this cache store instance can serve.</dd>
+<dt><b>Supports</b></dt>
+<dd>The features supported by this cache store instance.</dd>
+<dt><b>Locking </b></dt>
+<dd>Locking is a mechanism that restricts access to cached data to one process at a time to prevent the data from being overwritten. The locking method determines how the lock is acquired and checked.</dd>
+<dt><b>Actions</b></dt>
+<dd>Any actions that can be performed against this cache store instance.</dd></dl>
+<h3><span class="mw-headline" id="Known_cache_definitions">Known cache definitions</span></h3>
+<figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:caching-27-04-known-cache-definitions.png" class="mw-file-description"><img src="images_en/thumb/3/36/caching-27-04-known-cache-definitions.png/3a7bbf6f0d2caff1f844c1b401979865.png" decoding="async" width="500" height="725" class="mw-file-element" srcset="/502/en/images_en/thumb/3/36/caching-27-04-known-cache-definitions.png/750px-caching-27-04-known-cache-definitions.png 1.5x, /502/en/images_en/3/36/caching-27-04-known-cache-definitions.png 2x" data-file-width="845" data-file-height="1225"></a><figcaption>Known cache definitions screenshot</figcaption></figure>
+<p>The idea of a cache definition hasn't been discussed here yet. It is something controlled by the developer. When they create a cache they can do so in two ways, the first is by creating a cache definition. This is essentially telling Moodle about the cache they've created. The second way is to create an Ad hoc cache. Developers are always encouraged to use the first method. Only caches with a definition can be mapped and further configured by the admin. Ad hoc caches will make use of default settings only.<br>
+Typically Ad hoc caches are only permitted in situations where the cache is small and configuring it beyond defaults would provide no benefit to administrators. Really it's like saying you the administrator doesn't need to concern yourself with it.
+</p><p>For each cache shown here you get the following information:
+</p>
+<dl><dt><b>Definition</b></dt>
+<dd>A concise description of this cache.</dd>
+<dt><b>Mode</b></dt>
+<dd>The cache type this cache is designed for.</dd>
+<dt><b>Component </b></dt>
+<dd>The code component the cache is associated with.</dd>
+<dt><b>Area</b></dt>
+<dd>The area of code this cache is serving within the component.</dd>
+<dt><b>Store mappings</b></dt>
+<dd>The store or stores that will be used for this cache.</dd>
+<dt><b>Sharing</b></dt>
+<dd>How is sharing configured for this site.</dd>
+<dt><b>Actions</b></dt>
+<dd>Any actions that can be performed on the cache. Typically you can edit the cache store instance mappings, edit sharing, and purge the cache.</dd></dl>
+<p>You'll also find at the bottom of this table a link title "Rescan definitions". Clicking this link will cause Moodle to go off an check all core components, and installed plugins looking for changes in the cache definitions.<br>
+This happens by default during an upgrade, and if a new cache definition is encountered. However, should you find yourself looking for a cache that isn't there this may be worth a try.<br>
+It is also handy for developers as it allows them to quickly apply changes when working with caches. It is useful when tweaking cache definitions to find what works best.
+</p><p>Information on specific cache definitions can be found on the <a href="b8bc1ffe1b94af49cfead3b38492fefb.html" title="Cache definitions">Cache definitions</a> page.
+</p>
+<h3><span class="mw-headline" id="Summary_of_cache_lock_instances">Summary of cache lock instances</span></h3>
+<figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:caching-27-05-summary-of-cache-lock-instances.png" class="mw-file-description"><img src="images_en/thumb/7/78/caching-27-05-summary-of-cache-lock-instances.png/9694a9bf1693fecc3bbc3d3b4bf973e5.png" decoding="async" width="500" height="118" class="mw-file-element" srcset="/502/en/images_en/thumb/7/78/caching-27-05-summary-of-cache-lock-instances.png/750px-caching-27-05-summary-of-cache-lock-instances.png 1.5x, /502/en/images_en/7/78/caching-27-05-summary-of-cache-lock-instances.png 2x" data-file-width="788" data-file-height="186"></a><figcaption>Summary of cache lock instances screenshot</figcaption></figure>
+<p>As mentioned above cache locking is an advanced concept in MUC.<br>
+The table here shows information on the configured locking mechanisms available to MUC. By default, just a single locking mechanism is available, file locking.
+At present, there are no caches that make use of this and as such I won't discuss it further here.
+</p>
+<h3><span class="mw-headline" id="Stores_used_when_no_mapping_is_present">Stores used when no mapping is present</span></h3>
+<figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:caching-27-06-stores-used-when-no-mapping-is-present.png" class="mw-file-description"><img src="images_en/thumb/9/90/caching-27-06-stores-used-when-no-mapping-is-present.png/092a0aa2e33ac6b58588a6d03b121af1.png" decoding="async" width="500" height="170" class="mw-file-element" srcset="/502/en/images_en/thumb/9/90/caching-27-06-stores-used-when-no-mapping-is-present.png/750px-caching-27-06-stores-used-when-no-mapping-is-present.png 1.5x, /502/en/images_en/9/90/caching-27-06-stores-used-when-no-mapping-is-present.png 2x" data-file-width="792" data-file-height="269"></a><figcaption>Mapping of default stores screenshot</figcaption></figure>
+<p>This table quickly shows which cache store instances are going to be used for cache types if there are no specific mappings in place.<br>
+To simplify that, this shows the default cache stores for each type.
+</p><p>At the bottom, you will notice there is a link "Edit mappings" that takes you to a page where you can configure this.
+</p>
+<h2><span class="mw-headline" id="Adding_cache_store_instances">Adding cache store instances</span></h2>
+<p>The default configuration is going to work for all sites, however, you may be able to improve the performance of your sites by making use of various caching backends and techniques. The first thing you will want to do is add cache store instances configured to connect to/use the cache backends you've set up.
+</p>
+<h3><span class="mw-headline" id="File_cache">File cache</span></h3>
+<figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:caching-27-07-add-file-cache-store.png" class="mw-file-description"><img src="images_en/thumb/0/0f/caching-27-07-add-file-cache-store.png/59b1ec785c806bccf5f403e119413c23.png" decoding="async" width="300" height="192" class="mw-file-element" srcset="/502/en/images_en/thumb/0/0f/caching-27-07-add-file-cache-store.png/450px-caching-27-07-add-file-cache-store.png 1.5x, /502/en/images_en/thumb/0/0f/caching-27-07-add-file-cache-store.png/600px-caching-27-07-add-file-cache-store.png 2x" data-file-width="826" data-file-height="528"></a><figcaption>Adding a file cache store screenshot</figcaption></figure>
+<p>When on the cache configuration screen within the <i>Installed cache stores</i> table, you should see the File cache plugin, click <i>`Add instance`</i> to start the process of adding a file cache store instance.
+</p><p>When creating a file cache there is in fact only one required param, the store name. The store name is used to identify the file store instance in the configuration interface and must be unique to the site.
+It can be anything you want, but we would advice making it something that describes your intended use of the file store.
+</p><p>The following properties can also be specified, customising where the file cache will be located, and how it operates.
+</p>
+<dl><dt><b>Cache path</b></dt>
+<dd>Allows you to specify a directory to use when storing cache data on the file system. Of course the user the web server is running as must have read/write access to this directory. By default (blank) the Moodledata directory will be used.</dd>
+<dt><b>Auto create directory</b></dt>
+<dd>If enabled when the cache is initialised if the specified directory does not exist Moodle will create it. If this is specified and the directory does not exist the cache will be deemed not ready and will not be used.</dd>
+<dt><b>Single directory store</b></dt>
+<dd>By default, the file store will create a subdirectory structure to store data in. The first 3 characters of the data key will be used as a directory. This is useful in avoiding file system limits it the file system has a maximum number of files per directory. By enabling this option the file cache will not use subdirectories for storage of data. This leads to a flat structure but one that is more likely to hit file system limits. Use with care.</dd>
+<dt><b>Prescan directory</b></dt>
+<dd>One of the features the file cache provides is to prescan the storage directory when the cache is first used. This leads to faster checks of files at the expense of an in-depth read.</dd></dl>
+<p>The file cache store is the default store used for application caches and by default, the moodledata directory gets used for the cache.
+File access can be a taxing resource in times of increased load and the following are some ideas about configuring alternative file stores in order to improve performance.
+</p><p>First up is there a faster file system available for use on your server.<br>
+Perhaps you have an SSD installed but are not using it for your moodledata directory because space is a premium.<br>
+You should consider creating a directory or small partition on your SSD and creating a file store to use that instead of your Moodle data directory.
+</p><p>Next, you've not got a faster drive available for use, but you do have plenty of free space.<br>
+Something that may be worth giving a shot would be to create a small partition on the drive you've got installed that uses a performance orientated file system.<br>
+Many Linux installations these days, for example, use EXT4, a nice file system but one that has overheads due to the likes of journalling.<br>
+Creating a partition and using a file system that has been optimised for performance may give you that little boost you are looking for. Remember caches are designed to be volatile and choosing a file system for a cache is a different decision to choosing a file system for your server.<br>
+Finally, if you're ready to go to lengths and have an abundance of memory on your server you could consider creating a ramdisk/tmpfs and pointing a file store at that.
+Purely based in memory, it is volatile exactly like the cache is, and file system performance just isn't going to get much better than this.<br>
+Of course, you will be limited in space and you are essentially taking that resource away from your server.
+</p><p>Please remember with all of these ideas that they are just ideas.<br>
+Whatever you choose - test, test, test, be sure of the decision you make.
+</p>
+<h3><span class="mw-headline" id="Memcached">Memcached</span></h3>
+<figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:caching-27-09-add-memcached-store.png" class="mw-file-description"><img src="images_en/thumb/9/97/caching-27-09-add-memcached-store.png/797ed19de01a821dbc640b31781543d0.png" decoding="async" width="300" height="386" class="mw-file-element" srcset="/502/en/images_en/thumb/9/97/caching-27-09-add-memcached-store.png/450px-caching-27-09-add-memcached-store.png 1.5x, /502/en/images_en/thumb/9/97/caching-27-09-add-memcached-store.png/600px-caching-27-09-add-memcached-store.png 2x" data-file-width="827" data-file-height="1064"></a><figcaption>Add Memcached store screenshot</figcaption></figure>
+<p>You must first have a <a rel="nofollow" class="external text" href="d2fef13d731df9445395a9c2e0a9fd89.html#MemCached">Memcached server</a> you can access and have the <a rel="nofollow" class="external text" href="d2fef13d731df9445395a9c2e0a9fd89.html#MemCached">Memcached PHP extension</a> installed and enabled on your server.
+</p><p>There are two required parameters in configuring a Memcached store.
+</p>
+<dl><dt><b>Store name</b></dt>
+<dd>It is used to identify the store instance in the configuration interface and must be unique to the site.</dd>
+<dt><b>Servers</b></dt>
+<dd>The servers you wish this cache store use. See below for details.</dd></dl>
+<p>Servers should be added one per line and each line can contain 1 to 3 properties separated by colons.
+</p>
+<ol><li>The URL or IP address of the server (required)</li>
+<li>The port the server is listening on (optional)</li>
+<li>The weight to give this server (optional)</li></ol>
+<p>For example, if you had two Memcached instances running on your server, one configured for the default port, and one configured for 11212 you would use the following:
+<code>
+127.0.0.1
+127.0.0.1:11212
+</code>
+</p><p>There are also several optional parameters you can set when creating a Memcached store.
+</p>
+<dl><dt><b>Use compression</b></dt>
+<dd>Defaults to true, but can be disabled if you wish.</dd>
+<dt><b>Use serialiser</b></dt>
+<dd>Allows you to select which serialiser gets used when communicating with the Memcached server. By default the Memcached extension and PHP only provide one serialised, however, there is a couple of others available for installation if you go looking for them. One, for example, is the igbinary found at <a rel="nofollow" class="external free" href="https://github.com/igbinary/igbinary">https://github.com/igbinary/igbinary</a>.</dd>
+<dt><b>Prefix key</b></dt>
+<dd>Allows you to set some characters that will be prefixed to all keys before interacting with the server.</dd>
+<dt><b>Hash method</b></dt>
+<dd>The hash method provided by the Memcached extension is used by default here. However, you can select to use an alternative if you wish. <a rel="nofollow" class="external free" href="http://www.php.net/manual/en/memcached.constants.php">http://www.php.net/manual/en/memcached.constants.php</a> provides little information on the options available. Please note if you wish to you can also override the default hash function PHP uses within your php.ini.</dd>
+<dt><b>Buffer writes </b></dt>
+<dd>Disabled by default, and for good reason. Turning on buffered writes will minimise interaction with the Memcached server by buffering io operations. The downside to this is that there is a good chance multiple requests will end up generating the data on a system with any concurrency because no one had pushed it to the Memcached server when they first requested it. Enabling this can be advantageous for caches that are only accessed in capability-controlled areas, for example, where multiple interactions take a toll on network resources. But that is definitely on the extreme tweaking end of the scale.</dd></dl>
+<p><b>Important implementation notes</b>
+</p>
+<ul><li>The Memcached extension does not provide a means of deleting a set or entries. Either a single entry is deleted, or all entries are deleted.</li></ul>
+<p>Because of this, it is important to note that when you purge a Memcached store within Moodle it deletes ALL entries in the Memcached server. Not just those relating to Moodle.<br>
+For that reason, it is highly recommended to use dedicated Memcached servers and to <b>NOT</b> configure any other software to use the same servers. Doing so may lead to performance depreciation and adverse effects.
+</p>
+<ul><li>Likewise if you want to use Memcached for caching and for sessions in Moodle it is essential to use two Memcached servers. One for sessions, and one for caching. Otherwise, a cache purge in Moodle will purge your sessions!</li></ul>
+<h3><span class="mw-headline" id="MongoDB">MongoDB</span></h3>
+<figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:caching-27-10-add-mongodb-store.png" class="mw-file-description"><img src="images_en/thumb/a/ac/caching-27-10-add-mongodb-store.png/45a37e16493a236fc4073cbf2c1a4a90.png" decoding="async" width="300" height="207" class="mw-file-element" srcset="/502/en/images_en/thumb/a/ac/caching-27-10-add-mongodb-store.png/450px-caching-27-10-add-mongodb-store.png 1.5x, /502/en/images_en/thumb/a/ac/caching-27-10-add-mongodb-store.png/600px-caching-27-10-add-mongodb-store.png 2x" data-file-width="827" data-file-height="571"></a><figcaption>Add MongoDB store screenshot</figcaption></figure>
+<p>MongoDB is an open source document orientated NoSQL database. Check out their website www.mongodb.org for more information.
+</p>
+<dl><dt><b>Store name</b></dt>
+<dd>Used to identify the store instance in the configuration interface and must be unique to the site.</dd>
+<dt><b>Server </b></dt>
+<dd>This is the connection string for the server you want to use. Multiple servers can be specified using a comma-separated list.</dd>
+<dt><b>Database </b></dt>
+<dd>The name of the database to make use of.</dd>
+<dt><b>Username</b></dt>
+<dd>The username to use when making a connection.</dd>
+<dt><b>Password </b></dt>
+<dd>The password of the user being used for the connection.</dd>
+<dt><b>Replica set </b></dt>
+<dd>The name of the replica set to connect to. If this is given the master will be determined by using the ismaster database command on the seeds, so the driver may end up connecting to a server that was not even listed.</dd>
+<dt><b>Use</b></dt>
+<dd>If enabled the usesafe option will be used during insert, get, and remove operations. If you've specified a replica set this will be forced on anyway.</dd>
+<dt><b>Use safe value</b></dt>
+<dd>You can choose to provide a specific value for use safe. This will determine the number of servers that operations must be completed on before they are deemed to have been completed.</dd>
+<dt><b>Use extended keys</b></dt>
+<dd>If enabled full key sets will be used when working with the plugin. This isn't used internally yet but would allow you to easily search and investigate the MongoDB plugin manually if you so choose. Turning this on will add a small overhead so should only be done if you require it.</dd></dl>
+<h3><span class="mw-headline" id="Redis">Redis</span></h3>
+<p>Redis is described as "The open source, in-memory data store used by millions of developers as a database, cache, streaming engine, and message broker." by the people who make it. It's an excellent caching option that can be used to store the Application and Session Caches. More info can be found on their site: <a rel="nofollow" class="external free" href="https://redis.io/">https://redis.io</a>, or if you're looking for installation instructions and more information about how it interacts with Moodle specifically, head to this wiki page: <a href="83650e1458408d473e108837eda43ce6.html" title="Redis cache store">Redis cache store</a>.
+</p>
+<h2><span class="mw-headline" id="Mapping_a_cache_to_a_store_instance">Mapping a cache to a store instance</span></h2>
+<figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:caching-27-11-store-mapping.png" class="mw-file-description"><img src="images_en/thumb/3/31/caching-27-11-store-mapping.png/b6cbf7cb98ae957eebec1f412898c1d2.png" decoding="async" width="300" height="106" class="mw-file-element" srcset="/502/en/images_en/thumb/3/31/caching-27-11-store-mapping.png/450px-caching-27-11-store-mapping.png 1.5x, /502/en/images_en/thumb/3/31/caching-27-11-store-mapping.png/600px-caching-27-11-store-mapping.png 2x" data-file-width="1111" data-file-height="391"></a><figcaption>Cache definition store mapping screenshot</figcaption></figure>
+<p>Mapping a store instance to a cache tells Moodle to use that store instance when the cache is interacted with. This allows the Moodle administrator to control where information gets stored and, most importantly, optimise your site's performance by making the most of the resources available to your site.
+</p><p>To set a mapping first browse to the cache configuration screen.<br>
+Proceed to find the <i>Known cache definitions</i> table and within it find the cache you'd like to map.
+In the actions column select the link for <b>Edit mappings</b>.
+</p><p>The screen you are presented allows you to map one or more cache store instances to be used by this cache.<br>
+You are presented with several drop-downs that allow you to map one or more cached. All mapped caches get interacted with. The "Primary" store is the store that will be used first when interacting with the cache.
+The "Final" mapped store will be the last cache store interacted with.<br>
+How this interaction occurs is documented below.
+</p><p>If no stores are mapped for the cache then the default stores are used. Have a look at the section below for information on changing the default stores.
+</p><p>If a single store instance is mapped to the cache the following occurs:
+</p>
+<dl><dt><i>Getting data from the cache</i></dt>
+<dd>Moodle asks the cache to get the data. The cache attempts to get it from the store. If the store has it, it gives it to the cache, and the cache gives it to Moodle so that it can use the data. If the store doesn't have it, then fail is returned and Moodle will have to generate the data and will most likely then send it to the cache.</dd>
+<dt><i>Storing data in the cache</i></dt>
+<dd>Moodle will ask the cache to store some data, and the cache will give it to the cache store.</dd></dl>
+<p>If multiple store instances are mapped to the cache the following occurs:
+</p>
+<dl><dt><i>Getting data from a store</i></dt>
+<dd>Moodle asks the cache to get the data. The cache attempts to get it from the first store. If the first store has it then it returns the data to the cache and the cache returns it to Moodle. If the first store doesn't have the data then it attempts to get the data from the second store. If the second store has it is returns it to the first store that then stores it itself before returning it to the cache. If it doesn't then the next store is used. This continues until either the data is found or there are no more stores to check.</dd>
+<dt><i>Storing data in the cache</i></dt>
+<dd>Moodle will ask the cache to store some data, the cache will give it to every mapped cache store for storage.</dd></dl>
+<p>The main advantage of assigning multiple stores is that you can introduce cache redundancy. Of course, this introduces an overhead so it should only be used when actually required.
+The following is an example of when mapping multiple stores can provide an advantage:
+</p>
+<pre>Scenario:
+You have a web server that has a Moodle site as well as other sites.
+You also have a Memcached server that is used by several sites including Moodle.
+
+Memcached has a limited size cache, that when full and requested to store more information frees space by dropping the least used cache entries.
+
+You want to use Memcached for your Moodle site because it is fast, however, you are aware that it may introduce more cache misses because it is a heavily used Memcached server.
+
+Solution:
+To get around this you map two stores to caches you wish to use Memcached.
+You make Memcached the primary store, and you make the default file store the final cache store.
+
+Explanation:
+By doing this you've created redundancy; when something is requested, Moodle first tries to get it from Memcached (the fastest store) and if it is not there it proceeds to check the file cache.
+</pre>
+<p>Just a couple more points of interest:
+</p>
+<ul><li>Mapping multiple caches will introduce overhead, the more caches mapped the more overhead.</li>
+<li>Consider the cache stores you are mapping to, if data remains there once set then there is no point mapping any further stores after it. This technique is primarily valuable in situations where data is not guaranteed to remain after being set.</li>
+<li>Always test your configuration. Enable the display of performance information and then watch which stores get used when interacting with Moodle in such a way as to trigger the cache.</li></ul>
+<h2><span class="mw-headline" id="Setting_the_stores_that_get_used_when_no_mapping_is_present">Setting the stores that get used when no mapping is present</span></h2>
+<figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:caching-27-12-default-store-mapping.png" class="mw-file-description"><img src="images_en/thumb/3/34/caching-27-12-default-store-mapping.png/ccaa08916fe4727db500b0f283fbc6e9.png" decoding="async" width="300" height="114" class="mw-file-element" srcset="/502/en/images_en/thumb/3/34/caching-27-12-default-store-mapping.png/450px-caching-27-12-default-store-mapping.png 1.5x, /502/en/images_en/thumb/3/34/caching-27-12-default-store-mapping.png/600px-caching-27-12-default-store-mapping.png 2x" data-file-width="824" data-file-height="314"></a><figcaption>Setting which stores get used when no mapping is present screenshot</figcaption></figure>
+<p>This is really setting the default stores that get used for a cache type when there is not a specific mapping that has been made for it.
+</p><p>To set a mapping first browse to the cache configuration screen.<br>
+Proceed to find the <i>Stores used when no mapping is present</i> table.<br>
+After the table you will find a link <b>Edit mappings</b>, click this.
+</p><p>On the screen you are presented with you can select one store for each cache type to use when a cache of the corresponding type gets initialised and there is not an explicit mapping for it.
+</p><p>Note that on this interface the drop downs only contain store instances that are suitable for mapping to the type.
+Not all instances will necessarily be shown. If you have a store instance you don't see then it is not suitable for <b>ALL</b> the cache definitions that exist.<br>
+You will not be able to make that store instance the default, you will instead need to map it explicitly to each cache you want/can use it for.
+</p>
+<h2><span class="mw-headline" id="Configuring_caching_for_your_site">Configuring caching for your site</span></h2>
+<p>This is where it really gets tricky, and unfortunately, there is no step-by-step guide to this.
+</p><p>How caching can be best configured for a site comes down entirely to the site in question and the resources available to it.
+</p><p>What can be offered are some tips and tricks to get you thinking about things and to perhaps introduce ideas that will help you along the way.
+</p><p>If you are reading this document and you've learnt a thing or two about configuring caching on your site share your learnings by adding to the points here.
+</p>
+<ul><li>Plan it. It's a complex thing. Understand your site, understand your system, and really think how users will be using it all.</li>
+<li>If you've got a small site the gains aren't likely to be significant, if you've got a large site getting this right can lead to a substantial boost in performance.</li>
+<li>When looking at cache backends really research the advantages and disadvantages of each. Keep your site in mind when thinking about them. Depending upon your site you may find that no one cache backend is going to meet the entire needs of your site and that you will benefit from having a couple of backends at your disposal.</li>
+<li>Things aren't usually as simple as installing a cache backend and then using it. Pay attention to configuration and try to optimise it for your system. Test it separately and have an understanding of its performance before telling Moodle about it. The cache allows you to shift load off the database and reduce page request processing.<br>If for instance you have Memcached installed but your connection has not been optimised for it you may well find yourself in a losing situation before you even tell Moodle about the Memcached server.</li>
+<li>When considering your default store instances keep in mind that they must operate with data sets of varying sizes and frequency. For a large site really your best bet is to look at each cache definition and map it to a store that is best suited for the data it includes and the frequency of access.<br>Cache definitions have been documented <a href="b8bc1ffe1b94af49cfead3b38492fefb.html" title="Cache definitions">Cache definitions</a>.</li>
+<li>Again when mapping store instances to caches really think about the cache you are mapping and make a decision based upon what you understand of your site and what you know about the cache.<br>Cache definitions have been documented <a href="b8bc1ffe1b94af49cfead3b38492fefb.html" title="Cache definitions">Cache definitions</a>.</li>
+<li>Test your configuration. If you can stress test it even better! If you turn on performance information Moodle will also print cache access information at the bottom of the screen. You can use this to visually check the cache is being used as you expect, and it will give you an indication of where misses etc. are occurring.</li>
+<li>Keep an eye on your backend. Moodle doesn't provide a means of monitoring a cache backend and that is certainly something you should keep an eye on. Memcached for instance drops least used data when full to make room for new entries. APC, on the other hand, stops accepting data when full. Both will impact your performance if full and you're going to encounter misses. However APC when full is horrible, but it is much faster.</li></ul>
+<h3><span class="mw-headline" id="More_on_performance_testing">More on performance testing</span></h3>
+<p>Two links that might be useful to anyone considering testing performance on their own servers:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://www.iteachwithmoodle.com/2012/10/12/moodle-performance-testing-how-much-more-horsepower-do-each-new-versions-of-moodle-require/">Moodle performance testing: how much more horsepower do each new versions of Moodle require?</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.iteachwithmoodle.com/2012/10/11/how-to-stress-test-your-moodle-server-using-loadstorm/">How to load test your Moodle server using Loadstorm</a></li></ul>
+<h3><span class="mw-headline" id="Performance_advice_for_load-balanced_web_servers">Performance advice for load-balanced web servers</span></h3>
+<ol><li>In Moodle 2.4 onwards with load-balanced web servers, don't use the default caching option that stores the data in moodledata on a shared network drive. Use memcached instead. See Tim Hunt's article on <a rel="nofollow" class="external free" href="http://tjhunt.blogspot.de/2013/05/performance-testing-moodle.html">http://tjhunt.blogspot.de/2013/05/performance-testing-moodle.html</a></li>
+<li>In Moodle 2.6 onwards make sure you set $CFG-&gt;localcachedir to some local directory in config.php (for each node). This will speed up some of the disk caching that happens outside of MUC, such as themes, JavaScript, libraries etc.</li></ol>
+<h2><span class="mw-headline" id="More_information">More information</span></h2>
+<p>Cache related forum discussions that may help in understanding MUC:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=217195">MUC is here, now what?</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=226123">Status of MUC?</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=222250">Putting cachedir on local disks in cluster</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=232122">moodle cachestore_file</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=378416#p1526130">Why using a not-completely-shared application cache will fail</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=240971#p1117097">Some Cache / MUC questions</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/dev/images_dev/2/29/Caching_Moodle_at_Scale.pdf">Moodle Caching at Scale</a></li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="b8bc1ffe1b94af49cfead3b38492fefb.html" title="Cache definitions">Cache definitions</a></li>
+<li><a href="3e8d47205b9c1d9f89350985f737fdc1.html" title="Cache usage">Cache usage</a></li>
+<li><a href="3fd917476a40e649c2b898555d692120.html" title="MUC FAQ">MUC FAQ</a></li>
+<li><a href="83650e1458408d473e108837eda43ce6.html" title="Redis cache store">Redis cache store</a></li>
+<li><a href="d2fef13d731df9445395a9c2e0a9fd89.html" title="Performance recommendations">Performance recommendations</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260823010306
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.053 seconds
+Real time usage: 0.372 seconds
+Preprocessor visited node count: 170/1000000
+Post&#8208;expand include size: 408/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 887/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.452      1 Template:Performance
+100.00%    4.452      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:16470-0!canonical and timestamp 20260823010306 and revision id 154783. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Caching&amp;oldid=154783">https://docs.moodle.org/502/en/index.php?title=Caching&amp;oldid=154783</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="b2af25392fa4f78dbbfc102122d1af22.html" title="Category:Performance">Performance</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhle6li0">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhle6lwd"></button>
+					<div class="collapse navbar-collapse igdhle6lwd" id="igdhle6lwd">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Caching" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Caching" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Caching&amp;oldid=154783" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Caching&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Caching" title="Caching – Deutsch" lang="de" hreflang="de" data-title="Caching" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Cacheando" title="Cacheando – español" lang="es" hreflang="es" data-title="Cacheando" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Mettre_en_cache" title="Mettre en cache – français" lang="fr" hreflang="fr" data-title="Mettre en cache" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/キャッシング" title="キャッシング – 日本語" lang="ja" hreflang="ja" data-title="キャッシング" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 28 November 2025, at 13:12.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":713,"wgPageParseReport":{"limitreport":{"cputime":"0.053","walltime":"0.372","ppvisitednodes":{"value":170,"limit":1000000},"postexpandincludesize":{"value":408,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":887,"limit":5000000},"timingprofile":["100.00%    4.452      1 Template:Performance","100.00%    4.452      1 -total"]},"cachereport":{"timestamp":"20260823010306","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

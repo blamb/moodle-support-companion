@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Moderator guide - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"786ae7669b56e5a87a2279b1","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Moderator_guide","wgTitle":"Moderator guide","wgCurRevisionId":141764,"wgRevisionId":141764,"wgArticleId":21281,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Plugin"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Moderator_guide","wgRelevantArticleId":21281,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Moderator_guide">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Moderator_guide rootpage-Moderator_guide layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdj2as9na"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdj2as9na" id="igdj2as9na">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Moderator+guide" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Moderator_guide">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Moderator_guide">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Moderator_guide">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="5bba3ee7b6c44a6185f238e8445a47ef.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Moderator_guide&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moderator_guide&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moderator_guide&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Moderator guide</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock">
+<table class="infobox">
+
+<tbody><tr>
+<th><b><a class="mw-selflink selflink">Moderator guide</a></b>
+</th></tr>
+<tr>
+<td>Type
+</td>
+<td>Block, Moderator guide
+</td></tr>
+<tr>
+<td>Set
+</td>
+<td>N/A
+</td></tr>
+<tr>
+<td>Downloads
+</td>
+<td><a rel="nofollow" class="external free" href="https://moodle.org/plugins/block_moderator_guide">https://moodle.org/plugins/block_moderator_guide</a>
+</td></tr>
+<tr>
+<td>Issues
+</td>
+<td><a rel="nofollow" class="external free" href="https://bitbucket.org/covuni/moodle-block_moderator_guide/issues?status=new&amp;status=open">https://bitbucket.org/covuni/moodle-block_moderator_guide/issues?status=new&amp;status=open</a>
+</td></tr>
+<tr>
+<td>Discussion
+</td>
+<td><a rel="nofollow" class="external free" href="https://moodle.org/plugins/block_moderator_guide">https://moodle.org/plugins/block_moderator_guide</a>
+</td></tr>
+<tr>
+<td>Maintainer(s)
+</td>
+<td><a href="https://docs.moodle.org/502/en/User:Jérôme_Mouneyrac"><bdi>Jérôme Mouneyrac</bdi></a>
+</td></tr>
+</tbody></table>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Iintroduction"><span class="tocnumber">1</span> <span class="toctext">Iintroduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Moodle_Administrator"><span class="tocnumber">2</span> <span class="toctext">Moodle Administrator</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Download"><span class="tocnumber">3</span> <span class="toctext">Download</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Installation"><span class="tocnumber">3.1</span> <span class="toctext">Installation</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Block_setup"><span class="tocnumber">3.2</span> <span class="toctext">Block setup</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Create_a_template"><span class="tocnumber">3.3</span> <span class="toctext">Create a template</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Placeholder_types"><span class="tocnumber">3.4</span> <span class="toctext">Placeholder types</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Preview_a_template"><span class="tocnumber">3.5</span> <span class="toctext">Preview a template</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Hide_/_Show_a_template"><span class="tocnumber">3.6</span> <span class="toctext">Hide / Show a template</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Access_the_template_guides"><span class="tocnumber">3.7</span> <span class="toctext">Access the template guides</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Edit_a_template"><span class="tocnumber">3.8</span> <span class="toctext">Edit a template</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Delete_a_template"><span class="tocnumber">3.9</span> <span class="toctext">Delete a template</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Add_/_Edit_/_Delete_guides"><span class="tocnumber">3.10</span> <span class="toctext">Add / Edit / Delete guides</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Restricting_access_per_organization"><span class="tocnumber">4</span> <span class="toctext">Restricting access per organization</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Teachers"><span class="tocnumber">5</span> <span class="toctext">Teachers</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#Create_a_guide"><span class="tocnumber">5.1</span> <span class="toctext">Create a guide</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Update_a_guide"><span class="tocnumber">5.2</span> <span class="toctext">Update a guide</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Delete_a_guide"><span class="tocnumber">5.3</span> <span class="toctext">Delete a guide</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Hide_/_Show_a_guide"><span class="tocnumber">5.4</span> <span class="toctext">Hide / Show a guide</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#External_teachers"><span class="tocnumber">6</span> <span class="toctext">External teachers</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Students"><span class="tocnumber">7</span> <span class="toctext">Students</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Demo"><span class="tocnumber">8</span> <span class="toctext">Demo</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#License"><span class="tocnumber">9</span> <span class="toctext">License</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Iintroduction">Iintroduction</span></h2>
+<ul><li>This block displays guides for external teachers/graders.</li>
+<li>These guides are created by teachers and are based on templates created by administrators.</li>
+<li>The template creation system allows the generation of Moodle forms containing textarea, file uploader and links.</li></ul>
+<p><b>Sometimes an institution uses a Moodle site to run exams and they contract external teachers to grade the students. To help the external teachers conform with the institution grading rules, the institution provides the external teachers access to a course guide on how to grade. The Moderator Guide block allows the creation of guides for external teachers.</b>
+</p><p>It is the responsibility of each main course teacher to create a course guide for the external teachers. However, a main teacher cannot create his own "free style" guide, he needs to follow a template created by the Moodle administrator. The block template creator allows administrators to create templates using placeholders for text area, file manager and links (a placeholder is like a Wordpress shortcode).
+</p><p>On another hand, a Moodle site is sometimes used to manage multiple educational organizations. The Moderator Guide block allows administrators to restrict access to the templates and guides as needed.
+</p>
+<h2><span class="mw-headline" id="Moodle_Administrator">Moodle Administrator</span></h2>
+<p>The administrator role is to <a href="b8a47099f49d74586081af402e096238.html" title="Installing plugins">install the block</a>, set up the block in Moodle and provide the teachers with guide templates.
+</p>
+<h2><span class="mw-headline" id="Download">Download</span></h2>
+<p>From the <a rel="nofollow" class="external text" href="https://moodle.org/plugins/block_moderator_guide">Moodle plugins database</a>.
+</p>
+<h3><span class="mw-headline" id="Installation">Installation</span></h3>
+<p>install the plugin files in a blocks/moderator_guide folder.
+</p>
+<h3><span class="mw-headline" id="Block_setup">Block setup</span></h3>
+<p>The goal of this block is to be displayed on all course main pages.
+</p><p>In order to achieve this result you need to add the block on the Moodle front page. Edit the block and select display this block through the entire site. Then go to a course page, edit the block and select display on course main pages only. You can also change the name of the block in the same page.
+</p>
+<h3><span class="mw-headline" id="Create_a_template">Create a template</span></h3>
+<p>The teachers cannot create a guide if you don't provide them a guide template.
+</p><p><br>
+Go to Site Administration &gt; Plugins &gt; Blocks &gt; Moderator Guide &gt; Manage templates
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Block_Moderator_guide_Manage_template.PNG" class="mw-file-description"><img src="images_en/4/40/f70c221695359e5caaa6c39703dd7809.png" decoding="async" width="1218" height="668" class="mw-file-element" data-file-width="1218" data-file-height="668"></a></span>
+</p><p>Click on Add template
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Block_Moderator_guide_Add_template.PNG" class="mw-file-description"><img src="images_en/9/9d/ea11eeeca41d2b669749ed0c5490f27a.png" decoding="async" width="1229" height="924" class="mw-file-element" data-file-width="1229" data-file-height="924"></a></span>
+</p><p><br>
+Enter the following:
+</p>
+<ul><li>template name: when creating a guide, the teacher must select a template so you need to give it a name)</li>
+<li>default guide name: it will prefilled the Guide name when a teacher creates a guide. The teacher still can change the guide name</li>
+<li>organization: you can restrict the visibility of a template (and the guide based on this template) per organisation. See the section about organization</li>
+<li>description: some notes about the template, only seen by other administrator when they edit a template</li>
+<li>template: this is the guide template. All text and images you enter will be displayed in the guide created by the teachers. The teachers won't be able to edit the text and image you enter this way. To allow teachers to enter text and image when they create a guide, you must type an editor placeholder</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Placeholder_types">Placeholder types</span></h3>
+<p>The templates allow you to enter placeholders. When the guide creation form is display to a teacher, these placeholders are replaced by respective form elements (input text, input link, input files).
+</p>
+<ul><li>[X:files]&nbsp;: the teacher will be asked to add files in a Moodle file manager.</li>
+<li>[X:html]&nbsp;: the teacher will be asked to enter text and images in the Moodle HTML editor.</li>
+<li>[X:html:BEGIN] some default HTML [X:html:END]&nbsp;: the teacher will be asked to enter text and images in the Moodle HTML editor. You can pre-fill this editor with some default text and images.</li>
+<li>[X:link]&nbsp;: the teacher will be asked to enter a web page link.</li></ul>
+<p>In the placeholder syntax, X must be an integer and it should be unique for each placeholder (apart from [X:html:BEGIN] and [X:html:END] which share the same X value.). X is an identifier used internally by the code - it has no use for you but it is required otherwise the block will not properly display the guides.
+</p>
+<h3><span class="mw-headline" id="Preview_a_template">Preview a template</span></h3>
+<p>Once a template has been created you can preview the guide creation page when the teacher selects this template. Click on the Preview link.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Block_Moderator_guide_preview.PNG" class="mw-file-description"><img src="images_en/b/b2/2e8b04c1f66cbb226ebb90f4b7f741af.png" decoding="async" width="1228" height="911" class="mw-file-element" data-file-width="1228" data-file-height="911"></a></span>
+</p>
+<h3><span id="Hide_.2F_Show_a_template"></span><span class="mw-headline" id="Hide_/_Show_a_template">Hide / Show a template</span></h3>
+<p>When a template is hidden no teacher can create a new guide using this template. However hidden a template has no impact on the visibility of guides based on this template (guide visibility can be changed in the Manage guides pages). When a template is shown then teachers can use it to create new guides. Click on Hide / Show in the Manage templates page.
+</p>
+<h3><span class="mw-headline" id="Access_the_template_guides">Access the template guides</span></h3>
+<p>If guides have been created using a template, you can access all guides of this template clicking on the respective Guides link.
+</p>
+<h3><span class="mw-headline" id="Edit_a_template">Edit a template</span></h3>
+<p>Editing a template is similar to adding a template. Note that if at least one guide has been created using a template then you can not edit the template field (but you can still edit the name, default name, description and organization). Click on Edit in the Manage templates page.
+</p>
+<h3><span class="mw-headline" id="Delete_a_template">Delete a template</span></h3>
+<p>You can delete a template. If you do it, then all guides created with this template will be deleted too. Click on Delete in the Manage templates page.
+</p>
+<h3><span id="Add_.2F_Edit_.2F_Delete_guides"></span><span class="mw-headline" id="Add_/_Edit_/_Delete_guides">Add / Edit / Delete guides</span></h3>
+<p>Managing guides as an administrator is similar to managing guides as teacher. Go to the teacher section for more information.
+</p>
+<h2><span class="mw-headline" id="Restricting_access_per_organization">Restricting access per organization</span></h2>
+<p>If your Moodle site is used to manage multiple organizations it is possible to restrict access to template and guides to a specific organization.
+</p>
+<ol><li>Create a new user profile field (see the Moodledocs documentation on how to create a profile fields). For our example, call the profile field shortname &ldquo;faculty&rdquo;</li>
+<li>Set the &ldquo;faculty&rdquo; profile field to the users you want to restrict the access (For example, it could be &ldquo;Faculty of Science&rdquo;)</li>
+<li>Go to Site Administration &gt; Plugins &gt; Blocks &gt; Moderator Guide</li>
+<li>Type &ldquo;faculty&rdquo; is the organization field (it must be a profile field shortname).</li>
+<li>Go to Site Administration &gt; Plugins &gt; Blocks &gt; Moderator Guide &gt; Manage templates</li>
+<li>Edit all templates you want to restrict to one specific faculty. In the organisation field enter the faculty (for example &ldquo;Faculty of Science&rdquo;)</li></ol>
+<p><br>
+From this point you have restricted access per organization.
+</p><p>It has the following impact:
+</p>
+<ul><li>when the teacher profile field is empty (i.e. the teacher &ldquo;Faculty&rdquo; profile field is empty), the teacher can create guides based on any templates.</li>
+<li>when the external teacher profile field is empty, the external teacher can see any guide.</li>
+<li>when a template has no organization, all teachers can create a guide based on this template and the guide can be viewed by external teachers.</li>
+<li>when the template organization matches the teacher profile field (i.e. the teacher &ldquo;Faculty&rdquo; profile field is equal to &ldquo;Faculty of Science&rdquo;), the teacher can create guides based on this specific template.</li>
+<li>when the template organization matches the external teacher profile field, the external teacher can see the guide based on this specific template.</li>
+<li>in all other cases, the teachers cannot create a guide and the guides can not be viewed by external teachers.</li></ul>
+<h2><span class="mw-headline" id="Teachers">Teachers</span></h2>
+<p>As a Teacher your role is to create a Guide for the external teachers.
+</p>
+<h3><span class="mw-headline" id="Create_a_guide">Create a guide</span></h3>
+<p>Go to a course.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Block_Moderator_guide_coursemainpage.PNG" class="mw-file-description"><img src="images_en/e/e1/aca21a681b54e5ccbe98fe95579a44ca.png" decoding="async" width="1223" height="356" class="mw-file-element" data-file-width="1223" data-file-height="356"></a></span>
+</p><p>In the Moderator Guide block, click on Manage guides.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Block_Moderator_guide_manageguides.PNG" class="mw-file-description"><img src="images_en/0/06/1b325fc7584c901d0a78b47721130e9f.png" decoding="async" width="1224" height="450" class="mw-file-element" data-file-width="1224" data-file-height="450"></a></span>
+</p><p>Click on Add guide.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Block_Moderator_guide_add_guide_page.PNG" class="mw-file-description"><img src="images_en/1/16/ba325173c9364a40a909ba2b891e92e6.png" decoding="async" width="1228" height="931" class="mw-file-element" data-file-width="1228" data-file-height="931"></a></span>
+</p><p>On this page you first must select a guide Template. Guide template are preformatted guide forms. They contains hard coded text and images you are not allowed to modified (often it would be the header and footer of the guide which your institutions may want to keep control of). They usually also contains at least one input field for you to enter your own text and images. Sometimes you can even upload files or enter links.
+</p><p>Once you selected your guide template, enter a Name. Sometimes a field would have been prefilled to help you following a good naming convention.
+</p><p>Finally you can create your guide content filling the text editor with text and images, uploading files in the file managers and creating link. These inputs will changed depending on the template you selected.
+</p>
+<h3><span class="mw-headline" id="Update_a_guide">Update a guide</span></h3>
+<p>You can update a guide at any time. Click on Edit in the Manage guides page.
+</p>
+<h3><span class="mw-headline" id="Delete_a_guide">Delete a guide</span></h3>
+<p>You can delete a guide at any time. Click on Delete in the Manage guides page.
+</p>
+<h3><span id="Hide_.2F_Show_a_guide"></span><span class="mw-headline" id="Hide_/_Show_a_guide">Hide / Show a guide</span></h3>
+<p>You can decide to hide a guide to the external teachers. Click on Hide / Show in the Manage guides page. On creation all guides are hidden. This is useful to keep you working on your guide before showing it. Hide / Show is the equivalent of Unpublish / Publish in Wordpress.
+</p>
+<h2><span class="mw-headline" id="External_teachers">External teachers</span></h2>
+<p>As an external teachers your role is to read the guides to help you grading the students. On each main course page you should see a &ldquo;Moderator Guide&rdquo; block providing you with one or multiple grading guides to follow.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Block_Moderator_guide_external_teacher_course_main_page.PNG" class="mw-file-description"><img src="images_en/9/94/761e23718ee60632046963f8a5422e84.png" decoding="async" width="1225" height="291" class="mw-file-element" data-file-width="1225" data-file-height="291"></a></span>
+</p><p>Click on a Guide to view it. Guides may contain text, images, links and files to download.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Block_Moderator_guide_a_guide.PNG" class="mw-file-description"><img src="images_en/2/26/874fd436b9fb3c24868ae6409fec46bf.png" decoding="async" width="1223" height="778" class="mw-file-element" data-file-width="1223" data-file-height="778"></a></span>
+</p>
+<h2><span class="mw-headline" id="Students">Students</span></h2>
+<p>Students are not allowed to use this plugin.
+</p><p><br>
+</p>
+<h2><span class="mw-headline" id="Demo">Demo</span></h2>
+<p><a rel="nofollow" class="external text" href="https://youtu.be/jISpfobm8H4">https://youtu.be/jISpfobm8H4</a>
+</p>
+<h2><span class="mw-headline" id="License">License</span></h2>
+<p>Coventry University
+</p><p><br>
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+</p><p><br>
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see &lt;<a rel="nofollow" class="external free" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260823015357
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.040 seconds
+Real time usage: 0.368 seconds
+Preprocessor visited node count: 100/1000000
+Post&#8208;expand include size: 475/2097152 bytes
+Template argument size: 251/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    2.986      1 Template:Infobox_plugin
+100.00%    2.986      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:21281-0!canonical and timestamp 20260823015357 and revision id 141764. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Moderator_guide&amp;oldid=141764">https://docs.moodle.org/502/en/index.php?title=Moderator_guide&amp;oldid=141764</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="25a190cf836432207b62ebb9ebca358b.html" title="Category:Plugin">Plugin</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdj2ascdd">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdj2ascwg"></button>
+					<div class="collapse navbar-collapse igdj2ascwg" id="igdj2ascwg">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Moderator_guide" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Moderator_guide" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moderator_guide&amp;oldid=141764" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moderator_guide&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Guía_del_moderador" title="Guía del moderador – español" lang="es" hreflang="es" data-title="Guía del moderador" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 22 September 2021, at 14:43.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":513,"wgPageParseReport":{"limitreport":{"cputime":"0.040","walltime":"0.368","ppvisitednodes":{"value":100,"limit":1000000},"postexpandincludesize":{"value":475,"limit":2097152},"templateargumentsize":{"value":251,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    2.986      1 Template:Infobox_plugin","100.00%    2.986      1 -total"]},"cachereport":{"timestamp":"20260823015357","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Custom certificate module - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"d4f2a8c02fa8d1e29a92141d","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Custom_certificate_module","wgTitle":"Custom certificate module","wgCurRevisionId":142782,"wgRevisionId":142782,"wgArticleId":18467,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Plugin"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Custom_certificate_module","wgRelevantArticleId":18467,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Custom_certificate_module">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Custom_certificate_module rootpage-Custom_certificate_module layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdj0p4k8y"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdj0p4k8y" id="igdj0p4k8y">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Custom+certificate+module" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Custom_certificate_module">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Custom_certificate_module">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Custom_certificate_module">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="6b9ec5e7a23afd8d0b146e30ee6de5f9.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Custom_certificate_module&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Custom_certificate_module&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Custom_certificate_module&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Custom certificate module</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock">
+<table class="infobox">
+
+<tbody><tr>
+<th><b><a class="mw-selflink selflink">Custom certificate module</a></b>
+</th></tr>
+<tr>
+<td>Type
+</td>
+<td>Activity
+</td></tr>
+<tr>
+<td>Set
+</td>
+<td>N/A
+</td></tr>
+<tr>
+<td>Downloads
+</td>
+<td><a rel="nofollow" class="external free" href="https://moodle.org/plugins/mod_customcert">https://moodle.org/plugins/mod_customcert</a>
+</td></tr>
+<tr>
+<td>Issues
+</td>
+<td><a rel="nofollow" class="external free" href="https://github.com/mdjnelson/moodle-mod_customcert/issues">https://github.com/mdjnelson/moodle-mod_customcert/issues</a>
+</td></tr>
+<tr>
+<td>Discussion
+</td>
+<td><a rel="nofollow" class="external free" href="https://moodle.org/mod/forum/view.php?id=7163">https://moodle.org/mod/forum/view.php?id=7163</a>
+</td></tr>
+<tr>
+<td>Maintainer(s)
+</td>
+<td><a href="https://docs.moodle.org/502/en/User:Mark_Nelson"><bdi>Mark Nelson</bdi></a>
+</td></tr>
+</tbody></table>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Installation"><span class="tocnumber">2</span> <span class="toctext">Installation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Git"><span class="tocnumber">2.1</span> <span class="toctext">Git</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Download_the_Zip"><span class="tocnumber">2.2</span> <span class="toctext">Download the Zip</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Site_settings"><span class="tocnumber">3</span> <span class="toctext">Site settings</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Show_position_X_and_Y"><span class="tocnumber">3.1</span> <span class="toctext">Show position X and Y</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Manage_templates"><span class="tocnumber">3.2</span> <span class="toctext">Manage templates</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Upload_image"><span class="tocnumber">3.3</span> <span class="toctext">Upload image</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Managing_templates"><span class="tocnumber">4</span> <span class="toctext">Managing templates</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Adding_a_custom_certificate_to_a_course"><span class="tocnumber">5</span> <span class="toctext">Adding a custom certificate to a course</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Certificate_options"><span class="tocnumber">5.1</span> <span class="toctext">Certificate options</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#Allow_anyone_to_verify_a_certificate"><span class="tocnumber">5.1.1</span> <span class="toctext">Allow anyone to verify a certificate</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Email_students/teachers/others"><span class="tocnumber">5.1.2</span> <span class="toctext">Email students/teachers/others</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Required_minutes_in_course"><span class="tocnumber">5.1.3</span> <span class="toctext">Required minutes in course</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Set_protection"><span class="tocnumber">5.1.4</span> <span class="toctext">Set protection</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="#Editing_a_custom_certificate"><span class="tocnumber">5.2</span> <span class="toctext">Editing a custom certificate</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Adding/editing_an_element"><span class="tocnumber">5.3</span> <span class="toctext">Adding/editing an element</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Repositioning_elements"><span class="tocnumber">5.4</span> <span class="toctext">Repositioning elements</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Viewing_issued_certificates"><span class="tocnumber">6</span> <span class="toctext">Viewing issued certificates</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Verifying_certificates"><span class="tocnumber">7</span> <span class="toctext">Verifying certificates</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#My_certificates"><span class="tocnumber">8</span> <span class="toctext">My certificates</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Languages_with_special_characters"><span class="tocnumber">9</span> <span class="toctext">Languages with special characters</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Helpful_links"><span class="tocnumber">10</span> <span class="toctext">Helpful links</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Did_you_find_this_plugin_useful?"><span class="tocnumber">11</span> <span class="toctext">Did you find this plugin useful?</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Description">Description</span></h2>
+<p>The <a rel="nofollow" class="external text" href="https://moodle.org/plugins/mod_customcert">custom certificate module</a> allows the generation of dynamic PDF certificates with complete customisation via the web browser. It is different from the <a rel="nofollow" class="external text" href="https://moodle.org/plugins/mod_certificate">certificate module</a> which requires PHP and FTP access in order to customise its appearance.
+</p>
+<h2><span class="mw-headline" id="Installation">Installation</span></h2>
+<p>There are two installation methods that are available.
+</p><p>Follow one of these, then log into your Moodle site as an administrator and visit the notifications page to complete the install.
+</p>
+<h3><span class="mw-headline" id="Git">Git</span></h3>
+<p>This requires Git being installed. If you do not have Git installed, please visit the Git website.
+</p><p>Once you have Git installed, simply visit your Moodle mod directory and clone the repository using the following command.
+</p><p><code>git clone <a rel="nofollow" class="external free" href="https://github.com/mdjnelson/moodle-mod_customcert.git">https://github.com/mdjnelson/moodle-mod_customcert.git</a> customcert</code>
+</p><p>Then checkout the branch corresponding to the version of Moodle you are using with the following command. Make sure to replace MOODLE_32_STABLE with the version of Moodle you are using.
+</p><p><code>git checkout MOODLE_32_STABLE</code><br>
+Use <code>git pull</code> to update this repository periodically to ensure you have the most recent updates.
+</p>
+<h3><span class="mw-headline" id="Download_the_Zip">Download the Zip</span></h3>
+<p>Visit the Moodle plugins website and download the zip corresponding to the version of Moodle you are using. Extract the zip and place the 'customcert' folder in the mod folder in your Moodle directory.
+</p>
+<h2><span class="mw-headline" id="Site_settings">Site settings</span></h2>
+<p>To visit the site settings log in as a user with appropriate permissions and visit 'Site administration' &gt; 'Plugins' &gt; 'Custom certificate'.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Custom_certificate_site_settings.png" class="mw-file-description"><img src="images_en/e/e1/818fc60208b9170782eb3e4afd2ed3b3.png" decoding="async" width="1242" height="374" class="mw-file-element" data-file-width="1242" data-file-height="374"></a></span>
+</p>
+<h3><span class="mw-headline" id="Show_position_X_and_Y">Show position X and Y</span></h3>
+<p>This will show the X and Y position when editing of an element, allowing the user to accurately specify the location.
+</p><p>This isn't required if you plan on solely using the drag and drop interface for this purpose.
+</p>
+<h3><span class="mw-headline" id="Manage_templates">Manage templates</span></h3>
+<p>This link will take you to a new screen where you will be able to manage templates.
+</p>
+<h3><span class="mw-headline" id="Upload_image">Upload image</span></h3>
+<p>This link will take you to a new screen where you will be able to upload images. Images uploaded using this method will be available throughout your site to all users who are able to create a custom certificate.
+</p>
+<h2><span class="mw-headline" id="Managing_templates">Managing templates</span></h2>
+<p>Templates allow a person with the appropriate permissions to create a site-wide template that can then be used by users when adding a certificate to a course, saving them from re-creating the same certificate over and over again. To create a template log in as a user who has the appropriate permissions and visit 'Site administration' &gt; 'Plugins' &gt; 'Custom certificate' and click on the link 'Manage templates'.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Custom_certificate_manage_templates.png" class="mw-file-description"><img src="images_en/d/d9/459bc6e1fa1567e283dcb9a9172eba5f.png" decoding="async" width="520" height="135" class="mw-file-element" data-file-width="520" data-file-height="135"></a></span>
+</p><p>Here you will see a list of templates that have already been created. You can choose to edit these templates, delete them or create a new one. We will be creating a new template - start by clicking on 'Create template'.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Custom_certificate_edit_page.png" class="mw-file-description"><img src="images_en/7/7e/a8ba962f6c81b0a09ef04610ab784b7f.png" decoding="async" width="699" height="408" class="mw-file-element" data-file-width="699" data-file-height="408"></a></span>
+</p><p>The name here is what will be displayed to the users when they are creating a certificate in a course and would like to choose a template to load. You can add elements to the template, customise them and rearrange their position. This process is discussed later when we talk about adding a custom certificate to a course and then customising it.
+</p>
+<h2><span class="mw-headline" id="Adding_a_custom_certificate_to_a_course">Adding a custom certificate to a course</span></h2>
+<p>The custom certificate plugin once installed can be added just like any other activity in Moodle. Visit a course, turn editing on and click to add an activity.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Custom_certificate_add_activity_page.png" class="mw-file-description"><img src="images_en/b/b5/1312407f00039e5b270f7fe23171de65.png" decoding="async" width="1006" height="694" class="mw-file-element" data-file-width="1006" data-file-height="694"></a></span>
+</p>
+<h3><span class="mw-headline" id="Certificate_options">Certificate options</span></h3>
+<h4><span class="mw-headline" id="Allow_anyone_to_verify_a_certificate">Allow anyone to verify a certificate</span></h4>
+<p>Each certificate when issued is assigned a unique code. It is possible to have this code displayed on the certificate by adding it as an element. To validate a certificate a person (e.g. employer) may want to enter the code displayed on the certificate to confirm that it is indeed authentic. To accomplish this a logged in user requires the capability 'mod/customcert:verifycertificate', however with this setting set to 'Yes' any person with the verification link (including users not logged in) can do this.
+</p>
+<h4><span id="Email_students.2Fteachers.2Fothers"></span><span class="mw-headline" id="Email_students/teachers/others">Email students/teachers/others</span></h4>
+<p>These settings enable the emailing of a certificate when a user is able to view it. The certificate may be hidden due to <a rel="nofollow" class="external text" href="https://docs.moodle.org/en/Restrict_access">access restrictions</a>, such as requiring the completion of another activity. A <a rel="nofollow" class="external text" href="https://docs.moodle.org/en/Scheduled_tasks">scheduled task</a> runs that processes all the certificates that have any of these settings enabled and collects all the users to email that have not been emailed yet and are able to view the certificate and emails them the PDF.
+</p>
+<h4><span class="mw-headline" id="Required_minutes_in_course">Required minutes in course</span></h4>
+<p>This is the number of minutes a user is required to be in a course before they are able to view a certificate. This uses the logs in Moodle and hence can not guarantee the result to be 100% accurate.
+</p>
+<h4><span class="mw-headline" id="Set_protection">Set protection</span></h4>
+<p>This determines what protection we want to set on the PDF.
+</p>
+<h3><span class="mw-headline" id="Editing_a_custom_certificate">Editing a custom certificate</span></h3>
+<p>Once you have added a certificate to your course you can then choose to edit the appearance of it. To do this view the certificate to be taken to the following page.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Custom_certificate_edit_menu.png" class="mw-file-description"><img src="images_en/a/ae/5c005a42f1619ff9d5b5929ead9dbb6a.png" decoding="async" width="793" height="435" class="mw-file-element" data-file-width="793" data-file-height="435"></a></span>
+</p><p>Here you can click on the cog on the top right and select 'Edit custom certificate'.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Custom_certificate_edit_page_with_items.png" class="mw-file-description"><img src="images_en/4/46/c469d8c08b78137b89c7e9ebd8fc45e0.png" decoding="async" width="1012" height="839" class="mw-file-element" data-file-width="1012" data-file-height="839"></a></span>
+</p><p>On the edit page you can see a list of the elements that have already been added to the certificate. You can edit, delete and move these elements. The order of these elements determine when they are rendered on the PDF. So, if you were to add a background image you would want this rendered first.
+</p><p>You can also choose to load a template on this page. If you also have the permissions to manage templates you will also be shown the link to the manage templates page.
+</p>
+<h3><span id="Adding.2Fediting_an_element"></span><span class="mw-headline" id="Adding/editing_an_element">Adding/editing an element</span></h3>
+<p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Custom_certificate_element_list.png" class="mw-file-description"><img src="images_en/9/97/a99a9da64c58c7e946e012b5c691c29a.png" decoding="async" width="151" height="212" class="mw-file-element" data-file-width="151" data-file-height="212"></a></span>
+</p><p>The above is the list of items that come with this plugin. These are <a rel="nofollow" class="external text" href="https://docs.moodle.org/dev/Subplugins">sub-plugins</a> and are fully customisable allowing the community to generate plugins and share them without having to hack the plugin code.
+</p><p>When editing a custom certificate you can choose to add an element which will take you to the page to edit them.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Custom_certificate_edit_element.png" class="mw-file-description"><img src="images_en/8/8b/10bcb1443b65b1ccd51ebc88bee316e3.png" decoding="async" width="621" height="603" class="mw-file-element" data-file-width="621" data-file-height="603"></a></span>
+</p><p>Each element defines what characteristics you can edit. In the above example we are editing the 'Student name' element. The site setting 'Show position X and Y' has been enabled which is why 'Position X' and 'Position Y' are shown.
+</p>
+<h3><span class="mw-headline" id="Repositioning_elements">Repositioning elements</span></h3>
+<p>When editing a custom certificate under the list of elements there is a link 'Reposition elements' that will take you to a page where you can drag and drop the elements. While on this page you can also click on the elements to bring up a dialogue that will allow you to edit its properties without having to go back to the edit custom certificate page.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Custom_certificate_reposition_elements.png" class="mw-file-description"><img src="images_en/5/5f/1c1ee2faedc8651ecc86d30e37fcc800.png" decoding="async" width="1022" height="783" class="mw-file-element" data-file-width="1022" data-file-height="783"></a></span>
+</p>
+<h2><span class="mw-headline" id="Viewing_issued_certificates">Viewing issued certificates</span></h2>
+<p>To view issued certificates a user with the appropriate permissions can simply click on the certificate and click on the link 'View X issued custom certificates'.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Custom_certificate_view_issued_certificates.png" class="mw-file-description"><img src="images_en/0/07/1bfb1eb72554fc982a0ac9c22da69230.png" decoding="async" width="675" height="145" class="mw-file-element" data-file-width="675" data-file-height="145"></a></span>
+</p><p>Once you click on the link you can view the users who have been issued this certificate and also download their version of the certificate.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Custom_certificate_view_issued_certificates_list.png" class="mw-file-description"><img src="images_en/a/a6/bbdc869e576a6c32748407cdbcb00328.png" decoding="async" width="889" height="184" class="mw-file-element" data-file-width="889" data-file-height="184"></a></span>
+</p>
+<h2><span class="mw-headline" id="Verifying_certificates">Verifying certificates</span></h2>
+<p>Each certificate when issued is assigned a unique code. To validate a certificate a person (e.g. employer) may want to enter the code displayed on the certificate to confirm that it is indeed authentic. With the setting 'Allow anyone to verify a certificate' enabled any person with the verification link (including users not logged in) can verify a certificate, however if it is not set, a user with the appropriate permissions ('mod/customcert:verifycertificate') can do this by clicking on the certificate to gain access to the link.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Custom_certificate_edit_menu.png" class="mw-file-description"><img src="images_en/a/ae/5c005a42f1619ff9d5b5929ead9dbb6a.png" decoding="async" width="793" height="435" class="mw-file-element" data-file-width="793" data-file-height="435"></a></span>
+</p><p>Here you can click on the cog on the top right and select 'Verify certificate'.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Custom_certificate_verify_certificate_page.png" class="mw-file-description"><img src="images_en/e/e8/463e174da218a34cd438a73ae86fe78b.png" decoding="async" width="594" height="261" class="mw-file-element" data-file-width="594" data-file-height="261"></a></span>
+</p><p>Here you can enter the code to verify its authenticity.
+</p>
+<h2><span class="mw-headline" id="My_certificates">My certificates</span></h2>
+<p>It is possible that a user may be in several courses each with their own custom certificate activity. It would be time-consuming for the user to visit every course to review their certificate. In order to avoid this there is a page where the user can view all the certificates they have received.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Custom_certificate_profile_page.png" class="mw-file-description"><img src="images_en/a/a7/4af06cfe5b63bd857f78c5a3e62e0f9c.png" decoding="async" width="746" height="239" class="mw-file-element" data-file-width="746" data-file-height="239"></a></span>
+</p><p>On the user's profile page under 'Miscellaneous' the user can click on 'My certificates' which will take them to a page listing all their certificates with the option of downloading them.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Custom_certificate_my_certificates_page.png" class="mw-file-description"><img src="images_en/3/32/fe9479d8bd27c149a27fe650980e18a2.png" decoding="async" width="1168" height="257" class="mw-file-element" data-file-width="1168" data-file-height="257"></a></span>
+</p>
+<h2><span class="mw-headline" id="Languages_with_special_characters">Languages with special characters</span></h2>
+<p>If you use a language with special characters and find that they are replaced with a question mark in your certificates, you should switch to the &ldquo;Free&rdquo; font family, picking your favourite style (serif, sans, mono). It includes a greater number of glyphs than the other families available.
+</p>
+<h2><span class="mw-headline" id="Helpful_links">Helpful links</span></h2>
+<p>See  <a rel="nofollow" class="external text" href="https://moodle.org/plugins/mod_customcert">the plugin page</a>, the <a rel="nofollow" class="external text" href="https://github.com/mdjnelson/moodle-mod_customcert/issues">tracker page</a> and the <a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/view.php?id=7163">Moodle forum</a>.
+</p><p><a href="afc8ecc18b7c318d1a7fe12530d46230.html" title="Add fonts for embedding">Add fonts for embedding</a> - see this page for details of adding more fonts for use in TCPDF
+</p><p>Voir ici la traduction fran&ccedil;aise&nbsp;: <a rel="nofollow" class="external text" href="https://docs.moodle.org/3x/fr/Custom_certificate_module">Sur ce lien</a>
+</p>
+<h2><span id="Did_you_find_this_plugin_useful.3F"></span><span class="mw-headline" id="Did_you_find_this_plugin_useful?">Did you find this plugin useful?</span></h2>
+<p>Click on the 'Add to my favourites' link in <a rel="nofollow" class="external text" href="https://moodle.org/plugins/mod_customcert">the plugin page</a>.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260822151428
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.059 seconds
+Real time usage: 0.639 seconds
+Preprocessor visited node count: 111/1000000
+Post&#8208;expand include size: 427/2097152 bytes
+Template argument size: 183/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    2.997      1 Template:Infobox_plugin
+100.00%    2.997      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:18467-0!canonical and timestamp 20260822151428 and revision id 142782. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Custom_certificate_module&amp;oldid=142782">https://docs.moodle.org/502/en/index.php?title=Custom_certificate_module&amp;oldid=142782</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="25a190cf836432207b62ebb9ebca358b.html" title="Category:Plugin">Plugin</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdj0p4nwa">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdj0p4onk"></button>
+					<div class="collapse navbar-collapse igdj0p4onk" id="igdj0p4onk">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Custom_certificate_module" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Custom_certificate_module" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Custom_certificate_module&amp;oldid=142782" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Custom_certificate_module&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 11 January 2022, at 19:18.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":196,"wgPageParseReport":{"limitreport":{"cputime":"0.059","walltime":"0.639","ppvisitednodes":{"value":111,"limit":1000000},"postexpandincludesize":{"value":427,"limit":2097152},"templateargumentsize":{"value":183,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    2.997      1 Template:Infobox_plugin","100.00%    2.997      1 -total"]},"cachereport":{"timestamp":"20260822151428","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

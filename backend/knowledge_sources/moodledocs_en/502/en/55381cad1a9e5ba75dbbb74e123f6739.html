@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Administration FAQ - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"a9218a04b3ee522795f2e669","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Administration_FAQ","wgTitle":"Administration FAQ","wgCurRevisionId":154569,"wgRevisionId":154569,"wgArticleId":1592,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Site administration","FAQ"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Administration_FAQ","wgRelevantArticleId":1592,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Administration_FAQ">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Administration_FAQ rootpage-Administration_FAQ layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhk7fier"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhk7fier" id="igdhk7fier">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Administration+FAQ" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Administration_FAQ">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Administration_FAQ">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Administration_FAQ">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="55381cad1a9e5ba75dbbb74e123f6739.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Administration_FAQ&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Administration_FAQ&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Administration_FAQ&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Administration FAQ</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a> ► <a class="mw-selflink selflink">Administration FAQ</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a></div>	
+<div class="content">
+<ul><li><a href="fd7dd013f8a1f72c795f4cfca82b50c9.html" title="Admin quick guide">Admin quick guide</a></li>
+<li><a href="236dc8d53a6146955905ab37c10ae1c1.html" title="Authentication">Authentication</a></li>
+<li><a href="fcdc97df72faf11d7a0dddc58210b7a9.html" title="Managing accounts">Managing accounts</a></li>
+<li><a href="d69f24af24539c9e8b59f1589f5750ef.html" title="Enrolments">Enrolments</a></li>
+<li><a href="ffd18cfa4763039f752758c2e71bf5fe.html" title="Payment gateways">Payment gateways</a></li>
+<li><a href="dc060a85d040bdf806cbda716f945fa5.html" title="Roles and permissions">Roles and permissions</a></li>
+<li><a href="80d19145b4b4a905c08083096b6ab2b8.html" title="Security">Security</a></li>
+<li><a href="7a58329819b7734d857d3e22b0a64aee.html" title="Performance">Performance</a></li>
+<li><a href="b3fe4983408ca4b6871be863fef334b5.html" title="Backup">Backup</a></li>
+<li><a href="534cce80ee217816d4da0c4cc00ab321.html" title="Site registration">Site registration</a></li>
+<li><a href="cb0adc0a700090df15e3a66ae4e0d1cc.html" title="Site appearance">Site appearance</a></li>
+<li><a href="cd1c058b96ff7b0dac75cf83e6e73bfb.html" title="Language">Language</a></li>
+<li><a href="402364aba1531988f549c8b1730fb016.html" title="Server settings">Server settings</a></li>
+<li><a href="95a7128b9c62b78ac6a31453e27382de.html" title="Site-wide reports">Site-wide reports</a></li>
+<li><a href="a5e1beae13c08874618a5b991fb4b9c1.html" title="Admin tools">Admin tools</a></li>
+<li><a href="6d13928b16737bfd23a3f017ac9c4696.html" title="Developer tools">Developer tools</a></li>
+<li><a href="9e2f5046f56cb5ce7740bcb330508589.html" title="Web services">Web services</a></li>
+<li><a href="ed355415c0519c4ccfe2f3523db81a81.html" title="More features">More features</a></li>
+<li><a href="66d1cad605f94eda88c9980224fe2aff.html" title="GDPR">GDPR</a></li>
+<li><a href="fa18a52418e4533e91674fc1a8ea5976.html" title="Communication">Communication</a></li>
+<li><a href="5bf0651126dd3017b8baa1a14922e789.html" title="MoodleNet">MoodleNet</a></li>
+<li><a href="3a09598783ef54eb6ddc918ca272cd27.html" title="SMS gateways">SMS gateways</a></li>
+<li><a class="mw-selflink selflink">Administration FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p><br>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Common_questions"><span class="tocnumber">1</span> <span class="toctext">Common questions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#How_do_I_find_the_version_of_Moodle_currently_installed?"><span class="tocnumber">1.1</span> <span class="toctext">How do I find the version of Moodle currently installed?</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#I_have_forgotten_the_admin_password"><span class="tocnumber">1.2</span> <span class="toctext">I have forgotten the admin password</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Command_line_method"><span class="tocnumber">1.2.1</span> <span class="toctext">Command line method</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Database_method"><span class="tocnumber">1.2.2</span> <span class="toctext">Database method</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#How_do_I_prevent_users_from_logging_in_while_I_do_maintenance?"><span class="tocnumber">1.3</span> <span class="toctext">How do I prevent users from logging in while I do maintenance?</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#My_site_is_stuck_in_maintenance_mode"><span class="tocnumber">1.4</span> <span class="toctext">My site is stuck in maintenance mode</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#How_can_I_change_the_domain_name_or_URL_of_the_Moodle_site?"><span class="tocnumber">1.5</span> <span class="toctext">How can I change the domain name or URL of the Moodle site?</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#My_log_table_has_disappeared_-_No_logs_found!"><span class="tocnumber">1.6</span> <span class="toctext">My log table has disappeared - No logs found!</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#How_do_I_repair_a_corrupted_Moodle_database?"><span class="tocnumber">1.7</span> <span class="toctext">How do I repair a corrupted Moodle database?</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#How_do_I_change_spellings_like_'enrol'_to_'enroll'?"><span class="tocnumber">1.8</span> <span class="toctext">How do I change spellings like 'enrol' to 'enroll'?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Site_policies_and_settings"><span class="tocnumber">2</span> <span class="toctext">Site policies and settings</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#How_do_the_limits_on_uploaded_files_work?"><span class="tocnumber">2.1</span> <span class="toctext">How do the limits on uploaded files work?</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#How_to_change_the_maximum_execution_time_for_file_uploads"><span class="tocnumber">2.2</span> <span class="toctext">How to change the maximum execution time for file uploads</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Logging_in_and_out"><span class="tocnumber">3</span> <span class="toctext">Logging in and out</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#My_site_is_logging_users_out_to_quickly"><span class="tocnumber">3.1</span> <span class="toctext">My site is logging users out to quickly</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Users_can_not_login,_they_need_cookies_and_debug_mentions_config.php"><span class="tocnumber">3.2</span> <span class="toctext">Users can not login, they need cookies and debug mentions config.php</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#After_using_the_'Login_as'_function,_why_am_I_logged_out_of_Moodle?"><span class="tocnumber">3.3</span> <span class="toctext">After using the 'Login as' function, why am I logged out of Moodle?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Text_and_Appearance"><span class="tocnumber">4</span> <span class="toctext">Text and Appearance</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#Why_do_I_see_%5B%5Bmissing_strings%5D%5D?"><span class="tocnumber">4.1</span> <span class="toctext">Why do I see [[missing strings]]?</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Changing_text_in_Moodle"><span class="tocnumber">4.2</span> <span class="toctext">Changing text in Moodle</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#My_style_sheet_or_other_theme_changes_aren't_showing_up"><span class="tocnumber">4.3</span> <span class="toctext">My style sheet or other theme changes aren't showing up</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#How_can_I_change_center_of_the_Front_Page_from_course_categories_to_something_else?"><span class="tocnumber">4.4</span> <span class="toctext">How can I change center of the Front Page from course categories to something else?</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#How_can_I_change_the_initial_login_screen?"><span class="tocnumber">4.5</span> <span class="toctext">How can I change the initial login screen?</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#How_can_I_change_the_initial_login_screen_help?"><span class="tocnumber">4.6</span> <span class="toctext">How can I change the initial login screen help?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-26"><a href="#Errors_and_Troubleshooting"><span class="tocnumber">5</span> <span class="toctext">Errors and Troubleshooting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-27"><a href="#How_do_I_enable/disable_debugging?"><span class="tocnumber">5.1</span> <span class="toctext">How do I enable/disable debugging?</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Incomplete_page_displayed_when_I_click_%22Turn_Editing_On%22"><span class="tocnumber">5.2</span> <span class="toctext">Incomplete page displayed when I click "Turn Editing On"</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Receive_error_message_%22a_required_parameter_(id)_was_missing%22_when_uploading_a_file_or"><span class="tocnumber">5.3</span> <span class="toctext">Receive error message "a required parameter (id) was missing" when uploading a file or</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#User_gets_'an_invalid_session_key'_error"><span class="tocnumber">5.4</span> <span class="toctext">User gets 'an invalid session key' error</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#Why_is_a_page_blank,_or_half_missing?"><span class="tocnumber">5.5</span> <span class="toctext">Why is a page blank, or half missing?</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#How_can_I_fix_just_one_bug,_without_upgrading_my_whole_site?"><span class="tocnumber">5.6</span> <span class="toctext">How can I fix just one bug, without upgrading my whole site?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-33"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="#Any_further_questions?"><span class="tocnumber">7</span> <span class="toctext">Any further questions?</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Common_questions">Common questions</span></h2>
+<h3><span id="How_do_I_find_the_version_of_Moodle_currently_installed.3F"></span><span class="mw-headline" id="How_do_I_find_the_version_of_Moodle_currently_installed?">How do I find the version of Moodle currently installed?</span></h3>
+<p>See the <a href="4b22e47dbbc8debd92ed9661a89c3019.html" title="Moodle version">Moodle version</a> information on the <i>Site Administration &gt; Notifications</i> page.
+</p>
+<h3><span class="mw-headline" id="I_have_forgotten_the_admin_password">I have forgotten the admin password</span></h3>
+<p>First, try using the Forgotten password link (if you have one on your site.) If you don't know the admin username, often it is simply 'admin'.
+</p>
+<h4><span class="mw-headline" id="Command_line_method">Command line method</span></h4>
+<p>Cli tool: You can reset the admin user's password <a href="8428d1ac0de33e2b0f542d6d962f1fa6.html#Reset_user_password" title="Administration via command line">using the command line tool reset_password.php</a> provided with Moodle.
+</p><p>Config.php setting: You can also set any user to be an admin user using the setting in the config.php file for this: $CFG-&gt;siteadmins="2,#"; where # is the id number of some user you do know the password to. This will turn that user into an administrator. See the details <a rel="nofollow" class="external text" href="https://github.com/moodle/moodle/blob/master/config-dist.php">in the config-dist.php file</a> on how to use this.
+</p>
+<h4><span class="mw-headline" id="Database_method">Database method</span></h4>
+<p>If you do not have command line access, but do have access to the database, you can modify a password there. Passwords for all users, including admin, are stored as cryptographic hashes in the table <i>mdl_user</i>. You can manually replace the old hash with md5 value of the new password, it will be upgraded to the strong hash value after the first log-in.
+</p><p>Or, you can also do the equivalent of the config.php siteadmins setting by adding a user id number of a user with a known password to the mdl_config table where the 'name' equals "siteadmins". (This may be row 23 in the table, since it is built during install.) The 'value' is a comma delimited list of the id numbers of admin users. The default value is 2, for the main predefined admin. Add any other admins here, comma separated. For example, if you want to add user 3 as an admin, edit the value and put 2,3 as the value. You may need to flush caches for this to take effect right away, since lots of user info is cached.
+</p>
+<h3><span id="How_do_I_prevent_users_from_logging_in_while_I_do_maintenance.3F"></span><span class="mw-headline" id="How_do_I_prevent_users_from_logging_in_while_I_do_maintenance?">How do I prevent users from logging in while I do maintenance?</span></h3>
+<p>Use one or the other of the two methods for <a href="7c24d3197f3c64f699af1fac44e1e483.html" title="Maintenance mode">Maintenance mode</a> to do this.
+</p>
+<h3><span class="mw-headline" id="My_site_is_stuck_in_maintenance_mode">My site is stuck in maintenance mode</span></h3>
+<p>Sometimes Moodle gets stuck in maintenance mode and you'll see the message "This site is undergoing maintenance and is currently unavailable" despite your attempts to turn-off maintenance mode. 
+</p><p>When you put Moodle into maintenance mode it creates a file called maintenance.html in moodledata/maintenance.html (the site files folder). To fix this try the following:
+</p>
+<ul><li>Check that the web server user has write permissions to the moodledata folder.</li>
+<li>Manually delete the maintenance.html file.</li></ul>
+<h3><span id="How_can_I_change_the_domain_name_or_URL_of_the_Moodle_site.3F"></span><span class="mw-headline" id="How_can_I_change_the_domain_name_or_URL_of_the_Moodle_site?">How can I change the domain name or URL of the Moodle site?</span></h3>
+<p>The base URL of your site is set in the config.php file setting wwwroot. All dynamic links (e.g. course and activity URLs) are built by prefixing this setting on the fly. These are known as "relative links."
+</p><p>Your Moodle site may also contain "absolute links" to resources which point to the previous URL, if you or anyone has copy/pasted the links into activities like Pages, or other locations in Moodle. These are text strings just like any text or link to a web site. 
+</p><p>To change such absolute in bulk, Moodle contains a utility called <a href="76a7c9afadd6a60caa62d1ad770f622a.html" title="Search and replace tool">Search and replace</a> to change all the links to the new URL. To change this login as admin and enter <a rel="nofollow" class="external free" href="http://yoursite.com/admin/tool/replace/index.php">http://yoursite.com/admin/tool/replace/index.php</a> in your browser address bar. Fill in your old base url and new base in the boxes and run the utility. 
+</p><p>If you change the domain name of your site, there may be work you need to do on your web server and/or DNS settings as well to configure it to understand the new domain. See <a href="1a1489d94778d66d38f3a8e70fedc938.html" title="Moodle migration">Migration</a> for more tips.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:searchandreplacecommandlinetool_interface_m30.png" class="mw-file-description" title="Search and replace interface screenshot"><img alt="Search and replace interface screenshot" src="images_en/1/11/000f7c359f17018ce26cf5f3259c14c6.png" decoding="async" width="695" height="571" class="mw-file-element" data-file-width="695" data-file-height="571"></a></span>
+</p>
+<h3><span id="My_log_table_has_disappeared_-_No_logs_found.21"></span><span class="mw-headline" id="My_log_table_has_disappeared_-_No_logs_found!">My log table has disappeared - No logs found!</span></h3>
+<p>The most likely cause is that the mdl_log table has become corrupted. See the <a href="e303b246f5d92a52c1ebc413ebfa5a50.html" title="How to check your database for corruption">How to check your database for corruption</a>. NOTE: A new logging system has been i place since Moodle 2.7 as an option. Be sure to check in <i>Site administration &gt; Plugins &gt; Logging &gt; Manage log stores</i> to see whether you are still using the old style logging, Legacy log, or the Standard log.
+</p>
+<h3><span id="How_do_I_repair_a_corrupted_Moodle_database.3F"></span><span class="mw-headline" id="How_do_I_repair_a_corrupted_Moodle_database?">How do I repair a corrupted Moodle database?</span></h3>
+<p>Typically, you might see an error message like './moodle/mdl_quiz_grades' is marked as crashed and should be repaired. See <a href="e303b246f5d92a52c1ebc413ebfa5a50.html" title="How to check your database for corruption">How to check your database for corruption</a> for the solution.
+</p>
+<h3><span id="How_do_I_change_spellings_like_.27enrol.27_to_.27enroll.27.3F"></span><span class="mw-headline" id="How_do_I_change_spellings_like_'enrol'_to_'enroll'?">How do I change spellings like 'enrol' to 'enroll'?</span></h3>
+<p>This is controlled by your language pack and default language. In this case, you are probably using the default Moodle language pack 'en' which is common (and sometimes specifically Australian) spellings. If you need American English, add the en_us language pack and set it as the default.
+</p>
+<h2><span class="mw-headline" id="Site_policies_and_settings">Site policies and settings</span></h2>
+<h3><span id="How_do_the_limits_on_uploaded_files_work.3F"></span><span class="mw-headline" id="How_do_the_limits_on_uploaded_files_work?">How do the limits on uploaded files work?</span></h3>
+<p>See <a href="08263c95d9de0b0d759a71b02e80681e.html" title="File upload size">File upload size</a> for more information.  
+</p><p>File upload sizes are restricted in a number of ways - each one in the list restricts the following ones.
+</p><p>1. Not very likely these days (i.e. check if the other settings don't work), there is a setting in Apache 2 which you may need to change. You can change the limit by adding or editing a line in Apache's <i>/usr/local/apache2/conf/httpd.conf</i> with the upload size in bytes (check your operating system's documentation for the correct location - e.g. under /etc/apache2 is a common alternative):
+</p>
+<pre>LimitRequestBody 10485760
+</pre>
+<p>2. PHP also has limits. If you have access to it they are set in your site-wide <b>php.ini</b> file. On shared hosting you may be able to set these in a <i>.htaccess</i> file or a <i>php.ini</i>. You are recommended to check with your hosting company how this works on their systems.
+</p><p>In a php.ini file the lines will look something like:
+</p>
+<pre>    upload_max_filesize 64M
+    post_max_size 64M
+</pre>
+<p>...in .htaccess the entries will look like this:
+<code>
+</code></p><code><pre>php_value upload_max_filesize 64M
+php_value post_max_size 64M
+</pre></code><code></code><p><code></code>
+</p><p>An .htaccess file usually can be placed in the root of your Moodle install and will affect the whole Moodle. A (non site-wide) php.ini file may need to be copied into all the directories it needs to affect. The following are a good start:
+</p>
+<pre>   * public_html
+   * moodle/admin
+   * moodle/course
+   * moodle/files
+   * moodle/repository
+   * root of your moodledata directory
+</pre>
+<p>Please note that a server restart may be required for the above changes to take effect.
+</p><p>3. Moodle has a site-wide limit called maxbytes that may be set in <i>Site Administration &gt; Security &gt; Site security settings &gt; Maximum uploaded file size</i>. The default here is (site limit) which it reads from the php.ini files You can set this lower if you wish for Moodle itself but don't set it lower than the largest possible file you will be uploading
+</p><p>To find out the server limit setting in php.ini (without server access, just using the Moodle administration interface), see <i>Site Administration &gt; Server &gt; PHP info</i> (Tip: search for filesize)
+</p><p>4. You should usually set the default for all newly created courses to something lower than the site limit. This is set in <i>Site administration &gt; Courses &gt; Course default settings &gt; Maximum upload size</i>. Inside each course, this then may be individually set or changed for that course as needed by the usual teacher role in <a href="course/81497d0df9e7f6a9a0fbe81c771e1ebf.html" class="mw-redirect" title="course/edit">Course settings</a>.
+</p><p>5. Activity modules that can be set to allow students to upload files to them, such as <a href="b084add6648ca8879a42e63fc95b51e7.html" class="mw-redirect" title="Forums">Forums</a> and <a href="ff02092ad86ab405e064340294c36e5b.html" class="mw-redirect" title="Assignments">Assignments</a>, have their own limits which may be set when adding or editing the activity.
+</p><p><b>See also</b>
+</p>
+<ul><li>Using Moodle <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=39625">Detailed instructions to increase the maximum allowed size for uploaded files</a> forum discussion</li>
+<li>Using Moodle <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=97907">Instructions to increase maximum allowed size on hosted servers</a> forum discussion</li>
+<li><a href="08263c95d9de0b0d759a71b02e80681e.html" title="File upload size">File Upload Size</a> page</li>
+<li>Instructions below on <a rel="nofollow" class="external text" href="55381cad1a9e5ba75dbbb74e123f6739.html#How_to_change_the_maximum_execution_time">How to change the maximum execution time</a></li></ul>
+<h3><span class="mw-headline" id="How_to_change_the_maximum_execution_time_for_file_uploads">How to change the maximum execution time for file uploads</span></h3>
+<p>A side-effect of increasing the file upload limit is that the php scripts may execute beyond the limit set by default (300 seconds/5 minutes). To change this, look for max_execution_time in php.ini and change to something like this:
+</p>
+<pre>max_execution_time = 600
+</pre>
+<p>If you are using Apache and have a .htaccess file to change php settings, add this line to your .htaccess file:
+</p>
+<pre>php_value max_execution_time 600
+</pre>
+<p>Restart your webserver for these changes to take effect, and check that the values have been changed by looking at your phpinfo output in the moodle admin -&gt; environment page.
+</p>
+<h2><span class="mw-headline" id="Logging_in_and_out">Logging in and out</span></h2>
+<h3><span class="mw-headline" id="My_site_is_logging_users_out_to_quickly">My site is logging users out to quickly</span></h3>
+<p>User login sessions are checked to see if the user is still active, and will log them out after a specific period of idleness. This is set in <i>Site administration &gt; Server &gt; Session handling &gt; Timeout</i>. The default is two hours. Increase it if you need to.
+</p>
+<h3><span id="Users_can_not_login.2C_they_need_cookies_and_debug_mentions_config.php"></span><span class="mw-headline" id="Users_can_not_login,_they_need_cookies_and_debug_mentions_config.php">Users can not login, they need cookies and debug mentions config.php</span></h3>
+<p>Your site's <a href="4851907a1dff02740b60eb6cb720320f.html" title="Configuration file">config.php file</a> probably has extra lines after <b>?&gt;</b>. Solution is to delete the last <b>?&gt;</b>.
+</p>
+<h3><span id="After_using_the_.27Login_as.27_function.2C_why_am_I_logged_out_of_Moodle.3F"></span><span class="mw-headline" id="After_using_the_'Login_as'_function,_why_am_I_logged_out_of_Moodle?">After using the 'Login as' function, why am I logged out of Moodle?</span></h3>
+<p>This is by design. After using the 'Login as' function, for security reasons you are automatically logged out of Moodle when you return to your normal role. If you login again you will be redirected to the page that you were on previously. 
+</p>
+<h2><span class="mw-headline" id="Text_and_Appearance">Text and Appearance</span></h2>
+<h3><span id="Why_do_I_see_.5B.5Bmissing_strings.5D.5D.3F"></span><span class="mw-headline" id="Why_do_I_see_[[missing_strings]]?">Why do I see [[missing strings]]?</span></h3>
+<p>Double square brackets around text indicate that language strings are missing for that function for that language. This is most common with third-party plugins or for languages that may not have all the strings translated for it yet.
+</p><p>First update your language packs to the latest versions in <i>Site administration &gt; Language &gt; <a href="baa4383c9762cdc4fa915a58ec8850ca.html" title="Language packs">Language packs</a> &gt; Update all installed language packs</i>. 
+</p><p>If the missing strings are for a non-standard plugin, try to update that plugin and / or check with that plugin maintainer to see if this is a reported issue. If you have access to the server code, you can check the code for this plugin; language strings are supposed to be contained in a <i>lang</i> folder within the module or plugin folder. 
+</p><p>Note: after changing language strings you may see a lag in the cache for these to show up. You can force this in <i>Site administration &gt; Development &gt; Purge all caches</i>.
+</p>
+<h3><span class="mw-headline" id="Changing_text_in_Moodle">Changing text in Moodle</span></h3>
+<p>The language editing interface in <i>Administration &gt; Language &gt; <a href="56428a496f9a3b7ce781cd5352e611df.html" title="Language customisation">Language customisation</a></i> enables you to easily change any string, any word or phrase, used on the site.  
+</p><p>The strings are stored per language pack. So if you change them for 'en' (common English), that will not change them for 'en_us' (US English) or any other language. 
+</p><p>You may need to search through several files to find the word or phrase you are looking for. The file moodle.php contains all common site-wide phrases and the admin.php contains many admin phrases. Tip: if you don't know the file the string is in, select ALL the file options to search through.
+</p><p>Also, these customisations override but do not delete the default language strings but are stored separately in the language folders in your site's moodledata location. 
+</p>
+<h3><span id="My_style_sheet_or_other_theme_changes_aren.27t_showing_up"></span><span class="mw-headline" id="My_style_sheet_or_other_theme_changes_aren't_showing_up">My style sheet or other theme changes aren't showing up</span></h3>
+<p>Browsers usually cache style sheets and so a forced refresh in your browser is required before any changes show up.
+</p><p>The Moodle server also caches all styles. You can force a refresh of the cache from disk in <i>Site Administration&gt;Appearance&gt;Themes&gt;Theme selector</i>, click "Clear theme caches".
+</p>
+<h3><span id="How_can_I_change_center_of_the_Front_Page_from_course_categories_to_something_else.3F"></span><span class="mw-headline" id="How_can_I_change_center_of_the_Front_Page_from_course_categories_to_something_else?">How can I change center of the Front Page from course categories to something else?</span></h3>
+<p>Go to Front Page &gt; Settings and change "Front page" to None all down. Change "Front page items when logged in" to None all down. Ensure that "Include a topic section" is checked. Save changes and return to the front page. Turn editing on, obviously, and you should now see the "Add a resource" and "Add an activity" drop down combo-boxes. Select "Add a resource" and select "Insert a label". You can then edit the label in any way you want to in the WYSYWYG editor.
+</p>
+<h3><span id="How_can_I_change_the_initial_login_screen.3F"></span><span class="mw-headline" id="How_can_I_change_the_initial_login_screen?">How can I change the initial login screen?</span></h3>
+<p>Edit one of the language files.  <i>Site  administration &gt; Language&gt; Language customisation</i>, look in the moodle.php file.  Look for <i>loginusing</i>  or <i>loginsteps</i> or <i>loginstepsnone</i> string variables.
+</p>
+<h3><span id="How_can_I_change_the_initial_login_screen_help.3F"></span><span class="mw-headline" id="How_can_I_change_the_initial_login_screen_help?">How can I change the initial login screen help?</span></h3>
+<p>To change or add a help message for the login go to <i>Site administration &gt; Plugins &gt; Authentication &gt; Manage authentication.</i> Type your help message in there in the<i> Instructions</i> text box.
+</p>
+<h2><span class="mw-headline" id="Errors_and_Troubleshooting">Errors and Troubleshooting</span></h2>
+<h3><span id="How_do_I_enable.2Fdisable_debugging.3F"></span><span class="mw-headline" id="How_do_I_enable/disable_debugging?">How do I enable/disable debugging?</span></h3>
+<p>If you are getting a blank or partially complete page, or receive a page that presents a short error message that is not informative enough, you can turn on debugging to learn more details.
+</p><p>Turning on debugging will let you see what the error message is, which may help you diagnose the problem. Set this in <i>Site administration &gt; Development &gt; Debugging</i> - see <a href="03dea8f6a86c43cbbe5f79b5364cac24.html" title="Debugging">Debugging</a> for more.
+</p>
+<h3><span id="Incomplete_page_displayed_when_I_click_.22Turn_Editing_On.22"></span><span class="mw-headline" id='Incomplete_page_displayed_when_I_click_"Turn_Editing_On"'>Incomplete page displayed when I click "Turn Editing On"</span></h3>
+<p>When you see an incomplete page, it is normally a sign that an error occurred. To find out more, turn on <a href="03dea8f6a86c43cbbe5f79b5364cac24.html" title="Debugging">Debugging</a>, and you should see an error message which may help you to diagnose the problem.
+</p><p>This is usually as a result of an incompatible contributed module or block that you have installed. Follow these steps:
+</p>
+<ol><li>Follow the module removal instructions in <a href="af0f49b9c544fa6087d00cec55f64553.html" class="mw-redirect" title="Installing contributed modules or plugins">Installing contributed modules or plugins</a>.</li>
+<li>Re-visit your course page and try clicking on the "Turn Editing On" button again.</li></ol>
+<p>If you find an incompatible module or block, please report the problem to the person named as the maintainer in the <a rel="nofollow" class="external text" href="https://moodle.org/plugins/">Modules and Plugins database</a>.
+</p>
+<h3><span id="Receive_error_message_.22a_required_parameter_.28id.29_was_missing.22_when_uploading_a_file_or"></span><span class="mw-headline" id='Receive_error_message_"a_required_parameter_(id)_was_missing"_when_uploading_a_file_or'>Receive error message "a required parameter (id) was missing" when uploading a file or</span></h3>
+<p>This message sometimes is generated when attempting to upload a file larger than the upload limit. This can also be caused by user's having more than one login to the same site open in the same browser in different windows or tabs. 
+</p>
+<h3><span id="User_gets_.27an_invalid_session_key.27_error"></span><span class="mw-headline" id="User_gets_'an_invalid_session_key'_error">User gets 'an invalid session key' error</span></h3>
+<p>A number of things may caused the invalid session key error.  The most common is if the person tries to login into the same Moodle site in more than one tab or window in the same browser. That will not work. The fix is to close all those tabs and windows and close and restart the browser. This is almost always a transient issue. The fix is to close and restart the browser, and log back into Moodle.
+</p><p>If you send someone a URL to something in Moodle, like a course activity or particular page, is may be that the session id key is tacked onto the end of the URL. Simply delete that parameter from the URL.
+</p>
+<h3><span id="Why_is_a_page_blank.2C_or_half_missing.3F"></span><span class="mw-headline" id="Why_is_a_page_blank,_or_half_missing?">Why is a page blank, or half missing?</span></h3>
+<p>A blank page, or a page that seems to have half missing, is normally a sign that an error occurred. If (as is recommended on production systems) you have display of error messages turned off, it can be very hard to understand what is going on.
+</p><p>The solution is to <a href="03dea8f6a86c43cbbe5f79b5364cac24.html" title="Debugging">turn on the debugging options</a> temporarily. Then, when you go back to the problem page, you should see the error message. Once you had finished solving the problem, remember to turn debugging off again.
+</p>
+<h3><span id="How_can_I_fix_just_one_bug.2C_without_upgrading_my_whole_site.3F"></span><span class="mw-headline" id="How_can_I_fix_just_one_bug,_without_upgrading_my_whole_site?">How can I fix just one bug, without upgrading my whole site?</span></h3>
+<p>Suppose:
+</p>
+<ul><li>You are experiencing a particular bug.</li>
+<li>You have searched in the <a rel="nofollow" class="external text" href="http://tracker.moodle.org/">tracker</a>, and found that your problem is MDL-abc, and that it has been fixed in the latest version.</li>
+<li>For some reason, you cannot upgrade your whole site, even though the latest version probably has security fixes.</li></ul>
+<p>Then, how can you get the fix for just this one bug, without upgrading your whole site? Well, if you are prepared to manually patch the code, you can probably get this information from the tracker. Please see <a href="5214b49c1ecf9a8cdb8a52485f028e1d.html" class="mw-redirect" title="How to fix just one bug without upgrading">How to fix just one bug without upgrading</a> guide.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="2dc6553fcb804376493d8f120dea3217.html" title="Errors FAQ">Errors FAQ</a></li>
+<li><a href="52d1d262bc125752f9747df1abc77de6.html" title="Installation FAQ">Installation FAQ</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.academy/enrol/index.php?id=41">Moodle Administration Settings</a> - A beginner-level Moodle Academy course exploring key administration settings, site admin presets, reports, and basic file management.</li></ul>
+<h2><span id="Any_further_questions.3F"></span><span class="mw-headline" id="Any_further_questions?">Any further questions?</span></h2>
+<p>Please post in the <a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/view.php?id=50">General help forum</a> on moodle.org.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260823010158
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.028 seconds
+Real time usage: 0.071 seconds
+Preprocessor visited node count: 141/1000000
+Post&#8208;expand include size: 731/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 100/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    2.235      1 Template:Managing_a_Moodle_site
+100.00%    2.235      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:1592-0!canonical and timestamp 20260823010158 and revision id 154569. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Administration_FAQ&amp;oldid=154569">https://docs.moodle.org/502/en/index.php?title=Administration_FAQ&amp;oldid=154569</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="2aac34b4c717bbba405f973f3d7b4021.html" title="Category:Site administration">Site administration</a></li><li><a href="d6b0775565520759d6ccd9ae1d47581b.html" title="Category:FAQ">FAQ</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhk7g7b4">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhk7g87n"></button>
+					<div class="collapse navbar-collapse igdhk7g87n" id="igdhk7g87n">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Administration_FAQ" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Administration_FAQ" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Administration_FAQ&amp;oldid=154569" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Administration_FAQ&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Administration_FAQ" title="Administration FAQ – Deutsch" lang="de" hreflang="de" data-title="Administration FAQ" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/FAQ_Administración" title="FAQ Administración – español" lang="es" hreflang="es" data-title="FAQ Administración" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/FAQ_d%27administration" title="FAQ d&#039;administration – français" lang="fr" hreflang="fr" data-title="FAQ d&#039;administration" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-it nav-item mw-list-item"><a href="https://docs.moodle.org/it/FAQ_Amministrazione" title="FAQ Amministrazione – italiano" lang="it" hreflang="it" data-title="FAQ Amministrazione" data-language-autonym="Italiano" data-language-local-name="italiano" class="interlanguage-link-target nav-link">Italiano</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 4 November 2025, at 15:23.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":269,"wgPageParseReport":{"limitreport":{"cputime":"0.028","walltime":"0.071","ppvisitednodes":{"value":141,"limit":1000000},"postexpandincludesize":{"value":731,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":100,"limit":5000000},"timingprofile":["100.00%    2.235      1 Template:Managing_a_Moodle_site","100.00%    2.235      1 -total"]},"cachereport":{"timestamp":"20260823010158","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

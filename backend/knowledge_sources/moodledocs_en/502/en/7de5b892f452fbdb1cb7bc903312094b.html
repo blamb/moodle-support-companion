@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>filter generico - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"d7df14c0c77a5dc0cf3feeb9","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"filter_generico","wgTitle":"filter generico","wgCurRevisionId":145213,"wgRevisionId":145213,"wgArticleId":20389,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Plugin","Filter"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"filter_generico","wgRelevantArticleId":20389,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/filter_generico">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-filter_generico rootpage-filter_generico layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdisxgwrk"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdisxgwrk" id="igdisxgwrk">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=filter+generico" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/filter_generico">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/filter_generico">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/filter_generico">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="7de5b892f452fbdb1cb7bc903312094b.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:filter_generico" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=filter_generico&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=filter_generico&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">filter generico</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock">
+<table class="infobox">
+
+<tbody><tr>
+<th><b><a class="mw-selflink selflink">filter generico</a></b>
+</th></tr>
+<tr>
+<td>Type
+</td>
+<td>filter
+</td></tr>
+<tr>
+<td>Set
+</td>
+<td>N/A
+</td></tr>
+<tr>
+<td>Downloads
+</td>
+<td><a rel="nofollow" class="external free" href="https://moodle.org/plugins/filter_generico">https://moodle.org/plugins/filter_generico</a>
+</td></tr>
+<tr>
+<td>Issues
+</td>
+<td><a rel="nofollow" class="external free" href="https://github.com/justinhunt/moodle-filter_generico/issues">https://github.com/justinhunt/moodle-filter_generico/issues</a>
+</td></tr>
+<tr>
+<td>Discussion
+</td>
+<td><a rel="nofollow" class="external free" href="https://moodle.org/mod/forum/discuss.php?d=261896">https://moodle.org/mod/forum/discuss.php?d=261896</a>
+</td></tr>
+<tr>
+<td>Maintainer(s)
+</td>
+<td><a href="https://docs.moodle.org/502/en/User:Justin_Hunt"><bdi>Justin Hunt</bdi></a>
+</td></tr>
+</tbody></table>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+<p>Using Generico (and Video Easy)
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Whats_the_difference_between_Generico_and_VideoEasy?"><span class="tocnumber">2</span> <span class="toctext">Whats the difference between Generico and VideoEasy?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#VideoEasy"><span class="tocnumber">2.1</span> <span class="toctext">VideoEasy</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Generico"><span class="tocnumber">3</span> <span class="toctext">Generico</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Using_a_Generico_template"><span class="tocnumber">3.1</span> <span class="toctext">Using a Generico template</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Examining_a_simple_Generico_Template"><span class="tocnumber">3.2</span> <span class="toctext">Examining a simple Generico Template</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Importing_and_Exporting_Templates"><span class="tocnumber">3.3</span> <span class="toctext">Importing and Exporting Templates</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#The_Template_Fields"><span class="tocnumber">3.4</span> <span class="toctext">The Template Fields</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#The_Template_Key"><span class="tocnumber">3.4.1</span> <span class="toctext">The Template Key</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#The_Template_Name"><span class="tocnumber">3.4.2</span> <span class="toctext">The Template Name</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#The_Template_Instructions"><span class="tocnumber">3.4.3</span> <span class="toctext">The Template Instructions</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#The_Template_Body"><span class="tocnumber">3.4.4</span> <span class="toctext">The Template Body</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#The_Template_Ends_Section"><span class="tocnumber">3.4.5</span> <span class="toctext">The Template Ends Section</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#The_Template_AMD_flag"><span class="tocnumber">3.4.6</span> <span class="toctext">The Template AMD flag</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#The_Template_JQuery_flag"><span class="tocnumber">3.4.7</span> <span class="toctext">The Template JQuery flag</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#The_Template_Require_JS"><span class="tocnumber">3.4.8</span> <span class="toctext">The Template Require JS</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#The_Template_Script"><span class="tocnumber">3.4.9</span> <span class="toctext">The Template Script</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#The_Template_Upload_JS"><span class="tocnumber">3.4.10</span> <span class="toctext">The Template Upload JS</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#The_Template_Require_CSS"><span class="tocnumber">3.4.11</span> <span class="toctext">The Template Require CSS</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#The_Template_CSS"><span class="tocnumber">3.4.12</span> <span class="toctext">The Template CSS</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#The_Template_Upload_CSS"><span class="tocnumber">3.4.13</span> <span class="toctext">The Template Upload CSS</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#The_Template_Dataset"><span class="tocnumber">3.4.14</span> <span class="toctext">The Template Dataset</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#The_Template_Dataset_Variables"><span class="tocnumber">3.4.15</span> <span class="toctext">The Template Dataset Variables</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-24"><a href="#Native_Variables"><span class="tocnumber">4</span> <span class="toctext">Native Variables</span></a>
+<ul>
+<li class="toclevel-2 tocsection-25"><a href="#Common_Native_Variables"><span class="tocnumber">4.1</span> <span class="toctext">Common Native Variables</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Generico_Native_Variables"><span class="tocnumber">4.2</span> <span class="toctext">Generico Native Variables</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Video_Easy_Native_Variables"><span class="tocnumber">4.3</span> <span class="toctext">Video Easy Native Variables</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>In technical terms Generico and Video Easy are filters for Moodle. But that doesn't go very far towards describing how they can help you.  In user speak, they allow an administrator to define reusable snippets of html/css and javascript that can be popped into Moodle html areas. These snippets are called templates. Simple templates can be used to display a welcome message with the current logged in user's name, an attractive green button that returns users to the main course page, a video player or an FAQ style accordion. More advanced templates have been used to make QR codes, text to speech widgets and image slideshows. 
+</p><p>Whats so good about this? Well it gives you considerable ability to customize your Moodle site without having to resort to multiple plugins, or custom PHP coding.  It also allows you to centralise and reuse common bits of html, such as disclaimers and copyright notices. Finally it provides a way to allow your users to perform tasks such as the embedding of iframe content from a specific site, without needing to give them permission to embed iframes generally.
+</p><p>Writing templates requires as much skill as the complexity of the template. But using templates that have already been made requires no particular skill at all. Both Generico and VideoEasy come with a collection of pre-made templates to help you get started.
+</p>
+<h2><span id="Whats_the_difference_between_Generico_and_VideoEasy.3F"></span><span class="mw-headline" id="Whats_the_difference_between_Generico_and_VideoEasy?">Whats the difference between Generico and VideoEasy?</span></h2>
+<p>They are very similar and from a template makers point of view are almost the same thing. Where they differ mainly is how and when Moodle chooses to apply a template to an HTML page, and how variables are passed to the template.
+</p>
+<h3><span class="mw-headline" id="VideoEasy">VideoEasy</span></h3>
+<p>VideoEasy works by looking for html links on the page. If the html link matches a file extension VideoEasy is registered for, it will replace the link with the processed template.
+</p><p>So a link to a video file with an .mp4 extension, could be replaced by an mp4 video player. Despite its name, VideoEasy is not limited to video at all. it is possible to register other file extensions too. For example, it is possible to register the .pdf extension and replace .pdf links with a pdf viewer.
+</p><p>File extensions that VideoEasy should handle are registered at: 
+Site Administration -&gt; Plugins -&gt; Filters -&gt; Video Easy -&gt; General Settings
+</p><p>The actual template that should be used for a file extension is registered on the same page. This can be overridden at the course or activity level via the &ldquo;settings&rdquo; button on the &ldquo;filter&rdquo; page accessed from the activity instance's settings menu. This allows different courses or activities to use different video players if necessary.
+</p><p>Variables can be passed to the template by appending parameters to the html link URL. So in the url <a rel="nofollow" class="external free" href="http://mysite.com/?favoritefruit=apple">http://mysite.com?favoritefruit=apple</a>, the variable 'favoritefruit' will be populated with the value 'apple' and made available to the template as @@favoritefruit@@.
+</p>
+<h2><span class="mw-headline" id="Generico">Generico</span></h2>
+<p>Generico works a little differently to VideoEasy. Rather than act on links in the text area, it acts on specially formatted text blocks that look like this:
+{GENERICO:type="greenbutton",text="Go Back"}
+</p><p>When it finds one of these, it replaces it with the processed template. A template author might be able to make these crafty little text blocks by hand, but it is not realistic for average users. So a special plugin is available for the Atto text editor which can prepare the Generico filter strings for the user. 
+</p>
+<h3><span class="mw-headline" id="Using_a_Generico_template">Using a Generico template</span></h3>
+<p>There are two ways you might add a Generico template to a page. 
+</p>
+<pre>i) Manually enter a Generico filter string on a page
+ii) Selecting a Generico template from the Generico popup dialog on the Atto text editor.
+</pre>
+<p>In most cases you will use the latter, because it is simple and less prone to human error. Lets look at the example of a Generico template to display a pretty button with custom caption and link. In such a case the Generico filter if added by hand would look like this:
+{GENERICO:type=prettybutton,caption="Generico goes to Google",link="<a rel="nofollow" class="external free" href="https://www.google.com/">http://www.google.com</a>"}
+</p><p>If however you used the Atto popup dialog, it would look like this first:
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:attopopup.png" class="mw-file-description"><img src="images_en/a/ac/54fe0fa21a401c84fbb47af4001caa10.png" decoding="async" width="439" height="273" class="mw-file-element" data-file-width="439" data-file-height="273"></a></span>
+</p><p>But even after you have used the Atto Generico plugin to insert your Generico string on the page, it is still just a Generico string. It doesn't look anything like a button. This is because Generico processes the filter string only after the html area content is saved, and the page containing it is displayed.
+</p><p>The reason we call Generico templates &hellip; &ldquo;templates&rdquo; is that they are combined with some data to produce the final html snippet that is displayed on the page. In the case of the pretty button, this data was the caption and the url. When the template is created, placeholders called variables are inserted into it. Then when you add the template to a page you pass in the data, e.g. caption and url, and they will be merged with the template to create the html snippet. The Generico Atto text editor plugin will generate a simple form with a field (i.e. text area or dropdown list) for each variable to make it easier for the user.
+</p>
+<h3><span class="mw-headline" id="Examining_a_simple_Generico_Template">Examining a simple Generico Template</span></h3>
+<p>So lets make a simple Generico template. Templates are defined in the site administration area. Each template will have an entry under:
+site administration-&gt;plugins-&gt;filters-&gt;generico
+</p><p>By default there are 20 blank templates when Generico is installed, but it is possible to add more. Blank Generico templates do nothing, you have to fill them in before anything will happen. But its easy enough to make a new template that does something, because there are preset templates that can be used. Lets use the simplest one of all the &ldquo;hello world&rdquo; template. To do this:
+i) open a blank template 
+ii) from the first control on the template settings page, choose &ldquo;hello world&rdquo; from the dropdown list of template presets.
+iii) Scroll to the bottom and save the template.
+That's it, the template is created. Type the filter string &ldquo;{GENERICO:type=helloworld}&rdquo; into an html area (try a forum post or a page resource), Or choose/insert the filter string from the Generico atto editor plugin. When the page is displayed there should be a message saying &ldquo;hello world [yourname].&rdquo;
+</p><p>So what actually happened there? Well it goes like this....
+</p>
+<pre>a) Moodle is sending the page to the browser
+b) It looks through the page for any Generico filter strings, and when it finds one:
+ i) it removes the filter string from the output
+ ii) it processes the filter string and replaces it with the processed output.
+c) it sends the output to the page
+</pre>
+<p>The processing involves looking for variable placeholders in the template, and matching those with data in the filter string. When they match, variable placeholders in the template are swapped out for the filter string data. Then the processed template is returned to the browser. This behaviour is explained in more detail later. 
+</p>
+<h3><span class="mw-headline" id="Importing_and_Exporting_Templates">Importing and Exporting Templates</span></h3>
+<p>To allow you to share templates that you or others have created, it is possible to import and export them. On the top right of a template's settings page, there is a green box titled &ldquo;Bundle.&rdquo; Clicking on the box will export the template to a text file of the same name as the template key. So for template &ldquo;helloworld,&rdquo; a hello world.txt file will be exported and the download begin immediately. To import such a file, you drag the text file onto the green bundle box. The border will turn blue. When the file is dragged and dropped there, the currently loaded template will be overwritten or filled in, with the imported content. The changes are not permanent however until the template is saved. So you will need to scroll to the bottom of the page and press the save button.
+</p><p><br>
+</p>
+<h3><span class="mw-headline" id="The_Template_Fields">The Template Fields</span></h3>
+<p>The settings page for each template has X fields for Video Easy and 14 for Generico. The order and naming are a little different also. We can think of each field as being  in one of 4 categories: General, HTML, Javascript and CSS. In the case of the hello world template there is no javascript or CSS. We just return some html. But we could add some CSS styles or even a javascript click event to the text if we wanted to. Lets look at each field in turn                                                                                                                                                                                                                                                                    
+</p>
+<pre>a) The Template Key
+b) The Template Name
+c) The Template Instructions 
+d) The Template Body
+e) The Template Body End
+f) The Template AMD flag
+g) The Template JQuery flag
+h) The Template Require JS 
+i) The Template Script 
+j) The Template Upload JS
+k) The Template Require CSS
+l) The Template CSS
+m) The Template Upload CSS
+n) The Template Dataset
+o) The Template Dataset Datavars
+    
+</pre>
+<h4><span class="mw-headline" id="The_Template_Key">The Template Key</span></h4>
+<p>The template key is a unique identifier that is used in internal processing and is the most important part of a Generico filter string. The key should not contain any spaces or non alphanumeric characters(underscores are ok). The key is the &ldquo;type&rdquo; part of the Generico filter string. e.g. in the prettybutton example we used earlier, the template key would be &ldquo;pretty button.&rdquo;
+{GENERICO:type=prettybutton,caption="Go to Google",link="<a rel="nofollow" class="external free" href="https://google.com/">http://google.com</a>"}
+</p><p>All other parts of the template you can change and the behaviour will change accordingly when the template is processed. But if the key is changed, all the filter strings that are live on the site for that template will no longer be processed. That is because the &ldquo;type&rdquo; will not be matched with any template's key.
+</p>
+<h4><span class="mw-headline" id="The_Template_Name">The Template Name</span></h4>
+<p>The template name is simply what is displayed around the site when referring to the template. i.e. on the settings pages and in the Atto text editor. Unlike the &ldquo;key&rdquo; you can include spaces and non alpha numeric characters here.
+</p>
+<h4><span class="mw-headline" id="The_Template_Instructions">The Template Instructions</span></h4>
+<p>The template instructions will be displayed on the Atto text editor Generico insert form for the template. There is not much space there, so short instructions are best.
+</p>
+<h4><span class="mw-headline" id="The_Template_Body">The Template Body</span></h4>
+<p>The template body is where you put any html that should be put on the page in place of the Generico filter string that is being processed. In the case of the &ldquo;helloworld&rdquo; example the template body looks like this:
+Hello World @@USER:firstname@@
+</p><p>Note the use of a variable, in this case a preset variable that will return the current user's first name. But the important thing here is that the actual replacement of the generic filter string takes place here. Whatever is in the body section will replace the string, albeit with any variables replaced by their actual value.
+</p>
+<h4><span class="mw-headline" id="The_Template_Ends_Section">The Template Ends Section</span></h4>
+<p>This is only present for Generico. This will be processed in place of the &ldquo;Template Body&rdquo; section if the filter string's type attribute is of the format &rsquo;type=[key]_end&rsquo; e.g. {GENERICO:type=helloworld_end}. This is designed for use in the case where a template requires opening and closing tags. Lets take an example of a lightbox template that shows an image in a lightbox when a button was pressed. Two generico filter strings would be placed on the page, one for the opening tags, and another for the closing tags. So it might look like this:
+{GENERICO:type=lightbox}
+{GENERICO:type=lightbox_end}
+</p><p>The user could then insert an image between them using the standard Moodle &ldquo;insert image&rdquo; icon on the editor.  The Generico Atto plugin is aware of the Template end field, and if it is not blank will automatically insert the end filter string  on the page along with the main filter string.
+</p>
+<h4><span class="mw-headline" id="The_Template_AMD_flag">The Template AMD flag</span></h4>
+<p>AMD is a javascript loading system that was put in place in Moodle in version 2.9. AMD loads any javascript dependencies for your template safely, and prevents naming and version conflicts with the dependencies of other templates and javascript on the same page. If your template does not involve javascript or its older than Moodle 2.9, then you won't need to worry about this. If you do use javascript in the &ldquo;template script&rdquo; area (described later) then setting AMD to &ldquo;yes&rdquo; will make jQuery available to your script. If you load 3rd party libraries in the &ldquo;template require JS&rdquo; or &ldquo;template upload JS&rdquo; area you might have to choose whatever the 3rd party library recommends. A library that supports AMD will generally fail if you do not select &ldquo;yes.&rdquo; A library which does not support AMD will usually fail if you select &ldquo;yes.&rdquo;
+</p><p><br>
+</p>
+<h4><span class="mw-headline" id="The_Template_JQuery_flag">The Template JQuery flag</span></h4>
+<p>When a third party library you load, or your own script, relies on JQuery you can force it to be loaded by setting this to &ldquo;yes.&rdquo; But you really should never do this. If you can find another way, then that would be better. (Warning: techy explanation follows) The reason for this, is that jQuery has versions and plugins. If another template or something else on the page has loaded a jQuery plugin, or requires a different version of jQuery, when you force load jQuery you will overwrite any jQuery (and plugins) that something else has already loaded. That something else will then fail. These conflicts can be hard to track down and are the very thing that the AMD system was designed to avoid. If you really need jQuery, and you can't use AMD, try to use a theme that loads jQuery. Most of the nice themes like Essential do. Failing that, in the additional HTML area of moodle in the &ldquo;HEAD&rdquo; section, add your jQuery call. (Note that even loading jQuery using the additional HTML section of Moodle, you risk causing problems with other plugins that require jQuery.) 
+</p><p>Devs here might wonder why Generico and VideoEasy don't just use load jQuery using the $PAGE requirements manager in PHP. The problem is that the filter is often called after the page header has already been sent out to the browser. Trying to require jQuery via the $PAGE requirements manager at that point will cause an error.  
+</p>
+<h4><span class="mw-headline" id="The_Template_Require_JS">The Template Require JS</span></h4>
+<p>If your template requires a 3rd party library, such as a library for making light boxes, then you can place the url for the library here. This is useful when the library makes itself available via a CDN (content distribution network). Because there is not requirement to supply the library itself with the template, just the URL, many presets and Generico/VideoEasy bundles load 3rd party libraries in this way. 
+</p><p>When specifying the library's URL, start with // (i.e. not https: or http:).
+</p>
+<h4><span class="mw-headline" id="The_Template_Script">The Template Script</span></h4>
+<p>The template script if specified will be called once for each of your template's filter strings on the page. It is common to use this to set up any event handlers or any DOM manipulation you need to do to init your template. For example, if you are placing a button on the page that will open an image in a lightbox, you would add the html for the button in the &ldquo;template body&rdquo; and attach the event handler for the click event here. In this case you will generally need to give the button a class or an id attribute, and then select the element for that class or id in the script area. This is because the script is executed only after all the html has loaded on the page. To make it easy to use the same id or class in the &ldquo;template script&rdquo; and &ldquo;template body&rdquo; areas a special variable AUTOID is made available. This will provide a random and hopefully unique string that can be used as an element's id or class, and that will be the same throughout the processing of a particular filter string.
+</p><p>Now at this point we really need to talk about variables. In your template you can use variables of your own definition, or you can use preset variables. AUTOID and USER:firstname are two examples of preset variables. Generico/VideoEasy will ensure they contain the correct data. You can declare your own custom variables too. Anything surrounded by double @@ marks will be treated as a variable. So in your template @@AUTOID@@ and @@FAVORITECOLOR@@ would be recognised as variables. If its a custom variable Generico will get the value from the filter string. VideoEasy will get custom variables&rsquo; values from the URL parameters. It is also possible to set default values for Generico/VideoEasy so that if not specified the default value will be used. 
+</p><p>There is an important thing to note about using variables. Variables can be used in the &ldquo;template body&rdquo; and &ldquo;template script&rdquo; areas. But the processing is a little different. In the template body the variable @@FAVORITECOLOR@@ might be replaced by &lsquo;pink.&rsquo; But in the template script it will be replaced by &lsquo;opts[&lsquo;FAVORITECOLOR&rsquo;].&rsquo;
+</p><p>So in the &ldquo;template body&rdquo; you can place variables any way you choose and they will be swapped straight out for the value. But in &ldquo;template script&rdquo; you have to be careful NOT to write something like this:
+var elem = $(&lsquo;#@@AUTOID@@&rsquo;);
+</p><p>this will fail because post processing it will look like this:
+var elem = $(&lsquo;#opts[&lsquo;AUTOID&rsquo;]&rsquo;);
+</p><p>Instead you should write this:
+var elem = $(&lsquo;#&rsquo; + @@AUTOID@@);
+</p><p>This will work and will lead to something like this:
+var elem = $(&lsquo;#&rsquo; + opts[&lsquo;AUTOID&rsquo;]);
+</p><p>You might be wondering why we have to do it this way for the script. The reason is that the script file will be cached be Moodle. By using the opts variable in place of the literal value of the variable, caching will work nicely and the user will never be served up old content (or someone else's content).
+</p><p><br>
+</p>
+<h4><span class="mw-headline" id="The_Template_Upload_JS">The Template Upload JS</span></h4>
+<p>The upload js area allows the administrator to upload a javascript file that will be loaded in the same way that the &ldquo;template require js&rdquo; file is loaded. It can be used in addition to the template require js file and is useful when you need more than one 3rd party library file, or when you want the javascript file loaded from the Moodle server and not from a CDN or other internet source. 
+</p>
+<h4><span class="mw-headline" id="The_Template_Require_CSS">The Template Require CSS</span></h4>
+<p>If your template requires a 3rd party CSS file,  then you can place the url for the library here. When specifying the library's URL, start with // (i.e. not https: or http:).
+</p>
+<h4><span class="mw-headline" id="The_Template_CSS">The Template CSS</span></h4>
+<p>Specify any custom CSS for your template here. Unfortunately you cannot use template variables in the custom css area. The custom CSS is loaded quite late and the late application of styles is noticeable by the user. If this is a concern, save your custom css declarations to a file and upload them into the &ldquo;template upload CSS&rdquo; area.
+</p>
+<h4><span class="mw-headline" id="The_Template_Upload_CSS">The Template Upload CSS</span></h4>
+<p>Similar to the &ldquo;Template upload js&rdquo; area, the &ldquo;Template upload css&rdquo; area allows the template author to upload a 3rd party CSS file. This is useful when the file should be accessed from the local server, or when the CSS styles should be applied earlier than those specified in &ldquo;custom css&rdquo; are.
+</p>
+<h4><span class="mw-headline" id="The_Template_Dataset">The Template Dataset</span></h4>
+<p>It is also possible to set a custom SQL script which will be executed server side and the resulting data returned to your template. The SQL script will be called using Moodle's $DB-&gt;get_records_sql() function. See: <a rel="nofollow" class="external free" href="https://docs.moodle.org/dev/Data_manipulation_API#moodle_database::get_records_sql.28.29">https://docs.moodle.org/dev/Data_manipulation_API#moodle_database::get_records_sql.28.29</a>
+</p><p>If there is only a single record returned, the record will be available for use in the body area of the template using the following syntax @@DATASET:[fieldname]@@. 
+e.g.
+template dataset: &ldquo;SELECT * FROM {user} WHERE id = 37;&rdquo;
+template body: User 37&rsquo;s first name is <b>@@DATASET:firstname@@</b>, don&rsquo;t forget it.
+</p><p>Whether one record or many are returned, if you specify a dataset then a @@DATASET@@ variable will be available to your template's custom javascript. This will be an array of objects, each object representing one of the records that were returned. In the process of conversion from a PHP array of objects to an javascript array of objects, the order/index of the objects in the array appears to be modified, and so cannot be relied upon.
+</p>
+<h4><span class="mw-headline" id="The_Template_Dataset_Variables">The Template Dataset Variables</span></h4>
+<p>Template variables do not work in the template dataset. This is because the get_records_sql api has its own template system. The first parameter to the function is the SQL statement. When you place question marks in the SQL statement, i.e. &lsquo;?&rsquo; ,  Moodle recognises that as a variable. Variable values are passed in the second parameter to the function. Moodle will swap out each question mark for one of the values passed in the second parameter. Generic uses this system and allows you to specify a comma separated list of variable values in the Template Dataset Variables field. You can specify Generico template variables here, which gives this a lot of power. Lets demonstrate this by rewriting the above example to return the currently logged in user's information.
+</p><p>template dataset: &ldquo;SELECT * FROM {user} WHERE id =&nbsp;?;&rdquo;
+</p><p>template dataset vars: @@USER:id@@
+</p><p>template body: User @@USER:id@@&rsquo;s first name is <b>@@DATASET:firstname@@</b>, don&rsquo;t forget it.
+</p><p><br>
+Actually this is trivial because we already have access to the currently logged in user's information via the Generico @@USER:xx@@ variable. But it demonstrates how to pull a dataset from the database using Generico template variables. You can use @@USER:xx@@, @@COURSE:xx@@ or any of the preset variables, and in addition can use variables which you have defined yourself.
+</p><p>If there is more than one record returned from the get_records_sql call, then you won't be able to access @@DATASET:xx@@ to get the field. In that case @@DATASET@@ will contain an array of objects and will only really be useful in the custom js area. Each object will represent a record from the dataset. The indexes on the array will likely be the ids of the records returned, so you won't be able to get the first record with @@DATASET@@[0].  
+</p><p>Note that there are no ajax calls to get the data. When the filter is parsed the data will be fetched, and after that it will not be fetched again.
+</p><p>NB A bug in the current implementation of Generico means that only the first of the set of variables specified in the Dataset variables is actually made available to the plugin.
+</p>
+<h2><span class="mw-headline" id="Native_Variables">Native Variables</span></h2>
+<p>Generico and Video Easy provide a number of variables that can be used out of the box. They should be surrounded by double @ marks in order to be recognised. e.g. @@AUTOID@@ or @@USER:firstname@
+</p>
+<h3><span class="mw-headline" id="Common_Native_Variables">Common Native Variables</span></h3>
+<p>There is only one of these. But its a good one, you will use it a lot.
+</p><p>AUTOID = An auto generated id to use in the container div or elsewhere. 
+</p><p>This is used to give a unique id to html elements, that can then be found from javascript. 
+The value of AUTOID will be different each time the filter is run, but will be the same for each field in the template.
+</p>
+<h3><span class="mw-headline" id="Generico_Native_Variables">Generico Native Variables</span></h3>
+<p>USER:xxxx =A value from the current user's user record. xxxx= the field of the user record
+</p><p>COURSE:xxxx A value from the current course record. xxxx= the field of the course record
+</p><p>WWWROOT = The url of the moodle site
+</p><p>MOODLEPAGEID = The value of the id parameter passed into the url of the current page(if present)
+</p><p>URLPARAM:xxxx = The value of a url param passed into the current page. xxxx= the url param. For videoeasy, url params are available as top level native variables, without the URLPARAM: bit.
+</p>
+<h3><span class="mw-headline" id="Video_Easy_Native_Variables">Video Easy Native Variables</span></h3>
+<p>FILENAME = filename of video
+</p><p>AUTOJPGFILENAME = the video filename but with a jpg extension
+</p><p>AUTOMIME = video file mime type determined by file extension
+</p><p>AUTOPNGFILENAME = the video filename but with a png extension
+</p><p>AUTOPOSTERURLJPG = the full video url but with a jpg extension
+</p><p>AUTOPOSTERURLPNG = the full video url but with a png extension
+</p><p>CSSLINK = used internally to load a CSS file if needed
+</p><p>DEFAULTPOSTERURL = url to a default poster image. VideoEasy ships with  bland grey image. But you can upload your own default poster image on the Video Easy general settings page.
+</p><p>FILEEXT = The file extension of the video file
+</p><p>VIDEOURL = the url of the video
+</p><p>URLSTUB = the url of the video minus the file extension
+</p><p>PLAYER = the type of player (videojs, flowplayer ...etc.)
+</p><p>TITLE = the video title (from linked text)
+</p><p>WIDTH = the width of video
+</p><p>HEIGHT = the height of video
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260823014457
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.022 seconds
+Real time usage: 0.063 seconds
+Preprocessor visited node count: 104/1000000
+Post&#8208;expand include size: 400/2097152 bytes
+Template argument size: 176/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    2.092      1 Template:Infobox_plugin
+100.00%    2.092      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:20389-0!canonical and timestamp 20260823014457 and revision id 145213. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=filter_generico&amp;oldid=145213">https://docs.moodle.org/502/en/index.php?title=filter_generico&amp;oldid=145213</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="25a190cf836432207b62ebb9ebca358b.html" title="Category:Plugin">Plugin</a></li><li><a href="64308879870be7dcde0837c40b02ea0c.html" title="Category:Filter">Filter</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdisxgzfj">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdisxgzz6"></button>
+					<div class="collapse navbar-collapse igdisxgzz6" id="igdisxgzz6">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/filter_generico" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/filter_generico" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=filter_generico&amp;oldid=145213" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=filter_generico&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Filtro_generico" title="Filtro generico – español" lang="es" hreflang="es" data-title="Filtro generico" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 7 December 2022, at 17:20.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":217,"wgPageParseReport":{"limitreport":{"cputime":"0.022","walltime":"0.063","ppvisitednodes":{"value":104,"limit":1000000},"postexpandincludesize":{"value":400,"limit":2097152},"templateargumentsize":{"value":176,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    2.092      1 Template:Infobox_plugin","100.00%    2.092      1 -total"]},"cachereport":{"timestamp":"20260823014457","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

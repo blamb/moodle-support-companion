@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Site security settings - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"07c64973e360e6d98b2df37b","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Site_security_settings","wgTitle":"Site security settings","wgCurRevisionId":155462,"wgRevisionId":155462,"wgArticleId":22058,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Security","Site administration"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Site_security_settings","wgRelevantArticleId":22058,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Password_policy","wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgInternalRedirectTargetUrl":"/502/en/Site_security_settings","wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Site_security_settings">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Site_security_settings rootpage-Site_security_settings layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhyxdli9"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhyxdli9" id="igdhyxdli9">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Site+security+settings" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Password_policy">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Password_policy">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Password_policy">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="fc51905f901bc1765d31f570b453b7d9.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Site_security_settings&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Site_security_settings&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Site_security_settings&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Site security settings</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"><span class="mw-redirectedfrom">(Redirected from <a href="https://docs.moodle.org/502/en/index.php?title=Password_policy&amp;redirect=no" class="mw-redirect" title="Password policy">Password policy</a>)</span></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a> ► <a href="80d19145b4b4a905c08083096b6ab2b8.html" title="Security">Security</a> ► <a class="mw-selflink selflink">Site security settings</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="80d19145b4b4a905c08083096b6ab2b8.html" title="Security">Security</a></div>	
+<div class="content">
+<ul><li><a href="b859a9a32d3e71358a74bf06b4b09124.html" title="Security recommendations">Security recommendations</a></li>
+<li><a href="e25fca702c1df3293d49f8b5c8c7e368.html" title="Security checks">Security checks</a></li>
+<li><a class="mw-selflink selflink">Site security settings</a></li>
+<li><a href="e65c00e4d2c98c0651dc6b367421a746.html" title="Site notifications">Site notifications</a></li>
+<li><a href="aa51869311177de786eb157fc89fdf06.html" title="Password salting">Password salting</a></li>
+<li><a href="9224458d8a9fc4c2083c7bd231bcd94f.html" title="Privacy">Privacy</a></li>
+<li><a href="fd2a052e22a9697929ab4c1677f9c8d0.html" title="Reducing spam in Moodle">Reducing spam</a></li>
+<li><a href="ce451eda7d5a9ddacf31674d9e1f6ebe.html" title="Security FAQ">Security FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1"><a href="#Protect_usernames"><span class="tocnumber">1</span> <span class="toctext">Protect usernames</span></a></li>
+<li class="toclevel-1 tocsection-1"><a href="#Force_users_to_login"><span class="tocnumber">2</span> <span class="toctext">Force users to login</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Force_users_to_login_for_profiles"><span class="tocnumber">3</span> <span class="toctext">Force users to login for profiles</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Force_users_to_login_to_view_user_pictures"><span class="tocnumber">4</span> <span class="toctext">Force users to login to view user pictures</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Open_to_search_engines"><span class="tocnumber">5</span> <span class="toctext">Open to search engines</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Referrer_policy"><span class="tocnumber">6</span> <span class="toctext">Referrer policy</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Allow_indexing_by_search_engines"><span class="tocnumber">7</span> <span class="toctext">Allow indexing by search engines</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Profile_visible_roles"><span class="tocnumber">8</span> <span class="toctext">Profile visible roles</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Maximum_uploaded_file_size"><span class="tocnumber">9</span> <span class="toctext">Maximum uploaded file size</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#User_quota"><span class="tocnumber">10</span> <span class="toctext">User quota</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Allow_EMBED_and_OBJECT_tags"><span class="tocnumber">11</span> <span class="toctext">Allow EMBED and OBJECT tags</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Enable_trusted_content"><span class="tocnumber">12</span> <span class="toctext">Enable trusted content</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Maximum_time_to_edit_posts"><span class="tocnumber">13</span> <span class="toctext">Maximum time to edit posts</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Full_name_format"><span class="tocnumber">14</span> <span class="toctext">Full name format</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Allow_extended_characters_in_usernames"><span class="tocnumber">15</span> <span class="toctext">Allow extended characters in usernames</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Keep_tag_name_casing"><span class="tocnumber">16</span> <span class="toctext">Keep tag name casing</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Profiles_for_enrolled_users_only"><span class="tocnumber">17</span> <span class="toctext">Profiles for enrolled users only</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Cron_execution_via_command_line_only"><span class="tocnumber">18</span> <span class="toctext">Cron execution via command line only</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Cron_password_for_remote_access"><span class="tocnumber">19</span> <span class="toctext">Cron password for remote access</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Account_lockout"><span class="tocnumber">20</span> <span class="toctext">Account lockout</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Password_policy"><span class="tocnumber">21</span> <span class="toctext">Password policy</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Password_rotation_limit"><span class="tocnumber">22</span> <span class="toctext">Password rotation limit</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Log_out_after_password_change"><span class="tocnumber">23</span> <span class="toctext">Log out after password change</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#User_created_token_duration"><span class="tocnumber">24</span> <span class="toctext">User created token duration</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Group_enrolment_key_policy"><span class="tocnumber">25</span> <span class="toctext">Group enrolment key policy</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#Disable_user_profile_images"><span class="tocnumber">26</span> <span class="toctext">Disable user profile images</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#Email_change_confirmation"><span class="tocnumber">27</span> <span class="toctext">Email change confirmation</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#Remember_username"><span class="tocnumber">28</span> <span class="toctext">Remember username</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#Strict_validation_of_required_fields"><span class="tocnumber">29</span> <span class="toctext">Strict validation of required fields</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#See_also"><span class="tocnumber">30</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Protect_usernames">Protect usernames</span></h2>
+<p>If enabled, when a user attempts to reset their password and enters a username or email address, the following message is displayed: "If you supplied a correct username or email address then an email should have been sent to you." This is to prevent a malicious party from using the interface to determine which usernames and email addresses are in use in valid accounts.
+</p><p>If the protect usernames setting is disabled, when a user attempts to reset their password they are provided with feedback regarding whether an account exists with the username or email address supplied. For example, the message "The email address was not found in the database" may be displayed.
+</p>
+<h2><span class="mw-headline" id="Force_users_to_login">Force users to login</span></h2>
+<p><b>New in 5.2</b> This settins is now located in <i>Site administration &gt; General &gt; Login settings</i> and is enabled by default on new installs.
+If you turn this setting on, all users must login before they even see the <a href="ce3b69018f5e65e704b2cf738e8e9eff.html" class="mw-redirect" title="Front Page">Front Page</a> of the site. Note however that this does not prevent guest access to courses, if you have autologin guests enabled in <a href="https://docs.moodle.org/502/en/User_policies" title="User policies">User policies</a>.
+</p>
+<h2><span class="mw-headline" id="Force_users_to_login_for_profiles">Force users to login for profiles</span></h2>
+<p>Leave this set to Yes to keep anonymous visitors away from user profiles. 
+</p>
+<h2><span class="mw-headline" id="Force_users_to_login_to_view_user_pictures">Force users to login to view user pictures</span></h2>
+<p>If enabled, users must login in order to view user profile pictures and the default user picture will be used in all notification emails.
+</p>
+<h2><span class="mw-headline" id="Open_to_search_engines">Open to search engines</span></h2>
+<p>Enabling this setting allows search engines crawlers guest access to your site. Any part of the site that allows guest access will then be searchable on search engines. In addition, people coming in to your site via a search engine search will automatically be logged in as a guest.
+</p>
+<h2><span class="mw-headline" id="Referrer_policy">Referrer policy</span></h2>
+<p>A referrer policy can be set, various parts of moodle rely on the referrer being set so it's generally best to only remove or reduce the referrer for external links. So a policy of origin-when-cross-origin is probably the best balance. 
+See the MDN docs for more details:
+</p><p><a rel="nofollow" class="external free" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy</a>
+</p>
+<h2><span class="mw-headline" id="Allow_indexing_by_search_engines">Allow indexing by search engines</span></h2>
+<p>This determines whether to allow search engines to index your site. The default is Everywhere except login and signup pages.
+</p>
+<h2><span class="mw-headline" id="Profile_visible_roles">Profile visible roles</span></h2>
+<p>Any role which is checked/ticked here will be visible on  user profiles and the Participation screen.
+</p>
+<h2><span class="mw-headline" id="Maximum_uploaded_file_size">Maximum uploaded file size</span></h2>
+<p>Probably the most frequently asked question in the Moodle.org Using Moodle forums is "How do I increase the upload file size limit?"
+</p><p>Upload file sizes are restricted in a number of ways - each one in this list restricts the following ones:
+</p><p>1. The Apache server setting LimitRequestBody ... default in Apache 2.x or greater is set to 0 or an unlimited upload size
+</p><p>2. The PHP site settings post_max_size and upload_max_filesize in php.ini&nbsp;: <b>modify php.ini in web server directories</b> ( apache2.x.x/bin/php.ini ) not in php directories&nbsp;:
+</p>
+<pre>post_max_size = 128M;  to increase limit to 128 Megabytes;
+upload_max_filesize = 128M;  to increase limit to 128 Megabytes;
+max_execution_time = 600&nbsp;; Maximum execution time of each script, in seconds;
+</pre>
+<p>3. The Moodle site-wide maximum uploaded file size setting: <i>Settings &gt; Site administration &gt; Security &gt; Site policies &gt; Maximum uploaded file size</i>.
+</p><p>4. The Moodle course maximum uploaded file size setting in the course default  settings: <i>Settings &gt; Site administration &gt; Courses &gt; Course default settings</i>
+</p><p>5. The  file size settings in each individual course in <i>Course Administration&gt;Settings</i>.
+</p><p>5. Certain course activity module settings (for example, Assignment)
+</p>
+<ul><li>See <a href="08263c95d9de0b0d759a71b02e80681e.html" title="File upload size">File upload size</a> for more details.</li></ul>
+<h2><span class="mw-headline" id="User_quota">User quota</span></h2>
+<p>The maximum number of bytes that a user can store in their own <a href="2cc0de6a0a61714179a3d1e2e167f5eb.html" title="Private files">Private files</a> area.
+</p>
+<h2><span class="mw-headline" id="Allow_EMBED_and_OBJECT_tags">Allow EMBED and OBJECT tags</span></h2>
+<p>Allowing these presents a security risk but if you wish normal users such as students to be able to use them then check the box here.
+</p>
+<h2><span class="mw-headline" id="Enable_trusted_content">Enable trusted content</span></h2>
+<p>By default Moodle will always thoroughly clean text that comes from users to remove any possible bad scripts, media etc. that could be a security risk. The Trusted Content system is a way of giving particular users that you trust the ability to include these advanced features in their content without interference. To enable this system, you need to first enable this setting, and then grant the <a href="Capabilities/moodle/76f0c8671d9467a8b174aa5ae5bcf600.html" title="Capabilities/moodle/site:trustcontent">Trust submitted content</a> capability to a specific Moodle role. Texts created or uploaded by such users will be marked as trusted and will not be cleaned before display.
+</p>
+<h2><span class="mw-headline" id="Maximum_time_to_edit_posts">Maximum time to edit posts</span></h2>
+<p>This sets the editing time for forum postings. The editing time is the amount of time users have to change forum postings before they are mailed to subscribers.
+</p><p>Please refer to the forum discussions <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=28679">Editing a forum post after the 30 minutes deadline</a> and <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=5367">The philosophy underlying "no editing after 30 minutes"</a>
+</p>
+<h2><span class="mw-headline" id="Full_name_format">Full name format</span></h2>
+<p>This setting has been moved in Moodle 2.6 onwards to <i>Administration &gt; Site administration &gt; Users &gt; Permissions &gt; <a href="c7cf32e867f02345a1165ca7a1d4e5b2.html" class="mw-redirect" title="Roles settings">User policies</a></i>.
+</p>
+<h2><span class="mw-headline" id="Allow_extended_characters_in_usernames">Allow extended characters in usernames</span></h2>
+<p>The default here, unchecked = unenabled, can only contain alphabetical letters in lowercase, numbers, hypen '-', underscore '_', period '.', or at sign '@'. If you enable this, it will be possible to have any characters for the username, but they must still be lowercase. This setting would allow you for example to have usernames with accents such as &ouml; or &ecirc; and so on.
+</p><p>Note: In Moodle 3.4.2 onwards, the Site policy URL and Site policy URL for guests settings have been moved to 'Policy settings' in the Site administration.
+</p>
+<h2><span class="mw-headline" id="Keep_tag_name_casing">Keep tag name casing</span></h2>
+<p>If checked, then tags like the following will be displayed: SOCCER, gUiTaR, MacDonalds, music
+</p><p>If unchecked, then all tags will be displayed as follows: Soccer, Guitar, Macdonalds, Music
+</p>
+<dl><dd><i>Tips</i>:
+<ul><li>For English, off is useful.</li>
+<li>For Japanese, no changes are made either way.</li>
+<li>For languages where this kind of capitalization changes the meaning, it is best to keep this option on.</li></ul></dd></dl>
+<h2><span class="mw-headline" id="Profiles_for_enrolled_users_only">Profiles for enrolled users only</span></h2>
+<p>To prevent misuse by spammers, profile descriptions of users who are not yet enrolled in any course are hidden. New users must enrol in at least one course before they can add a profile description.
+</p>
+<h2><span class="mw-headline" id="Cron_execution_via_command_line_only">Cron execution via command line only</span></h2>
+<p><a href="37fc181470a569556f94c1f35940d0a7.html" title="Cron">Cron</a> is an action that runs various administrative jobs on your Moodle such as sending out forum posts. Running the cron from a web browser can expose privileged information to anonymous users. Thus it is recommended to only run the cron from the command line or set a cron password for remote access.
+</p>
+<h2><span class="mw-headline" id="Cron_password_for_remote_access">Cron password for remote access</span></h2>
+<p>Setting a password will mean that users can only run cron from the browser if they know the password and add it like this:
+www.YOURMOODLE.com/admin/cron.php/?password=THEPASSWORDYOUSET.
+</p>
+<h2><span class="mw-headline" id="Account_lockout">Account lockout</span></h2>
+<p>Account lockout may be enabled. 
+</p><p>Account lockout threshold: After a specified number of failed login attempts, a user's account is locked and they are sent an email containing a URL to unlock the account. Setting this to 'No' means there is no threshold and an account attempting to log in can do so an unlimited number of times.
+</p><p>Account lockout observation window: Observation time for lockout threshold, if there are no failed attempts the threshold counter is reset after this time. This is the counter for how long to watch for more failed attempts by an account trying to log in even after being locked out, the counter will reset at each attempt and last this long.
+</p><p>Account lockout duration: Locked out account is automatically unlocked after this duration.
+</p><p>The account may also be unlocked by an administrator in <i>Administration &gt; Site administration &gt; Users &gt; Accounts &gt; Browse list of users</i> or by waiting for the account lockout duration to elapse.
+</p>
+<h2><span class="mw-headline" id="Password_policy">Password policy</span></h2>
+<p>It is highly recommended that a password policy is set to force users to use stronger passwords that are less susceptible to being cracked by an intruder.
+</p>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:Password_policy.png" class="mw-file-description"><img src="images_en/thumb/3/32/Password_policy.png/50834168de1aeb0917497c4e37f62b75.png" decoding="async" width="300" height="218" class="mw-file-element" srcset="/502/en/images_en/thumb/3/32/Password_policy.png/450px-Password_policy.png 1.5x, /502/en/images_en/thumb/3/32/Password_policy.png/600px-Password_policy.png 2x" data-file-width="604" data-file-height="439"></a><figcaption>Password policy</figcaption></figure>
+<p>The password policy includes option to set the minimum length of the password, the minimum number of digits, the minimum number of lower-case characters, the minimum number of upper-case characters and the minimum number of non alphanumeric characters.
+</p><p>The password policy is enabled by default. Default (recommended) settings are:
+</p>
+<ul><li>Password length - 8</li>
+<li>Digits - 1</li>
+<li>Lowercase letters - 1</li>
+<li>Uppercase letters - 1</li>
+<li>Non-alphanumeric characters - 1</li></ul>
+<p>If a user enters a password that does not meet the requirements, they are given an error message indicating the nature of the problem with the entered password.
+</p><p>Enabling the password policy does not affect existing users until they decide to or are required to change their password. An admin can force all users to change their password using the force password change option in <a href="3771fcf8ed580e2f0fa62c9f9d3cba5f.html" title="Bulk user actions">Bulk user actions</a>.
+</p>
+<dl><dd><i>Tip</i>: The password policy may also be applied to <a href="0e0b858665d53ae5e48e7b7b5dd8961b.html" title="Enrolment key">enrolment keys</a> by ticking the 'Use password policy' checkbox in the <a href="b76b9d7c78ded6ea2d436d2819d2de8b.html" title="Self enrolment">Self enrolment</a> settings.</dd></dl>
+<h2><span class="mw-headline" id="Password_rotation_limit">Password rotation limit</span></h2>
+<p>Here you can specify how often a user must change their password before they can re-use a previous password. Note that this might not work with some external authentication plugins.
+</p>
+<h2><span class="mw-headline" id="Log_out_after_password_change">Log out after password change</span></h2>
+<p>By default, users can change their password and remain logged in. Enabling this setting will log them out of existing sessions except the one in which they specify their new password. This setting only applies to users manually changing their password, not to bulk password changes.
+</p>
+<h2><span class="mw-headline" id="User_created_token_duration">User created token duration</span></h2>
+<p>A new setting in Moodle 3.4 onwards enables the duration of a web services token created by a user (for example via the mobile app) to be set. (Previously the duration was 3 months and this value could not be changed.)
+</p>
+<h2><span class="mw-headline" id="Group_enrolment_key_policy">Group enrolment key policy</span></h2>
+<p>If this is enabled then when a teacher sets a group enrolment key, they will have to set a key which follows the password policy set above. Note that the group enrolment key policy requires the password policy to be enabled.
+</p>
+<h2><span class="mw-headline" id="Disable_user_profile_images">Disable user profile images</span></h2>
+<p>Check/tick this box if you don't want your users to be able to change their <a href="https://docs.moodle.org/502/en/User_pictures" title="User pictures">profile images</a>. 
+</p>
+<h2><span class="mw-headline" id="Email_change_confirmation">Email change confirmation</span></h2>
+<p>A confirmation step is required for users to change their email address unless the <i>emailchangeconfirmation</i> box is unchecked.
+</p>
+<h2><span class="mw-headline" id="Remember_username">Remember username</span></h2>
+<p>If you want  usernames to be stored during login then set this to "yes". This will store permanent cookies and in some countries may be considered a privacy issue if used without consent. From a UK point of view, see <a rel="nofollow" class="external free" href="http://tracker.moodle.org/secure/attachment/24290/UK+Laws+Relating+to+Cookies-LUNS2011.pdf">http://tracker.moodle.org/secure/attachment/24290/UK+Laws+Relating+to+Cookies-LUNS2011.pdf</a> See also the Using Moodle forum discussion <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=201558">EU Cookie Law</a>.
+</p>
+<h2><span class="mw-headline" id="Strict_validation_of_required_fields">Strict validation of required fields</span></h2>
+<p>If enabled, users are prevented from entering a space or line break only in required fields in forms. (note: add more info)
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="20576a4c1b47116fbbdb7a6bd0d31950.html" class="mw-redirect" title="Policies plugin">Policies plugin</a> - The Policies plugin provides a new user sign-on process, with ability to define multiple policies (site, privacy, third party), track user consents, and manage updates and versioning of the policies</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822235454
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.021 seconds
+Real time usage: 0.038 seconds
+Preprocessor visited node count: 107/1000000
+Post&#8208;expand include size: 526/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    2.559      1 Template:Security
+100.00%    2.559      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:22058-0!canonical and timestamp 20260822235454 and revision id 155462. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Site_security_settings&amp;oldid=155462">https://docs.moodle.org/502/en/index.php?title=Site_security_settings&amp;oldid=155462</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="42bdb4490cde9a6566ee16c6c64d3830.html" title="Category:Security">Security</a></li><li><a href="2aac34b4c717bbba405f973f3d7b4021.html" title="Category:Site administration">Site administration</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhyxdne3">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhyxdns5"></button>
+					<div class="collapse navbar-collapse igdhyxdns5" id="igdhyxdns5">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Site_security_settings" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Site_security_settings" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Site_security_settings&amp;oldid=155462" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Site_security_settings&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Políticas_del_sitio" title="Políticas del sitio – español" lang="es" hreflang="es" data-title="Políticas del sitio" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-eu nav-item mw-list-item"><a href="https://docs.moodle.org/eu/Gunearen_politikak" title="Gunearen politikak – euskara" lang="eu" hreflang="eu" data-title="Gunearen politikak" data-language-autonym="Euskara" data-language-local-name="euskara" class="interlanguage-link-target nav-link">Euskara</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Règles_site" title="Règles site – français" lang="fr" hreflang="fr" data-title="Règles site" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/サイトポリシー" title="サイトポリシー – 日本語" lang="ja" hreflang="ja" data-title="サイトポリシー" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Sicherheitsregeln_der_Website" title="Sicherheitsregeln der Website – Deutsch" lang="de" hreflang="de" data-title="Sicherheitsregeln der Website" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 30 April 2026, at 05:10.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":102,"wgPageParseReport":{"limitreport":{"cputime":"0.021","walltime":"0.038","ppvisitednodes":{"value":107,"limit":1000000},"postexpandincludesize":{"value":526,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    2.559      1 Template:Security","100.00%    2.559      1 -total"]},"cachereport":{"timestamp":"20260822235454","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

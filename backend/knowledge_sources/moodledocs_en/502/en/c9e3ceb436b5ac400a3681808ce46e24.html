@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Installing Moodle on SmarterASP.NET - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"2c32934ca5577c55836c90c2","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Installing_Moodle_on_SmarterASP.NET","wgTitle":"Installing Moodle on SmarterASP.NET","wgCurRevisionId":103615,"wgRevisionId":103615,"wgArticleId":16606,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Installing_Moodle_on_SmarterASP.NET","wgRelevantArticleId":16606,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Installing_Moodle_on_SmarterASP.NET">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Installing_Moodle_on_SmarterASP_NET rootpage-Installing_Moodle_on_SmarterASP_NET layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhxfzbhu"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhxfzbhu" id="igdhxfzbhu">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Installing+Moodle+on+SmarterASP.NET" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Installing_Moodle_on_SmarterASP.NET">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Installing_Moodle_on_SmarterASP.NET">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Installing_Moodle_on_SmarterASP.NET">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="c9e3ceb436b5ac400a3681808ce46e24.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Installing_Moodle_on_SmarterASP.NET&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_Moodle_on_SmarterASP.NET&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_Moodle_on_SmarterASP.NET&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Installing Moodle on SmarterASP.NET</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Background"><span class="tocnumber">1</span> <span class="toctext">Background</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Upgrading_Existing_Moodle_Install_on_Go_Daddy_shared_hosting"><span class="tocnumber">1.1</span> <span class="toctext">Upgrading Existing Moodle Install on Go Daddy shared hosting</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Obtain_Domain_Name"><span class="tocnumber">2</span> <span class="toctext">Obtain Domain Name</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Purchase_Web_Hosting"><span class="tocnumber">3</span> <span class="toctext">Purchase Web Hosting</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Configure_Domain_Name_Server_(DNS)"><span class="tocnumber">4</span> <span class="toctext">Configure Domain Name Server (DNS)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#DNS_on_Go_Daddy"><span class="tocnumber">4.1</span> <span class="toctext">DNS on Go Daddy</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#DNS_on_SmarterASP.NET"><span class="tocnumber">4.2</span> <span class="toctext">DNS on SmarterASP.NET</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Setup_DNS_CNAME_to_ftp.ccsdcurriculm.com"><span class="tocnumber">4.3</span> <span class="toctext">Setup DNS CNAME to ftp.ccsdcurriculm.com</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Setup_subdomain_ftp.ccsdcurriculum.com"><span class="tocnumber">4.4</span> <span class="toctext">Setup subdomain ftp.ccsdcurriculum.com</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Setup_subdomain_moodle.ccsdcurriculum.com"><span class="tocnumber">4.5</span> <span class="toctext">Setup subdomain moodle.ccsdcurriculum.com</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Create_website_directory_and_moodledata_subdirectory"><span class="tocnumber">5</span> <span class="toctext">Create website directory and moodledata subdirectory</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Setup_FTP_account"><span class="tocnumber">6</span> <span class="toctext">Setup FTP account</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Create_MySQL_database"><span class="tocnumber">7</span> <span class="toctext">Create MySQL database</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Download_Moodle"><span class="tocnumber">8</span> <span class="toctext">Download Moodle</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Upload_zip_version_of_Moodle_to_web_hosting"><span class="tocnumber">9</span> <span class="toctext">Upload zip version of Moodle to web hosting</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Check_PHP_Version_Installed"><span class="tocnumber">10</span> <span class="toctext">Check PHP Version Installed</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#optional_-_Update_PHP_version_to_5.4.7"><span class="tocnumber">10.1</span> <span class="toctext">optional - Update PHP version to 5.4.7</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#Increase_Memory_in_PHP.ini"><span class="tocnumber">11</span> <span class="toctext">Increase Memory in PHP.ini</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Create_config.php"><span class="tocnumber">12</span> <span class="toctext">Create config.php</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#test_connection_with_MySQL_phpMyAdmin"><span class="tocnumber">13</span> <span class="toctext">test connection with MySQL phpMyAdmin</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Moodle_Configuration"><span class="tocnumber">14</span> <span class="toctext">Moodle Configuration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-22"><a href="#Installation_Agreement"><span class="tocnumber">14.1</span> <span class="toctext">Installation Agreement</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Installation_Server_Checks"><span class="tocnumber">14.2</span> <span class="toctext">Installation Server Checks</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Installation_Timeout_Error"><span class="tocnumber">14.3</span> <span class="toctext">Installation Timeout Error</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Installation_Plugins_Check"><span class="tocnumber">14.4</span> <span class="toctext">Installation Plugins Check</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Installation_Upgrading_to_new_version"><span class="tocnumber">14.5</span> <span class="toctext">Installation Upgrading to new version</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Installation_Moodle_Primary_Administrator"><span class="tocnumber">14.6</span> <span class="toctext">Installation Moodle Primary Administrator</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Installation_Front_Page_Settings"><span class="tocnumber">14.7</span> <span class="toctext">Installation Front Page Settings</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Installation_Complete"><span class="tocnumber">14.8</span> <span class="toctext">Installation Complete</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Install_Troubleshooting"><span class="tocnumber">14.9</span> <span class="toctext">Install Troubleshooting</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-31"><a href="#Site_Registration"><span class="tocnumber">15</span> <span class="toctext">Site Registration</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="#See_Also"><span class="tocnumber">16</span> <span class="toctext">See Also</span></a>
+<ul>
+<li class="toclevel-2 tocsection-33"><a href="#Page_Comments"><span class="tocnumber">16.1</span> <span class="toctext">Page Comments</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Background">Background</span></h2>
+<p>Often teachers and administrators want to use Moodle in a live shared web hosting environment instead of a private local computer install. Many hosting companies such as <a rel="nofollow" class="external text" href="http://www.godaddy.com/">Go Daddy</a> have a one-click install of Moodle. In the case of <a rel="nofollow" class="external text" href="http://www.godaddy.com/">Go Daddy</a>, they install Moodle 1.9 (as of 2/18/2013) but what if you want to run a later/newer version of Moodle (see below Go Daddy tech support response) or your web hosting company doesn't support Moodle one-click installs? This installation guide will walk you through the steps to install the latest version Moodle on <a rel="nofollow" class="external text" href="http://www.smarterasp.net/index?r=jefferyjjensen">SmarterASP.NET</a> shared web hosting.
+</p>
+<h3><span class="mw-headline" id="Upgrading_Existing_Moodle_Install_on_Go_Daddy_shared_hosting">Upgrading Existing Moodle Install on Go Daddy shared hosting</span></h3>
+<ul><li>Here is Go Daddy Tech Support's response to the question on how to upgrade to Moodle 2.4 on their linux shared hosting.
+<ul><li>"Thank you for contacting Online Support. I understand you need your Moodle upgraded. We are unable to upgrade the Moodle for you and unable to provide exact instructions on how to do it. The upgrade is not done through the hosting control center. You must do the upgrade through the coding of the site itself. Moodle will provide you with instructions on how to upgrade Moodle. <a rel="nofollow" class="external text" href="https://docs.moodle.org/24/en/Upgrading">Upgrading Moodle</a>" (Go Daddy tech support response by Taylor P. on 2/22/2013)</li>
+<li>Moodle 2.4 requires MySQL 5.1.33, see <a rel="nofollow" class="external text" href="https://docs.moodle.org/dev/Moodle_2.4_release_notes">Moodle 2.4 release notes</a></li>
+<li>as of 10 March 2013, the latest version is MySQL 5.0 on Go Daddy linux shared hosting, see <a rel="nofollow" class="external text" href="http://support.godaddy.com/help/article/221/what-version-of-mysql-are-you-currently-running">What version of MySQL are you currently running?</a></li></ul></li></ul>
+<h2><span class="mw-headline" id="Obtain_Domain_Name">Obtain Domain Name</span></h2>
+<ul><li>Identify a desired domain name, for example <a rel="nofollow" class="external text" href="http://www.journyeducation.org/">www.journeyeducation.org</a> or <a rel="nofollow" class="external text" href="http://www.ccsdcurriculum.com/">www.ccsdcurriculum.com</a></li>
+<li>If available, <a rel="nofollow" class="external text" href="http://www.smarterasp.net/domain">purchase domain from SmarterASP.NET</a> or some other hosting company. Typical cost is $10 a year.</li></ul>
+<h2><span class="mw-headline" id="Purchase_Web_Hosting">Purchase Web Hosting</span></h2>
+<ul><li>obtain web hosting account on <a rel="nofollow" class="external text" href="http://www.smarterasp.net/index?r=jefferyjjensen">SmarterASP.NET</a> <i>(if you like this tutorial, please support me by purchasing through my affliliate account)</i></li>
+<li>I purchased the .NET Premium shared hosting for $7.95 a month ($95.40 a year)</li></ul>
+<h2><span id="Configure_Domain_Name_Server_.28DNS.29"></span><span class="mw-headline" id="Configure_Domain_Name_Server_(DNS)">Configure Domain Name Server (DNS)</span></h2>
+<h3><span class="mw-headline" id="DNS_on_Go_Daddy">DNS on Go Daddy</span></h3>
+<ul><li>If you purchased your domain from another hosting company, you will need to login to the control panel of that hosting company and have the DNS entry point to the SmarterASP.NET servers, ns1.dns-ez.com &amp; ns2.dns-ez.com
+<ul><li>If your domain was purchased from Go Daddy, here is the steps to set/change the domain name so it points to SmarterASP.NET web hosting
+<ul><li>login to Go Daddy My Account</li>
+<li>My Account &rarr; Domains &rarr; WestCTA.com &rarr; Launch &rarr; Nameservers Set Name Server</li>
+<li>change nameserver to point to smarterasp.net, ns1.dns-ez.com and ns2.dns-ez.com</li>
+<li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:GoDaddySetNameserver.png" class="mw-file-description"><img src="images_en/thumb/3/3b/GoDaddySetNameserver.png/4a5d5065a360632861e6c7d4b9297a52.png" decoding="async" width="300" height="187" class="mw-file-element" srcset="/502/en/images_en/thumb/3/3b/GoDaddySetNameserver.png/450px-GoDaddySetNameserver.png 1.5x, /502/en/images_en/thumb/3/3b/GoDaddySetNameserver.png/600px-GoDaddySetNameserver.png 2x" data-file-width="693" data-file-height="431"></a><figcaption>config Go Daddy nameserver</figcaption></figure></li></ul></li></ul></li></ul>
+<h3><span class="mw-headline" id="DNS_on_SmarterASP.NET">DNS on SmarterASP.NET</span></h3>
+<ul><li>login to SmarterASP.NET control panel add new site in the Hosting Manager &rarr; Website Domain Manager &rarr; Add New Site
+<ul><li>Website/Folder Name: ccsdcurriculum.com</li>
+<li>Programming Language: PHP</li>
+<li>might have to rename site5 to ccsdcurriculum.com, under the Site heading click the pencil paper icon next to site5 to change the name to westcta.com
+<ul><li>if you forget to do this, will not be able to rename the site if you have a folder with the same domain name. Here is the work around
+<ul><li>1. rename the ccsdcurriculum.com folder to something different like, 1ccsdcurriculum.com</li>
+<li>2. change the domain name from site4 in website domain manager to ccsdcurriculum.com. Note, won't be able to do this if a folder of that name already exists.</li>
+<li>3. rename 1ccsdcurriculum.com back to ccsdcurriculum.com</li></ul></li></ul></li>
+<li>add domain www.ccsdcurriculum.com to site5 by typing ccsdcurriculum.com under the Mapped Domain column heading and then clicking the Add button.
+<ul><li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:smarteraspWebDomainMgr.png" class="mw-file-description"><img src="images_en/thumb/3/37/smarteraspWebDomainMgr.png/c376d83f02ef92f3d29d0604b57cd231.png" decoding="async" width="300" height="102" class="mw-file-element" srcset="/502/en/images_en/thumb/3/37/smarteraspWebDomainMgr.png/450px-smarteraspWebDomainMgr.png 1.5x, /502/en/images_en/thumb/3/37/smarteraspWebDomainMgr.png/600px-smarteraspWebDomainMgr.png 2x" data-file-width="851" data-file-height="288"></a><figcaption>SmarterASP.NET Web Domain Manager</figcaption></figure></li></ul></li></ul></li></ul>
+<h3><span class="mw-headline" id="Setup_DNS_CNAME_to_ftp.ccsdcurriculm.com">Setup DNS CNAME to ftp.ccsdcurriculm.com</span></h3>
+<ul><li>note, this might already be done by default.</li>
+<li>login to SmarterASP.NET control panel, then Hosting Control Panel &rarr; DNS Manager &rarr; westcta.com - click Manage button</li>
+<li>create a CNAME record to ftp.ccsdcurriculum.com which points to ftp.smarterasp.net</li>
+<li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:SmarterASP-CNAME.png" class="mw-file-description"><img src="images_en/thumb/3/3e/SmarterASP-CNAME.png/2019cdd20da0fcce321e8103a27be4f2.png" decoding="async" width="300" height="247" class="mw-file-element" srcset="/502/en/images_en/thumb/3/3e/SmarterASP-CNAME.png/450px-SmarterASP-CNAME.png 1.5x, /502/en/images_en/thumb/3/3e/SmarterASP-CNAME.png/600px-SmarterASP-CNAME.png 2x" data-file-width="841" data-file-height="692"></a><figcaption>SmarterASP.NET CNAME</figcaption></figure></li></ul>
+<h3><span class="mw-headline" id="Setup_subdomain_ftp.ccsdcurriculum.com">Setup subdomain ftp.ccsdcurriculum.com</span></h3>
+<ul><li>login to SmarterASP.NET control panel</li>
+<li>Hosting Control Panel &rarr; DNS Manager</li>
+<li>select domain name and click Manage button</li>
+<li>edit CNAME record to ftp.ccsdcurriculum.com and point this to the SmarterASP.NET ftp server IP address <b>208.118.63.62</b></li></ul>
+<h3><span class="mw-headline" id="Setup_subdomain_moodle.ccsdcurriculum.com">Setup subdomain moodle.ccsdcurriculum.com</span></h3>
+<ul><li>objective is to create a subdomain URL <a rel="nofollow" class="external free" href="http://moodle.ccsdcurriculum.com/">http://moodle.ccsdcurriculum.com</a> which points to the default path of <a rel="nofollow" class="external free" href="http://www.ccsdcurriculum.com/moodle">http://www.ccsdcurriculum.com/moodle</a></li>
+<li>login to SmarterASP.NET control panel</li>
+<li>Hosting Control Panel &rarr; Hosting Manager &rarr; Subdomain Manager
+<ul><li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:SmarterASP-subdomainadd.png" class="mw-file-description"><img src="images_en/thumb/f/fe/SmarterASP-subdomainadd.png/36e6664c7f4ab48f45639806e3300a5a.png" decoding="async" width="300" height="88" class="mw-file-element" srcset="/502/en/images_en/thumb/f/fe/SmarterASP-subdomainadd.png/450px-SmarterASP-subdomainadd.png 1.5x, /502/en/images_en/thumb/f/fe/SmarterASP-subdomainadd.png/600px-SmarterASP-subdomainadd.png 2x" data-file-width="743" data-file-height="218"></a><figcaption>Add Subdomain in SmarterASP.NET</figcaption></figure></li></ul></li></ul>
+<h2><span class="mw-headline" id="Create_website_directory_and_moodledata_subdirectory">Create website directory and moodledata subdirectory</span></h2>
+<ul><li>login to SmarterASP.NET control panel</li>
+<li>Hosting Control Panel &rarr; Hosting Manager &rarr; File Manager &rarr; New Folder and recommend giving it the same name as your domain name, i.e. ccsdcurriculum.com. This folder might already exist, created automatically from previous step.</li>
+<li>create a New Folder under ccsdcurriculum.com called moodledata. Note that SmarterASP.NET uses Windows Hosting so you cannot change permission like on linux systems using <i>chmod 775</i></li>
+<li>Hosting Control Panel &rarr; Hosting Manager &rarr; File Permission. Can only set edit Read/Write or edit Read-Only. I kept it at the default Read/Write but down the road Moodle complains the moodledata folder is not protected.</li></ul>
+<h2><span class="mw-headline" id="Setup_FTP_account">Setup FTP account</span></h2>
+<ul><li>Goal is to create an ftp account to transfer local files to SmarterASP.NET</li>
+<li>login to SmarterASP.NET control panel</li>
+<li>Hosting Control Panel &rarr; Hosting Manager &rarr; FTP Users Manager &rarr; Add FTP User. Enter a user name and password.</li>
+<li>Unable to create a ftp account at the root level with SmarterASP.NET, need to create a subdirectory. Recommend naming the file directory name the same as your domain name, for example ccsdcurriculum.org.</li></ul>
+<h2><span class="mw-headline" id="Create_MySQL_database">Create MySQL database</span></h2>
+<ul><li>login to the SmarterASP.NET control panel and navigate to Hosting Control Panel &rarr; Database Manager &rarr; MySQL Manager &rarr; click Create New Database</li>
+<li>enter a portion of the database name, like moodcur and the fullname will be db_9898fc_moodcur and a password of Abcd1234</li>
+<li>write down the connection string info (Database Name, Server URL, Login Name and Password) as this will be used when creating the config.php file</li>
+<li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:SmarterASPCreateMySQLDB.png" class="mw-file-description"><img src="images_en/thumb/a/a8/SmarterASPCreateMySQLDB.png/b58d0c16d4e8273bbb65160d965ab435.png" decoding="async" width="300" height="151" class="mw-file-element" srcset="/502/en/images_en/thumb/a/a8/SmarterASPCreateMySQLDB.png/450px-SmarterASPCreateMySQLDB.png 1.5x, /502/en/images_en/thumb/a/a8/SmarterASPCreateMySQLDB.png/600px-SmarterASPCreateMySQLDB.png 2x" data-file-width="797" data-file-height="402"></a><figcaption>SmarterASP.NET create MySQL Database</figcaption></figure></li></ul>
+<h2><span class="mw-headline" id="Download_Moodle">Download Moodle</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://moodle.org/downloads">download zip version of moodle</a>, moodle-2.4.1.zip standard package, don't use the windows installer one because this includes Apache, PHP and other server stuff which is not needed on a shared hosting environment.
+<ul><li>Typically shared hosting companies do not allow remote desktop access (windows) or telnet shell access (linux) to manually download files to the server, so we have to download to your local computer and then upload it to SmarterASP.NET</li></ul></li></ul>
+<h2><span class="mw-headline" id="Upload_zip_version_of_Moodle_to_web_hosting">Upload zip version of Moodle to web hosting</span></h2>
+<ul><li>Need to use an ftp client such as FileZilla or UltraEdit to upload the zip file into your domain name directory.</li>
+<li>Do not upload the file into the moodledata subdirectory</li>
+<li>When you unzip the moodle-2.4.1.zip file, it will create the moodle directory and all the necessary application data.</li>
+<li>Example, ftp.ccsdcurriculum.com and enter the ftp account info above for the username and password.</li>
+<li>Then use File Manager of SmarterASP.NET Control Panel to unzip the moodle-2.4.1.zip file.</li>
+<li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:SmarterASPUnpackMoodle.png" class="mw-file-description"><img src="images_en/thumb/d/d0/SmarterASPUnpackMoodle.png/7e0689e6332bccb117c5ed96e902fc75.png" decoding="async" width="300" height="104" class="mw-file-element" srcset="/502/en/images_en/thumb/d/d0/SmarterASPUnpackMoodle.png/450px-SmarterASPUnpackMoodle.png 1.5x, /502/en/images_en/thumb/d/d0/SmarterASPUnpackMoodle.png/600px-SmarterASPUnpackMoodle.png 2x" data-file-width="1006" data-file-height="350"></a><figcaption>SmarterASP.NET Unzip/Unpack Moodle Installation</figcaption></figure>
+<ul><li>takes a minute or two to unzip, when done will get a message that says "File Unzipped"</li></ul></li></ul>
+<h2><span class="mw-headline" id="Check_PHP_Version_Installed"><a href="#PHPVersion">Check PHP Version Installed</a></span></h2>
+<ul><li>login to SmarterASP.NET control panel, if not already in it.</li>
+<li>Hosting Control Panel &rarr; Hosting Manager &rarr; File Manager &rarr; click New File button on the bottom of the screen. Give it a name phpinfo.php</li>
+<li>click phpinfo.php and click Editor button (default is ANSI editor, can switch to UTF-8). Then type in the below code.</li>
+<li>create a text file called <a rel="nofollow" class="external text" href="http://us2.php.net/manual/en/function.phpinfo.php">phpinfo.php</a> and type in the following code. Save and upload file via ftp to the SmarterASP.NET webserver, e.g. <a rel="nofollow" class="external text" href="http://www.ccsdcurriculum.com/phpinfo.php">www.ccsdcurriculum.com/phpinfo.php</a></li></ul>
+<p><code> 
+&lt;?php
+</code></p><code><pre> phpinfo();
+</pre></code><code></code><p><code>?&gt;
+</code>
+</p>
+<ul><li>open web browser <a rel="nofollow" class="external text" href="http://www.ccsdcurriculum.com/phpinfo.php">http://www.ccsdcurriculum.com/phpinfo.php</a></li>
+<li>if it returns 5.2.12 (default as of 2/18/2013 on smarterasp.net) then need to update the PHP version</li>
+<li>also see <a rel="nofollow" class="external text" href="https://docs.moodle.org/24/en/Installation_FAQ#PHP_-_is_it_installed_and_what_version_do_I_have.3F">Installation FAQ - PHP - is it installed and what version do I have?</a></li></ul>
+<h3><span class="mw-headline" id="optional_-_Update_PHP_version_to_5.4.7">optional - Update PHP version to 5.4.7</span></h3>
+<ul><li>login to SmarterASP.NET control panel</li>
+<li>Hosting Control Panel &rarr; IIS Manager &rarr; PHP Version Manager</li>
+<li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:SmarterASPIISUpgradePHP.png" class="mw-file-description"><img src="images_en/thumb/b/b9/SmarterASPIISUpgradePHP.png/6344ca86796af44949d35d4cfb127b7b.png" decoding="async" width="300" height="144" class="mw-file-element" srcset="/502/en/images_en/thumb/b/b9/SmarterASPIISUpgradePHP.png/450px-SmarterASPIISUpgradePHP.png 1.5x, /502/en/images_en/thumb/b/b9/SmarterASPIISUpgradePHP.png/600px-SmarterASPIISUpgradePHP.png 2x" data-file-width="989" data-file-height="475"></a><figcaption>SmarterASP.NET Upgrade PHP Version</figcaption></figure></li></ul>
+<h2><span class="mw-headline" id="Increase_Memory_in_PHP.ini">Increase Memory in PHP.ini</span></h2>
+<ul><li>This will require SmarterASP.NET administrator to edit the php.ini (<a rel="nofollow" class="external text" href="http://www.php.net/manual/en/ini.list.php">list of php.ini directives</a>) file to the following recommended limits</li>
+<li>increase <b>post_max_size</b> from 8M to 128 MB
+<ul><li>can be set in PHP_INI_PERDIR (php.ini, .htaccess, httpd.conf or .user.ini - think these are only available on linux)</li></ul></li>
+<li>increase <b>upload_max_filesize</b> from 2M to 128 MB
+<ul><li>can be set in PHP_INI_PERDIR (php.ini, .htaccess, httpd.conf or .user.ini- think these are only available on linux)</li></ul></li>
+<li>increase <b>memory_limit</b> from 256M to 512 MB
+<ul><li>can be set anywhere</li></ul></li></ul>
+<p>These recommendations are from Chris Mattias, <a rel="nofollow" class="external text" href="http://www.lynda.com/Moodle-2-0-tutorials/Moodle-2-Essential-Training-for-Teachers/85410-2.html">Moodle 2 Essential Training for Teachers</a> - Chapter 01 - Installing Moodle from lynda.com
+</p><p>PHP Configuration Settings - <a rel="nofollow" class="external text" href="http://www.php.net/manual/en/configuration.changes.modes.php">Where a configuration setting may be set</a>
+</p>
+<ul><li>PHP_INI_USER can be set in user scripts like ini_set() or in .user.ini</li>
+<li>PHP_INI_PERDIR can be set in php.ini, .htaccess, httpd.conf or .user.ini</li>
+<li>PHP_INI_SYSTEM can be set in php.ini or httpd.conf</li>
+<li>PHP_INI_ALL entry can be set anywhere</li></ul>
+<ul><li>ini_set("post_max_size", "128M");</li>
+<li>ini_set("upload_max_filesize", "128M");</li>
+<li>ini_set('memory_limit', '512M');</li></ul>
+<h2><span class="mw-headline" id="Create_config.php">Create config.php</span></h2>
+<ul><li>edit the existing ccsdcurriculum.com/moodle/<b>config-dist.php</b> and save as <b>config.php</b> in the same directory. I'm using <a rel="nofollow" class="external text" href="http://www.ultraedit.com/">UltraEdit</a> which gives me the ability to edit and automatically save the file on the server, don't have to manually ftp the each time, big time savings.</li>
+<li>edit lines 41 - 47 with the SmarterASP.NET specific connection string</li></ul>
+<p><code> 
+$CFG-&gt;dbtype    = 'mysqli';                     // 'pgsql', 'mysqli', 'mssql', 'sqlsrv' or 'oci'
+$CFG-&gt;dblibrary = 'native';                    // 'native' only at the moment
+$CFG-&gt;dbhost    = 'MYSQL5003.Smarterasp.net';  // eg 'localhost' or 'db.isp.com' or IP
+$CFG-&gt;dbname    = 'db_991088_moodcur';         // database name, eg moodle
+$CFG-&gt;dbuser    = '991088_moodcur';            // your database username
+$CFG-&gt;dbpass    = 'Abcd1234';                  // your database password
+$CFG-&gt;prefix    = 'mdl_';                      // Prefix to use for all table names
+</code>
+</p>
+<ul><li>Other variables must be defined as follows, line 97 for wwwroot, line 113 for dataroot (use SmarterASP.NET File Manager to find the full path to your domain name, in this case it is h:\root\home\jefferyjjensen-001\www\ccsdcurriculum.com)</li></ul>
+<p><code> 
+$CFG-&gt;wwwroot    = '<a rel="nofollow" class="external free" href="http://www.ccsdcurriculum.com/moodle'">http://www.ccsdcurriculum.com/moodle'</a>;
+$CFG-&gt;dataroot   = 'h:\root\home\jefferyjjensen-001\www\ccsdcurriculum.com\moodledata';
+</code>
+</p>
+<ul><li>it appears wwwroot works with both www.ccsdcurriculum.com/moodle and ccsdcurriculum.com/moodle, I'm not sure if one is more right/correct than the other.</li>
+<li>if you type in the wrong path to dataroot, will get an error like this:
+<ul><li>Fatal error: $CFG-&gt;dataroot is not configured properly, directory does not exist or is not accessible! Exiting.</li></ul></li></ul>
+<h2><span class="mw-headline" id="test_connection_with_MySQL_phpMyAdmin">test connection with MySQL phpMyAdmin</span></h2>
+<ul><li>login to SmarterASP.NET control panel</li>
+<li>Hosting Control Panel &rarr; Database Manager &rarr; MySQL phpMyAdmin. Use the following login creditials</li>
+<li>Server = MYSQL5003.Smarterasp.net</li>
+<li>Username = 991088_moodcur</li>
+<li>Password = Abcd1234
+<ul><li>if getting error number 1045 Cannot log in to the MySQL server, double check your Server name is correct, in my case it was wrong.</li>
+<li>the database should be blank, that is no tables in it.
+<ul><li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:SmarterASPphpMyAdminNoTables.png" class="mw-file-description"><img src="images_en/thumb/8/87/SmarterASPphpMyAdminNoTables.png/e7c1ae4884fe616c0f84eddad44151a1.png" decoding="async" width="300" height="107" class="mw-file-element" srcset="/502/en/images_en/thumb/8/87/SmarterASPphpMyAdminNoTables.png/450px-SmarterASPphpMyAdminNoTables.png 1.5x, /502/en/images_en/thumb/8/87/SmarterASPphpMyAdminNoTables.png/600px-SmarterASPphpMyAdminNoTables.png 2x" data-file-width="807" data-file-height="287"></a><figcaption>phpMyAdmin database without tables</figcaption></figure></li></ul></li>
+<li>logout of phpMyAdmin</li></ul></li></ul>
+<h2><span class="mw-headline" id="Moodle_Configuration">Moodle Configuration</span></h2>
+<ul><li>visit your domain name, for example <a rel="nofollow" class="external text" href="http://www.ccsdcurriculum.com/moodle">http://www.ccsdcurriculum.com/moodle</a></li></ul>
+<h3><span class="mw-headline" id="Installation_Agreement">Installation Agreement</span></h3>
+<ul><li>Installation - agree to the copyright notice, click the Continue button
+<ul><li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:SmarterASPMoodleInstallation.png" class="mw-file-description"><img src="images_en/thumb/1/1a/SmarterASPMoodleInstallation.png/1be10336f60097d28fefdca70585cdef.png" decoding="async" width="300" height="212" class="mw-file-element" srcset="/502/en/images_en/thumb/1/1a/SmarterASPMoodleInstallation.png/450px-SmarterASPMoodleInstallation.png 1.5x, /502/en/images_en/thumb/1/1a/SmarterASPMoodleInstallation.png/600px-SmarterASPMoodleInstallation.png 2x" data-file-width="784" data-file-height="554"></a><figcaption>Moodle Installation Screen on SmarterASP.NET</figcaption></figure></li></ul></li></ul>
+<h3><span class="mw-headline" id="Installation_Server_Checks">Installation Server Checks</span></h3>
+<ul><li>Server checks on Moodle 2.4.1+ build, click the Continue button</li>
+<li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:SmarterASPInstallServerChecks.png" class="mw-file-description"><img src="images_en/thumb/6/68/SmarterASPInstallServerChecks.png/f8a767e8e355c21da54ee76794060afb.png" decoding="async" width="300" height="241" class="mw-file-element" srcset="/502/en/images_en/thumb/6/68/SmarterASPInstallServerChecks.png/450px-SmarterASPInstallServerChecks.png 1.5x, /502/en/images_en/thumb/6/68/SmarterASPInstallServerChecks.png/600px-SmarterASPInstallServerChecks.png 2x" data-file-width="1028" data-file-height="827"></a><figcaption>Moodle Server Checks Installation Screen on SmarterASP.NET</figcaption></figure>
+<ul><li>might need to notify SmarterASP.NET to enable the following php_extensions
+<ul><li>soap extension which is useful for web services and some contrib modules</li>
+<li>Intl extension which is used to improve internationalization support, such as locale aware sorting</li>
+<li>UPDATE - on 2/21/2013 Ailen, SmarterASP.NET staff member globally enabled the PHP soap and intl extensions, so you shouldn't see any warning messages on the server checks.</li></ul></li></ul></li>
+<li>click the Continue button</li></ul>
+<h3><span class="mw-headline" id="Installation_Timeout_Error">Installation Timeout Error</span></h3>
+<p>If you get this error, then need to have SmarterASP.NET admins edit the php.ini file and change the max_execution_time from default of 30 to 600 (seconds I believe). When set to 600, I was able to get Moodle to install without getting the HTTP Error 500.0 message.
+</p>
+<ul><li>wait about 2-4 minutes while the approximately 305 Moodle tables are imported into the Moodle MySQL database
+<ul><li>HTTP Error 500.0 - Internal Server Error. C:\php54\php-cgi.exe - The FastCGI process exceeded configured request timeout.
+<ul><li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:SmartASPMoodleSetupError.png" class="mw-file-description"><img src="images_en/thumb/b/ba/SmartASPMoodleSetupError.png/f234fff69d02606393ba3a4aea31a964.png" decoding="async" width="300" height="231" class="mw-file-element" srcset="/502/en/images_en/thumb/b/ba/SmartASPMoodleSetupError.png/450px-SmartASPMoodleSetupError.png 1.5x, /502/en/images_en/thumb/b/ba/SmartASPMoodleSetupError.png/600px-SmartASPMoodleSetupError.png 2x" data-file-width="938" data-file-height="721"></a><figcaption>Setup Error on SmarterASP.NET</figcaption></figure></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=202986">Windows server: The HTTP Error 500.0 FastCGI process exceeded configured request timeout</a>
+<ul><li>You can edit the fcgiext.ini file directly and then restart IIS. Alternatively you can install the Microsoft PHP Manager for IIS and use it to manage your PHP installation. <a rel="nofollow" class="external text" href="https://www.iis.net/learn/application-frameworks/install-and-configure-php-on-iis/using-php-manager-for-iis-to-setup-and-configure-php">Using PHP Manager for IIS to Setup and Configure PHP</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=163760#p718333">Windows server: Maximum upload size not recognized</a></li></ul></li></ul></li></ul></li></ul>
+<h3><span class="mw-headline" id="Installation_Plugins_Check">Installation Plugins Check</span></h3>
+<ul><li>after the above error message, revisit <a rel="nofollow" class="external free" href="http://www.ccsdcurriculum.com/moodle">http://www.ccsdcurriculum.com/moodle</a></li>
+<li>will get this plugins check screen. It appears the number of plugins varies on how far SmarterASP.NET got on importing the approx 305 MySQL tables.
+<ul><li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:SmarterASPMySQLTablesAdded.png" class="mw-file-description"><img src="images_en/thumb/a/ad/SmarterASPMySQLTablesAdded.png/53b7cd4b7cf065e0e393ebe5e37a082b.png" decoding="async" width="300" height="95" class="mw-file-element" srcset="/502/en/images_en/thumb/a/ad/SmarterASPMySQLTablesAdded.png/450px-SmarterASPMySQLTablesAdded.png 1.5x, /502/en/images_en/thumb/a/ad/SmarterASPMySQLTablesAdded.png/600px-SmarterASPMySQLTablesAdded.png 2x" data-file-width="996" data-file-height="316"></a><figcaption>phpMyAdmin showing tables installed on SmarterASP.NET</figcaption></figure></li></ul></li>
+<li>scroll to the bottom of the page and click the <b>Upgrade Moodle database now</b> button
+<ul><li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:SmarterASPUpgradeMoodleDBNow.png" class="mw-file-description"><img src="images_en/thumb/6/62/SmarterASPUpgradeMoodleDBNow.png/eb35e728b2d34bfe443730d19b2d908c.png" decoding="async" width="300" height="179" class="mw-file-element" srcset="/502/en/images_en/thumb/6/62/SmarterASPUpgradeMoodleDBNow.png/450px-SmarterASPUpgradeMoodleDBNow.png 1.5x, /502/en/images_en/thumb/6/62/SmarterASPUpgradeMoodleDBNow.png/600px-SmarterASPUpgradeMoodleDBNow.png 2x" data-file-width="1049" data-file-height="625"></a><figcaption>Plugins check on SmarterASP.NET</figcaption></figure></li></ul></li></ul>
+<h3><span class="mw-headline" id="Installation_Upgrading_to_new_version">Installation Upgrading to new version</span></h3>
+<ul><li>will see a list of files that have been installed successfully. Scroll to the bottom and click Continue
+<ul><li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:SmarterASPUpgradingNewVersionCont.png" class="mw-file-description"><img src="images_en/thumb/4/42/SmarterASPUpgradingNewVersionCont.png/9f7de1447c43ede555e1f7573b46c305.png" decoding="async" width="300" height="370" class="mw-file-element" srcset="/502/en/images_en/thumb/4/42/SmarterASPUpgradingNewVersionCont.png/450px-SmarterASPUpgradingNewVersionCont.png 1.5x, /502/en/images_en/4/42/SmarterASPUpgradingNewVersionCont.png 2x" data-file-width="473" data-file-height="584"></a><figcaption>Upgrading to new version on SmarterASP.NET</figcaption></figure></li></ul></li></ul>
+<h3><span class="mw-headline" id="Installation_Moodle_Primary_Administrator">Installation Moodle Primary Administrator</span></h3>
+<p>This step is creating the primary site administrator. Verify information is correct because this user cannot be removed from the site administrator role. See
+<a rel="nofollow" class="external text" href="https://docs.moodle.org/24/en/Administrator_role">Site administrators</a>
+</p>
+<ul><li>Enter the following
+<ul><li>General Username <i>(lower case only)</i></li>
+<li>Password <i>(at least 8 characters with at least 1 digit, 1 lower case letter, 1 upper case letter and 1 non-alphanumeric character)</i></li>
+<li>First name</li>
+<li>Surname/Family Name</li>
+<li>Email address</li>
+<li>City/town</li>
+<li>Country</li>
+<li>all the other info is optional</li></ul></li>
+<li>click update profile</li></ul>
+<h3><span class="mw-headline" id="Installation_Front_Page_Settings">Installation Front Page Settings</span></h3>
+<ul><li>Full site name, such as Clark County School District Class Curriculum Home Page</li>
+<li>Short name: ccsdcurriculum</li>
+<li>Front page description</li>
+<li>Self registration - Disable</li>
+<li>click Save changes button</li></ul>
+<h3><span class="mw-headline" id="Installation_Complete">Installation Complete</span></h3>
+<ul><li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:SmarterASPMoodleFinalInstall.png" class="mw-file-description"><img src="images_en/thumb/a/a6/SmarterASPMoodleFinalInstall.png/f57557815baad5cf1176584225b3f196.png" decoding="async" width="300" height="180" class="mw-file-element" srcset="/502/en/images_en/thumb/a/a6/SmarterASPMoodleFinalInstall.png/450px-SmarterASPMoodleFinalInstall.png 1.5x, /502/en/images_en/thumb/a/a6/SmarterASPMoodleFinalInstall.png/600px-SmarterASPMoodleFinalInstall.png 2x" data-file-width="910" data-file-height="547"></a><figcaption>Moodle Successfully Installed on SmarterASP.NET</figcaption></figure></li></ul>
+<h3><span class="mw-headline" id="Install_Troubleshooting">Install Troubleshooting</span></h3>
+<p>I have experienced problems with the Moodle install timing out. Here is the steps to change the PHP max_execution_time
+</p>
+<ul><li>run phpinfo script to see what your hosting provider has set the max_execution_time to. The default max_execution_time is 30, I'm guessing this is 30 seconds. I had to submit a support ticket requesting SmarterASP.NET staff to edit the php.ini (can only be edited by the hosting admin) and increased it to 120. Here is a sample of the phpinfo output showing the increase.
+<ul><li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:SmarterASPPHPInfoMaxExecTime.png" class="mw-file-description"><img src="images_en/thumb/2/2f/SmarterASPPHPInfoMaxExecTime.png/40f925bf15a814809425123c2ae86a98.png" decoding="async" width="300" height="237" class="mw-file-element" srcset="/502/en/images_en/thumb/2/2f/SmarterASPPHPInfoMaxExecTime.png/450px-SmarterASPPHPInfoMaxExecTime.png 1.5x, /502/en/images_en/thumb/2/2f/SmarterASPPHPInfoMaxExecTime.png/600px-SmarterASPPHPInfoMaxExecTime.png 2x" data-file-width="873" data-file-height="689"></a><figcaption>phpinfo max_execution_time setting</figcaption></figure></li></ul></li>
+<li>Edit the config.php file and add the following</li></ul>
+<p><code> 
+ini_set('max_execution_time', 120);
+</code>
+</p>
+<ul><li><ul><li><figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:SmarterASPConfigMaxExecTime.png" class="mw-file-description"><img src="images_en/thumb/0/08/SmarterASPConfigMaxExecTime.png/64af1f9cca01e3987ef2bfa440c1cc91.png" decoding="async" width="300" height="297" class="mw-file-element" srcset="/502/en/images_en/thumb/0/08/SmarterASPConfigMaxExecTime.png/450px-SmarterASPConfigMaxExecTime.png 1.5x, /502/en/images_en/thumb/0/08/SmarterASPConfigMaxExecTime.png/600px-SmarterASPConfigMaxExecTime.png 2x" data-file-width="628" data-file-height="621"></a><figcaption>config.php max_execution_time</figcaption></figure></li></ul></li>
+<li><a rel="nofollow" class="external text" href="http://php.net/manual/en/info.configuration.php">PHP Manual - Runtime Configuration</a></li></ul>
+<h2><span class="mw-headline" id="Site_Registration">Site Registration</span></h2>
+<ul><li>recommend registering your site with Moodle.org and having it listed in <a rel="nofollow" class="external text" href="http://moodle.org/sites/">http://moodle.org/sites/</a>. For more information see <a rel="nofollow" class="external text" href="https://docs.moodle.org/24/en/Site_registration">Site registration</a>.</li></ul>
+<h1><span class="mw-headline" id="See_Also">See Also</span></h1>
+<ul><li><a rel="nofollow" class="external text" href="https://docs.moodle.org/24/en/Finding_and_Selecting_A_Web_Host">Finding and Selecting a Web Host</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/24/en/Category:Installation">Moodle Installation Category</a>
+<ul><li>General Moodle Install instructions, see <a rel="nofollow" class="external text" href="https://docs.moodle.org/24/en/Installing_Moodle">Install Moodle</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/24/en/Installation_FAQ">Moodle Installation FAQ</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/24/en/Windows_installation">Moodle Installation - Windows</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/24/en/Install_Moodle2.2_on_godaddy">Install Moodle 2.2 on Go Daddy</a>
+<ul><li><a rel="nofollow" class="external text" href="https://docs.moodle.org/24/en/Upgrading">Upgrading Moodle</a></li></ul></li></ul></li>
+<li>Reference video on installing Moodle, <a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=182086">New Video Tutorial- How to Install Moodle on Shared Hosting via cPanel (Not Fantastico)</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/view.php?id=28">Moodle Installation problems forum</a></li>
+<li>Books
+<ul><li><a rel="nofollow" class="external text" href="http://helenfoster.wordpress.com/using-moodle-book/">Using Moodle, 2nd Edition by Helen Foster and Jason Cole</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.amazon.com/Moodle-2-Administration-Alex-Büchner/dp/1849516049/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1361508072&amp;sr=1-1">Moodle 2 Administration by Alex Buchner</a></li></ul></li></ul>
+<h2><span class="mw-headline" id="Page_Comments">Page Comments</span></h2>
+<p>--<a href="https://docs.moodle.org/502/en/index.php?title=User:Jeff_Jensen&amp;action=edit&amp;redlink=1" class="new"><bdi>Jeff Jensen</bdi></a> 09:08, 24 February 2013 (WST)
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260823011441
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.054 seconds
+Real time usage: 0.404 seconds
+Preprocessor visited node count: 119/1000000
+Post&#8208;expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:16606-0!canonical and timestamp 20260823011441 and revision id 103615. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Installing_Moodle_on_SmarterASP.NET&amp;oldid=103615">https://docs.moodle.org/502/en/index.php?title=Installing_Moodle_on_SmarterASP.NET&amp;oldid=103615</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="7f264aa70db3768dcef1896a8ec93e70.html" title="Category:Installation">Installation</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhxfze9o">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhxfzero"></button>
+					<div class="collapse navbar-collapse igdhxfzero" id="igdhxfzero">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Installing_Moodle_on_SmarterASP.NET" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Installing_Moodle_on_SmarterASP.NET" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_Moodle_on_SmarterASP.NET&amp;oldid=103615" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_Moodle_on_SmarterASP.NET&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 13 March 2013, at 01:35.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":582,"wgPageParseReport":{"limitreport":{"cputime":"0.054","walltime":"0.404","ppvisitednodes":{"value":119,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260823011441","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

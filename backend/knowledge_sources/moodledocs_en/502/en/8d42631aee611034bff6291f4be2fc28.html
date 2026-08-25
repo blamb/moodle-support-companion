@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Moodle development environment with Git submodules - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"f68e0b32df20a7e513a25f16","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Moodle_development_environment_with_Git_submodules","wgTitle":"Moodle development environment with Git submodules","wgCurRevisionId":145376,"wgRevisionId":145376,"wgArticleId":20283,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Moodle_development_environment_with_Git_submodules","wgRelevantArticleId":20283,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Moodle_development_environment_with_Git_submodules">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Moodle_development_environment_with_Git_submodules rootpage-Moodle_development_environment_with_Git_submodules layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhxu5wch"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhxu5wch" id="igdhxu5wch">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Moodle+development+environment+with+Git+submodules" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Moodle_development_environment_with_Git_submodules">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Moodle_development_environment_with_Git_submodules">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Moodle_development_environment_with_Git_submodules">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="8d42631aee611034bff6291f4be2fc28.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Moodle_development_environment_with_Git_submodules&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_development_environment_with_Git_submodules&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_development_environment_with_Git_submodules&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Moodle development environment with Git submodules</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p>This page describes how to set up a development environment for a Moodle instance with external plugins.
+Over time the number of plugins may increase in such a way, that they can't be managed manually by developers anymore.
+Without any precautions this can lead to various problems, for instance:
+</p>
+<ul><li>Missing plugins in cloned repositories</li>
+<li>Diverged versions in existing repositories (can lead to fatal errors when trying to update the site)</li>
+<li>Messed up Git excludes</li></ul>
+<p>You'll learn in this guide how to use Git submodules in order to achieve the following setup:
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Frame"><a href="https://docs.moodle.org/502/en/File:superprojects1.png" class="mw-file-description"><img src="images_en/0/0b/fffc6bebbb35468c0c046c9c7df1c15d.png" decoding="async" width="817" height="540" class="mw-file-element" data-file-width="817" data-file-height="540"></a><figcaption>Scheme of a development environment</figcaption></figure>
+<p><b>Note: The extension </b>mod_mylittleextension<b> is a fake plugin, which was created for testing purposes only.</b>
+</p><p>By using Git submodules all extensions of a repository can be simply synchronized with other projects.
+All repositories are based on the so-called <b>superproject</b> repository and the developers' projects will be sometimes referred as 'local' repository.
+Anyone who is interested in maintaining the superproject and core changes by Git can visit <a href="8c9971164c5ebe2fe373c08f1cdaea16.html" title="Moodle Production Server with GIT">Moodle Production Server with GIT</a>.
+</p><p><b>Note: This guide won't cover basic Git commands and how to install/maintain Git submodules.</b>
+It is assumed, that you have read <a href="14569a6d13e60324f1803b54b2ffb589.html" title="Git for Administrators">Git for Administrators</a> where these topics are covered.
+The superproject will be seen as a Moodle repository where several plugins have been already installed via Git submodules.<b></b>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Cloning_a_superproject"><span class="tocnumber">1</span> <span class="toctext">Cloning a superproject</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Upgrading_your_submodules_via_the_superproject"><span class="tocnumber">2</span> <span class="toctext">Upgrading your submodules via the superproject</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Pull_and_upgrade"><span class="tocnumber">2.1</span> <span class="toctext">Pull and upgrade</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Figure:_Updates_without_customization"><span class="tocnumber">2.2</span> <span class="toctext">Figure: Updates without customization</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Known_issues"><span class="tocnumber">2.3</span> <span class="toctext">Known issues</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Upgrading_customized_plugins"><span class="tocnumber">3</span> <span class="toctext">Upgrading customized plugins</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Figure:_Suggested_workflow"><span class="tocnumber">3.1</span> <span class="toctext">Figure: Suggested workflow</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Setting_up_a_new_submodule"><span class="tocnumber">3.2</span> <span class="toctext">Setting up a new submodule</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Changes_for_an_existing_submodule"><span class="tocnumber">3.3</span> <span class="toctext">Changes for an existing submodule</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Contributing_to_the_superproject"><span class="tocnumber">3.4</span> <span class="toctext">Contributing to the superproject</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Figure:_Workflow_of_an_update_of_your_submodules"><span class="tocnumber">3.5</span> <span class="toctext">Figure: Workflow of an update of your submodules</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Cloning_a_superproject">Cloning a superproject</span></h2>
+<p>First a short explanation of events which are triggered, when a superproject is cloned.
+There are some things in Git submodules, which aren't obvious and can be quite surprising.
+<b>Note: Ensure that you've understood the how-to at <a href="14569a6d13e60324f1803b54b2ffb589.html#Installing_and_maintaining_contributed_extensions_using_Git_submodules" title="Git for Administrators">Installing and maintaining contributed extensions using Git submodules</a> before continuing.</b>
+</p><p>Assume the plugin <b>mod_mylittleextension</b> (remember: MLE is a fake plugin) was installed in the superproject and these changes have been committed:
+</p>
+<pre>$ cd /path/to/your/superproject
+$ git submodule add /local/repositories/mle/ mod/mylittleextension
+$ git commit -a -m "New module MLE installed"
+</pre>
+<p>Now a developer has to type in the following commands, in order to clone the superproject (maybe from a remote device).
+</p>
+<pre>$ cd /path/to/local/directory
+$ git clone &lt;source&gt; moodle
+$ cd moodle
+$ git submodule update --init --recursive
+Submodule 'mod/mylittleextension' (/local/repositories/mle) registered for path 'mod/mylittleextension'
+Cloning into 'mod/mylittleextension'...
+done.
+Submodule path 'mod/mylittleextension': checked out '89d9eae3d5142474d8452128e8df5720d89012cd'
+$ cd mod/mylittleextension
+mod/mylittleextension $ git branch -av
+* (no branch)           89d9eae Initial commit
+  master                89d9eae Initial commit
+  remotes/origin/HEAD   -&gt; origin/master
+  remotes/origin/dev    3a2d487 First commit
+  remotes/origin/master 89d9eae Initial commit
+</pre>
+<p>The new main repositories will automatically know about the new extension, but it won't be initialized, which means that the submodule's directory will be empty in the beginning.
+For initializing the submodule, the developer needs to execute <b>git submodule update --init --recursive</b>.
+The <b>--recursive</b> option means, that Git will walk through nested submodules as well (not obligatory in this example).
+</p><p>After the initialization the submodule's repository will be in detached HEAD state.
+This is due the fact, that Git receives following data from the superproject:
+</p>
+<pre> * source url
+ * local path
+ * HEAD reference (hash)
+</pre>
+<p>See this figure, for a better understanding:
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Frame"><a href="https://docs.moodle.org/502/en/File:superprojects2.png" class="mw-file-description"><img src="images_en/d/d1/b6a30ff41f4e7cc9f8ba3d72f0e525b1.png" decoding="async" width="941" height="343" class="mw-file-element" data-file-width="941" data-file-height="343"></a><figcaption>Dotted line: information obtained from the superproject, but already saved locally (by pull)</figcaption></figure>
+<p>This means, <b>git submodule update --init</b> will first do a clone of <b>source url</b> into the <b>path</b> and then check out the <b>reference</b>, leaving the submodule in detached HEAD state.
+You and your developers need to keep in mind, that any change of the HEAD's reference of your submodule will be noticed by the main repository.
+This means also, that everyone can switch branches unnoticedly as long as the HEAD's hash reference doesn't change.
+E.g. a checkout of the branch <b>master</b> won't be noticed by the main repository, but a checkout of <b>dev</b> will:
+</p>
+<pre>mod/mylittleextension $ git checkout master
+mod/mylittleextension $ git branch -av
+* master                89d9eae Initial commit
+  remotes/origin/HEAD   -&gt; origin/master
+  remotes/origin/dev    3a2d487 First commit
+  remotes/origin/master 89d9eae Initial commit
+$ cd ../..
+$ git status
+# On branch master
+nothing to commit (working directory clean)
+$ cd mod/mylittleextension
+mod/mylittleextension $ git checkout dev
+Branch dev set up to track remote branch dev from origin.
+Switched to a new branch 'dev'
+mod/mylittleextension $ cd ../..
+$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add &lt;file&gt;..." to update what will be committed)
+#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+#
+#	modified:   mod/mylittleextension (new commits)
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+</pre>
+<p>There is a shorter command to initialize the submodules, but the outcome will be the same as above.
+Instead of changing the moodle directory and use <b>git submodule update --init</b> after the clone, you can use <b>git clone</b> with the <b>--recursive</b> option as well.
+</p>
+<pre>$ cd /path/to/new/location
+$ git clone --recursive &lt;source&gt; moodle
+</pre>
+<p>In other words, you may use <b>git submodule update --init</b> in the case you forget the <b>--recursive</b> option in your <b>git clone</b> command.
+</p>
+<h2><span class="mw-headline" id="Upgrading_your_submodules_via_the_superproject">Upgrading your submodules via the superproject</span></h2>
+<p>We now assume, that the external plugin is updated by its own repository only and no customization is needed.
+See <a href="14569a6d13e60324f1803b54b2ffb589.html#Installing_and_maintaining_contributed_extensions_using_Git_submodules" title="Git for Administrators">Installing and maintaining contributed extensions using Git submodules</a> for further information on the topic of maintaining submodules of your superproject.
+</p>
+<h3><span class="mw-headline" id="Pull_and_upgrade">Pull and upgrade</span></h3>
+<p>In case a submodule was updated inside the superproject, your developers have to be careful.
+<b>git pull</b> won't upgrade the submodules at once and an additional command is needed.
+This is what <b>git pull</b> would look like:
+</p>
+<pre>$ cd /path/to/local/repository
+$ git pull
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From /local/repositories/super/
+   b547f6c..7f0c348  master     -&gt; origin/master
+Fetching submodule mod/mylittleextension
+remote: Counting objects: 7, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (6/6), done.
+From /local/repositories/mle
+   3a2d487..5e0e66a  dev        -&gt; origin/dev
+   89d9eae..5e0e66a  master     -&gt; origin/master
+Updating b547f6c..7f0c348
+Fast-forward
+ mod/mylittleextension |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ cd mod/mylittleextension
+mod/mylittleextension $ git branch -av
+* (no branch)           89d9eae Initial commit
+  dev                   3a2d487 [behind 1] First commit
+  master                89d9eae [behind 2] Initial commit
+  remotes/origin/master 5e0e66a Second commit
+  remotes/origin/dev    5e0e66a Second commit
+</pre>
+<p>As you see, <b>git pull<i> triggers </i></b><i>git fetch'</i> inside the submodules repository, but nothing else.
+Therefore, your developers have to update the submodules afterwards:
+</p>
+<pre>$ cd /path/to/local/repository
+$ git submodule update
+Submodule path 'mod/mylittleextension': checked out '5e0e66aa787f4ebe9f61a940969a6e94abf01a1e'
+</pre>
+<h3><span class="mw-headline" id="Figure:_Updates_without_customization">Figure: Updates without customization</span></h3>
+<figure class="mw-halign-center" typeof="mw:File/Frame"><a href="https://docs.moodle.org/502/en/File:superprojects3.png" class="mw-file-description"><img src="images_en/d/d0/24ba8c05bd8b75c73307415a72666b7c.png" decoding="async" width="925" height="343" class="mw-file-element" data-file-width="925" data-file-height="343"></a><figcaption>A workflow for an upgrade from the source repository</figcaption></figure>
+<h3><span class="mw-headline" id="Known_issues">Known issues</span></h3>
+<p>Since <b>git submodule upgrade</b> checks out the reference, given by your main repository's commit, your submodule's repository will turn into detached HEAD state again.
+The command is equivalent to <b>git checkout</b> of the reference inside each submodule's path.
+That means, that conflicts will abort the checkout, like entering the directory and trying to do the checkout manually.
+So the submodule's repository should be clean in order to prevent problems with the submodule update.
+</p><p>A special case of this problem happens, if you try to clone a superproject, whose submodule's reference is not known by the origin.
+Your submodule's directory would be left blank (since there's nothing to check out) and you would have to resolve this issue manually (e.g. add your superprojects submodule repository as a remote).
+A situation, you don't want to get, for sure.
+</p>
+<h2><span class="mw-headline" id="Upgrading_customized_plugins">Upgrading customized plugins</span></h2>
+<h3><span class="mw-headline" id="Figure:_Suggested_workflow">Figure: Suggested workflow</span></h3>
+<p>In a normal workflow you don't touch external plugins and therefore there is no need to alter the submodules in any way.
+But what, if you <b>want to alter</b> them.
+In some cases the submodule is your own plugin or the extension is somehow insufficient but the original contributor doesn't want to merge your pull requests.
+</p><p>As you know from the previous section <b>git submodule update</b> tries to checkout a specific reference.
+Therefore, this reference must exist in the origin or you will get a problem while updating them.
+If you're not the contributor of the extension it is necessary to fork these repositiories.
+A suggested workflow would be like this:
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Frame"><a href="https://docs.moodle.org/502/en/File:superprojects4.png" class="mw-file-description"><img src="images_en/2/24/d05673697302a1347b6a078442c22a49.png" decoding="async" width="653" height="429" class="mw-file-element" data-file-width="653" data-file-height="429"></a><figcaption>Suggested workflow with customized plugins</figcaption></figure>
+<p>Your developers are responsible for updating your forked plugin.
+Therefore, they must merge the original changes into your forked code and resolve conflicts, if necessary.
+Your superproject pulls from the fork only.
+If you're setting up your first superproject, it doesn't have to be connected to the original repositiory at all, since you'll get all updates from your fork.
+So instead of adding the extension's original remote, you may add the fork only (after adding you can use <b>git remote rename origin fork</b> before your initial commit of the plugin).
+</p>
+<h3><span class="mw-headline" id="Setting_up_a_new_submodule">Setting up a new submodule</span></h3>
+<p>In case you haven't installed the extension yet, you can add and rename the repository afterwards (to avoid misunderstanding).
+On your superproject's machine do the following commands:
+</p>
+<pre>$ cd /path/to/moodle
+$ git submodule add &lt;source:fork&gt; mod/mylittleextension
+Cloning into 'mod/mylittleextension'...
+done.
+$ cd mod/mylittleextension
+mod/mylittleextension $ git remote rename origin fork
+mod/mylittleextension $ git branch -avv
+* master              5e0e66a [fork/master] Second commit
+  remotes/fork/HEAD   -&gt; fork/master
+  remotes/fork/dev    5e0e66a Second commit
+  remotes/fork/master 5e0e66a Second commit
+mod/mylittleextension $ cd ../..
+$ git commit -a -m "New extension 'MLE' installed"
+[master adecc96] New extension 'MLE' installed
+ 2 files changed, 4 insertions(+)
+ create mode 100644 .gitmodules
+ create mode 160000 mod/mylittleextension
+</pre>
+<p>Your developers will get your new submodule using <b>git clone</b> or <b>git pull</b> and can rename the remote likewise.
+In addition, they have to fetch updates from the original remote and have to add a remote repository manually.
+On your developers machine type in (output messages from Git are omitted):
+</p>
+<pre>cd /path/to/local/repository
+$ git pull
+$ git submodule update --init
+$ cd mod/mylittleextension
+mod/mylittleextension $ git remote rename origin fork
+mod/mylittleextension $ git remote add origin &lt;source:origin&gt;
+mod/mylittleextension $ git fetch origin
+</pre>
+<p>Now your developers can add branches, edit code, do commits and contribute to your fork.
+Details about that topic will follow after the next section.
+</p>
+<h3><span class="mw-headline" id="Changes_for_an_existing_submodule">Changes for an existing submodule</span></h3>
+<p>If the submodule is already installed and your superproject cloned, you must edit the <b>.gitmodules</b> file.
+Since the <b>path</b> and <b>url</b> of your submodule are saved (<b>reference</b> is saved in your commit), you may edit the file manually.
+But you can also use a Git command for that purpose.
+On the superproject's machine type in (output messages from Git are omitted):
+</p>
+<pre>cd /path/to/moodle/
+$ git config --file=.gitmodules submodule."mod/mylittleextension".url "&lt;source:fork&gt;"
+</pre>
+<p><b>or</b> edit the file <b>.gitmodules</b> respectively.
+</p><p>Afterwards type in:
+</p>
+<pre>$ git submodule sync
+Synchronizing submodule url for 'mod/mylittleextension'
+$ git commit -a -m "Changed source url of 'MLE'"
+$ cd mod/mylittleextension
+mod/mylittleextension $ git remote rename origin fork
+</pre>
+<p>The <b>sync</b> command will alter the remotes of your submodule's repository to match the settings of your <b>.gitmodules</b>.
+It is to mention, that changes in the remotes (like <b>rename</b> or <b>add</b>) of a submodule wont be noticed by the Moodle repository.
+In fact, unless you edit a file or change the submodule's HEAD reference, you can do whatever you want with your branches.
+</p><p>At last your developer has to update his project as well.
+On the developers machine type in (output messages are omitted again):
+</p>
+<pre>$ cd /path/to/local/repository
+$ git pull
+$ git submodule update
+$ git submodule sync
+$ cd mod/mylittleextension
+mod/mylittleextension $ git remote rename origin fork
+mod/mylittleextension $ git remote add origin &lt;source:origin&gt;
+mod/mylittleextension $ git fetch origin
+</pre>
+<p>Again, the <b>sync</b> command will change the remote settings of the submodule to match them with the <b>.gitmodules</b>.
+</p>
+<h3><span class="mw-headline" id="Contributing_to_the_superproject">Contributing to the superproject</span></h3>
+<p>This section will explain how to contribute patches for your superproject.
+Assume your developer has changed an extension and commit his changes in the submodule's repository.
+</p>
+<pre>$ cd /path/to/local/repository
+$ cd mod/mylittleextension
+mod/mylittleextension $ git branch -avv
+* dev                 9701a0c [fork/dev: ahead 1] Third commit
+  master              5e0e66a [fork/master] Second commit
+  remotes/fork/HEAD   -&gt; fork/master
+  remotes/fork/dev    5e0e66a Second commit
+  remotes/fork/master 5e0e66a Second commit
+</pre>
+<p>Push the changes into the fork.
+</p>
+<pre>mod/mylittleextension $ git push fork dev:master
+</pre>
+<p>You may organize your forked repository in another way, e.g. let the developers push into a separate branch and merge them only, when it is satisfying.
+For now, we assume the developers can push into your <b>master</b> (or, in general, the branch, which is tracked by your superproject).
+Your developer's Moodle repository will notice the changes from their commit:
+</p>
+<pre>$ cd /path/to/moodle
+$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add &lt;file&gt;..." to update what will be committed)
+#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+#
+#	modified:   mod/mylittleextension (new commits)
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+</pre>
+<p><b>Do not commit the changes.</b>
+We presume, that every change in your main repository is done through a commit from your superproject.
+The status is just saying, that your submodule is on another state than your superproject.
+But this is not a problem at all. We will fix this later.
+<b>Note: When your developers need to commit changes, which are not related to the submodule, they have to avoid to stage the submodule until the superproject has been updated.</b>
+</p><p>Update the superproject with the following commands on the superproject's machine:
+</p>
+<pre>(On the superproject's machine)
+$ cd /path/to/moodle
+$ git submodule foreach git pull
+$ git commit -a -m "Plugin updates"
+</pre>
+<p>Your developers can now fetch the updated superproject.
+</p>
+<pre>(On the developer's machine)
+$ cd /path/to/local/repository
+$ git pull
+$ git status
+# On branch master
+nothing to commit (working directory clean)
+</pre>
+<p>As you can see, your developer don't need to commit the changed status of the submodule.
+Your developer's repository will be clean again after a fetch.
+</p>
+<h3><span class="mw-headline" id="Figure:_Workflow_of_an_update_of_your_submodules">Figure: Workflow of an update of your submodules</span></h3>
+<figure class="mw-halign-center" typeof="mw:File/Frame"><a href="https://docs.moodle.org/502/en/File:superprojects5.png" class="mw-file-description"><img src="images_en/b/b6/f47139ab37326fc9a833d7f90b007148.png" decoding="async" width="978" height="679" class="mw-file-element" data-file-width="978" data-file-height="679"></a><figcaption>The 5th command (<b>git submodule update [--init]</b>) is only necessary, when other submodules are added or updated.</figcaption></figure>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<dl><dt>Moodle Docs</dt></dl>
+<ul><li><a href="14569a6d13e60324f1803b54b2ffb589.html" title="Git for Administrators">Git for Administrators</a></li>
+<li><a href="https://docs.moodle.org/dev/Git_for_developers" class="extiw" title="dev:Git for developers">Git for developers guide</a></li>
+<li><a href="89e0255d983c1ae6b50eb13ddeeb0a56.html" title="Windows installation using Git">Windows installation using Git</a></li>
+<li><a href="652e793dc49606402847b07a3e5a6945.html" class="mw-redirect" title="Git for Mac">Git for Mac</a></li>
+<li><a href="8c9971164c5ebe2fe373c08f1cdaea16.html" title="Moodle Production Server with GIT">Case study Git + Moodle from Technical University Berlin</a></li></ul>
+<dl><dt>External resources</dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Submodules at the Git book</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260823011504
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.023 seconds
+Real time usage: 0.134 seconds
+Preprocessor visited node count: 125/1000000
+Post&#8208;expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 5718/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:20283-0!canonical and timestamp 20260823011504 and revision id 145376. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Moodle_development_environment_with_Git_submodules&amp;oldid=145376">https://docs.moodle.org/502/en/index.php?title=Moodle_development_environment_with_Git_submodules&amp;oldid=145376</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhxu5yb3">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhxu5ymc"></button>
+					<div class="collapse navbar-collapse igdhxu5ymc" id="igdhxu5ymc">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Moodle_development_environment_with_Git_submodules" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Moodle_development_environment_with_Git_submodules" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_development_environment_with_Git_submodules&amp;oldid=145376" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_development_environment_with_Git_submodules&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 5 January 2023, at 16:27.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":241,"wgPageParseReport":{"limitreport":{"cputime":"0.023","walltime":"0.134","ppvisitednodes":{"value":125,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5718,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260823011504","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

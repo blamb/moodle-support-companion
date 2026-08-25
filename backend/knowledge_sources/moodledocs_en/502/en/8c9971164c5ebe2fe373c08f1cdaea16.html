@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Moodle Production Server with GIT - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"9e8df59a290d2da6b7b2bc9d","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Moodle_Production_Server_with_GIT","wgTitle":"Moodle Production Server with GIT","wgCurRevisionId":101409,"wgRevisionId":101409,"wgArticleId":16144,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Git","Developer"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Moodle_Production_Server_with_GIT","wgRelevantArticleId":16144,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Moodle_Production_Server_with_GIT">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Moodle_Production_Server_with_GIT rootpage-Moodle_Production_Server_with_GIT layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhxwlm2y"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhxwlm2y" id="igdhxwlm2y">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Moodle+Production+Server+with+GIT" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Moodle_Production_Server_with_GIT">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Moodle_Production_Server_with_GIT">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Moodle_Production_Server_with_GIT">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="8c9971164c5ebe2fe373c08f1cdaea16.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Moodle_Production_Server_with_GIT&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_Production_Server_with_GIT&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_Production_Server_with_GIT&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Moodle Production Server with GIT</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#GIT_Repository_scheme"><span class="tocnumber">1</span> <span class="toctext">GIT Repository scheme</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Install_the_repositories"><span class="tocnumber">2</span> <span class="toctext">Install the repositories</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Develop_and_change_local_code"><span class="tocnumber">3</span> <span class="toctext">Develop and change local code</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Integrate_code_changes_to_productive"><span class="tocnumber">4</span> <span class="toctext">Integrate code changes to productive</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Merge_the_weekly_moodle_release"><span class="tocnumber">5</span> <span class="toctext">Merge the weekly moodle release</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Rebase_on_new_Moodle_version"><span class="tocnumber">6</span> <span class="toctext">Rebase on new Moodle version</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="GIT_Repository_scheme">GIT Repository scheme</span></h2>
+<p>This is the description of how we maintain our Moodle2 code at <a rel="nofollow" class="external text" href="http://www.isis.tu-berlin.de/2.0/">TU Berlin</a>. Our Moodle 1.9 has ca. 30000 active user with average 500 online user 24/7 (based on active users the last 15 minutes). This moves slowly to Moodle 2 now. We have a lot of code changes and plugins, so it's essential for us to maintain the code as automated as possible.
+</p><p>Our Moodle is called ISIS. So further on everything what is named ISIS belongs to us, everything what is called MOODLE belongs to moodle.org.
+</p><p>We use several GIT-repositories. The scheme with branches looks like this
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:ISIS_GIT_schema.png" class="mw-file-description"><img src="images_en/1/15/a6b1002404693e83dc086038b9c1acd9.png" decoding="async" width="791" height="664" class="mw-file-element" data-file-width="791" data-file-height="664"></a></span>
+</p><p>The main purpose for the ISIS remote repository is for backups. One can imagine a scenario without this remote server only with local repositories involved. If you use <a rel="nofollow" class="external text" href="https://github.com/sitaramc/gitolite/wiki">gitolite</a> for your remote repository, it's even more comfortable to keep the code clean, because you are able the restrict access to branches for developer and integration manager individually. 
+</p><p>The puzzle about the isis_rebase branch will be explained, when we come to a new moodle release.
+</p>
+<h2><span class="mw-headline" id="Install_the_repositories">Install the repositories</span></h2>
+<p>We start with the original moodle code. For orientation we suggest to read the very useful description <a href="14569a6d13e60324f1803b54b2ffb589.html" title="Git for Administrators">Git_for_Administrators</a> first.
+Instead of the advise there we won't clone the moodle.org-repository in the first place. We start over with creating an empty repository at the ISIS Integration server.
+</p><p><br>
+</p>
+<pre><span style="color:#808080">wendt@integ:~$</span> mkdir isis
+<span style="color:#808080">wendt@integ:~$</span> cd isis/
+<span style="color:#808080">wendt@integ:~/isis$</span> git init
+Initialized empty Git repository in /home/wendt/isis/.git/
+<span style="color:#808080">wendt@integ:~/isis$</span> 
+</pre>
+<p><br>
+Now we add moodle.org as remote repository.
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git remote add <span style="color:#008000">moodle</span> git://git.moodle.org/moodle.git
+<span style="color:#808080">wendt@integ:~/isis$</span> git fetch <span style="color:#008000">moodle</span>
+remote: Counting objects: 597378, done.
+remote: Compressing objects: 100% (141938/141938), done.
+remote: Total 597378 (delta 442383), reused 597378 (delta 442383)
+Receiving objects: 100% (597378/597378), 223.38 MiB | 11.16 MiB/s, done.
+Resolving deltas: 100% (442383/442383), done.
+From git://git.moodle.org/moodle
+ * [new branch]      <span style="color:#ff0000">MOODLE_13_STABLE</span> -&gt; <span style="color:#ff0000">moodle/MOODLE_13_STABLE</span>
+ * [new branch]      <span style="color:#ff0000">MOODLE_22_STABLE</span> -&gt; <span style="color:#ff0000">moodle/MOODLE_22_STABLE</span>
+.
+.
+.
+ * [new branch]      <span style="color:#ff0000">MOODLE_23_STABLE</span> -&gt; <span style="color:#ff0000">moodle/MOODLE_23_STABLE</span>
+ * [new branch]      <span style="color:#ff0000">master</span>     -&gt; <span style="color:#ff0000">moodle/master</span>
+ * [new tag]         v1.3.5     -&gt; v1.3.5
+.
+.
+. 
+ * [new tag]         v2.3.2     -&gt; v2.3.2
+<span style="color:#808080">wendt@integ:~/isis$</span> 
+</pre>
+<p><br>
+Next we create a local branch of the moodle 2.3 code.
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git branch --track <span style="color:#ff0000">MOODLE_23_STABLE</span> <span style="color:#ff0000">remotes/moodle/MOODLE_23_STABLE</span>
+Branch <span style="color:#ff0000">MOODLE_23_STABLE</span> set up to track remote branch <span style="color:#ff0000">MOODLE_23_STABLE</span> from <span style="color:#008000">moodle</span>.
+<span style="color:#808080">wendt@integ:~/isis$</span> git checkout <span style="color:#ff0000">MOODLE_23_STABLE</span>
+Switched to branch '<span style="color:#ff0000">MOODLE_23_STABLE</span>'
+<span style="color:#808080">wendt@integ:~/isis$</span>
+</pre>
+<p>From this we fork our initial ISIS code.
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git checkout -b <span style="color:#ff0000">isis_contrib</span>
+Switched to a new branch '<span style="color:#ff0000">isis_contrib</span>'
+<span style="color:#808080">wendt@integ:~/isis$</span> 
+</pre>
+<p><br>
+At this point we expect an empty ISIS remote repository, where we can initially push the ISIS code. First we add it as a remote repository to our local git-repository. then we push the isis_contrib branch into the different branches of the remote repository.
+</p><p><br>
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git remote add <span style="color:#008000">isis</span> git://isis.remote.tu-berlin.de/isis.git
+<span style="color:#808080">wendt@integ:~/isis$</span> git push <span style="color:#008000">isis</span> <span style="color:#ff0000">isis_contrib</span>:<span style="color:#ff0000">isis_contrib</span>
+Counting objects: 472320, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (117914/117914), done.
+Writing objects: 100% (472320/472320), 199.01 MiB | 17.92 MiB/s, done.
+Total 472320 (delta 347911), reused 464510 (delta 342938)
+To git://isis.remote.tu-berlin.de/isis.git
+ * [new branch]      <span style="color:#ff0000">isis_contrib</span> -&gt; <span style="color:#ff0000">isis_contrib</span>
+<span style="color:#808080">wendt@integ:~/isis$</span> git push <span style="color:#008000">isis</span> <span style="color:#ff0000">isis_contrib</span>:<span style="color:#ff0000">isis_productive</span>
+Total 0 (delta 0), reused 0 (delta 0)
+To git://isis.remote.tu-berlin.de/isis.git
+ * [new branch]      <span style="color:#ff0000">isis_contrib</span> -&gt; <span style="color:#ff0000">isis_productive</span>
+<span style="color:#808080">wendt@integ:~/isis$</span> git push <span style="color:#008000">isis</span> <span style="color:#ff0000">isis_contrib</span>:<span style="color:#ff0000">isis_rebase</span>
+Total 0 (delta 0), reused 0 (delta 0)
+To git://isis.remote.tu-berlin.de/isis.git
+ * [new branch]      <span style="color:#ff0000">isis_contrib</span> -&gt; <span style="color:#ff0000">isis_rebase</span>
+<span style="color:#808080">wendt@integ:~/isis$</span> 
+</pre>
+<p>To stay in sync with the remote ISIS repository we track the remote branches to local ones now.
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git branch --track <span style="color:#ff0000">isis_productive</span> <span style="color:#ff0000">remotes/isis/isis_productive</span>
+Branch <span style="color:#ff0000">isis_productive</span> set up to track remote branch <span style="color:#ff0000">isis_productive</span> from <span style="color:#008000">isis</span>.
+<span style="color:#808080">wendt@integ:~/isis$</span> git branch --track <span style="color:#ff0000">isis_rebase</span>  <span style="color:#ff0000">remotes/isis/isis_rebase</span>
+Branch <span style="color:#ff0000">isis_rebase</span> set up to track remote branch <span style="color:#ff0000">isis_rebase</span> from <span style="color:#008000">isis</span>.
+<span style="color:#808080">wendt@integ:~/isis$</span> git checkout <span style="color:#ff0000">isis_contrib</span>
+Already on '<span style="color:#ff0000">isis_contrib</span>'
+<span style="color:#808080">wendt@integ:~/isis$</span> git branch --set-upstream <span style="color:#ff0000">remotes/isis/isis_contrib</span>
+Branch <span style="color:#ff0000">remotes/isis/isis_contrib</span> set up to track local branch <span style="color:#ff0000">isis_contrib</span>.
+<span style="color:#808080">wendt@integ:~/isis$</span> 
+</pre>
+<p>Now we are ready to bring the code to the productive Server. You can pull the code from the remote ISIS repository, but you will have a lot of overhead this way. So we simply rsync the code to the server.
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git checkout <span style="color:#ff0000">isis_productive</span>
+Switched to branch '<span style="color:#ff0000">isis_productive</span>'
+<span style="color:#808080">wendt@integ:~/isis$</span> cd ..
+<span style="color:#808080">wendt@integ:~$</span> rsync -a --delete --exclude=config.php --exclude=.htaccess --exclude=.git/ isis admin@www.isis.tu-berlin.de:/var/www/
+admin@www.isis.tu-berlin.de's password: 
+<span style="color:#808080">wendt@integ:~$</span> 
+</pre>
+<p>This rsync command will reappear later updating the production code as well. At this point you can start using your moodle and follow the <a href="553207f76ae3b1e85403f96c2ca316f1.html" title="Installing Moodle">install procedure</a> of moodle.
+</p><p><br>
+</p>
+<h2><span class="mw-headline" id="Develop_and_change_local_code">Develop and change local code</span></h2>
+<p>Our developers clone the ISIS remote repository to their local home directories, prepare and test their changes and push the results back to <span style="color:#ff0000">isis_contrib</span> branch of the ISIS remote repository. 
+</p>
+<pre><span style="color:#808080">develop1@mylaptop:~$</span> git clone git://isis.remote.tu-berlin.de/isis.git
+Cloning into <span style="color:#008000">isis</span>...
+remote: Counting objects: 472320, done.
+remote: Compressing objects: 100% (112942/112942), done.
+remote: Total 472320 (delta 347910), reused 472320 (delta 347910)
+Receiving objects: 100% (472320/472320), 199.03 MiB | 23.88 MiB/s, done.
+Resolving deltas: 100% (347910/347910), done.
+warning: remote HEAD refers to nonexistent ref, unable to checkout.
+<span style="color:#808080">develop1@mylaptop:~$</span> 
+</pre>
+<p>To be aware of changes we track the remote <span style="color:#ff0000">isis_contrib</span> branch to a local branch. 
+</p>
+<pre><span style="color:#808080">develop1@mylaptop:~$</span> cd isis/
+<span style="color:#808080">develop1@mylaptop:~/isis$</span> git branch -av
+  <span style="color:#ff0000">remotes/origin/isis_contrib</span>    562dbe4 weekly release 2.3.2+
+  <span style="color:#ff0000">remotes/origin/isis_productive</span> 562dbe4 weekly release 2.3.2+
+  <span style="color:#ff0000">remotes/origin/isis_rebase</span>     562dbe4 weekly release 2.3.2+
+<span style="color:#808080">develop1@mylaptop:~/isis$</span> git branch --track <span style="color:#ff0000">isis_contrib</span> <span style="color:#ff0000">remotes/origin/isis_contrib</span> 
+Branch <span style="color:#ff0000">isis_contrib</span> set up to track remote branch <span style="color:#ff0000">isis_contrib</span> from <span style="color:#008000">origin</span>.
+<span style="color:#808080">develop1@mylaptop:~/isis$</span> 
+</pre>
+<p>Lets fork a branch, where we put and test our code changes.
+</p>
+<pre><span style="color:#808080">develop1@mylaptop:~/isis$</span> git checkout <span style="color:#ff0000">isis_contrib</span> 
+Switched to branch '<span style="color:#ff0000">isis_contrib</span>'
+<span style="color:#808080">develop1@mylaptop:~/isis$</span> git checkout -b <span style="color:#ff0000">isis_my_code1</span>
+Switched to a new branch '<span style="color:#ff0000">isis_my_code1</span>'
+<span style="color:#808080">develop1@mylaptop:~/isis$</span> 
+</pre>
+<p>Make code changes.
+</p>
+<pre><span style="color:#808080">develop1@mylaptop:~/isis$</span> emacs theme/base/style/pagelayout.css 
+<span style="color:#808080">develop1@mylaptop:~/isis$</span> 
+</pre>
+<p>After commiting it, we can push it to the ISIS remote repository. Of course there are 1000 ways of using git to develop and change code and to push it to remote repositories. This is just one of it. Feel free to use, whatever you are used to.
+</p>
+<pre><span style="color:#808080">develop1@mylaptop:~/isis$</span> git commit -a -m "base theme updated"
+[<span style="color:#ff0000">isis_my_code1</span> b5ec6cc] base theme updated
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+<span style="color:#808080">develop1@mylaptop:~/isis$</span> git push <span style="color:#008000">origin</span> <span style="color:#ff0000">isis_my_code1</span>:<span style="color:#ff0000">isis_contrib</span> 
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 511 bytes, done.
+Total 6 (delta 5), reused 0 (delta 0)
+To git://isis.remote.tu-berlin.de/isis.git
+   562dbe4..b5ec6cc  <span style="color:#ff0000">isis_my_code1</span> -&gt; <span style="color:#ff0000">isis_contrib</span>
+<span style="color:#808080">develop1@mylaptop:~/isis$</span>
+</pre>
+<p>Don't forget to update your <span style="color:#ff0000">isis_contrib</span> branch before the next code change.
+</p>
+<pre><span style="color:#808080">develop1@mylaptop:~/isis$</span> git checkout <span style="color:#ff0000">isis_contrib</span> 
+Switched to branch '<span style="color:#ff0000">isis_contrib</span>'
+Your branch is behind '<span style="color:#ff0000">origin/isis_contrib</span>' by 1 commit, and can be fast-forwarded.
+<span style="color:#808080">develop1@mylaptop:~/isis$</span> git pull
+Updating 562dbe4..b5ec6cc
+Fast-forward
+ theme/base/style/pagelayout.css |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+<span style="color:#808080">develop1@mylaptop:~/isis$</span>
+</pre>
+<h2><span class="mw-headline" id="Integrate_code_changes_to_productive">Integrate code changes to productive</span></h2>
+<p>Back on the integration server, the integration manager has to review and test the new code contributions. So lets get the new code changes from the ISIS remote repository.
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git checkout <span style="color:#ff0000">isis_contrib</span> 
+Switched to branch '<span style="color:#ff0000">isis_contrib</span>'
+<span style="color:#808080">wendt@integ:~/isis$</span> git pull
+remote: Counting objects: 11, done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 5), reused 0 (delta 0)
+Unpacking objects: 100% (6/6), done.
+From isis.remote.tu-berlin.de/isis
+   562dbe4..b5ec6cc  <span style="color:#ff0000">isis_contrib</span> -&gt; <span style="color:#ff0000">isis/isis_contrib</span>
+Updating 562dbe4..b5ec6cc
+Fast-forward
+ theme/base/style/pagelayout.css |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+<span style="color:#808080">wendt@integ:~/isis$</span> 
+</pre>
+<p>If you go for the code changes, you can merge them into the production branch and cherry-pick it on top of the rebase branch. I prefer cherry-picking the code, because it gives more awareness of what I do. Although there exists more ways of merging the code on top of the <span style="color:#ff0000">isis_rebase</span>-branch.
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git checkout <span style="color:#ff0000">isis_productive</span> 
+Switched to branch '<span style="color:#ff0000">isis_productive</span>'
+<span style="color:#808080">wendt@integ:~/isis$</span> git merge <span style="color:#ff0000">isis_contrib</span> 
+Updating 562dbe4..b5ec6cc
+Fast-forward
+ theme/base/style/pagelayout.css |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+<span style="color:#808080">wendt@integ:~/isis$</span> git checkout <span style="color:#ff0000">isis_rebase</span> 
+Switched to branch '<span style="color:#ff0000">isis_rebase</span>'
+<span style="color:#808080">wendt@integ:~/isis$</span> git cherry-pick b5ec6cc
+Finished one cherry-pick.
+[isis_rebase ed9bd24] base theme updated
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+<span style="color:#808080">wendt@integ:~/isis$</span> 
+</pre>
+<p>Now we push our changes to the ISIS remote repository.
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git push
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 517 bytes, done.
+Total 6 (delta 5), reused 0 (delta 0)
+To git://isis.remote.tu-berlin.de/isis.git
+   562dbe4..b5ec6cc  <span style="color:#ff0000">isis_productive</span> -&gt; <span style="color:#ff0000">isis_productive</span>
+   562dbe4..ed9bd24  <span style="color:#ff0000">isis_rebase</span> -&gt; <span style="color:#ff0000">isis_rebase</span>
+<span style="color:#808080">wendt@integ:~/isis$</span>
+</pre>
+<p>And finally we apply the rsync again to copy the source code to the ISIS productive server. 
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git checkout <span style="color:#ff0000">isis_productive</span>
+Switched to branch '<span style="color:#ff0000">isis_productive</span>'
+<span style="color:#808080">wendt@integ:~/isis$</span> cd ..
+<span style="color:#808080">wendt@integ:~$</span> rsync -a --delete --exclude=config.php --exclude=.htaccess --exclude=.git/ isis admin@www.isis.tu-berlin.de:/var/www/
+admin@www.isis.tu-berlin.de's password: 
+<span style="color:#808080">wendt@integ:~$</span> 
+</pre>
+<h2><span class="mw-headline" id="Merge_the_weekly_moodle_release">Merge the weekly moodle release</span></h2>
+<p>Now, having a working Moodle instance running at the Server, we have to merge the weekly Moodle releases, To be on the safe side, you can always fork new test branches and test the merging process there, before you apply these to your productive branches. After practising it for several month everything still merges smoothly without any conflicts.
+</p><p>First we get the recent Moodle release in our tracked Moodle-branch.
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git checkout <span style="color:#ff0000">MOODLE_23_STABLE</span> 
+Switched to branch '<span style="color:#ff0000">MOODLE_23_STABLE</span>'
+<span style="color:#808080">wendt@integ:~/isis$</span> git pull 
+ remote: Counting objects: 4304, done.
+ remote: Compressing objects: 100% (776/776), done.
+ remote: Total 3014 (delta 2310), reused 2841 (delta 2155)
+ Receiving objects: 100% (3014/3014), 733.24 KiB | 276 KiB/s, done.
+ Resolving deltas: 100% (2310/2310), completed with 532 local objects.
+ From git://git.moodle.org/moodle
+   a8d6719..9fa159e  <span style="color:#ff0000">MOODLE_21_STABLE</span> -&gt; <span style="color:#ff0000">moodle/MOODLE_21_STABLE</span>
+   a8ce907..10c3c37  <span style="color:#ff0000">MOODLE_22_STABLE</span> -&gt; <span style="color:#ff0000">moodle/MOODLE_22_STABLE</span>
+   562dbe4..b1c5155  <span style="color:#ff0000">MOODLE_23_STABLE</span> -&gt; <span style="color:#ff0000">moodle/MOODLE_23_STABLE</span>
+   ccd90e7..7e8ae12  <span style="color:#ff0000">master</span>     -&gt; <span style="color:#ff0000">moodle/master</span>
+ Updating 562dbe4..b1c5155
+ Fast-forward
+  admin/cli/install.php                             |   14 +-
+  admin/renderer.php                                |    2 +-
+  admin/tool/customlang/locallib.php                |    2 +-
+ .
+ .
+ .
+  version.php                                       |    4 +-
+  webservice/lib.php                                |    2 +-
+ 104 files changed, 2211 insertions(+), 1248 deletions(-)
+ create mode 100644 install/lang/ms/admin.php
+ create mode 100644 install/lang/ms/install.php
+ create mode 100644 install/lang/ms/moodle.php
+ delete mode 100644 mod/lesson/importppt.php
+ delete mode 100644 mod/lesson/importpptlib.php
+ create mode 100644 pix/f/epub.png
+<span style="color:#808080">wendt@integ:~/isis$</span> 
+</pre>
+<p>Now we merge the new release into our isis branches.
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git checkout <span style="color:#ff0000">isis_contrib</span> 
+Switched to branch '<span style="color:#ff0000">isis_contrib</span>'
+<span style="color:#808080">wendt@integ:~/isis$</span> git merge <span style="color:#ff0000">MOODLE_23_STABLE</span> 
+Removing mod/lesson/importppt.php
+Removing mod/lesson/importpptlib.php
+Merge made by recursive.
+ admin/cli/install.php                             |   14 +-
+ admin/renderer.php                                |    2 +-
+ admin/tool/customlang/locallib.php                |    2 +-
+ admin/tool/customlang/styles.css                  |    4 +
+.
+.
+.
+ user/selector/search.php                          |   13 +-
+ version.php                                       |    4 +-
+ webservice/lib.php                                |    2 +-
+ 104 files changed, 2211 insertions(+), 1248 deletions(-)
+ create mode 100644 install/lang/ms/admin.php
+ create mode 100644 install/lang/ms/install.php
+ create mode 100644 install/lang/ms/moodle.php
+ delete mode 100644 mod/lesson/importppt.php
+ delete mode 100644 mod/lesson/importpptlib.php
+ create mode 100644 pix/f/epub.png
+<span style="color:#808080">wendt@integ:~/isis$</span> git checkout <span style="color:#ff0000">isis_productive</span> 
+Switched to branch '<span style="color:#ff0000">isis_productive</span>'
+<span style="color:#808080">wendt@integ:~/isis$</span> git merge <span style="color:#ff0000">MOODLE_23_STABLE</span> 
+Removing mod/lesson/importppt.php
+Removing mod/lesson/importpptlib.php
+Merge made by recursive.
+ admin/cli/install.php                             |   14 +-
+ admin/renderer.php                                |    2 +-
+.
+.
+.  
+ user/selector/search.php                          |   13 +-
+ version.php                                       |    4 +-
+ webservice/lib.php                                |    2 +-
+ 104 files changed, 2211 insertions(+), 1248 deletions(-)
+ create mode 100644 install/lang/ms/admin.php
+ create mode 100644 install/lang/ms/install.php
+ create mode 100644 install/lang/ms/moodle.php
+ delete mode 100644 mod/lesson/importppt.php
+ delete mode 100644 mod/lesson/importpptlib.php
+ create mode 100644 pix/f/epub.png
+<span style="color:#808080">wendt@integ:~/isis$</span> 
+</pre>
+<p>As the name suggests, we rebase our code changes from the <span style="color:#ff0000">isis_rebase</span> branch on top of the <span style="color:#ff0000">MOODLE_23_STABLE</span> branch.
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git checkout <span style="color:#ff0000">isis_rebase</span> 
+Switched to branch '<span style="color:#ff0000">isis_rebase</span>'
+<span style="color:#808080">wendt@integ:~/isis$</span> git rebase <span style="color:#ff0000">MOODLE_23_STABLE</span> 
+First, rewinding head to replay your work on top of it...
+Applying: base theme updated
+<span style="color:#808080">wendt@integ:~/isis$</span> 
+</pre>
+<p>Finally we push everything to the ISIS remote repository.
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git push
+Counting objects: 1062, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (159/159), done.
+Writing objects: 100% (661/661), 151.24 KiB, done.
+Total 661 (delta 501), reused 623 (delta 488)
+To git://isis.remote.tu-berlin.de/isis.git
+   b5ec6cc..df8a1ca  <span style="color:#ff0000">isis_contrib</span> -&gt; <span style="color:#ff0000">isis_contrib</span>
+   b5ec6cc..7b75c8e  <span style="color:#ff0000">isis_productive</span> -&gt; <span style="color:#ff0000">isis_productive</span>
+&nbsp;! [rejected]        <span style="color:#ff0000">isis_rebase</span> -&gt; <span style="color:#ff0000">isis_rebase</span> (non-fast-forward)
+error: failed to push some refs to 'git://isis.remote.tu-berlin.de/isis.git'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes (e.g. 'git pull') before pushing again.  See the
+'Note about fast-forwards' section of 'git push --help' for details.
+<span style="color:#808080">wendt@integ:~/isis$</span> 
+</pre>
+<p>Of course pushing the <span style="color:#ff0000">isis_rebase</span> branch fails, so we push it with force.
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git push --force <span style="color:#008000">isis</span> <span style="color:#ff0000">isis_rebase</span>:<span style="color:#ff0000">isis_rebase</span>
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 515 bytes, done.
+Total 6 (delta 5), reused 0 (delta 0)
+To git://isis.remote.tu-berlin.de/isis.git
+ + ed9bd24...eeeb43f <span style="color:#ff0000">isis_rebase</span> -&gt; <span style="color:#ff0000">isis_rebase</span> (forced update)
+<span style="color:#808080">wendt@integ:~/isis$</span> 
+</pre>
+<h2><span class="mw-headline" id="Rebase_on_new_Moodle_version">Rebase on new Moodle version</span></h2>
+<p>Because the developing branches of Moodle 2.4 are forked from Moodle 2.3.0 every merge from our recent productive branch with the new developing branch will fail because of conflicts. This is, why we collect all of our code changes on top of the <span style="color:#ff0000">isis_rebase</span> branch. Once a new Moodle-release is there, we can simply put our code changes again on top of this release and have hopefully less work with conflicts.
+</p>
+<pre><span style="color:#808080">wendt@integ:~/isis$</span> git branch -v
+   <span style="color:#ff0000">MOODLE_23_STABLE</span>     e6aac11 weekly release 2.3.3+
+   <span style="color:#ff0000">MOODLE_24_dev</span>        87e9331 weekly release 2.4dev
+   <span style="color:#ff0000">isis_rebase</span>     6cc7e47 Ver-/Entschl&uuml;sselung der Backup-Archive @author: Jan Eberhardt, 10/08/2012
+<span style="color:#808080">wendt@integ:~/isis$</span> git checkout <span style="color:#ff0000">isis_rebase</span>
+<span style="color:#808080">wendt@integ:~/isis$</span> git rebase --onto <span style="color:#ff0000">MOODLE_24_dev MOODLE_23_STABLE isis_rebase</span>
+<span style="color:#808080">wendt@integ:~/isis$</span>
+</pre>
+<!-- 
+NewPP limit report
+Cached time: 20260823011508
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.028 seconds
+Real time usage: 0.081 seconds
+Preprocessor visited node count: 308/1000000
+Post&#8208;expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 578/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:16144-0!canonical and timestamp 20260823011508 and revision id 101409. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Moodle_Production_Server_with_GIT&amp;oldid=101409">https://docs.moodle.org/502/en/index.php?title=Moodle_Production_Server_with_GIT&amp;oldid=101409</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="ca4a5ceb26a9934e47a5445fb65b8771.html" title="Category:Git">Git</a></li><li><a href="d7b6770687f1584dd7077ddf50ca2429.html" title="Category:Developer">Developer</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhxwmau3">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhxwmb8v"></button>
+					<div class="collapse navbar-collapse igdhxwmb8v" id="igdhxwmb8v">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Moodle_Production_Server_with_GIT" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Moodle_Production_Server_with_GIT" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_Production_Server_with_GIT&amp;oldid=101409" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_Production_Server_with_GIT&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 19 October 2012, at 15:22.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":273,"wgPageParseReport":{"limitreport":{"cputime":"0.028","walltime":"0.081","ppvisitednodes":{"value":308,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":578,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260823011508","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Step by Step Installation Guide for Red Hat Compatible Servers - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"2aacc13cf00dfab0d6e894ae","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers","wgTitle":"Step by Step Installation Guide for Red Hat Compatible Servers","wgCurRevisionId":154753,"wgRevisionId":154753,"wgArticleId":25915,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers","wgRelevantArticleId":25915,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="593ae70845242c812b361a340a53fb46.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.pygments%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers rootpage-Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdiw53pmb"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdiw53pmb" id="igdiw53pmb">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Step+by+Step+Installation+Guide+for+Red+Hat+Compatible+Servers" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="526e1cd3917fb54e406f89c6e879d3b0.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Step by Step Installation Guide for Red Hat Compatible Servers</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a> ► <a class="mw-selflink selflink">Step by Step Installation Guide for Red Hat Compatible Servers</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a></div>	
+<div class="content">
+<ul><li><a href="553207f76ae3b1e85403f96c2ca316f1.html" title="Installing Moodle">Installing Moodle</a></li>
+<li><a href="399ca91535c3410845bff1400293dbc5.html" title="Installation quick guide">Installation quick guide</a></li>
+<li><a href="37fc181470a569556f94c1f35940d0a7.html" title="Cron">Cron</a></li>
+<li><a href="081d50b0942d418fa28114398527e388.html" title="Nginx">Nginx</a></li>
+<li><a href="6831e4affebb174320f861bc76b08775.html" title="Apache">Apache</a></li>
+<li><a href="68065410acf60db421f4e2aac18bc951.html" title="Internet Information Services">IIS</a></li>
+<li><a href="838fe95223f139a5c86fa0eace52fb64.html" title="Configuring the Router">Routing</a></li>
+<li><a href="b8a47099f49d74586081af402e096238.html" title="Installing plugins">Installing plugins</a></li>
+<li><a href="52d1d262bc125752f9747df1abc77de6.html" title="Installation FAQ">Installation FAQ</a></li>
+<li><a href="b38923733584457a7e29bf0e898e9c97.html" title="Upgrading">Upgrading</a></li>
+<li><a href="451fc5f44047acbcf3c960e787eb56c6.html" title="Upgrade overview">Upgrade overview</a></li>
+<li><a href="784f6d5df0514efb399c81a6f803d2c7.html" title="Automatic updates deployment">Automatic updates deployment</a></li>
+<li><a href="14569a6d13e60324f1803b54b2ffb589.html" title="Git for Administrators">Git guide</a></li>
+<li><a href="8428d1ac0de33e2b0f542d6d962f1fa6.html" title="Administration via command line">Administration via command line</a></li>
+<li><a href="6aeead2c752a1a71fc9b37a62d913491.html" title="Upgrading FAQ">Upgrading FAQ</a></li>
+<li><a href="1a1489d94778d66d38f3a8e70fedc938.html" title="Moodle migration">Moodle migration</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Development_Database_Installation"><span class="tocnumber">1</span> <span class="toctext">Development Database Installation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Update_and_install_base_packages"><span class="tocnumber">1.1</span> <span class="toctext">Update and install base packages</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Obtain_Moodle_code_using_git"><span class="tocnumber">1.2</span> <span class="toctext">Obtain Moodle code using git</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Install_a_Webserver"><span class="tocnumber">1.3</span> <span class="toctext">Install a Webserver</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Option_1:_Install_Apache_as_your_Webserver"><span class="tocnumber">1.3.1</span> <span class="toctext">Option 1: Install Apache as your Webserver</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Option_2:_Install_Nginx_as_your_Webserver"><span class="tocnumber">1.3.2</span> <span class="toctext">Option 2: Install Nginx as your Webserver</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#Obtain_and_set_up_composer"><span class="tocnumber">1.4</span> <span class="toctext">Obtain and set up composer</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Specific_Moodle_requirements"><span class="tocnumber">1.5</span> <span class="toctext">Specific Moodle requirements</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Create_Database_and_User"><span class="tocnumber">1.6</span> <span class="toctext">Create Database and User</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Firewall"><span class="tocnumber">1.7</span> <span class="toctext">Firewall</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Configure_Moodle_from_the_command_line"><span class="tocnumber">1.8</span> <span class="toctext">Configure Moodle  from the command line</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Prepare_Development_Database_for_Production"><span class="tocnumber">2</span> <span class="toctext">Prepare Development Database for Production</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Check_Permissions"><span class="tocnumber">2.1</span> <span class="toctext">Check Permissions</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Set_a_root_password_on_the_database"><span class="tocnumber">2.2</span> <span class="toctext">Set a root password on the database</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Configure_and_enable_a_firewall"><span class="tocnumber">2.3</span> <span class="toctext">Configure and enable a firewall</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Convert_http_to_the_encrypted_https_protocol"><span class="tocnumber">2.4</span> <span class="toctext">Convert http to the encrypted https protocol</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="#Apache_version"><span class="tocnumber">2.4.1</span> <span class="toctext">Apache version</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Nginx_version"><span class="tocnumber">2.4.2</span> <span class="toctext">Nginx version</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-19"><a href="#SSH_keys"><span class="tocnumber">2.5</span> <span class="toctext">SSH keys</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Remove_SSH_root_access"><span class="tocnumber">2.6</span> <span class="toctext">Remove SSH root access</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Keep_RHEL_compatible_distributions_up_to_date"><span class="tocnumber">2.7</span> <span class="toctext">Keep RHEL compatible distributions up to date</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#SQL_Backups"><span class="tocnumber">2.8</span> <span class="toctext">SQL Backups</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Development_Database_Installation">Development Database Installation</span></h2>
+<p>This guide has been tested on Red Hat compatible servers Alma 9 and Rocky Linux 9 server with sudo or root access. All commands on this page are text based so there is no need for a desktop with a graphical interface. Each step will tell you what you need to do and then give the commands that will accomplish that step. You can copy the entire coloured step or a line at a time but be careful with the word wrap, some commands will extend over multiple lines.
+</p><p>Apache or Nginx are given as options for a  webserver. <b>Install one or the other, not both</b>. Both are good options, with Apache having good community support while Nginx may be better suited to busier sites.  
+</p>
+<h3><span class="mw-headline" id="Update_and_install_base_packages">Update and install base packages</span></h3><p>
+Moodle requires a web server, database and the php scripting language as described in <a rel="nofollow" class="external free" href="https://moodledev.io/general/releases/5.1#server-requirements">https://moodledev.io/general/releases/5.1#server-requirements</a>.</p><div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Set your domain name or IP address as a temporary variable as it will be needed several times in the installation</span>
+<span class="nv">PROTOCOL</span><span class="o">=</span><span class="s2">"http://"</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">"Enter the web address (without the http:// prefix, eg domain name mymoodle123.com or IP address 192.168.1.1.): "</span><span class="w"> </span>WEBSITE_ADDRESS
+</pre></div><div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Update all packages</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>update
+<span class="c1"># Some clones have php 8.3 ready to install, others may require additional repositories. This block checks existing repositories for php version.</span>
+dnf<span class="w"> </span>list<span class="w"> </span>php-8*<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span><span class="m">8</span>.3<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"PHP 8.3 not found, installing Remi repo and setting up PHP 8.3"</span><span class="p">;</span>
+<span class="w">  </span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>https://rpms.remirepo.net/enterprise/remi-release-<span class="k">$(</span>rpm<span class="w"> </span>-E<span class="w"> </span>%<span class="o">{</span>rhel<span class="o">}</span><span class="k">)</span>.rpm<span class="p">;</span>
+<span class="w">  </span>sudo<span class="w"> </span>dnf<span class="w"> </span>module<span class="w"> </span>reset<span class="w"> </span>php<span class="w"> </span>-y<span class="p">;</span>
+<span class="w">  </span>sudo<span class="w"> </span>dnf<span class="w"> </span>module<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>php:remi-8.3<span class="w"> </span>-y<span class="p">;</span>
+<span class="o">}</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>php<span class="w"> </span>php-fpm<span class="w"> </span>php-cli<span class="w"> </span>php-curl<span class="w"> </span>php-zip<span class="w"> </span>php-gd<span class="w"> </span>php-xml<span class="w"> </span>php-intl<span class="w"> </span>php-mbstring<span class="w"> </span>php-xmlrpc<span class="w"> </span>php-soap<span class="w"> </span>php-bcmath<span class="w"> </span>php-exif<span class="w"> </span>php-ldap<span class="w"> </span>php-mysqlnd
+
+<span class="c1"># Some clones have MariaDB 10.11 ready to install, others may require additional repositories bedore installing this version.</span>
+dnf<span class="w"> </span>list<span class="w"> </span>mariadb*<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span><span class="m">10</span>.11<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"MariaDB 10.11 not found, setting up MariaDB repo and installing MariaDB 10.11"</span><span class="p">;</span>
+<span class="w">  </span>curl<span class="w"> </span>-LsS<span class="w"> </span>https://downloads.mariadb.com/MariaDB/mariadb_repo_setup<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>bash<span class="w"> </span>-s<span class="w"> </span>--<span class="w"> </span>--mariadb-server-version<span class="o">=</span><span class="s2">"mariadb-10.11"</span><span class="p">;</span>
+<span class="o">}</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>mariadb-server<span class="w"> </span>mariadb-backup
+<span class="c1"># Enable MariaDB to start at boot</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>mariadb
+<span class="c1"># Start MariaDB now</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>mariadb
+
+sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>unzip<span class="w">  </span>nano<span class="w"> </span>graphviz<span class="w"> </span>git<span class="w"> </span>clamav<span class="w"> </span>ghostscript<span class="w"> </span>rsync
+</pre></div>
+<h3><span class="mw-headline" id="Obtain_Moodle_code_using_git">Obtain Moodle code using git</span></h3>
+<p>git is a version control system that is the easiest way to download the latest Moodle code and unpack it into a directory. It also makes keeping up to date with patches much easier.
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="w"> </span>
+<span class="c1"># Clone to the Moodle code folder</span>
+sudo<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>v5.1.0<span class="w"> </span>https://github.com/moodle/moodle.git<span class="w"> </span>/var/www/html/moodle
+<span class="c1">#sudo git clone -b v5.1.0 https://github.com/moodle/moodle.git /var/www/html/moodle</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>apache:apache<span class="w"> </span>/var/www/html/moodle
+</pre></div>
+<h3><span class="mw-headline" id="Install_a_Webserver">Install a Webserver</span></h3>
+<p>Apache or Nginx are given as options for a webserver. <b>Choose Option 1 or Option 2, not both</b>. Both are good choices, with Apache having good community support while Nginx may be better suited to busier sites.
+</p>
+<h4><span class="mw-headline" id="Option_1:_Install_Apache_as_your_Webserver">Option 1: Install Apache as your Webserver</span></h4>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Install Apache HTTP server</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>httpd
+<span class="c1"># Enable Apache to start at boot</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>httpd
+<span class="c1"># Start Apache now</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>httpd
+<span class="c1"># Update PHP.ini settings for Apache. This could also be done with a text editor.</span>
+<span class="nv">PHP_INI_APACHE</span><span class="o">=</span><span class="s2">"/etc/php.ini"</span>
+<span class="c1"># Set max_input_vars to 5000</span>
+sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/^\s*;*\s*max_input_vars\s*=.*/max_input_vars = 5000/'</span><span class="w"> </span><span class="nv">$PHP_INI_APACHE</span>
+<span class="c1"># Set post_max_size to 256M</span>
+sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/^\s*post_max_size\s*=.*/post_max_size = 256M/'</span><span class="w"> </span><span class="nv">$PHP_INI_APACHE</span>
+<span class="c1"># Set upload_max_filesize to 256M</span>
+sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/^\s*upload_max_filesize\s*=.*/upload_max_filesize = 256M/'</span><span class="w"> </span><span class="nv">$PHP_INI_APACHE</span>
+<span class="c1"># Create Moodle Apache virtual host file</span>
+<span class="c1"># Contains fallback with r.php required by the router. </span>
+sudo<span class="w"> </span>tee<span class="w"> </span>/etc/httpd/conf.d/moodle.conf<span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
+<span class="s">&lt;VirtualHost *:80&gt;</span>
+<span class="s">    ServerName $WEBSITE_ADDRESS</span>
+<span class="s">    ServerAlias www.$WEBSITE_ADDRESS</span>
+
+<span class="s">    DocumentRoot  /var/www/html/moodle/public</span>
+
+<span class="s">    &lt;Directory "/var/www/html/moodle/public"&gt;</span>
+<span class="s">        Options FollowSymLinks</span>
+<span class="s">        AllowOverride None</span>
+<span class="s">        Require all granted</span>
+<span class="s">        DirectoryIndex index.php index.html</span>
+
+<span class="s">        # Enable fallback routing for URLs not matching files/directories</span>
+<span class="s">        FallbackResource /r.php</span>
+<span class="s">    &lt;/Directory&gt;</span>
+
+<span class="s">    # PHP-FPM 8.3 FastCGI handler via Unix socket</span>
+<span class="s">   &lt;FilesMatch "\.php$"&gt;</span>
+<span class="s">      SetHandler "proxy:unix:/run/php-fpm/www.sock|fcgi://localhost/"</span>
+<span class="s">   &lt;/FilesMatch&gt;</span>
+
+<span class="s">    # Log files</span>
+<span class="s">    ErrorLog /var/log/httpd/error.log</span>
+<span class="s">    CustomLog /var/log/httpd/access.log combined</span>
+<span class="s">&lt;/VirtualHost&gt;</span>
+<span class="s">EOF</span>
+
+sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>httpd
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>php-fpm
+</pre></div>
+<h4><span class="mw-headline" id="Option_2:_Install_Nginx_as_your_Webserver">Option 2: Install Nginx as your Webserver</span></h4>
+<p><b>Do not install Nginx if you have already installed Apache!</b></p><div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Install Apache httpd and PHP 8.3 FPM from Remi repository</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>httpd<span class="w"> </span>php83-php-fpm
+<span class="c1"># Enable Apache modules</span>
+<span class="c1"># RHEL Apache does not use a2enmod, load required modules by default or via config if needed (proxy_fcgi generally available on RHEL)</span>
+
+<span class="c1"># Create Moodle Apache site config for PHP-FPM and fallback routing</span>
+sudo<span class="w"> </span>tee<span class="w"> </span>/etc/httpd/conf.d/moodle.conf<span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
+<span class="s">&lt;VirtualHost *:80&gt;</span>
+<span class="s">    ServerName $WEBSITE_ADDRESS</span>
+<span class="s">    ServerAlias www.$WEBSITE_ADDRESS</span>
+
+<span class="s">    DocumentRoot /var/www/html/moodle/public</span>
+
+<span class="s">    &lt;Directory /var/www/html/moodle&gt;</span>
+<span class="s">        Options FollowSymLinks</span>
+<span class="s">        AllowOverride None</span>
+<span class="s">        Require all granted</span>
+<span class="s">        DirectoryIndex index.php index.html</span>
+
+<span class="s">        # Enable fallback routing for URLs not matching files/directories</span>
+<span class="s">        FallbackResource /r.php</span>
+<span class="s">    &lt;/Directory&gt;</span>
+
+<span class="s">    &lt;FilesMatch \\.php$&gt;</span>
+<span class="s">        SetHandler "proxy:unix:/run/php-fpm/www.sock|fcgi://localhost/"</span>
+<span class="s">    &lt;/FilesMatch&gt;</span>
+
+<span class="s">    ErrorLog /var/log/httpd/moodle-error.log</span>
+<span class="s">    CustomLog /var/log/httpd/moodle-access.log combined</span>
+<span class="s">&lt;/VirtualHost&gt;</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Enable and start Apache httpd</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>httpd
+<span class="c1"># Enable and start PHP-FPM 8.3 (from Remi, service name usually php83-php-fpm)</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>php83-php-fpm
+<span class="c1"># Adjust PHP settings in both FPM and CLI php.ini</span>
+<span class="nv">php_ini_fpm</span><span class="o">=</span><span class="s2">"/etc/opt/remi/php83/php-fpm.d/www.conf"</span>
+<span class="nv">php_ini_fpm_main</span><span class="o">=</span><span class="s2">"/etc/opt/remi/php83/php.ini"</span>
+<span class="nv">php_ini_cli</span><span class="o">=</span><span class="s2">"/etc/opt/remi/php83/php.ini"</span>
+<span class="c1"># Update php.ini for PHP-FPM (main one)</span>
+sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/^\s*;\?\s*max_input_vars\s*=.*/max_input_vars = 5000/'</span><span class="w"> </span><span class="s2">"</span><span class="nv">$php_ini_fpm_main</span><span class="s2">"</span>
+sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/^\s*post_max_size\s*=.*/post_max_size = 256M/'</span><span class="w"> </span><span class="s2">"</span><span class="nv">$php_ini_fpm_main</span><span class="s2">"</span>
+sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/^\s*upload_max_filesize\s*=.*/upload_max_filesize = 256M/'</span><span class="w"> </span><span class="s2">"</span><span class="nv">$php_ini_fpm_main</span><span class="s2">"</span>
+<span class="c1"># Update php.ini for CLI</span>
+sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/^\s*max_input_vars\s*=.*/max_input_vars = 5000/'</span><span class="w"> </span><span class="s2">"</span><span class="nv">$php_ini_cli</span><span class="s2">"</span>
+sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/^\s*post_max_size\s*=.*/post_max_size = 256M/'</span><span class="w"> </span><span class="s2">"</span><span class="nv">$php_ini_cli</span><span class="s2">"</span>
+sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/^\s*upload_max_filesize\s*=.*/upload_max_filesize = 256M/'</span><span class="w"> </span><span class="s2">"</span><span class="nv">$php_ini_cli</span><span class="s2">"</span>
+<span class="c1"># Reload PHP-FPM to apply changes</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>php83-php-fpm
+<span class="c1"># Reload Apache to apply site config</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>httpd
+</pre></div>
+<h3><span class="mw-headline" id="Obtain_and_set_up_composer">Obtain and set up composer</span></h3>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">cd</span><span class="w">  </span>/var/www/html/moodle
+<span class="nv">CACHE_DIR</span><span class="o">=</span><span class="s2">"/var/www/.cache/composer"</span>
+sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">"</span><span class="nv">$CACHE_DIR</span><span class="s2">"</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>apache:apache<span class="w"> </span><span class="s2">"</span><span class="nv">$CACHE_DIR</span><span class="s2">"</span>
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">750</span><span class="w"> </span><span class="s2">"</span><span class="nv">$CACHE_DIR</span><span class="s2">"</span>
+sudo<span class="w"> </span>php<span class="w"> </span>-r<span class="w"> </span><span class="s2">"copy('https://getcomposer.org/installer', 'composer-setup.php');"</span>
+sudo<span class="w"> </span>php<span class="w"> </span>composer-setup.php
+sudo<span class="w"> </span>mv<span class="w"> </span>composer.phar<span class="w"> </span>/usr/local/bin/composer
+sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/usr/local/bin/composer
+sudo<span class="w"> </span>-u<span class="w"> </span>apache<span class="w"> </span><span class="nv">COMPOSER_CACHE_DIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$CACHE_DIR</span><span class="s2">"</span><span class="w"> </span>/usr/local/bin/composer<span class="w"> </span>install<span class="w"> </span>--no-dev<span class="w"> </span>--classmap-authoritative
+<span class="c1">#sudo -u apache COMPOSER_CACHE_DIR="$CACHE_DIR" composer install --no-dev --classmap-authoritative</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>apache:apache<span class="w"> </span>vendor
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/html/moodle
+</pre></div>
+<h3><span class="mw-headline" id="Specific_Moodle_requirements">Specific Moodle requirements</span></h3><p>
+Moodle needs to store files in a specific directory accessible only by the web server. It also needs to change some php configuration settings and set up a cron task. This could be done using a text editor but echo and sed, a text replacement tool, simplifies the process.</p><div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">#  Create the moodledata directory outside your web server's document root   </span>
+sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/www/moodledata
+<span class="c1"># Set the webserver as the owner and group recursively ( for both the files and contents)</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>apache:apache<span class="w"> </span>/var/www/moodledata
+<span class="c1">#  Set the  moodledata directory permissions so only the web server can read, write, and access them.</span>
+sudo<span class="w"> </span>find<span class="w"> </span>/var/www/moodledata<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-exec<span class="w"> </span>chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span>
+<span class="c1"># Set the  moodledata file permissions so only the web server can read and write them.</span>
+sudo<span class="w"> </span>find<span class="w"> </span>/var/www/moodledata<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+<span class="c1"># Call the cron.php in the moodle admin directory to run every minute. </span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"* * * * * /usr/bin/php /var/www/html/moodle/admin/cli/cron.php &gt;/dev/null"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>crontab<span class="w"> </span>-u<span class="w"> </span>apache<span class="w"> </span>-
+<span class="c1"># Check cron is running</span>
+<span class="c1"># sudo grep CRON /var/log/cron | grep apache</span>
+</pre></div>
+<h3><span class="mw-headline" id="Create_Database_and_User">Create Database and User</span></h3><p>
+Moodle needs a database and a user with full privileges</p><div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="w"> </span><span class="c1"># Create a random password for the user who will access the moodle database</span>
+<span class="nv">MYSQL_MOODLEUSER_PASSWORD</span><span class="o">=</span><span class="k">$(</span>openssl<span class="w"> </span>rand<span class="w"> </span>-base64<span class="w"> </span><span class="m">6</span><span class="k">)</span>
+<span class="c1"># Create a new database named moodle with the utf8mb4 character set and utf8mb4_unicode_ci collation.</span>
+sudo<span class="w"> </span>mysql<span class="w"> </span>-e<span class="w"> </span><span class="s2">"CREATE DATABASE moodle DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"</span>
+<span class="c1"># Create a new MySQL user moodleuser with a password </span>
+sudo<span class="w"> </span>mysql<span class="w"> </span>-e<span class="w"> </span><span class="s2">"CREATE USER 'moodleuser'@'localhost' IDENTIFIED BY '</span><span class="nv">$MYSQL_MOODLEUSER_PASSWORD</span><span class="s2">';"</span>
+<span class="c1"># Grant privileges on the moodle database to the moodleuser to allow localhost access.</span>
+sudo<span class="w"> </span>mysql<span class="w"> </span>-e<span class="w"> </span><span class="s2">"GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, CREATE TEMPORARY TABLES, DROP, INDEX, ALTER ON moodle.* TO 'moodleuser'@'localhost';"</span>
+<span class="c1"># Reloads privilege tables </span>
+sudo<span class="w"> </span>mysql<span class="w"> </span>-e<span class="w"> </span><span class="s2">"FLUSH PRIVILEGES;"</span>
+</pre></div>
+<h3><span class="mw-headline" id="Firewall">Firewall</span></h3>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Add HTTP service permanently to the public zone</span>
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--zone<span class="o">=</span>public<span class="w"> </span>--add-service<span class="o">=</span>http<span class="w"> </span>--permanent
+sudo<span class="w"> </span>setsebool<span class="w"> </span>-P<span class="w"> </span>httpd_can_network_connect<span class="w"> </span><span class="m">1</span>
+<span class="c1"># Reload firewall to apply the configuration</span>
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--reload
+sudo<span class="w"> </span>semanage<span class="w"> </span>fcontext<span class="w"> </span>-a<span class="w"> </span>-t<span class="w"> </span>httpd_sys_rw_content_t<span class="w"> </span><span class="s1">'/var/www/moodledata(/.*)?'</span>
+sudo<span class="w"> </span>restorecon<span class="w"> </span>-Rv<span class="w"> </span>/var/www/moodledata
+sudo<span class="w"> </span>restorecon<span class="w"> </span>-Rv<span class="w"> </span>/var/www/html/moodle
+</pre></div>
+<h3><span class="mw-headline" id="Configure_Moodle_from_the_command_line">Configure Moodle  from the command line</span></h3><p>
+The last step can be done using the browser but we have all the information needed to complete the installation</p><div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Set a random 6 character psasword</span>
+<span class="nv">MOODLE_ADMIN_PASSWORD</span><span class="o">=</span><span class="k">$(</span>openssl<span class="w"> </span>rand<span class="w"> </span>-base64<span class="w"> </span><span class="m">6</span><span class="k">)</span>
+<span class="c1"># Allow the install procedure to write a file to the Moodle directory</span>
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">0777</span><span class="w"> </span>/var/www/html/moodle
+<span class="c1"># Use the Moodle install procedure to create the config.php configuration file and prepare the database for the new Moodle site</span>
+sudo<span class="w"> </span>-u<span class="w"> </span>apache<span class="w"> </span>/usr/bin/php<span class="w"> </span>/var/www/html/moodle/admin/cli/install.php<span class="w"> </span>--non-interactive<span class="w"> </span>--lang<span class="o">=</span>en<span class="w"> </span>--wwwroot<span class="o">=</span><span class="s2">"</span><span class="nv">$PROTOCOL$WEBSITE_ADDRESS</span><span class="s2">"</span><span class="w"> </span>--dataroot<span class="o">=</span>/var/www/moodledata<span class="w"> </span>--dbtype<span class="o">=</span>mariadb<span class="w"> </span>--dbhost<span class="o">=</span>localhost<span class="w"> </span>--dbname<span class="o">=</span>moodle<span class="w"> </span>--dbuser<span class="o">=</span>moodleuser<span class="w"> </span>--dbpass<span class="o">=</span><span class="s2">"</span><span class="nv">$MYSQL_MOODLEUSER_PASSWORD</span><span class="s2">"</span><span class="w"> </span>--fullname<span class="o">=</span><span class="s2">"Generic Moodle"</span><span class="w"> </span>--shortname<span class="o">=</span><span class="s2">"GM"</span><span class="w"> </span>--adminuser<span class="o">=</span>admin<span class="w"> </span>--summary<span class="o">=</span><span class="s2">""</span><span class="w"> </span>--adminpass<span class="o">=</span><span class="s2">"</span><span class="nv">$MOODLE_ADMIN_PASSWORD</span><span class="s2">"</span><span class="w"> </span>--adminemail<span class="o">=</span>please@changeme.com<span class="w"> </span>--agree-license
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Moodle installation completed successfully. You can now log on to your new Moodle at </span><span class="nv">$PROTOCOL$WEBSITE_ADDRESS</span><span class="s2"> as admin with </span><span class="nv">$MOODLE_ADMIN_PASSWORD</span><span class="s2"> and complete your site registration"</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Remember to change the admin email, name and shortname using the browser in your new Moodle"</span>
+<span class="c1"># Restrict permissions to the Moodle directory and files</span>
+sudo<span class="w"> </span>find<span class="w"> </span>/var/www/html/moodle<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-exec<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+sudo<span class="w"> </span>find<span class="w"> </span>/var/www/html/moodle<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+</pre></div>
+<h2><span class="mw-headline" id="Prepare_Development_Database_for_Production">Prepare Development Database for Production</span></h2>
+<p>A production database contains student submissions. Extra steps are needed to ensure student data is secure from unauthorized access and safeguard against data loss.
+</p>
+<h3><span class="mw-headline" id="Check_Permissions">Check Permissions</span></h3>
+<p>Permissions are used by Linux to control read, write and execute for directories and folders
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Reset the permissions on /var/www/html/moodle directories to read, write and execute for the webserver, read and execute for group and others</span>
+sudo<span class="w"> </span>find<span class="w"> </span>/var/www/html/moodle<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-exec<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+<span class="c1"># Reset the permissions on /var/www/html/moodle files to read, write for the webserver, read only for group and other</span>
+sudo<span class="w"> </span>find<span class="w"> </span>/var/www/html/moodle<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\</span>
+</pre></div>
+<h3><span class="mw-headline" id="Set_a_root_password_on_the_database">Set a root password on the database</span></h3>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Run the mariadb-secure-installation script to strengthen security by setting a root password, removing anonymous users, disabling remote root login, deleting the test database, and reloading privileges.</span>
+<span class="c1"># Don't forget to write down the root database in a safe place.</span>
+sudo<span class="w"> </span>mariadb-secure-installation
+</pre></div>
+<h3><span class="mw-headline" id="Configure_and_enable_a_firewall">Configure and enable a firewall</span></h3>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Enable and start the firewalld service immediately, so the firewall is active now and on system boot</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>firewalld
+<span class="c1"># Get the default firewall zone and store it in the variable ZONE</span>
+<span class="nv">ZONE</span><span class="o">=</span><span class="k">$(</span>sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--get-default-zone<span class="k">)</span>
+<span class="c1"># Permanently allow SSH service in the default zone (opens TCP port 22)</span>
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--zone<span class="o">=</span><span class="nv">$ZONE</span><span class="w"> </span>--add-service<span class="o">=</span>ssh<span class="w"> </span>--permanent
+<span class="c1"># Permanently allow HTTP service in the default zone (opens TCP port 80)</span>
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--zone<span class="o">=</span><span class="nv">$ZONE</span><span class="w"> </span>--add-service<span class="o">=</span>http<span class="w"> </span>--permanent
+<span class="c1"># Permanently allow HTTPS service in the default zone (opens TCP port 443)</span>
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--zone<span class="o">=</span><span class="nv">$ZONE</span><span class="w"> </span>--add-service<span class="o">=</span>https<span class="w"> </span>--permanent
+<span class="c1"># Reload firewalld to apply all the permanent changes immediately</span>
+sudo<span class="w"> </span>firewall-cmd<span class="w"> </span>--reload
+</pre></div>
+<h3><span class="mw-headline" id="Convert_http_to_the_encrypted_https_protocol">Convert http to the encrypted https protocol</span></h3>
+<p>NOTE: A domain name is required to get https in this step. Obtain one if you haven't already done so. <br>
+Using HTTPS over HTTP on a Moodle site provides the critical security benefits of encrypted data transmission and compliance with privacy regulations and some features in Moodle may not function properly or may be blocked if the site is using a HTTP connection.
+</p>
+<h4><span class="mw-headline" id="Apache_version">Apache version</span></h4>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Install EPEL repository which contains Certbot packages (if not installed)</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>epel-release<span class="w"> </span>-y
+<span class="c1"># Install Certbot and the Apache plugin on RHEL</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>certbot<span class="w"> </span>python3-certbot-apache<span class="w"> </span>-y
+<span class="c1"># Run Certbot with the Apache plugin to obtain and install SSL certificate</span>
+sudo<span class="w"> </span>certbot<span class="w"> </span>--apache
+<span class="c1"># Check the Apache configuration is valid</span>
+sudo<span class="w"> </span>apachectl<span class="w"> </span>configtest
+<span class="c1"># Reload Apache to apply any configuration changes made by Certbot</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>httpd
+</pre></div>
+<h4><span class="mw-headline" id="Nginx_version">Nginx version</span></h4>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Update package metadata</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>update<span class="w"> </span>-y
+<span class="c1"># Install EPEL repository if not already installed (provides Certbot packages)</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>epel-release<span class="w"> </span>-y
+<span class="c1"># Install Certbot and the Nginx plugin</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>certbot<span class="w"> </span>python3-certbot-nginx<span class="w"> </span>-y
+<span class="c1"># Run Certbot with the Nginx plugin and follow prompts to obtain SSL certs and configure Nginx</span>
+sudo<span class="w"> </span>certbot<span class="w"> </span>--nginx
+<span class="c1"># Test the new Nginx configuration for syntax errors</span>
+sudo<span class="w"> </span>nginx<span class="w"> </span>-t
+<span class="c1"># Reload Nginx to apply configuration changes without interrupting connections</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>nginx
+</pre></div>
+<p><b>You must update references after changing your protocol.</b>
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">#Replace oldsitehost ( ie http://yourdomain.com) with newsitehost ( ie https://yourdomain.com)</span>
+<span class="nb">cd</span><span class="w"> </span>/var/www/html/moodle
+sudo<span class="w"> </span>php<span class="w"> </span>admin/tool/replace/cli/replace.php<span class="w"> </span>--search<span class="o">=</span>//oldsitehost<span class="w"> </span>--replace<span class="o">=</span>//newsitehost<span class="w"> </span>--shorten<span class="w"> </span>--non-interactive
+</pre></div>
+<h3><span class="mw-headline" id="SSH_keys">SSH keys</span></h3>
+<p>An SSH key consists of a public and private key pair used to securely authenticate using the Secure Shell (SSH) protocol without needing a password. The key is much longer and more complex than typical passwords, making them extremely resistant to brute-force attacks and guessing. Only the public key is copied (id_rsa.pub); never share your private key.
+For Windows Users:  
+</p>
+<ul><li>Open Settings &gt; Apps &amp; Features &gt; Optional Features. Look for "OpenSSH Client" in the list</li>
+<li>If it's not installed, click "Add a feature," find "OpenSSH Client," and install it.</li></ul>
+<p>Linux Users
+</p>
+<ul><li>Open a terminal on your home machine (not your server)</li></ul>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Generate the SSH key pair by running the key generation (without sudo so the keys are stored in ~/.ssh/)</span>
+ssh-keygen
+<span class="c1"># Press Enter to accept the default key save location (usually C:\Users\your_username\.ssh\id_rsa for Windows users, ~/.ssh\id_rsa for Linux)</span>
+<span class="c1"># When prompted, optionally enter a secure passphrase for extra protection or press Enter to leave it empty.</span>
+<span class="c1"># Copy  your public key to the remote server's ~/.ssh/authorized_keys file, permissions will be sett automatically</span>
+ssh-copy-id<span class="w"> </span>user@server_address
+<span class="c1"># Try to log in, It should not ask you for a password.</span>
+</pre></div>
+<h3><span class="mw-headline" id="Remove_SSH_root_access">Remove SSH root access</span></h3>
+<p>For security, you should always log in as a user with elevated privileges (a sudo user). You should never login as root on a production server and you should remove root SSH access from your server.
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># If you don't already have a sudo user, as root, create a new user 'user1' with home directory and prompt for password</span>
+<span class="c1"># Enter and confirm a password for user1. User details are optional</span>
+adduser<span class="w"> </span>user1
+<span class="c1"># Add 'user1' to the sudo group for administrative privileges</span>
+usermod<span class="w"> </span>-aG<span class="w"> </span>sudo<span class="w"> </span>user1
+</pre></div> 
+<p><b>Check you can ssh into your server as your new sudo user!</b> Leave another terminal open until confirmed.
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Backup sshd_config before modifying</span>
+sudo<span class="w"> </span>cp<span class="w"> </span>/etc/ssh/sshd_config<span class="w"> </span>/etc/ssh/sshd_config.bak
+<span class="c1"># Open the ssh config file</span>
+sudo<span class="w"> </span>nano<span class="w"> </span>/etc/ssh/sshd_config
+<span class="c1"># Change the line containing PermitRootLogin to PermitRootLogin no</span>
+<span class="c1"># Restart SSH service to apply changes</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>ssh
+</pre></div>
+<h3><span class="mw-headline" id="Keep_RHEL_compatible_distributions_up_to_date">Keep RHEL compatible distributions up to date</span></h3>
+<p>On RHEL  based systems, automatic upgrades are managed using the dnf-automatic package.  
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>dnf-automatic
+<span class="c1">#Edit the /etc/dnf/automatic.conf as root to configure.</span>
+sudo<span class="w"> </span>nano<span class="w"> </span>/etc/dnf/automatic.conf
+</pre></div>
+<p>Set:
+</p>
+<ul><li>upgrade_type = security</li>
+<li>emit_via = motd</li>
+<li>email_to = root</li>
+<li>apply_updates = yes</li></ul>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Enable and start the systemd timer to check for updates automatically</span>
+<span class="c1"># Default is daily</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>dnf-automatic.timer
+</pre></div>
+<p>Logged in /var/log/dnf.rpm.log
+</p>
+<h3><span class="mw-headline" id="SQL_Backups">SQL Backups</span></h3>
+<p>Daily automated date marked sql backups should be set up on a production Moodle. Dumps can be large and need to be deleted periodically.
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Create MySQL backup user and grant privileges to lock tables (better security than using root or moodleuser roles)</span>
+<span class="nv">BACKUP_USER_PASSWORD</span><span class="o">=</span><span class="k">$(</span>openssl<span class="w"> </span>rand<span class="w"> </span>-base64<span class="w"> </span><span class="m">6</span><span class="k">)</span>
+mysql<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
+<span class="s">CREATE USER 'backupuser'@'localhost' IDENTIFIED BY '${BACKUP_USER_PASSWORD}';</span>
+<span class="s">GRANT LOCK TABLES, SELECT ON moodle.* TO 'backupuser'@'localhost';</span>
+<span class="s">FLUSH PRIVILEGES;</span>
+<span class="s">EOF</span>
+<span class="c1"># Create a configuration file for root with the backup user credentials (to avoid the password being visible in the SQL backup call)</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>/root/.my.cnf<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
+<span class="s">[client]</span>
+<span class="s">user=backupuser</span>
+<span class="s">password=${BACKUP_USER_PASSWORD}</span>
+<span class="s">EOF</span>
+<span class="c1"># Set the configuration file permissions to read and write for root only</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>/root/.my.cnf
+<span class="c1"># Setup backup directory with read, write and execute permissions for root only</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>/var/backups/moodle<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>/var/backups/moodle<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>chown<span class="w"> </span>root:root<span class="w"> </span>/var/backups/moodle
+<span class="c1"># Set up two daily cron jobs, one to dump the database and the other to remove dumps more than a set number of days old (hardcoded to 7)</span>
+<span class="o">(</span>crontab<span class="w"> </span>-l<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"0 2 * * * mysqldump --defaults-file=/root/.my.cnf moodle &gt; /var/backups/moodle/moodle_backup_\$(date +\%F).sql"</span><span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>crontab<span class="w"> </span>-
+<span class="o">(</span>crontab<span class="w"> </span>-l<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"0 3 * * * find /var/backups/moodle -name \"moodle_backup_*.sql\" -type f -mtime +7 -delete"</span><span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>crontab<span class="w"> </span>-
+</pre></div>
+<!-- 
+NewPP limit report
+Cached time: 20260823014802
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.047 seconds
+Real time usage: 0.084 seconds
+Preprocessor visited node count: 181/1000000
+Post&#8208;expand include size: 748/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 22/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 38292/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    2.766      1 Template:Installing_Moodle
+100.00%    2.766      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:25915-0!canonical and timestamp 20260823014802 and revision id 154753. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers&amp;oldid=154753">https://docs.moodle.org/502/en/index.php?title=Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers&amp;oldid=154753</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="7f264aa70db3768dcef1896a8ec93e70.html" title="Category:Installation">Installation</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdiw53u7y">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdiw53uuc"></button>
+					<div class="collapse navbar-collapse igdiw53uuc" id="igdiw53uuc">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers&amp;oldid=154753" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Step_by_Step_Installation_Guide_for_Red_Hat_Compatible_Servers&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 21 November 2025, at 09:33.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":450,"wgPageParseReport":{"limitreport":{"cputime":"0.047","walltime":"0.084","ppvisitednodes":{"value":181,"limit":1000000},"postexpandincludesize":{"value":748,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":22,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":38292,"limit":5000000},"timingprofile":["100.00%    2.766      1 Template:Installing_Moodle","100.00%    2.766      1 -total"]},"cachereport":{"timestamp":"20260823014802","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

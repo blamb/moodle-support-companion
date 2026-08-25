@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Custom SQL queries report - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"7d789e1de30e85e63c1592d7","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Custom_SQL_queries_report","wgTitle":"Custom SQL queries report","wgCurRevisionId":153107,"wgRevisionId":153107,"wgArticleId":10019,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Report","Site administration","Contributed code"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Custom_SQL_queries_report","wgRelevantArticleId":10019,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.pygments.view","mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="593ae70845242c812b361a340a53fb46.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.pygments%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Custom_SQL_queries_report">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Custom_SQL_queries_report rootpage-Custom_SQL_queries_report layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdivb3s2c"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdivb3s2c" id="igdivb3s2c">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Custom+SQL+queries+report" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Custom_SQL_queries_report">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Custom_SQL_queries_report">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Custom_SQL_queries_report">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="160209cb57fede0016dc8b36142f3557.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Custom_SQL_queries_report&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Custom_SQL_queries_report&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Custom_SQL_queries_report&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Custom SQL queries report</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a> ► <a href="95a7128b9c62b78ac6a31453e27382de.html" title="Site-wide reports">Site-wide reports</a> ► <a class="mw-selflink selflink">Custom SQL queries report</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="95a7128b9c62b78ac6a31453e27382de.html" title="Site-wide reports">Site-wide reports</a></div>	
+<div class="content">
+<ul><li><a href="a317842a76d13ae1d84babe09aa403c8.html" title="AI usage report">AI usage</a></li>
+<li><a href="5f0bc99d369e0b897c08b1bcda82f728.html" title="AI policy acceptance report">AI policy acceptance</a></li>
+<li><a href="ded863508c4d5150597c1e256f50c455.html" title="Config changes report">Config changes</a></li>
+<li><a href="37306d5988bb6d036462c7f67a6b5be8.html" title="Course overview report">Course overview</a></li>
+<li><a href="dd665b4af0c830bfd2d4fb9960aa783b.html" title="Custom reports">Custom reports</a></li>
+<li><a href="bc5f4b28c206fa318f5c633ce089563b.html" title="Events list report">Events list</a></li>
+<li><a href="4fd41f51085340888f79df6e97ed49c6.html" title="Question instances report">Question instances</a></li>
+<li><a href="1807f280615e8364cd227aa97a6a517b.html" title="System status report">System status</a></li>
+<li><a href="87278d3d99a0ad6b8576773f7ad38147.html" title="Theme usage report">Theme usage</a></li>
+<li><a href="fa5d51b787b5701125a93c9b7fbe0c0a.html" title="All factor report">All factor report</a></li>
+<li><a href="4481b2f2ce9fe0256e10a024d372419c.html" title="Reports FAQ">Reports FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p>Created by The Open University
+</p><p>This admin report plugin allows Administrators to set up arbitrary database queries to act as ad-hoc reports. Reports can be of two types: either run on demand, or scheduled to run automatically. Other users with the right capability can go in and see a list of queries that they have access to. Results can be viewed on-screen or downloaded as CSV.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Installing_this_report"><span class="tocnumber">1</span> <span class="toctext">Installing this report</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Screen_shots"><span class="tocnumber">2</span> <span class="toctext">Screen shots</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Interface_for_normal_users"><span class="tocnumber">3</span> <span class="toctext">Interface for normal users</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#List_of_available_queries"><span class="tocnumber">3.1</span> <span class="toctext">List of available queries</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Running_an_on-demand_query"><span class="tocnumber">3.2</span> <span class="toctext">Running an on-demand query</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Viewing_the_results_of_scheduled_queries"><span class="tocnumber">3.3</span> <span class="toctext">Viewing the results of scheduled queries</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Interface_for_administrators"><span class="tocnumber">4</span> <span class="toctext">Interface for administrators</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Additional_controls_in_the_staff_interface"><span class="tocnumber">4.1</span> <span class="toctext">Additional controls in the staff interface</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Adding_or_editing_a_query"><span class="tocnumber">4.2</span> <span class="toctext">Adding or editing a query</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Deleting_a_query"><span class="tocnumber">4.3</span> <span class="toctext">Deleting a query</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Share_your_interesting_queries_here"><span class="tocnumber">5</span> <span class="toctext">Share your interesting queries here</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Students_that_are_in_a_course_where_groups_are_turned_on,_but_have_not_been_assigned_to_a_group_yet"><span class="tocnumber">5.1</span> <span class="toctext">Students that are in a course where groups are turned on, but have not been assigned to a group yet</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Quiz_attempts_in_the_last_week/month"><span class="tocnumber">5.2</span> <span class="toctext">Quiz attempts in the last week/month</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Usage_summary"><span class="tocnumber">5.3</span> <span class="toctext">Usage summary</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Monthly_Usage_by_Role"><span class="tocnumber">5.4</span> <span class="toctext">Monthly Usage by Role</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Show_all_Quiz_results_across_a_site"><span class="tocnumber">5.5</span> <span class="toctext">Show all Quiz results across a site</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Installing_this_report">Installing this report</span></h2>
+<p>Follow the generic <a href="b8a47099f49d74586081af402e096238.html" title="Installing plugins">Installing plugins</a> documentation.
+</p>
+<h2><span class="mw-headline" id="Screen_shots">Screen shots</span></h2>
+<p>Here are two example screen shots, showing the two main screens.
+</p>
+<figure class="mw-halign-none" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:Custom_report_list.png" class="mw-file-description"><img src="images_en/thumb/6/69/Custom_report_list.png/df41aee9025421de20ec523e4bd76681.png" decoding="async" width="600" height="282" class="mw-file-element" srcset="/502/en/images_en/6/69/Custom_report_list.png 1.5x" data-file-width="753" data-file-height="354"></a><figcaption>The list of available reports</figcaption></figure>
+<figure class="mw-halign-none" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:Custom_report.png" class="mw-file-description"><img src="images_en/thumb/3/3d/Custom_report.png/ee8634f1cfae6b8ffbc0685b727bea85.png" decoding="async" width="600" height="231" class="mw-file-element" srcset="/502/en/images_en/3/3d/Custom_report.png 1.5x" data-file-width="853" data-file-height="328"></a><figcaption>The results of running one of the reports</figcaption></figure>
+<p>(Note, these screen shots are in the OU theme, not the standard Moodle theme, and iCMA is OU-jargon for quiz.)
+</p>
+<h2><span class="mw-headline" id="Interface_for_normal_users">Interface for normal users</span></h2>
+<h3><span class="mw-headline" id="List_of_available_queries">List of available queries</span></h3>
+<p>Users with the report/customsql:view capability can access the list of reports in the admin block. Each query is accessible only to a certain people. There are three levels of access:
+</p>
+<ul><li>Available to any one who can access the report at all (those with report/customsql:view).</li>
+<li>Available to people who are able to see other system reports (those with moodle/site:viewreports)</li>
+<li>Available to administrators only (those with moodle/site:config)</li></ul>
+<p>When you go to the list, it will only show the queries you have access to. There is a note beside each query saying when it was last run, and how long it took to generate.
+</p><p>The list shows on-demand and scheduled queries separately.
+</p>
+<h3><span class="mw-headline" id="Running_an_on-demand_query">Running an on-demand query</span></h3>
+<p>To run an on-demand query, click on its name in the list of queries.
+</p><p>The query will be run, and the results will be displayed as a table. Any URLs in the table will automatically be made into hyperlinks.
+</p><p>A description of the query may appear above the table.
+</p><p>The summary of when the query was run and how long it took is shown at the bottom, along with a link to download the CSV file (for example to get the data into Excel) and a link back to the list of all available queries.
+</p>
+<h3><span class="mw-headline" id="Viewing_the_results_of_scheduled_queries">Viewing the results of scheduled queries</span></h3>
+<p>Scheduled queries can work in one of two ways. Either each run of the report generates and entire table of reasults, or each run just creates one line of results, and the report builds up a row at a time.
+</p><p>When you click the name in the list of queries, you get taken to a display of the latest results, just like in the on-demand case.
+</p><p>However, if each scheduled run generates a complete report, then at the bottom of a page there will be a list of all the previous runs of the report, so that you can go and see how the report changed over time.
+</p>
+<h2><span class="mw-headline" id="Interface_for_administrators">Interface for administrators</span></h2>
+<p>Administrators (that is, users with report/customsql:definequeries) see everything that other users see, but with some additions.
+</p>
+<h3><span class="mw-headline" id="Additional_controls_in_the_staff_interface">Additional controls in the staff interface</span></h3>
+<p>Administrators get shown who each report in the list is available to.
+</p><p>They also get an edit and a delete icon next to each query.
+</p><p>There is an <b>Add new query button</b> at the end of the list of queries.
+</p><p>When viewing a particular query, Administrators get an edit and a delete link underneath the table of results.
+</p>
+<h3><span class="mw-headline" id="Adding_or_editing_a_query">Adding or editing a query</span></h3>
+<p>When you click the <b>Add new query button</b>, you get taken to an editing form that lets you define the query.
+</p><p>You must give the query a name.
+</p><p>You can optionally enter a description that is displayed above the results table. You should use this to explain what the results of the query mean.
+</p><p>You must enter the SQL to generate the results you want displayed. This must be an SQL select statement. You must use the prefix prefix_ for table names. It should not be possible to enter any SQL that would alter the contents of the database.
+</p><p>You choose who you want the query to be accessible to.
+</p><p>You choose whether the query should be run on-demand or scheduled weekly or monthly. If the report is scheduled, you can say whether the each run returns one row to be added to a single table, or whether each run generates a separate table.
+</p><p>When you save the new query, the SQL is checked to make sure that it will execute without errors. If you have said that the report will only return a single row, this is also checked.
+After saving the query, if this was a manual query, you are taken to the query results page, so you can see what the results look like. If it was an automatic query or if you cancel the form, you are taken to the list of available queries.
+</p><p>Editing an existing query uses the same form as for adding a new query, but to change the properties of an existing query.
+</p><p>Note that at the OU, weeks start on Saturday. If you don't like that, there is a fairly obvious constant to hack at the top of locallib.php.
+</p>
+<h3><span class="mw-headline" id="Deleting_a_query">Deleting a query</span></h3>
+<p>When you click the delete icon or link for a query, you are taken to a confirmation page that shows you SQL of the query you are about to delete. The query is only deleted if you click Yes on the confirmation page.
+</p><p>After deleting a query, you are taken back to the list of queries.
+</p>
+<h2><span class="mw-headline" id="Share_your_interesting_queries_here">Share your interesting queries here</span></h2>
+<p>If you come up with any interesting SQL to custom reports, you can share it here.
+</p>
+<h3><span id="Students_that_are_in_a_course_where_groups_are_turned_on.2C_but_have_not_been_assigned_to_a_group_yet"></span><span class="mw-headline" id="Students_that_are_in_a_course_where_groups_are_turned_on,_but_have_not_been_assigned_to_a_group_yet">Students that are in a course where groups are turned on, but have not been assigned to a group yet</span></h3>
+<p>This query was set to run daily to provide a report of students in a course that uses groups but have not yet been assigned to a group and provide a link to the view to assign them to a group. Teacher/Non-Editing teacher roles are filtered out.
+</p>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span>
+<span class="w">     </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">username</span><span class="p">,</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">firstname</span><span class="p">,</span><span class="w">  </span><span class="ss">" "</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">lastname</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">NAME</span><span class="p">,</span>
+<span class="w">     </span><span class="n">ic</span><span class="p">.</span><span class="n">shortname</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"Course Code"</span><span class="p">,</span>
+<span class="w">     </span><span class="n">CONCAT</span><span class="p">(</span><span class="ss">"%%WWWROOT%%/enrol/users.php%%Q%%id="</span><span class="p">,</span><span class="n">ic</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="ss">"&amp;action=addmember&amp;user="</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"Link to Add to Group"</span>
+<span class="k">FROM</span>
+<span class="w">     </span><span class="n">prefix_course</span><span class="w"> </span><span class="n">ic</span>
+<span class="w">     </span><span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_context</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="n">instanceid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ic</span><span class="p">.</span><span class="n">id</span>
+<span class="w">     </span><span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_role_assignments</span><span class="w"> </span><span class="n">ra</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ra</span><span class="p">.</span><span class="n">contextid</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="n">contextlevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span>
+<span class="w">     </span><span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_role</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">ra</span><span class="p">.</span><span class="n">roleid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">id</span>
+<span class="w">     </span><span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_user</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ra</span><span class="p">.</span><span class="n">userid</span>
+<span class="w">     </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_groups_members</span><span class="w"> </span><span class="n">gm</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gm</span><span class="p">.</span><span class="n">userid</span>
+<span class="k">WHERE</span>
+<span class="w">     </span><span class="n">ic</span><span class="p">.</span><span class="n">visible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">     </span><span class="k">AND</span><span class="w"> </span><span class="n">ic</span><span class="p">.</span><span class="n">shortname</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%META%'</span>
+<span class="w">     </span><span class="k">AND</span><span class="w"> </span><span class="n">ic</span><span class="p">.</span><span class="n">shortname</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%INOL%'</span>
+<span class="w">     </span><span class="k">AND</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">username</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'email@domain.com'</span>
+<span class="w">     </span><span class="k">AND</span><span class="w"> </span><span class="n">ic</span><span class="p">.</span><span class="n">groupmode</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s1">'0'</span>
+<span class="w">     </span><span class="k">AND</span><span class="w"> </span><span class="n">gm</span><span class="p">.</span><span class="n">userid</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span>
+<span class="w">     </span><span class="k">AND</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ic</span><span class="p">.</span><span class="n">shortname</span>
+</pre></div>
+<h3><span id="Quiz_attempts_in_the_last_week.2Fmonth"></span><span class="mw-headline" id="Quiz_attempts_in_the_last_week/month">Quiz attempts in the last week/month</span></h3>
+<p>Set this up as a scheduled report:
+</p>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">prefix_quiz_attempts</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">timefinish</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">%%</span><span class="n">STARTTIME</span><span class="o">%%</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">timefinish</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="o">%%</span><span class="n">ENDTIME</span><span class="o">%%</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">preview</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</pre></div>
+<p>This <b>must</b> be set up as a <b>Scheduled, on the first day of each week</b> or <b>Scheduled, on the first day of each month</b> report, or it will not work.
+</p>
+<h3><span class="mw-headline" id="Usage_summary">Usage summary</span></h3>
+<p>This report shows roughly the same usage statistics that are sent to moodle.org when you register your site. The ones that are aggregated at <a rel="nofollow" class="external free" href="http://moodle.org/stats/">http://moodle.org/stats/</a>. (The only difference is that the registration form does not do AND confirmed = 1 for some reason.
+</p>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span>
+<span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">prefix_course</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">courses</span><span class="p">,</span>
+<span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">prefix_user</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">deleted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">confirmed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">users</span><span class="p">,</span>
+<span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">ra</span><span class="p">.</span><span class="n">userid</span><span class="p">)</span>
+<span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">prefix_role_capabilities</span><span class="w"> </span><span class="n">rc</span>
+<span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_role_assignments</span><span class="w"> </span><span class="n">ra</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">ra</span><span class="p">.</span><span class="n">roleid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rc</span><span class="p">.</span><span class="n">roleid</span>
+<span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">rc</span><span class="p">.</span><span class="n">capability</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">'moodle/course:upd'</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">'ate'</span><span class="p">,</span><span class="w"> </span><span class="s1">'moodle/site:doanything'</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">teachers</span><span class="p">,</span>
+<span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">prefix_role_assignments</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">enrolments</span><span class="p">,</span>
+<span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">prefix_forum_posts</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">forum_posts</span><span class="p">,</span>
+<span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">prefix_resource</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">resources</span><span class="p">,</span>
+<span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">prefix_question</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">questions</span>
+</pre></div>
+<p>There are two interesting queries in this blog post <a rel="nofollow" class="external text" href="https://tjhunt.blogspot.com/2010/03/when-do-students-submit-their-online.html">When do students submit their online tests?</a>.
+</p>
+<h3><span class="mw-headline" id="Monthly_Usage_by_Role">Monthly Usage by Role</span></h3>
+<p>This report shows a distinct count of users by their role, accessing your site.  Each instance of user and role is counted once per month, no matter how many courses they access.  We use this to show the total number of students and teachers accessing our site.
+</p>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span>
+<span class="k">month</span><span class="p">(</span><span class="n">from_unixtime</span><span class="p">(</span><span class="o">`</span><span class="n">prefix_stats_user_monthly</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">timeend</span><span class="o">`</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">calendar_month</span><span class="p">,</span>
+<span class="k">year</span><span class="p">(</span><span class="n">from_unixtime</span><span class="p">(</span><span class="o">`</span><span class="n">prefix_stats_user_monthly</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">timeend</span><span class="o">`</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">calendar_year</span><span class="p">,</span>
+<span class="n">prefix_role</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">user_role</span><span class="p">,</span>
+<span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">prefix_stats_user_monthly</span><span class="p">.</span><span class="n">userid</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_users</span>
+<span class="k">FROM</span>
+<span class="n">prefix_stats_user_monthly</span>
+<span class="k">Inner</span><span class="w"> </span><span class="k">Join</span><span class="w"> </span><span class="n">prefix_role_assignments</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">prefix_stats_user_monthly</span><span class="p">.</span><span class="n">userid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix_role_assignments</span><span class="p">.</span><span class="n">userid</span>
+<span class="k">Inner</span><span class="w"> </span><span class="k">Join</span><span class="w"> </span><span class="n">prefix_context</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">prefix_role_assignments</span><span class="p">.</span><span class="n">contextid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix_context</span><span class="p">.</span><span class="n">id</span>
+<span class="k">Inner</span><span class="w"> </span><span class="k">Join</span><span class="w"> </span><span class="n">prefix_role</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">prefix_role_assignments</span><span class="p">.</span><span class="n">roleid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix_role</span><span class="p">.</span><span class="n">id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">prefix_context</span><span class="p">.</span><span class="n">contextlevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span>
+<span class="k">AND</span><span class="w"> </span><span class="o">`</span><span class="n">prefix_stats_user_monthly</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">stattype</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'activity'</span>
+<span class="k">AND</span><span class="w"> </span><span class="n">prefix_stats_user_monthly</span><span class="p">.</span><span class="n">courseid</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="mi">1</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">month</span><span class="p">(</span><span class="n">from_unixtime</span><span class="p">(</span><span class="o">`</span><span class="n">prefix_stats_user_monthly</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">timeend</span><span class="o">`</span><span class="p">)),</span>
+<span class="k">year</span><span class="p">(</span><span class="n">from_unixtime</span><span class="p">(</span><span class="o">`</span><span class="n">prefix_stats_user_monthly</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">timeend</span><span class="o">`</span><span class="p">)),</span>
+<span class="n">prefix_stats_user_monthly</span><span class="p">.</span><span class="n">stattype</span><span class="p">,</span>
+<span class="n">prefix_role</span><span class="p">.</span><span class="n">name</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+<span class="k">year</span><span class="p">(</span><span class="n">from_unixtime</span><span class="p">(</span><span class="o">`</span><span class="n">prefix_stats_user_monthly</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">timeend</span><span class="o">`</span><span class="p">)),</span><span class="w"> </span><span class="k">month</span><span class="p">(</span><span class="n">from_unixtime</span><span class="p">(</span><span class="o">`</span><span class="n">prefix_stats_user_monthly</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">timeend</span><span class="o">`</span><span class="p">)),</span>
+<span class="n">prefix_role</span><span class="p">.</span><span class="n">name</span>
+</pre></div>
+<p>You must have Statistics turned on to be able to generate any data with this report.
+</p><p>PostgreSQL version of the Monthly Usage by Role query:
+</p>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span>
+<span class="k">extract</span><span class="p">(</span><span class="k">month</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">to_timestamp</span><span class="p">(</span><span class="n">prefix_stats_user_monthly</span><span class="p">.</span><span class="n">timeend</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">calendar_month</span><span class="p">,</span>
+<span class="k">extract</span><span class="p">(</span><span class="k">year</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">to_timestamp</span><span class="p">(</span><span class="n">prefix_stats_user_monthly</span><span class="p">.</span><span class="n">timeend</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">calendar_year</span><span class="p">,</span>
+<span class="n">prefix_role</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">user_role</span><span class="p">,</span>
+<span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">prefix_stats_user_monthly</span><span class="p">.</span><span class="n">userid</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_users</span>
+<span class="k">FROM</span>
+<span class="n">prefix_stats_user_monthly</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_role_assignments</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">prefix_stats_user_monthly</span><span class="p">.</span><span class="n">userid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix_role_assignments</span><span class="p">.</span><span class="n">userid</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_context</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">prefix_role_assignments</span><span class="p">.</span><span class="n">contextid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix_context</span><span class="p">.</span><span class="n">id</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_role</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">prefix_role_assignments</span><span class="p">.</span><span class="n">roleid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix_role</span><span class="p">.</span><span class="n">id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">prefix_context</span><span class="p">.</span><span class="n">contextlevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span>
+<span class="k">AND</span><span class="w"> </span><span class="n">prefix_stats_user_monthly</span><span class="p">.</span><span class="n">stattype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'activity'</span>
+<span class="k">AND</span><span class="w"> </span><span class="n">prefix_stats_user_monthly</span><span class="p">.</span><span class="n">courseid</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="mi">1</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">extract</span><span class="p">(</span><span class="k">month</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">to_timestamp</span><span class="p">(</span><span class="n">prefix_stats_user_monthly</span><span class="p">.</span><span class="n">timeend</span><span class="p">)),</span>
+<span class="k">extract</span><span class="p">(</span><span class="k">year</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">to_timestamp</span><span class="p">(</span><span class="n">prefix_stats_user_monthly</span><span class="p">.</span><span class="n">timeend</span><span class="p">)),</span>
+<span class="n">prefix_stats_user_monthly</span><span class="p">.</span><span class="n">stattype</span><span class="p">,</span>
+<span class="n">prefix_role</span><span class="p">.</span><span class="n">name</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+<span class="k">extract</span><span class="p">(</span><span class="k">year</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">to_timestamp</span><span class="p">(</span><span class="n">prefix_stats_user_monthly</span><span class="p">.</span><span class="n">timeend</span><span class="p">)),</span><span class="w"> </span><span class="k">extract</span><span class="p">(</span><span class="k">month</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">to_timestamp</span><span class="p">(</span><span class="n">prefix_stats_user_monthly</span><span class="p">.</span><span class="n">timeend</span><span class="p">)),</span>
+<span class="n">prefix_role</span><span class="p">.</span><span class="n">name</span>
+</pre></div>
+<h3><span class="mw-headline" id="Show_all_Quiz_results_across_a_site">Show all Quiz results across a site</span></h3>
+<p>I'm sure someone will be able to improve upon this, but this is a query that will show Quiz results across a site. --<a href="https://docs.moodle.org/502/en/User:Stuart_Mealor"><bdi>Stuart Mealor</bdi></a> 22:07, 9 April 2010 (UTC)
+</p>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span>
+<span class="w">     </span><span class="n">prefix_grade_items</span><span class="p">.</span><span class="n">itemname</span><span class="p">,</span>
+<span class="w">     </span><span class="n">prefix_grade_items</span><span class="p">.</span><span class="n">grademax</span><span class="p">,</span>
+<span class="w">     </span><span class="n">ROUND</span><span class="p">(</span><span class="n">prefix_grade_grades</span><span class="p">.</span><span class="n">finalgrade</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">finalgrade</span><span class="p">,</span>
+<span class="w">     </span><span class="n">prefix_user</span><span class="p">.</span><span class="n">firstname</span><span class="p">,</span>
+<span class="w">     </span><span class="n">prefix_user</span><span class="p">.</span><span class="n">lastname</span><span class="p">,</span>
+<span class="w">     </span><span class="n">prefix_user</span><span class="p">.</span><span class="n">username</span>
+<span class="k">FROM</span>
+<span class="w">     </span><span class="n">prefix_grade_grades</span>
+<span class="w">     </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_user</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">prefix_grade_grades</span><span class="p">.</span><span class="n">userid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix_user</span><span class="p">.</span><span class="n">id</span>
+<span class="w">     </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_grade_items</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">prefix_grade_grades</span><span class="p">.</span><span class="n">itemid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix_grade_items</span><span class="p">.</span><span class="n">id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">prefix_grade_items</span><span class="p">.</span><span class="n">itemname</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">)</span>
+<span class="k">AND</span><span class="w"> </span><span class="p">(</span><span class="n">prefix_grade_items</span><span class="p">.</span><span class="n">itemtype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'mod'</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">prefix_grade_items</span><span class="p">.</span><span class="n">itemtype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'manual'</span><span class="p">)</span>
+<span class="k">AND</span><span class="w"> </span><span class="p">(</span><span class="n">prefix_grade_items</span><span class="p">.</span><span class="n">itemmodule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'quiz'</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">prefix_grade_items</span><span class="p">.</span><span class="n">itemmodule</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">)</span>
+<span class="k">AND</span><span class="w"> </span><span class="p">(</span><span class="n">prefix_grade_grades</span><span class="p">.</span><span class="n">timemodified</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">)</span>
+<span class="k">AND</span><span class="w"> </span><span class="p">(</span><span class="n">prefix_grade_grades</span><span class="p">.</span><span class="n">finalgrade</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="k">AND</span><span class="w"> </span><span class="p">(</span><span class="n">prefix_user</span><span class="p">.</span><span class="n">deleted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=136484">Custom SQL queries report</a> forum announcement</li>
+<li>list of <a href="4682100b49330df4d2421daa6667f344.html" title="ad-hoc contributed reports">ad-hoc contributed reports</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=153059">Forum post</a> with some more useful queries.</li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/data/view.php?d=13&amp;rid=2884">Modules and plugins database entry</a></li>
+<li><a href="6647dcbb1775b19ef30fe290bbbbda1c.html" title="Configurable reports">Configurable reports</a> block</li>
+<li><a rel="nofollow" class="external text" href="https://www.moodlebites.com/mod/page/view.php?id=9112">Moodle SQL Reporting</a> online introduction course.</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822030143
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.062 seconds
+Real time usage: 0.169 seconds
+Preprocessor visited node count: 93/1000000
+Post&#8208;expand include size: 785/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 6/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 29638/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    2.493      1 Template:Sitewide_reports
+100.00%    2.493      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:10019-0!canonical and timestamp 20260822030143 and revision id 153107. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Custom_SQL_queries_report&amp;oldid=153107">https://docs.moodle.org/502/en/index.php?title=Custom_SQL_queries_report&amp;oldid=153107</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="ba84a4262efe7097f3c1de132b179fea.html" title="Category:Report">Report</a></li><li><a href="2aac34b4c717bbba405f973f3d7b4021.html" title="Category:Site administration">Site administration</a></li><li><a href="27cec39c9633dd48770872338440a43c.html" title="Category:Contributed code">Contributed code</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdivb3vxo">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdivb3we7"></button>
+					<div class="collapse navbar-collapse igdivb3we7" id="igdivb3we7">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Custom_SQL_queries_report" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Custom_SQL_queries_report" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Custom_SQL_queries_report&amp;oldid=153107" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Custom_SQL_queries_report&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Reportes_de_consultas_personalizadas_SQL" title="Reportes de consultas personalizadas SQL – español" lang="es" hreflang="es" data-title="Reportes de consultas personalizadas SQL" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/admin/report/customsql/index" title="admin/report/customsql/index – français" lang="fr" hreflang="fr" data-title="admin/report/customsql/index" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 22 May 2025, at 15:02.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":422,"wgPageParseReport":{"limitreport":{"cputime":"0.062","walltime":"0.169","ppvisitednodes":{"value":93,"limit":1000000},"postexpandincludesize":{"value":785,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":6,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":29638,"limit":5000000},"timingprofile":["100.00%    2.493      1 Template:Sitewide_reports","100.00%    2.493      1 -total"]},"cachereport":{"timestamp":"20260822030143","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

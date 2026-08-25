@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Using analytics - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"ef9b8db416d34bd598cbcb40","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Using_analytics","wgTitle":"Using analytics","wgCurRevisionId":140570,"wgRevisionId":140570,"wgArticleId":22601,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Analytics"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Using_analytics","wgRelevantArticleId":22601,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Using_analytics">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Using_analytics rootpage-Using_analytics layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdiwbbt2g"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdiwbbt2g" id="igdiwbbt2g">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Using+analytics" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Using_analytics">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Using_analytics">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Using_analytics">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="2b54b393873ac863af50477dd263375b.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Using_analytics&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Using_analytics&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Using_analytics&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Using analytics</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="c93eb5dfaca94ad219ccb0d560e9af0f.html" title="Managing a Moodle course">Managing a Moodle course</a> ► <a href="c1d0ebee03c8ed1740564dd8bf6c6bad.html" title="Tracking progress">Tracking progress</a> ► <a href="7277a9f7069c86a0893a131b47a280ab.html" title="Analytics">Analytics</a> ► <a class="mw-selflink selflink">Using analytics</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a href="7277a9f7069c86a0893a131b47a280ab.html" title="Analytics">Analytics</a></div>	
+<div class="content">
+<ul><li><a href="afa5c5146b67a9ab3d48a8a961b22eda.html" title="Analytics settings">Analytics settings</a></li>
+<li><a class="mw-selflink selflink">Using analytics</a></li>
+<li><a href="6262783996f55bdbf508201b49162f5b.html" title="Managing analytics">Managing analytics</a></li>
+<li><a href="af5c616ceea99c2896d153cebf865651.html" title="Analytics FAQ">Analytics FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Existing_models"><span class="tocnumber">2</span> <span class="toctext">Existing models</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Core_models"><span class="tocnumber">2.1</span> <span class="toctext">Core models</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Students_at_risk_of_dropping_out"><span class="tocnumber">2.1.1</span> <span class="toctext">Students at risk of dropping out</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Upcoming_activities_due"><span class="tocnumber">2.1.2</span> <span class="toctext">Upcoming activities due</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#No_teaching"><span class="tocnumber">2.1.3</span> <span class="toctext">No teaching</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Creating_and_editing_models"><span class="tocnumber">3</span> <span class="toctext">Creating and editing models</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Target"><span class="tocnumber">3.1</span> <span class="toctext">Target</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Indicators"><span class="tocnumber">3.2</span> <span class="toctext">Indicators</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Analysis_intervals"><span class="tocnumber">3.3</span> <span class="toctext">Analysis intervals</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Predictions_processor"><span class="tocnumber">3.4</span> <span class="toctext">Predictions processor</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Changing_the_model_name"><span class="tocnumber">3.5</span> <span class="toctext">Changing the model name</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Training_models"><span class="tocnumber">4</span> <span class="toctext">Training models</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Training_data"><span class="tocnumber">4.1</span> <span class="toctext">Training data</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Evaluating_models"><span class="tocnumber">5</span> <span class="toctext">Evaluating models</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#Review_evaluation_results"><span class="tocnumber">5.1</span> <span class="toctext">Review evaluation results</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Exporting_and_Importing_models"><span class="tocnumber">6</span> <span class="toctext">Exporting and Importing models</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Exporting_models"><span class="tocnumber">6.1</span> <span class="toctext">Exporting models</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Importing_models"><span class="tocnumber">6.2</span> <span class="toctext">Importing models</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>The Moodle Learning Analytics API is an open system that can become the basis for a very wide variety of models. Models can contain indicators (a.k.a. predictors), targets (the outcome we are trying to predict), insights (the predictions themselves), notifications (messages sent as a result of insights), and actions (offered to recipients of messages, which can become indicators in turn). 
+</p>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:learning_analytics_components.png" class="mw-file-description"><img src="images_en/thumb/6/63/learning_analytics_components.png/99d75506c962b7576d7eb3eaac6870a7.png" decoding="async" width="300" height="148" class="mw-file-element" srcset="/502/en/images_en/thumb/6/63/learning_analytics_components.png/450px-learning_analytics_components.png 1.5x, /502/en/images_en/thumb/6/63/learning_analytics_components.png/600px-learning_analytics_components.png 2x" data-file-width="927" data-file-height="458"></a><figcaption></figcaption></figure>
+<p>Most learning analytics models are not enabled by default. Enabling models for use should be done after considering the institutional goals the models are meant to support.  When selecting or creating an analytics model, the following steps are important:
+</p>
+<ul><li>What outcome do we want to predict? Or what process do we want to detect? (Positive or negative)</li>
+<li>How will we detect that outcome/process?</li>
+<li>What clues do we think might help us predict that outcome/process?</li>
+<li>What should we do if the outcome/process is very likely? Very unlikely?</li>
+<li>Who should be notified? What kind of notification should be sent?</li>
+<li>What opportunities for action should be provided on notification?</li></ul>
+<p>Moodle can support multiple prediction models at once, even within the same course. This can be used for A/B testing to compare the performance and accuracy of multiple models. 
+</p><p>Moodle learning analytics supports two types of models. 
+</p>
+<ul><li><b>Machine-learning</b> based models, including predictive models, make use of AI models trained using site history to detect or predict hidden aspects of the learning process.</li>
+<li>"<b>Static</b>" models use a simpler, rule-based system of detecting circumstances on the Moodle site and notifying selected users.</li></ul>
+<p>Moodle core ships with three models. Additional prediction models can be created by using the <a href="https://docs.moodle.org/dev/Analytics_API" class="extiw" title="dev:Analytics API"> Analytics API</a> or by using the new web UI. Each model is based on the prediction of a single, specific "target," or outcome (whether desirable or undesirable), based on a number of selected indicators.
+</p><p>You can view and manage your system models from <i>Site Administration &gt; Analytics &gt; Analytics models</i>.
+</p>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:manage_models.png" class="mw-file-description"><img src="images_en/thumb/2/20/manage_models.png/c2b5d063150e0c6c6d8c6d0a30295ee5.png" decoding="async" width="300" height="153" class="mw-file-element" srcset="/502/en/images_en/thumb/2/20/manage_models.png/450px-manage_models.png 1.5x, /502/en/images_en/thumb/2/20/manage_models.png/600px-manage_models.png 2x" data-file-width="1593" data-file-height="813"></a><figcaption></figcaption></figure>
+<h2><span class="mw-headline" id="Existing_models">Existing models</span></h2>
+<p>Moodle core ships with three models, <a href="84818660344d28c187b535e553d6a8ac.html" title="Students at risk of dropping out">Students at risk of dropping out</a> and the static models Upcoming activities due and No teaching. Other models can be added to your system by installing plugins or by using the web UI (see below). Existing models can be examined and altered from the "Analytics models" page in Site administration:
+</p>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:analytics_models.png" class="mw-file-description"><img src="images_en/thumb/0/0d/analytics_models.png/633e6add4fd38d2bccdf2e974ca4f8a9.png" decoding="async" width="300" height="134" class="mw-file-element" srcset="/502/en/images_en/thumb/0/0d/analytics_models.png/450px-analytics_models.png 1.5x, /502/en/images_en/thumb/0/0d/analytics_models.png/600px-analytics_models.png 2x" data-file-width="1117" data-file-height="499"></a><figcaption></figcaption></figure>
+<p>These are some of the actions you can perform on an existing model:
+</p>
+<ul><li><b>Get predictions</b> Train machine learning algorithms with the new data available on the system and get predictions for ongoing courses. <i>Predictions are not limited to ongoing courses-- this depends on the model.</i></li></ul>
+<ul><li><b>View Insights</b> Once you have trained a machine learning algorithm with the data available on the system, you will see insights (predictions) here for each "analysable." In the included model <a href="84818660344d28c187b535e553d6a8ac.html" title="Students at risk of dropping out">Students at risk of dropping out</a>, insights may be selected per course. <i>Predictions are not limited to ongoing courses-- this depends on the model.</i></li></ul>
+<ul><li><b>Evaluate</b> This is a resource-intensive process, and will not be visible when sites have the "onlycli" setting checked (default). See <a class="mw-selflink selflink">Using analytics</a> for more information.</li></ul>
+<ul><li><b>Log</b> View previous evaluation logs, including the model accuracy as well as other technical information generated by the machine learning backends like ROC curves, learning curve graphs, the tensorboard log dir or the model's Matthews correlation coefficient. The information available will depend on the machine learning backend in use. <figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:log_info.png" class="mw-file-description"><img src="images_en/thumb/e/e4/log_info.png/23b87dfe33e8b174d91905c57c3220fe.png" decoding="async" width="300" height="89" class="mw-file-element" srcset="/502/en/images_en/thumb/e/e4/log_info.png/450px-log_info.png 1.5x, /502/en/images_en/thumb/e/e4/log_info.png/600px-log_info.png 2x" data-file-width="608" data-file-height="181"></a><figcaption></figcaption></figure></li></ul>
+<ul><li><b>Edit</b> You can edit the models by modifying the list of indicators or the time-splitting method. All previous predictions will be deleted when a model is modified. Models based on assumptions (static models) can not be edited.</li></ul>
+<ul><li><b>Enable / Disable</b> This allows the model to run training and prediction processes. The scheduled task that trains machine learning algorithms with the new data available on the system and gets predictions for ongoing courses skips disabled models. Previous predictions generated by disabled models are not available until the model is enabled again.</li></ul>
+<ul><li><b>Export</b> Export your site training data to share it with your partner institutions or to use it on a new site. The Export action for models allows you to generate a csv file containing model data about indicators and weights, without exposing any of your site-specific data. We will be asking for submissions of these model files to help evaluate the value of models on different kinds of sites.</li></ul>
+<ul><li><b>Invalid site elements</b> Reports on what elements in your site can not be analysed by this model</li></ul>
+<ul><li><b>Clear predictions</b> Clears all the model predictions and training data</li></ul>
+<h3><span class="mw-headline" id="Core_models">Core models</span></h3>
+<h4><span class="mw-headline" id="Students_at_risk_of_dropping_out">Students at risk of dropping out</span></h4>
+<p>The model <a href="84818660344d28c187b535e553d6a8ac.html" title="Students at risk of dropping out">Students at risk of dropping out</a> predicts students who are at risk of non-completion (dropping out) of a Moodle course, based on low student engagement. In this model, the definition of "dropping out" is "no student activity in the final quarter of the course." The prediction model uses the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Community_of_inquiry">Community of Inquiry</a> model of student engagement, consisting of three parts:
+</p>
+<ul><li><a href="84818660344d28c187b535e553d6a8ac.html#Cognitive_depth" title="Students at risk of dropping out">Cognitive presence</a></li>
+<li><a href="84818660344d28c187b535e553d6a8ac.html#Social_Breadth" title="Students at risk of dropping out">Social presence</a></li>
+<li><a href="84818660344d28c187b535e553d6a8ac.html#Potential_indicator_levels_for_selected_activity_modules" title="Students at risk of dropping out">Teacher presence</a></li></ul>
+<p>This prediction model is able to analyse and draw conclusions from a wide variety of courses, and apply those conclusions to make predictions about new courses. The model is not limited to making predictions about student success in exact duplicates of courses offered in the past. However, there are some limitations:
+</p>
+<ol><li>This model requires a certain amount of in-Moodle data with which to make predictions. At the present time, only core Moodle activities are included in the|indicator set (see below). Courses which do not include several core Moodle activities per &ldquo;time slice&rdquo; (depending on the time splitting method) will have poor predictive support in this model. This prediction model will be most effective with fully online or &ldquo;hybrid&rdquo; or &ldquo;blended&rdquo; courses with substantial online components.</li>
+<li>This prediction model assumes that courses have fixed start and end dates, and is not designed to be used with rolling enrollment courses. Models that support a wider range of course types will be included in future versions of Moodle. Because of this model design assumption, it is very important to properly set course start and end dates for each course to use this model. If both past courses and ongoing courses start and end dates are not properly set predictions cannot be accurate. Because the course end date field was only introduced in Moodle 3.2 and some courses may not have set a course start date in the past, we include a command line interface script:</li></ol>
+<pre>$ admin/tool/analytics/cli/guess_course_start_and_end.php 
+</pre>
+<p>This script attempts to estimate past course start and end dates by looking at the student enrolments and students' activity logs. After running this script, please check that the estimated start and end dates script results are reasonably correct.
+</p>
+<h4><span class="mw-headline" id="Upcoming_activities_due">Upcoming activities due</span></h4>
+<p>The static &ldquo;upcoming activities due&rdquo; model checks for activities with upcoming due dates and outputs to the user&rsquo;s calendar page.
+</p>
+<h4><span class="mw-headline" id="No_teaching">No teaching</span></h4>
+<p>This model's insights will inform site managers of which courses with an upcoming start date will not have teaching activity. This is a simple "static" model and it does not use machine learning backend to return predictions. It bases the predictions on assumptions, e.g. there is no teaching if there are no students.
+</p>
+<h2><span class="mw-headline" id="Creating_and_editing_models">Creating and editing models</span></h2><p>
+New machine learning models can be created by using the Analytics API, by importing an exported model from another site, or by using the new web UI. </p><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:new_model.png" class="mw-file-description"><img src="images_en/thumb/9/9f/new_model.png/336432e31d6f5634f0649c660df24b7c.png" decoding="async" width="300" height="91" class="mw-file-element" srcset="/502/en/images_en/thumb/9/9f/new_model.png/450px-new_model.png 1.5x, /502/en/images_en/thumb/9/9f/new_model.png/600px-new_model.png 2x" data-file-width="1138" data-file-height="344"></a><figcaption></figcaption></figure><p> If you delete a "default" model (shipped with Moodle core) you can restore it from the Create menu. (Note: "static" models cannot be created using the web UI at this time.)
+</p><p>There are four components of a model that can be defined through the web UI:
+</p>
+<h3><span class="mw-headline" id="Target">Target</span></h3>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:create_model_2.png" class="mw-file-description"><img src="images_en/thumb/a/aa/create_model_2.png/c921f1d836da0fe742c76a5ef918a3f6.png" decoding="async" width="300" height="143" class="mw-file-element" srcset="/502/en/images_en/thumb/a/aa/create_model_2.png/450px-create_model_2.png 1.5x, /502/en/images_en/thumb/a/aa/create_model_2.png/600px-create_model_2.png 2x" data-file-width="1089" data-file-height="518"></a><figcaption></figcaption></figure><p>Targets represent a &ldquo;known good&rdquo;-- something about which we have very strong evidence of value. Targets must be designed carefully to align with the <a href="e51ac90b156cc121b1a3be80f94e983b.html" title="Curriculum theory">curriculum priorities</a> of the institution.  Each model has a single target. The &ldquo;Analyser&rdquo; (context in which targets will be evaluated) is automatically controlled by the Target selection. See <a href="91d18700d8413f4680fdf723dfb28706.html" title="Learning analytics targets">Learning analytics targets</a> for more information.
+</p><h3><span class="mw-headline" id="Indicators">Indicators</span></h3>
+<p>Indicators are data points that may help to predict targets. We are free to add many indicators to a model to find out if they predict a target-- the only limit is that the data must be available within Moodle and must have a connection to the context of the model (e.g. the user, the course, etc.). The machine learning &ldquo;training&rdquo; process will determine how much weight to give to each indicator in the model.
+</p><p>We do want to make sure any indicators we include in a production model have a clear purpose and can be interpreted by participants, especially if they are used to make prescriptive or diagnostic decisions.
+</p><p>Indicators are constructed from data, but the data points need to be processed to make consistent, reusable indicators. In many cases, events are counted or combined in some way, though other ways of defining indicators are possible and will be discussed later. How the data points are processed involves important assumptions that affect the indicators. In particular, indicators can be absolute, meaning that the value of the indicator stays the same no matter what other samples are in the context, or relative, meaning that the indicator compares the sample to others in the context.
+</p><p>See <a href="cee9f14912ded2dd99f6ad80211c402e.html" title="Learning analytics indicators">Learning analytics indicators</a> for more information.
+</p>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:indicators.png" class="mw-file-description"><img src="images_en/thumb/6/63/indicators.png/ceb711666f7c65519f7464bc59c36263.png" decoding="async" width="300" height="164" class="mw-file-element" srcset="/502/en/images_en/thumb/6/63/indicators.png/450px-indicators.png 1.5x, /502/en/images_en/thumb/6/63/indicators.png/600px-indicators.png 2x" data-file-width="1462" data-file-height="799"></a><figcaption></figcaption></figure>
+<h3><span class="mw-headline" id="Analysis_intervals">Analysis intervals</span></h3>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:analysis_intervals.png" class="mw-file-description"><img src="images_en/e/e6/58ffff9e1326e79a31de76f3cebb6567.png" decoding="async" width="213" height="312" class="mw-file-element" data-file-width="213" data-file-height="312"></a><figcaption></figcaption></figure><p>Analysis intervals control how often the model will run to generate insights, and how much information will be included in each generation cycle. The two analysis intervals enabled by default for selection are &ldquo;Quarters&rdquo; and &ldquo;Quarters accumulative.&rdquo; Both options will cause models to execute four times-- after the first, second, third and fourth quarters of the course (the final execution is used to evaluate the accuracy of the predictions against the actual outcome). The difference lies in how much information will be included. &ldquo;Quarters&rdquo; will only include information from the most recent quarter of the course in its predictions. &ldquo;Quarters accumulative&rdquo; will include the most recent quarter and all previous quarters, and tends to generate more accurate predictions (though it can take more time and memory to execute). Moodle Learning Analytics also includes &ldquo;Tenths&rdquo; and &ldquo;Tenths accumulative&rdquo; options in Core, if you choose to enable them from the Analytics Settings panel. These generate predictions more frequently.
+</p><ul><li><b>Single range</b> indicates that predictions will be made once, but will take into account a range of time, e.g. one prediction at the end of a course. The prediction is made at the end of the range.</li></ul>
+<ul><li><b>Upcoming...</b> indicates that the model generates an insight based on a snapshot of data at a given moment, e.g. the "no teaching" model looks to see if there are currently any teachers or students assigned to a course one week before the start of the term, and issues one insight warning the site administrator that no teaching is likely to occur in that empty course.</li></ul>
+<ul><li><b>All previous...</b> (formerly "accumulative") and <b>Last...</b> methods differ in how much data is included in the prediction. Both "All previous quarters" and "Last quarter" predictions are made at the end of each quarter of a time span (e.g. a course), but in "Last quarter," only the information from the most recent quarter is included in the prediction, whereas in "All previous quarters" all information up to the present is included in the prediction.</li></ul>
+<p><b>Single range</b> and <b>No time splitting</b> methods do not have time constraints. They run during the next scheduled task execution, although models apply different restrictions (e.g. require that a course is finished to use it for training or some data in the course and students to use it to get predictions...). 'Single range' and 'No splitting' are not appropriate for students at risk of dropping out of courses. They are intended to be used in models like 'No teaching' or 'Spammer user' that are designed to make only one prediction per eligible sample. To explain this with an example: 'No teaching' model uses 'Single range' analysis interval; the target class (the main PHP class of a model) only accepts courses that will start during the next week. Once we provide a 'No teaching' insight for a course we won't provide any further 'No teaching' insights for that course. 
+</p><p>The difference between 'Single range' and 'No splitting' is that models analysed using 'Single range' will be limited to the analysable elements (the course in students at risk model) start and end dates, while 'No splitting' do not have any time contraints and all data available in the system is used to calculate the indicators.
+</p><p><b>Note</b>: Although the examples above refer to courses, analysis intervals can be used on any analysable element. For example, enrolments can have start and end dates, so an analysis interval could be applied to generate predictions about aspects of an enrollment. For analysable elements with no start and end dates, different analysis intervals would be needed. For example, a "weekly" analysis interval could be applied to a model intended to predict whether a user is likely to log in to the system in the future, on the basis of activity in the previous week.
+</p>
+<h3><span class="mw-headline" id="Predictions_processor">Predictions processor</span></h3>
+<p>This setting controls which machine learning backend and algorithm will be used to estimate the model. Moodle currently supports two predictions processors:
+</p>
+<ul><li>PHP machine learning backend - implements logistic regression using php-ml (contributed by Moodle)</li>
+<li>Python machine learning backend - implements single hidden layer feed-forward neural network using TensorFlow.</li></ul>
+<p>You can only choose from the predictions processors enabled on your site.
+</p>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:regression.png" class="mw-file-description"><img src="images_en/thumb/9/9d/regression.png/e080841500094ca93057cca2e4466ec3.png" decoding="async" width="300" height="141" class="mw-file-element" srcset="/502/en/images_en/thumb/9/9d/regression.png/450px-regression.png 1.5x, /502/en/images_en/thumb/9/9d/regression.png/600px-regression.png 2x" data-file-width="799" data-file-height="375"></a><figcaption></figcaption></figure>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:ffnn.png" class="mw-file-description"><img src="images_en/thumb/e/e4/ffnn.png/f28a92a35b8b541399460f93903b2a83.png" decoding="async" width="300" height="165" class="mw-file-element" srcset="/502/en/images_en/thumb/e/e4/ffnn.png/450px-ffnn.png 1.5x, /502/en/images_en/thumb/e/e4/ffnn.png/600px-ffnn.png 2x" data-file-width="806" data-file-height="443"></a><figcaption></figcaption></figure>
+<p>Each prediction processor may support multiple algorithms in the future.
+</p>
+<h3><span class="mw-headline" id="Changing_the_model_name">Changing the model name</span></h3>
+<p>The model name is used to identify insights generated by the model, and by default, is the same as the Target name. You can edit this by clicking the "pencil" icon next to the model name in the list of models:
+</p>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:edit_model_name.png" class="mw-file-description"><img src="images_en/thumb/7/75/edit_model_name.png/5b0f712de4b53549ceb5bf139d171747.png" decoding="async" width="300" height="39" class="mw-file-element" srcset="/502/en/images_en/thumb/7/75/edit_model_name.png/450px-edit_model_name.png 1.5x, /502/en/images_en/thumb/7/75/edit_model_name.png/600px-edit_model_name.png 2x" data-file-width="875" data-file-height="113"></a><figcaption></figcaption></figure>
+<h2><span class="mw-headline" id="Training_models">Training models</span></h2>
+<p>Machine-learning based models require a training process using previous data from the site. "Static" models make use of sets of pre-defined rules, and do not need to be trained.  
+</p><p>There are two main categories of machine-learning based analytics models: <b>supervised</b> and <b>unsupervised</b>. 
+</p>
+<ul><li>Supervised models must be trained by using a data set with the target values already identified. For example, if the model will predict course completion, the model must be trained on a set of courses and enrollments with known completion status.</li>
+<li>Unsupervised models look for patterns in existing data, e.g. grouping students based on similarities in their behavior in courses.</li></ul>
+<p>At the present time, Moodle Learning Analytics only supports supervised models.
+</p><p>While we hope to include pre-trained models with the Moodle core installation in the future, at the current time we do not have large enough data sets to train a model for external use.
+</p>
+<h3><span class="mw-headline" id="Training_data">Training data</span></h3>
+<p>The model code includes criteria for "training" and "prediction" data sets. For example, only courses with enrolled students and an end date in the past can be used to train the <a href="84818660344d28c187b535e553d6a8ac.html" title="Students at risk of dropping out">Students at risk of dropping out</a> model, because it is impossible to determine whether a student dropped out until a course has ended. On the other hand, for this model to make predictions, there must be a course with students enrolled that has started, but not yet ended.
+</p><p>The training set is defined in the php code for the Target. Models can only be trained if a site contains enough data matching the training criteria. Most models will require Moodle log data for the time period covering the events being analysed. For example, the <a href="84818660344d28c187b535e553d6a8ac.html" title="Students at risk of dropping out">Students at risk of dropping out</a> model can only be trained if there is log data covering student activity in the courses that meet the training criteria. It is possible to train a model on an "archive" system and then use the model on a production system.
+</p>
+<h2><span class="mw-headline" id="Evaluating_models">Evaluating models</span></h2>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:model_menu_evaluate.png" class="mw-file-description"><img src="images_en/thumb/1/1e/model_menu_evaluate.png/17ff28c6650b0a386a6abe1a4f097270.png" decoding="async" width="300" height="38" class="mw-file-element" srcset="/502/en/images_en/thumb/1/1e/model_menu_evaluate.png/450px-model_menu_evaluate.png 1.5x, /502/en/images_en/thumb/1/1e/model_menu_evaluate.png/600px-model_menu_evaluate.png 2x" data-file-width="1461" data-file-height="187"></a><figcaption></figcaption></figure><p>This is a <b>manual</b>, resource-intensive process, and will not be visible from the Web UI when sites have the "onlycli" setting checked (default). 
+</p><p>This process can be executed independently of enabling or training the model, and causes Moodle to assemble the training data available on the site, calculate all the indicators and the target and pass the resulting dataset to machine learning backends. This process will split the dataset into training data and testing data and calculate its accuracy. Note that the evaluation process uses all information available on the site, even if it is very old. Because of this, the accuracy returned by the evaluation process may be lower than the real model accuracy as indicators are more reliably calculated immediately after training data is available because the site state changes over time. The metric used to describe accuracy is a weighted <i><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/F1_score">F1 score</a></i>.
+</p><p><i>We recommend that all machine-learning models be evaluated before being enabled on a production site.</i>
+</p><p>To force the model evaluation process to run from the command line:
+</p>
+<pre>$ admin/tool/analytics/cli/evaluate_model.php
+</pre>
+<p>Use the --help option to see parameters.
+</p><p>If you are connecting to your Moodle server remotely, you will probably want to run the process in the background and detach it, so it will continue to run if you log out of your session (or your connection times out). Here is an example on Linux using bash:
+</p>
+<pre># php evaluate_model.php --modelid=4 --analysisinterval='\core\analytics\time_splitting\deciles_accum' &gt; eval.log &amp;
+# jobs
+[1]+  Running                 php evaluate_model.php --modelid=4 --analysisinterval='\core\analytics\time_splitting\deciles_accum' &gt; eval.log &amp;
+# disown -h %1
+</pre>
+<p>This will allow the process to continue to run after the remote shell disconnects. See the documentation for your OS and shell for more details.
+</p><p>On small sites, you can uncheck "onlycli" in the Analytics settings page, and you can then evaluate models from the Analytics models page. However, this is not feasible with production sites.
+</p>
+<h3><span class="mw-headline" id="Review_evaluation_results">Review evaluation results</span></h3>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:model_menu_log.png" class="mw-file-description"><img src="images_en/4/48/c73b14ce281a77d12f642f90ef2d1146.png" decoding="async" width="272" height="185" class="mw-file-element" data-file-width="272" data-file-height="185"></a><figcaption></figcaption></figure><p>
+You can review the results of the model training process by accessing the evaluation log.</p><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:model_log.png" class="mw-file-description"><img src="images_en/thumb/f/f2/model_log.png/92a79d4b172120f4fb1a13b0b16950f7.png" decoding="async" width="300" height="125" class="mw-file-element" srcset="/502/en/images_en/thumb/f/f2/model_log.png/450px-model_log.png 1.5x, /502/en/images_en/thumb/f/f2/model_log.png/600px-model_log.png 2x" data-file-width="1118" data-file-height="465"></a><figcaption></figcaption></figure>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:log_info.png" class="mw-file-description"><img src="images_en/thumb/e/e4/log_info.png/23b87dfe33e8b174d91905c57c3220fe.png" decoding="async" width="300" height="89" class="mw-file-element" srcset="/502/en/images_en/thumb/e/e4/log_info.png/450px-log_info.png 1.5x, /502/en/images_en/thumb/e/e4/log_info.png/600px-log_info.png 2x" data-file-width="608" data-file-height="181"></a><figcaption></figcaption></figure>
+<p>Check for warnings about evaluation completion, model accuracy, and model variability.
+</p>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:invalid_site_elements.png" class="mw-file-description"><img src="images_en/thumb/8/8d/invalid_site_elements.png/a22be3eaf4db432abf3d090868ac9362.png" decoding="async" width="300" height="132" class="mw-file-element" srcset="/502/en/images_en/thumb/8/8d/invalid_site_elements.png/450px-invalid_site_elements.png 1.5x, /502/en/images_en/thumb/8/8d/invalid_site_elements.png/600px-invalid_site_elements.png 2x" data-file-width="1008" data-file-height="445"></a><figcaption></figcaption></figure>
+<p>You can also check the <i>invalid site elements</i> list to verify which site elements were included or excluded in the analysis. If you see a large number of unexpected elements in this report, it may mean that you need to check your data. For example, if courses don't have appropriate start and end dates set, or enrolment data has been purged, the system may not be able to include data from those courses in the model training process.
+</p>
+<h2><span class="mw-headline" id="Exporting_and_Importing_models">Exporting and Importing models</span></h2><p>
+Models can also be exported from one site and imported to another. </p><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:export_menu.png" class="mw-file-description"><img src="images_en/9/90/a4aaf5cdfe9ed815dff78c89b5872571.png" decoding="async" width="273" height="330" class="mw-file-element" data-file-width="273" data-file-height="330"></a><figcaption></figcaption></figure> 
+<h3><span class="mw-headline" id="Exporting_models">Exporting models</span></h3><p>
+You can export the data used to train the model, or the model configuration and the weights of the trained model. </p><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:export_dialogue.png" class="mw-file-description"><img src="images_en/thumb/3/3f/export_dialogue.png/23eb9d81cd9bac3d3199d2ddfd9c3b7a.png" decoding="async" width="300" height="145" class="mw-file-element" srcset="/502/en/images_en/thumb/3/3f/export_dialogue.png/450px-export_dialogue.png 1.5x, /502/en/images_en/3/3f/export_dialogue.png 2x" data-file-width="506" data-file-height="244"></a><figcaption></figcaption></figure>
+<p><b>Note</b>: the model weights are completely anonymous, containing no personally identifiable data! This means it is safe to share them with researchers without worrying about privacy regulations.
+</p>
+<h3><span class="mw-headline" id="Importing_models">Importing models</span></h3><p>
+When a model is imported with weights, the site administrator has the option to evaluate the trained model using site data, or to evaluate the model configuration by re-training it using the current site data. </p><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:import_model.png" class="mw-file-description"><img src="images_en/thumb/c/ca/import_model.png/edab91a4f55a4b3ee98c580c3583a695.png" decoding="async" width="300" height="126" class="mw-file-element" srcset="/502/en/images_en/thumb/c/ca/import_model.png/450px-import_model.png 1.5x, /502/en/images_en/thumb/c/ca/import_model.png/600px-import_model.png 2x" data-file-width="1000" data-file-height="421"></a><figcaption></figcaption></figure><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:evaluate_model.png" class="mw-file-description"><img src="images_en/thumb/8/81/evaluate_model.png/0108a413964a4cd55a8d81b671b8482f.png" decoding="async" width="300" height="184" class="mw-file-element" srcset="/502/en/images_en/thumb/8/81/evaluate_model.png/450px-evaluate_model.png 1.5x, /502/en/images_en/8/81/evaluate_model.png 2x" data-file-width="504" data-file-height="309"></a><figcaption></figcaption></figure>
+<!-- 
+NewPP limit report
+Cached time: 20260823014812
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.048 seconds
+Real time usage: 0.301 seconds
+Preprocessor visited node count: 96/1000000
+Post&#8208;expand include size: 402/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    2.017      1 Template:Analytics
+100.00%    2.017      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:22601-0!canonical and timestamp 20260823014812 and revision id 140570. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Using_analytics&amp;oldid=140570">https://docs.moodle.org/502/en/index.php?title=Using_analytics&amp;oldid=140570</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="0c154b6de2d39f38e75cd54e45512204.html" title="Category:Analytics">Analytics</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdiwbbvae">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdiwbbvo0"></button>
+					<div class="collapse navbar-collapse igdiwbbvo0" id="igdiwbbvo0">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Using_analytics" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Using_analytics" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Using_analytics&amp;oldid=140570" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Using_analytics&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Uso_de_analítica" title="Uso de analítica – español" lang="es" hreflang="es" data-title="Uso de analítica" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Analytics_nutzen" title="Analytics nutzen – Deutsch" lang="de" hreflang="de" data-title="Analytics nutzen" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 4 June 2021, at 14:36.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":431,"wgPageParseReport":{"limitreport":{"cputime":"0.048","walltime":"0.301","ppvisitednodes":{"value":96,"limit":1000000},"postexpandincludesize":{"value":402,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    2.017      1 Template:Analytics","100.00%    2.017      1 -total"]},"cachereport":{"timestamp":"20260823014812","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

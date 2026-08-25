@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Installing Moodle - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"0ea738b1fbed08d91c121150","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Installing_Moodle","wgTitle":"Installing Moodle","wgCurRevisionId":155450,"wgRevisionId":155450,"wgArticleId":1387,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Installing_Moodle","wgRelevantArticleId":1387,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="593ae70845242c812b361a340a53fb46.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.pygments%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Installing_Moodle">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Installing_Moodle rootpage-Installing_Moodle layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhjzvy56"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhjzvy56" id="igdhjzvy56">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Installing+Moodle" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Installing_Moodle">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Installing_Moodle">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Installing_Moodle">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="553207f76ae3b1e85403f96c2ca316f1.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Installing_Moodle" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_Moodle&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_Moodle&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Installing Moodle</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a> ► <a class="mw-selflink selflink">Installing Moodle</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a></div>	
+<div class="content">
+<ul><li><a class="mw-selflink selflink">Installing Moodle</a></li>
+<li><a href="399ca91535c3410845bff1400293dbc5.html" title="Installation quick guide">Installation quick guide</a></li>
+<li><a href="37fc181470a569556f94c1f35940d0a7.html" title="Cron">Cron</a></li>
+<li><a href="081d50b0942d418fa28114398527e388.html" title="Nginx">Nginx</a></li>
+<li><a href="6831e4affebb174320f861bc76b08775.html" title="Apache">Apache</a></li>
+<li><a href="68065410acf60db421f4e2aac18bc951.html" title="Internet Information Services">IIS</a></li>
+<li><a href="838fe95223f139a5c86fa0eace52fb64.html" title="Configuring the Router">Routing</a></li>
+<li><a href="b8a47099f49d74586081af402e096238.html" title="Installing plugins">Installing plugins</a></li>
+<li><a href="52d1d262bc125752f9747df1abc77de6.html" title="Installation FAQ">Installation FAQ</a></li>
+<li><a href="b38923733584457a7e29bf0e898e9c97.html" title="Upgrading">Upgrading</a></li>
+<li><a href="451fc5f44047acbcf3c960e787eb56c6.html" title="Upgrade overview">Upgrade overview</a></li>
+<li><a href="784f6d5df0514efb399c81a6f803d2c7.html" title="Automatic updates deployment">Automatic updates deployment</a></li>
+<li><a href="14569a6d13e60324f1803b54b2ffb589.html" title="Git for Administrators">Git guide</a></li>
+<li><a href="8428d1ac0de33e2b0f542d6d962f1fa6.html" title="Administration via command line">Administration via command line</a></li>
+<li><a href="6aeead2c752a1a71fc9b37a62d913491.html" title="Upgrading FAQ">Upgrading FAQ</a></li>
+<li><a href="1a1489d94778d66d38f3a8e70fedc938.html" title="Moodle migration">Moodle migration</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p><i>This page explains how to install Moodle. If you are an expert and/or in a hurry try <a href="c56b7a8f24bbbfa8fe54a009f27a1c3b.html" class="mw-redirect" title="Installation Quickstart">Installation Quickstart</a>.</i>
+</p><p>If you want to avoid installing Moodle yourself completely, consider <a rel="nofollow" class="external text" href="https://moodle.com/products/moodlecloud/">MoodleCloud</a>, the hosting from Moodle.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Requirements"><span class="tocnumber">1</span> <span class="toctext">Requirements</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Hardware"><span class="tocnumber">1.1</span> <span class="toctext">Hardware</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Software"><span class="tocnumber">1.2</span> <span class="toctext">Software</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Set_up_your_server"><span class="tocnumber">2</span> <span class="toctext">Set up your server</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Download_and_copy_files_into_place"><span class="tocnumber">3</span> <span class="toctext">Download and copy files into place</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Create_an_empty_database"><span class="tocnumber">4</span> <span class="toctext">Create an empty database</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Create_the_(moodledata/)_data_directory"><span class="tocnumber">5</span> <span class="toctext">Create the (<i>moodledata/</i>) data directory</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Securing_moodledata_in_a_web_directory"><span class="tocnumber">5.1</span> <span class="toctext">Securing moodledata in a web directory</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Start_Moodle_install"><span class="tocnumber">6</span> <span class="toctext">Start Moodle install</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Command_line_installer"><span class="tocnumber">6.1</span> <span class="toctext">Command line installer</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Web-based_installer"><span class="tocnumber">6.2</span> <span class="toctext">Web-based installer</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Plesk_and_cPanel"><span class="tocnumber">6.3</span> <span class="toctext">Plesk and cPanel</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Final_configuration"><span class="tocnumber">7</span> <span class="toctext">Final configuration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Settings_within_Moodle"><span class="tocnumber">7.1</span> <span class="toctext">Settings within Moodle</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Remaining_tasks"><span class="tocnumber">7.2</span> <span class="toctext">Remaining tasks</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Installation_is_complete_:)"><span class="tocnumber">7.3</span> <span class="toctext">Installation is complete&nbsp;:)</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#If_something_goes_wrong..."><span class="tocnumber">7.4</span> <span class="toctext">If something goes wrong...</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#Platform_specific_instructions"><span class="tocnumber">8</span> <span class="toctext">Platform specific instructions</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Requirements">Requirements</span></h2>
+<p>Moodle is primarily developed in Linux using <a href="6831e4affebb174320f861bc76b08775.html" title="Apache">Apache</a>, <a href="c9a73f3fb9b33bff0832963192472735.html" title="PostgreSQL">PostgreSQL</a>/<a href="b91f71678142951f89520aabd6b6ab45.html" title="MySQL">MySQL</a>/<a href="b0cd9749b4df4e8c98a3d559d046d352.html" title="MariaDB">MariaDB</a> and <a href="d37ab3f458c79b0519831f6c8f9e72d1.html" title="PHP">PHP</a> (sometimes known as the LAMP platform). Typically this is also how Moodle is run, although there are other options (<a href="081d50b0942d418fa28114398527e388.html" title="Nginx">Nginx</a>/<a href="3ac4249ba2cbf317d282d165134daded.html" title="OpenLiteSpeed">OpenLiteSpeed</a>) as long as the software requirements of the <a rel="nofollow" class="external text" href="https://moodledev.io/general/releases/5.2">release</a> are met.
+</p><p>If you are installing Moodle in a Windows server, note that from php5.5 onwards, you will also need to have the Visual C++ Redistributable for Visual Studio 2012 installed from:
+<a rel="nofollow" class="external free" href="http://www.microsoft.com/en-us/download/details.aspx?id=30679">http://www.microsoft.com/en-us/download/details.aspx?id=30679</a> Visual C++] ( x86 or x64). 
+</p><p>The basic requirements for Moodle are as follows:
+</p>
+<h3><span class="mw-headline" id="Hardware">Hardware</span></h3>
+<ul><li>Disk space: 200MB for the Moodle code, plus as much as you need to store content. 5GB is probably a realistic minimum.</li>
+<li>Processor: 1&nbsp;GHz (min), 2&nbsp;GHz dual core or more recommended.</li>
+<li>Memory: 512MB (min), 1GB or more is recommended. 8GB plus is likely on a large production server</li>
+<li>Consider separate servers for the web "front ends" and the database. It is much easier to "tune"</li></ul>
+<p>All the above requirements will vary depending on specific hardware and software combinations as well as the type of use and load; busy sites may well require additional resources. Further guidance can be found under <a href="7cccb2949e16cf0011178f4a16c73de7.html" class="mw-redirect" title="performance recommendations">performance recommendations</a>. Moodle scales easily by increasing hardware.
+</p><p>For very large sites, you are much better starting with a small pilot and gaining some experience and insight. A "what hardware do I need for 50,000 user?" style post in the forums is highly unlikely to get a useful answer.
+</p>
+<h3><span class="mw-headline" id="Software">Software</span></h3>
+<p>See the <a rel="nofollow" class="external text" href="https://moodledev.io/general/releases/5.2">release notes</a> in the dev docs for software requirements.
+</p>
+<h2><span class="mw-headline" id="Set_up_your_server">Set up your server</span></h2>
+<p>A Moodle server may be anything from a Desktop PC (e.g. for testing and evaluating) to a rack-mounted or <a href="dc33cd445c87f6c607a710ec3c8ea482.html" title="Server cluster">clustered</a> solution to cloud VMs or other hosted solutions. As mentioned above there are lots of possibilities for installing the basic server software, for details see:
+</p>
+<ul><li><a href="081d50b0942d418fa28114398527e388.html" title="Nginx">Nginx</a></li>
+<li><a href="6831e4affebb174320f861bc76b08775.html" title="Apache">Apache</a></li>
+<li><a href="9ecfc8c5b75cc3ddd735ce1745c91c15.html" title="Installing AMP">Installing AMP</a></li>
+<li><a href="68065410acf60db421f4e2aac18bc951.html" title="Internet Information Services">IIS</a></li>
+<li><a href="3ac4249ba2cbf317d282d165134daded.html" title="OpenLiteSpeed">OpenLiteSpeed</a></li></ul>
+<p>You should also read through the instructions on <a href="838fe95223f139a5c86fa0eace52fb64.html" title="Configuring the Router">Configuring the Moodle Router</a>.
+</p><p>In addition, starting with Moodle 5.1, Moodle now uses a <code>public</code> directory for all web accessible files. Your web server should be configured to serve files from this directory. For guidance on updating your configuration, see the <a href="b38923733584457a7e29bf0e898e9c97.html#Code_directories_restructure" title="Upgrading">Code directories restructure</a> section in the Upgrading web page for more details.
+</p><p>It will help hugely, regardless of your deployment choices, if time is taken to understand how to configure the different parts of your software stack (HTTP daemon, database, PHP etc.). Do not expect the standard server configuration to be optimal for Moodle. For example, the web server and database servers will almost certainly require tuning to get the best out of Moodle.
+</p><p>If you're unsure which packages to use (eg. <a href="b0cd9749b4df4e8c98a3d559d046d352.html" title="MariaDB">MariaDB</a> vs. <a href="b91f71678142951f89520aabd6b6ab45.html" title="MySQL">MySQL</a>), then have a look at what the consensus on the internet is, but also have a look at the <a href="d2fef13d731df9445395a9c2e0a9fd89.html" title="Performance recommendations">Performance recommendations</a> page, as this may also help give you an idea of exactly how much work is involved/what your workflow may end up looking like and planning that aspect as well.
+</p><p>If a hosting provider is being used, ensure that all Moodle <a rel="nofollow" class="external text" href="https://moodledev.io/general/releases/5.2#server-requirements">requirements</a> (such as PHP and database versions) are met by the hosting platform before attempting the installation. It will help to become familiar with changing settings within the hosting provider's platform (e.g. PHP file upload maximums) as the options and tools provided vary.
+</p>
+<h2><span class="mw-headline" id="Download_and_copy_files_into_place">Download and copy files into place</span></h2>
+<p><b>IMPORTANT: While there are now a number of places you can get the Moodle code (including host provided Moodle installers), you are strongly advised to only obtain Moodle from moodle.org. If you run into problems it will be a great deal easier to support you.</b>
+</p><p>You have two options:
+</p>
+<ul><li>Download your required version from <a rel="nofollow" class="external free" href="http://moodle.org/downloads">http://moodle.org/downloads</a> and unzip/unpack it.</li>
+<li><b>OR</b> Pull the code from the Git repository (recommended for developers and also makes upgrading very simple):</li></ul>
+<pre>$ git clone -b MOODLE_502_STABLE git://git.moodle.org/moodle.git  
+</pre>
+<p>For a fuller discussion see <a href="14569a6d13e60324f1803b54b2ffb589.html" title="Git for Administrators">Git for Administrators</a>. 
+</p><p>Either of the above should result in a directory called <b>moodle</b>, containing a number of files and directories. You can typically place this folder either <i>inside</i> or <i>outside</i> of web root, or place the contents of <b>moodle</b> <i>within</i> web root.
+</p><p>Let's assume that your server's web-accessible directory, also known as DocumentRoot, is <b>public_html</b>. Also assume that the <b>moodle</b> code directory is named the default <b>moodle</b>. There are three possible locations for the Moodle directory or its contents. 
+</p>
+<ol><li>You can put the entire contents of the <b>moodle</b> directory <i>within</i> <b>public_html</b>, which usually makes Moodle accessible at www.example.com. People who do this often dedicate their entire website to Moodle. This is somewhat a common approach on dedicated servers. However, for Moodle 5.1 and onwards, you must satisfy some security requirements.</li>
+<li>In pre-Moodle 5.1, it was common to place the <b>moodle</b> directory <i>inside</i> <b>public_html</b> (e.g., public_html/moodle), making Moodle easily accessible at www.example.com/moodle and allowing other files and folders to be served as well. If you are installing an earlier version of Moodle, pre-5.1, this approach is still fine. However, starting with Moodle 5.1, to satisfy security concerns, this approach is no longer advised.</li>
+<li>If you want to keep Moodle code in its <b>moodle</b> directory, it is recommended to place the <b>moodle</b> directory <i>outside</i> <b>public_html</b> (e.g., moodle/public_html). Then, you can apply different techniques to serve the Moodle application, making Moodle accessible at www.example.com/moodle, and satisfying security concerns. If you are installing an earlier version of Moodle, pre-5.1, placing the <b>moodle</b> directory outside of <b>publc_html</b> is viable following Moodle 5.1's security recommendations, even though it was not commonly done in the past.</li></ol>
+<p><b>Some options to set up the <code>public</code> folder</b>
+</p><p>1. If your moodle code is <i>within</i> <b>public_html</b>, you can
+</p>
+<ul><li>reconfigure your server's DocumentRoot to point to Moodle's <b>public</b> directory.</li>
+<li>reconfigure Apache's configuration files so that the <b>public</b> directory is the web-accessible folder</li>
+<li>use a Router method</li></ul>
+<p>2. If your moodle directory is <i>inside</i> of the <b>public_html</b> directory, you can
+</p>
+<ul><li>reconfigure your server's DocumentRoot to Moodle's <b>public</b> directory.</li></ul>
+<p>3. If your moodle directory is <i>outside</i> of <b>public_html</b>, you can
+</p>
+<ul><li>create a symbolic link file, placed <i>within</i> <b>public_html</b>, which points to the location of Moodle's <b>public</b> directory. The general form of creating this symlink file is as follows:</li></ul>
+<pre>ln -fs path_to/public symbolic_link_name (e.g., ln -fs ~/mdl_sites/moodle/public ~/public_html/moodle).
+</pre>
+<p>Note: this symlink approach will also work if your <b>moodle</b> directory is <i>inside</i> of <b>public_html</b>, but it doesn't satify the security intent.
+</p><p>You should refer to your system's or web server's documentation if you are unsure about your options. Discussions on Moodle.org can also be helpful. 
+</p>
+<dl><dd><i>Tip:</i> If you are downloading Moodle to your local computer and then uploading it to your hosted website, it is usually better to upload the compressed Moodle file and then decompress it on your hosted website. If you decompress Moodle on your local computer, because Moodle is comprised of over 25,000 files, trying to upload over 25,000 files using an FTP client or your host's "file manager" can sometimes miss a file and cause errors.</dd></dl>
+<ul><li><b>Secure the Moodle files:</b> It is vital that the files are not writeable by the web server user. For example, on Unix/Linux (as root):</li></ul>
+<pre>chown -R root /path/to/moodle
+chmod -R 0755 /path/to/moodle
+</pre>
+<p>(files are owned by the administrator/superuser and are only writeable by them - readable by everyone else)
+</p><p>On test/dev sites you <i>may</i> want to make the files writeable to use the built-in plugin installer. This is discouraged for production sites (at least, revert to more secure settings if you do).
+</p><p>This link about setting directory permissions on Linux Webservers may assist as well: <a rel="nofollow" class="external text" href="https://www.internalpointers.com/post/right-folder-permission-website">The right folder permissions for a website on a Linux server</a>.
+</p>
+<h2><span class="mw-headline" id="Create_an_empty_database">Create an empty database</span></h2>
+<p>Next create a new, empty database for your installation. You need to find and make a note of following information for use during the final installation stage:
+</p>
+<ul><li><b>dbhost</b> - the database server hostname. Probably <i>localhost</i> if the database and web server are the same machine, otherwise the name of the database server</li>
+<li><b>dbname</b> - the database name. Whatever you called it, e.g. <i>moodle</i></li>
+<li><b>dbuser</b> - the username for the database. Whatever you assigned, e.g. <i>moodleuser</i> - do not use the root/superuser account. Create a proper account with the minimum permissions needed.</li>
+<li><b>dbpass</b> - the password for the above user</li></ul>
+<p>You should set the collation of the database to its proper setting (e.g., utf8mb4_unicode_ci).
+</p><p>If your site is hosted you should find a web-based administration page for databases as part of the control panel (or ask your administrator). For everyone else or for detailed instructions, see the page for your chosen database server:
+</p>
+<ul><li><a href="c9a73f3fb9b33bff0832963192472735.html" title="PostgreSQL">PostgreSQL</a></li>
+<li><a href="b0cd9749b4df4e8c98a3d559d046d352.html" title="MariaDB">MariaDB</a></li>
+<li><a href="b91f71678142951f89520aabd6b6ab45.html" title="MySQL">MySQL</a></li>
+<li><a href="8fc35418983cbbcfdb596bac7ce4623f.html" title="MSSQL">MSSQL</a></li></ul>
+<h2><span id="Create_the_.28moodledata.2F.29_data_directory"></span><span class="mw-headline" id="Create_the_(moodledata/)_data_directory">Create the (<i>moodledata/</i>) data directory</span></h2>
+<p>Moodle requires a directory to store all of its files (all your site's uploaded files, temporary data, cache, session data etc.). The web server needs to be able to write to this directory. On larger systems consider how much free space you are going to use when allocating this directory. 
+</p><p>Due to the default way Moodle caches data you may have serious performance issues if you use relatively slow storage (e.g. NFS) for this directory. Read the <a href="d2fef13d731df9445395a9c2e0a9fd89.html" title="Performance recommendations">Performance recommendations</a> carefully and consider using (e.g.) <a href="83650e1458408d473e108837eda43ce6.html" title="Redis cache store">redis</a> or memcached for <a href="47336288cd5208e83a741bd312d28b86.html" title="Caching">Caching</a>.
+</p><p><b>IMPORTANT:</b> This directory should <b>NOT</b> be located inside a web-accessible area (e.g., public_html/moodledata/). This is a significant security risk. Instead, place it outside your web root (e.g., moodledata/public_html/).&nbsp;
+</p><p>On certain systems, the Moodle installation may automatically create the moodledata folder. However, we recommend creating it manually. Here is an example (Unix/Linux) of creating the directory and setting permissions for&nbsp;<b>anyone</b>&nbsp;on the server to write here. This is only appropriate for Moodle servers that are not shared. Discuss this with your server administrator for better permissions that just allow the web server user to access these files.
+</p>
+<pre># mkdir /path/to/moodledata
+# chmod 0777 /path/to/moodledata
+</pre>
+<h4><span class="mw-headline" id="Securing_moodledata_in_a_web_directory">Securing moodledata in a web directory</span></h4>
+<p>If you are using a hosted site and you have no option but to place 'moodledata' in a web accessible directory, you may be able to secure it by creating an .htaccess file in the 'moodledata' directory. This does not work on all systems - see your host/administrator. Create a file called .htaccess containing only the following lines:
+</p><p><b>Apache 2.2</b>
+</p>
+<pre>order deny,allow
+deny from all
+</pre>
+<p><b>Apache 2.4</b>
+</p>
+<pre>Require all denied
+</pre>
+<h2><span class="mw-headline" id="Start_Moodle_install">Start Moodle install</span></h2>
+<p>It's now time to run the installer to create the database tables and configure your new site. The recommended method is to use the command line installer. If you cannot do this for any reason (e.g. on a Windows server) the web-based installer is still available.
+</p>
+<h3><span class="mw-headline" id="Command_line_installer">Command line installer</span></h3>
+<p>It's best to run the command line as your system's web user. You need to know what that is - see your system's documentation (e.g. Ubuntu/Debian is 'www-data', Centos is 'apache')
+</p>
+<ul><li>Example of using the command-line (as root - substitute 'www-data' for your web user):</li></ul>
+<pre># chown www-data /path/to/moodle
+# cd /path/to/moodle/admin/cli
+# sudo -u www-data /usr/bin/php install.php
+# chown -R root /path/to/moodle
+</pre>
+<p>The chowns allow the script to write a new config.php file. More information about the options can be found using 
+</p>
+<pre># php install.php --help
+</pre>
+<p>You will be asked for other settings that have not been discussed on this page - if unsure just accept the defaults. For a full discussion see <a href="8428d1ac0de33e2b0f542d6d962f1fa6.html" title="Administration via command line">Administration via command line</a>
+</p>
+<h3><span class="mw-headline" id="Web-based_installer">Web-based installer</span></h3>
+<p>For ease of use, you can install Moodle via the web. We recommend configuring your web server so that the page is not publicly accessible until the installation is complete.
+</p><p>To run the web installer script, just go to your Moodle's main URL using a web browser (e.g., www.example.com/moodle).
+</p><p>The installation process will take you through a number of pages. You should be asked to confirm the copyright, see the database tables being created, supply administrator account details, and supply the site details. The database creation can take some time - please be patient. You should eventually end up at the Moodle front page with an invitation to create a new course. 
+</p><p>If you are asked to download the new config.php file and upload it to your Moodle installation, just follow the on-screen instructions.
+</p>
+<h3><span class="mw-headline" id="Plesk_and_cPanel">Plesk and cPanel</span></h3>
+<p>To install Plesk on your Ubuntu server for managing multiple websites, including your Moodle-based training website, you should follow these steps:
+</p><p>1. Connect to the server via SSH.
+</p><p>2. Install the software-properties-common package to manage repositories:
+</p>
+<pre>apt-get install software-properties-common
+</pre>
+<p>3. Add the PPA repository:
+</p>
+<pre>add-apt-repository ppa:ondrej/php
+</pre>
+<p>4. Install PHP 7.2:
+</p>
+<pre>apt -y install php7.2
+</pre>
+<p>5. Install necessary PHP modules (example):
+</p>
+<pre>apt install -y php7.2-{bcmath,bz2,cli,common,curl,dev,fpm,gd,gmp,imagick,imap,intl,json,mbstring,mysql,opcache,soap,ssh2,xml,xmlrpc,zip}
+</pre>
+<p>6. Register the PHP handler in Plesk:
+</p>
+<pre>plesk bin php_handler --add -displayname php72-fpm-custom -path /usr/sbin/php-fpm7.2 -phpini /etc/php/7.2/fpm/php.ini -type fpm -id php72-fpm-custom -clipath /usr/bin/php -service php7.2-fpm -poold /etc/php/7.2/fpm/pool.d
+</pre>
+<p>Plesk will handle the installation of Apache, MariaDB/MySQL, PHP, and other necessary components. You can then proceed with the Moodle installation as per the Moodle documentation.
+</p>
+<h2><span class="mw-headline" id="Final_configuration">Final configuration</span></h2>
+<h3><span class="mw-headline" id="Settings_within_Moodle">Settings within Moodle</span></h3>
+<p>There are a number of options within the Moodle Site Administration screens (accessible from the 'Site administration' tab in the 'Administration' block (Classic theme) or the Site administration button in the navigation bar (Boost). Here are a few of the more important ones that you will probably want to check:
+</p>
+<ul><li><i>Administration &gt; Site administration &gt; Server &gt; Email &gt; <a href="2e4b746825876fab71c58c0afb3555a0.html#Outgoing_mail_configuration" title="Mail configuration">Outgoing mail configuration</a></i>: Set your smtp server and authentication if required (so your Moodle site can send emails). You can also set a norepy email on this page.</li>
+<li><i>Administration &gt; Site administration &gt; Server &gt; Server &gt; Support contact</i>. Set your support contact email.</li>
+<li><i>Administration &gt; Site administration &gt; Server &gt; System paths</i>: Set the paths to du, dot and aspell binaries.</li>
+<li><i>Administration &gt; Site administration &gt; Server &gt; HTTP</i>: If you are behind a firewall you may need to set your proxy credentials in the 'Web proxy' section.</li>
+<li><i>Administration &gt; Site administration &gt; Location &gt; Update timezones</i>: Run this to make sure your timezone information is up to date. (more info <a href="989ee92ac77f5dc083c15dec6885963c.html" title="Location">Location</a>)
+<ul><li><a rel="nofollow" class="external text" href="http://php.net/manual/en/timezones.php">Set server's local timezone</a> inside <tt>php.ini</tt> (should probably be inside <tt>/etc/php.ini</tt> or <tt>/etc/php.d/date.ini</tt>, depending on the underlying OS):</li></ul></li></ul>
+<div class="mw-highlight mw-highlight-lang-ini mw-content-ltr" dir="ltr"><pre><span></span><span class="k">[Date]</span><span class="w"> </span>
+<span class="c1">; Defines the default timezone used by the date functions </span>
+<span class="na">date.timezone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"YOUR LOCAL TIMEZONE"</span>
+</pre></div>
+<h3><span class="mw-headline" id="Remaining_tasks">Remaining tasks</span></h3>
+<ul><li><b>Configure Cron</b>: Moodle's background tasks (e.g. sending out forum emails and performing course backups) are performed by a script which you can set to execute at specific times of the day. This is known as a cron script. Please refer to the <a href="37fc181470a569556f94c1f35940d0a7.html" title="Cron">Cron instructions</a>.</li>
+<li><b>Set up backups</b>: See <a href="9a7509e03babc1def9f404e05acd8435.html" title="Site backup">Site backup</a> and <a href="d06ad6961a670c6f02617c2c5602a8dc.html" title="Automated course backup">Automated course backup</a>.</li>
+<li><b>Secure your Moodle site</b>: Read the <a href="b859a9a32d3e71358a74bf06b4b09124.html" title="Security recommendations">Security recommendations</a>. Also have a look at the Security Checks Section under Site Administration -&gt; Reports -&gt; Security Checks.</li>
+<li><b>Increasing the maximum upload size</b> See <a href="52d1d262bc125752f9747df1abc77de6.html" title="Installation FAQ">Installation FAQ</a> Maximum upload file size - how to change it?</li>
+<li><b>Check mail works</b>&nbsp;: From Site administration &gt; Server &gt; Test outgoing mail configuration, use the link to send yourself a test email. Don't be tempted to skip this step.</li></ul>
+<h3><span id="Installation_is_complete_:.29"></span><span class="mw-headline" id="Installation_is_complete_:)">Installation is complete&nbsp;:)</span></h3>
+<ul><li>Create a new course: You can now access Moodle through your web browser (using the same URL as you set during the install process), log in as your admin user and create a new course. See <a href="47831b6195aa9fc422e01d95d9b52270.html" title="Adding a new course">create a new course</a>.</li>
+<li>Now that your site is running, when you've got a chance, consider seeing how you can maximize its performance by having a look at <a href="d2fef13d731df9445395a9c2e0a9fd89.html" title="Performance recommendations">Performance recommendations</a>.</li></ul>
+<h3><span class="mw-headline" id="If_something_goes_wrong...">If something goes wrong...</span></h3>
+<p>Here are some things you should try...
+</p>
+<ul><li>Check the <a href="52d1d262bc125752f9747df1abc77de6.html" title="Installation FAQ">Installation FAQ</a></li>
+<li>Check your file permissions carefully. Can your web server read (but not write) the Moodle program files? Can your web server read and write your Moodle data directory? If you don't fully understand how file ownership and permissions work on your operating system it would be time very well spent to find out.</li>
+<li>Check your database permissions. Have you set up your database user with the correct rights and permissions for your configuration (especially if the web server and database server are different machines)?</li>
+<li>Create your <a href="4851907a1dff02740b60eb6cb720320f.html" title="Configuration file">Configuration file</a> (config.php) by hand. Copy config-dist.php (in the root of the Moodle program directory) to config.php, edit it and set your database/site options there. Installation will continue from the right place.</li>
+<li>Once you have a config.php (see previous tip) you can edit it to turn on debugging (in section 8). This may give you extra information to help track down a problem. If you have access, check your web server error log(s).</li>
+<li>Re-check your php.ini / .htaccess settings. Are they appropriate (e.g. memory_limit), did you edit the correct php.ini / .htaccess file and (if required) did you restart the web server after making changes?</li>
+<li>Did you include any non-core (optional) plugins, themes or other code before starting the installation script? If so, remove it and try again (it may be broken or incompatible).</li>
+<li>Explain your problem in the <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/view.php?id=28">Installation problems forum</a>. <b>PLEASE</b> list your software versions; explain what you did, what happened and what error messages you saw (if any); explain what you tried. There is no such thing as 'nothing', even a blank page is something!</li></ul>
+<h2><span class="mw-headline" id="Platform_specific_instructions">Platform specific instructions</span></h2>
+<p><b>Note:</b> Much of this information is provided by the community. It may not have been checked and may be out of date. Please read in conjunction with the above installation instructions.
+</p>
+<ul><li><a href="aa048fc2ba46a79de7e4c6f23c76e44c.html" title="Windows installation">Windows installation</a>
+<ul><li><a href="c9e3ceb436b5ac400a3681808ce46e24.html" title="Installing Moodle on SmarterASP.NET">Installing Moodle on SmarterASP.NET</a></li></ul></li>
+<li><a href="633212ec6c4234cb5bdab6a41c349adc.html" title="Unix or Linux Installation">Unix or Linux Installation</a></li>
+<li><a href="244afd16b27bee395eb41a006f83d90d.html" title="Step-by-step Installation Guide for Ubuntu">Step-by-step Installation Guide for Ubuntu</a></li>
+<li><a href="166a1241f914e27da11d0410d5d9b99e.html" class="mw-redirect" title="Mac Installation">Mac Installation</a></li>
+<li><a href="1ca0d0884565a6bdf26f3a960d2005e2.html" title="Amazon EC2 Cloud Services Installation">Amazon EC2 Cloud Services Installation</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822092306
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.026 seconds
+Real time usage: 0.037 seconds
+Preprocessor visited node count: 149/1000000
+Post&#8208;expand include size: 784/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 1055/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    8.689      1 -total
+ 65.89%    5.725      3 Template:Release_notes
+ 31.02%    2.695      1 Template:Installing_Moodle
+ 25.57%    2.222      1 Template:Version
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:1387-0!canonical and timestamp 20260822092306 and revision id 155450. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Installing_Moodle&amp;oldid=155450">https://docs.moodle.org/502/en/index.php?title=Installing_Moodle&amp;oldid=155450</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="7f264aa70db3768dcef1896a8ec93e70.html" title="Category:Installation">Installation</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhjzw1v8">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhjzw2hd"></button>
+					<div class="collapse navbar-collapse igdhjzw2hd" id="igdhjzw2hd">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Installing_Moodle" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Installing_Moodle" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_Moodle&amp;oldid=155450" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_Moodle&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Instalación_de_moodle" title="Instalación de moodle – español" lang="es" hreflang="es" data-title="Instalación de moodle" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Installation_von_Moodle" title="Installation von Moodle – Deutsch" lang="de" hreflang="de" data-title="Installation von Moodle" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Installation_de_Moodle" title="Installation de Moodle – français" lang="fr" hreflang="fr" data-title="Installation de Moodle" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/Moodleのインストール" title="Moodleのインストール – 日本語" lang="ja" hreflang="ja" data-title="Moodleのインストール" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 24 April 2026, at 09:45.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":170,"wgPageParseReport":{"limitreport":{"cputime":"0.026","walltime":"0.037","ppvisitednodes":{"value":149,"limit":1000000},"postexpandincludesize":{"value":784,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1055,"limit":5000000},"timingprofile":["100.00%    8.689      1 -total"," 65.89%    5.725      3 Template:Release_notes"," 31.02%    2.695      1 Template:Installing_Moodle"," 25.57%    2.222      1 Template:Version"]},"cachereport":{"timestamp":"20260822092306","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

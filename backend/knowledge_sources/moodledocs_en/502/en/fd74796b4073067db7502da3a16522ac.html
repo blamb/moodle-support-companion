@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Upgrading - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"9e87a27756cd017180e2b541","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Upgrading","wgTitle":"Upgrading","wgCurRevisionId":155434,"wgRevisionId":155434,"wgArticleId":1390,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Upgrading","wgRelevantArticleId":1390,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"upgrade","wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgInternalRedirectTargetUrl":"/502/en/Upgrading","wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="593ae70845242c812b361a340a53fb46.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.pygments%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Upgrading">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Upgrading rootpage-Upgrading layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjaq14vt"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdjaq14vt" id="igdjaq14vt">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Upgrading" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/upgrade">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/upgrade">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/upgrade">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="b38923733584457a7e29bf0e898e9c97.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Upgrading" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Upgrading&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Upgrading&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Upgrading</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"><span class="mw-redirectedfrom">(Redirected from <a href="https://docs.moodle.org/502/en/index.php?title=upgrade&amp;redirect=no" class="mw-redirect" title="upgrade">upgrade</a>)</span></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a> ► <a class="mw-selflink selflink">Upgrading</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a></div>	
+<div class="content">
+<ul><li><a href="553207f76ae3b1e85403f96c2ca316f1.html" title="Installing Moodle">Installing Moodle</a></li>
+<li><a href="399ca91535c3410845bff1400293dbc5.html" title="Installation quick guide">Installation quick guide</a></li>
+<li><a href="37fc181470a569556f94c1f35940d0a7.html" title="Cron">Cron</a></li>
+<li><a href="081d50b0942d418fa28114398527e388.html" title="Nginx">Nginx</a></li>
+<li><a href="6831e4affebb174320f861bc76b08775.html" title="Apache">Apache</a></li>
+<li><a href="68065410acf60db421f4e2aac18bc951.html" title="Internet Information Services">IIS</a></li>
+<li><a href="838fe95223f139a5c86fa0eace52fb64.html" title="Configuring the Router">Routing</a></li>
+<li><a href="b8a47099f49d74586081af402e096238.html" title="Installing plugins">Installing plugins</a></li>
+<li><a href="52d1d262bc125752f9747df1abc77de6.html" title="Installation FAQ">Installation FAQ</a></li>
+<li><a class="mw-selflink selflink">Upgrading</a></li>
+<li><a href="451fc5f44047acbcf3c960e787eb56c6.html" title="Upgrade overview">Upgrade overview</a></li>
+<li><a href="784f6d5df0514efb399c81a6f803d2c7.html" title="Automatic updates deployment">Automatic updates deployment</a></li>
+<li><a href="14569a6d13e60324f1803b54b2ffb589.html" title="Git for Administrators">Git guide</a></li>
+<li><a href="8428d1ac0de33e2b0f542d6d962f1fa6.html" title="Administration via command line">Administration via command line</a></li>
+<li><a href="6aeead2c752a1a71fc9b37a62d913491.html" title="Upgrading FAQ">Upgrading FAQ</a></li>
+<li><a href="1a1489d94778d66d38f3a8e70fedc938.html" title="Moodle migration">Moodle migration</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p><i>This page explains in detail how to upgrade Moodle. For a summary of the process, see <a href="451fc5f44047acbcf3c960e787eb56c6.html" title="Upgrade overview">Upgrade overview</a>.</i>
+</p>
+<table class="alert alert-warning">
+<tbody><tr>
+<td style="padding: 0.7em 0.5em 0.5em;"><b>Warning:</b>
+<p>The directory structure of Moodle files and the security model have changed in 5.1.
+</p><p>1. A new "public" folder has been introduced to contain all web accessible files. Configuration and other sensitive files are now stored outside this folder for better security.
+</p><p>2. You will need to reconfigure your web server to accommodate the security change as part of the upgrade process. See the section below <a class="mw-selflink-fragment" href="#Code_directories_restructure">Code directories restructure</a>.
+</p>
+</td></tr></tbody></table>
+<p><br>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Check_the_requirements"><span class="tocnumber">1</span> <span class="toctext">Check the requirements</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Before_upgrading"><span class="tocnumber">2</span> <span class="toctext">Before upgrading</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Backup_important_data"><span class="tocnumber">3</span> <span class="toctext">Backup important data</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Check_for_plugin_updates"><span class="tocnumber">4</span> <span class="toctext">Check for plugin updates</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Put_your_site_into_maintenance_mode"><span class="tocnumber">5</span> <span class="toctext">Put your site into maintenance mode</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Code_directories_restructure"><span class="tocnumber">6</span> <span class="toctext">Code directories restructure</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Routing"><span class="tocnumber">7</span> <span class="toctext">Routing</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Apache"><span class="tocnumber">7.1</span> <span class="toctext">Apache</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#nginx"><span class="tocnumber">7.2</span> <span class="toctext">nginx</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#OpenLiteSpeed_(cPanel)"><span class="tocnumber">7.3</span> <span class="toctext">OpenLiteSpeed (cPanel)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Install_the_new_Moodle_software"><span class="tocnumber">8</span> <span class="toctext">Install the new Moodle software</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Standard_install_package"><span class="tocnumber">8.1</span> <span class="toctext">Standard install package</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#Linux"><span class="tocnumber">8.1.1</span> <span class="toctext">Linux</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#Using_Git"><span class="tocnumber">8.2</span> <span class="toctext">Using Git</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Command_line_upgrade"><span class="tocnumber">8.3</span> <span class="toctext">Command line upgrade</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Finishing_the_upgrade"><span class="tocnumber">9</span> <span class="toctext">Finishing the upgrade</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Fatal_error:_Maximum_execution_time_of_30_seconds_exceeded..."><span class="tocnumber">9.1</span> <span class="toctext">Fatal error: Maximum execution time of 30 seconds exceeded...</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#Possible_issues_that_may_affect_you_in_Moodle_5.2"><span class="tocnumber">10</span> <span class="toctext">Possible issues that may affect you in Moodle 5.2</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="#Upgrade_Debugging_Messages"><span class="tocnumber">10.1</span> <span class="toctext">Upgrade Debugging Messages</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Activities_block_removal"><span class="tocnumber">10.2</span> <span class="toctext">Activities block removal</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Subsections_removals"><span class="tocnumber">10.3</span> <span class="toctext">Subsections removals</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#MoodleNet_deprecation"><span class="tocnumber">10.4</span> <span class="toctext">MoodleNet deprecation</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#MimeTex_removal"><span class="tocnumber">10.5</span> <span class="toctext">MimeTex removal</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Marketplace_integration"><span class="tocnumber">10.6</span> <span class="toctext">Marketplace integration</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#New_capabilities_in_Moodle_5.2"><span class="tocnumber">10.7</span> <span class="toctext">New capabilities in Moodle 5.2</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-26"><a href="#Moodle_4.3,_4.4,_4.5,_5.0_and_5.1_upgrading_notes"><span class="tocnumber">11</span> <span class="toctext">Moodle 4.3, 4.4, 4.5, 5.0 and 5.1 upgrading notes</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#Any_questions_about_the_process?"><span class="tocnumber">12</span> <span class="toctext">Any questions about the process?</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Check_the_requirements">Check the requirements</span></h2>
+<p>Before upgrading, check that your server meets all requirements for 5.2 in <i>Site administration &gt; Server &gt; <a href="bc46b6c96eafe7bbc32f4466248ba21c.html" title="Environment">Environment</a></i>. 
+</p><p>See the <a rel="nofollow" class="external text" href="https://moodledev.io/general/releases/5.2">Moodle 5.2 release notes</a> for server and client software requirements.
+</p><p>Note: You can only upgrade to Moodle 5.2 from Moodle 4.4 or later. If upgrading from earlier versions, you must <a rel="nofollow" class="external text" href="https://docs.moodle.org/404/en/Upgrading">upgrade to 4.4</a> or later as an intermediate step.
+</p>
+<h2><span class="mw-headline" id="Before_upgrading">Before upgrading</span></h2>
+<p><b>We advise that you test the upgrade first on a COPY of your production site, to make sure it works as you expect. See <a href="1a1489d94778d66d38f3a8e70fedc938.html" title="Moodle migration">Moodle_migration.</a></b>
+</p><p>Consider setting the <a href="e46af4df38941ea7c2c5766be4b401b2.html" class="mw-redirect" title="upgrade key">upgrade key</a> for your site.  The feature has been available for a while.  It is now encouraged for better security.
+</p>
+<h2><span class="mw-headline" id="Backup_important_data">Backup important data</span></h2>
+<p>There are three areas that should be backed up before any upgrade:
+</p>
+<ol><li>Moodle software (For example, everything in server/www/moodle)</li>
+<li>Moodle uploaded files (For example, server/moodledata)</li>
+<li>Moodle database (For example, your Postgres or MySQL database dump)</li></ol>
+<p>See <a href="9a7509e03babc1def9f404e05acd8435.html" title="Site backup">Site backup</a> for more specific information.
+</p>
+<h2><span class="mw-headline" id="Check_for_plugin_updates">Check for plugin updates</span></h2>
+<p>If you have <a href="784f6d5df0514efb399c81a6f803d2c7.html" title="Automatic updates deployment">Automatic updates deployment</a> enabled, you can update installed plugins automatically during the upgrade. Just make sure you check for available updates (via the button for it) at the <i>Site Administration &gt; Plugins overview</i> tool.
+</p><p>If you are updating plugins manually, now is a good time to check the <a rel="nofollow" class="external text" href="http://moodle.org/plugins">Moodle Plugins directory</a> to see if a 5.2 version is available for any <a href="b8a47099f49d74586081af402e096238.html#Plugins_overview" title="Installing plugins">plugins (including themes) installed on your site</a>. If so, download the plugin package to prepare to copy it to the appropriate location in your Moodle code (see <a href="b8a47099f49d74586081af402e096238.html" title="Installing plugins">Installing plugins</a>).
+</p><p>The plugin upgrade will then be part of the Moodle upgrade process.
+</p><p>If an outdated plugin causes your upgrade to fail, you can usually delete the plugin code instead of uninstalling it from within Moodle so that the data associated with it remains intact.
+</p>
+<h2><span class="mw-headline" id="Put_your_site_into_maintenance_mode">Put your site into maintenance mode</span></h2>
+<p>Before you begin upgrading your site, you should put it into <a href="d62073e77ddeb5a9114cef2af64bdaf7.html" class="mw-redirect" title="maintenance mode">maintenance mode</a> to stop any non-admin users from logging in. Then you should wait for any currently running cron processes to complete before proceeding.
+</p>
+<h2><span class="mw-headline" id="Code_directories_restructure">Code directories restructure</span></h2>
+<p>The directory structure of Moodle files and the security model changed from 5.1.
+</p><p>If you are upgrading to 5.2 from version 5.0 or older, <b>you will need to update your web server configuration</b>. Please check the [./<a rel="nofollow" class="external free" href="https://docs.moodle.org/501/en/Upgrading#Code_directories_restructure">https://docs.moodle.org/501/en/Upgrading#Code_directories_restructure</a> 5.1 code directories restructure documentation] for full details.
+</p><p>If you are upgrading from 5.1 to 5.2, you have already completed the above-mentioned web server configuration updates, so no further directory restructure actions are required to upgrade to 5.2.
+</p>
+<h2><span class="mw-headline" id="Routing">Routing</span></h2>
+<p>A <i>Router</i> has been included with Moodle since Moodle 4.5 and its use has increased in this release.
+</p>
+<h3><span class="mw-headline" id="Apache">Apache</span></h3>
+<p>If you have access to the Apache configuration you can use the <code>FallbackResource</code> directive as follows:
+</p>
+<div class="mw-highlight mw-highlight-lang-apacheconf mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">"/path/to/your/site"</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">FallbackResource</span><span class="w"> </span><span class="sx">/r.php</span>
+<span class="nt">&lt;/Directory&gt;</span>
+</pre></div>
+<p>If you do not have access to the Apache configuration, but your configuration allows setting the <code>FallbackResource</code> in an Override file, then you can create a <code>.htaccess</code> file in your Moodle <code>public</code> folder with the following content:
+</p>
+<div class="mw-highlight mw-highlight-lang-apacheconf mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">FallbackResource</span><span class="w"> </span><span class="sx">/r.php</span>
+</pre></div>
+<p>If your host prevents the use of the <code>FallbackResource</code> directive, you may still be able to use <code>mod_rewrite</code>. See the documentation below for OpenLiteSpeed.
+</p><p>For more information on the <code>FallbackResource</code> directive see the <a rel="nofollow" class="external text" href="https://httpd.apache.org/docs/2.4/mod/mod_dir.html#fallbackresource">Apache Documentation</a>.
+</p>
+<h3><span class="mw-headline" id="nginx">nginx</span></h3>
+<p>The nginx server does not support per-directory configuration. All configuration must be specified in the central configuration.
+</p><p>The configuration you require will depend on your overall nginx configuration and how php-fpm is integrated.
+</p>
+<div class="mw-highlight mw-highlight-lang-nginx mw-content-ltr" dir="ltr"><pre><span></span><span class="k">try_files</span><span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="nv">$uri/</span><span class="w"> </span><span class="s">/r.php</span><span class="nv">$is_args$args</span><span class="p">;</span>
+</pre></div>
+<h3><span id="OpenLiteSpeed_.28cPanel.29"></span><span class="mw-headline" id="OpenLiteSpeed_(cPanel)">OpenLiteSpeed (cPanel)</span></h3>
+<p>This configuration is also compatible with Apache.
+</p><p>The following should be placed into the <code>.htaccess</code> file of your Moodle <code>/public</code> directory.
+</p>
+<div class="mw-highlight mw-highlight-lang-apacheconf mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">RewriteEngine</span><span class="w"> </span><span class="k">On</span>
+
+<span class="c"># If we have a request which:</span>
+<span class="c"># - is not a file;</span>
+<span class="c"># - but is a directory;</span>
+<span class="c"># - and the directory contains an index.php;</span>
+<span class="c"># then redirect to the index.php in that directory.</span>
+<span class="nb">RewriteCond</span><span class="w"> </span>%{REQUEST_FILENAME}<span class="w"> </span>!-f
+<span class="nb">RewriteCond</span><span class="w"> </span>%{REQUEST_FILENAME}<span class="w"> </span>-d
+<span class="nb">RewriteCond</span><span class="w"> </span>%{REQUEST_FILENAME}/index.php<span class="w"> </span>-f
+<span class="nb">RewriteRule</span><span class="w"> </span>^(.*)$<span class="w"> </span>$1/index.php<span class="w"> </span>[L]
+
+<span class="c"># Rewrite / to /index.php</span>
+<span class="nb">RewriteRule</span><span class="w"> </span>^$<span class="w"> </span>./index.php<span class="w"> </span>[L]
+
+<span class="c"># Anything else should be redirected to the Moodle Router.</span>
+<span class="nb">RewriteCond</span><span class="w"> </span>%{REQUEST_FILENAME}<span class="w"> </span>!-f
+<span class="nb">RewriteRule</span><span class="w"> </span>^(.*)$<span class="w"> </span>r.php<span class="w"> </span>[L,QSA]
+</pre></div>
+<h2><span class="mw-headline" id="Install_the_new_Moodle_software">Install the new Moodle software</span></h2>
+<p>You can download the latest release from <a rel="nofollow" class="external text" href="https://download.moodle.org/">Moodle downloads</a>.
+</p>
+<h3><span class="mw-headline" id="Standard_install_package">Standard install package</span></h3>
+<ol><li>Move your old Moodle software program files to another location. <i>Do NOT copy new files over the old files.</i></li>
+<li>Unzip or unpack the upgrade file so that all the new Moodle software program files are in the location the old files used to be in on the server. Moodle will adjust SQL and moodledata if it needs to in the upgrade.</li>
+<li>Copy your old <a href="4851907a1dff02740b60eb6cb720320f.html" title="Configuration file">config.php file</a> back to the new Moodle directory (not the public subdirectory).</li></ol>
+<p>As mentioned above, if you had installed any plugins on your site you should add them to the new code tree (Moodle directory structure) now. It is important to check that you get the correct version for your new version of Moodle. Be particularly careful that you do not overwrite any code in the new version of Moodle and that you place the plugin folders in the correct directory (the same directory that they are in in the current installation.)
+</p><p>Your moodledata folder should be located separately to your Moodle code folder and, as such, should not need anything done to it. Moodle 3.0 will throw a warning if it is located in a web accessible folder and the moodledata should never be located in the Moodle code folder. If you are moving your installation to a new server or new location on your server, then you will need to follow the <a href="bba2bb304e41ca7fa08c3f9e2394adf1.html" title="Migration">Migration</a> documents.
+</p>
+<h4><span class="mw-headline" id="Linux">Linux</span></h4>
+<pre>mv moodle moodle.backup
+tar xvzf moodle-latest-5.2.tgz
+</pre>
+<p>Next, copy across your config.php, any custom plugins, and your .htaccess file if you created one (<b>check that custom plugins are the correct version for your new Moodle first</b>):
+</p>
+<pre>cp moodle.backup/config.php moodle
+cp -pr moodle.backup/theme/mytheme moodle/public/theme/mytheme
+cp -pr moodle.backup/mod/mymod moodle/public/mod/mymod
+</pre>
+<p>Don't forget to make moodle/config.php (and the rest of the source code) readable by your www server. For maximum security the files should not be writeable by your server. This is especially important on a 'production' server open to the public internet. 
+</p>
+<pre>chown -R root:root moodle (Linux debian - or even create a user especially for moodle. <b>Don't</b> use the web server user, e.g. www-data)
+chmod -R 755 moodle
+</pre>
+<p>If you use cron, take care that cron.php is executeable and uses the correct php command: 
+</p>
+<pre>chmod 740 admin/cli/cron.php (some configurations need chmod 750 or chmod 755)
+copy the first line from cron.php (if it looks like '#!/usr/local/bin/php' or '#!/usr/local/bin/php5.3', no need to copy '&lt;?php') 
+</pre>
+<p>if necessary. However, for a simple upgrade, there should be no need to change anything with cron.
+</p>
+<h3><span class="mw-headline" id="Using_Git">Using Git</span></h3>
+<p>You can use Git for updating or upgrading your Moodle. See <a href="14569a6d13e60324f1803b54b2ffb589.html" title="Git for Administrators">Git for Administrators</a> for details.
+</p><p><b>Important</b>
+</p><p>Any third party plugins that you have installed will still be located in their original locations above the new /public folder. These will need to be relocated into their relative path within the new /public folder structure to have them continue to work.
+</p>
+<h3><span class="mw-headline" id="Command_line_upgrade">Command line upgrade</span></h3>
+<p>On Linux servers, Moodle 5.2 supports running the <a href="bce7964965e3acccd5775fae8e58c2da.html" class="mw-redirect" title="CLI">upgrade from the command line</a>, rather than through a web browser. This is likely to be more reliable, particularly for large sites.
+</p>
+<h2><span class="mw-headline" id="Finishing_the_upgrade">Finishing the upgrade</span></h2>
+<p>The last step is to trigger the upgrade processes within Moodle. 
+</p><p>If you put your site into Maintenance mode earlier; take it out now!
+</p><p>To do this just go to <i>Site administration &gt; Notifications</i>.
+</p><p>Moodle will automatically detect the new version and perform all the SQL database or file system upgrades that are necessary. If there is anything it can't do itself (very rare) then you will see messages telling you what you need to do.
+</p><p>Assuming all goes well (no error messages) then you can start using your new version of Moodle and enjoy the new features!
+</p><p>Note: If you are running multiple servers or find some functionality missing (such as the <i>filepicker</i> not loading) then you should purge all caches manually (via <i>Site administration &gt; Development &gt; Purge all caches</i>) after completing the upgrade.
+</p>
+<h3><span class="mw-headline" id="Fatal_error:_Maximum_execution_time_of_30_seconds_exceeded...">Fatal error: Maximum execution time of 30 seconds exceeded...</span></h3>
+<p>If your server uses a main language other than English, you may encounter a 'Fatal error: Maximum execution time of 30 seconds exceeded' when you try to upgrade it. You can increase max_execution_time = 160 on php.ini to allow the scripts enough time to process the language update. Otherwise, you can switch to English as the default language before doing the upgrade and back to your original language after a successful upgrade. See the forum discussion at <a rel="nofollow" class="external free" href="https://moodle.org/mod/forum/discuss.php?d=119598">https://moodle.org/mod/forum/discuss.php?d=119598</a>.
+</p>
+<h2><span class="mw-headline" id="Possible_issues_that_may_affect_you_in_Moodle_5.2">Possible issues that may affect you in Moodle 5.2</span></h2>
+<p>See also the list of <a rel="nofollow" class="external text" href="https://tracker.moodle.org/issues/?jql=project%20%3D%20MDL%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%205.2%20AND%20labels%20%3D%20upgrade_notes">upgrade_notes-labelled issues</a> and <a rel="nofollow" class="external text" href="https://tracker.moodle.org/issues/?jql=project%20%3D%20MDL%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%205.2%20AND%20labels%20%3D%20ui_change">ui_change-labelled issues</a>.
+</p>
+<h3><span class="mw-headline" id="Upgrade_Debugging_Messages">Upgrade Debugging Messages</span></h3>
+<p>You may encounter "Deleting question which is no longer linked to a context..." debugging messages during upgrade. This requires no action. We are addressing this known debugging issue under <a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/MDL-88393">MDL-88393</a>.
+</p>
+<h3><span class="mw-headline" id="Activities_block_removal">Activities block removal</span></h3>
+<p>The Activities block has been removed. Any course or dashboard page using it will lose the block after upgrade. Check for usage before upgrading and communicate to affected sites in advance.
+</p>
+<h3><span class="mw-headline" id="Subsections_removals">Subsections removals</span></h3>
+<p>The description field on subsections is removed. A migration task converts existing descriptions to Text and media activities. Runs automatically on upgrade or manually via ad-hoc tasks.
+Only Name and Restrict access settings remain. No action needed unless workflows link directly to subsection settings pages.
+</p>
+<h3><span class="mw-headline" id="MoodleNet_deprecation">MoodleNet deprecation</span></h3>
+<p>MoodleNet integration is deprecated in 5.2 and will be removed in a future release. If a client actively uses MoodleNet sharing or profile links, begin planning for transition. 
+</p>
+<h3><span class="mw-headline" id="MimeTex_removal">MimeTex removal</span></h3>
+<p>The MimeTeX library has been removed. If a client site uses the TeX filter with MimeTeX for mathematical formula rendering, switch to MathJax - the recommended replacement, already supported in Moodle.
+</p>
+<h3><span class="mw-headline" id="Marketplace_integration">Marketplace integration</span></h3>
+<p>Moodle 5.2 introduces the initial groundwork for a Marketplace integration. No action required - signals upcoming changes to how plugins and integrations are discovered in future releases.
+</p>
+<h3><span class="mw-headline" id="New_capabilities_in_Moodle_5.2">New capabilities in Moodle 5.2</span></h3>
+<ul><li>mod/quiz:customisequestionnumbers</li></ul>
+<h2><span id="Moodle_4.3.2C_4.4.2C_4.5.2C_5.0_and_5.1_upgrading_notes"></span><span class="mw-headline" id="Moodle_4.3,_4.4,_4.5,_5.0_and_5.1_upgrading_notes">Moodle 4.3, 4.4, 4.5, 5.0 and 5.1 upgrading notes</span></h2>
+<p>Depending on which version you are upgrading from, please see the section 'Possible issues that may affect you' in the documentation:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://docs.moodle.org/403/en/Upgrading">Upgrading to Moodle 4.3</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/404/en/Upgrading">Upgrading to Moodle 4.4</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/405/en/Upgrading">Upgrading to Moodle 4.5</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/500/en/Upgrading">Upgrading to Moodle 5.0</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/500/en/Upgrading">Upgrading to Moodle 5.1</a></li></ul>
+<h2><span id="Any_questions_about_the_process.3F"></span><span class="mw-headline" id="Any_questions_about_the_process?">Any questions about the process?</span></h2>
+<p>Please post in the <a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/view.php?id=28">Installing and upgrading help forum</a> on moodle.org.
+</p>
+<ul><li>Here&rsquo;s a video from Rick, a Moodle.org &ldquo;Helpful Moodler,&rdquo; demonstrating how he upgraded Moodle 5.0 to Moodle 5.1 on his VPS. It&rsquo;s captioned in several languages.<br> <a rel="nofollow" class="external text" href="https://www.edu-gen.com/profession/presentations/Moodle_51/Moodle51.html">Upgrading Moodle 5.0 to Moodle 5.1 on a VPS</a></li>
+<li>Rick demonstrates upgrading three of his Moodle sites in under 10 minutes using the method described in the above video, "Upgrading from Moodle 5.0 to Moodle 5.1 on my VPS video. <br><a rel="nofollow" class="external text" href="https://vimeo.com/1142103782/82b30de5b1">Update 3 Moodle Sites in Under 10 Minutes</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822095337
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.027 seconds
+Real time usage: 0.044 seconds
+Preprocessor visited node count: 156/1000000
+Post&#8208;expand include size: 1276/2097152 bytes
+Template argument size: 475/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 4/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 2599/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   15.349      1 -total
+ 31.59%    4.848      1 Template:Warning
+ 17.83%    2.737      1 Template:Installing_Moodle
+ 15.76%    2.419      9 Template:Version
+ 15.29%    2.347      1 Template:Release_notes
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:1390-0!canonical and timestamp 20260822095337 and revision id 155434. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Upgrading&amp;oldid=155434">https://docs.moodle.org/502/en/index.php?title=Upgrading&amp;oldid=155434</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="7f264aa70db3768dcef1896a8ec93e70.html" title="Category:Installation">Installation</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdjaq17qc">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjaq18af"></button>
+					<div class="collapse navbar-collapse igdjaq18af" id="igdjaq18af">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Upgrading" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Upgrading" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Upgrading&amp;oldid=155434" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Upgrading&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Actualización_de_moodle" title="Actualización de moodle – español" lang="es" hreflang="es" data-title="Actualización de moodle" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Mise_à_jour" title="Mise à jour – français" lang="fr" hreflang="fr" data-title="Mise à jour" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/Moodleをアップグレードする" title="Moodleをアップグレードする – 日本語" lang="ja" hreflang="ja" data-title="Moodleをアップグレードする" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Aktualisierung_von_Moodle" title="Aktualisierung von Moodle – Deutsch" lang="de" hreflang="de" data-title="Aktualisierung von Moodle" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 21 April 2026, at 10:07.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":147,"wgPageParseReport":{"limitreport":{"cputime":"0.027","walltime":"0.044","ppvisitednodes":{"value":156,"limit":1000000},"postexpandincludesize":{"value":1276,"limit":2097152},"templateargumentsize":{"value":475,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":4,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2599,"limit":5000000},"timingprofile":["100.00%   15.349      1 -total"," 31.59%    4.848      1 Template:Warning"," 17.83%    2.737      1 Template:Installing_Moodle"," 15.76%    2.419      9 Template:Version"," 15.29%    2.347      1 Template:Release_notes"]},"cachereport":{"timestamp":"20260822095337","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

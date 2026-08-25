@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Configurable reports - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"cb2275a98f1b4235b64d6008","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Configurable_reports","wgTitle":"Configurable reports","wgCurRevisionId":150684,"wgRevisionId":150684,"wgArticleId":11889,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Plugin","Report","Contributed code"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Configurable_reports","wgRelevantArticleId":11889,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"blocks/configurable_reports/","wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgInternalRedirectTargetUrl":"/502/en/Configurable_reports","wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="../../593ae70845242c812b361a340a53fb46.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.pygments%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="../../81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="../../rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="../../bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Configurable_reports">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Configurable_reports rootpage-Configurable_reports layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjyv0he8"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdjyv0he8" id="igdjyv0he8">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="../../1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="../../46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Configurable+reports" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/blocks/configurable_reports/">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/blocks/configurable_reports/">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/blocks/configurable_reports/">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="../../6647dcbb1775b19ef30fe290bbbbda1c.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Configurable_reports" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Configurable_reports&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Configurable_reports&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Configurable reports</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"><span class="mw-redirectedfrom">(Redirected from <a href="https://docs.moodle.org/502/en/index.php?title=blocks/configurable_reports/&amp;redirect=no" class="mw-redirect" title="blocks/configurable reports/">blocks/configurable reports/</a>)</span></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock">
+<table class="infobox">
+
+<tbody><tr>
+<th><b><a class="mw-selflink selflink">Configurable reports</a></b>
+</th></tr>
+<tr>
+<td>Type
+</td>
+<td>Block
+</td></tr>
+<tr>
+<td>Set
+</td>
+<td>N/A
+</td></tr>
+<tr>
+<td>Downloads
+</td>
+<td><a rel="nofollow" class="external free" href="https://moodle.org/plugins/view.php?plugin=block_configurable_reports">https://moodle.org/plugins/view.php?plugin=block_configurable_reports</a>
+</td></tr>
+<tr>
+<td>Issues
+</td>
+<td><a rel="nofollow" class="external free" href="http://tracker.moodle.org/browse/CONTRIB/component/10753">http://tracker.moodle.org/browse/CONTRIB/component/10753</a>
+</td></tr>
+<tr>
+<td>Discussion
+</td>
+<td><a rel="nofollow" class="external free" href="https://moodle.org/mod/forum/view.php?id=7979">https://moodle.org/mod/forum/view.php?id=7979</a>
+</td></tr>
+<tr>
+<td>Maintainer(s)
+</td>
+<td><a href="https://docs.moodle.org/502/en/User:Juan_Leyva"><bdi>Juan Leyva</bdi></a>, <a href="https://docs.moodle.org/502/en/index.php?title=User:Sara_Arjona_T%C3%A9llez&amp;action=edit&amp;redlink=1" class="new"><bdi>Sara Arjona Téllez</bdi></a>
+</td></tr>
+</tbody></table>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Installation"><span class="tocnumber">1</span> <span class="toctext">Installation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Overview"><span class="tocnumber">2</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Creating_a_report"><span class="tocnumber">3</span> <span class="toctext">Creating a report</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Tutorial"><span class="tocnumber">4</span> <span class="toctext">Tutorial</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Creating_a_users'_report"><span class="tocnumber">4.1</span> <span class="toctext">Creating a users' report</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Creating_a_SQL_Report"><span class="tocnumber">4.2</span> <span class="toctext">Creating a SQL Report</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Adding_a_calculation"><span class="tocnumber">4.2.1</span> <span class="toctext">Adding a calculation</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Adding_a_Plot"><span class="tocnumber">4.2.2</span> <span class="toctext">Adding a Plot</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Filters"><span class="tocnumber">4.2.3</span> <span class="toctext">Filters</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#SQL_variables"><span class="tocnumber">4.2.4</span> <span class="toctext">SQL variables</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Creating_a_timeline_report"><span class="tocnumber">4.3</span> <span class="toctext">Creating a timeline report</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Advanced_options"><span class="tocnumber">5</span> <span class="toctext">Advanced options</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Export_and_import_of_reports"><span class="tocnumber">5.1</span> <span class="toctext">Export and import of reports</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Use_the_same_report_in_different_courses"><span class="tocnumber">5.2</span> <span class="toctext">Use the same report in different courses</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Reports_can_run_on_a_different_DB_then_the_current_(production)_DB"><span class="tocnumber">5.3</span> <span class="toctext">Reports can run on a different DB then the current (production) DB</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#DataTables_for_the_report_table"><span class="tocnumber">5.4</span> <span class="toctext">DataTables for the report table</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#CodeMirror.js_for_highlighting_SQL_query_code"><span class="tocnumber">5.5</span> <span class="toctext">CodeMirror.js for highlighting SQL query code</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Using_GITHUB_as_a_repository_to_distribute_and_manage_sharable_SQL_queries"><span class="tocnumber">5.6</span> <span class="toctext">Using GITHUB as a repository to distribute and manage sharable SQL queries</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Cron_SQL_queries"><span class="tocnumber">5.7</span> <span class="toctext">Cron SQL queries</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Settings_to_control_security_of_SQL_Queries"><span class="tocnumber">5.8</span> <span class="toctext">Settings to control security of SQL Queries</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Templates"><span class="tocnumber">5.9</span> <span class="toctext">Templates</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Embedded_reports"><span class="tocnumber">5.10</span> <span class="toctext">Embedded reports</span></a>
+<ul>
+<li class="toclevel-3 tocsection-23"><a href="#Timeline_reports"><span class="tocnumber">5.10.1</span> <span class="toctext">Timeline reports</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-24"><a href="#Reports_repository"><span class="tocnumber">6</span> <span class="toctext">Reports repository</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#Developers_documentation"><span class="tocnumber">7</span> <span class="toctext">Developers documentation</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#How_to_request_a_new_feature"><span class="tocnumber">8</span> <span class="toctext">How to request a new feature</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#Credits"><span class="tocnumber">9</span> <span class="toctext">Credits</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#Screenshots"><span class="tocnumber">10</span> <span class="toctext">Screenshots</span></a>
+<ul>
+<li class="toclevel-2 tocsection-29"><a href="#Users_report"><span class="tocnumber">10.1</span> <span class="toctext">Users report</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#SQL_report"><span class="tocnumber">10.2</span> <span class="toctext">SQL report</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-31"><a href="#See_also"><span class="tocnumber">11</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Installation">Installation</span></h2>
+<ol><li>Download the Configurable Reports installation file and unzip it to the <b>\blocks</b> directory in your Moodle folder.</li>
+<li>Be sure that the final name of the directory is: configurable_reports, the full path in your Moodle installation will be blocks/configurable_reports</li>
+<li>Login to Moodle as Administrator and click Notifications under Site Administration.</li></ol>
+<p><br>
+For more information see <a href="../../af0f49b9c544fa6087d00cec55f64553.html" class="mw-redirect" title="Installing contributed modules or plugins">Installing contributed modules or plugins</a>
+</p>
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>This block is a Moodle custom reports builder. It its also connected to a <a rel="nofollow" class="external text" href="https://github.com/jleyva/moodle-configurable_reports_repository">public repository of sample reports</a> (only plugin version 2.3 and above)
+</p><p>It is designed in a modular way to allow developers to create new plugins in less than an hour.
+</p><p><br>
+<b>Who can create custom reports?</b>
+</p><p>Anyone with block, managereports or manageownreports permissions at SITE level or COURSE level.
+</p><p><br>
+<b>What type of reports can I create?</b>
+</p><p>- Courses reports, with information regarding courses.
+</p><p>- Categories reports, with information regarding categories. A courses report can be embedded in this type of report.
+</p><p>- Users reports, with information regarding users and their activity in a course.
+</p><p>- Timeline reports, this is a special type of report that displays a timeline. A course or user report can be embedded in this timeline showing data depending on the start and end time of the current row.
+</p><p>- Custom SQL Reports, custom SQL queries. This block can use the same SQL queries as <a rel="nofollow" class="external text" href="https://moodle.org/plugins/view.php?plugin=report_customsql">Tim Hunt's Custom SQL queries</a> plugin.
+</p><p>Note for developers: You can create your own type of reports.
+</p><p><br>
+<b>Who can view the reports?</b>
+</p><p>When you create a report you can select which users can view it.
+</p><p>The reports are displayed in a block in the course or site frontpage.
+</p>
+<h2><span class="mw-headline" id="Creating_a_report">Creating a report</span></h2>
+<p>This is a very simple process.  
+</p><p>If you are going to create a report for a course, you have to add the block in the course and click in the "Manage reports" link.
+</p><p>On the other hand, for site reports, add the block in the frontpage and click in the "Manage reports" link.
+</p><p>You must enter a name, an optional description, and you have to choose the type of report, pagination and exports formats.
+</p><p>Depending on the report chosen, there will be more or less tabs. These are the tabs for the courses and users report:
+</p><p><b>Columns</b>: Here you can choose the different columns of your report depending on the type of report. (Course Name, User firstname, etc..)
+</p><p><b>Conditions</b>: Here you can define the conditions (i.e., only courses from this category, only users from Spain, etc.)
+</p><p><b>Ordering</b>: Here you can choose how to order the report using fields and directions.
+</p><p><b>Filters</b>: Here you can choose which filters will be displayed.
+</p><p><b>Template</b>: You can modify the report's layout by creating a template.
+</p><p><b>Permissions</b>: Here you can choose who can view a report.
+</p><p><b>Calculations</b>: Here you can add calculations for columns, i.e.: average of number of users enrolled in courses
+</p><p><b>Plots</b>: Here you can add graphs to your report based on the report columns and values.
+</p><p><b>View report</b>: Self explanatory
+</p>
+<h2><span class="mw-headline" id="Tutorial">Tutorial</span></h2>
+<h3><span id="Creating_a_users.27_report"></span><span class="mw-headline" id="Creating_a_users'_report">Creating a users' report</span></h3>
+<p>Requirements: <i>Users from Spain, but not from Madrid, in this course. This report can be viewed only by users from Spain. A filter based on the user's city must be displayed. A pie plot showing the users' cities is required. A calculation table showing the total forum post views is required. The report must be ordered by users' lastname.</i>
+</p><p><br>
+Let's see how easy it is!
+</p><p>First of all, install the block.
+</p><p>Go to the course where the report will be created.
+</p><p>Add an instance of the Custom Reports block.
+</p><p>Click on "Manage reports"
+</p><p>Click on "Add report"
+</p><p>Enter a name, a description and choose "Users report" as Type of Report
+</p><p>The report will be saved and you will be redirected to the first Tab named "Columns".
+</p><p><br>
+<b>Adding Columns</b>
+</p><p>Here you can define the report table properties, width, align, cell padding, cell spacing, etc.
+</p><p>Add a Column called "User profile field"
+</p><p>Choose the field "firstname" and enter a name for the column in the text field. You can leave the rest of elements blank.
+</p><p>Repeat the process above for the lastname and city fields.
+</p><p>Add a Column called "User module actions".
+</p><p>Choose a module from the list, in this example, a forum.
+</p><p><br> 
+<b>Adding Conditions</b>
+</p><p>Click on the Conditions Tab.
+</p><p>Add a Condition named "User field Condition".
+</p><p>Choose the column "Country", the Operator "=", and enter the value "ES" (this is the international code for Spain as Moodle stores it).
+</p><p>Add a Condition named "User field Condition".
+</p><p>Choose the column "city", the Operator "&lt;&gt;", and enter the value "Madrid".
+</p><p>Add a Condition named "Users in current report course".
+</p><p>These are the main conditions of the reports. Note that at the bottom there is a text box called condition, with this text:
+</p>
+<pre>"c2 and c1 and c3"
+</pre>
+<p>Here you can define a logic condition, in this case, we don't need to edit this condition but you can create complex expressions like:
+</p>
+<pre>(c1 and c2) or (c4 and c3)
+</pre>
+<p><br>
+<b>Adding Ordering</b>
+</p><p>Click on the Ordering Tab.
+</p><p>Add an ordering named "User field ordering".
+</p><p>Choose the column "Lastname" and the ordering "ASC" (Ascending).
+</p><p><br>
+<b>Adding Filters</b>
+</p><p>Click on the Filters Tab.
+</p><p>Add a filter named "User field filter".
+</p><p>Choose city.
+</p><p><br>
+<b>Adding Permissions</b>
+</p><p>Click on the Permissions Tab.
+</p><p>Choose "User field Value".
+</p><p>Choose the column "Country", and enter the value "ES".
+</p><p>Here you can add more permissions and a logic condition to be achieved.
+</p><p><br>
+<b>Adding Calculations</b>
+</p><p>Click on the Calculations tab.
+</p><p>Choose Sum.
+</p><p>Choose the column "User module actions".
+</p><p><br>
+<b>Adding Plots</b>
+</p><p>Click on the Plots tab.
+</p><p>Choose "Pie".
+</p><p>Choose the column "City" as Name and Value.
+</p><p><br>
+Finally, add a few users in Moodle with the country Spain, and different cities, Madrid, Barcelona, Seville, etc. and test the report.
+</p><p>You can download the report in different formats (ods and xls), remember to check these options in the report page.
+</p><p><a href="4b1c740f8ce1b9f8a666e2ce532199b2.html#Users_report" class="mw-redirect" title="blocks/configurable reports/">See screenshot</a>
+</p>
+<h3><span class="mw-headline" id="Creating_a_SQL_Report">Creating a SQL Report</span></h3>
+<p>You can find a lot of SQL Reports here: <a href="../../4682100b49330df4d2421daa6667f344.html" title="ad-hoc contributed reports">ad-hoc contributed reports</a>
+</p><p>Since this block supports Tim Hunt's CustomSQL Queries Reports, you can use any query.
+</p><p>Remember to add a "Time filter" if you are going to use reports with time tokens.
+</p><p><br>
+First of all, install the block.
+</p><p>Go to the course where the report will be created.
+</p><p>Add an instance of the Custom Reports block.
+</p><p>Click on "Manage reports".
+</p><p>Click on "Add report
+</p><p>Enter a name, description, choose "SQL" as Type of Report
+</p><p>The report will be saved and you redirect to the first Tab named "Custom SQL"
+</p><p>Add this query (<i>Courses activity</i>):
+</p>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="n">hits</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">course</span><span class="w"> </span><span class="n">courseId</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">fullname</span><span class="w"> </span><span class="n">coursename</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">prefix_log</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_course</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">course</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">courseId</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">hits</span><span class="w"> </span><span class="k">DESC</span>
+</pre></div>
+<h4><span class="mw-headline" id="Adding_a_calculation">Adding a calculation</span></h4>
+<ol><li>Go to Calculations Tab</li>
+<li>Add a Sum calculation, choose the hits column</li></ol>
+<h4><span class="mw-headline" id="Adding_a_Plot">Adding a Plot</span></h4>
+<ol><li>Go to Plot</li>
+<li>Add a Pie graph, choosing coursename as Name and hits as value</li></ol>
+<p>So, here you have a report with a Graph and calculations based on a SQL Query.
+</p><p>Note: Bar charts are currently not displaying on systems using PHP 7: <a rel="nofollow" class="external free" href="https://github.com/jleyva/moodle-block_configurablereports/issues/101">https://github.com/jleyva/moodle-block_configurablereports/issues/101</a>
+</p>
+<h4><span class="mw-headline" id="Filters">Filters</span></h4>
+<p>Filters add a control to the report that allows the user to select a subset of data when the report runs.  Filters require two steps:
+</p>
+<ol><li>Select the filter you want to use on the "Filters" tab</li>
+<li>Add SQL code to make the filter affect the output.</li></ol>
+<p>These are the filters that can be used to constrain your report:
+</p>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="o">%%</span><span class="n">FILTER_CATEGORIES</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_COURSEMODULEID</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_COURSEMODULEFIELDS</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_COURSEMODULE</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_COURSES</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_COURSEENROLLEDSTUDENTS</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_USERS</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_ROLE</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_SEARCHTEXT</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_SEMESTER</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_STARTTIME</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_ENDTIME</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_SUBCATEGORIES</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_COURSEUSER</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_SYSTEMUSER</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_YEARHEBREW</span><span class="p">:</span>
+<span class="o">%%</span><span class="n">FILTER_YEARNUMERIC</span><span class="p">:</span>
+</pre></div>
+<p><b>Using Filters</b>
+</p><p>When using a filter you need at least one static WHERE condition, followed by one or more filters. For example
+</p>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">WHERE</span><span class="w"> </span><span class="mi">1</span>
+<span class="o">%%</span><span class="n">FILTER_COURSES</span><span class="p">:</span><span class="k">c</span><span class="p">.</span><span class="n">id</span><span class="o">%%</span>
+</pre></div>
+<p>You can technically add multiple filters, but once a user applies one filter to a report all filters for report are applied. So it can be a little tricky to have multiple filters on the same report. For example, if you add a course and date filter to a report, then if you just want to filter by course you have to make sure your date filters are set to date range that covers all courses.
+</p><p>Many of the filters are hard coded to be drop down menus which are sorted by database id number instead of alphabetically. This can be problematic if you have a large number of users, courses, or categories. However, you can use one search text filter per report, which can be used to work around the issue in some cases.
+</p><p>Many filters require a logical operator to specify how the filter works. For example
+</p>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="o">%%</span><span class="n">FILTER_STARTTIME</span><span class="p">:</span><span class="n">l</span><span class="p">.</span><span class="k">TIME</span><span class="p">:</span><span class="o">&gt;%%</span><span class="w"> </span><span class="o">%%</span><span class="n">FILTER_ENDTIME</span><span class="p">:</span><span class="n">l</span><span class="p">.</span><span class="k">TIME</span><span class="p">:</span><span class="o">&lt;%%</span>
+</pre></div>
+<p>You can add a Course filter; it's very easy.
+</p>
+<ol><li>Go to filters, choose Courses</li>
+<li>Edit the Custom SQL query:</li></ol>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="n">hits</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">course</span><span class="w"> </span><span class="n">courseId</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">fullname</span><span class="w"> </span><span class="n">coursename</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">prefix_log</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_course</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">course</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id</span><span class="w"> </span>
+<span class="o">%%</span><span class="n">FILTER_COURSES</span><span class="p">:</span><span class="n">l</span><span class="p">.</span><span class="n">course</span><span class="o">%%</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">courseId</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">hits</span><span class="w"> </span><span class="k">DESC</span>
+</pre></div>
+<p>Note that we are adding a token called:&nbsp;%%FILTER_COURSES:l.courseid%% 
+</p><p>Go to View report, and you will see a Courses Filter, choose a Course and click on Add, here you have a report filtered.
+</p><p><br>
+You can also add a Starttime and endtime filter
+</p>
+<ol><li>Go to filters, choose Start / End date filter</li>
+<li>Go to Custom SQL tab, this is the new query:</li></ol>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="n">hits</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">course</span><span class="w"> </span><span class="n">courseId</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">fullname</span><span class="w"> </span><span class="n">coursename</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">prefix_log</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_course</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">course</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id</span><span class="w"> </span>
+<span class="o">%%</span><span class="n">FILTER_COURSES</span><span class="p">:</span><span class="n">l</span><span class="p">.</span><span class="n">course</span><span class="o">%%</span><span class="w"> </span>
+<span class="o">%%</span><span class="n">FILTER_STARTTIME</span><span class="p">:</span><span class="n">l</span><span class="p">.</span><span class="k">time</span><span class="p">:</span><span class="o">&gt;%%</span><span class="w"> </span><span class="o">%%</span><span class="n">FILTER_ENDTIME</span><span class="p">:</span><span class="n">l</span><span class="p">.</span><span class="k">time</span><span class="p">:</span><span class="o">&lt;%%</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">courseId</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">hits</span><span class="w"> </span><span class="k">DESC</span>
+</pre></div>
+<p><br>
+If you want to filter text (for example, lastname)
+</p>
+<ol><li>Go to filters, choose Search Text filter</li>
+<li>Go to Custom SQL tab and type your query. Here is an example for querying the user table:</li></ol>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">firstname</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">lastname</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">prefix_user</span><span class="w"> </span><span class="n">u</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="mi">1</span><span class="o">=</span><span class="mi">1</span>
+<span class="o">%%</span><span class="n">FILTER_SEARCHTEXT</span><span class="p">:</span><span class="n">u</span><span class="p">.</span><span class="n">lastname</span><span class="p">:</span><span class="o">~%%</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">lastname</span>
+</pre></div>
+<p>Replace WHERE 1=1 with your WHERE criteria. If you do not have any where criteria and do not specify WHERE 1=1, you will receive a SQL error.
+</p><p>One more example (for filtering a group of courses by category)
+</p>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="n">hits</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">fullname</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Course</span><span class="p">,</span><span class="k">c</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">CourseID</span>
+<span class="p">,(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">Count</span><span class="p">(</span><span class="w"> </span><span class="n">ra</span><span class="p">.</span><span class="n">userid</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Users</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">prefix_role_assignments</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ra</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_context</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ctx</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">ra</span><span class="p">.</span><span class="n">contextid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ctx</span><span class="p">.</span><span class="n">id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">ra</span><span class="p">.</span><span class="n">roleid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">ctx</span><span class="p">.</span><span class="n">instanceid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Students</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">prefix_log</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">prefix_course</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">course</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">id</span>
+<span class="o">%%</span><span class="n">FILTER_CATEGORIES</span><span class="p">:</span><span class="k">c</span><span class="p">.</span><span class="n">category</span><span class="o">%%</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">course</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">hits</span><span class="w"> </span><span class="k">DESC</span>
+</pre></div>
+<p>Go to View report, now you can filter by time also.
+</p><p><br>
+<b>Filter Issue</b>
+</p><p><a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/CONTRIB-4414">CONTRIB-4414</a> describes an issue where if you use the date filtering function and specify the end date as, for example: 6/11/13, Configurable Reports only searches for end dates up until 6/11/13 12:00 AM. The afternoon data for 6/11/13 is not included, so data for 6/11/13 2:30 PM will be excluded.
+</p><p>The workaround to include the entire end date for the full 24 hour period is to change:
+</p>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="o">%%</span><span class="n">FILTER_ENDTIME</span><span class="p">:</span><span class="k">table</span><span class="p">.</span><span class="n">field</span><span class="p">:</span><span class="o">&lt;%%</span>
+</pre></div>
+<p>to:
+</p>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="o">%%</span><span class="n">FILTER_ENDTIME</span><span class="p">:</span><span class="k">table</span><span class="p">.</span><span class="n">field</span><span class="o">-</span><span class="mi">86399</span><span class="p">:</span><span class="o">&lt;%%</span>
+</pre></div>
+<h4><span class="mw-headline" id="SQL_variables">SQL variables</span></h4>
+<p>If you place one of these strings in your SQL queries, it will be replaced by the appropriate value (current course id, current user id, Moodle www root (url), etc.)
+</p>
+<div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="o">%%</span><span class="n">CATEGORYID</span><span class="o">%%</span>
+<span class="o">%%</span><span class="n">COURSEID</span><span class="o">%%</span>
+<span class="o">%%</span><span class="n">CURRENTUSER</span><span class="o">%%</span>
+<span class="o">%%</span><span class="n">DEBUG</span><span class="o">%%</span>
+<span class="o">%%</span><span class="n">FILTER_VAR</span><span class="o">%%</span>
+<span class="o">%%</span><span class="n">STARTTIME</span><span class="o">%%</span><span class="s1">','</span><span class="o">%%</span><span class="n">ENDTIME</span><span class="o">%%</span>
+<span class="o">%%</span><span class="n">USERID</span><span class="o">%%</span>
+<span class="o">%%</span><span class="n">WWWROOT</span><span class="o">%%</span>
+</pre></div>
+<p>For an example of how to use the&nbsp;%%FILTER_VAR%% to pass a variable into a report as a parameter in the report URL, see <a rel="nofollow" class="external text" href="../../4682100b49330df4d2421daa6667f344.html#List_all_the_Posts_in_all_Discussions_of_a_single_Forum">this query</a> as an example.]
+</p><p><a href="4b1c740f8ce1b9f8a666e2ce532199b2.html#SQL_report" class="mw-redirect" title="blocks/configurable reports/">See screenshot</a>
+</p>
+<h3><span class="mw-headline" id="Creating_a_timeline_report">Creating a timeline report</span></h3>
+<p><i>This report assumes that you have created at least one user or course report</i>
+</p><p>Timeline reports are a special type of reports. A timeline report displays a timeline in which a course report or user report can be embedded.
+</p><p>In this example we are going to create a report showing the user logins to the site during the last month (day per day).
+</p><p>Create a User report (see tutorial above) with three columns (firstname, lastname and user statistics)
+</p><p>Select the statistic (User logins)
+</p><p>Create a Timeline report, in the Timeline tab you can select the dates or days of the report (in this case, the last 30 days) and the interval of time for every row.
+</p><p>Add three "Other report column" columns, selecting all the previous user report columns.
+</p><p>And that's all, you can create a new type of plot (line graph). This graph is suitable for data depending on time.
+</p>
+<h2><span class="mw-headline" id="Advanced_options">Advanced options</span></h2>
+<h3><span class="mw-headline" id="Export_and_import_of_reports">Export and import of reports</span></h3>
+<p>Embedded reports exporting is not working because the reports include references to another reports. A workaround is edit the imported report for changing the references in the "Other report field" column.
+</p><p>Reports that uses the user module outline column can't be exported either
+</p>
+<h3><span class="mw-headline" id="Use_the_same_report_in_different_courses">Use the same report in different courses</span></h3>
+<p>(Available only in Configurable Report version 2.3 and above)
+</p><p>In order to use the same report in different courses you have to check the "Global report" option where creating a new report. This report will be then displayed in all the courses where the configurable report block is displayed and the block instance settings are set to "Display global reports".
+</p><p>If you don't want to display global reports in a certain block instance you can always edit the instance settings for selecting "No" in the "Display global reports" block setting.
+</p><p>Notice that these types of reports inherit the context of the course where is displayed, so any condition related to course inside the report is calculated using the course where the report is being viewed
+</p>
+<h3><span id="Reports_can_run_on_a_different_DB_then_the_current_.28production.29_DB"></span><span class="mw-headline" id="Reports_can_run_on_a_different_DB_then_the_current_(production)_DB">Reports can run on a different DB then the current (production) DB</span></h3>
+<p>(Available only in Configurable Report version 2.3 and above)
+</p><p>This functionality is for using a copy of the same moodle database, not for queries to other database sources.
+</p><p>Go to Admin -&gt; Plugins -&gt; Blocks -&gt; Configurable Report settings
+</p>
+<h3><span class="mw-headline" id="DataTables_for_the_report_table">DataTables for the report table</span></h3>
+<p>(Available only in Configurable Report version 2.3 and above)
+</p><p>Go to Admin -&gt; Plugins -&gt; Blocks -&gt; Configurable Report settings to enable this functionality
+</p>
+<h3><span class="mw-headline" id="CodeMirror.js_for_highlighting_SQL_query_code">CodeMirror.js for highlighting SQL query code</span></h3>
+<p>(Available only in Configurable Report version 2.3 and above)
+</p><p>Go to Admin -&gt; Plugins -&gt; Blocks -&gt; Configurable Report settings to disable this functionality
+</p>
+<h3><span class="mw-headline" id="Using_GITHUB_as_a_repository_to_distribute_and_manage_sharable_SQL_queries">Using GITHUB as a repository to distribute and manage sharable SQL queries</span></h3>
+<p>(Available only in Configurable Report version 2.3 and above)
+</p><p>Go to Admin -&gt; Plugins -&gt; Blocks -&gt; Configurable Report settings to point to your own repository
+</p>
+<h3><span class="mw-headline" id="Cron_SQL_queries">Cron SQL queries</span></h3>
+<p>(Available only in Configurable Report version 2.3 and above)
+</p>
+<h3><span class="mw-headline" id="Settings_to_control_security_of_SQL_Queries">Settings to control security of SQL Queries</span></h3>
+<p>(Available only in Configurable Report version 2.3 and above)
+</p><p>Go to Admin -&gt; Plugins -&gt; Blocks -&gt; Configurable Report settings to change the security level
+</p>
+<h3><span class="mw-headline" id="Templates">Templates</span></h3>
+<p>You can customize the report output using a template.
+</p><p>Just enable the Template option in the same name tab.
+</p><p>This is an example html code for displaying a list of users:
+</p><p>Header:
+</p>
+<div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>##reportname##<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">table</span> <span class="na">width</span><span class="o">=</span><span class="s">"60%"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+</pre></div>
+<p>Record:
+</p>
+<div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">table</span> <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"http://yourmoodle.com/user/pix.php/[[id]]/f1.jpg"</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>[[Firstname]] [[Lastname]]<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+City: [[City]]
+<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</pre></div>
+<p>Footer:
+</p>
+<div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">td</span> <span class="na">valign</span><span class="o">=</span><span class="s">"top"</span><span class="p">&gt;</span>
+##graphs## 
+<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+##exportoptions##
+<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</pre></div>
+<h3><span class="mw-headline" id="Embedded_reports">Embedded reports</span></h3>
+<p>An embedded report consists in a report's set of columns that are embedded in another report.
+</p><p>You can embed a user report into a course report, in this case, the resulting rows will be expanded duplicating each row for each user.
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Type of report
+</th>
+<th>Reports that can be embedded
+</th></tr>
+<tr>
+<td>Courses
+</td>
+<td>Users
+</td></tr>
+<tr>
+<td>Categories
+</td>
+<td>Courses
+</td></tr>
+<tr>
+<td>Timeline
+</td>
+<td>Users, courses
+</td></tr></tbody></table>
+<p>Imagine you have a courses report, you can embed a user report, every row of the course report will be cloned for each user.
+</p><p>To embed a report just add a "Other report" column, a list of your reports will be shown.
+</p><p>Inside a course report you can embed a user report and the other way.
+</p>
+<h4><span class="mw-headline" id="Timeline_reports">Timeline reports</span></h4>
+<p>Timeline reports are a special type of reports. A timeline report displays a timeline in which a courses report or users report can be embedded.
+</p><p>Timeline reports should be used when your user or course report includes statistics (course stats or user stats columns). I.e: you can create a report showing the number of user logins to the site during a week or month.
+</p>
+<h2><span class="mw-headline" id="Reports_repository">Reports repository</span></h2>
+<p>Configurable Reports is connected to two different repositories:
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://github.com/jleyva/moodle-configurable_reports_repository">https://github.com/jleyva/moodle-configurable_reports_repository</a> A repository of any type of reports (users, courses, sql, etc...)</li>
+<li><a rel="nofollow" class="external free" href="https://github.com/jleyva/moodle-custom_sql_report_queries">https://github.com/jleyva/moodle-custom_sql_report_queries</a> A repository of just SQL queries to be used in the SQL repor type</li></ul>
+<p>You can use your custom repository following this instructions:
+</p>
+<ul><li>First, you need a GitHub account (free)</li></ul>
+<ul><li>Fork any of the previous repositorys, using the GITHUB fork tool</li></ul>
+<ul><li>Using GIT, clone the repository to your computer in order to add your custom reports (some GIT knowledge is needed)</li></ul>
+<ul><li>Go to Administration / Plugins / Blocks / Configurable reports and change the settings for pointing to your repository (GitHub account + / + repository name</li></ul>
+<ul><li>If you want to contribute to the official repository, use the Pull request GitHub feature (So I can easily add your reports)</li></ul>
+<p><br>
+</p>
+<h2><span class="mw-headline" id="Developers_documentation">Developers documentation</span></h2>
+<p>It's very easy to create new report types, components and plugins.
+</p><p><b>Report</b>: A report plugin is a folder located at /report. 
+This folder contains a .class.php file with the child - class of the report_base.
+</p><p>You only need to modify a few methods to add a new report type.
+Please, take a look at any of the current reports. The SQL report is an example of a non-typical report, 
+meanwhile the users and courses reports are standard reports.
+</p><p>The best way to create a report is to duplicate an existing one.
+</p><p><br>
+<b>Component</b>: A component is part of a report, a component may be used by more than one report.
+The main Component is the component Columns, that is used to add the columns of a report.
+</p><p>Others components are filters, permissions, plot, calculations..
+</p><p>The best way to create a component is to duplicate an existing one.
+</p><p><br>
+<b>Plugin</b>: A plugin is a component module. The component column has a few of plugins (coursefield, userfield, etc.)
+A plugin usually works for a unique report, but there are plugins that work for more than one report.
+The best way to create a plugin is to duplicate an existing one.
+</p>
+<h2><span class="mw-headline" id="How_to_request_a_new_feature">How to request a new feature</span></h2>
+<ul><li>Go to the Plugin Tracker <a rel="nofollow" class="external free" href="http://tracker.moodle.org/browse/CONTRIB/component/10753">http://tracker.moodle.org/browse/CONTRIB/component/10753</a></li>
+<li>Check in the open issues if your feature have been already requested <a rel="nofollow" class="external free" href="http://tracker.moodle.org/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=project+%3D+CONTRIB+AND+component+%3D+%22Block%3A+Configurable+report%22+AND+status+%3D+Open+ORDER+BY+priority+DESC&amp;mode=hide">http://tracker.moodle.org/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=project+%3D+CONTRIB+AND+component+%3D+%22Block%3A+Configurable+report%22+AND+status+%3D+Open+ORDER+BY+priority+DESC&amp;mode=hide</a></li>
+<li>If not, create a New issue (Component: Non-core contributed modules Issue type: New feature) (You have to register yourself in the tracker)</li>
+<li>Select the component Block: Configurable Reports and your Moodle version</li>
+<li>Explain in the Description field your needs</li>
+<li>If you have funding, you can contact me using the forum or the moodle internal messaging system, since I work for a Moodle Partner I can work on your request.</li>
+<li>Vote and Watch the issue you have created</li></ul>
+<h2><span class="mw-headline" id="Credits">Credits</span></h2>
+<p>Juan Leyva <a rel="nofollow" class="external text" href="http://moodle.org/user/view.php?id=49568&amp;course=1">Moodle profile</a>
+</p><p><a rel="nofollow" class="external text" href="https://twitter.com/jleyvadelgado">Follow me in Twitter</a>
+</p>
+<h2><span class="mw-headline" id="Screenshots">Screenshots</span></h2>
+<h3><span class="mw-headline" id="Users_report">Users report</span></h3>
+<p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:block_custom_reports_sample_user_report.png" class="mw-file-description"><img src="../../images_en/thumb/4/4c/block_custom_reports_sample_user_report.png/98e0161ccbe211161f0d16a8ccfe9031.png" decoding="async" width="600" height="765" class="mw-file-element" srcset="/502/en/images_en/4/4c/block_custom_reports_sample_user_report.png 1.5x" data-file-width="787" data-file-height="1004"></a></span>
+</p><p><br>
+</p>
+<h3><span class="mw-headline" id="SQL_report">SQL report</span></h3>
+<p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:block_custom_reports_sample_sql_report.png" class="mw-file-description"><img src="../../images_en/thumb/1/1c/block_custom_reports_sample_sql_report.png/4a76d1fbbe9c771f15c61c95cdf6b1be.png" decoding="async" width="600" height="737" class="mw-file-element" srcset="/502/en/images_en/1/1c/block_custom_reports_sample_sql_report.png 1.5x" data-file-width="787" data-file-height="967"></a></span>
+</p><p><br>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/CONTRIB-2386">CONTRIB-2386</a></li>
+<li><a rel="nofollow" class="external text" href="https://tracker.moodle.org/issues/?jql=project%20%3D%20CONTRIB%20AND%20component%20%3D%20%22Block%3A%20Configurable%20report%22">Block: Configurable reports</a> Tracker component</li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/plugins/view.php?plugin=block_configurable_reports">Modules &amp; Plugins</a> database entry</li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=159820">Help forum</a></li>
+<li><a href="../../4682100b49330df4d2421daa6667f344.html" title="ad-hoc contributed reports">contributed reports</a> (in plain SQL)</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/jleyva/moodle-configurable_reports_repository">Configurable Reports Repository on GitHub</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=lF6CuY2Qiw0">Configurable Reports as a Learning Analytics Tool</a> - iMoot 2015 presentation by Elizabeth Dalton</li>
+<li><a rel="nofollow" class="external text" href="http://opensourceelearning.blogspot.co.za/2015/08/moodle-configurable-reports-plugin-all.html">All Variables and Filters</a> - Lists the Variables and Filters you can use in a report</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260823020853
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.072 seconds
+Real time usage: 0.194 seconds
+Preprocessor visited node count: 191/1000000
+Post&#8208;expand include size: 489/2097152 bytes
+Template argument size: 255/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 14/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 18464/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.554      1 Template:Infobox_plugin
+100.00%    5.554      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:11889-0!canonical and timestamp 20260823020853 and revision id 150684. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Configurable_reports&amp;oldid=150684">https://docs.moodle.org/502/en/index.php?title=Configurable_reports&amp;oldid=150684</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="../../25a190cf836432207b62ebb9ebca358b.html" title="Category:Plugin">Plugin</a></li><li><a href="../../ba84a4262efe7097f3c1de132b179fea.html" title="Category:Report">Report</a></li><li><a href="../../27cec39c9633dd48770872338440a43c.html" title="Category:Contributed code">Contributed code</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdjyv0lpp">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjyv0mlo"></button>
+					<div class="collapse navbar-collapse igdjyv0mlo" id="igdjyv0mlo">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Configurable_reports" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Configurable_reports" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Configurable_reports&amp;oldid=150684" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Configurable_reports&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/blocks/configurable_reports/" title="blocks/configurable reports/ – español" lang="es" hreflang="es" data-title="blocks/configurable reports/" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 27 December 2024, at 15:17.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="../../2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="../../9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="../../820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="../../resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":257,"wgPageParseReport":{"limitreport":{"cputime":"0.072","walltime":"0.194","ppvisitednodes":{"value":191,"limit":1000000},"postexpandincludesize":{"value":489,"limit":2097152},"templateargumentsize":{"value":255,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":14,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":18464,"limit":5000000},"timingprofile":["100.00%    5.554      1 Template:Infobox_plugin","100.00%    5.554      1 -total"]},"cachereport":{"timestamp":"20260823020853","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

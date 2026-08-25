@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Regular Expression Short-Answer question type - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"994c71bd22108139ee8401e2","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Regular_Expression_Short-Answer_question_type","wgTitle":"Regular Expression Short-Answer question type","wgCurRevisionId":150652,"wgRevisionId":150652,"wgArticleId":12581,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Plugin","Questions","Quiz","Contributed code"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Regular_Expression_Short-Answer_question_type","wgRelevantArticleId":12581,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Regular_Expression_Short-Answer_question_type">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Regular_Expression_Short-Answer_question_type rootpage-Regular_Expression_Short-Answer_question_type layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdikl5q76"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdikl5q76" id="igdikl5q76">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Regular+Expression+Short-Answer+question+type" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Regular_Expression_Short-Answer_question_type">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Regular_Expression_Short-Answer_question_type">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Regular_Expression_Short-Answer_question_type">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="03ab7dc5f9151a1023b3af2321d1d100.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Regular_Expression_Short-Answer_question_type&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Regular_Expression_Short-Answer_question_type&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Regular_Expression_Short-Answer_question_type&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Regular Expression Short-Answer question type</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="c93eb5dfaca94ad219ccb0d560e9af0f.html" title="Managing a Moodle course">Managing a Moodle course</a> ► <a href="2514c91263e87d7282c50071639f9e56.html" title="Questions">Questions</a> ► <a class="mw-selflink selflink">Regular Expression Short-Answer question type</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock">
+<table class="infobox">
+
+<tbody><tr>
+<th><b><a class="mw-selflink selflink">Regular Expression Short-Answer question type</a></b>
+</th></tr>
+<tr>
+<td>Type
+</td>
+<td>question type
+</td></tr>
+<tr>
+<td>Set
+</td>
+<td>N/A
+</td></tr>
+<tr>
+<td>Downloads
+</td>
+<td><a rel="nofollow" class="external free" href="https://moodle.org/plugins/pluginversions.php?plugin=qtype_regexp">https://moodle.org/plugins/pluginversions.php?plugin=qtype_regexp</a>
+</td></tr>
+<tr>
+<td>Issues
+</td>
+<td><a rel="nofollow" class="external free" href="https://github.com/rezeau/moodle-qtype_regexp/issues">https://github.com/rezeau/moodle-qtype_regexp/issues</a>
+</td></tr>
+<tr>
+<td>Discussion
+</td>
+<td><a rel="nofollow" class="external free" href="https://moodle.org/plugins/qtype_regexp">https://moodle.org/plugins/qtype_regexp</a>
+</td></tr>
+<tr>
+<td>Maintainer(s)
+</td>
+<td><a href="https://docs.moodle.org/502/en/User:Joseph_Rézeau"><bdi>Joseph Rézeau</bdi></a>
+</td></tr>
+</tbody></table>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+<div class="sideblock right" style="width: 14em;">
+<div class="header"><a href="2514c91263e87d7282c50071639f9e56.html" title="Questions">Questions</a></div>
+<div class="content">
+<ul><li><a href="2ad49a6bf604744e78a3317fd79adbf0.html" title="Managing questions">Managing questions</a></li>
+<li><a href="07a33c8695b685716f7565ee61a42d09.html" title="Question behaviours">Question behaviours</a></li>
+<li><a href="218f6e962cbbd695ced5b6ae8ea5e107.html" title="Question permissions">Question permissions</a></li>
+<li><a href="82ccaef2c1cb7bc63d94e579b68992e8.html" title="Question types">Question types</a>
+<ul><li><a href="dd471b85b2261f556a21d13accd99d5f.html" title="Calculated question type">Calculated</a></li>
+<li><a href="3af3270f5044df9955eac490bac0ba9f.html" title="Simple calculated question type">Simple Calculated</a></li>
+<li><a href="3ef6e637e4a3424c54f7630eec97e1eb.html" title="Drag and drop into text question type">Drag and drop into text</a></li>
+<li><a href="1a480076539e8ea6bd112abef984cccb.html" title="Drag and drop markers question type">Drag and drop markers</a></li>
+<li><a href="cf5d9f774b77e320d16efca3bed9d926.html" title="Drag and drop onto image question type">Drag and drop onto image</a></li>
+<li><a href="f9897f0a52a0f3000a6e1b0c28c97b7f.html" title="Calculated multichoice question type">Calculated Multichoice</a></li>
+<li><a href="713c2fe2c9e7247214aa8139f1ac1cee.html" title="Description question type">Description</a></li>
+<li><a href="848e78fade33afd509531ce7ede3533d.html" title="Essay question type">Essay</a></li>
+<li><a href="f162a2dc36882b21bbc33829ed9d09db.html" title="Matching question type">Matching</a></li>
+<li><a href="20c809b452b796a2857751e93c6cdffe.html" title="Embedded Answers (Cloze) question type">Embedded Answers (Cloze)</a></li>
+<li><a href="05eea892053618068c856e4a4e141d32.html" title="Multiple Choice question type">Multiple Choice</a></li>
+<li><a href="88cb4942c4a53c3dfb6b4dbe279755c7.html" title="Ordering question type">Ordering</a></li>
+<li><a href="d28c9434665e4ab111226ec2be1f57f6.html" title="Random Short-Answer Matching question type">Random Short Answer Matching</a></li>
+<li><a href="dccbdde6abcd955034b30d161c91d2e8.html" title="Select missing words question type">Select missing words</a></li>
+<li><a href="6b8353b14b5e37916adc08a037921cdd.html" title="Short-Answer question type">Short-Answer</a></li>
+<li><a href="fd84d04ee865a67b1200ba0c3e5df5c6.html" title="Numerical question type">Numerical</a></li>
+<li><a href="True/98eff4e636da25839fcf6e23cb2c282c.html" title="True/False question type">True/False</a></li>
+<li><a href="be698c4638201555d4fefcb1e9e6aabd.html" title="Third-party question types">Third-party question types</a></li></ul></li>
+<li><a href="d7e9dae51d527c2b360b6665369ab71f.html" title="Questions FAQ">Questions FAQ</a></li></ul>
+</div>
+</div>
+<p><br>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#The_RegExp_Short_Answer_Question"><span class="tocnumber">1</span> <span class="toctext">The RegExp Short Answer Question</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Correct_answer_matching_a_regular_expression_pattern"><span class="tocnumber">2</span> <span class="toctext">Correct answer matching a regular expression pattern</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Example_1."><span class="tocnumber">2.1</span> <span class="toctext">Example 1.</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Example_2."><span class="tocnumber">2.2</span> <span class="toctext">Example 2.</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Example_3."><span class="tocnumber">2.3</span> <span class="toctext">Example 3.</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Example_4."><span class="tocnumber">2.4</span> <span class="toctext">Example 4.</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Example_5."><span class="tocnumber">2.5</span> <span class="toctext">Example 5.</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Escaping_metacharacters"><span class="tocnumber">3</span> <span class="toctext">Escaping metacharacters</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Definition"><span class="tocnumber">3.1</span> <span class="toctext">Definition</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#In_Accepted_Answers"><span class="tocnumber">3.2</span> <span class="toctext">In Accepted Answers</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#In_Incorrect_Answers"><span class="tocnumber">3.3</span> <span class="toctext">In Incorrect Answers</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Answers_Validation"><span class="tocnumber">3.4</span> <span class="toctext">Answers Validation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Detecting_missing_required_words_or_character_strings"><span class="tocnumber">4</span> <span class="toctext">Detecting missing required words or character strings</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Editing_a_regular_expression_question"><span class="tocnumber">5</span> <span class="toctext">Editing a regular expression question</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Help_Button_Mode"><span class="tocnumber">5.1</span> <span class="toctext">Help Button Mode</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Show_alternate_answers_to_student"><span class="tocnumber">5.2</span> <span class="toctext">Show alternate answers to student</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#First_correct_answer"><span class="tocnumber">5.3</span> <span class="toctext"><span>First correct answer</span></span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Other_answers"><span class="tocnumber">5.4</span> <span class="toctext">Other answers</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Show/Hide_alternate_answers"><span class="tocnumber">5.5</span> <span class="toctext">Show/Hide alternate answers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#Automatic_formatted_extra_feedback"><span class="tocnumber">6</span> <span class="toctext">Automatic formatted extra feedback</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Feedback_given_by_the_Help_button"><span class="tocnumber">7</span> <span class="toctext">Feedback given by the Help button</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Display_right_answers"><span class="tocnumber">8</span> <span class="toctext">Display right answers</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#In_the_Mobile_App"><span class="tocnumber">9</span> <span class="toctext">In the Mobile App</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Inserting_RegExp_sub-questions_in_Cloze_type_questions"><span class="tocnumber">10</span> <span class="toctext">Inserting RegExp sub-questions in Cloze type questions</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#See_also"><span class="tocnumber">11</span> <span class="toctext">See also</span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="#Downloads"><span class="tocnumber">11.1</span> <span class="toctext">Downloads</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Installation"><span class="tocnumber">11.2</span> <span class="toctext">Installation</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Learn_more_about_regular_expressions"><span class="tocnumber">11.3</span> <span class="toctext">Learn more about regular expressions</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#See_also_these_other_Moodle_question_types_based_on_regular_expressions"><span class="tocnumber">11.4</span> <span class="toctext">See also these other Moodle question types based on regular expressions</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h3><span class="mw-headline" id="The_RegExp_Short_Answer_Question">The RegExp Short Answer Question</span></h3>
+<ul><li><b>IMPORTANT NOTE</b>
+<ul><li>The RegExp Short Answer question described in this documentation page is a 3rd-party plugin, which allows you to create questions for the <i><b>Quiz</b></i> activity. It is <i>different</i> from the "Use regular expressions" option in the <i><b>Lesson</b></i> module.</li>
+<li>The documentation for the "Use regular expressions" option in the <i><b>Lesson</b></i> module is to be found at: <a rel="nofollow" class="external text" href="https://docs.moodle.org/en/Short_answer_analysis">Short answer analysis</a>.</li></ul></li></ul>
+<p>Like the Short Answer question, the RegExp Short Answer question expects the respondent to answer an "open" question with a word or a short phrase. However, the RegExp system gives you access to a more powerful system for <i>analysing the student's answers</i> with the aim of <i>providing more relevant immediate feedback</i>.
+The RegExp Short Answer question is meant to be used with questions requiring <b>natural language</b> answers. This question type is not well-suited to questions requiring mathematical, scientific, programming "languages".
+</p>
+<h3><span class="mw-headline" id="Correct_answer_matching_a_regular_expression_pattern">Correct answer matching a regular expression pattern</span></h3>
+<p>It is not possible to give complete examples of the vast possibilities offered by this system, and the following are just some possibilities.
+</p>
+<h4><span class="mw-headline" id="Example_1.">Example 1.</span></h4>
+<p>Suppose your question was "What are the colors of the French flag?". In the Answer 1 box you would type the "best" answer, e.g. "it's blue, white and red". For more details, see <a href="#firstcorrect">First correct answer</a> below.
+</p>
+<ul><li>In the Answer 2 box you would type this regular expression: "it's blue, white(,| and) red" (quotes should not be typed, of course).</li>
+<li>If <a href="#casesensivity">Case sensivity</a> is set to "No", this will match any of those 4 responses:</li></ul>
+<pre>   it's blue, white, red
+   it's blue, white and red
+   It's blue, white, red
+   It's blue, white and red
+</pre>
+<h4><span class="mw-headline" id="Example_2.">Example 2.</span></h4>
+<p>Question: "What are blue, red and yellow?". 
+</p>
+<ul><li>Answer 1: "they are colours".</li>
+<li>Answer 2: "(|they('| a)re )colou?rs".</li>
+<li>This will match any of those 6 responses:</li></ul>
+<pre>   colours
+   colors
+   they're colours
+   they're colors
+   they are colours
+   they are colors
+</pre>
+<p><i><b>Note</b></i>.- The beginning of this regular expression "(|they('| a)re )" will match either nothing or "they're " or "they are ". In "colou?r", the question-mark means: the preceding character (or parenthesized group of characters) zero or one time; it is used here to match British English as well as US spelling. 
+</p>
+<h4><span class="mw-headline" id="Example_3.">Example 3.</span></h4>
+<p>Question: "Name an animal whose name consists of 3 letters and the middle letter is the vowel <i>a</i>".
+</p>
+<ul><li>Answer 1: "cat"</li>
+<li>Answer 2: "[bcr]at".</li>
+<li>This will match: bat, cat or rat.</li></ul>
+<p><i><b>Note</b></i>.- In Regular Expression syntax, the inclusion of characters between square brackets means than ANY of those characters can be used. So, in the above example, the regular expression "[bcr]at" is the exact equivalent of "(b|c|r)at". Be careful NOT to include the pipe character as separator in your [...] regular expressions. For instance, "[b|c|r]at" will NOT WORK CORRECTLY.
+</p>
+<h4><span class="mw-headline" id="Example_4.">Example 4.</span></h4>
+<p>The 'permutation' feature (introduced in regexp version <b>2012102900</b> for Moodle 2.3+)
+</p><p>Question: "What are the colours of the French flag (in any order)".
+</p>
+<ul><li>Answer 1: "it's blue, white and red"</li>
+<li>Answer 2: "it's [[_blue_, _white_(,| and) _red_]]".</li></ul>
+<p>Upon saving the question, Answer 2 will be automatically re-written as Answer 2b:
+</p><p>it's (blue, white(,| and) red|blue, red(,| and) white|white, red(,| and) blue|white, blue(,| and) red|red, blue(,| and) white|red, white(,| and) blue) 
+</p><p>and it will match all the following answers:
+</p>
+<pre>   it's blue, white, red
+   it's blue, white and red
+   it's blue, red, white
+   it's blue, red and white
+   it's white, red, blue
+   it's white, red and blue
+   it's white, blue, red
+   it's white, blue and red
+   it's red, blue, white
+   it's red, blue and white
+   it's red, white, blue
+   it's red, white and blue
+</pre>
+<p><i><b>Note</b></i>.- This 'permutation feature' has been asked quite a few times by regexp users. It is definitely <i>not</i> possible to obtain it by using standard Regular Expressions syntax. 
+</p><p>It is possible (but tedious) to write a regular expression including all the possible permutations - as in Answer 2b above - but the <i>ad hoc</i> syntax I am offering makes it easier to write... provided you strictly adhere to that syntax!
+</p><p>Include within double square brackets the part of the Answer which will contain 'permutable' words or phrases. You are actually allowed to have a maximum of 2 such sets of 'permutable' words or phrases. But you cannot embed one set within another!
+</p><p>Then, use pairs of underscores (the _ character) to delimit each 'permutable' word or phrase. You can still use any of the accepted Regular Expressions characters, as explained here, in your Answers which contain one (or two) such sets of 'permutable' words or phrases. If your Answer does not contain an even number of underscores, an Error warning will be displayed upon clicking the Show Alternate Answers button or when trying to Save your question.
+</p>
+<h4><span class="mw-headline" id="Example_5.">Example 5.</span></h4>
+<p>Another 'permutation' example
+</p><p>Question: "Quote the English proverb that is an encouragement to hard, diligent work."
+</p>
+<ul><li>Answer 1: "Early to bed and early to rise makes a man healthy, wealthy and wise"</li>
+<li>Answer 2: "Early to [[_bed_ and early to _rise_]], makes a man [[_healthy_, _wealthy_ and _wise_]]"</li></ul>
+<p>Upon saving the question, Answer 2 will be automatically re-written as Answer 2b:
+</p><p>Early to (bed and early to rise|rise and early to bed) makes a man (healthy, wealthy and wise|healthy, wise and wealthy|wealthy, wise and healthy|wealthy, healthy and wise|wise, healthy and wealthy|wise, wealthy and healthy)
+</p><p>and it will match all the following answers:
+</p>
+<pre>   Early to bed and early to rise makes a man healthy, wealthy and wise
+   Early to bed and early to rise makes a man healthy, wise and wealthy
+   Early to bed and early to rise makes a man wealthy, wise and healthy
+   Early to bed and early to rise makes a man wealthy, healthy and wise
+   Early to bed and early to rise makes a man wise, healthy and wealthy
+   Early to bed and early to rise makes a man wise, wealthy and healthy
+   Early to rise and early to bed makes a man healthy, wealthy and wise
+   Early to rise and early to bed makes a man healthy, wise and wealthy
+   Early to rise and early to bed makes a man wealthy, wise and healthy
+   Early to rise and early to bed makes a man wealthy, healthy and wise
+   Early to rise and early to bed makes a man wise, healthy and wealthy
+   Early to rise and early to bed makes a man wise, wealthy and healthy
+</pre>
+<h3><span class="mw-headline" id="Escaping_metacharacters">Escaping metacharacters</span></h3>
+<h4><span class="mw-headline" id="Definition">Definition</span></h4>
+<p>In the Regular Expressions syntax, a number of special characters or <i>meta characters</i> have special functions; but it is possible to force these special characters to be interpreted as normal (or <i>literal</i>) characters by preceding them with a so-called <i>escape</i> character, the backslash "\".
+Below is a (partial) list of those <i>meta characters</i>:
+</p><p><b>. ^ $ * ( ) [ ] +&nbsp;? | { } \ /</b>
+</p>
+<h4><span class="mw-headline" id="In_Accepted_Answers">In Accepted Answers</span></h4>
+<ul><li><b>Accepted Answers</b> are Answers which have a grade greater than zero, i.e. are <i>totally</i> (grade = 100%) or <i>partially</i> (grade &gt; 0% &lt; 100%) <i>correct Answers</i>.</li></ul>
+<p>In those Answers, if you need to use one or more <i>meta characters</i> for their <i>literal</i> value, you <b>must</b> <i>escape</i> them (i.e. precede them with a backslash). 
+</p><p><b>Example 1.-</b> If you want to accept the answer "This computer costs 1000$ in the US.", you must write the Answer as "This computer costs 1000\$ in the US\.". 
+</p><p><b>Example 2.-</b> If you want to accept the answer "Desktop computers are (usually) more powerful than laptops.", you must write the Answer as "Desktop computers are \(usually\) more powerful than laptops\.". 
+</p>
+<ul><li>You can mix metacharacters that have a special function with others that have a literal value, within one Answer.</li></ul>
+<p><b>Example 3.-</b> If you want to accept both answers "Computers are (usually) cheaper than cars." and "Computers are (usually) less expensive than cars.", you must write the Answer as "Computers are \(usually\) (cheaper|less expensive) than cars.". 
+</p>
+<ul><li>In the <b>Accepted Answers</b> boxes you can only enter regular expressions which can generate a finite number of sentences. That is why you will not be allowed to use some <i>meta characters</i> which match a potentially infinite number of sentences.</li>
+<li>List of <i>meta characters</i> which you <b>can</b> use for their RegExp functions:</li></ul>
+<p><b>( ) [ ]&nbsp;? |</b>
+</p>
+<ul><li>List of <i>meta characters</i> which you <b>cannot</b> use for their RegExp functions, and can only be used for their <i>literal</i> value (and must be <i>escaped</i>).</li></ul>
+<p><b>. ^ $ * + { } \ /</b>
+</p>
+<ul><li>The question mark (?) can be used either for its RegExp function OR, if escaped, for its <i>literal</i> value.</li></ul>
+<p><b>Example 4.-</b> "Do you like Jack(ie)?\?" will accept both "Do you like Jack?" and "Do you like Jackie?".
+</p>
+<h4><span class="mw-headline" id="In_Incorrect_Answers">In Incorrect Answers</span></h4>
+<ul><li><b>Incorrect Answers</b> are Answers which have a grade equal to zero (or None).</li></ul>
+<p>When you write those Incorrect Answers, you can use the whole range of <i>meta characters</i> for their special function value:
+</p><p><b>. ^ $ * ( ) [ ] +&nbsp;? | { } \ /</b>
+</p><p>For examples of use, see <b>Detecting missing required words or character strings</b> below.
+</p>
+<h4><span class="mw-headline" id="Answers_Validation">Answers Validation</span></h4>
+<p>When you validate your Question, the question engine checks the validity of your expression, according to the features explained above. If an error is found, an ERROR message is displayed above the erroneous Answer(s) and you cannot save the Question until that error has been corrected.
+</p><p>The validation system also checks that your parentheses and square brackets are correctly balanced.
+</p><p><b>Note.-</b> The faulty Answer text is "underlined" with the list of errors, as shown below.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Errors_en.jpg" class="mw-file-description"><img src="images_en/c/c1/1fb7a6d30da0d0f697bd912df69d6e10.jpg" decoding="async" width="663" height="157" class="mw-file-element" data-file-width="663" data-file-height="157"></a></span>
+</p>
+<h3><span class="mw-headline" id="Detecting_missing_required_words_or_character_strings">Detecting missing required words or character strings</span></h3>
+<p>This is a powerful feature of the RegExp question type. It will analyse the student's answer for words that are required for the answer to be correct. There are 2 ways to do this.
+</p>
+<ul><li>Use what is called "negative lookahead assertion" in regular expressions syntax: <b>^(?!.*required.*)</b></li>
+<li>or use an <i>ad hoc</i> pseudo-syntax provided in RegExp (an initial double hyphen): <b>--.*required.*</b>.</li></ul>
+<p>In the examples below, we shall be using the 'ad hoc' RegExp pseudo-syntax, and sometimes give the "negative lookahead assertion" equivalent for anyone interested.
+</p><p>Any Teacher Answer which begins with a double hyphen will analyse the student's response to find out whether the following string is present or absent. If present, the analysis continues to the next question; if absent, the analysis stops and the relevant feedback message is displayed.
+</p><p><b>Example 4. </b> Question "What are the colors of the French flag?".
+</p>
+<ul><li>Teacher Answer 2: --.*blue.*</li>
+<li>Sample student Response: "it's red and white"</li>
+<li>Feedback 2: The color of the sky is missing!</li></ul>
+<p>Here, the . (dot) stands for &ldquo;any character&rdquo; and the * (asterisk) means &ldquo;preceding special character repeated any number of times&rdquo;. The Teacher Answer 2 regular expression above means: check whether the character string "blue", preceded with anything and followed by anything is absent from the student's answer. Please note that the use of the asterisk is different in Moodle's "normal" Short Answer question type and in the RegExp question type.
+</p><p>Actually, this syntax is not sufficient to track the absence of the word "blue" in a student's answer such as "it's blueish, white and red". To make sure that we want to track the absence of "blue" as a word(and not just as part of a word), we must use the metacharacter \b which is an anchor which matches at a position that is called a "word boundary". Hence the new version of our Example 4:
+</p><p><b>Example 4b. </b> Question "What are the colors of the French flag?".
+</p>
+<ul><li>Teacher Answer 2: --.*\bblue\b.*</li>
+<li>Sample student Response: "it's blueish, white and red"</li>
+<li>Feedback 2: The color of the sky is missing!</li></ul>
+<p><b>Note.-</b>
+Using the "negative lookahead assertion" syntax mentioned at the beginning of this section, Teacher Answer 2 would look like this:
+</p>
+<ul><li>Teacher Answer 2: <b>^(?!</b>.*\bblue\b.*<b>)</b></li></ul>
+<p><b>Example 5.</b> Question: "Name an animal whose name consists of 3 letters and the middle letter is the vowel <i>a</i>". 
+</p>
+<ul><li>Teacher Answer: "--^[bcr].*". <b>OR</b> * Teacher Answer: "--^(b|c|r).*".</li>
+<li>Sample student Response: "dog"</li>
+<li>Feedback: "Your answer should start with one of these letters: b, c or r"</li></ul>
+<p><b>Note.-</b>
+In regular expressions syntax, the caret ^ stands for "beginning of character string to be matched", while the dollar sign $ stands for "end of character string".
+</p><p><b>Example 6.</b> Question "What are the colors of the French flag?".
+</p>
+<ul><li>Teacher Answer: "--.*(blue|red|white).*"</li>
+<li>Sample student Response #1: "It's black and orange."</li>
+<li>Feedback: "You have not even found one of the colors of the French flag!"</li>
+<li>Sample student Response #2: "It's blue and orange."</li>
+<li>Feedback: None, the analysis continues to the next Teacher Answer expression.</li></ul>
+<p><i><b>Explanation</b></i>.- The regular expression looks for a missing word among those listed between brackets and separated by the | sign. As soon as one of those words is found, the "missing condition" is considered false, and the response analysis continues to the next Answer's regular expression.
+</p><p><b>Note.-</b>
+Using the "negative lookahead assertion" syntax, Teacher Answer would look like this: <b>^(?!.*(blue|red|white).*)</b>
+</p><p><b>Example 7.</b> Question "What are the colors of the French flag?".
+</p>
+<ul><li>Teacher Answer: "--.*(<b>&amp;&amp;</b>blue<b>&amp;&amp;</b>red<b>&amp;&amp;</b>white).*"</li>
+<li>Sample student Response #1: "It's blue and orange."</li>
+<li>Feedback: "You have not found all the colors of the French flag".</li>
+<li>Sample student Response #2: "white blue red".</li>
+<li>Feedback: None, the analysis continues to the next Teacher Answer expression.</li></ul>
+<p><i><b>Explanation</b></i>.- The regular expression looks for a missing word among all of those listed between brackets and separated by the &amp;&amp; double character combination. Only if all of those words are present, will the "missing condition" be considered false, and the response analysis continue to the next Answer's regular expression. Please note that the list of parenthesized words must begin with the &amp;&amp; character sequence.
+</p><p><b>Note.-</b>
+Using the "negative lookahead assertion" syntax, Teacher Answer would look like this: <b>(^(?!.*(blue).*)|^(?!.*(white).*)|^(?!.*(red).*))</b>
+</p>
+<h3><span class="mw-headline" id="Editing_a_regular_expression_question">Editing a regular expression question</span></h3>
+<p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:regexp_settings_01.jpg" class="mw-file-description"><img src="images_en/1/17/943b1ce034523e19967063b04cbcb45a.jpg" decoding="async" width="454" height="327" class="mw-file-element" data-file-width="454" data-file-height="327"></a></span>
+</p>
+<h4><span class="mw-headline" id="Help_Button_Mode">Help Button Mode</span></h4>
+<p>Selecting a mode other than <i>None</i> will display a button to enable the student to get the next letter or word or punctuation mark (including the very first letter or word).
+</p><p><i>The "Word or Punctuation" help mode is a new feature starting in Moodle 3.1.</i>
+<i></i>
+</p><p>In <i>Adaptive mode</i> the button displayed will say "Buy next letter" or "Buy next word" or "Buy next word or punctuation" according to the mode selected by the teacher. For setting the "cost" of buying a letter or word, see the <i>Penalty for incorrect tries and Buying a letter or word</i> settings further down the Edit form.
+</p><p>In <i>Adaptive No penalty</i> mode the button displayed will say "Get next letter" or "Get next word" or "Get next word or punctuation".
+</p><p>By default the Help button mode value is set at <b>None</b>. The Help button will only be available to quizzes that have their <b>Question behaviour</b> mode set to <i>Adaptive</i> or <i>Adaptive (no penalties)</i> as it does not make sense to enable the Help button for non-adaptive tests.
+</p>
+<h4><span class="mw-headline" id="Show_alternate_answers_to_student">Show alternate answers to student</span></h4>
+<p>Show all correct alternative answers to student when on review page? If there are a lot of automatically generated correct alternative answers, displaying them all can make the review page quite long. So, you may wish to <i>not</i> display all those alternative correct answers. The first correct answer will always be displayed, under the label "The best correct answer is:"
+</p>
+<h4><span class="mw-headline" id="First_correct_answer"><span id="firstcorrect">First correct answer</span></span></h4>
+<p>For Answer 1 you must enter an answer text which a) is the "best" possible answer; b) is <b>not</b> a regular expression or - more exactly - <i>will not be interpreted as a regular expression</i> but "as is" and c) has a Grade value of 100%. You will notice that when you create a new RegExp question the Grade value for Answer 1 is already automatically set at 100% and cannot be changed.
+</p><p>Note.- There are two ways to enter an answer containing meta characters, according to whether this is Answer 1 or any of the subsequent Answers. Example question: how much did your computer cost?
+</p><p>Answer 1: It cost $1,000.
+</p><p>Answer 2: It cost (me )?\$1,000\.
+</p><p>In Anwer 1 you just type the expected answer "as is". The text in Answer 2 will be interpreted as a regular expression, and thus you need to escape the two meta characters (the $ sign and the end-of-sentence full stop). Note that here I have added the optional pronoun "me".
+</p>
+<h4><span class="mw-headline" id="Other_answers">Other answers</span></h4>
+<p>Any answers with a Grade higher than 0% must be entered as valid regular expressions <i>which can yield acceptable alternative answers</i> (regardless of the Grade being less than 100%).
+</p><p>For example, you cannot enter the following Answer with a grade greater than zero:
+</p><p>.*blue, white(,| and) red.*
+</p><p>The reason is that this expression would accept as correct (with a non-null grade) an infinity of answers, many of which would be incorrect, e.g.: "My hat it blue, white, red and orange", "The French flag is blue, white, red, black and nice" etc.
+</p><p>If you try to do so, validation of your question will fail and an error message will be displayed to tell you where you went wrong.
+</p><p>This means that some regular expressions, which are perfectly valid and would correctly analyse the student's (correct) answer are not recommended. The only case where they would work is a) if your question's <b>Display Hint Button</b> is set at No and b) your quiz <b>Adaptative Mode</b> is set at No. This means that you must <i>not</i> enter as an answer with a grade higher than 0% a regular expression beginning with a double hyphen "--", used for detecting missing character strings.
+</p>
+<h4><span id="Show.2FHide_alternate_answers"></span><span class="mw-headline" id="Show/Hide_alternate_answers">Show/Hide alternate answers</span></h4>
+<p>When you are creating (or modifying) a RegExp question, you may want to make sure that all the alternative correct answers that you have created in the Answers fields will work. You can click the <b>Show alternate answers</b> button to calculate and display all the correct answers in the form you are editing. This may take quite some time on your server, depending on the number and complexity of the regular expressions you have entered in the Answer fields!
+</p><p>On the other hand, it is the recommended way to check that your "correct answers" expressions are correctly written. Here is an example.
+</p><p>Please remember that only Answers regular expressions with a score greater than zero will be used to calculate those alternative answers.
+</p><p>Please note that clicking the <b>Show alternate answers</b> button will perform an analysis of all the regular expressions you entered in the Answers field. If a syntax error is detected at this stage, the alternative correct answers will <i>not</i> be displayed, and an <i>ad hoc</i> error message will displayed above the faulty regular expression.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:showhidealternateanswers.jpg" class="mw-file-description"><img src="images_en/6/6e/caf940d8c3ad20237f3400735ba4ce5b.jpg" decoding="async" width="470" height="291" class="mw-file-element" data-file-width="470" data-file-height="291"></a></span>
+</p>
+<h3><span class="mw-headline" id="Automatic_formatted_extra_feedback">Automatic formatted extra feedback</span></h3>
+<p>Please note that the RegExp question can be used in any <b>Question behaviour</b> mode. However, it is advised to create quizzes containing only RegExp questions or containing other types of questions, but <i>preferably</i> if the quiz's <i><b>Question behaviour / How questions behave</b></i> setting is set to <i>Adaptive mode</i> (with or without penalty).
+</p><p>When a student (or teacher in Preview Question mode) submits a response to a RegExp question, 3 types of feedback messages are displayed (in Adaptive mode).
+</p>
+<ul><li>(line 3) The standard correct/incorrect Quiz message (plus the colour associated with either state).</li>
+<li>(line 2) The Feedback message entered by the question creator for each Teacher Answer.</li>
+<li>(line 1) An extra feedback system is automatically provided, displaying the student's submitted response, with the following format codes:
+<ul><li>the beginning of the student's submitted response which best matches one of the Alternate Answers is displayed in blue;</li>
+<li>any words from the submitted response which are present in the potential Alternate Answers following the initial correct part submitted (correct but misplaced words) are displayed on a green background;</li>
+<li>any words not present in the potential Alternate Answers following the initial correct part submitted (Wrong words) are displayed on a red background.</li></ul></li></ul>
+<p>The meaning of those colours is explained below the feedback with the 2 labels "Wrong words" and "Misplaced words".
+</p><p><i>Please note that the colour scheme has been changed starting with the Moodle 3.1 version of RegExp.</i>
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:regexp04.jpg" class="mw-file-description"><img src="images_en/3/3a/7270529e3e9a8f89b2f2d77dec42faaf.jpg" decoding="async" width="558" height="250" class="mw-file-element" data-file-width="558" data-file-height="250"></a></span>
+</p>
+<h3><span class="mw-headline" id="Feedback_given_by_the_Help_button">Feedback given by the Help button</span></h3>
+<p>Each time a student clicks the <b>Buy/Get next letter/word/punctuation</b> button to buy/get a letter/word/punctuation mark, that letter, word or punctuation mark is added to their response. The last line of the feedback zone shows the following information: added letter/word; penalty cost (if applicable); total penalties so far (if applicable). Note that if the total of penalties exceeds 1 (i.e. 100%), that total is displayed in red. 
+</p><p>When the teacher views the quiz results, on the '<b>Review Attempt'</b> pages, '<b>Response history'</b> section, the response history shows <i>Submit (with a request for help)</i> with the response states before and after the letter/word/punctuation mark was added.
+</p>
+<hr>
+<p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:regexp03.jpg" class="mw-file-description"><img src="images_en/5/51/248d043849efc499e6f1aaf968a76e63.jpg" decoding="async" width="546" height="459" class="mw-file-element" data-file-width="546" data-file-height="459"></a></span>
+</p>
+<h3><span class="mw-headline" id="Display_right_answers">Display right answers</span></h3>
+<p>If your Quiz settings <i>Review options</i> are set to display the Right answer (During the attempt or Immediately after the attempt etc.), and your question's <i>Show alternate answers to student</i> setting is set to <b>Yes</b>, when the student has submitted his attempt, and is reviewing his answers, all of the possible answers will be displayed, as shown in this screenshot. Correct responses with a grade &lt; 100% are also listed, with their grade value.
+</p><p>Please note that the <i>teacher</i> will always be able to see that "other accepted answers" section when reviewing the Quiz answers.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:23_correct_responses.jpg" class="mw-file-description"><img src="images_en/4/4d/886e7ee1164b9ca00a9ad2768c6f4fa0.jpg" decoding="async" width="315" height="503" class="mw-file-element" data-file-width="315" data-file-height="503"></a></span>
+</p>
+<h3><span class="mw-headline" id="In_the_Mobile_App">In the Mobile App</span></h3>
+<p>Starting with the Moodle 3.5 version, RegExp includes code for the Moodle Mobile App. If you access a quiz with the mobile app that contains RegExp questions it will be automatically loaded as a remote add-on.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:regexp05.jpg" class="mw-file-description"><img src="images_en/1/12/8d90b01e591f18163f47211ae0000080.jpg" decoding="async" width="496" height="651" class="mw-file-element" data-file-width="496" data-file-height="651"></a></span>
+</p><p>Similar to the <i>short answer</i> core question type instructions, "Normally the answer box appears below the question text. However, if you include five or more underscores in the text, the input box will be placed there." This inline input feature has recently been made available to the Moodle mobile version for "short answer" questions. It is now available for the "regexp" question type as well.
+</p><p>If you enter this regexp question text: The ____________ sat on the white mat.
+</p><p>This is what it will look like in a moodle mobile quiz:
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:2019-06-04_18-40-30.jpg" class="mw-file-description"><img src="images_en/d/d8/66a60309406ec5751df3be653b4ce86b.jpg" decoding="async" width="508" height="327" class="mw-file-element" data-file-width="508" data-file-height="327"></a></span>
+</p>
+<h3><span class="mw-headline" id="Inserting_RegExp_sub-questions_in_Cloze_type_questions">Inserting RegExp sub-questions in Cloze type questions</span></h3>
+<p>For Moodle 4.x a new multianswer question type (accepting RegExp sub-questions) is available from the Moodle plugins repository at <a rel="nofollow" class="external text" href="https://moodle.org/plugins/qtype_multianswerrgx">Embedded answers with REGEXP (Clozergx)</a>.
+</p><p>Please note that that question type will accept as sub-questions the same question types as the original Moodle multianswer question type (SHORTANSWER, MULTICHOICE, NUMERICAL) <b>plus</b> the REGEXP question types.
+</p><p>See the documentation here: <a href="797f32509285672f1f5e08dac5e1fbbf.html" title="Embedded Answers (Cloze) with Regexp question type">Embedded Answers (Cloze) with Regexp question type</a>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<h4><span class="mw-headline" id="Downloads">Downloads</span></h4>
+<ul><li>Download <a rel="nofollow" class="external text" href="http://moodle.org/plugins/view.php?plugin=qtype_regexp">the Regexp question type</a> from the Moodle Plugins repository.</li>
+<li>IMPORTANT&nbsp;: Starting with the 2.2 version of REGEXP, if you want the Help feature, you must also download and install the following 2 "question behaviours" from the Moodle Plugins repository: <a rel="nofollow" class="external text" href="http://moodle.org/plugins/view.php?plugin=qbehaviour_regexpadaptivewithhelp">RegExp Adaptive mode with Help</a> and <a rel="nofollow" class="external text" href="http://moodle.org/plugins/view.php?plugin=qbehaviour_regexpadaptivewithhelpnopenalty">RegExp Adaptive mode with Help (no penalties)</a>.</li></ul>
+<h4><span class="mw-headline" id="Installation">Installation</span></h4>
+<hr>
+<p>If you have downloaded the zip archive from the new moodle.org plugins page
+</p><p>1.- Unzip the zip archive to your local computer.
+</p><p>2.- This will give you a folder named "regexp".
+</p><p>3.- GO TO STEP 4 below
+---
+</p><p>If you have downloaded the zip archive from <a rel="nofollow" class="external free" href="https://github.com/rezeau/moodle-qtype_regexp">https://github.com/rezeau/moodle-qtype_regexp</a> (<b>for latest developments</b>)
+</p><p>1.- Unzip the zip archive to your local computer.
+</p><p>2.- This will give you a folder named something like "rezeau-moodle_qtype_regexp-ff8c6a1". The end of the name may vary.
+</p><p>3.- ***Rename*** that folder to "regexp".
+</p><p>---
+</p><p>4.- Upload the regexp folder to &lt;yourmoodle&gt;/question/type/ folder.
+</p><p>5.- Visit your Admin/Notifications page so that the new question type gets installed.
+</p>
+<h4><span class="mw-headline" id="Learn_more_about_regular_expressions">Learn more about regular expressions</span></h4>
+<ul><li><a rel="nofollow" class="external text" href="http://www.regular-expressions.info/tutorial.html">Regular Expressions Tutorial</a> A complete introduction to the topic.</li>
+<li><a rel="nofollow" class="external text" href="http://www.regexplanet.com/simple/index.html">Regular Expression Test Page</a> Test your regular expressions on a variety of "answers".</li></ul>
+<h4><span class="mw-headline" id="See_also_these_other_Moodle_question_types_based_on_regular_expressions">See also these other Moodle question types based on regular expressions</span></h4>
+<ul><li><a href="d5888859601125a92092573e9af351ad.html" title="Pattern-match question type">Pattern-match question type</a></li>
+<li><a href="3958bad7d9c28ff3122527ca08a7e249.html" title="Preg question type">Preg question type</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260823003452
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.044 seconds
+Real time usage: 0.352 seconds
+Preprocessor visited node count: 139/1000000
+Post&#8208;expand include size: 1876/2097152 bytes
+Template argument size: 192/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 119/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.235      1 -total
+ 53.44%    2.263      1 Template:Infobox_plugin
+ 44.94%    1.903      1 Template:Questions
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:12581-0!canonical and timestamp 20260823003452 and revision id 150652. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Regular_Expression_Short-Answer_question_type&amp;oldid=150652">https://docs.moodle.org/502/en/index.php?title=Regular_Expression_Short-Answer_question_type&amp;oldid=150652</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="25a190cf836432207b62ebb9ebca358b.html" title="Category:Plugin">Plugin</a></li><li><a href="1e78cfc01e9a079db1bb9141c40392a2.html" title="Category:Questions">Questions</a></li><li><a href="66eedc42cfbcf3ba75beae122b9d4e4e.html" title="Category:Quiz">Quiz</a></li><li><a href="27cec39c9633dd48770872338440a43c.html" title="Category:Contributed code">Contributed code</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdikl5swb">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdikl5tcj"></button>
+					<div class="collapse navbar-collapse igdikl5tcj" id="igdikl5tcj">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Regular_Expression_Short-Answer_question_type" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Regular_Expression_Short-Answer_question_type" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Regular_Expression_Short-Answer_question_type&amp;oldid=150652" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Regular_Expression_Short-Answer_question_type&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/question/type/regexp" title="question/type/regexp – français" lang="fr" hreflang="fr" data-title="question/type/regexp" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Tipo_de_pregunta_respuesta_corta_de_expresión_regular" title="Tipo de pregunta respuesta corta de expresión regular – español" lang="es" hreflang="es" data-title="Tipo de pregunta respuesta corta de expresión regular" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Fragetyp_Kurzantwort_vom_Typ_regulärer_Ausdruck" title="Fragetyp Kurzantwort vom Typ regulärer Ausdruck – Deutsch" lang="de" hreflang="de" data-title="Fragetyp Kurzantwort vom Typ regulärer Ausdruck" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 19 December 2024, at 15:37.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":154,"wgPageParseReport":{"limitreport":{"cputime":"0.044","walltime":"0.352","ppvisitednodes":{"value":139,"limit":1000000},"postexpandincludesize":{"value":1876,"limit":2097152},"templateargumentsize":{"value":192,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":119,"limit":5000000},"timingprofile":["100.00%    4.235      1 -total"," 53.44%    2.263      1 Template:Infobox_plugin"," 44.94%    1.903      1 Template:Questions"]},"cachereport":{"timestamp":"20260823003452","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

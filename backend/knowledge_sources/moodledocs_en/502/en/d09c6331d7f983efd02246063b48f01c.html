@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Moodle app guide for admins - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aac7c2a31002b9cc20a4fe3b","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Moodle_app_guide_for_admins","wgTitle":"Moodle app guide for admins","wgCurRevisionId":156105,"wgRevisionId":156105,"wgArticleId":20138,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Mobile","New features"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Moodle_app_guide_for_admins","wgRelevantArticleId":20138,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Moodle_Mobile_guide_for_admins","wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgInternalRedirectTargetUrl":"/502/en/Moodle_app_guide_for_admins","wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="c86f4931be931ca80f947773b7309feb.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.page.gallery.styles%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Moodle_app_guide_for_admins">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Moodle_app_guide_for_admins rootpage-Moodle_app_guide_for_admins layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhrogxhm"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhrogxhm" id="igdhrogxhm">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Moodle+app+guide+for+admins" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Moodle_Mobile_guide_for_admins">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Moodle_Mobile_guide_for_admins">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Moodle_Mobile_guide_for_admins">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="7a348ea1eafdbe19e9ea49c63c7f4ede.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Moodle_app_guide_for_admins&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_app_guide_for_admins&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_app_guide_for_admins&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Moodle app guide for admins</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"><span class="mw-redirectedfrom">(Redirected from <a href="https://docs.moodle.org/502/en/index.php?title=Moodle_Mobile_guide_for_admins&amp;redirect=no" class="mw-redirect" title="Moodle Mobile guide for admins">Moodle Mobile guide for admins</a>)</span></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a> ► <a href="af8649a57b5df278b970e2f0135f54d1.html" title="Moodle app">Moodle app</a> ► <a class="mw-selflink selflink">Moodle app guide for admins</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="af8649a57b5df278b970e2f0135f54d1.html" title="Moodle app">Moodle app</a></div>	
+<div class="content">
+<ul><li><a href="b2f5a026dbf703734c1cc7760547b03f.html" title="Moodle app features">Moodle app features</a></li>
+<li><a href="3a50befdd30a72c0487e19806a008f5b.html" title="Moodle app offline features">Moodle app offline features</a></li>
+<li><a href="186b4bc3b0b473318e46c85cbcda536a.html" title="New for mobile">New for mobile</a></li>
+<li><a href="e535dd1f9031fa081d316af3905f8325.html" title="Moodle app plans">Moodle app plans</a></li>
+<li><a class="mw-selflink selflink">Moodle app guide for admins</a></li>
+<li><a href="6e2914f711148c3220a9f762972efcf6.html" title="Moodle app notifications">Moodle app notifications</a></li>
+<li><a href="786555db20cd25f7325099879333c2bb.html" title="Creating mobile-friendly courses">Creating mobile-friendly courses</a></li>
+<li><a href="701eedc3e337238fbfb7196bfbd1a212.html" title="Plugins with mobile app support">Plugins with mobile app support</a></li>
+<li><a href="1bb655d96f6443b0cf8102db2d014070.html" title="Privacy in the Moodle app">Privacy in the Moodle app</a></li>
+<li><a href="c81594a0668a7af36df530228d2bf24f.html" title="Moodle app security">Moodle app security</a></li>
+<li><a href="e375c4a947f496fa5d2cc15164da27fd.html" title="Moodle app FAQ">Moodle app FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p><br>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Enable_mobile_services_on_your_site"><span class="tocnumber">1</span> <span class="toctext">Enable mobile services on your site</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Frame_embedding"><span class="tocnumber">1.1</span> <span class="toctext">Frame embedding</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Is_your_site_behind_a_proxy,_or_load_balancer_or_complex_network_infrastructure?"><span class="tocnumber">1.2</span> <span class="toctext">Is your site behind a proxy, or load balancer or complex network infrastructure?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Register_your_site_on_the_Moodle_Apps_Portal"><span class="tocnumber">2</span> <span class="toctext">Register your site on the Moodle Apps Portal</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Premium_features"><span class="tocnumber">3</span> <span class="toctext">Premium features</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Simplify_user_onboarding"><span class="tocnumber">4</span> <span class="toctext">Simplify user onboarding</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Have_your_site_listed_in_the_Moodle_app_site_finder"><span class="tocnumber">5</span> <span class="toctext">Have your site listed in the Moodle app site finder</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#How_can_I_have_my_site_listed_in_the_Moodle_app_site_finder?"><span class="tocnumber">5.1</span> <span class="toctext">How can I have my site listed in the Moodle app site finder?</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#I_don't_want_my_site_listed_in_the_Moodle_app_site_finder._How_can_I_remove_it?"><span class="tocnumber">5.2</span> <span class="toctext">I don't want my site listed in the Moodle app site finder. How can I remove it?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Mobile_authentication"><span class="tocnumber">6</span> <span class="toctext">Mobile authentication</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#MFA"><span class="tocnumber">6.1</span> <span class="toctext">MFA</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#SSO_authentication_method"><span class="tocnumber">6.2</span> <span class="toctext">SSO authentication method</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#QR_Login"><span class="tocnumber">6.3</span> <span class="toctext">QR Login</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Biometric_Login"><span class="tocnumber">6.4</span> <span class="toctext">Biometric Login</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Auto_logout"><span class="tocnumber">6.5</span> <span class="toctext">Auto logout</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Customise_your_app_theme"><span class="tocnumber">7</span> <span class="toctext">Customise your app theme</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Notifications"><span class="tocnumber">8</span> <span class="toctext">Notifications</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#App_banners"><span class="tocnumber">9</span> <span class="toctext">App banners</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#'Get_the_mobile_app'_link"><span class="tocnumber">10</span> <span class="toctext">'Get the mobile app' link</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Configuring_the_app_from_your_site"><span class="tocnumber">11</span> <span class="toctext">Configuring the app from your site</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#Force_log_out"><span class="tocnumber">11.1</span> <span class="toctext">Force log out</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Disabled_features"><span class="tocnumber">11.2</span> <span class="toctext">Disabled features</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Custom_menu_items_and_custom_user_menu_items"><span class="tocnumber">11.3</span> <span class="toctext">Custom menu items and custom user menu items</span></a>
+<ul>
+<li class="toclevel-3 tocsection-24"><a href="#How_to_Configure"><span class="tocnumber">11.3.1</span> <span class="toctext">How to Configure</span></a>
+<ul>
+<li class="toclevel-4 tocsection-25"><a href="#Link-Opening_Methods"><span class="tocnumber">11.3.1.1</span> <span class="toctext">Link-Opening Methods</span></a></li>
+<li class="toclevel-4 tocsection-26"><a href="#Language_Rules_&amp;_Behavior"><span class="tocnumber">11.3.1.2</span> <span class="toctext">Language Rules &amp; Behavior</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-27"><a href="#Example"><span class="tocnumber">11.3.2</span> <span class="toctext">Example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-28"><a href="#Responsive_main_menu_items"><span class="tocnumber">11.4</span> <span class="toctext">Responsive main menu items</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Custom_language_strings"><span class="tocnumber">11.5</span> <span class="toctext">Custom language strings</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Allowlisted_JavaScript_domains"><span class="tocnumber">11.6</span> <span class="toctext">Allowlisted JavaScript domains</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-31"><a href="#Analytics_and_stats"><span class="tocnumber">12</span> <span class="toctext">Analytics and stats</span></a>
+<ul>
+<li class="toclevel-2 tocsection-32"><a href="#Usage_statistics_from_your_Moodle_site"><span class="tocnumber">12.1</span> <span class="toctext">Usage statistics from your Moodle site</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#Integration_with_Matomo_analytics"><span class="tocnumber">12.2</span> <span class="toctext">Integration with Matomo analytics</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="#Google_Analytics_for_Firebase"><span class="tocnumber">12.3</span> <span class="toctext">Google Analytics for Firebase</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#Google_Play_and_Apple_App_Store_statistics"><span class="tocnumber">12.4</span> <span class="toctext">Google Play and Apple App Store statistics</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-36"><a href="#Web_services_token_duration"><span class="tocnumber">13</span> <span class="toctext">Web services token duration</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="#App's_cache"><span class="tocnumber">14</span> <span class="toctext">App's cache</span></a></li>
+<li class="toclevel-1 tocsection-38"><a href="#See_also"><span class="tocnumber">15</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Enable_mobile_services_on_your_site">Enable mobile services on your site</span></h2>
+<p>Your site needs to have mobile access enabled so users can use the mobile app.
+</p><p>For sites using https, mobile access is enabled by default in new installations of Moodle 3.0 onwards.
+</p><p>For http sites, mobile access can be enabled by an administrator as follows:
+</p>
+<ol><li>In <i>Site administration &gt; Mobile app &gt; Mobile settings</i> tick the 'Enable web services for mobile devices' checkbox. (For 4.0 version: In <i>Site administration &gt; Advanced features</i> tick the 'Enable web services for mobile devices' checkbox</li>
+<li>Click the button to save changes.</li></ol>
+<p>If your site uses a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Transport_Layer_Security">SSL certificate</a>, it must be a trusted certificate. For security reasons the app doesn't work with self-signed certificates.
+</p><p>Please, verify that your certificate is valid via: <a rel="nofollow" class="external free" href="https://www.geocerts.com/ssl_checker">https://www.geocerts.com/ssl_checker</a> (you shouldn't see any warning).
+</p><p>If your site has the /login directory protected (frequently done when using the Shibboleth authentication method), you must enable access to the login/token.php script.
+</p>
+<h3><span class="mw-headline" id="Frame_embedding">Frame embedding</span></h3>
+<p>If your sites uses <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/ReCAPTCHA">reCaptcha</a>, Vimeo videos or custom menu items (as described bellow) you must enable the admin setting "Allow frame embedding" (allowframembedding). Please, note this is not necessary since Moodle 3.7
+</p>
+<h3><span id="Is_your_site_behind_a_proxy.2C_or_load_balancer_or_complex_network_infrastructure.3F"></span><span class="mw-headline" id="Is_your_site_behind_a_proxy,_or_load_balancer_or_complex_network_infrastructure?">Is your site behind a proxy, or load balancer or complex network infrastructure?</span></h3>
+<p>In that case, you may need to configure the "Ignore reserver proxies" settings in Site administration &gt; Administration &gt; Server &gt; HTTP
+</p>
+<h2><span class="mw-headline" id="Register_your_site_on_the_Moodle_Apps_Portal">Register your site on the Moodle Apps Portal</span></h2>
+<p>We strongly recommend you to register your site for free on the Moodle Apps portal: <a rel="nofollow" class="external free" href="https://apps.moodle.com/">https://apps.moodle.com</a>
+</p><p>You will be able to retrieve statistics like the number of active user devices receiving Push Notifications and <a rel="nofollow" class="external text" href="https://apps.moodle.com/local/apps/signup_site.php?plan=premium&amp;origin=moodledocs">upgrade to a Premium plan</a> for enjoying exclusive features.
+</p>
+<h2><span class="mw-headline" id="Premium_features">Premium features</span></h2>
+<p><span class="small-info-right"><a href="4559ca34b9e04e34424b54f6039900b9.html" title="Category:New features">New feature<br>in <b>Moodle 5.2</b>!</a></span>
+</p><p><br>
+</p>
+<figure class="mw-halign-right" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:MobileAppPremiumFeatures52.png" class="mw-file-description"><img src="images_en/thumb/1/18/MobileAppPremiumFeatures52.png/8fecf42225a7c719a20b33638b68b30f.png" decoding="async" width="300" height="873" class="mw-file-element" srcset="/502/en/images_en/thumb/1/18/MobileAppPremiumFeatures52.png/450px-MobileAppPremiumFeatures52.png 1.5x, /502/en/images_en/thumb/1/18/MobileAppPremiumFeatures52.png/600px-MobileAppPremiumFeatures52.png 2x" data-file-width="1080" data-file-height="3144"></a><figcaption>The Premium features page under Site administration &gt; Mobile app, consolidating all subscription-dependent settings (new in Moodle 5.2).</figcaption></figure>
+<p>In Moodle 5.2, settings that require a <a rel="nofollow" class="external text" href="https://moodle.com/app/">Pro or Premium Moodle app subscription</a> are consolidated into a dedicated <b>Premium features</b> page.
+</p><p>To access Premium features:
+</p>
+<ol><li>Go to <i>Site administration &gt; Mobile app &gt; Premium features</i>.</li></ol>
+<p>This page brings together all subscription-dependent settings in one place, including QR login, biometric login, custom branding (CSS), disabled features, custom menu items, and custom language strings.
+</p><p>To view your current subscription, compare plan limits, and upgrade, go to <i>Site administration &gt; Mobile app &gt; Mobile app subscription</i>.
+</p>
+<ul class="gallery mw-gallery-traditional">
+		<li class="gallerybox" style="width: 435px">
+			<div class="thumb" style="width: 430px; height: 330px;"><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:MobileAppSubscriptionFree52.png" class="mw-file-description" title="The redesigned Mobile app subscription page (Free plan) showing current usage and a Free/Premium feature comparison (new in Moodle 5.2)."><img alt="The redesigned Mobile app subscription page (Free plan) showing current usage and a Free/Premium feature comparison (new in Moodle 5.2)." src="images_en/thumb/8/80/MobileAppSubscriptionFree52.png/36833d47ec8882bbd9887ea417821920.png" decoding="async" width="181" height="300" class="mw-file-element" srcset="/502/en/images_en/thumb/8/80/MobileAppSubscriptionFree52.png/272px-MobileAppSubscriptionFree52.png 1.5x, /502/en/images_en/thumb/8/80/MobileAppSubscriptionFree52.png/362px-MobileAppSubscriptionFree52.png 2x" data-file-width="1079" data-file-height="1786"></a></span></div>
+			<div class="gallerytext">The redesigned Mobile app subscription page (Free plan) showing current usage and a Free/Premium feature comparison (new in Moodle 5.2).</div>
+		</li>
+		<li class="gallerybox" style="width: 435px">
+			<div class="thumb" style="width: 430px; height: 330px;"><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:MobileAppSubscriptionPremium52.png" class="mw-file-description" title="The subscription page for a site with an active Premium subscription (new in Moodle 5.2)."><img alt="The subscription page for a site with an active Premium subscription (new in Moodle 5.2)." src="images_en/thumb/8/86/MobileAppSubscriptionPremium52.png/16aef5eacc36f6a44b096f18bf94156f.png" decoding="async" width="208" height="300" class="mw-file-element" srcset="/502/en/images_en/thumb/8/86/MobileAppSubscriptionPremium52.png/312px-MobileAppSubscriptionPremium52.png 1.5x, /502/en/images_en/thumb/8/86/MobileAppSubscriptionPremium52.png/416px-MobileAppSubscriptionPremium52.png 2x" data-file-width="1078" data-file-height="1555"></a></span></div>
+			<div class="gallerytext">The subscription page for a site with an active Premium subscription (new in Moodle 5.2).</div>
+		</li>
+</ul>
+<h2><span class="mw-headline" id="Simplify_user_onboarding">Simplify user onboarding</span></h2>
+<p>Upon opening the Moodle app, first-time users encounter a "Your site" field, where they have to input the URL of their Moodle site to access their courses. To ensure a smooth onboarding experience for new users, follow these steps:
+</p>
+<ol><li>Enable the <b>Site finder</b> feature that allows users to find their Moodle site by name, eliminating the need to manually enter the site URL. To enable this feature, view <a class="mw-selflink-fragment" href="#Have_your_site_listed_in_the_Moodle_app_site_finder">Have your site listed in the Moodle app site finder</a> below.</li>
+<li>Enable the <b>QR login</b> feature (view <a class="mw-selflink-fragment" href="#QR_Login">instructions</a> below). This feature allows users to scan a QR code available on their Moodle profile to access their Moodle site directly from the app.</li>
+<li>For Android users and Moodle LMS 4.3 and later: Encourage users to install the Moodle app by following the <b>Get the mobile app</b> link at the bottom of any Moodle page (located within the "<b>?</b>" icon on the desktop version). When users install the app through this link, they will be automatically redirected to their site login screen, eliminating the need to manually enter the site URL.</li>
+<li>Alternatively, you can create a dedicated help page for the Moodle app. This help page should include a link to the Google Play version of the app and clearly indicate the site URL referrer. For example, if your Moodle site is mymoodlesite.com the link will be <a rel="nofollow" class="external free" href="https://play.google.com/store/apps/details?id=com.moodle.moodlemobile&amp;referrer=siteurl%3Dhttps%3A%2F%2Fmymoodlesite.com">https://play.google.com/store/apps/details?id=com.moodle.moodlemobile&amp;referrer=siteurl%3Dhttps%3A%2F%2Fmymoodlesite.com</a></li></ol>
+<p>Please note that options 3&amp;4 are not compatible with Google Workspace accounts (the installation referrer will be ignored in that case).
+</p>
+<h2><span class="mw-headline" id="Have_your_site_listed_in_the_Moodle_app_site_finder">Have your site listed in the Moodle app site finder</span></h2>
+<p>The Moodle apps site finder enables a user to easily find their Moodle site by entering the name (no need to enter the site URL)
+</p>
+<h3><span id="How_can_I_have_my_site_listed_in_the_Moodle_app_site_finder.3F"></span><span class="mw-headline" id="How_can_I_have_my_site_listed_in_the_Moodle_app_site_finder?">How can I have my site listed in the Moodle app site finder?</span></h3>
+<p>Your site will be automatically listed in the site finder if:
+</p>
+<ul><li>either your site is registered and listed with a link on <a rel="nofollow" class="external text" href="https://stats.moodle.org/sites/">Registered sites</a> and has over five hundred mobile users and you have been using the Moodle app for over a year</li>
+<li>or you have purchased a <a rel="nofollow" class="external text" href="https://moodle.com/app/">Pro or Premium Moodle app subscription</a>.</li></ul>
+<p>You can arrange for your site to be listed in the site finder as follows:
+</p>
+<ul><li>If your site is hosted by a Moodle Partner, please contact them to request for your site to be listed.</li>
+<li>If you have a MoodleCloud site, please log in to the Moodle Apps Portal where you will find an option to have your site listed.</li></ul>
+<p>Otherwise, to have your site listed in the site finder, you need to purchase a <a rel="nofollow" class="external text" href="https://moodle.com/app/">Pro or Premium Moodle app subscription</a> from the Moodle Apps Portal.
+</p>
+<h3><span id="I_don.27t_want_my_site_listed_in_the_Moodle_app_site_finder._How_can_I_remove_it.3F"></span><span class="mw-headline" id="I_don't_want_my_site_listed_in_the_Moodle_app_site_finder._How_can_I_remove_it?">I don't want my site listed in the Moodle app site finder. How can I remove it?</span></h3>
+<p>You can remove your site from the site finder as follows:
+</p>
+<ol><li>Log in to the <a rel="nofollow" class="external text" href="https://apps.moodle.com/">Moodle Apps Portal</a>. (If you don't yet have an account, you can create one for free.)</li>
+<li>Go to 'App customisation' -&gt; 'Site Listing' and uncheck the option 'Visible' then save changes.</li></ol>
+<p>Your site will then be immediately removed from the site finder.
+</p><p>Alternatively, you can remove your site from the site finder by updating your site registration:
+</p>
+<ol><li>Log in to your Moodle site as admin and go to 'Site administration' -&gt; Registration.</li>
+<li>Change 'Site listing' to either 'Do not list my site' or 'Only display my site name'.</li></ol>
+<p>Your site will then be removed from the site finder within 24 hours.
+</p>
+<h2><span class="mw-headline" id="Mobile_authentication">Mobile authentication</span></h2>
+<h3><span class="mw-headline" id="MFA">MFA</span></h3>
+<p>The Moodle mobile app does not support MFA natively yet, however, you can redirect users to a browser to force the authentication process to behave exactly as Moodle LMS. You can do the previous via Site administration &gt; Mobile authentication &gt; Type of login and then select any of the options that mention browser.
+</p>
+<h3><span class="mw-headline" id="SSO_authentication_method">SSO authentication method</span></h3>
+<p>If your site uses a SSO authentication method (Shibboleth, LDAP SSO, OAuth...), then select via a browser window or via an embedded browser for 'Type of login' (typeoflogin) in 'Mobile authentication' in the Site administration. (This setting is provided for older pre-Moodle 3.2 sites via the <a href="c2b846374a486b70887e5762c4ed57c0.html" class="mw-redirect" title="Moodle Mobile additional features">Moodle Mobile additional features</a> plugin.)
+</p><p>The options 'browser window' and 'embedded browser' are very similar; the only difference is when redirecting the user to enter their credentials in the site, the site will be opened in the device's default browser (for browser window) or the site will be opened "embedded" in the mobile app (for embedded browser). The user experience is better in embedded browser, but not all the authentication plugins will work in embedded browser (for example, if JavaScript popups are required they must use the 'browser window'). The admin should check whether both options work, and if so, choose 'embedded browser'.
+</p><p>If you are using Google OAuth you will have to use the 'browser window' method because Google recently blocked authentication via 'embedded browsers'.
+</p><p>If your organisation uses a custom branded app and 'Type of login' is set to 'Via a browser window' or 'Via embedded browser', then a URL scheme (forcedurlscheme) may be set. This will result in only the custom branded app working for the site: the official Moodle Mobile app will not work.
+</p>
+<h3><span class="mw-headline" id="QR_Login">QR Login</span></h3>
+<p>Please note that this feature requires Moodle 3.9 and is only available with a <a rel="nofollow" class="external text" href="https://moodle.com/app/">Pro or Premium Moodle app subscription</a>. In Moodle 5.2, QR login settings are found at <i>Site administration &gt; Mobile app &gt; Premium features</i>.
+</p><p>As a site administrator, you can enable login via QR. Please go to Site administration &gt; Mobile app &gt; Mobile authentication and select "QR code with automatic login" in the "QR code access" setting
+</p><p>Once enabled, your students will be able to login in the app by scanning a QR code available on their Moodle site profile.
+</p>
+<h3><span class="mw-headline" id="Biometric_Login">Biometric Login</span></h3>
+<p>This feature is only available to Pro, <a rel="nofollow" class="external text" href="https://apps.moodle.com/">Premium plan customers</a> and in Branded Moodle Apps developed by Moodle HQ.
+</p><p>In Moodle 5.2, biometric login settings are found at <i>Site administration &gt; Mobile app &gt; Premium features</i>.
+</p><p>Biometric login allows your users to log in to your site via the Moodle App on Android and iOS devices using their fingerprint, face recognition or any other biometric option available on their mobile device. This makes the login process simpler, faster and more secure, and is specially useful if Autologout is enabled on your site.
+</p><p><b>Enabling biometric login for your site</b>
+</p><p>You can enable Biometric login as an authentication method through the Moodle Apps Portal, going to App customisation &gt; Authentication &gt; Biometric login, and then selecting "Enable biometric login". Your users will then be able to choose whether they want to use Biometric login or not.
+</p><p>For security reasons, users may be prompted to re-enter their credentials periodically. This interval is determined by the 'User created token duration' (tokenduration) security setting, which is set to a default duration of three months. 
+</p><p><b>Setting up biometric login as a user</b>
+</p><p>To use biometric login in the Moodle App, users must have biometric authentication enabled in their own device's settings (e.g. FaceID or TouchID for iOs users, or Fingerprints for Android users).
+</p><p>The first three times users log in to the app after you enable Biometric login, they will see a notification telling them that they can activate this new authentication method to access the app (provided that they have biometric authentication enabled in their device's settings).
+</p><p>Users can activate and deactivate their biometric login any time in the Moodle App in User account &gt; Preferences.
+</p>
+<h3><span class="mw-headline" id="Auto_logout">Auto logout</span></h3>
+<p>From Moodle LMS 4.3 onwards, you can enhance security by enforcing automatic logout for your users when they leave or close the app, or it goes to the background.
+</p><p>You can even set your own custom re-authentication time, to suit your organisation's security requirements. 
+</p><p>To activate auto logout, go to Site administration &gt; Mobile app &gt; Mobile authentication.
+</p><p>This feature is particularly effective when paired with Biometric login, since that streamlines the login process for your users.
+</p>
+<h2><span class="mw-headline" id="Customise_your_app_theme">Customise your app theme</span></h2>
+<p>The app can also retrieve your custom styles from your Moodle site. Since the app is a HTML5 app, you can safely apply any CSS, CSS2 and CSS3 style.
+</p><p>Go to <i>Administration &gt; Site administration &gt; Mobile app &gt; Mobile appearance</i> and enter in the mobilecssurl field a valid URL pointing to a CSS file containing your custom styles.
+</p><p>The CSS should be placed inside your Moodle installation (in your custom theme or inside a local plugin).
+</p><p><b>For example:</b> <i><a rel="nofollow" class="external free" href="https://mymoodlesite.com/theme/mytheme/style/mymobileapp.css">https://mymoodlesite.com/theme/mytheme/style/mymobileapp.css</a></i>
+</p><p>Once the user is logged in the app, remote CSS files for applying your custom styles are regularly retrieved.
+</p><p>Notice that on the first time a user opens the app, he will see the default "orange" style. Your custom styles will be applied once the user has added a site in the app.
+</p><p>For further information, see the dev docs <a rel="nofollow" class="external text" href="https://docs.moodle.org/dev/Moodle Mobile Themes">Moodle Mobile Themes</a>.
+</p><p>If you want your own custom branding for your organization, Moodle offers the The <a rel="nofollow" class="external text" href="https://moodle.com/branded-app">Branded Moodle Mobile app</a> service, please visit <a rel="nofollow" class="external free" href="https://moodle.com/app/">https://moodle.com/app/</a> for more information.
+</p>
+<h2><span class="mw-headline" id="Notifications">Notifications</span></h2>
+<p>You might find them annoying but push notifications keeps you and your users informed and updated on everything about the app. Moodle only send useful and important notifications such as new features or service disruptions.
+</p><p>Enabling push notifications is easy! An administrator can enable it by connecting their Moodle site/s to our free Notifications server available (only) for registered Moodle sites. 
+</p><p>An access key can be obtained via <i>Site administration &gt; General &gt; Messaging &gt; Notification settings</i>. Be sure the 'Mobile' is enabled and then click the link to settings, on the next page select <i>Request access key</i>. (For Moodle site versions 3.5 and 3.6 an access key can be obtained via <i>Site administration &gt; Plugins &gt; Message outputs &gt; Manage message outputs</i>. Then by clicking the link to the Mobile settings, on the next page select <i>Request access key</i>.)
+</p><p>The full guide on enabling push notifications can be found here: <a href="6dd06d59f90d49e053f7c3fbfb56ae07.html" class="mw-redirect" title="Mobile app notifications">Mobile app notifications</a>
+</p>
+<h2><span class="mw-headline" id="App_banners">App banners</span></h2>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:app_banner.png" class="mw-file-description"><img src="images_en/thumb/f/f1/app_banner.png/024139492ac2041bd38c8a632be1fb94.png" decoding="async" width="300" height="163" class="mw-file-element" srcset="/502/en/images_en/thumb/f/f1/app_banner.png/450px-app_banner.png 1.5x, /502/en/images_en/thumb/f/f1/app_banner.png/600px-app_banner.png 2x" data-file-width="1068" data-file-height="582"></a><figcaption>Moodle Mobile app banner</figcaption></figure>
+<p>App banners let your users know a mobile app is available for the site. App banners are only displayed when accessing the site using a mobile browser.
+</p><p>App banners are disabled by default. They can be enabled in 'Mobile appearance' in the Site administration.
+</p><p>If you are using a custom mobile app, you must provide the unique identifier for the iOS and Android app; if you use the Moodle Mobile app, the settings may be left as default.
+</p><p>Please, notice the following:
+</p>
+<ul><li>App banners for iOS devices (iPhone, iPad or iPod) are only shown when accessing the site using the Safari browser and the mobile app is not installed on the device yet. App banners are not displayed when using private browsing either.</li>
+<li>App banners for Android devices are only shown in very recent Chrome browser versions and when the app is not installed. Note also that Chrome uses an engagement heuristic that will display the banner only under certain conditions, like interactions with the site, the last time you interacted with it, etc. You can remove the engagement restriction check by disabling this special chrome flag: chrome://flags/#bypass-app-banner-engagement-checks. Please note also that certain custom Android versions (such as Samsung and Huawei ones) do not always support this feature</li></ul>
+<h2><span id=".27Get_the_mobile_app.27_link"></span><span class="mw-headline" id="'Get_the_mobile_app'_link">'Get the mobile app' link</span></h2>
+<p>In Moodle 3.4 onwards, the link 'Get the mobile app' in the footer of each page on the site encourages users to make use of the mobile app. 
+</p><p>By default, the link is <a rel="nofollow" class="external free" href="https://download.moodle.org/mobile">https://download.moodle.org/mobile</a> however the setting 'App download page' can be changed e.g. for sites using a branded mobile app.
+</p><p>If mobile services are not enabled for the site, then the 'Get the mobile app' link is not displayed. 
+</p><p>To prevent the 'Get the mobile app' link being displayed, simply remove the URL from the 'App download page' setting and save changes.
+</p>
+<h2><span class="mw-headline" id="Configuring_the_app_from_your_site">Configuring the app from your site</span></h2>
+<p><b>IMPORTANT</b>: The type and number of features that you can customise depend on your <a rel="nofollow" class="external text" href="https://moodle.com/app/">Moodle app plan</a>. In Moodle 5.2, subscription-dependent settings are consolidated at <i>Site administration &gt; Mobile app &gt; Premium features</i>. You can register for free at <a rel="nofollow" class="external free" href="https://apps.moodle.com/">https://apps.moodle.com</a>.
+</p><p>In Moodle 3.3 onwards, or with the <a href="c2b846374a486b70887e5762c4ed57c0.html" class="mw-redirect" title="Moodle Mobile additional features">Moodle Mobile additional features</a> plugin, settings in the Site administration enable admins to configure the app.
+</p>
+<ul><li>In Moodle 3.3 onwards go to <i>Site administration &gt; Mobile features</i></li>
+<li>In sites with the Moodle Mobile additional features plugin installed, go to <i>Site administration &gt; Plugins &gt; Local plugins &gt; Mobile additional features</i></li></ul>
+<h3><span class="mw-headline" id="Force_log_out">Force log out</span></h3>
+<p>Replace the Change site option to "Log out" so that users must enter their credentials on their next access. This is useful for custom mobile apps, as there is no reason for users wanting to switch to a different site.
+</p>
+<h3><span class="mw-headline" id="Disabled_features">Disabled features</span></h3>
+<p>The mobile app may be simplified by removing unwanted features. Some items may already be not available in the app because they are not enabled on your site.
+</p><p>Options to remove include:
+</p>
+<ul><li>Offline use</li>
+<li>Blocks</li>
+<li>Comments</li>
+<li>Ratings</li>
+<li>Tags</li>
+<li>Create new account</li>
+<li>Forgotten your username or password</li>
+<li>Responsive menu items</li>
+<li>View H5P content offline</li>
+<li>Dark mode</li>
+<li>Text filters</li>
+<li>Report builder</li>
+<li>Contact site support</li>
+<li>Global search</li>
+<li>Main menu
+<ul><li>Site home</li>
+<li>Dashboard</li>
+<li>My courses</li>
+<li>Messages</li>
+<li>Notifications</li>
+<li>Calendar</li>
+<li>Blog</li>
+<li>Tags</li>
+<li>Scan QR code</li></ul></li>
+<li>User account
+<ul><li>Grades</li>
+<li>Files</li>
+<li>Badges</li>
+<li>Blog</li>
+<li>My learning plans</li>
+<li>Policies and agreements</li>
+<li>Data privacy</li>
+<li>Switch account</li></ul></li>
+<li>Course
+<ul><li>Participants</li>
+<li>Grades</li>
+<li>Competencies</li>
+<li>Notes</li>
+<li>Course completion</li>
+<li>Blocks</li>
+<li>Blog</li>
+<li>Search</li>
+<li>Download course</li>
+<li>Download courses</li>
+<li>Activities overview</li></ul></li>
+<li>Participants
+<ul><li>Grades</li>
+<li>Course completion</li>
+<li>Badges</li>
+<li>Notes</li>
+<li>Blog</li>
+<li>Competencies</li>
+<li>Send message</li>
+<li>User picture</li></ul></li>
+<li>Files
+<ul><li>Private files</li>
+<li>Site files</li>
+<li>Upload</li></ul></li>
+<li>Modules (Each module can be disabled separately)</li>
+<li>Blocks (Each block available in the app can be disabled separately)</li>
+<li>Site plugins (Each site plugin available in the app can be disabled separately)</li>
+<li>External tool (LTI): Launch via site in system browser</li>
+<li>OAuth2 identity providers (Each identity provider available in the app can be disabled separately)</li></ul>
+<h3><span class="mw-headline" id="Custom_menu_items_and_custom_user_menu_items">Custom menu items and custom user menu items</span></h3>
+<ul><li><b>Custom menu items</b>: Additional items added to the app&rsquo;s main menu (the "More" menu), such as a direct link to an external gradebook or resource.</li>
+<li><b>Custom user menu items</b>: Additional items added directly to the user profile menu in the app.</li></ul>
+<h4><span class="mw-headline" id="How_to_Configure">How to Configure</span></h4>
+<ol><li>Go to <b>Site administration &gt; Mobile|Premium features</b>.</li>
+<li>Locate either <b>Custom menu items</b> or <b>Custom user menu items</b>.</li>
+<li>Enter each item on a new line, using <b>pipe characters (<code>|</code>)</b> to separate the fields:</li></ol>
+<pre><code>Item text | Link URL | Link-opening method | Language code | Icon name</code>
+</pre>
+<ul><li><b>Item text:</b> The label displayed to the user.</li>
+<li><b>Link URL:</b> The web address or internal path.</li>
+<li><b>Link-opening method:</b> How the link should open (see options below).</li>
+<li><b>Language code</b> <i>(Optional)</i>: Restricts the item to users of a specific language (e.g., <code>en</code>, <code>fr</code>).</li>
+<li><b>Icon name</b> <i>(Optional)</i>: The name of an icon from Ionicons.</li></ul>
+<h5><span class="mw-headline" id="Link-Opening_Methods">Link-Opening Methods</span></h5>
+<ul><li><b><code>app</code></b>: Links to an activity or feature supported natively within the app (e.g., standard Moodle activities).</li>
+<li><b><code>inappbrowser</code></b>: Opens external URLs or unsupported site features in an in-app browser overlay.</li>
+<li><b><code>browser</code></b>: Opens the link in the device's default external browser (outside the app).</li>
+<li><b><code>embedded</code></b>: Opens the link in an iframe on a new page inside the app.<blockquote><p><b>Note:</b> This option may require enabling <b>Allow frame embedding</b> (<code>allowframembedding</code>) under Site administration</p></blockquote></li></ul>
+<h5><span id="Language_Rules_.26_Behavior"></span><span class="mw-headline" id="Language_Rules_&amp;_Behavior">Language Rules &amp; Behavior</span></h5>
+<ul><li><b>Default language fallback:</b> If a user&rsquo;s app language isn't explicitly defined in your menu list, the <b>first language item</b> in your list will display by default. <i>(For example, if you have English (<code>en</code>) listed first and French (<code>fr</code>) second, a Spanish user will see the English item).</i></li>
+<li><b>Strict language matching:</b> To display an item <i>only</i> for specific languages, append <code>_only</code> to the language code:
+<ul><li><code>en_only</code></li>
+<li><code>es_only</code></li></ul></li>
+<li><b>Duplicates:</b> If multiple items share the exact same URL, opening method, and language, only the <b>first</b> custom item will be displayed.</li></ul>
+<h4><span class="mw-headline" id="Example">Example</span></h4>
+<p>The following line adds a menu item labeled <b>Academy Information</b> with a home icon, available only to English users, opening natively in the app:
+</p>
+<pre><code>Academy Information|https://yoursite.com/mod/page/view.php?id=X|app|en|home</code>
+</pre>
+<p>&#128161; <b>Troubleshooting Tip:</b> If you save your changes and the new menu item does not appear in the app, double-check that your entry follows the exact pipe-separated format above without missing required fields.
+</p>
+<h3><span class="mw-headline" id="Responsive_main_menu_items">Responsive main menu items</span></h3>
+<p>Main menu items on bottom tabs are moved to the side of the screen on big screens. Also the number of items displayed on the menu may vary:
+</p>
+<ul><li>On small screens (usually phones) from 2 to 5 items will be displayed depending on the size of the screen.</li>
+<li>On big screens (usually tablets an desktop version) more than 2 items will be displayed without limit.</li></ul>
+<p>The items that are not displayed in the main menu are shown on the more item (last menu item).
+</p><p>If <b>Responsive menu items</b> is selected in Disabled features items will be displayed in side or bottom anyway but 5 items will be displayed in all cases without depending on the size of the screen.
+</p>
+<h3><span class="mw-headline" id="Custom_language_strings">Custom language strings</span></h3>
+<p>Words and phrases displayed in the app can be customised via the "Site administration &gt; Mobile app features &gt; Custom language strings" (customlangstrings) setting.
+</p><p>Enter each custom language string on a new line with format: string identifier, custom language string and language code, separated by pipe characters. For example:
+</p>
+<pre>core.user.student|Learner|en
+core.user.student|Aprendiz|es
+</pre>
+<p>The complete list of string identifiers is listed in <a rel="nofollow" class="external free" href="https://latest.apps.moodledemo.net/assets/lang/en.json">https://latest.apps.moodledemo.net/assets/lang/en.json</a> (for the Workplace app use this <a rel="nofollow" class="external text" href="https://workplace.apps.moodledemo.net/assets/lang/en.json">link</a>).
+</p><p>The string identifier is before the colon. 
+</p><p>For example:
+</p><p>"core.user.student": "Student",
+</p><p>means that the string "Student" has string identifier "core.user.student".
+</p>
+<h3><span class="mw-headline" id="Allowlisted_JavaScript_domains">Allowlisted JavaScript domains</span></h3>
+<p><span class="small-info-right"><a href="4559ca34b9e04e34424b54f6039900b9.html" title="Category:New features">New feature<br>in <b>Moodle 5.2</b>!</a></span>
+</p><p><br>
+In this new setting you can enter the domains from which external JavaScript files are allowed to be loaded by the Moodle app when detected in user-generated HTML content.
+</p><p>Each domain must be written on a separate line. Scripts whose source belongs to one of the listed domains will be allowed to load. Scripts from other domains will continue to be blocked.
+</p><p>Inline JavaScript is always blocked and cannot be allowed on the mobile app.
+</p>
+<h2><span class="mw-headline" id="Analytics_and_stats">Analytics and stats</span></h2>
+<h3><span class="mw-headline" id="Usage_statistics_from_your_Moodle_site">Usage statistics from your Moodle site</span></h3>
+<p>To retrieve information about the Moodle app usage, site administrators and teachers can check the site, course or activity logs.
+</p>
+<ul><li>Site logs are available via "Site administration &gt; Reports &gt; Logs"</li>
+<li>Course logs are available via the course options (on top of the course page) "Reports &gt; Logs"</li>
+<li>Activity logs are available via the activity page, on top you will find "Reports &gt; Logs"</li></ul>
+<p>Among the log filters, there is a field called "All sources" with an option "Web Service/ws" that can be used to filter the entry logs generated by the mobile application.
+</p><p>You can compare the number of log entries generated by the "Web" versus "Web Service" (mobile app) to have an overall idea about how your users use the platform.
+</p><p>Please, notice that if you have custom "Web Services" or an installed plugin that uses Web Services, you will also see entries for them under the same filter.
+</p><p>If you have access to the site database, the table "external_tokens" has a "lastaccess" timestamp field that could be used to obtain active users of the app every day.
+</p>
+<h3><span class="mw-headline" id="Integration_with_Matomo_analytics">Integration with Matomo analytics</span></h3>
+<p>Note: This feature is available for <a rel="nofollow" class="external text" href="https://apps.moodle.com/">Premium app plans and Branded Moodle Apps</a>. To use this integration, you will need to have your own instance of Matomo. 
+</p><p>Matomo is an open source web analytics tool that helps you monitor traffic to your Moodle site, including app activity. 
+</p><p><b>Connecting to your Matomo instance in the Apps portal</b>
+</p>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:Captura_de_pantalla_2023-11-14_a_las_12.03.36.png" class="mw-file-description"><img src="images_en/thumb/5/52/Captura_de_pantalla_2023-11-14_a_las_12.03.36.png/51aaac3ff285bb25251b3f2713ea539d.png" decoding="async" width="300" height="187" class="mw-file-element" srcset="/502/en/images_en/thumb/5/52/Captura_de_pantalla_2023-11-14_a_las_12.03.36.png/450px-Captura_de_pantalla_2023-11-14_a_las_12.03.36.png 1.5x, /502/en/images_en/thumb/5/52/Captura_de_pantalla_2023-11-14_a_las_12.03.36.png/600px-Captura_de_pantalla_2023-11-14_a_las_12.03.36.png 2x" data-file-width="632" data-file-height="394"></a><figcaption>Moodle App Matomo Integration set up</figcaption></figure>
+<p>To use Matomo to track app activity on your Moodle site, you will need to have your own instance of Matomo analytics, and to add your Moodle site as one of your measurable websites (see instructions on <a rel="nofollow" class="external text" href="https://matomo.org/faq/how-to/create-and-manage-websites/">Matomo's website</a>). Then, follow these steps:
+</p>
+<ol><li>Log in to the <a rel="nofollow" class="external text" href="https://apps.moodle.com/">Apps portal</a>.</li>
+<li>Go to <b>App customisation</b> &gt; <b>Analytics</b> &gt; <b>Matomo analytics</b>.</li>
+<li>Check <b>Track app activity</b>.</li>
+<li>Add your <b>Matomo URL</b> - that's the URL of your Matomo instance, for example <a rel="nofollow" class="external free" href="https://yoursite.matomo.cloud/">https://yoursite.matomo.cloud</a>.</li>
+<li>Add the <b>Website ID</b> associated with your Moodle site in Matomo. To obtain this ID:
+<ol><li>Log in to your Matomo account.</li>
+<li>Go to <b>Administration</b> using the gear icon on the right side of the top navigation bar.</li>
+<li>On the left-hand panel, select <b>Websites</b> &gt; <b>Manage</b>.</li>
+<li>In your list of measurables, find the Moodle site in which you want to track app activity. The <b>ID</b> of the measurable is the <b>Website ID</b> you need to enter in the apps portal.</li></ol></li>
+<li>Click <b>Save changes</b> to establish the connection and start tracking app activity.</li>
+<li>If you'd like to stop tracking at any time, uncheck <b>Track app activity</b> and then save changes.</li></ol>
+<p><br>
+To filter Matomo data to isolate mobile app usage from Moodle site interactions, follow these steps:
+</p>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:Captura_de_pantalla_2023-11-14_a_las_12.05.05.png" class="mw-file-description"><img src="images_en/thumb/0/0c/Captura_de_pantalla_2023-11-14_a_las_12.05.05.png/438d12f935e4a58bb59d58e8f0716b2f.png" decoding="async" width="300" height="138" class="mw-file-element" srcset="/502/en/images_en/thumb/0/0c/Captura_de_pantalla_2023-11-14_a_las_12.05.05.png/450px-Captura_de_pantalla_2023-11-14_a_las_12.05.05.png 1.5x, /502/en/images_en/thumb/0/0c/Captura_de_pantalla_2023-11-14_a_las_12.05.05.png/600px-Captura_de_pantalla_2023-11-14_a_las_12.05.05.png 2x" data-file-width="629" data-file-height="289"></a><figcaption>Moodle App Matomo referrer set-up</figcaption></figure>
+<ol><li>Log in to your Matomo account.</li>
+<li>Click <b>All visits</b> at the top of the page</li>
+<li>Create a custom segment by applying this configuration: "Referrer URL" "is" "<a rel="nofollow" class="external free" href="https://moodlemobile/">https://moodlemobile</a>"</li>
+<li>To only see Moodle site interactions, do the following: "Referrer URL" "is not" "<a rel="nofollow" class="external free" href="https://moodlemobile/">https://moodlemobile</a>"</li></ol>
+<p>Please notice that the integration with Matomo does not work offline.
+</p>
+<h3><span class="mw-headline" id="Google_Analytics_for_Firebase">Google Analytics for Firebase</span></h3>
+<p>Only available when purchasing a <a rel="nofollow" class="external text" href="https://moodle.com/branded-app/">Branded Moodle App</a>. 
+</p><p>Google Analytics for Firebase is a free tool that provides valuable insights and data about how users interact with mobile apps.
+</p><p>Please notice that the integration with Google Analytics for Firebase does not work offline.
+</p>
+<h3><span class="mw-headline" id="Google_Play_and_Apple_App_Store_statistics">Google Play and Apple App Store statistics</span></h3>
+<p>If you have a custom mobile application, you can access statistics about app downloads and user engagement such as weekly active users and devices.
+</p><p>Google play:
+</p>
+<ol><li>Go to Google Play console: <a rel="nofollow" class="external free" href="https://play.google.com/console">https://play.google.com/console</a></li>
+<li>Select your app from the list.</li>
+<li>Navigate to specific tabs, such as "Statistics"</li></ol>
+<p><br>
+Apple App Store:
+</p>
+<ol><li>Log in to App Store Connect: <a rel="nofollow" class="external free" href="https://appstoreconnect.apple.com/">https://appstoreconnect.apple.com/</a></li>
+<li>Go to "App Analytics" from the dashboard.</li></ol>
+<h2><span class="mw-headline" id="Web_services_token_duration">Web services token duration</span></h2>
+<p>From Moodle 3.4 onwards, an admin can set how long a web services token created by a user (for example via the mobile app) is valid. (In previous versions of Moodle a token was valid for 3 months.)
+</p><p>The setting that dictates the previous 'User created token duration' (tokenduration) can be found under the Security section.
+</p>
+<h2><span id="App.27s_cache"></span><span class="mw-headline" id="App's_cache">App's cache</span></h2>
+<p>The app caches WebService requests to decrease data usage and increase the app's speed. When the app needs to get some data from Moodle, it will use a cached request as long as it isn't expired.
+</p><p>This cache was improved in Moodle App 3.7.0, now there are several cache times depending on the WS being called. This means that some requests will expire more often than others. Also, if the user isn't using a WiFi connection, the expiration time will also be longer to decrease the data usage. These cache times cannot be configured using a Moodle setting.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://moodle.academy/enrol/index.php?id=100">Moodle App Configuration</a> - An intermediate-level Moodle Academy course for administrators who want to configure their Moodle site settings to optimise the Moodle App experience for users.</li>
+<li><a href="84a43bc825da25f2c24489df16abf292.html" class="mw-redirect" title="Moodle Mobile FAQ">Moodle Mobile FAQ</a> for other administration-related mobile app questions.</li>
+<li><a href="c81594a0668a7af36df530228d2bf24f.html" title="Moodle app security">Moodle app security</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/dev/Moodle Mobile debugging WS requests">dev:Moodle Mobile debugging WS requests</a> - a guide to helping you find and report problems with the Moodle Mobile app on your site</li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/dev/ Moodle Mobile Roadmap">dev: Moodle Mobile Roadmap</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/dev/Moodle Mobile release notes">dev:Moodle Mobile release notes</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/dev/Moodle Mobile">Moodle Mobile developer docs</a></li>
+<li><a href="ace1e05e42a167393cef36c16acbcb88.html" title="Moodle Mobile availability plugin">Moodle Mobile availability plugin</a></li>
+<li><a href="db45e5528e10283418e7218f31129a0a.html" title="Mobile web services">Mobile web services</a></li></ul>
+<p><a rel="nofollow" class="external text" href="https://docs.moodle.org/fr/">Guide mobile pour administrateurs</a>
+<a rel="nofollow" class="external text" href="https://docs.moodle.org/es/Moodle">app gu&iacute;a para administradores</a>
+<a rel="nofollow" class="external text" href="https://docs.moodle.org/de/Moodle">App - Anleitung f&uuml;r Administrator/innen</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260822134842
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.066 seconds
+Real time usage: 0.608 seconds
+Preprocessor visited node count: 156/1000000
+Post&#8208;expand include size: 892/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 2260/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  107.627      1 -total
+  2.72%    2.929      2 Template:New_features
+  1.81%    1.947      1 Template:Mobile
+  1.36%    1.463      1 Template:Version
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:20138-0!canonical and timestamp 20260822134842 and revision id 156105. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Moodle_app_guide_for_admins&amp;oldid=156105">https://docs.moodle.org/502/en/index.php?title=Moodle_app_guide_for_admins&amp;oldid=156105</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="a479330450f1c1c65cafad679774cd9f.html" title="Category:Mobile">Mobile</a></li><li><a href="4559ca34b9e04e34424b54f6039900b9.html" title="Category:New features">New features</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhrogzui">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhroh08d"></button>
+					<div class="collapse navbar-collapse igdhroh08d" id="igdhroh08d">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Moodle_app_guide_for_admins" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Moodle_app_guide_for_admins" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_app_guide_for_admins&amp;oldid=156105" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_app_guide_for_admins&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Moodle_app_guía_para_administradores" title="Moodle app guía para administradores – español" lang="es" hreflang="es" data-title="Moodle app guía para administradores" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Moodle_App_-_Anleitung_für_Administrator/innen" title="Moodle App - Anleitung für Administrator/innen – Deutsch" lang="de" hreflang="de" data-title="Moodle App - Anleitung für Administrator/innen" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 23 July 2026, at 07:22.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":131,"wgPageParseReport":{"limitreport":{"cputime":"0.066","walltime":"0.608","ppvisitednodes":{"value":156,"limit":1000000},"postexpandincludesize":{"value":892,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2260,"limit":5000000},"timingprofile":["100.00%  107.627      1 -total","  2.72%    2.929      2 Template:New_features","  1.81%    1.947      1 Template:Mobile","  1.36%    1.463      1 Template:Version"]},"cachereport":{"timestamp":"20260822134842","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

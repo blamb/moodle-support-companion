@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Git for Administrators - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aeedb826ccef17a8491c822f","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Git_for_Administrators","wgTitle":"Git for Administrators","wgCurRevisionId":156191,"wgRevisionId":156191,"wgArticleId":12596,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages with syntax highlighting errors","Installation"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Git_for_Administrators","wgRelevantArticleId":12596,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Git","wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgInternalRedirectTargetUrl":"/502/en/Git_for_Administrators","wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="593ae70845242c812b361a340a53fb46.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.pygments%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Git_for_Administrators">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Git_for_Administrators rootpage-Git_for_Administrators layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkbwh923"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdkbwh923" id="igdkbwh923">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Git+for+Administrators" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Git">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Git">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Git">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="14569a6d13e60324f1803b54b2ffb589.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Git_for_Administrators&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Git_for_Administrators&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Git_for_Administrators&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Git for Administrators</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"><span class="mw-redirectedfrom">(Redirected from <a href="https://docs.moodle.org/502/en/index.php?title=Git&amp;redirect=no" class="mw-redirect" title="Git">Git</a>)</span></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a> ► <a class="mw-selflink selflink">Git for Administrators</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a></div>	
+<div class="content">
+<ul><li><a href="553207f76ae3b1e85403f96c2ca316f1.html" title="Installing Moodle">Installing Moodle</a></li>
+<li><a href="399ca91535c3410845bff1400293dbc5.html" title="Installation quick guide">Installation quick guide</a></li>
+<li><a href="37fc181470a569556f94c1f35940d0a7.html" title="Cron">Cron</a></li>
+<li><a href="081d50b0942d418fa28114398527e388.html" title="Nginx">Nginx</a></li>
+<li><a href="6831e4affebb174320f861bc76b08775.html" title="Apache">Apache</a></li>
+<li><a href="68065410acf60db421f4e2aac18bc951.html" title="Internet Information Services">IIS</a></li>
+<li><a href="838fe95223f139a5c86fa0eace52fb64.html" title="Configuring the Router">Routing</a></li>
+<li><a href="b8a47099f49d74586081af402e096238.html" title="Installing plugins">Installing plugins</a></li>
+<li><a href="52d1d262bc125752f9747df1abc77de6.html" title="Installation FAQ">Installation FAQ</a></li>
+<li><a href="b38923733584457a7e29bf0e898e9c97.html" title="Upgrading">Upgrading</a></li>
+<li><a href="451fc5f44047acbcf3c960e787eb56c6.html" title="Upgrade overview">Upgrade overview</a></li>
+<li><a href="784f6d5df0514efb399c81a6f803d2c7.html" title="Automatic updates deployment">Automatic updates deployment</a></li>
+<li><a class="mw-selflink selflink">Git guide</a></li>
+<li><a href="8428d1ac0de33e2b0f542d6d962f1fa6.html" title="Administration via command line">Administration via command line</a></li>
+<li><a href="6aeead2c752a1a71fc9b37a62d913491.html" title="Upgrading FAQ">Upgrading FAQ</a></li>
+<li><a href="1a1489d94778d66d38f3a8e70fedc938.html" title="Moodle migration">Moodle migration</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p><br>
+This page describes how to maintain a copy of Moodle on your production server which can easily be upgraded using Git. If you have customisations of Moodle core code, you are advised to follow the instructions in the <a href="https://docs.moodle.org/dev/Git_for_developers" class="extiw" title="dev:Git for developers">Git for developers guide</a>.
+</p><p>To get the most of Git it is worth making the effort to understand its basic concepts - see the section below. It may be a bit of a steep learning curve if you are used to other version control systems, but it is worth it.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Getting_hold_of_Git_(Windows,_OSX,_Linux_and_others)"><span class="tocnumber">1</span> <span class="toctext">Getting hold of Git (Windows, OSX, Linux and others)</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Moodle_branch_names"><span class="tocnumber">2</span> <span class="toctext">Moodle branch names</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Obtaining_the_code_from_Git"><span class="tocnumber">3</span> <span class="toctext">Obtaining the code from Git</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Updating_your_Moodle_Release"><span class="tocnumber">4</span> <span class="toctext">Updating your Moodle Release</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Checking_what_version_you_are_currently_using"><span class="tocnumber">4.1</span> <span class="toctext">Checking what version you are currently using</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Updating_your_installation_with_minor_releases"><span class="tocnumber">4.2</span> <span class="toctext">Updating your installation with minor releases</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Upgrading_a_minor_release:_If_you_are_using_a_git_tag"><span class="tocnumber">4.2.1</span> <span class="toctext">Upgrading a minor release: If you are using a git tag</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Upgrading_a_minor_release:_If_you_are_using_a_major_release_branch"><span class="tocnumber">4.2.2</span> <span class="toctext">Upgrading a minor release: If you are using a major release branch</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#Upgrading_to_a_newer_major_release"><span class="tocnumber">4.3</span> <span class="toctext">Upgrading to a newer major release</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Upgrading_to_a_new_major_release:_If_you_are_using_a_git_tag"><span class="tocnumber">4.3.1</span> <span class="toctext">Upgrading to a new major release: If you are using a git tag</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Upgrading_to_a_major_release:_If_you_are_using_a_git_branch"><span class="tocnumber">4.3.2</span> <span class="toctext">Upgrading to a major release: If you are using a git branch</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Remember_to_move_your_plugins_too!"><span class="tocnumber">4.4</span> <span class="toctext">Remember to move your plugins too!</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Installing_Moodle_plugins"><span class="tocnumber">5</span> <span class="toctext">Installing Moodle plugins</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Installing_a_Moodle_plugin_from_its_Git_repository"><span class="tocnumber">5.1</span> <span class="toctext">Installing a Moodle plugin from its Git repository</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="#Updating_plugins_installed_from_Git_repositories"><span class="tocnumber">5.1.1</span> <span class="toctext">Updating plugins installed from Git repositories</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="#Installing_and_maintaining_contributed_extensions_using_Git_submodules"><span class="tocnumber">5.2</span> <span class="toctext">Installing and maintaining contributed extensions using Git submodules</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="#Installing_a_new_extension_into_an_existing_Moodle"><span class="tocnumber">5.2.1</span> <span class="toctext">Installing a new extension into an existing Moodle</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Maintaining_Git_submodules"><span class="tocnumber">5.2.2</span> <span class="toctext">Maintaining Git submodules</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Advanced_Git_concepts"><span class="tocnumber">6</span> <span class="toctext">Advanced Git concepts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#Creating_your_own_branch"><span class="tocnumber">6.1</span> <span class="toctext">Creating your own branch</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Getting_hold_of_Git_.28Windows.2C_OSX.2C_Linux_and_others.29"></span><span class="mw-headline" id="Getting_hold_of_Git_(Windows,_OSX,_Linux_and_others)">Getting hold of Git (Windows, OSX, Linux and others)</span></h2>
+<p>For information on how to download and install Git, see <a rel="nofollow" class="external free" href="https://git-scm.com/download">https://git-scm.com/download</a>.
+</p><p>Once you have downloaded and installed your OS relevant git installation, the git commands in this document should work with your operating system.
+</p>
+<h2><span class="mw-headline" id="Moodle_branch_names">Moodle branch names</span></h2>
+<p>Each release of Moodle has:
+</p>
+<ul><li>a git <i>tag</i>, which is the version number of the release, prefixed with the letter <code>v</code> (for example, <code>v5.1.0</code>), and</li>
+<li>a <i>git branch</i>, for example <code>MOODLE_502_STABLE</code> for the lifetime of that major release.</li></ul>
+<p>Git tags are used to identify specific releases of Moodle and are the source of the official releases, the downloadable zip files, tar files, and so on.
+</p><p>We recommend that production Moodle sites always use an officially released version using the git tag, for example <code>v5.1.0</code>, or <code>v5.0.4</code>.
+</p><p>Whilst you <i>can</i> use the branch for each major version, that is <code>MOODLE_502_STABLE</code> for the 5.2 major version, it is generally not advised. Whilst new features and improvements are normally only made to the <code>main</code> development branch, the major version branches will get weekly updates which may not be suited to production environments.
+</p><p><b>Note</b>: The word <code>STABLE</code> in the branch name is intended to indicate that the branch is for a <i>released</i> version of Moodle.
+</p><p><b>Important</b>: You should not use alpha, beta, release-candidates, or code from the <code>main</code> branch for production sites. It could have significant bugs.
+</p>
+<h2><span class="mw-headline" id="Obtaining_the_code_from_Git">Obtaining the code from Git</span></h2>
+<p>The command line version of Git is discussed here. In most cases you will find that Graphical clients provide the same functionality and will use similar naming for the terminology. Please refer to the documentation for that client for more information.
+</p><p>You can find the official Moodle git repository at <a rel="nofollow" class="external free" href="git://git.moodle.org/moodle.git">git://git.moodle.org/moodle.git</a> (with an official clone at <a rel="nofollow" class="external free" href="https://github.com/moodle/moodle.git">https://github.com/moodle/moodle.git</a>). To initialize your local checkout, use
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>v5.2.0<span class="w"> </span>https://github.com/moodle/moodle.git<span class="w"> </span>/path/to/your/moodle/storage/area
+</pre></div>
+<ul><li>The <code>-b v5.2.0</code> option tells git to checkout the branch or tag <code>v5.2.0</code> after the clone is complete. If you omit this option, git will checkout the default branch, which is <code>main</code>.</li></ul>
+<ul><li>The last argument is the path to the directory where you want to store your Moodle installation.</li></ul>
+<p>You may want to consider creating your own branch for your production site - see the section below.
+</p><p><b>Important</b>: From Moodle 5.1 onwards you should <i><b>not</b></i> place your git checkout in a web-accessible location. Instead you should either:
+</p>
+<ul><li>configure your web server to point to the <code>public</code> subdirectory of your Moodle installation; or</li>
+<li>use a technique such as symlinking to place the <code>public</code> directory into your web root.</li></ul>
+<h2><span class="mw-headline" id="Updating_your_Moodle_Release">Updating your Moodle Release</span></h2>
+<p>In most cases these instructions will be very similar whether you are upgrading between major releases (for example, from 5.1 to 5.2), or updating to a newer minor release (for example, from 5.2.0 to 5.2.1).
+</p><p><b>Important</b>: Always ensure you have a full backup of your Moodle site (both code and database) before performing any upgrade or update.
+</p><p>If you have any customisations to Moodle core code, you should follow the instructions in the <a href="https://docs.moodle.org/dev/Git_for_developers" class="extiw" title="dev:Git for developers">Git for developers guide</a> instead.
+</p><p>If you have any custom plugins installed, you should ensure that they are compatible with the version of Moodle you are upgrading to. You may need to update these plugins separately.
+</p>
+<h3><span class="mw-headline" id="Checking_what_version_you_are_currently_using">Checking what version you are currently using</span></h3>
+<p>To check which version of Moodle you are currently using, you can use the commands below:
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># If you are following a major release branch:</span>
+git<span class="w"> </span>branch
+
+<span class="c1"># If you are using a git tag and are on Moodle 5.1 or later:</span>
+git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>-1<span class="w"> </span>public/version.php
+
+<span class="c1"># If you are using a git tag and are on Moodle 5.0 or earlier:</span>
+git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>-1<span class="w"> </span>version.php
+</pre></div>
+<p>If you are tracking a git tag, you should see something like this:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre>&#10140;  examplesite git:(eb47eff071) git log --oneline -1 public/version.php
+eb47eff071 (HEAD, tag: v5.1.0) Moodle release 5.1</pre></div>
+<h3><span class="mw-headline" id="Updating_your_installation_with_minor_releases">Updating your installation with minor releases</span></h3>
+<p>To update your Moodle installation to the latest minor release of your currently installed major release, you simply need to fetch the latest changes from the Moodle git repository, and then check out the appropriate branch or tag.
+</p>
+<h4><span class="mw-headline" id="Upgrading_a_minor_release:_If_you_are_using_a_git_tag">Upgrading a minor release: If you are using a git tag</span></h4>
+<p>To switch to the latest minor release of your currently installed major release, you can use the commands below (replace <code>v5.2.x</code> with the appropriate tag for your intended release):
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/path/to/your/moodle
+git<span class="w"> </span>fetch<span class="w"> </span>origin
+git<span class="w"> </span>checkout<span class="w"> </span>v5.2.x
+</pre></div>
+<h4><span class="mw-headline" id="Upgrading_a_minor_release:_If_you_are_using_a_major_release_branch">Upgrading a minor release: If you are using a major release branch</span></h4>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/path/to/your/moodle
+git<span class="w"> </span>fetch<span class="w"> </span>origin
+git<span class="w"> </span>rebase<span class="w"> </span>origin/MOODLE_502_STABLE
+</pre></div>
+<p>If this is a production site you should still consider the <a href="b617a31454fe950f571a7d1cf87033a2.html" class="mw-redirect" title="Upgrade">Upgrade</a> instructions (including taking backups).
+</p>
+<h3><span class="mw-headline" id="Upgrading_to_a_newer_major_release">Upgrading to a newer major release</span></h3>
+<p>When you want to upgrade to a newer major release, you will need to tell your git installation to track the newer release instead of the release that you currently have installed and are tracking.
+</p><p>You should ensure that you have updated your installation with the latest minor release of your currently installed Moodle version first (as described in the section above). This will also download the changes for newer Moodle versions (but not yet make use of them).
+</p><p>You should put your site into maintenance mode, or disable the website, before starting the upgrade.
+</p>
+<h4><span class="mw-headline" id="Upgrading_to_a_new_major_release:_If_you_are_using_a_git_tag">Upgrading to a new major release: If you are using a git tag</span></h4>
+<p>To switch to a newer major release using git tags, you can use the commands below (replace <code>v5.2.0</code> with the appropriate tag for your intended release):
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/path/to/your/moodle/folder
+
+git<span class="w"> </span>fetch<span class="w"> </span>origin
+git<span class="w"> </span>checkout<span class="w"> </span>v5.2.0
+</pre></div>
+<h4><span class="mw-headline" id="Upgrading_to_a_major_release:_If_you_are_using_a_git_branch">Upgrading to a major release: If you are using a git branch</span></h4>
+<p>To switch to a newer major release using git branches, you can use the commands below (replace <code>MOODLE_502_STABLE</code> with the appropriate branch for your intended release):
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/path/to/your/moodle/folder
+
+<span class="c1"># Make a local branch for the newer release from the remote repo</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>MOODLE_502_STABLE<span class="w"> </span>origin/MOODLE_502_STABLE
+</pre></div>
+<p>Your website folder now includes the files for the newer Moodle version, but to complete the Moodle upgrade, you will either need to <a href="b38923733584457a7e29bf0e898e9c97.html" title="Upgrading">complete the upgrade via the web browser</a>, or <a href="8428d1ac0de33e2b0f542d6d962f1fa6.html" title="Administration via command line">use the command line upgrade script</a>.
+</p>
+<h3><span id="Remember_to_move_your_plugins_too.21"></span><span class="mw-headline" id="Remember_to_move_your_plugins_too!">Remember to move your plugins too!</span></h3>
+<p>If upgrading from Moodle 5.0 or earlier to Moodle 5.1 or later, you will also need to move any plugins you have installed into their new locations under the <code>/public</code> subdirectory. This is <i>not</i> done automatically when you checkout the new Moodle 5.1 code.
+</p>
+<h2><span class="mw-headline" id="Installing_Moodle_plugins">Installing Moodle plugins</span></h2>
+<h3><span class="mw-headline" id="Installing_a_Moodle_plugin_from_its_Git_repository">Installing a Moodle plugin from its Git repository</span></h3>
+<p>This is one way to handle adding plugins from other Git repositories into your Moodle repository.
+</p><p>For example, let us say we want to install the <a href="74a7a048c2b3d0b656ff0ab75cd49712.html" title="Certificate module">Certificate module</a> from its Git repository into our Moodle 5.2.
+</p><p>After finding the location of the code for your desired plugin (in this case, <code><a rel="nofollow" class="external free" href="https://github.com/markn86/moodle-mod_certificate.git">https://github.com/markn86/moodle-mod_certificate.git</a></code>), you can use the following commands:
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/path/to/your/moodle/
+$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/markn86/moodle-mod_certificate.git<span class="w"> </span>public/mod/certificate
+</pre></div>
+<p>This will create a new directory <code>public/mod/certificate/</code> within your Moodle installation and populate it with the code from the plugin's Git repository.
+</p><p>If you check the status of your Moodle repository now, you will see that Git is reporting an untracked directory:
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>status
+HEAD<span class="w"> </span>detached<span class="w"> </span>at<span class="w"> </span>v5.1.0
+Untracked<span class="w"> </span>files:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">"git add &lt;file&gt;..."</span><span class="w"> </span>to<span class="w"> </span>include<span class="w"> </span><span class="k">in</span><span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+<span class="w">	</span>public/mod/certificate/
+
+nothing<span class="w"> </span>added<span class="w"> </span>to<span class="w"> </span>commit<span class="w"> </span>but<span class="w"> </span>untracked<span class="w"> </span>files<span class="w"> </span>present<span class="w"> </span><span class="o">(</span>use<span class="w"> </span><span class="s2">"git add"</span><span class="w"> </span>to<span class="w"> </span>track<span class="o">)</span>
+</pre></div>
+<p>You can stop the warning about the untracked directory by adding it to your Git ignore list:
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/public/mod/certificate/<span class="w"> </span>&gt;&gt;<span class="w"> </span>.git/info/exclude
+</pre></div>
+<h4><span class="mw-headline" id="Updating_plugins_installed_from_Git_repositories">Updating plugins installed from Git repositories</span></h4>
+<p>To fetch updates for the plugin, you need to go into the plugin directory and fetch the changes from upstream:
+</p><p>To update your Moodle installation now, you must visit both Git repositories and pull changes from upstream.
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/path/to/your/moodle/
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>mod/certificate
+$<span class="w"> </span>git<span class="w"> </span>fetch<span class="w"> </span>origin
+$<span class="w"> </span>git<span class="w"> </span>rebase
+</pre></div>
+<p>Writing a shell script with these lines in the root of Moodle installation is a very good idea. Otherwise it is easy to forget what Git repositories are there within the main Moodle repository.
+</p>
+<h3><span class="mw-headline" id="Installing_and_maintaining_contributed_extensions_using_Git_submodules">Installing and maintaining contributed extensions using Git submodules</span></h3>
+<p>Git submodules are a great way to maintain external Git repositories within your main Moodle repository, but they are a more advanced Git concept.
+</p><p>A step-by-step explanation will be provided, but in order to follow these steps it is helpful to understand, what these commands do.
+</p><p>Advanced options and commands can be found at <a rel="nofollow" class="external text" href="https://git-scm.com/book/en/v2/Git-Tools-Submodules%7Cthe">Git book</a>.
+</p><p>If you have any questions about Git submodules, please visit the site above first.
+</p>
+<h4><span class="mw-headline" id="Installing_a_new_extension_into_an_existing_Moodle">Installing a new extension into an existing Moodle</span></h4>
+<p>As an example we use the <a href="74a7a048c2b3d0b656ff0ab75cd49712.html" title="Certificate module">Certificate module</a> from the previous section.
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/path/to/your/moodle
+$<span class="w"> </span>git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>https://github.com/markn86/moodle-mod_certificate.git<span class="w"> </span>public/mod/certificate
+</pre></div>
+<p>Note, that Git is reporting two new files in the repository:
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>status
+<span class="c1"># On branch MOODLE_500_STABLE</span>
+<span class="c1"># Changes to be committed:</span>
+<span class="c1">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="c1">#</span>
+<span class="c1">#	new file:   .gitmodules</span>
+<span class="c1">#	new file:   mod/certificate</span>
+<span class="c1">#</span>
+</pre></div>
+<p>The file <code>.gitmodules</code> contains the local path and url of all your submodules.
+</p><p>It has to be committed, if you intend to clone the repository later (see the page <a href="8d42631aee611034bff6291f4be2fc28.html" title="Moodle development environment with Git submodules">Moodle development environment with Git submodules</a>).
+</p><p>Before committing, make sure to check the configuration of the plugin's Git repository, since the automatically generated settings may be not sufficient.
+</p><p>For future updates it is helpful, to track the remote branch, which corresponds to the Moodle version of your repository.
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>mod/certificate
+$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-avv
+*<span class="w"> </span>main<span class="w">                            </span>345f5b1<span class="w"> </span><span class="o">[</span>origin/main<span class="o">]</span><span class="w"> </span>Replaced<span class="w"> </span>deprecated<span class="w"> </span><span class="k">function</span>
+<span class="w">  </span>remotes/origin/HEAD<span class="w">             </span>-&gt;<span class="w"> </span>origin/main
+<span class="w">  </span>remotes/origin/MOODLE_20_STABLE<span class="w"> </span>1aa1040<span class="w"> </span>Added<span class="w"> </span>option<span class="w"> </span>to<span class="w"> </span>print<span class="w"> </span><span class="s1">'grade category'</span><span class="w"> </span>grade
+<span class="w">  </span>remotes/origin/MOODLE_21_STABLE<span class="w"> </span>1aa1040<span class="w"> </span>Added<span class="w"> </span>option<span class="w"> </span>to<span class="w"> </span>print<span class="w"> </span><span class="s1">'grade category'</span><span class="w"> </span>grade
+<span class="w">  </span>remotes/origin/MOODLE_22_STABLE<span class="w"> </span>1aa1040<span class="w"> </span>Added<span class="w"> </span>option<span class="w"> </span>to<span class="w"> </span>print<span class="w"> </span><span class="s1">'grade category'</span><span class="w"> </span>grade
+<span class="w">  </span>remotes/origin/MOODLE_23_STABLE<span class="w"> </span>fe047de<span class="w"> </span>Check<span class="w"> </span>that<span class="w"> </span>the<span class="w"> </span><span class="k">function</span><span class="w"> </span>exists<span class="w"> </span>rather<span class="w"> </span>than<span class="w"> </span>relying<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>Moodle<span class="w"> </span>version
+<span class="w">  </span>remotes/origin/MOODLE_24_STABLE<span class="w"> </span>1051f7d<span class="w"> </span>CONTRIB-4892<span class="w"> </span>Fixed<span class="w"> </span>the<span class="w"> </span>email<span class="w"> </span>to<span class="w"> </span>others<span class="w"> </span>functionality
+<span class="w">  </span>remotes/origin/MOODLE_25_STABLE<span class="w"> </span>cdb221a<span class="w"> </span>CONTRIB-4946:<span class="w"> </span>Removed<span class="w"> </span>character<span class="w"> </span>from<span class="w"> </span>language<span class="w"> </span>file<span class="w"> </span>breaking<span class="w"> </span>AMOS
+<span class="w">  </span>remotes/origin/MOODLE_26_STABLE<span class="w"> </span>696802a<span class="w"> </span>Increased<span class="w"> </span>version
+<span class="w">  </span>remotes/origin/MOODLE_27_STABLE<span class="w"> </span>d3c0379<span class="w"> </span>Increased<span class="w"> </span>version
+<span class="w">  </span>remotes/origin/MOODLE_28_STABLE<span class="w"> </span>fa8df83<span class="w"> </span>Increased<span class="w"> </span>version
+<span class="w">  </span>remotes/origin/MOODLE_29_STABLE<span class="w"> </span>3f03740<span class="w"> </span>Replaced<span class="w"> </span>deprecated<span class="w"> </span><span class="k">function</span>
+<span class="w">  </span>remotes/origin/main<span class="w">             </span>345f5b1<span class="w"> </span>Replaced<span class="w"> </span>deprecated<span class="w"> </span><span class="k">function</span>
+</pre></div>
+<p>Git created the branch <b>main</b> which tracks <b>origin/main</b> automatically, because the remote repository has checked out <b>main</b>.
+Therefore, create a new branch, which tracks the appropriate remote branch.
+Of course, this is only possible, if the remote repository offers those branches. 
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>MOODLE_29_STABLE<span class="w"> </span>origin/MOODLE_29_STABLE
+Branch<span class="w"> </span>MOODLE_29_STABLE<span class="w"> </span><span class="nb">set</span><span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span>track<span class="w"> </span>remote<span class="w"> </span>branch<span class="w"> </span>MOODLE_29_STABLE<span class="w"> </span>from<span class="w"> </span>origin.
+Switched<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>branch<span class="w"> </span><span class="s1">'MOODLE_29_STABLE'</span>
+$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span>main
+Deleted<span class="w"> </span>branch<span class="w"> </span>main<span class="w"> </span><span class="o">(</span>was<span class="w"> </span>345f5b1<span class="o">)</span>.
+</pre></div>
+<p>It is not necessary to delete the <b>main</b> branch, but it's useless to keep it.
+In fact, these settings don't need to be touched afterwards.
+</p><p>The final step is to commit the changes to the main repository.
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/path/to/your/moodle
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">"New extension mod_certificate installed"</span>
+</pre></div>
+<p>It has to be ensured, that the commit includes only the changes for the new Git submodule (since <b>-a</b> commits all non-staged changes).
+</p>
+<h4><span class="mw-headline" id="Maintaining_Git_submodules">Maintaining Git submodules</span></h4>
+<p>Maintaining a set of submodules is extremely easy.
+Consider a Moodle repository with several submodules installed.
+Keep in mind, that the extension <b>mod_mylittleextension</b> is a fake plugin, created for a test scenario in this example.
+It is not an official Moodle module. For updating all your submodules at once, type in:
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/path/to/your/moodle
+$<span class="w"> </span>git<span class="w"> </span>submodule<span class="w"> </span>foreach<span class="w"> </span>git<span class="w"> </span>pull
+Entering<span class="w"> </span><span class="s1">'block/coursefeedback'</span>
+Already<span class="w"> </span>up-to-date.
+Entering<span class="w"> </span><span class="s1">'mod/certificate'</span>
+Already<span class="w"> </span>up-to-date.
+Entering<span class="w"> </span><span class="s1">'mod/mylittleextension'</span>
+remote:<span class="w"> </span>Counting<span class="w"> </span>objects:<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Compressing<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">4</span>/4<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Total<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>reused<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>
+Unpacking<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">4</span>/4<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+From<span class="w"> </span>/local/repositories/mle
+<span class="w">   </span>89d9eae..64c122d<span class="w">  </span>main<span class="w">     </span>-&gt;<span class="w"> </span>origin/main
+Updating<span class="w"> </span>89d9eae..64c122d
+Fast-forward
+<span class="w"> </span>index.html<span class="w">  </span><span class="p">|</span><span class="w">    </span><span class="m">9</span><span class="w"> </span>+++++++++
+<span class="w"> </span>version.php<span class="w"> </span><span class="p">|</span><span class="w">    </span><span class="m">6</span><span class="w"> </span>+++---
+<span class="w"> </span><span class="m">2</span><span class="w"> </span>files<span class="w"> </span>changed,<span class="w"> </span><span class="m">12</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>,<span class="w"> </span><span class="m">3</span><span class="w"> </span>deletions<span class="o">(</span>-<span class="o">)</span>
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>index.html
+$<span class="w"> </span>git<span class="w"> </span>status
+<span class="c1"># On branch MOODLE_29_STABLE</span>
+<span class="c1"># Changes not staged for commit:</span>
+<span class="c1">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="c1">#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)</span>
+<span class="c1">#</span>
+<span class="c1">#	modified:   mod/mylittleextension (new commits)</span>
+<span class="c1">#</span>
+</pre></div>
+<p>The command <b>git submodule foreach [another command]</b> walks through all submodule repositories and executes what is specified by <b>[another command]</b>.
+In this case it is <b>git pull</b>.
+Therefore, the module mylittleextension was updated and the main repository isn't clean anymore until changes are committed:
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Plugin updates"</span>
+</pre></div>
+<p>Maintaining plugins with Git submodules has also another application than simplifying the update process.
+In a greater scale it can be used to maintain a Moodle project, where multiple developers need to have an exact copy of your moodle without organizing external plugins manually.
+You can read more about this topic at the page <a href="8d42631aee611034bff6291f4be2fc28.html" title="Moodle development environment with Git submodules">Moodle development environment with Git submodules</a>.
+</p>
+<h2><span class="mw-headline" id="Advanced_Git_concepts">Advanced Git concepts</span></h2>
+<h3><span class="mw-headline" id="Creating_your_own_branch">Creating your own branch</span></h3>
+<p>It's a great idea to create your own branch for your production site, even if you don't plan to make any code changes. This way, if you do need to make any customisations in the future, you can do so without affecting the main Moodle code and you can easily merge in future updates from the official Moodle repository.
+</p><p>To create your own branch, use the following commands:
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/path/to/your/moodle
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>myproductionbranch
+</pre></div>
+<p>You can replace <code>myproductionbranch</code> with a name of your choice. You can then use this branch to make any customisations you need.
+</p><p>You may also wish to create a new branch for each new major version of Moodle that you upgrade to, for example:
+</p>
+<div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span><span class="m">5</span>.1-example.com
+</pre></div>
+<p><br>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="89e0255d983c1ae6b50eb13ddeeb0a56.html" title="Windows installation using Git">Windows installation using Git</a></li>
+<li><a href="652e793dc49606402847b07a3e5a6945.html" class="mw-redirect" title="Git for Mac">Git for Mac</a></li>
+<li><a href="https://docs.moodle.org/dev/Moodle_versions" class="extiw" title="dev:Moodle versions">dev:Moodle versions</a></li>
+<li>For fixing a Tracker Issue (MDL) / Forking Moodle / CONTRIButing code <a href="https://docs.moodle.org/dev/User:Sam_Hemelryk/My_Moodle_Git_workflow" class="extiw" title="dev:User:Sam Hemelryk/My Moodle Git workflow">User:Sam_Hemelryk/My_Moodle_Git_workflow</a></li>
+<li><a href="8c9971164c5ebe2fe373c08f1cdaea16.html" title="Moodle Production Server with GIT">Case study Git + Moodle from Technical University Berlin</a></li></ul>
+<dl><dt>Moodle forum discussions</dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=255175">Github and Moodle deployment for production</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=168094">GIT help needed</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=231046">Clear git guide for Admins (not developers)</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=393756">Best way to use Git</a></li></ul>
+<dl><dt>External resources</dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="http://thamblings.blogspot.com.au/2013/07/upgrading-moodle-from-git.html">Deploying Moodle from git - Blog post from a production experience</a></li>
+<li><a rel="nofollow" class="external text" href="http://gitref.org/">Git Reference</a></li>
+<li><a rel="nofollow" class="external text" href="http://progit.org/book/">Pro Git book</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822072554
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.044 seconds
+Real time usage: 2.360 seconds
+Preprocessor visited node count: 184/1000000
+Post&#8208;expand include size: 671/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 19/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 15961/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 2294.479      1 -total
+  0.12%    2.808      1 Template:Installing_Moodle
+  0.12%    2.757      1 Template:Version
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:12596-0!canonical and timestamp 20260822072554 and revision id 156191. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Git_for_Administrators&amp;oldid=156191">https://docs.moodle.org/502/en/index.php?title=Git_for_Administrators&amp;oldid=156191</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://docs.moodle.org/502/en/index.php?title=Category:Pages_with_syntax_highlighting_errors&amp;action=edit&amp;redlink=1" class="new" title="Category:Pages with syntax highlighting errors (page does not exist)">Pages with syntax highlighting errors</a></li><li><a href="7f264aa70db3768dcef1896a8ec93e70.html" title="Category:Installation">Installation</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdkbwhco4">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkbwhdbb"></button>
+					<div class="collapse navbar-collapse igdkbwhdbb" id="igdkbwhdbb">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Git_for_Administrators" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Git_for_Administrators" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Git_for_Administrators&amp;oldid=156191" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Git_for_Administrators&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/管理者用Git" title="管理者用Git – 日本語" lang="ja" hreflang="ja" data-title="管理者用Git" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Git_pour_administrateurs" title="Git pour administrateurs – français" lang="fr" hreflang="fr" data-title="Git pour administrateurs" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Git_para_Administradores" title="Git para Administradores – español" lang="es" hreflang="es" data-title="Git para Administradores" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Git_für_Administratoren" title="Git für Administratoren – Deutsch" lang="de" hreflang="de" data-title="Git für Administratoren" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 20 August 2026, at 05:24.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":189,"wgPageParseReport":{"limitreport":{"cputime":"0.044","walltime":"2.360","ppvisitednodes":{"value":184,"limit":1000000},"postexpandincludesize":{"value":671,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":19,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":15961,"limit":5000000},"timingprofile":["100.00% 2294.479      1 -total","  0.12%    2.808      1 Template:Installing_Moodle","  0.12%    2.757      1 Template:Version"]},"cachereport":{"timestamp":"20260822072554","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

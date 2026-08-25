@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>FreeBSD Installing - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"c042bf1af7a8d3e08cd99de6","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"FreeBSD_Installing","wgTitle":"FreeBSD Installing","wgCurRevisionId":139578,"wgRevisionId":139578,"wgArticleId":17108,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"FreeBSD_Installing","wgRelevantArticleId":17108,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/FreeBSD_Installing">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-FreeBSD_Installing rootpage-FreeBSD_Installing layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdivto5e9"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdivto5e9" id="igdivto5e9">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=FreeBSD+Installing" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/FreeBSD_Installing">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/FreeBSD_Installing">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/FreeBSD_Installing">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="1b5ff5729158e507ff0fa65c2c2fcb87.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:FreeBSD_Installing&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=FreeBSD_Installing&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=FreeBSD_Installing&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">FreeBSD Installing</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Using_Ports"><span class="tocnumber">1</span> <span class="toctext">Using Ports</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Quick_install"><span class="tocnumber">2</span> <span class="toctext">Quick install</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Step_by_step_install"><span class="tocnumber">3</span> <span class="toctext">Step by step install</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Install_Apache"><span class="tocnumber">3.1</span> <span class="toctext">Install Apache</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Install_MySQL"><span class="tocnumber">3.2</span> <span class="toctext">Install MySQL</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Install_PHP"><span class="tocnumber">3.3</span> <span class="toctext">Install PHP</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Install_GIT"><span class="tocnumber">3.4</span> <span class="toctext">Install GIT</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Preparing_Moodle"><span class="tocnumber">3.5</span> <span class="toctext">Preparing Moodle</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Download_Moodle"><span class="tocnumber">3.5.1</span> <span class="toctext">Download Moodle</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Create_Moodledata"><span class="tocnumber">3.5.2</span> <span class="toctext">Create Moodledata</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Create_Moodledb"><span class="tocnumber">3.5.3</span> <span class="toctext">Create Moodledb</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Installing_Moodle"><span class="tocnumber">3.6</span> <span class="toctext">Installing Moodle</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#CLI"><span class="tocnumber">3.6.1</span> <span class="toctext">CLI</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Web_Installer"><span class="tocnumber">3.6.2</span> <span class="toctext">Web Installer</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="#Post-installation"><span class="tocnumber">3.7</span> <span class="toctext">Post-installation</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#Configure_a_cronjob"><span class="tocnumber">3.7.1</span> <span class="toctext">Configure a cronjob</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Check_Moodle_configurations"><span class="tocnumber">3.7.2</span> <span class="toctext">Check Moodle configurations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="#See_also"><span class="tocnumber">3.8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#References"><span class="tocnumber">3.9</span> <span class="toctext">References</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h1><span class="mw-headline" id="Using_Ports">Using Ports</span></h1>
+<p>Ports are FreeBSB software package system, you can use to install, uninstall, update your software packages.
+</p><p>If you didn't install it along the basic system, you can do it now:
+</p><p><code>portsnap fetch</code>
+</p><p><code>:portsnap extract</code>
+</p><p>If you already have it installed, just update:
+</p><p><code>portsnap fetch update</code>
+</p><p>Using Ports, the package system itself will verify dependencies, download (if necessary), compile and install them all.
+</p><p>You can use binary packages availables at install media (like CD, USB or FTP) as well.
+</p>
+<h1><span class="mw-headline" id="Quick_install">Quick install</span></h1>
+<p>You could install Moodle using Ports:
+</p><p><code>cd /usr/ports/www/moodle25/</code>
+</p><p><code>make install clean</code>
+</p>
+<h1><span class="mw-headline" id="Step_by_step_install">Step by step install</span></h1>
+<h2><span class="mw-headline" id="Install_Apache">Install Apache</span></h2>
+<p>Apache will be your http server.
+</p><p><code>cd /usr/ports/www/apache22</code>
+</p><p><code>make install clean</code>
+</p><p>Now, configure Apache to start at boot:
+</p><p><code>echo 'apache24_enable="YES"' &gt;&gt; /etc/rc.conf</code>
+</p><p><code>/usr/local/etc/rc.d/apache24 start</code>
+</p><p>Point your web browser to the host name or IP address and you should see the venerable &ldquo;It Works&rdquo;.
+</p>
+<h2><span class="mw-headline" id="Install_MySQL">Install MySQL</span></h2>
+<p>MySQL will be your SQL database server.
+</p><p><code>cd /usr/ports/databases/mysql56-server/</code>
+</p><p><code>make install clean</code>
+</p><p>Now, configure MySQL to start at boot:
+</p><p><code>echo 'mysql_enable="YES"' &gt;&gt; /etc/rc.conf</code>
+</p><p><code>/usr/local/etc/rc.d/mysql-server start</code>
+</p><p>For increase security, set a password for the MySQL root user:
+</p><p><code>/usr/local/bin/mysqladmin -u root password 'your-password'</code>
+</p>
+<h2><span class="mw-headline" id="Install_PHP">Install PHP</span></h2>
+<p>PHP is the scripting language in which Moodle is developed
+</p><p><code>cd /usr/ports/lang/php5</code>
+</p><p>Before we proceed, we need to add a configuration option so that PHP build includes support for the Apache server:
+</p><p><code>make config</code>
+</p><p>Select &ldquo;Build Apache module&rdquo;:
+</p><p><code>make install clean</code>
+</p><p>Copy the recommended configuration file for production server:
+</p><p><code>cp /usr/local/etc/php.ini-development /usr/local/etc/php.ini</code>
+</p><p>Create a mod_php configuration file at "/usr/local/etc/apache24/Includes/mod_php.conf":
+</p>
+<blockquote>
+<p>    &lt;IfModule mod_php5.c&gt; <br>
+</p><p>        DirectoryIndex index.php index.html <br>
+</p><p>    &lt;/IfModule&gt; <br>
+</p><p>    &lt;IfModule mod_php5.c&gt; <br>
+</p><p>        AddType application/x-httpd-php .php <br>
+</p><p>        AddType application/x-httpd-php-source .phps <br>
+</p><p>    &lt;/IfModule&gt; <br>
+</p>
+</blockquote>
+<p>Moodle require somes additional PHP extensions.
+</p><p><code>cd /usr/ports/lang/php5-extensions/</code>
+</p><p>Check (if not checked already) this extensions at menu and install: CTYPE, CURL, DOM, GD, HASH, ICONV, JSON, MBSTRING, MYSQL, MYSQLI, OPENSSL, SOAP, SIMPLEXML, TOKENIZER, XMLRPC, XSL, ZIP, ZLIB:
+</p><p><code>make config</code>
+</p><p>Then install this extensions:
+</p><p><code>make install clean</code>
+</p>
+<h2><span class="mw-headline" id="Install_GIT">Install GIT</span></h2>
+<p>GIT is a tool to download, update and contribe code to Moodle.
+</p><p><code>cd /usr/ports/devel/git</code>
+</p><p><code>make install clean</code>
+</p>
+<h2><span class="mw-headline" id="Preparing_Moodle">Preparing Moodle</span></h2>
+<p>Read <a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installing documentation</a> before follow this steps.
+</p>
+<h3><span class="mw-headline" id="Download_Moodle">Download Moodle</span></h3>
+<p>Using GIT, you can download, update, upgrade moodle to Apache www public diretory
+</p><p><code>cd /usr/local/www/apache24/data/</code>
+</p><p><code>git clone -b MOODLE_25_STABLE <a rel="nofollow" class="external free" href="git://git.moodle.org/moodle.git">git://git.moodle.org/moodle.git</a></code>
+</p><p>Set Apache user as owner of all Moodle directory and files:
+</p><p><code>chown -R www:www moodle</code>
+</p>
+<h3><span class="mw-headline" id="Create_Moodledata">Create Moodledata</span></h3>
+<p><code>mkdir /usr/local/www/apache24/moodledata</code>
+</p><p>Give Apache user total privilegies to this directory
+</p><p><code>chown -R /usr/local/www/apache24/moodledata</code>
+</p><p><code>chmod -R 777 /usr/local/www/apache24/moodledata</code>
+</p>
+<h3><span class="mw-headline" id="Create_Moodledb">Create Moodledb</span></h3>
+<p>Access MySQL console
+</p><p><code>mysql -u root -p</code>
+</p><p>Then execute following SQL statements, replacing "yourpassword" for some password you want:
+</p><p><code>mysql&gt; CREATE DATABASE moodle DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;</code>
+</p><p><code>mysql&gt; GRANT ALL ON moodle.* TO moodle@localhost IDENTIFIED BY 'yourpassword';</code>
+</p>
+
+<h2><span class="mw-headline" id="Installing_Moodle">Installing Moodle</span></h2>
+<p>You can choose two methods, using command line interface (CLI) or web installer.
+</p>
+<h3><span class="mw-headline" id="CLI">CLI</span></h3>
+<p>Execute Moodle CLI Installer:
+</p><p><code>cd /usr/local/www/apache24/data/moodle</code>
+</p><p><code>su www -c '/usr/bin/php-cli admin/cli/install.php'</code>
+</p><p>Follow the instructions and if you need more information:
+</p><p><code>su www -c '/usr/bin/php-cli admin/cli/install.php --help'</code>
+</p>
+<h3><span class="mw-headline" id="Web_Installer">Web Installer</span></h3>
+<p>Open your web browser to the host name or IP address plus "/moodle", like example.com/moodle or 127.0.0.1/moodle. Then, follow the instructions.
+</p>
+<h2><span class="mw-headline" id="Post-installation">Post-installation</span></h2>
+<h3><span class="mw-headline" id="Configure_a_cronjob">Configure a cronjob</span></h3>
+<p>Use server crontab to automatically execute Moodle Cron each 5 minutes:
+</p><p><code>crontab -u www -e</code>
+</p><p><code>
+</code></p><p><code>*/5 * * * * cd /usr/local/www/apache24/data/moodle&nbsp;; /usr/bin/php-cli admin/cli/cron.php &gt; /dev/null
+</code></p><p class="mw-empty-elt">
+</p>
+<h3><span class="mw-headline" id="Check_Moodle_configurations">Check Moodle configurations</span></h3>
+<ul><li>Settings &gt; Site administration &gt; Reports &gt; Security overview: Overview details of your environment security</li>
+<li>Settings &gt; Site administration &gt; Courses &gt; Backups &gt; Automated backup setup: Setup Moodle to automatic backup your courses</li>
+<li>Settings &gt; Site administration &gt; Server &gt; HTTP: If you need to set up proxy credentials</li>
+<li>Settings &gt; Site administration &gt; Plugins &gt; Message Outputs &gt; Email: Set your smtp server and authentication if required (so your Moodle site can send emails). The support contact for your site is also set on this page.</li></ul>
+<p><br>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ol><li><a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a></li>
+<li><a href="52d1d262bc125752f9747df1abc77de6.html" title="Installation FAQ">Installation FAQ</a></li>
+<li><a href="633212ec6c4234cb5bdab6a41c349adc.html" title="Unix or Linux Installation">Unix or Linux Installation</a></li></ol>
+<p><br>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<ol><li><div id="1"></div> <a rel="nofollow" class="external free" href="http://www.freebsd.org/doc/handbook/ports.html">http://www.freebsd.org/doc/handbook/ports.html</a></li>
+<li><div id="2"></div> <a rel="nofollow" class="external free" href="http://www.freebsd.org/doc/handbook/packages-using.html">http://www.freebsd.org/doc/handbook/packages-using.html</a></li>
+<li><div id="3"></div> <a rel="nofollow" class="external free" href="http://www.freebsd.org/doc/en/books/handbook/network-apache.html">http://www.freebsd.org/doc/en/books/handbook/network-apache.html</a></li>
+<li><div id="4"></div> <a rel="nofollow" class="external free" href="http://dev.mysql.com/doc/refman/5.6/en/freebsd-installation.html">http://dev.mysql.com/doc/refman/5.6/en/freebsd-installation.html</a></li>
+<li><div id="5"></div> <a rel="nofollow" class="external free" href="d37ab3f458c79b0519831f6c8f9e72d1.html">https://docs.moodle.org/502/en/PHP</a></li>
+<li><div id="6"></div> <a rel="nofollow" class="external free" href="http://git.moodle.org/">http://git.moodle.org/</a></li>
+<li><div id="7"></div> <a rel="nofollow" class="external free" href="553207f76ae3b1e85403f96c2ca316f1.html">https://docs.moodle.org/502/en/Installing_Moodle</a></li>
+<li><div id="8"></div> <a rel="nofollow" class="external free" href="14569a6d13e60324f1803b54b2ffb589.html">https://docs.moodle.org/502/en/Git_for_Administrators</a></li>
+<li><div id="9"></div> <a rel="nofollow" class="external free" href="37fc181470a569556f94c1f35940d0a7.html">https://docs.moodle.org/502/en/Cron</a></li></ol>
+<!-- 
+NewPP limit report
+Cached time: 20260823014744
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.012 seconds
+Real time usage: 0.013 seconds
+Preprocessor visited node count: 81/1000000
+Post&#8208;expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 1/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:17108-0!canonical and timestamp 20260823014744 and revision id 139578. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=FreeBSD_Installing&amp;oldid=139578">https://docs.moodle.org/502/en/index.php?title=FreeBSD_Installing&amp;oldid=139578</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="7f264aa70db3768dcef1896a8ec93e70.html" title="Category:Installation">Installation</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdivto7c7">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdivto7po"></button>
+					<div class="collapse navbar-collapse igdivto7po" id="igdivto7po">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/FreeBSD_Installing" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/FreeBSD_Installing" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=FreeBSD_Installing&amp;oldid=139578" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=FreeBSD_Installing&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 4 February 2021, at 16:08.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":159,"wgPageParseReport":{"limitreport":{"cputime":"0.012","walltime":"0.013","ppvisitednodes":{"value":81,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260823014744","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

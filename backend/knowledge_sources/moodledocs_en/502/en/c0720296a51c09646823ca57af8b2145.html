@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Grade import - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"99f742d2db6d24aa3da613d9","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Grade_import","wgTitle":"Grade import","wgCurRevisionId":141743,"wgRevisionId":141743,"wgArticleId":5918,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Grades"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Grade_import","wgRelevantArticleId":5918,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Grade_import">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Grade_import rootpage-Grade_import layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhpviuw6"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhpviuw6" id="igdhpviuw6">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Grade+import" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Grade_import">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Grade_import">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Grade_import">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="c0720296a51c09646823ca57af8b2145.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Grade_import" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Grade_import&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Grade_import&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Grade import</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="c93eb5dfaca94ad219ccb0d560e9af0f.html" title="Managing a Moodle course">Managing a Moodle course</a> ► <a href="c1d0ebee03c8ed1740564dd8bf6c6bad.html" title="Tracking progress">Tracking progress</a> ► <a href="882a0ea978e1afc2069180adf83c516e.html" title="Grades">Grades</a> ► <a class="mw-selflink selflink">Grade import</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a href="882a0ea978e1afc2069180adf83c516e.html" title="Grades">Grades</a></div>
+<div class="content">
+<ul><li><a href="3b5aabb0122bcb6ecbd24f74222e78c4.html" title="Grading quick guide">Grading quick guide</a></li>
+<li><a href="0faa82befc6b1d0e70729a9ab6430f1a.html" title="Grader report">Grader report</a></li>
+<li><a href="9b701e2eaee9ae634069ee7cc38ca8d1.html" title="Grade settings">Grade settings</a></li>
+<li><a href="c3d796ed3dbe3b701cda06806a974af9.html" title="Managing grades">Managing grades</a></li>
+<li><a href="68e5177eca0b91f214468853c41349fc.html" title="Grade aggregation">Grade aggregation</a></li>
+<li><a href="f099d77b2087bcabd3c8f39e2584f3f5.html" title="Grade points">Grade points</a></li>
+<li><a href="ff6cade9223d234e41dbb57de23ad607.html" title="Scales">Scales</a></li>
+<li><a href="e3c4a164c9b0c563eda322ccef147dc8.html" title="Outcomes">Outcomes</a></li>
+<li><a class="mw-selflink selflink">Grade import</a></li>
+<li><a href="42810fa3cbc5bad2234bcb2514825f1d.html" title="Grade export">Grade export</a></li>
+<li><a href="751d6cdbb07f45eec3cb6672ebeab7ea.html" title="Advanced grading methods">Advanced grading methods</a></li>
+<li><a href="6af0f344b1e50e15b6bad57df921fa2f.html" title="Grade penalties">Grade penalties</a></li>
+<li><a href="e2ef0a5758a5a051c0928459c20e4e3b.html" title="Grades FAQ">Grades FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Importing_grades"><span class="tocnumber">1</span> <span class="toctext">Importing grades</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#CSV_import"><span class="tocnumber">2</span> <span class="toctext">CSV import</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Grade_Mapping"><span class="tocnumber">2.1</span> <span class="toctext">Grade Mapping</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Encoding"><span class="tocnumber">2.2</span> <span class="toctext">Encoding</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Verbose_scales"><span class="tocnumber">2.3</span> <span class="toctext">Verbose scales</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Force_import"><span class="tocnumber">2.4</span> <span class="toctext">Force import</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Paste_from_spreadsheet"><span class="tocnumber">3</span> <span class="toctext">Paste from spreadsheet</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#XML_import"><span class="tocnumber">4</span> <span class="toctext">XML import</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Remote_file_URL"><span class="tocnumber">4.1</span> <span class="toctext">Remote file URL</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Grade_import_capabilities"><span class="tocnumber">5</span> <span class="toctext">Grade import capabilities</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Importing_grades">Importing grades</span></h2>
+<p>Grades may be imported as a CSV or XML file, or by pasting from a spreadsheet. 
+</p><p>The import file format is the same as the corresponding export format. 
+</p><p><b>Note 1:</b> Grade import is equivalent to manual grading in the <a href="08390d096bd727a539ee8dcf5eb2a712.html" class="mw-redirect" title="grader report">grader report</a>. Thus, if grades for a particular  Moodle activity such as an assignment are imported, they can no longer be edited via the assignment submission page.
+</p><p><b>Note 2:</b>  To import grades above 100% you need to check the  'unlimitedgrades' and 'gradepointmax' settings in <i>Site administration&gt;Administration&gt;Grades&gt;General settings</i>.
+</p><p><b>Note 3:</b> Importing feedback will also overwrite any grades that are linked to that assessment. Please include both feedback and grades for the activity when mapping and importing grades via CSV. If both columns are not included then all grades for that activity will be lost.
+</p>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:Csv_grade_import.png" class="mw-file-description"><img src="images_en/thumb/a/a1/Csv_grade_import.png/134ff512224aeae20568a032c5848799.png" decoding="async" width="300" height="80" class="mw-file-element" srcset="/502/en/images_en/thumb/a/a1/Csv_grade_import.png/450px-Csv_grade_import.png 1.5x, /502/en/images_en/thumb/a/a1/Csv_grade_import.png/600px-Csv_grade_import.png 2x" data-file-width="623" data-file-height="167"></a><figcaption>CSV grade import</figcaption></figure>
+<p>To import grades into the gradebook:
+</p>
+<ol><li>Decide on an import format - CSV or XML file, or paste from spreadsheet (see below) - then <a href="42810fa3cbc5bad2234bcb2514825f1d.html" title="Grade export">export some grades</a> using the corresponding export format.</li>
+<li>Edit the export file as appropriate and save it.</li>
+<li>Tip:  If you opened your exported file in Excel, don't add columns there because Moodle will reject the import if there are new columns that didn't exist in the exported file. If you need to add columns, do that in Moodle BEFORE you export your gradebook.</li>
+<li>Select your chosen import format from the gradebook dropdown menu.</li>
+<li>Browse and upload your previously saved file.</li>
+<li>Set options as required.</li>
+<li>Click the "Upload grades" button.</li>
+<li>CSV import only: Preview the grade import and choose the column mapping then click the "Upload grades" button to complete the grade import.
+<ol><li>Tip: By default "Map from" is set to First Name, and "Map to" to userid. Change both dropdowns to: "Email Address" to "useremail", or to "Id Number" to "useridnumber" (assuming that your users have ID number fields filled in in their profiles).</li>
+<li>Tip: Unlike in most email programs, email addresses are case sensitive in grade import files.  (This should eventually be fixed as per <a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/MDL-29315">MDL-29315</a>.)</li></ol></li></ol>
+<p>You need two permissions to import grades: (1) general permission to import grades and (2) permission to import grades in a particular format. For example, to import CSV grades you need moodle/grade:import ("Import grades") = Allow and gradeimport/csv:view ("Import grades from CSV") = Allow
+</p>
+<h2><span class="mw-headline" id="CSV_import">CSV import</span></h2>
+<p>CSV import is more flexible than XML import, as you may choose the column mapping.
+</p>
+<h3><span class="mw-headline" id="Grade_Mapping">Grade Mapping</span></h3>
+<p>After selecting your CSV for import you'll be prompted to map user fields and grade items to the new column headers to ensure that there is a match. More than one item can be mapped to the same grade item in your destination course so be mindful of the mapping to ensure that grade data is imported properly, any collisions (i.e. if two or more fields are mapped to the same but duplicate data exists) will cause an error. User grade data for users not yet enrolled to the destination course will be noted (and once enrolled their grade data will display).
+</p>
+<h3><span class="mw-headline" id="Encoding">Encoding</span></h3>
+<p>If you are unsure of the encoding of your CSV file, try selecting the second option in the encoding dropdown menu. If you've used Excel to produce the CSV file the second option WINDOWS-xxx encoding is probably the correct one. The grade import preview will tell you if you guessed the encoding correctly.
+</p>
+<h3><span class="mw-headline" id="Verbose_scales">Verbose scales</span></h3>
+<p>Scales can be either specified as a raw id - e.g. 0, 1, 2, 3, etc. or as a string, e.g. "good", "bad", "not very bad". The later format is called "verbose".
+</p>
+<h3><span class="mw-headline" id="Force_import">Force import</span></h3>
+<p>This prevents grade overriding during the grade importing in a scenario where more than one teacher exports the course grades and then re-imports them. If a second teacher exports the grades and tries to import them,  the following error message will be displayed and the grade importing procedure will be aborted:
+</p>
+<pre>(''Student name'') grades have not been imported because the grades in the import file are older than in the grader report. To proceed with the grade import anyway, use the force import option.</pre>  
+<p>It will not be possible to  import a file that had been  exported file longer than a year ago,  one with dates in the future. However, in cases where a teacher needs to import the grades regardless, they should use the  <b>Force import</b>. option. This will then import the grades irrespective of the dates.
+</p>
+<h2><span class="mw-headline" id="Paste_from_spreadsheet">Paste from spreadsheet</span></h2>
+<p>Grades may be pasted directly from a spreadsheet such as Excel or Libre Office:
+</p><p>1) Ensure you have the correct column names for your grades (e.g. the assignment title or manual grade) It might help to  download and edit the relevant students and graded information by using the <a href="42810fa3cbc5bad2234bcb2514825f1d.html" title="Grade export">Grade export</a> feature.
+</p><p>2) For the students you need either their username, their ID or their email address. Add the grades you need and copy the relevant section:
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:pastegrades1.png" class="mw-file-description"><img src="images_en/thumb/6/61/pastegrades1.png/14ab74656bd0ecbcb302f3c6c949002e.png" decoding="async" width="400" height="124" class="mw-file-element" srcset="/502/en/images_en/6/61/pastegrades1.png 1.5x" data-file-width="411" data-file-height="127"></a><figcaption></figcaption></figure>
+<p>3) In your course, go to <i>Grade administration&gt;Import&gt;Paste from spreadsheet</i> and paste:
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:pastegrades2.png" class="mw-file-description"><img src="images_en/thumb/0/08/pastegrades2.png/51486d2a6043f6a9706e698abc2fe2b1.png" decoding="async" width="400" height="238" class="mw-file-element" srcset="/502/en/images_en/0/08/pastegrades2.png 1.5x" data-file-width="506" data-file-height="301"></a><figcaption></figcaption></figure>
+<p>4) In the preview, ensure you match up the identifier you used for the students -so if you used 'username', ensure it maps to 'username'. Do the same for your graded activities:
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:pastegrades3.png" class="mw-file-description"><img src="images_en/thumb/3/32/pastegrades3.png/b1f9a68b80def05c847bf08a02f0167d.png" decoding="async" width="400" height="329" class="mw-file-element" srcset="/502/en/images_en/thumb/3/32/pastegrades3.png/600px-pastegrades3.png 1.5x, /502/en/images_en/3/32/pastegrades3.png 2x" data-file-width="773" data-file-height="636"></a><figcaption></figcaption></figure>
+<p>5) If everything has been correctly mapped (See grade mapping above), you should get a success message and the grades will have been added, displaying in a different colour to show they were imported directly into the gradebook:
+</p>
+<table>
+<tbody><tr>
+<td><figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:pastegrades4.png" class="mw-file-description"><img src="images_en/7/70/2ca1aef45b16a2f499cf040ec0b452ec.png" decoding="async" width="324" height="194" class="mw-file-element" data-file-width="324" data-file-height="194"></a><figcaption></figcaption></figure>
+</td>
+<td><figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:pastegrades5.png" class="mw-file-description"><img src="images_en/thumb/f/f6/pastegrades5.png/440a2e920cc741ad5820afc0543d200b.png" decoding="async" width="400" height="139" class="mw-file-element" srcset="/502/en/images_en/f/f6/pastegrades5.png 1.5x" data-file-width="415" data-file-height="144"></a><figcaption></figcaption></figure>
+</td></tr></tbody></table>
+<p>Paste from a spreadsheet requires similar permissions to a csv file import: (1) general permission to import grades and (2) permission to import grades in a particular format i.e. moodle/grade:import ("Import grades") = Allow and gradeimport/direct:view ("Import grades from spreadsheet") = Allow
+</p>
+<h2><span class="mw-headline" id="XML_import">XML import</span></h2>
+<p>Before importing an XML file you will need to ensure that all of the students that you want to alter grades for have their ID number field filled out. This is located in the "Optional" section of the user edit profile page.
+You will also need to set the ID number of the activity as well. You can find this under "Common module settings" when editing the activity.
+</p><p>The format for the XML should be as follows:
+</p>
+<pre>&lt;results&gt;
+    &lt;result&gt;
+        &lt;assignment&gt;activityidnumber&lt;/assignment&gt;
+        &lt;student&gt;studentidnumber&lt;/student&gt;
+        &lt;score&gt;53.00&lt;/score&gt;
+    &lt;/result&gt;
+    &lt;result&gt;
+        &lt;assignment&gt;differentactivityidnumber&lt;/assignment&gt;
+        &lt;student&gt;studentidnumber&lt;/student&gt;
+        &lt;score&gt;73.00&lt;/score&gt;
+    &lt;/result&gt;
+&lt;/results&gt;
+</pre>
+<p>For a working example try exporting the gradebook as an xml file and view the format.
+</p>
+<h3><span class="mw-headline" id="Remote_file_URL">Remote file URL</span></h3>
+<p>The remote file URL field is for fetching data from a remote server, such as a student information system.
+</p>
+<h2><span class="mw-headline" id="Grade_import_capabilities">Grade import capabilities</span></h2>
+<ul><li><a href="Capabilities/gradeimport/77ca1f2b4fd76351c50553fb222bb552.html" title="Capabilities/gradeimport/csv:view">Import grades from CSV</a></li>
+<li><a href="Capabilities/gradeimport/2a9034c41632248c3b138edda7a3856b.html" title="Capabilities/gradeimport/direct:view">Import grades from spreadsheet</a></li>
+<li><a href="Capabilities/gradeimport/4da3393009a0896f235852ce9ca74e10.html" title="Capabilities/gradeimport/xml:publish">Publish import grades from XML</a></li>
+<li><a href="Capabilities/gradeimport/5b96c69d07170dbb1599fb8cc36727c9.html" title="Capabilities/gradeimport/xml:view">Import grades from XML</a></li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<p>Using Moodle forum discussions:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=85944">Gradebook confusion</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=92081">Can external software insert data into the gradebook?</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260823003921
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.031 seconds
+Real time usage: 0.187 seconds
+Preprocessor visited node count: 64/1000000
+Post&#8208;expand include size: 562/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 652/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    1.672      1 Template:Grades
+100.00%    1.672      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:5918-0!canonical and timestamp 20260823003921 and revision id 141743. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Grade_import&amp;oldid=141743">https://docs.moodle.org/502/en/index.php?title=Grade_import&amp;oldid=141743</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="ebdb0f82c881362d77e490ada017a5bb.html" title="Category:Grades">Grades</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhpvixas">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhpvixrw"></button>
+					<div class="collapse navbar-collapse igdhpvixrw" id="igdhpvixrw">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Grade_import" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Grade_import" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Grade_import&amp;oldid=141743" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Grade_import&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/評定のインポート" title="評定のインポート – 日本語" lang="ja" hreflang="ja" data-title="評定のインポート" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Bewertungen_importieren" title="Bewertungen importieren – Deutsch" lang="de" hreflang="de" data-title="Bewertungen importieren" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Importar_calificaciones" title="Importar calificaciones – español" lang="es" hreflang="es" data-title="Importar calificaciones" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Importation_de_notes" title="Importation de notes – français" lang="fr" hreflang="fr" data-title="Importation de notes" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 22 September 2021, at 14:17.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":133,"wgPageParseReport":{"limitreport":{"cputime":"0.031","walltime":"0.187","ppvisitednodes":{"value":64,"limit":1000000},"postexpandincludesize":{"value":562,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":652,"limit":5000000},"timingprofile":["100.00%    1.672      1 Template:Grades","100.00%    1.672      1 -total"]},"cachereport":{"timestamp":"20260823003921","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

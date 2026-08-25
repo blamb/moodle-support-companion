@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Installing Moodle on Debian based distributions - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"593b135851565e74468d64d7","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Installing_Moodle_on_Debian_based_distributions","wgTitle":"Installing Moodle on Debian based distributions","wgCurRevisionId":153601,"wgRevisionId":153601,"wgArticleId":16693,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Administrator","Installation"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Installing_Moodle_on_Debian_based_distributions","wgRelevantArticleId":16693,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="593ae70845242c812b361a340a53fb46.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.pygments%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Installing_Moodle_on_Debian_based_distributions">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Installing_Moodle_on_Debian_based_distributions rootpage-Installing_Moodle_on_Debian_based_distributions layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdiw0rqr7"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdiw0rqr7" id="igdiw0rqr7">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Installing+Moodle+on+Debian+based+distributions" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Installing_Moodle_on_Debian_based_distributions">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Installing_Moodle_on_Debian_based_distributions">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Installing_Moodle_on_Debian_based_distributions">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="c3db3e9ae7a0657e4963b961a78ae28a.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Installing_Moodle_on_Debian_based_distributions" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_Moodle_on_Debian_based_distributions&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_Moodle_on_Debian_based_distributions&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Installing Moodle on Debian based distributions</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Installing_Moodle_as_a_Debian_package"><span class="tocnumber">1</span> <span class="toctext">Installing Moodle as a Debian package</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Installing_moodle_from_.tgz(.tar.gz)_or_.zip_file"><span class="tocnumber">2</span> <span class="toctext">Installing moodle from .tgz(.tar.gz) or .zip file</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Debian_12"><span class="tocnumber">3</span> <span class="toctext">Debian 12</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Prior_Debian_Versions"><span class="tocnumber">4</span> <span class="toctext">Prior Debian Versions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Step_1:_Install_required_packages"><span class="tocnumber">4.1</span> <span class="toctext">Step 1: Install required packages</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Step_2:_Setup_MySQL_Database"><span class="tocnumber">4.2</span> <span class="toctext">Step 2: Setup MySQL Database</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Step_3:_Download_moodle"><span class="tocnumber">4.3</span> <span class="toctext">Step 3: Download moodle</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Step_4:_Unpack_file"><span class="tocnumber">4.4</span> <span class="toctext">Step 4: Unpack file</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Step_5:_Create_a_data_directory_and_set_Moodle_directory_permissions"><span class="tocnumber">4.5</span> <span class="toctext">Step 5: Create a data directory and set Moodle directory permissions</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Step_6:_Change_Apache_to_use_Moodle_as_the_web_site"><span class="tocnumber">4.6</span> <span class="toctext">Step 6: Change Apache to use Moodle as the web site</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Step_7:_Finally_install"><span class="tocnumber">4.7</span> <span class="toctext">Step 7: Finally install</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Step_8:_Setup_Moodle"><span class="tocnumber">4.8</span> <span class="toctext">Step 8: Setup Moodle</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Install_cron"><span class="tocnumber">4.9</span> <span class="toctext">Install cron</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Installing_Moodle_as_a_Debian_package">Installing Moodle as a Debian package</span></h2>
+<p>Moodle used to be included as a Debian package.  It is not recommended to install using any kind of installer with Moodle.  In the long run you will be much better to install manually (or using git) so that the code is original without any alteration.
+</p>
+<h2><span id="Installing_moodle_from_.tgz.28.tar.gz.29_or_.zip_file"></span><span class="mw-headline" id="Installing_moodle_from_.tgz(.tar.gz)_or_.zip_file">Installing moodle from .tgz(.tar.gz) or .zip file</span></h2>
+<h2><span class="mw-headline" id="Debian_12">Debian 12</span></h2><p>
+The relevant packages (web server, PHP, database etc) provided Debian 12 nicely match the requirements of Moodle 5. Start by installing the web server (apache2 is recommended) and PHP. All commands have to be executed with root privileges. Note that you may need to install more `php-` modules depending on your specific needs and the moodle plugins you want to serve.</p><div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>su<span class="w"> </span>-
+apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+apt<span class="w"> </span>install<span class="w"> </span>apache2<span class="w"> </span>libapache2-mod-php<span class="w"> </span>php-composer-pcre<span class="w"> </span>php-curl<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>php-gd<span class="w"> </span>php-intl<span class="w"> </span>php-json<span class="w"> </span>php-ldap<span class="w"> </span>php-mbstring<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>php-net-socket<span class="w"> </span>php-pgsql<span class="w"> </span>php-soap<span class="w"> </span>php-tokenizer<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>php-xml<span class="w"> </span>php-xmlrpc<span class="w"> </span>php-zip
+</pre></div><p>If required, adjust php.ini to your needs (you may particularly want to increase `max_input_vars = 25000` as well as ` post_max_size` and ` upload_max_filesize`. Use your favorite editor to do so, eg.</p><div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>nano<span class="w"> </span>/etc/php/8.2/apache2/php.ini
+apache2ctl<span class="w"> </span>restart<span class="w">  </span><span class="c1"># restart the web server</span>
+</pre></div><p>Now, you need to install your desired database server. PostgreSQL and MariaDB are excellent choices. Only install one of them.</p><div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>apt<span class="w"> </span>install<span class="w"> </span>postgresql<span class="w">  </span><span class="c1"># alternatively: mariadb-server</span>
+</pre></div><p>After installing the database server, set up the required database (see the designated pages for <a href="c9a73f3fb9b33bff0832963192472735.html" title="PostgreSQL">PostgreSQL</a> and <a href="b0cd9749b4df4e8c98a3d559d046d352.html" title="MariaDB">MariaDB</a>).
+</p><p>When your database is configured, continue with the setup at <a class="mw-selflink-fragment" href="#Step_3:_Download_moodle">Step 3 (below)</a>.
+</p>
+<h2><span class="mw-headline" id="Prior_Debian_Versions">Prior Debian Versions</span></h2>
+<h3><span class="mw-headline" id="Step_1:_Install_required_packages">Step 1: Install required packages</span></h3>
+<p>After installing your Debian distro, install these packages (if you've not already done so). See <a href="b09d2da8ca96898f062592c9303fa7d3.html" class="mw-redirect" title="Installing Apache, MySQL and PHP">Installing Apache, MySQL and PHP</a> or refer to the respective user manuals. Using apt-get, aptitude or synaptic you can install these very easily.
+</p>
+<ul><li>Web Server (Apache highly recommended)</li>
+<li>Database Server (MySQL or PostgreSQL recommended)</li>
+<li>PHP, PHP-MySQL mod (or mod for your database)</li>
+<li>Various PHP modules necessary for Moodle</li></ul>
+<p><b>LAMP in Debian</b>
+</p><p>Setting up a LAMP in Debian is very easy. Once you get used to Debian administration including installation and configuration are much simpler compared to other linux distros. The following describes how to install apache, php and mysql on the Debian distribution. 
+</p><p>For installation of the necessary packages the easiest option to use apt-get through the command line interface.  Debian has easy access to a Root Terminal.  Either run all commands as SUDO or switch to root user by using su command.
+</p><p>Use the following command to install apache2, php5 and mysql (Note: Debian is now shipping with MariaDB as default database server - this database is just fine to use with Moodle.)
+</p><p>
+Debian 11 comes with PHP 7.4 which is not compatible with latest Moodle version so you need to add the Sury repository so that you can install a compatible php version.</p><div class="mw-highlight mw-highlight-lang-linux-config mw-content-ltr" dir="ltr"><pre><span></span>apt-get<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>lsb-release<span class="w"> </span>ca-certificates<span class="w"> </span>curl
+curl<span class="w"> </span>-sSLo<span class="w"> </span>/tmp/debsuryorg-archive-keyring.deb<span class="w"> </span>https://packages.sury.org/debsuryorg-archive-keyring.deb
+dpkg<span class="w"> </span>-i<span class="w"> </span>/tmp/debsuryorg-archive-keyring.deb
+sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" &gt; /etc/apt/sources.list.d/php.list'</span>
+</pre></div><p>Debian 11 comes with Mariadb 10.5 which is not compatible with latest Moodle version so you need to add the Mariadb repository.</p><div class="mw-highlight mw-highlight-lang-linux-config mw-content-ltr" dir="ltr"><pre><span></span>apt<span class="w"> </span>install<span class="w"> </span>wget
+
+wget<span class="w"> </span>https://r.mariadb.com/downloads/mariadb_repo_setup
+
+echo<span class="w"> </span><span class="s2">"30d2a05509d1c129dd7dd8430507e6a7729a4854ea10c9dcf6be88964f3fdc25 mariadb_repo_setup"</span><span class="w"> </span>\
+<span class="w">    </span><span class="o">|</span><span class="w"> </span>sha256sum<span class="w"> </span>-c<span class="w"> </span>-
+
+chmod<span class="w"> </span>+x<span class="w"> </span>mariadb_repo_setup
+
+./mariadb_repo_setup<span class="w"> </span>\
+<span class="w">   </span>--mariadb-server-version="mariadb-10.6"
+</pre></div><p>Update Repositories:
+</p><p><code>apt-get update</code>
+</p><p>Install LAMP:
+<code>apt-get install apache2 php8.2 mariadb-server php8.2-mysql libapache2-mod-php8.2 php8.2-gd php8.2-curl php8.2-xmlrpc php8-2.xml php8-2.soap php8.2-intl php8.2-zip php8.2-mbstring </code>
+</p><p>The mentioned packages are installed along with the dependencies depending on what was already installed on your Debian system.
+</p><p>Now you may fire up a browser and type localhost to check whether the apache2 default page is shown,
+</p><p>If you are familiar with apache settings, you can edit the apache configuration files using the text editor gedit or nano by typing:
+</p>
+<pre>gedit /etc/apache2/apache2.conf
+</pre>
+<p>or
+</p>
+<pre>nano /etc/apache2/apache2.conf</pre>
+<p>However, for a basic install, you should not need to mess with this file.
+</p><p>Now we must make a few changes in the php configuration file. Open it using
+</p>
+<pre>gedit /etc/php/8.2/apache2/php.ini
+</pre>
+<p>or
+</p>
+<pre>nano /etc/php/8.2/apache2/php.ini</pre>
+<p>if they are not already entered, add the entries 
+</p>
+<pre>extension=mysql.so 
+extension=gd.so
+</pre>
+<p>Sometimes these entries are provided as example lines being commented out . You can remove the commenting to activate the entries.
+Then make the following changes (adjust to your preference)
+This will allocated more memory and allow files to be uploaded up to 80MB.  This should be enough for most multi-media files.  Hard drive space is cheap and the default is only 2MB.  It is recommended that you change the settings to the following values or as high as you want:
+</p>
+<pre>memory_limit = 40M
+post_max_size = 80M
+upload_max_filesize = 80M 
+</pre>
+<p>The setting below needs to be set to at least 5000 to allow install to complete.
+</p>
+<pre>max_input_vars=25000
+</pre>
+<p>To test the php installation, you can create a text file named phpinfo.php with the contents &lt;?phpinfo()?&gt;
+and save it at /var/www. Restart apache with the command below. Now access this file through the browser localhost/phpinfo to check the installation of php.
+</p><p>You can restart apache 2 by 
+</p>
+<pre>/etc/init.d/apache2 restart
+</pre>
+<p>or
+service apache2 restart
+</p>
+<h3><span class="mw-headline" id="Step_2:_Setup_MySQL_Database">Step 2: Setup MySQL Database</span></h3>
+<p>Set a secure root password for the database (you might have already done this in the initial install process)
+</p>
+<pre>mysqladmin -u root password "mySecurePassword"
+</pre>
+<p>Note that on a secure production server, you will want to create a different user than root to access the database.
+</p><p>Now log in
+</p>
+<pre>mysql -u root -p
+</pre>
+<p>Enter your password
+</p><p>Create the Moodle database
+</p>
+<pre>mysql&gt; CREATE DATABASE moodle CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+</pre>
+<p>(this should set the database up correctly to work with Moodle)
+</p><p>Then exit the database
+</p>
+<pre>mysql&gt; exit;
+</pre>
+<p>You can restart mysql by 
+</p>
+<pre>/etc/init.d/mysql restart
+</pre>
+<h3><span class="mw-headline" id="Step_3:_Download_moodle">Step 3: Download moodle</span></h3>
+<p>I HIGHLY recommend looking at the Git Installation documents and using git to download Moodle.  It will make your life so much easier going forward!  However, if you do not want to make your life easier and like to do things the hard way, follow the next instructions!!
+</p><p>Download moodle from <a rel="nofollow" class="external free" href="http://download.moodle.org/?lang=en">http://download.moodle.org/?lang=en</a>.
+</p>
+<h3><span class="mw-headline" id="Step_4:_Unpack_file">Step 4: Unpack file</span></h3>
+<ul><li>For zip file, use <b>unzip &lt;your_file&gt;</b>. For tgz(tar.gz), use <b>tar -zxvf &lt;your-file&gt;</b>. You can also use any of the GUI front-ends such as file-roller or ark or just let Debian unzip it with Archive Manager. You will get a folder moodle (or moodle-2.8.1 or something similar).  It will probably be located in your Downloads folder unless you told the Archive Manager or the Download utility to save it somewhere else.  We will presume it is in your Download folder.</li></ul>
+<p>From terminal type
+</p>
+<pre>cd /home/YourUSERNAME/Downloads</pre>
+<pre>mv moodle /var/www</pre>
+<p>You can also copy instead of moving it in case you want a backup of the code on your machine.
+</p>
+<pre>cp --recursive moodle /var/www</pre>
+<h3><span class="mw-headline" id="Step_5:_Create_a_data_directory_and_set_Moodle_directory_permissions">Step 5: Create a data directory and set Moodle directory permissions</span></h3>
+<p>Switch to the correct directory (it is not recommended to put the moodledata in the www folder so move up a folder and create the directory in the var folder or any other folder of your choosing.)
+</p>
+<pre>cd /var/</pre>
+<p>Create a directory for user and course files 
+</p>
+<pre>mkdir moodledata
+</pre>
+<p>Set ownership and permissions so that Apache can access the files
+</p>
+<pre>chown -R www-data:www-data /var/www/moodle
+chown -R www-data:www-data /var/moodledata</pre>
+<pre>find /var/www/moodle -type d -exec chmod 755 {} \;
+find /var/www/moodle -type f -exec chmod 644 {} \;</pre>
+<p>For maximum security, the moodle code directory should not be writeable by your server. This is especially important on a 'production' server open to the public internet. You can set the ownership to root or another user acoount:
+</p>
+<pre>sudo chown -R root:root /var/www/moodle</pre>
+<p>Bear in mind that some features of moodle, like automatic updates or plugin install from the web, come from allowing various directories to be writable by the web server, so it won't work with this hardened permissions. As an alternative, another upgrading mechanism can be used (eg. downloading or via command line) or you can loosen those restrictions on the occasions that you need to allow write access.
+</p>
+<h3><span class="mw-headline" id="Step_6:_Change_Apache_to_use_Moodle_as_the_web_site">Step 6: Change Apache to use Moodle as the web site</span></h3>
+<p>Note that the server comes with Apache running and looking at the /var/www directory.  But there is nothing in that folder, so one just gets a redirect.  Edit as follows to have it point at Moodle instead:
+</p><p>gedit /etc/apache2/sites-available/000-default
+or
+</p>
+ <pre>nano /etc/apache2/sites-available/000-default</pre>
+<p>On about line 4, change DocumentRoot "/var/www/html" to
+</p>
+<pre>DocumentRoot "/var/www/moodle"
+</pre>
+<p>On about line 10, change &lt;Directory "/var/www/html/"&gt; to
+</p>
+<pre>&lt;Directory "/var/www/moodle/"&gt;
+</pre>
+<p>Around line 17, comment out the line for the default page:
+</p>
+<pre># RedirectMatch ^/$ /apache2-default/
+</pre>
+<p>You can change other values like ServerAdmin if appropriate.  For all changes, you should restart Apache for the new settings to take effect.
+</p>
+<pre>/etc/init.d/apache2 restart
+</pre>
+<p><b>At some point, you will need to set up SSL for the site.  These instructions are simply to get you up and running.</b>  
+</p>
+<h3><span class="mw-headline" id="Step_7:_Finally_install">Step 7: Finally install</span></h3>
+<ul><li>Go to <a rel="nofollow" class="external free" href="http://localhost/moodle">http://localhost/moodle</a> and follow the instructions.</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Step_8:_Setup_Moodle">Step 8: Setup Moodle</span></h3>
+<p>If you are only going to test Moodle on your internal network, just enter the local IP address as the web address.  You can find the local IP address under DHCP by typing
+</p>
+<pre>ifconfig eth0
+</pre>
+<p><br>
+If you have a web address that points to your server, use that instead.
+</p><p>From a browser on another machine, enter
+</p>
+<pre>http:// ----- your web address -----
+</pre>
+<ul><li>For the database user, enter root</li></ul>
+<ul><li>For Password, enter the password for the database that you created earlier</li></ul>
+<p>Continue through the dialogs until installed. 
+</p>
+<h3><span class="mw-headline" id="Install_cron">Install cron</span></h3>
+<p>Moodle needs a periodic call to do maintenance work like sending out emails, cleaning up the database, updating feeds, etc.  To run the cron every 2 minutes, do the following
+</p>
+<pre>crontab -u www-data -e</pre>
+<p>Add this line and save.
+</p>
+<pre>*/2 * * * * /usr/bin/php /var/www/moodle/admin/cli/cron.php  &gt;/dev/null</pre>
+<p><br>
+Use CTRL-X to save
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260823014755
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.021 seconds
+Real time usage: 0.109 seconds
+Preprocessor visited node count: 123/1000000
+Post&#8208;expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 5/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 4046/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:16693-0!canonical and timestamp 20260823014755 and revision id 153601. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Installing_Moodle_on_Debian_based_distributions&amp;oldid=153601">https://docs.moodle.org/502/en/index.php?title=Installing_Moodle_on_Debian_based_distributions&amp;oldid=153601</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="7550b9f9c51825e98d799cd3dc1092db.html" title="Category:Administrator">Administrator</a></li><li><a href="7f264aa70db3768dcef1896a8ec93e70.html" title="Category:Installation">Installation</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdiw0rsrh">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdiw0rtao"></button>
+					<div class="collapse navbar-collapse igdiw0rtao" id="igdiw0rtao">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Installing_Moodle_on_Debian_based_distributions" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Installing_Moodle_on_Debian_based_distributions" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_Moodle_on_Debian_based_distributions&amp;oldid=153601" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_Moodle_on_Debian_based_distributions&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Instalando_Moodle_en_distribuciones_basadas_en_Debian" title="Instalando Moodle en distribuciones basadas en Debian – español" lang="es" hreflang="es" data-title="Instalando Moodle en distribuciones basadas en Debian" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/Debian_GNU/Linuxのインストール" title="Debian GNU/Linuxのインストール – 日本語" lang="ja" hreflang="ja" data-title="Debian GNU/Linuxのインストール" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+								<div class="interlanguage-link interwiki-pl nav-item mw-list-item"><a href="https://docs.moodle.org/pl/Instalacja_Moodle_w_Debianie" title="Instalacja Moodle w Debianie – polski" lang="pl" hreflang="pl" data-title="Instalacja Moodle w Debianie" data-language-autonym="Polski" data-language-local-name="polski" class="interlanguage-link-target nav-link">Polski</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 5 July 2025, at 22:47.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":441,"wgPageParseReport":{"limitreport":{"cputime":"0.021","walltime":"0.109","ppvisitednodes":{"value":123,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":5,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":4046,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260823014755","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

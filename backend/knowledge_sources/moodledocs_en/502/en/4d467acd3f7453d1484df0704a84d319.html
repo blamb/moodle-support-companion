@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Development:Question type plugin how to - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"ee8ab57ad11e0bc6a83df9bf","wgCanonicalNamespace":"Development","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Development:Question_type_plugin_how_to","wgTitle":"Question type plugin how to","wgCurRevisionId":65839,"wgRevisionId":65839,"wgArticleId":2063,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Developer","Quiz"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Development:Question_type_plugin_how_to","wgRelevantArticleId":2063,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"How_to_write_a_question_type_plugin","wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgInternalRedirectTargetUrl":"/502/en/Development:Question_type_plugin_how_to","wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Development:Question_type_plugin_how_to">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-100 ns-subject page-Development_Question_type_plugin_how_to rootpage-Development_Question_type_plugin_how_to layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdl0p7b6r"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdl0p7b6r" id="igdl0p7b6r">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Development%3AQuestion+type+plugin+how+to" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/How_to_write_a_question_type_plugin">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/How_to_write_a_question_type_plugin">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/How_to_write_a_question_type_plugin">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-development" class="selected mw-list-item"><a href="https://docs.moodle.org/dev/Question_type_plugin_how_to" title="View the subject page [c]" accesskey="c" class="selected ca-nstab-development">Development</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/dev/talk:Question_type_plugin_how_to" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Development:Question_type_plugin_how_to&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Development:Question_type_plugin_how_to&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-namespace">Development</span><span class="mw-page-title-separator">:</span><span class="mw-page-title-main">Question type plugin how to</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"><span class="mw-redirectedfrom">(Redirected from <a href="https://docs.moodle.org/502/en/index.php?title=How_to_write_a_question_type_plugin&amp;redirect=no" class="mw-redirect" title="How to write a question type plugin">How to write a question type plugin</a>)</span></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a href="https://docs.moodle.org/dev/Question_engine" title="Development:Question engine">Question development</a></div>
+<div class="content">
+<ul><li><a href="https://docs.moodle.org/dev/Goals_of_an_online_assessment_system" title="Development:Goals of an online assessment system">Meta-requirements</a></li>
+<li><a href="https://docs.moodle.org/dev/Question_database_structure" title="Development:Question database structure">Database structure</a></li>
+<li><a href="https://docs.moodle.org/dev/Quiz_state_diagrams" title="Development:Quiz state diagrams">State diagrams</a></li>
+<li><a href="https://docs.moodle.org/dev/Question_runtime_structures" title="Development:Question runtime structures">Runtime structures</a></li>
+<li><a href="https://docs.moodle.org/dev/Question_import/export_formats" title="Development:Question import/export formats">Import/export</a></li>
+<li><a class="mw-selflink selflink">Making a new question type</a></li>
+<li><a href="https://docs.moodle.org/dev/Question_bank_consistency_check" title="Development:Question bank consistency check">Question bank consistency check</a></li>
+<li><a rel="nofollow" class="external text" href="http://cvs.moodle.org/moodle/question/">Code in CVS</a></li>
+<li><a rel="nofollow" class="external text" href="http://xref.moodle.org/nav.html?question/index.html">Cross-referenced Code</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p><a href="https://docs.moodle.org/502/en/index.php?title=Template:Questiontype_developer_docs&amp;action=edit&amp;redlink=1" class="new" title="Template:Questiontype developer docs (page does not exist)">Template:Questiontype developer docs</a>
+</p>
+
+<p>To follow this guide, you need to get hold of the <a rel="nofollow" class="external text" href="http://moodle.org/mod/data/view.php?d=13&amp;rid=443">New question type template</a>. You can get it by checking out the contrib/question/type/TEMPLATE directory from the  CVS repository or from the <a rel="nofollow" class="external text" href="http://moodle.org/mod/data/view.php?id=6009">modules and plugins database</a>. The rest of this guide is just a copy of the README.txt file from in there. (Or is the readme file a copy of this page?)
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#New_question_type_template_README_file"><span class="tocnumber">1</span> <span class="toctext">New question type template README file</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Getting_started"><span class="tocnumber">2</span> <span class="toctext">Getting started</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Now_for_the_interesting_bit"><span class="tocnumber">3</span> <span class="toctext">Now for the interesting bit</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Import_&amp;_Export_Support"><span class="tocnumber">3.1</span> <span class="toctext">Import &amp; Export Support</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Language_strings"><span class="tocnumber">3.2</span> <span class="toctext">Language strings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Model_Question_Types"><span class="tocnumber">4</span> <span class="toctext">Model Question Types</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Grading"><span class="tocnumber">4.1</span> <span class="toctext">Grading</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Backup/Restore_and_Import/Export"><span class="tocnumber">4.2</span> <span class="toctext">Backup/Restore and Import/Export</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#JavaScript_and_CSS_required_by_your_plugin"><span class="tocnumber">5</span> <span class="toctext">JavaScript and CSS required by your plugin</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Configuration_settings_for_your_question_type"><span class="tocnumber">6</span> <span class="toctext">Configuration settings for your question type</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Testing"><span class="tocnumber">7</span> <span class="toctext">Testing</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Debugging_hints"><span class="tocnumber">8</span> <span class="toctext">Debugging hints</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#When_you_have_finished"><span class="tocnumber">9</span> <span class="toctext">When you have finished</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="New_question_type_template_README_file">New question type template README file</span></h2>
+<p>Welcome to the new question type template.
+</p><p>This blank skeleton is a good place to start if you want to implement your own Moodle question type plugin.
+</p><p>Another good way to start is by looking at an existing question type that has good documentation in the code like TODO (if there is one, otherwise we'll hope that Tims will "light the way"&nbsp;:-) )
+</p><p>The latest version of the template can be found in CVS in <a rel="nofollow" class="external free" href="http://moodle.cvs.sourceforge.net/moodle/contrib/plugins/question/type/TEMPLATE/">http://moodle.cvs.sourceforge.net/moodle/contrib/plugins/question/type/TEMPLATE/</a>. Because you want your own copy do a cvs export, not a cvs checkout. The package can also been downloaded from <a rel="nofollow" class="external text" href="http://moodle.org/mod/data/view.php?d=13&amp;rid=443">the Modules and plugins database</a>.
+</p><p>The latest version of this help can be read (nicely formatted) at  <a rel="nofollow" class="external free" href="https://docs.moodle.org/en/How_to_write_a_question_type_plugin">https://docs.moodle.org/en/How_to_write_a_question_type_plugin</a>
+</p><p><b>WARNING, THIS TEMPLATE IS NOT COMPLETE YET!</b>
+</p>
+<h2><span class="mw-headline" id="Getting_started">Getting started</span></h2>
+<p>Before you get to the interesting bit, you need to do a bit of file-renaming and search-and-replacing to turn this generic template into your own question type. You need to have chosen two things 
+</p>
+<dl><dt>The identifier for your question type</dt>
+<dd>This is a string of lowercase letters and perhaps underscores that the Moodle code  uses to refer to your question type. This needs to be unique, so perhaps start it with your initials. For example, all the questions types I create while working at the OU will be referred to as ou_something. For the rest of these instructions, I will assume you have chosen &lsquo;<i>myqtypeidentifier</i>&rsquo;.</dd>
+<dt>The name of your question type</dt>
+<dd>This is the name that people will see in the Moodle User-interface (in the English translation). For these instructions I will assume you have chosen  &lsquo;<i>My Question Type Name</i>&rsquo;.</dd></dl>
+<p>Then you need to
+</p>
+<ol><li>Change all the places <i>TEMPLATE</i> appears in file names to <i>myqtypeidentifier</i>. That is:
+<ul><li>rename the top level TEMPLATE directory to <i>myqtypeidentifier</i>.</li>
+<li>rename the language file lang/en_utf8/qtype_<i>TEMPLATE</i>.php to lang/en_utf8/qtype_<i>myqtypeidentifier</i>.php</li>
+<li>rename the help file lang/en_utf8/help/<i>TEMPLATE</i>/<i>TEMPLATE</i>.html to  lang/en_utf8/help/<i>myqtypeidentifier</i>/<i>myqtypeidentifier</i>.html</li>
+<li>rename the editing form edit_<i>TEMPLATE</i>_form.php to edit_<i>myqtypeidentifier</i>_form.php.</li></ul></li>
+<li>Search and replace 'QTYPEID' with &lsquo;<i>myqtypeidentifier'&rsquo; in all the files. You should find:</i>
+<ul><li>2 occurrences in the language file (should now be lang/en_utf8/qtype_<i>myqtypeidentifier</i>.php after renaming)</li>
+<li>1 occurrence in db/install.xml</li>
+<li>4 occurrences in simpletest/testquestiontype.php</li>
+<li>2 occurrences in edit_<i>myqtypeidentifier</i>_form.php</li>
+<li>4 occurrences in questiontype.php</li></ul></li>
+<li>Search and replace 'QTYPENAME' with &lsquo;<i>My Question Type Name</i>&rsquo; in all the files. You should find:
+<ul><li>1 occurrence in the help file (should now be lang/en_utf8/help/<i>myqtypeidentifier</i>/<i>myqtypeidentifier</i>.html after renaming)</li>
+<li>3 occurrences in the language file (should now be lang/en_utf8/qtype_<i>myqtypeidentifier</i>.php after renaming)</li>
+<li>1 occurrence in edit_myqtypeidentifier_form.php</li>
+<li>2 occurrences in questiontype.php</li></ul></li>
+<li>Search and replace YOURNAME with your name. (This is only in the comments at  the top of each file so it is not critical, but surely you want to take credit for your work.) You should find one occurrence in:
+<ul><li>lang/en_utf8/qtype_<i>myqtypeidentifier</i>.php</li>
+<li>simpletest/testquestiontype.php</li>
+<li>edit_<i>myqtypeidentifier</i>_form.php</li>
+<li>questiontype.php</li></ul></li>
+<li>Search and replace YOUREMAILADDRESS with your email address. (Again, this is only in the file header comments, but it is helpful if people can contact you if they have any questions about your code.)
+<ul><li>There should be one occurrence of YOUREMAILADDRESS in each of the files listed under YOURNAME.</li></ul></li>
+<li>Search and replace YOURPACKAGENAME with a package name for your code. This is used by PHPdocumentor when building the documentation for your classes. I suggest you make up one package name for all the question types you write. For example all the question types I write are in the package ou_questiontypes.
+<ul><li>There should be one occurrence of YOURPACKAGENAME in each of the files listed under YOURNAME.</li></ul></li>
+<li>Edit icon.gif to make an icon that represents your question type.</li>
+<li>Move your new question type folder in the question/type folder of your Moodle development codebase, so you can test the code as you work on it.</li></ol>
+<h2><span class="mw-headline" id="Now_for_the_interesting_bit">Now for the interesting bit</span></h2>
+<p>Now you need to write the code to
+</p>
+<ol><li>Describe any database tables you need in db/install.xml. If you don't need to create any database tables, you can delete the db directory.</li>
+<li>Edit edit_<i>myqtypeidentifier</i>_form.php to create the question editing form.</li>
+<li>Create the template that will display the question to the student. This is in display.html. To make good flexible formatting you should use CSS classes and use already existing ones when possible. An easy way to find which CSS classes exist is TODO.</li>
+<li>Implement the rest of the question type class. This is in questiontype.php. You need to consider
+<ol><li>Storing, retrieving, and deleting additional question options from the database when editing the question instance</li>
+<li>Storing, retrieving, and deleting additional question options and the session when the question is used in a quiz</li>
+<li>Displaying the question to the student</li>
+<li>Dealing with responses: grading responses, providing the correct responses, etc.</li>
+<li>Backing up and restoring a question instance.</li>
+<li>Importing and exporting a question instance.</li></ol></li>
+<li>Make sure that the language file contains all the strings you refer to. Note that some of the strings you want may already be in the  language files in Moodle core. If so, use the existing strings. An easy way to find the existing strings is to search the files in lang/en_utf8 (or whichever language), particularly lang/en_utf8/quiz.php .</li>
+<li>Write the help file for your question type, and any other help files you need.</li>
+<li>Write a set of unit tests for your question type.</li></ol>
+<p>All the places in the code where you need to do things are marked TODO, and there are comments right there giving more detailed instructions.
+</p><p><i>Note that these comments are not complete or accurate yet. I have only just started implementing my own question type, and I will be filling in those comments and finishing this document as I go along.</i><a href="https://docs.moodle.org/502/en/User:Tim_Hunt"><bdi>Tim Hunt</bdi></a> 11:46, 12 April 2007 (CDT)
+</p>
+<h3><span id="Import_.26_Export_Support"></span><span class="mw-headline" id="Import_&amp;_Export_Support">Import &amp; Export Support</span></h3>
+<p>You can provide import and export support by adding a function for (each) format type you wish to support. The naming format is <b>import_from_format</b> and <b>export_to_format</b>, replacing format as appropriate (e.g., <b>export_to_xml</b>). Not all import/export plugins currently support this. See <a href="https://docs.moodle.org/dev/Import/export_for_questiontype_plugins" title="Development:Import/export for questiontype plugins">Development:Import/export_for_questiontype_plugins</a> for more information.
+</p><p>Note in particular that it is <b>vital</b> that your import format checks that the data passed really is for the same type of question as your plugin. In most cases this will simply be a matter of checking the question type (qtype) name in $data. This is done because the type name in the import format may not match the plugin name so <b>all</b> plugins will be polled to find one to handle the question.
+</p>
+<h3><span class="mw-headline" id="Language_strings">Language strings</span></h3>
+<p>In lang/en_utf8/qtype_<i>myqtypeidentifier</i>.php you need to define at least the following strings:
+</p><p><code>
+$string['addingQTYPEID'] = 'Adding a QTYPENAME question';
+$string['editingQTYPEID'] = 'Editing a QTYPENAME question';
+$string['QTYPEID'] = 'QTYPENAME';
+$string['QTYPEIDsummary'] = 'One or two sentence summary of what this question type does.';
+</code>
+</p>
+<h2><span class="mw-headline" id="Model_Question_Types">Model Question Types</span></h2>
+<p>If your question is similar to an existing question type (perhaps varying only in how it is displayed or how it is graded), it may be easier to adapt an existing question type rather than to start from the TEMPLATE question.
+</p><p>Be aware that backup/restore and import/export are handled differently for core question types than for contrib questions, so you will need to add backup/restore and import/export functions if you base your new question type on a core question type.
+</p><p>Even if your question is very different from existing question types, existing question types can provide good examples for various subtasks:
+</p>
+<h3><span class="mw-headline" id="Grading">Grading</span></h3>
+<dl><dt>essay</dt>
+<dd>manual grading</dd>
+<dt>shortanswer</dt>
+<dd>adaptive grading for a single response</dd>
+<dt>truefalse</dt>
+<dd>grading a single response disallowing adaptive grading</dd>
+<dt>match</dt>
+<dd>adaptive grading for multiple responses</dd>
+<dt>numerical</dt>
+<dd>grading numerical answers with tolerance</dd></dl>
+<h3><span id="Backup.2FRestore_and_Import.2FExport"></span><span class="mw-headline" id="Backup/Restore_and_Import/Export">Backup/Restore and Import/Export</span></h3>
+<p>Backup/restore and import/export are handled separately for core question types, so take a look at question types in contrib such as order or regexp.
+</p>
+<h2><span class="mw-headline" id="JavaScript_and_CSS_required_by_your_plugin">JavaScript and CSS required by your plugin</span></h2>
+<p>If your plugin needs custom CSS of JavaScript, you can just add files called styles.css and/or script.js in the plugin folder, and they will be included automatically on any page of a quiz (or other place) where your question is attempted.
+</p><p>From Moodle 2.0 onwards, these files will also be include on the question/question.php page that shows the editing form for your question type.
+</p><p>If you have more complicated requirements, you can instead override the get_html_head_contributions and get_editing_head_contributions (2.0+) methods of the question type class.
+</p><p>Alternatively, if you really must, you can generate the CSS and JS using PHP code in by calling the files styles.php and script.php but that is really not recommended.
+</p>
+<h2><span class="mw-headline" id="Configuration_settings_for_your_question_type">Configuration settings for your question type</span></h2>
+<p><a href="https://docs.moodle.org/502/en/index.php?title=Template:Moodle_2.0&amp;action=edit&amp;redlink=1" class="new" title="Template:Moodle 2.0 (page does not exist)">Template:Moodle 2.0</a>Sometimes you question type may need some configuration settings in the site admin area. Two examples of this would be the <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=102690">JUnit question type</a>, which needs to know the path to <tt>java</tt> and <tt>javac</tt> on the server, and the <a href="https://docs.moodle.org/dev/Opaque" class="mw-redirect" title="Development:Opaque">Opaque question type</a>, where you need to set up question engines to connect to.
+</p><p>To have admin settings for your question type, you just need to create a file settings.php inside your question type folder. In there, you need to create <a href="https://docs.moodle.org/dev/Admin_settings#Individual_settings" title="Development:Admin settings">admin_settings objects</a>, and add them to the $settings object that will be in scope when settings.php is included. For example, the following code, if placed in question/type/sojunit/settings.php, would defined three text settings for the sojunit question type where the admin can type in the paths required to make this question type work.
+</p><p><code>
+&lt;?php
+$settings-&gt;add(new admin_setting_configtext('qtype_sojunit/pathtojava',
+</code></p><code><pre>       get_string('pathtojava', 'qtype_sojunit'), get_string('configpathtojava', 'qtype_sojunit'),
+       '/usr/bin/java'));
+</pre></code><code><p>$settings-&gt;add(new admin_setting_configtext('qtype_sojunit/pathtojavac',
+</p></code><code><pre>       get_string('pathtojavac', 'qtype_sojunit'), get_string('configpathtojavac', 'qtype_sojunit'),
+       '/usr/bin/javac'));
+</pre></code><code><p>$settings-&gt;add(new admin_setting_configtext('qtype_sojunit/pathtojunit',
+</p></code><code><pre>       get_string('pathtojunit', 'qtype_sojunit'), get_string('configpathtojunit', 'qtype_sojunit'),
+       '/usr/share/java/junit.jar'));
+</pre></code><code></code><p><code>?&gt;
+</code>
+</p><p>The question type code could then access these settings by doing
+</p><p><code>
+$sojunitcfg = get_config('qtype_sojunit');
+// Use $sojunitcfg-&gt;pathtojava, etc. in the processing.
+</code>
+</p>
+<h2><span class="mw-headline" id="Testing">Testing</span></h2>
+<p>How do you know that your new question type is working, and that you have done everything you need to? If you do all of the following tests, you can be fairly confident that you have done everything you need to:
+</p>
+<ol><li>Create some new questions of your type, exercising each significantly different combination of options.</li>
+<li>Go back to the editing form for each question to make sure that the options were saved accurately and that you can change them and that the changes are then saved.</li>
+<li>Try typing invalid input into the editing form, and ensure it is rejected.</li>
+<li>Try each of your new questions in preview mode. Check that they correctly mark and give feedback for a range of correct and incorrect responses. Try using a range of browsers, particularly if you are using comples CSS or JavaScript.</li>
+<li>Add your questions to three quizzes, one in adaptive mode, one in non-adaptive mode, and one in non-adaptive mode with each attempt builds on last. Perhaps mix in some standard question types. Make one of the quizzes one question per page, and another with all the questions on the same page.</li>
+<li>Try those quizzes several times in preview mode, entering a range of correct and incorrect responses.</li>
+<li>Now log in as a student and take the quizzes for real.</li>
+<li>View all of the quiz reports, and ensure that they correctly display the information about your questions.</li>
+<li>Backup the course, restore it as a new course, and ensure that all your questions have been copied across accurately. Before doing this test, edit at least one of the questions and wherever HTML can be entered, insert a link to another part of the course, for example a resource. Ensure that after backup and restore, the link has been updated to point to the new URL of the restored resource.</li>
+<li>Export your questions from the original course to each of the import/export formats your support. Import these questions to a new question category, and ensure they have been copied accurately (within the limits to which your question type can be represented in each format).</li>
+<li>Check your question type against Accessibility guidelines, for example the <a rel="nofollow" class="external text" href="http://www.w3.org/WAI/intro/wcag.php">Web Content Accessibility Guidelines</a>.</li></ol>
+<h2><span class="mw-headline" id="Debugging_hints">Debugging hints</span></h2>
+<p>Here are some tips to help while trying to get your question type working:
+</p>
+<ul><li>Watch the results of <a href="https://docs.moodle.org/dev/Question_database_structure#Following_what_happens_when_questions_are_attempted" title="Development:Question database structure"> this database query</a> while attempting the question in a quiz, to see what is being stored in the database. This is a really useful way to find out what is going on in the code.</li></ul>
+<h2><span class="mw-headline" id="When_you_have_finished">When you have finished</span></h2>
+<p>Consider checking your question type into the contrib area of the Moodle CVS server (if you have access, if not, request it or post your code as a zip file in the quiz forum) so that other people can share it.
+</p><p>Add your new question type to the <a rel="nofollow" class="external text" href="http://moodle.org/mod/data/view.php?id=6009">modules and plugins database</a>.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260823030137
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.016 seconds
+Real time usage: 0.026 seconds
+Preprocessor visited node count: 60/1000000
+Post&#8208;expand include size: 932/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.466      1 -total
+ 50.90%    2.782      1 Template:Question_development
+ 22.72%    1.242      1 Template:Questiontype_developer_docs
+ 22.14%    1.210      1 Template:Moodle_2.0
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:2063-0!canonical and timestamp 20260823030137 and revision id 65839. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Development:Question_type_plugin_how_to&amp;oldid=65839">https://docs.moodle.org/502/en/index.php?title=Development:Question_type_plugin_how_to&amp;oldid=65839</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="d7b6770687f1584dd7077ddf50ca2429.html" title="Category:Developer">Developer</a></li><li><a href="66eedc42cfbcf3ba75beae122b9d4e4e.html" title="Category:Quiz">Quiz</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdl0p7dn5">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdl0p7dyz"></button>
+					<div class="collapse navbar-collapse igdl0p7dyz" id="igdl0p7dyz">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Development:Question_type_plugin_how_to" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Development:Question_type_plugin_how_to" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Development:Question_type_plugin_how_to&amp;oldid=65839" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Development:Question_type_plugin_how_to&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 25 November 2009, at 15:03.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":207,"wgPageParseReport":{"limitreport":{"cputime":"0.016","walltime":"0.026","ppvisitednodes":{"value":60,"limit":1000000},"postexpandincludesize":{"value":932,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    5.466      1 -total"," 50.90%    2.782      1 Template:Question_development"," 22.72%    1.242      1 Template:Questiontype_developer_docs"," 22.14%    1.210      1 Template:Moodle_2.0"]},"cachereport":{"timestamp":"20260823030137","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

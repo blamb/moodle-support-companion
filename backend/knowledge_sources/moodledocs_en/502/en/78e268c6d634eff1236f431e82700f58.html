@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Authentication FAQ - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"cf6558b19a84901da54570b5","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Authentication_FAQ","wgTitle":"Authentication FAQ","wgCurRevisionId":155702,"wgRevisionId":155702,"wgArticleId":6975,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Authentication","FAQ"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Authentication_FAQ","wgRelevantArticleId":6975,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="593ae70845242c812b361a340a53fb46.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.pygments%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Authentication_FAQ">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Authentication_FAQ rootpage-Authentication_FAQ layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhkdtdvk"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhkdtdvk" id="igdhkdtdvk">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Authentication+FAQ" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Authentication_FAQ">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Authentication_FAQ">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Authentication_FAQ">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="78e268c6d634eff1236f431e82700f58.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Authentication_FAQ&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Authentication_FAQ&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Authentication_FAQ&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Authentication FAQ</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a>  ► <a href="236dc8d53a6146955905ab37c10ae1c1.html" title="Authentication">Authentication</a>  ►  <a class="mw-selflink selflink">Authentication FAQ</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="236dc8d53a6146955905ab37c10ae1c1.html" title="Authentication">Authentication</a></div>	
+<div class="content">
+<ul><li><a href="56f71475ca5396fe5c368188b0c8a682.html" title="Managing authentication">Managing authentication</a></li>
+<li><a href="8cbfda637dd7e95bf073ff6a947aaee0.html" title="Manual accounts">Manual accounts</a></li>
+<li><a href="42871dbaab8add369ee3eccb5976cbed.html" title="No login">No login</a></li>
+<li><a href="b6d388a2ea2166f451cb9e8a93c4026a.html" title="Email-based self-registration">Email-based self-registration</a></li>
+<li><a href="b44394139ca450747843f44c94938068.html" title="External database authentication">External database</a></li>
+<li><a href="30fc37ce968793e7b46e3efd8b89a83b.html" title="LDAP authentication">LDAP</a></li>
+<li><a href="9f1ad945da14dd10aab0c99ebf7e3af4.html" class="mw-redirect" title="LTI">LTI</a></li>
+<li><a href="1ae69e07d6d34d4d83c9c4ca596a0b36.html" title="No authentication">No authentication</a></li>
+<li><a href="e9d8f7e3af380059f76b8f5d4ab0fa61.html" title="OAuth 2 authentication">OAuth 2</a></li>
+<li><a href="a30d98018bff09d1ea2804e0db1a3cf0.html" title="Shibboleth">Shibboleth</a></li>
+<li><a href="042948956eb0db5e30d81315af28f4cd.html" title="Web services authentication">Web services</a></li>
+<li><a href="ad8b7b337c3e8d839e1aa452c1361cd5.html" title="Multi-factor authentication">Multi-factor authentication</a></li>
+<li><a class="mw-selflink selflink">Authentication FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p><br>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#General_Questions"><span class="tocnumber">1</span> <span class="toctext">General Questions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#What_is_an_authentication_plugin?"><span class="tocnumber">1.1</span> <span class="toctext">What is an authentication plugin?</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Can_I_have_more_than_one_authentication_method?"><span class="tocnumber">1.2</span> <span class="toctext">Can I have more than one authentication method?</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Can_a_user_have_more_than_one_authentication_method?"><span class="tocnumber">1.3</span> <span class="toctext">Can a user have more than one authentication method?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Manual_and_Self-registration_Questions"><span class="tocnumber">2</span> <span class="toctext">Manual and Self-registration Questions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#How_do_I_enable_the_%22Create_new_account%22_button_on_the_login_page?"><span class="tocnumber">2.1</span> <span class="toctext">How do I enable the "Create new account" button on the login page?</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#How_can_I_change_the_Login_page_message_and_instructions?"><span class="tocnumber">2.2</span> <span class="toctext">How can I change the Login page message and instructions?</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#How_can_I_change_the_Login_page_image?"><span class="tocnumber">2.3</span> <span class="toctext">How can I change the Login page image?</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#What_is_the_difference_between_enabling_the_email-based_self-registration_auth_plugin_and_selecting_it_as_the_self-registration_method?"><span class="tocnumber">2.4</span> <span class="toctext">What is the difference between enabling the email-based self-registration auth plugin and selecting it as the self-registration method?</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#How_can_I_prevent_spam_accounts_if_I_use_self-registration?"><span class="tocnumber">2.5</span> <span class="toctext">How can I prevent spam accounts if I use self-registration?</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Why_isn't_the_Email-Based_Self-Registration_sending_emails?"><span class="tocnumber">2.6</span> <span class="toctext">Why isn't the Email-Based Self-Registration sending emails?</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#What_should_I_do_if_I_misconfigure_reCAPTCHA_on_the_login_or_registration_pages_and_I_cannot_log_into_my_Moodle_site?"><span class="tocnumber">2.7</span> <span class="toctext">What should I do if I misconfigure reCAPTCHA on the login or registration pages and I cannot log into my Moodle site?</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Can_you_arrange_for_Admins_to_be_notified_of_new_self_registrations"><span class="tocnumber">2.8</span> <span class="toctext">Can you arrange for Admins to be notified of new self registrations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Other_authentication_methods"><span class="tocnumber">3</span> <span class="toctext">Other authentication methods</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#How_do_I_set_up_LDAP_authentication?"><span class="tocnumber">3.1</span> <span class="toctext">How do I set up LDAP authentication?</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#How_is_the_%22No_login%22_authentication_plugin_used?"><span class="tocnumber">3.2</span> <span class="toctext">How is the "No login" authentication plugin used?</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Can_I_change_manual_accounts_to_LDAP?"><span class="tocnumber">3.3</span> <span class="toctext">Can I change manual accounts to LDAP?</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#How_can_I_allow_users_to_bypass_NTML_SSO?"><span class="tocnumber">3.4</span> <span class="toctext">How can I allow users to bypass NTML SSO?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Other_Questions"><span class="tocnumber">4</span> <span class="toctext">Other Questions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#How_can_young_students_or_other_users_without_email_addresses_create_new_Moodle_accounts?"><span class="tocnumber">4.1</span> <span class="toctext">How can young students or other users without email addresses create new Moodle accounts?</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Where_are_users'_details_stored?"><span class="tocnumber">4.2</span> <span class="toctext">Where are users' details stored?</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#How_can_I_have_users_logging_in_with_their_email_address?"><span class="tocnumber">4.3</span> <span class="toctext">How can I have users logging in with their email address?</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#How_can_I_create_an_authentication_plugin?"><span class="tocnumber">4.4</span> <span class="toctext">How can I create an authentication plugin?</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#How_can_I_log_in_after_hiding_the_manual_login_form?"><span class="tocnumber">4.5</span> <span class="toctext">How can I log in after hiding the manual login form?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#Any_further_questions?"><span class="tocnumber">5</span> <span class="toctext">Any further questions?</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="General_Questions">General Questions</span></h2>
+<h3><span id="What_is_an_authentication_plugin.3F"></span><span class="mw-headline" id="What_is_an_authentication_plugin?">What is an authentication plugin?</span></h3>
+<p>An authentication plugin is a method of handling user authentication to Moodle when users log into your site. This means, in the most usual practice, matching a user's username with their password. 
+</p><p>You can have one or more methods as the same time enabled on your site, but each user can only use one method of authentication at a time. So, you may have manual authentication for some users, LDAP for others, Shibboleth for others, but each user authenticates with only one of those.
+</p><p>See <a href="236dc8d53a6146955905ab37c10ae1c1.html" title="Authentication">Authentication</a> for the list of these various methods and their use and settings.
+</p>
+<h3><span id="Can_I_have_more_than_one_authentication_method.3F"></span><span class="mw-headline" id="Can_I_have_more_than_one_authentication_method?">Can I have more than one authentication method?</span></h3>
+<p>Yes, you can enable and configure as many methods as you need for your users in <i>Site administration &gt; Plugins &gt; Authentication &gt; Manage authentication</i>. Note that the order of processing on this page does matter and after manual and nologin, you should next put the method that most users will have. See <a href="56f71475ca5396fe5c368188b0c8a682.html" title="Managing authentication">Managing Authentication</a> for details.
+</p>
+<h3><span id="Can_a_user_have_more_than_one_authentication_method.3F"></span><span class="mw-headline" id="Can_a_user_have_more_than_one_authentication_method?">Can a user have more than one authentication method?</span></h3>
+<p>No, a user account has only one authentication method at a time. You can can change this method for a user, but you will also need to handle issues such as passwords, etc. that arise from this.
+</p>
+<h2><span class="mw-headline" id="Manual_and_Self-registration_Questions">Manual and Self-registration Questions</span></h2>
+<h3><span id="How_do_I_enable_the_.22Create_new_account.22_button_on_the_login_page.3F"></span><span class="mw-headline" id='How_do_I_enable_the_"Create_new_account"_button_on_the_login_page?'>How do I enable the "Create new account" button on the login page?</span></h3>
+<p>To display the "Is this your first time here?" instructions and the "Create new account" button:
+</p>
+<ol><li>Make sure that the <a href="b6d388a2ea2166f451cb9e8a93c4026a.html" title="Email-based self-registration">email-based self-registration plugin</a> (or any other plugin that can support self-registration, such as LDAP) is enabled in <i> Site administration &gt; Plugins &gt; Authentication &gt; <a href="261f453f484c9d8c3f1a59fca31afb93.html" class="mw-redirect" title="Manage authentication">Manage authentication</a></i>.</li>
+<li>Select the self-registration plugin in the Common  settings.</li></ol>
+<p>Warning: Enabling Self-registration results in the possibility of spammers creating accounts in order to use forum posts, blog entries etc. for spam. See <a href="fd2a052e22a9697929ab4c1677f9c8d0.html" title="Reducing spam in Moodle">Reducing spam in Moodle</a> for ways of minimizing the risk.
+</p>
+<h3><span id="How_can_I_change_the_Login_page_message_and_instructions.3F"></span><span class="mw-headline" id="How_can_I_change_the_Login_page_message_and_instructions?">How can I change the Login page message and instructions?</span></h3>
+<p>From Moodle LMS 5.2 onwards to set or update the login page message or provide custom login instructions to your users, navigate to the Login settings page: Site administration &gt; General &gt; Login &gt; Login settings.
+From the Login settings page, type your own text in the Instructions field. <br>
+More information can be found int the <a href="0995483d122dda83d3e384fe0abe9b75.html" title="Login settings">Login settings documentation</a>.
+</p>
+<h3><span id="How_can_I_change_the_Login_page_image.3F"></span><span class="mw-headline" id="How_can_I_change_the_Login_page_image?">How can I change the Login page image?</span></h3>
+<p>How the login page image is displayed is based on the currently selected theme for your site. For the Boost theme the login page image can be updated from the theme settings.<br>
+Do this from Site administration &gt; Appearance &gt; Themes &gt; Boost; click the cog and upload a new image for the Login background.
+</p><p>More information can be found int the <a href="0995483d122dda83d3e384fe0abe9b75.html" title="Login settings">Login settings documentation</a>.
+</p>
+<h3><span id="What_is_the_difference_between_enabling_the_email-based_self-registration_auth_plugin_and_selecting_it_as_the_self-registration_method.3F"></span><span class="mw-headline" id="What_is_the_difference_between_enabling_the_email-based_self-registration_auth_plugin_and_selecting_it_as_the_self-registration_method?">What is the difference between enabling the email-based self-registration auth plugin and selecting it as the self-registration method?</span></h3>
+<p>The difference is that self-registration is the general term for having a user create an account themselves. There could be many ways to do that, for instance to allow users to sign up with no email at all. Almost all web applications these days, however, require users to first confirm their email address. This is to prevent spam accounts and other security issues. Moodle has only one type on self-registration currently, which is email-based.
+</p><p>Therefore: to allow users to create self-registered accounts, you must do two things:
+</p>
+<ol><li>Enable <a href="b6d388a2ea2166f451cb9e8a93c4026a.html" title="Email-based self-registration"> email-based self-registration authentication plugin</a> to allow such users to be able to log in.</li>
+<li>Set <i>Site administration &gt; Plugins &gt; Authentication &gt; Managing authentication &gt; Common settings &gt; Self registration</i> from Disable to Email-based self-registration to allow potential users to create their accounts.</li></ol>
+<p>This division of labor into two settings means that it is possible to Disable Self-registration to prevent accounts, but as long as the Authentication method Email-self registration is still enabled, users will still be able to login and use their accounts. 
+</p><p>You could do this in a case where you may wish to allow signup for a limited period (a day, week, month) to allow users to self-create their accounts, then Disable creating new accounts while allowing the already created users to log in.
+</p>
+<h3><span id="How_can_I_prevent_spam_accounts_if_I_use_self-registration.3F"></span><span class="mw-headline" id="How_can_I_prevent_spam_accounts_if_I_use_self-registration?">How can I prevent spam accounts if I use self-registration?</span></h3>
+<p>Warning: Enabling self-registration results in the possibility of spammers creating accounts in order to use forum posts, blog entries etc. for spam. This risk can be minimized by limiting self registration to particular email domains with the allowed email domains setting in <i>Site administration &gt; Plugins&gt; Authentication &gt; <a href="236dc8d53a6146955905ab37c10ae1c1.html" title="Authentication">Manage authentication</a></i>. Alternatively, self-registration may be enabled for a short period of time to allow users to create accounts, and then later disabled.
+</p><p>See also: <a href="fd2a052e22a9697929ab4c1677f9c8d0.html" title="Reducing spam in Moodle">Reducing Spam in Moodle</a>
+</p>
+<h3><span id="Why_isn.27t_the_Email-Based_Self-Registration_sending_emails.3F"></span><span class="mw-headline" id="Why_isn't_the_Email-Based_Self-Registration_sending_emails?">Why isn't the Email-Based Self-Registration sending emails?</span></h3>
+<p>Email based sends out an email with a message and confirmation link to users when they sign up. Possible reason why this make not be working, and also a useful order to troubleshoot this, is:
+</p>
+<ol><li>Is email working at all from Moodle for other features such as forum posts? If not, check that you have <a href="9ebd3b02592b3e18c514dd000d4a7cba.html" title="Messaging">Messaging</a> enabled and that your <a href="54ed562934252b6a33491da46b28114d.html" class="mw-redirect" title="Email settings">Email Settings</a> are set.</li>
+<li>Is email for new sign ups working? You can test this yourself by signing up with a dummy test user and a valid email.</li>
+<li>Has the user checked their spam or junk folder? The email comes by default from your Moodle administrator account, and it is not uncommon for that to be flagged by some systems as potential spam.</li>
+<li>Did the user make a typo or other error in their email address or are they using the wrong account?</li></ol>
+<p>Some good troubleshooting advice on the <a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=271188#p1170455%7C">Community Forums</a>
+</p>
+<h3><span id="What_should_I_do_if_I_misconfigure_reCAPTCHA_on_the_login_or_registration_pages_and_I_cannot_log_into_my_Moodle_site.3F"></span><span class="mw-headline" id="What_should_I_do_if_I_misconfigure_reCAPTCHA_on_the_login_or_registration_pages_and_I_cannot_log_into_my_Moodle_site?">What should I do if I misconfigure reCAPTCHA on the login or registration pages and I cannot log into my Moodle site?</span></h3>
+<p><b>For site administrators:</b> If you enable reCAPTCHA on your site, and for some reason the settings are not configured correctly there is a chance you could be locked out of the site. If this happens, adding the following line to your <b>config.php</b> file on the server will temporarily disable reCAPTCHA. 
+</p>
+<div class="mw-highlight mw-highlight-lang-php mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">$CFG</span><span class="o">-&gt;</span><span class="na">enableloginrecaptcha</span><span class="o">=</span><span class="s1">'0'</span><span class="p">;</span>
+</pre></div>
+<p>This allows you to log in and correct the settings before trying again. To re-enable the reCAPTCHA, remember to delete it or comment it out of the configuration file.
+</p>
+<h3><span class="mw-headline" id="Can_you_arrange_for_Admins_to_be_notified_of_new_self_registrations">Can you arrange for Admins to be notified of new self registrations</span></h3>
+<p>If you are creating ONE manual account, then no.
+</p>
+<ul><li>See this discussion: <a rel="nofollow" class="external free" href="http://moodle.org/mod/forum/discuss.php?d=212648">http://moodle.org/mod/forum/discuss.php?d=212648</a></li>
+<li>See Feature request here: <a rel="nofollow" class="external free" href="http://tracker.moodle.org/browse/MDL-19390">http://tracker.moodle.org/browse/MDL-19390</a></li>
+<li>See discussion <a rel="nofollow" class="external free" href="http://moodle.org/mod/forum/discuss.php?d=117005">http://moodle.org/mod/forum/discuss.php?d=117005</a></li></ul>
+<p>Bulk upload can be set up to send e-mails. See the discussion here: <a rel="nofollow" class="external free" href="http://moodle.org/mod/forum/discuss.php?d=85333">http://moodle.org/mod/forum/discuss.php?d=85333</a> (which includes a code hack to do this as well). Also see <a rel="nofollow" class="external free" href="http://moodle.org/mod/forum/discuss.php?d=125000">http://moodle.org/mod/forum/discuss.php?d=125000</a>.
+</p>
+<h2><span class="mw-headline" id="Other_authentication_methods">Other authentication methods</span></h2>
+<h3><span id="How_do_I_set_up_LDAP_authentication.3F"></span><span class="mw-headline" id="How_do_I_set_up_LDAP_authentication?">How do I set up LDAP authentication?</span></h3>
+<p>See <a href="30fc37ce968793e7b46e3efd8b89a83b.html" title="LDAP authentication">LDAP authentication</a> for full instructions.
+</p>
+<h3><span id="How_is_the_.22No_login.22_authentication_plugin_used.3F"></span><span class="mw-headline" id='How_is_the_"No_login"_authentication_plugin_used?'>How is the "No login" authentication plugin used?</span></h3>
+<p>The <a href="42871dbaab8add369ee3eccb5976cbed.html" title="No login">No login</a> authentication plugin can be used to suspend particular user accounts. This means the user will not be able to log into Moodle, but their account is otherwise unchanged. 
+</p><p>Note: Users will not receive any error or other message when they try to log in but it simply will not allow them in. So it will appear as though their password was incorrect and they may attempt to reset it. Consider this issue when using No login, in order to reduce support issues.
+</p><p>To do so:
+</p>
+<ol><li>Access the user's profile page.</li>
+<li>In the Settings block, click "Edit profile".</li>
+<li>Select "No login" as the authentication method (if the setting isn't shown, click the "Show advanced" button to reveal it).</li>
+<li>Click the "Update profile" button at the bottom of the page.</li></ol>
+<h3><span id="Can_I_change_manual_accounts_to_LDAP.3F"></span><span class="mw-headline" id="Can_I_change_manual_accounts_to_LDAP?">Can I change manual accounts to LDAP?</span></h3>
+<p>Yes. You can change any user account from one authentication method to another in Moodle, but you are of course responsible for making sure that the information matches and is valid in the new method.
+</p><p>You can set this manually for each user in their user profile by changing the "Authentication" field. This can also be changed en masse for many users by using the User file upload tool <a href="8521918b0d88043de3d8c67f42a8a2f5.html" title="Upload users">Upload_users</a> and changing the field called "auth".
+</p><p>See this blog post on <a rel="nofollow" class="external text" href="http://www.scoop.it/t/moodle-lms-m-ms/p/4013595490/2014/01/03/how-to-change-manual-user-accounts-to-ldap">Changing manual accounts to LDAP</a> using MySQL database and this ad-hoc query <a rel="nofollow" class="external free" href="4682100b49330df4d2421daa6667f344.html#List_of_users_with_Authentication">https://docs.moodle.org/502/en/ad-hoc_contributed_reports#List_of_users_with_Authentication</a>.
+</p>
+<h3><span id="How_can_I_allow_users_to_bypass_NTML_SSO.3F"></span><span class="mw-headline" id="How_can_I_allow_users_to_bypass_NTML_SSO?">How can I allow users to bypass NTML SSO?</span></h3>
+<p>When NTLM SSO is enabled on a Moodle site the SSO function always logs the user who is logged into the computer into Moodle. Sometimes you may need to override this feature and login to Moodle as another user. Example: when a teacher or site administrator needs to login to the students computer to troubleshoot a problem. Or the teacher simply needs to access functionality that is not available to the student and the teacher is not anywhere near her own computer.
+</p><p>The problem is that the Moodle logout option is not available when SSO is enabled - the user simply gets logged back into Moodle. To bypass the SSO you can add this to the url:
+</p><p><code>/login/index.php?authldap_skipntlmsso=1</code>
+</p><p>Example: <a rel="nofollow" class="external free" href="http://yourschool.com/login/index.php?authldap_skipntlmsso=1">http://yourschool.com/login/index.php?authldap_skipntlmsso=1</a>
+</p><p>The NTLM SSO will be disabled (for this login only) and you will get the regular Moodle login page.
+</p>
+<table style="border: dotted orange 1px;">
+<tbody><tr>
+<td><span class="mw-valign-middle" typeof="mw:File"><span><img src="images_en/thumb/3/37/warning.png/8800110421e8d116b7d3819d0ce3dccf.png" decoding="async" width="30" height="30" class="mw-file-element" srcset="/502/en/images_en/3/37/warning.png 1.5x" data-file-width="40" data-file-height="40"></span></span>
+</td>
+<td style="padding: 0.5em 0.5em;"><b>Warning:</b> This bypass won't work if you have the <a href="0110860b4de758362cc79f71041d6882.html#Force_users_to_login" class="mw-redirect" title="Site policies"><i>Force users to login</i> site policy</a> enabled. In that case, SSO is applied to all pages on the site, including the log in and log out pages.
+</td></tr></tbody></table>
+<p>See the Using Moodle <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=200641">Bypass NTML SSO for Moode 2.2</a> forum discussion for details.
+</p>
+<h2><span class="mw-headline" id="Other_Questions">Other Questions</span></h2>
+<h3><span id="How_can_young_students_or_other_users_without_email_addresses_create_new_Moodle_accounts.3F"></span><span class="mw-headline" id="How_can_young_students_or_other_users_without_email_addresses_create_new_Moodle_accounts?">How can young students or other users without email addresses create new Moodle accounts?</span></h3>
+<p>You can either use a fake email address when you upload the CSV file of your young students - or - you can use the <a href="8521918b0d88043de3d8c67f42a8a2f5.html" title="Upload users">Upload_users</a>  file upload tool to get around this, as follows
+</p>
+<ol><li>Upload a CSV file without an email field.</li>
+<li>When previewing the accounts, set "Prevent email address duplicates" to <i>No</i>.</li>
+<li>In "Default values", type in an email address.</li>
+<li>When the users are uploaded, they will all have the same email address. (It will say "duplicated" but the accounts will work)</li></ol>
+<p>See also <a href="29acfa54310639343b472ebab9d66266.html" title="No Email">No Email</a>.
+</p>
+<h3><span id="Where_are_users.27_details_stored.3F"></span><span class="mw-headline" id="Where_are_users'_details_stored?">Where are users' details stored?</span></h3>
+<p>Basic user account information, the required fields of username, first name, last name, and email address, which allow a user to be known to Moodle and are stored in the Moodle database. How much other user profile information is stored depends on the authentication method used for that user, and whether that information is stored externally to Moodle in another system. All user activity done in Moodle, e.g., course enrollments, grades, and so forth are stored in Moodle.
+</p><p>"Internal" users are those who are created directly in Moodle and whose information is not directly linked to or synchronized with any other system. Manual and self-registration authentication methods are internal.
+</p><p>"External" users are those whose user account information is based in another system and is synchronzied or referenced by Moodle when needed. LPAD, External database, Shibboleth, etc. are examples of external methods.
+</p>
+<h3><span id="How_can_I_have_users_logging_in_with_their_email_address.3F"></span><span class="mw-headline" id="How_can_I_have_users_logging_in_with_their_email_address?">How can I have users logging in with their email address?</span></h3>
+<p>This is set in <i>Site administration &gt; Plugins &gt; Authentication &gt; Manage authentication &gt; Common settings &gt; Allow login via email.</i> This feature was added in Moodle 2.7.
+</p>
+<h3><span id="How_can_I_create_an_authentication_plugin.3F"></span><span class="mw-headline" id="How_can_I_create_an_authentication_plugin?">How can I create an authentication plugin?</span></h3>
+<p>See <a href="https://docs.moodle.org/dev/Authentication_plugins" title="Development:Authentication plugins">Development: Authentication plugins</a>.
+</p>
+<h3><span id="How_can_I_log_in_after_hiding_the_manual_login_form.3F"></span><span class="mw-headline" id="How_can_I_log_in_after_hiding_the_manual_login_form?">How can I log in after hiding the manual login form?</span></h3>
+<p>If you hide the manual login form in <i>Site administration &gt; Plugins &gt; Manage authentication</i> then find that you can no longer log in, you can display it again using the command line
+</p>
+<pre>php admin/cli/cfg.php --name=showloginform --set=1
+</pre>
+<h2><span id="Any_further_questions.3F"></span><span class="mw-headline" id="Any_further_questions?">Any further questions?</span></h2>
+<p>Please post in the <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/view.php?id=42">Authentication forum</a> on moodle.org.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="e792a3335f981d3df3f5ede33f905479.html" title="Accounts FAQ">Accounts FAQ</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260823010208
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.027 seconds
+Real time usage: 0.099 seconds
+Preprocessor visited node count: 116/1000000
+Post&#8208;expand include size: 1028/2097152 bytes
+Template argument size: 218/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 335/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.139      1 -total
+ 43.33%    1.360      1 Template:Authentication
+ 38.10%    1.196      1 Template:warning
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:6975-0!canonical and timestamp 20260823010208 and revision id 155702. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Authentication_FAQ&amp;oldid=155702">https://docs.moodle.org/502/en/index.php?title=Authentication_FAQ&amp;oldid=155702</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="00d535865630704a120a6cacf79bc2bc.html" title="Category:Authentication">Authentication</a></li><li><a href="d6b0775565520759d6ccd9ae1d47581b.html" title="Category:FAQ">FAQ</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhkdtgui">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhkdthin"></button>
+					<div class="collapse navbar-collapse igdhkdthin" id="igdhkdthin">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Authentication_FAQ" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Authentication_FAQ" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Authentication_FAQ&amp;oldid=155702" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Authentication_FAQ&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Authentifizierung_FAQ" title="Authentifizierung FAQ – Deutsch" lang="de" hreflang="de" data-title="Authentifizierung FAQ" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Autenticación_FAQ" title="Autenticación FAQ – español" lang="es" hreflang="es" data-title="Autenticación FAQ" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/FAQ_d%27authentification" title="FAQ d&#039;authentification – français" lang="fr" hreflang="fr" data-title="FAQ d&#039;authentification" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 22 May 2026, at 10:02.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":576,"wgPageParseReport":{"limitreport":{"cputime":"0.027","walltime":"0.099","ppvisitednodes":{"value":116,"limit":1000000},"postexpandincludesize":{"value":1028,"limit":2097152},"templateargumentsize":{"value":218,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":335,"limit":5000000},"timingprofile":["100.00%    3.139      1 -total"," 43.33%    1.360      1 Template:Authentication"," 38.10%    1.196      1 Template:warning"]},"cachereport":{"timestamp":"20260823010208","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

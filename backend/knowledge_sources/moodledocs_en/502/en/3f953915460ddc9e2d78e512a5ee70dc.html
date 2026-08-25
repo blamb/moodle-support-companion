@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>StudentQuiz module - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"c1c9f45edbbd15b841efd2f7","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"StudentQuiz_module","wgTitle":"StudentQuiz module","wgCurRevisionId":148449,"wgRevisionId":148449,"wgArticleId":21901,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Plugin","Quiz","Questions","Contributed code"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"StudentQuiz_module","wgRelevantArticleId":21901,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/StudentQuiz_module">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-StudentQuiz_module rootpage-StudentQuiz_module layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjff15mc"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdjff15mc" id="igdjff15mc">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=StudentQuiz+module" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/StudentQuiz_module">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/StudentQuiz_module">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/StudentQuiz_module">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="3f953915460ddc9e2d78e512a5ee70dc.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:StudentQuiz_module&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=StudentQuiz_module&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=StudentQuiz_module&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">StudentQuiz module</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock">
+<table class="infobox">
+
+<tbody><tr>
+<th><b><a class="mw-selflink selflink">StudentQuiz module</a></b>
+</th></tr>
+<tr>
+<td>Type
+</td>
+<td>Activity
+</td></tr>
+<tr>
+<td>Set
+</td>
+<td>N/A
+</td></tr>
+<tr>
+<td>Downloads
+</td>
+<td><a rel="nofollow" class="external free" href="https://moodle.org/plugins/mod_studentquiz">https://moodle.org/plugins/mod_studentquiz</a>
+</td></tr>
+<tr>
+<td>Issues
+</td>
+<td><a rel="nofollow" class="external free" href="https://github.com/studentquiz/moodle-mod_studentquiz">https://github.com/studentquiz/moodle-mod_studentquiz</a>
+</td></tr>
+<tr>
+<td>Discussion
+</td>
+<td><a rel="nofollow" class="external free" href="https://moodle.org/plugins/mod_studentquiz">https://moodle.org/plugins/mod_studentquiz</a>
+</td></tr>
+<tr>
+<td>Maintainer(s)
+</td>
+<td><a rel="nofollow" class="external text" href="https://moodle.org/user/profile.php?id=93821">Tim Hunt</a>
+</td></tr>
+</tbody></table>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+<p>This documentation is meant for everyone interested in the usage, management,
+and development of the StudentQuiz Moodle Plugin.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Student_Manual"><span class="tocnumber">2</span> <span class="toctext">Student Manual</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Practice"><span class="tocnumber">2.1</span> <span class="toctext">Practice</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Open_Studentquiz"><span class="tocnumber">2.1.1</span> <span class="toctext">Open Studentquiz</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Actions"><span class="tocnumber">2.1.2</span> <span class="toctext">Actions</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Table_information"><span class="tocnumber">2.1.3</span> <span class="toctext">Table information</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Filter_questions"><span class="tocnumber">2.1.4</span> <span class="toctext">Filter questions</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Start_a_quiz"><span class="tocnumber">2.1.5</span> <span class="toctext">Start a quiz</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#Contribute"><span class="tocnumber">2.2</span> <span class="toctext">Contribute</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Adding_a_question"><span class="tocnumber">2.2.1</span> <span class="toctext">Adding a question</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Rating_a_question"><span class="tocnumber">2.2.2</span> <span class="toctext">Rating a question</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Commenting_a_question"><span class="tocnumber">2.2.3</span> <span class="toctext">Commenting a question</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-13"><a href="#Evaluation_Process"><span class="tocnumber">2.3</span> <span class="toctext">Evaluation Process</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#Evaluation_from_your_peer_group"><span class="tocnumber">2.3.1</span> <span class="toctext">Evaluation from your peer group</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Evaluation_from_the_teacher"><span class="tocnumber">2.3.2</span> <span class="toctext">Evaluation from the teacher</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="#Learning_Assistance"><span class="tocnumber">2.4</span> <span class="toctext">Learning Assistance</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Reports"><span class="tocnumber">2.5</span> <span class="toctext">Reports</span></a>
+<ul>
+<li class="toclevel-3 tocsection-18"><a href="#Statistics"><span class="tocnumber">2.5.1</span> <span class="toctext">Statistics</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Ranking"><span class="tocnumber">2.5.2</span> <span class="toctext">Ranking</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#Teacher_Manual"><span class="tocnumber">3</span> <span class="toctext">Teacher Manual</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#Create_a_StudentQuiz_Activity"><span class="tocnumber">3.1</span> <span class="toctext">Create a StudentQuiz Activity</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Configure_a_StudentQuiz_Activity"><span class="tocnumber">3.2</span> <span class="toctext">Configure a StudentQuiz Activity</span></a>
+<ul>
+<li class="toclevel-3 tocsection-23"><a href="#Ranking_Settings"><span class="tocnumber">3.2.1</span> <span class="toctext">Ranking Settings</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#Question_Settings"><span class="tocnumber">3.2.2</span> <span class="toctext">Question Settings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-25"><a href="#Removing_a_StudentQuiz_Activity"><span class="tocnumber">3.3</span> <span class="toctext">Removing a StudentQuiz Activity</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Moderate"><span class="tocnumber">3.4</span> <span class="toctext">Moderate</span></a>
+<ul>
+<li class="toclevel-3 tocsection-27"><a href="#Moderate_question_state"><span class="tocnumber">3.4.1</span> <span class="toctext">Moderate question state</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="#Moderate_question_visibility"><span class="tocnumber">3.4.2</span> <span class="toctext">Moderate question visibility</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-29"><a href="#Evaluate"><span class="tocnumber">3.5</span> <span class="toctext">Evaluate</span></a>
+<ul>
+<li class="toclevel-3 tocsection-30"><a href="#Statistics_2"><span class="tocnumber">3.5.1</span> <span class="toctext">Statistics</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="#Ranking_2"><span class="tocnumber">3.5.2</span> <span class="toctext">Ranking</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-32"><a href="#Reuse"><span class="tocnumber">3.6</span> <span class="toctext">Reuse</span></a>
+<ul>
+<li class="toclevel-3 tocsection-33"><a href="#Question_bank"><span class="tocnumber">3.6.1</span> <span class="toctext">Question bank</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="#Important"><span class="tocnumber">3.6.2</span> <span class="toctext">Important</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-35"><a href="#Administrator_Manual"><span class="tocnumber">4</span> <span class="toctext">Administrator Manual</span></a>
+<ul>
+<li class="toclevel-2 tocsection-36"><a href="#Install"><span class="tocnumber">4.1</span> <span class="toctext">Install</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="#Configure"><span class="tocnumber">4.2</span> <span class="toctext">Configure</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="#Upgrade"><span class="tocnumber">4.3</span> <span class="toctext">Upgrade</span></a></li>
+<li class="toclevel-2"><a href="#Uninstall"><span class="tocnumber">4.4</span> <span class="toctext">Uninstall</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-39"><a href="#Links"><span class="tocnumber">5</span> <span class="toctext">Links</span></a>
+<ul>
+<li class="toclevel-2 tocsection-40"><a href="#See_also"><span class="tocnumber">5.1</span> <span class="toctext">See also</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h1><span class="mw-headline" id="Introduction">Introduction</span></h1>
+<p><b>StudentQuiz</b> is a plugin listed in the official Moodle Plugin Directory. While Moodle's Quiz module allows teachers to define quizzes to be answered by students, 
+StudentQuiz moves a step further allowing students to construct questions themselves and to share these questions with their peers. 
+</p>
+<dl><dt>Gamification</dt>
+<dd>Using ranking points StudentQuiz motivates students to deliver high quality questions and to improve their learning progress.</dd></dl>
+<dl><dt>Constructivism</dt>
+<dd>To answer a question is good, to construct a question is better! This way, knowledge is actively constructed by the learner, not passively received from the environment.</dd></dl>
+<dl><dt>Crowd-Sourcing</dt>
+<dd>Each student can rate and comment the questions, which enables the cohort to control the quality of the question collection.</dd></dl>
+<p>Even if a student contributes a few questions only, a larger cohort can easily build up an extensive question base. That is why StudentQuiz provides comprehensive filters to let students focus on the questions they want to work with.
+</p><p>Furthermore, teachers can moderate questions by approving or disapproving them. Teachers can also delete or hide unsuitable or wrong question.
+</p>
+<h1><span class="mw-headline" id="Student_Manual">Student Manual</span></h1>
+<p>Your teacher has created one or more StudentQuiz activities in a Moodle course you are enrolled. This manual explains the way you can use StudentQuiz activities to practice for exams or to revise course materials, how to contribute to the question pool and the formulas used to calculate your contribution, learning progress, and ranking within your peer group.
+</p>
+<h2><span class="mw-headline" id="Practice">Practice</span></h2>
+<h3><span class="mw-headline" id="Open_Studentquiz">Open Studentquiz</span></h3>
+<p>To open a StudentQuiz go to your course. StudentQuiz activities are marked with a StudentQuiz icon.
+<span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:studentquiz_icon.png" class="mw-file-description"><img src="images_en/1/10/c4bea6cc4b41337cb0eddebad8dd1b0e.png" decoding="async" width="100" height="100" class="mw-file-element" data-file-width="90" data-file-height="90"></a></span>
+</p><p>Click on the desired StudentQuiz activity to open it. Now you are in the main view of this StudentQuiz.
+</p><p>If nobody has contributed any question yet, you only see a button to create a new question.
+</p><p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:empty_studentquiz.png" class="mw-file-description"><img src="images_en/thumb/c/ca/empty_studentquiz.png/c9ae1234329f02b4f24279223a10057e.png" decoding="async" width="800" height="426" class="mw-file-element" srcset="/502/en/images_en/c/ca/empty_studentquiz.png 1.5x" data-file-width="1148" data-file-height="611"></a></span>
+</p><p>See <a class="mw-selflink-fragment" href="#Contribute">contribute</a> for more information about contributing a question.
+</p><p>As soon as questions are available, the question bank displays all of them at the bottom half of the view.
+<span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:studentquiz_overview.png" class="mw-file-description"><img src="images_en/thumb/c/c6/studentquiz_overview.png/a8685f58e3d97d0daa54f0ba06cecc04.png" decoding="async" width="800" height="507" class="mw-file-element" srcset="/502/en/images_en/thumb/c/c6/studentquiz_overview.png/1200px-studentquiz_overview.png 1.5x, /502/en/images_en/c/c6/studentquiz_overview.png 2x" data-file-width="1447" data-file-height="917"></a></span>
+</p>
+<h3><span class="mw-headline" id="Actions">Actions</span></h3>
+<p>The following actions are available to you:
+</p>
+<ul><li>Create a new question with &ldquo;Create new question&rdquo; button</li>
+<li>Filter questions with the fast filter buttons or with the filter form behind the "Show more..." link</li>
+<li>De-/select questions by check-marking them</li>
+<li>Practice the selected questions with the &ldquo;Start Quiz&rdquo; button</li>
+<li>Sort questions by the different column headers</li>
+<li>Preview, edit or delete your own questions. Note, you cannot edit your question once it became approved or disapproved by the teacher.</li></ul>
+<h3><span class="mw-headline" id="Table_information">Table information</span></h3>
+<p>The table of this view has various columns with different information:
+</p>
+<ul><li>Checkbox, represents the check column. You can de-/select questions to practice them</li>
+<li>T, stands for Type and displays an image of the question type used for the given question</li>
+<li>S, stands for State and displays whether a teacher has approved or disapproved the question (&#10007; = not approved, &#10003; = approved). Other states are &#10720; = new and &#11119; = changed.</li>
+<li>Question, shows the question name</li>
+<li>Actions, doesn't have a title, but it will show different icons depending the available actions (preview, edit, delete, hide)</li>
+<li>Created by, shows the question creator and the creation date. This field may be anonymized and not show the creator's name</li>
+<li>Tags, shows tags assigned to a question</li>
+<li>My Attempts, shows the number of times this question has been answered and if the last attempt was correct or incorrect</li>
+<li>Difficulty, shows the difficulty of the particular questions, based on answers (from 0 = very simple to 1 = very difficult) * The amount of bolts is the difficulty for the logged in student (from 0 = very simple to 5 = very difficult) * The blue bar in the background is the difficulty for the respective peer group (from 0% = very simple to 100% = very difficult)</li>
+<li>Rating, shows ratings of a questions. * The amount of yellow stars is the rating given by the logged in student from 1 (= very poor) to 5 (= very good) * The blue bar in the background is the rating of the respective peer group</li>
+<li>C stands for Comments and displays the number of comments that have been made on that question</li></ul>
+<h3><span class="mw-headline" id="Filter_questions">Filter questions</span></h3>
+<p>On the upper half, a filter section provides various filters to select sets of questions. This is especially recommended when a lot of questions have been added to this StudentQuiz. There are many more filtering options behind the "Show more..." link
+</p><p>Use filters to select the questions you want to practice.
+</p>
+<h3><span class="mw-headline" id="Start_a_quiz">Start a quiz</span></h3>
+<p>As soon as you are happy with your question selection, hit the &ldquo;Start Quiz&rdquo; button. StudentQuiz will start a Quiz with the selected questions for you. You can now answer questions and navigate through the set of questions.
+</p><p>While answering questions you might be required to rate and comment questions. See <a class="mw-selflink-fragment" href="#Rating_a_question">rating a question</a> to learn more about rating .See <a class="mw-selflink-fragment" href="#Commenting_a_question">commenting a question</a> to learn more about commenting.
+</p>
+<h2><span class="mw-headline" id="Contribute">Contribute</span></h2>
+<p>As a student you can contribute in various ways to the question pool of the StudentQuiz Activity in your course.
+</p>
+<ol><li>Add a new question</li>
+<li>Rate a question</li>
+<li>Comment a question</li></ol>
+<h3><span class="mw-headline" id="Adding_a_question">Adding a question</span></h3>
+<p>To create a question, use the &ldquo;Create new question&rdquo; button. You can select from a variety of questions types; however, the teacher can restrict the available question types. You find more information about how to create the different question types in the Moodle Documentation <a rel="nofollow" class="external autonumber" href="https://docs.moodle.org/en/Question_types">[1]</a>.
+</p><p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:moodle_existing_questiontypes.png" class="mw-file-description"><img src="images_en/thumb/c/c2/moodle_existing_questiontypes.png/076d6d839bde1fca66dee90b3257ca7f.png" decoding="async" width="400" height="495" class="mw-file-element" srcset="/502/en/images_en/c/c2/moodle_existing_questiontypes.png 1.5x" data-file-width="542" data-file-height="671"></a></span>
+</p>
+<h3><span class="mw-headline" id="Rating_a_question">Rating a question</span></h3>
+<p>If you practice on a question and the question is checked, it shows the answer and any feedback.
+</p><p>The first time you answer a question you will be asked to rate the question for its usefulness and suitability on a scale of 1 to 5 stars. Your teacher might have given you some guidance on what is considered to be a good question, but in the end it is you and your fellow students enrolled in the class that define the rating of the questions within StudentQuiz. The author of the question will receive ranking points based on your rating. 
+</p><p>The yellow stars display your rating while the blue background displays the average number of stars given by your peer group.
+</p><p>The teacher can turn off the rating requirement. See <a class="mw-selflink-fragment" href="#Reports">reports</a>  to learn more about ranking points.
+</p>
+<h3><span class="mw-headline" id="Commenting_a_question">Commenting a question</span></h3>
+<p>If you practice on a question and the question is checked, it shows the answer and any feedback.
+</p><p>You can discuss the solution or the question in the comments. The author of the question will receive an email notification about your comment. The teacher has the option to make commenting questions mandatory.
+</p>
+<h2><span class="mw-headline" id="Evaluation_Process">Evaluation Process</span></h2>
+<p>Students from your peer group will rate and comment your questions. The teacher might also evaluate your questions. StudentQuiz provides the following processes:
+</p>
+<h3><span class="mw-headline" id="Evaluation_from_your_peer_group">Evaluation from your peer group</span></h3>
+<ul><li>Rating: The students from your peer group can rate your question after answering with stars (from 1 = very poor to 5 = very good). You are awarded with rating points for each star you're receiving from your peer group and the better the rating of your question, the more points you get. The blue background bar in the Rating column represents the average number of stars received by your peer group, while your own rating on your question appears as yellow stars. E.g., <span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:rating_bar.png" class="mw-file-description"><img src="images_en/thumb/2/28/rating_bar.png/beab556353f8b513d2d08fc7b76fff7f.png" decoding="async" width="100" height="26" class="mw-file-element" srcset="/502/en/images_en/2/28/rating_bar.png 1.5x" data-file-width="116" data-file-height="30"></a></span> shows an average peer rating of about 2.8 stars, while the logged in user has assigned 4 stars.</li></ul>
+<ul><li>Comment: The students from your peer group can comment your question. You will receive an email-notification with the comment. As the author, you might want to reply with another comment within this question. All participants of your peer group can see comments.</li></ul>
+<h3><span class="mw-headline" id="Evaluation_from_the_teacher">Evaluation from the teacher</span></h3>
+<ul><li>Question State: A new question automatically receives the state "new". The teacher can alter the state of the question to "approve" or "disapprove". Once your question became approved or disapproved you cannot edit it anymore. If the teacher wants you to edit your question again, he/she can assign the "changed" state. As long as the question is in the state "new" or "changed" you can edit your question. In the following image Test Question 1 is in state "change", Test Question 2 in state "approved", Test Question 3 in state "disapproved", and Test Question 4 in state "new". Note that editing is not available for Questions 2 and 3.</li></ul>
+<p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:question_states.png" class="mw-file-description"><img src="images_en/thumb/e/e3/question_states.png/f388f8431f3007a04fe4de341db2513e.png" decoding="async" width="900" height="99" class="mw-file-element" srcset="/502/en/images_en/e/e3/question_states.png 1.5x" data-file-width="1238" data-file-height="136"></a></span>
+</p>
+<ul><li>Question visibility: The teacher might hide your question if he/she does not want it to be seen by the members of your peer group. As the author, you can still see this question greyed out and you can continue to preview, edit or delete it, but you will not receive any ranking points as long as this question is hidden. The teacher might also delete your question. In this case, the question is not available anymore and will not receive any ranking points for it. In the following image, Test Question 5 is "hidden" and therefore greyed out. Only the author and the teacher can see it. In contrast, Question 5 is visible to all users.</li></ul>
+<p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:question_visibility.png" class="mw-file-description"><img src="images_en/thumb/a/a9/question_visibility.png/15525bca79a7e55646e941166df7e3aa.png" decoding="async" width="900" height="48" class="mw-file-element" srcset="/502/en/images_en/a/a9/question_visibility.png 1.5x" data-file-width="1240" data-file-height="66"></a></span>
+</p>
+<h2><span class="mw-headline" id="Learning_Assistance">Learning Assistance</span></h2>
+<p>The Learning Assistance gives you an overview of your contribution and learning progress. 
+</p><p>The upper bar represents your learning progress. In the example below there are 13 questions in this StudentQuiz. Out of this you have answered 3 questions correctly, 2 questions incorrectly, and you have not yet provided an answer for 8 questions. Please note that you can answer a question multiple times, but only your last answer counts.
+</p><p>The lower bar represents your contribution progress. In the example below, you have contributed 4 questions to this StudentQuiz. Out of this 2 questions were approved by the teacher, 1 question was disapproved, and 1 question is still lacking an approval/disapproval by the teacher.
+</p><p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:learning_assistance.png" class="mw-file-description"><img src="images_en/thumb/d/d3/learning_assistance.png/f63b8dbba2ed8ca0668fc444093448c1.png" decoding="async" width="300" height="216" class="mw-file-element" srcset="/502/en/images_en/d/d3/learning_assistance.png 1.5x" data-file-width="339" data-file-height="244"></a></span>
+</p>
+<h2><span class="mw-headline" id="Reports">Reports</span></h2>
+<p>StudentQuiz also provides students with two different reports to compare yourself with your peer group. You can find the reports in the navigation:
+</p><p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:studentquiz_navigation.png" class="mw-file-description"><img src="images_en/thumb/9/94/studentquiz_navigation.png/b03360ea5ad61c2af2afe7905ade53be.png" decoding="async" width="150" height="145" class="mw-file-element" srcset="/502/en/images_en/9/94/studentquiz_navigation.png 1.5x" data-file-width="192" data-file-height="186"></a></span>
+</p>
+<h3><span class="mw-headline" id="Statistics">Statistics</span></h3>
+<p>The left column of the statistics report gives you an overview of your contribution and learning progress. For comparison, you see the averaged contribution and learning progress of your peer group in the right column.
+</p><p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:studentquiz_statistics1.png" class="mw-file-description"><img src="images_en/thumb/e/e4/studentquiz_statistics1.png/d19dc90b70bad1f1e0ce13b9d8be70fe.png" decoding="async" width="600" height="253" class="mw-file-element" srcset="/502/en/images_en/e/e4/studentquiz_statistics1.png 1.5x" data-file-width="867" data-file-height="366"></a></span>
+</p>
+<h3><span class="mw-headline" id="Ranking">Ranking</span></h3>
+<p>The ranking table might motivate students to challenge each other. The ranking table explains the calculus of the ranking points. The sum of all your ranking points determines your rank within your peer group.
+</p><p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:studentquiz_ranking.png" class="mw-file-description"><img src="images_en/thumb/8/8a/studentquiz_ranking.png/e45dde1720867ff6dbc3323f24cbb85d.png" decoding="async" width="600" height="328" class="mw-file-element" srcset="/502/en/images_en/thumb/8/8a/studentquiz_ranking.png/900px-studentquiz_ranking.png 1.5x, /502/en/images_en/thumb/8/8a/studentquiz_ranking.png/1200px-studentquiz_ranking.png 2x" data-file-width="1585" data-file-height="866"></a></span>
+</p>
+<h1><span class="mw-headline" id="Teacher_Manual">Teacher Manual</span></h1>
+<p>Your Moodle administrator has installed the StudentQuiz Plugin to your school's Moodle Website. This guide explains how to create and configure a StudentQuiz activity within a Moodle course, how you can encourage and moderate your students to contribute question to the question pool, what statistics you can draw from your students' activities and how you can recycle the question pool of one course to another.
+</p>
+<h2><span class="mw-headline" id="Create_a_StudentQuiz_Activity">Create a StudentQuiz Activity</span></h2>
+<p>Creating a StudentQuiz activity has no difference to other activities. Go to your course and press on the &ldquo;Turn editing on&rdquo; button. Choose your topic where you want the new Student-Quiz activity and press &ldquo;+ Add an activity or resource&rdquo; on the right side.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:studentquiz_add_activity.png" class="mw-file-description"><img src="images_en/9/98/3019aa32ea95f8a67a46332dbb813837.png" decoding="async" width="548" height="815" class="mw-file-element" data-file-width="548" data-file-height="815"></a></span>
+</p><p>Choose StudentQuiz and press &ldquo;Add&rdquo;. Give a name to the new activity. You have the following options to configure the StudentQuiz activity.
+</p>
+<h2><span class="mw-headline" id="Configure_a_StudentQuiz_Activity">Configure a StudentQuiz Activity</span></h2>
+<h3><span class="mw-headline" id="Ranking_Settings">Ranking Settings</span></h3>
+<p>The Ranking Settings are important. You have some options that you can configure
+</p><p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:ranking_settings.png" class="mw-file-description"><img src="images_en/thumb/1/1b/ranking_settings.png/825e134b103353418fab7f4b036c8b9d.png" decoding="async" width="800" height="355" class="mw-file-element" srcset="/502/en/images_en/1/1b/ranking_settings.png 1.5x" data-file-width="1015" data-file-height="450"></a></span>
+</p>
+<dl><dt>Make students anonymous</dt>
+<dd>This option will prevent students from seeing the names of the question's author. However, students will still see their own names on questions they created themselves. Teachers will always see the creator's names.</dd></dl>
+<dl><dt>Publish new questions</dt>
+<dd>This will make newly created questions visible to all students right away. Turn this option off if you want to approve questions before they become visible to the students.</dd></dl>
+<dl><dt>Created question factor</dt>
+<dd>Points for each created question</dd></dl>
+<dl><dt>Approved question factor</dt>
+<dd>Points for each approved question</dd></dl>
+<dl><dt>Rating factor</dt>
+<dd>Points for each star received</dd></dl>
+<dl><dt>Latest correct answer factor</dt>
+<dd>Points for each correct answer on the last attempt</dd></dl>
+<dl><dt>Latest wrong answer factor</dt>
+<dd>Points for each wrong or partially wrong answer on the last attempt</dd></dl>
+<dl><dt>Exclude roles in ranking</dt>
+<dd>If you do not want the teacher to show up in the ranking table, you can exclude the teacher role. You can do so with all other available user roles.</dd></dl>
+<h3><span class="mw-headline" id="Question_Settings">Question Settings</span></h3>
+<p>The Question Settings are also important. You have some options that you can configure
+</p><p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:question_settings.png" class="mw-file-description"><img src="images_en/thumb/a/a0/question_settings.png/5d88da62ced2b95a60554024bebfaba9.png" decoding="async" width="900" height="164" class="mw-file-element" srcset="/502/en/images_en/a/a0/question_settings.png 1.5x" data-file-width="1095" data-file-height="200"></a></span>
+</p>
+<dl><dt>Allowed question types</dt>
+<dd>Here you can specify which types of questions one can add to this StudentQuiz.</dd></dl>
+<dl><dt>Enforce rating</dt>
+<dd>This option requires a student to rate a question right after answering the question for the first time.</dd></dl>
+<dl><dt>Enforce commenting</dt>
+<dd>This option requires a student to comment a question.</dd></dl>
+<h2><span class="mw-headline" id="Removing_a_StudentQuiz_Activity">Removing a StudentQuiz Activity</span></h2>
+<p>Removing a StudentQuiz Activity can be done the same way as removing any other Moodle Activities. Go to your course and click on the &ldquo;Turn editing on&rdquo; button. Choose the StudentQuiz Activity you want to remove and press &ldquo;Edit -&gt; Delete&rdquo;. Together with the StudentQuiz activity all associated questions will be deleted as well. You might want to save the questions into an export file first.
+</p>
+<h2><span class="mw-headline" id="Moderate">Moderate</span></h2>
+<h3><span class="mw-headline" id="Moderate_question_state">Moderate question state</span></h3>
+<p>In the main view, students can only preview, edit or delete their own questions, while teachers can preview, edit and delete all questions. The "S"=State column has clickable icons, which allows teachers to change the state of a particular question. The "Change state" button also offers a bulk option to change the state of multiple questions at once. 
+</p><p>A new question automatically receives the state "new". The teacher can alter the state of the question to "approve" or "disapprove". Once a question is approved or disapproved the author cannot edit it anymore. If the teacher wants the author to edit the question again, he/she can assign the "changed" state. As long as the question is in the state "new" or "changed" the author can edit the question. In the following image Test Question 1 is in state "change", Test Question 2 in state "approved", Test Question 3 in state "disapproved", and Test Question 4 in state "new".
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:studentquiz_overview2.png" class="mw-file-description"><img src="images_en/0/0c/f48b8de8a95bd370fe6912e037247c4b.png" decoding="async" width="1130" height="135" class="mw-file-element" data-file-width="1130" data-file-height="135"></a></span>
+</p>
+<h3><span class="mw-headline" id="Moderate_question_visibility">Moderate question visibility</span></h3>
+<p>As a teacher, you might want to click the eye-icon to hide this question from students. The question is still visible to the teacher and the author but appears greyed out. The author can continue to preview, edit, or delete this question but he will not receive any points for it while it is not visible.
+</p><p>As a teacher, you might also want to delete a question. In this case, the question is not available anymore and the author loses the associated points.
+</p><p>In the following image, Test Question 5 is "hidden" and therefore greyed out. Only the author and the teacher can see it. In contrast, Question 4 is visible to all users.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:studentquiz_overview3.png" class="mw-file-description"><img src="images_en/8/84/58d4c59d0fe6a82ecbf639c4850f7eff.png" decoding="async" width="1132" height="63" class="mw-file-element" data-file-width="1132" data-file-height="63"></a></span>
+</p>
+<h2><span class="mw-headline" id="Evaluate">Evaluate</span></h2>
+<h3><span class="mw-headline" id="Statistics_2">Statistics</span></h3>
+<p>In the submenu &ldquo;Statistics&rdquo;, users can view their own statistics and see the community statistics.
+</p><p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:studentquiz_statistics1.png" class="mw-file-description"><img src="images_en/thumb/e/e4/studentquiz_statistics1.png/d19dc90b70bad1f1e0ce13b9d8be70fe.png" decoding="async" width="600" height="253" class="mw-file-element" srcset="/502/en/images_en/e/e4/studentquiz_statistics1.png 1.5x" data-file-width="867" data-file-height="366"></a></span>
+</p>
+<h3><span class="mw-headline" id="Ranking_2">Ranking</span></h3>
+<p>The Ranking page shows the calculus behind the ranking points. It is ordered descendent by the total of ranking points. From this numbers the teacher can derive the individual contribution progress and learning progress of each student. For further calculations, the data can be copied into a spreadsheet like Excel.
+</p><p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:studentquiz_ranking.png" class="mw-file-description"><img src="images_en/thumb/8/8a/studentquiz_ranking.png/e45dde1720867ff6dbc3323f24cbb85d.png" decoding="async" width="600" height="328" class="mw-file-element" srcset="/502/en/images_en/thumb/8/8a/studentquiz_ranking.png/900px-studentquiz_ranking.png 1.5x, /502/en/images_en/thumb/8/8a/studentquiz_ranking.png/1200px-studentquiz_ranking.png 2x" data-file-width="1585" data-file-height="866"></a></span>
+</p>
+<h2><span class="mw-headline" id="Reuse">Reuse</span></h2>
+<h3><span class="mw-headline" id="Question_bank">Question bank</span></h3>
+<p>As a teacher, you get access to all question bank functions using the question bank in the StudentQuiz activity.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:studentquiz_questionbank.png" class="mw-file-description"><img src="images_en/1/1a/caa8c1ce91bb2fb0308a89be3237f2ea.png" decoding="async" width="228" height="678" class="mw-file-element" data-file-width="228" data-file-height="678"></a></span>
+</p><p>Its main purpose is to get overview of all questions, for importing or exporting whole sets of questions and possibly to move around questions between categories. This view should not be used to edit questions, as it will not notify students of the applied changes.
+</p><p>StudentQuiz loads all questions from its question category and its subcategories. Thus, you can also move questions into subcategories of the StudentQuiz question category to organize the questions to your liking.
+</p>
+<h3><span class="mw-headline" id="Important">Important</span></h3>
+<p>Use the question bank in the StudentQuiz activity, otherwise you will not be in the context of StudentQuiz and you can't see its question categories.
+</p>
+<h1><span class="mw-headline" id="Administrator_Manual">Administrator Manual</span></h1>
+<p>You are the Moodle administrator maintaining the Moodle installation of your institution. This guide explains the relevant procedures of installation and upgrades as well as the process of an uninstalling StudentQuiz.
+</p>
+<h2><span class="mw-headline" id="Install">Install</span></h2>
+<p>Download StudentQuiz from the <a rel="nofollow" class="external text" href="https://moodle.org/plugins/mod_studentquiz">Moodle Plugin Directory</a> and install by going to the &lsquo;Site administration -&gt; Plugins -&gt; Install&rsquo; plugins page. You can try StudentQuiz without installing on the <a rel="nofollow" class="external text" href="https://studentquiz.hsr.ch/moodle/">StudentQuiz Demo Page</a>.
+</p>
+<h2><span class="mw-headline" id="Configure">Configure</span></h2>
+<p>You can setup the ranking settings and question settings as site wide default values. The teacher can always overwrite these defaults in the settings of each StudentQuiz activity.
+</p>
+<ul><li>For more information about ranking settings see <a class="mw-selflink-fragment" href="#Ranking_Settings">Ranking Settings</a>.</li></ul>
+<ul><li>For more information about question settings see <a class="mw-selflink-fragment" href="#Question_Settings">Question Settings</a>.</li></ul>
+<h2><span class="mw-headline" id="Upgrade">Upgrade</span></h2>
+<p>Manually, the same steps as install. Moodle also provides you a hint when there are new versions, once you logged in as admin or when you Open &lsquo;Site administration &gt; Notifications&rsquo;
+</p>
+<div class="alert alert-info"><b>Note:</b> We highly recommend you to read the <a rel="nofollow" class="external text" href="https://github.com/frankkoch/moodle-mod_studentquiz/releases">release notes on github</a> for more insights about the changes.</div>
+<h2><span class="mw-headline" id="Uninstall">Uninstall</span></h2>
+<div class="alert alert-info"><b>Note:</b> Make sure all the questions have been backed up! One way to do this is to export them usind the moodle question bank, as removing or uninstalling the StudentQuiz activity also removes all questions in the same context.</div>
+<p>To uninstall the StudentQuiz Activity follow the navigation as follows: &ldquo;Site administration -&gt; Plugins -&gt; Plugins overview&rdquo;
+</p><p>Look for StudentQuiz and click &ldquo;Uninstall&rdquo;.
+</p><p>If &ldquo;Uninstall&rdquo; is not available, it means you are using the deprecated StudentQuiz Question Behaviour plugin prior to StudentQuiz 3.0. Remove the Question Behaviour plugin by deleting the directory your_moodle_directory/question/behaviour/studentquiz.
+</p>
+<h1><span class="mw-headline" id="Links">Links</span></h1>
+<ul><li><a rel="nofollow" class="external text" href="https://moodle.org/plugins/mod_studentquiz">Moodle Plugin Directory Page for StudentQuiz Plugin</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/studentquiz/moodle-mod_studentquiz">Github Repository of StudentQuiz Plugin</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/studentquiz/moodle-mod_studentquiz/actions">Continuous Integration</a></li>
+<li><a rel="nofollow" class="external text" href="https://studentquiz.hsr.ch/">Live Demo Sandbox of StudentQuiz</a></li>
+<li><a rel="nofollow" class="external text" href="https://tube.switch.ch/videos/d91a8a0d">StudentQuiz demo video</a> in YouTube</li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="21ae8d98033cb727d6b94e436efc8a0a.html" title="Hot Question">Hot Question</a> - a Moodle plugin that can be used to better understand topics that a group collectively want to know more about. You ask participants to submit questions, or responses to a prompt, for example a recorded lecture, a topical issue, readings, revision class etc. Participants can then submit questions related to that topic, which appear in an ordered list (newest questions appear first). Participants then 'rate' others' questions by clicking a Thumbs Up icon - this gives the question / response heat. The more votes, the hotter the question and the higher up the list it will appear.</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260823020633
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.079 seconds
+Real time usage: 1.324 seconds
+Preprocessor visited node count: 183/1000000
+Post&#8208;expand include size: 905/2097152 bytes
+Template argument size: 577/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    8.236      1 -total
+ 45.79%    3.771      2 Template:Note
+ 35.89%    2.956      1 Template:Infobox_plugin
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:21901-0!canonical and timestamp 20260823020633 and revision id 148449. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=StudentQuiz_module&amp;oldid=148449">https://docs.moodle.org/502/en/index.php?title=StudentQuiz_module&amp;oldid=148449</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="25a190cf836432207b62ebb9ebca358b.html" title="Category:Plugin">Plugin</a></li><li><a href="66eedc42cfbcf3ba75beae122b9d4e4e.html" title="Category:Quiz">Quiz</a></li><li><a href="1e78cfc01e9a079db1bb9141c40392a2.html" title="Category:Questions">Questions</a></li><li><a href="27cec39c9633dd48770872338440a43c.html" title="Category:Contributed code">Contributed code</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdjff188q">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjff18nz"></button>
+					<div class="collapse navbar-collapse igdjff18nz" id="igdjff18nz">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/StudentQuiz_module" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/StudentQuiz_module" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=StudentQuiz_module&amp;oldid=148449" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=StudentQuiz_module&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Módulo_StudentQuiz" title="Módulo StudentQuiz – español" lang="es" hreflang="es" data-title="Módulo StudentQuiz" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/StudentQuiz" title="StudentQuiz – Deutsch" lang="de" hreflang="de" data-title="StudentQuiz" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 25 April 2024, at 14:44.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1909,"wgPageParseReport":{"limitreport":{"cputime":"0.079","walltime":"1.324","ppvisitednodes":{"value":183,"limit":1000000},"postexpandincludesize":{"value":905,"limit":2097152},"templateargumentsize":{"value":577,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    8.236      1 -total"," 45.79%    3.771      2 Template:Note"," 35.89%    2.956      1 Template:Infobox_plugin"]},"cachereport":{"timestamp":"20260823020633","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

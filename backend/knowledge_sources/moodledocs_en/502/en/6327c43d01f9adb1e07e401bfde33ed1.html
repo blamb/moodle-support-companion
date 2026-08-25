@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Installing PHP on Windows - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"6c0c1bc469bd89587e490a1d","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Installing_PHP_on_Windows","wgTitle":"Installing PHP on Windows","wgCurRevisionId":107573,"wgRevisionId":107573,"wgArticleId":10453,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Installing_PHP_on_Windows","wgRelevantArticleId":10453,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Installing_PHP_on_Windows">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Installing_PHP_on_Windows rootpage-Installing_PHP_on_Windows layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdiw1ur9u"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdiw1ur9u" id="igdiw1ur9u">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Installing+PHP+on+Windows" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Installing_PHP_on_Windows">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Installing_PHP_on_Windows">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Installing_PHP_on_Windows">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="6327c43d01f9adb1e07e401bfde33ed1.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Installing_PHP_on_Windows&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_PHP_on_Windows&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_PHP_on_Windows&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Installing PHP on Windows</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#PHP_File_Selection"><span class="tocnumber">1</span> <span class="toctext">PHP File Selection</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Download_and_Unzip"><span class="tocnumber">2</span> <span class="toctext">Download and Unzip</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Configuration"><span class="tocnumber">3</span> <span class="toctext">Configuration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Editing_Environmental_Variables"><span class="tocnumber">3.1</span> <span class="toctext">Editing Environmental Variables</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Editing_the_php.ini_file"><span class="tocnumber">3.2</span> <span class="toctext">Editing the php.ini file</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Configuring_PHP_and_Apache"><span class="tocnumber">3.3</span> <span class="toctext">Configuring PHP and Apache</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#First_Test_and_restart"><span class="tocnumber">3.4</span> <span class="toctext">First Test and restart</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Specific_PHP_Testing."><span class="tocnumber">3.5</span> <span class="toctext">Specific PHP Testing.</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#See_Also"><span class="tocnumber">4</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="PHP_File_Selection">PHP File Selection</span></h2>
+<p>Moodle will run on a minimum of PHPv5.3.3 but that is intended for Linux distributions that are actively maintained by vendors such as Redhat, CentOS, Debian or Ubuntu. In case of Windows <i><b>ALWAYS</b></i> install latest stable PHP version from <a rel="nofollow" class="external text" href="http://windows.php.net/download/">http://windows.php.net/download/</a>&nbsp;!
+</p><p>Download the latest version of PHP, the ZIP file, NOT the msi. The ZIP file is, for our purposes, considerably more easy and reliable to use in all Windows installations. 
+</p>
+<figure class="mw-halign-right" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:php01.png" class="mw-file-description"><img src="images_en/thumb/e/ec/php01.png/c534c3b2565d282705eae29675c65aa0.png" decoding="async" width="200" height="307" class="mw-file-element" srcset="/502/en/images_en/thumb/e/ec/php01.png/300px-php01.png 1.5x, /502/en/images_en/e/ec/php01.png 2x" data-file-width="330" data-file-height="506"></a><figcaption>PHP Installation</figcaption></figure>
+<h2><span class="mw-headline" id="Download_and_Unzip">Download and Unzip</span></h2>
+<p>Once downloaded, open Windows Explorer and with a right click, unzip to your destination path, say G:\php. The Apache server can be on the G:\ so I am putting PHP into the same drive. You can put it anywhere you want, but keeping the Apache server, PHP and the MySQL installations all on the same drive makes sense for many installations. Security, access, load sharing and a range of other issues may cause different configurations to occur, but for the most basic installs, PHP can be on the same drive as the server. 
+</p><p>Staying in Windows Explorer, open the G:\php folder and you will see a file there called <b>php.ini-recommended</b>. Either copy and paste or simply rename this file to <b>php.ini</b>. This contains all the essential directives that will allow PHP to run on your computer, but we will need to configure it, and a couple of other files, to make it work for Moodle.
+</p>
+<h2><span class="mw-headline" id="Configuration">Configuration</span></h2>
+<h3><span class="mw-headline" id="Editing_Environmental_Variables">Editing Environmental Variables</span></h3>
+<p>First, we shall set the environmental variables we need to ensure the PHP can be used by Apache. 
+</p><p>In all versions of Windows: 
+</p><p>Right click the My Computer icon and open the Properties dialogue. 
+</p><p>Go to "Advanced" or "Advances System Variables" and then to "Environment Variables" and in the "System variables" section select "Path" and click the Edit button.
+</p><p>At the end of the path statement, add the text ";G:\php;G:php\ext" Note the first character is a semi-colon, this is a separator, it separates different parts of the path statement, do not forget to put it in, and do not put it at the end of the line. There are no spaces in the path statement. I have used the path to my PHP server and extension files. Without including PHP in the path statement, Apache will not find it and not be able to use it. Save the file by clicking on OK. Close and exit the My Computer Properties dialogue. 
+</p><p>Next, we need to configure, or fine tune if you like, PHP to suit Moodle. There are a number of things we need to do here, and we will try them in order.
+</p>
+<h3><span class="mw-headline" id="Editing_the_php.ini_file">Editing the php.ini file</span></h3>
+<p>Scrolling down through the php.ini file, you should be able to see the line numbers to the left of your text editor. (If not there, then usually the status bar at the bottom of the editing program screen will indicate where the insertion point, the cursor, actually is.)
+</p><p>About line 300, there should be a line that reads: <b>max_execution_time = 30</b>. Change that to read <b>max_execution_time = 180</b>  This variable determines how much time should pass before reporting it cannot find something, or something is not working. That is seconds and if a script cannot run in 3 minutes, it is not likely to run, therefore you may have a problem. 
+</p><p>Do not reset the next line, <b>leave memory limit</b> at 128M.
+</p><p>Scrolling down to about line 490 you will find: <b>post_max_size = 2M</b>  Change it to read <b>post_max_size = 512M</b> that will make a difference later, when you are uploading in Moodle. 
+</p><p>About line 538 the line should read <b>doc_root =</b>   Change it to read <b>doc_root = "G:\Server\Apache\htdocs"</b> (or YOUR path to your active web folder.) 
+</p><p>At about line 542, the line should read <b>extension_dir = "./"</b>  but change it to read <b>extension_dir = "G:\php\ext"</b>  (This is how it appears in my environmental variables, use your own path.) 
+</p><p>Around line 600, you will find the text <b>upload_max_filesize = 2M</b> change that to read <b>upload_max_filesize = 512M</b>
+</p><p>Setting the post_max_size and upload_max_filesize will allow you to set your upload file size in your Moodle. This means that you will have a range of options, starting from about 10KB to 512MB, that will appear in your Moodle's upload file size.  
+</p><p>At this point, you have set the environment now you need to make it work for Moodle. 
+</p><p>Starting about line 635, you will see the text 
+</p>
+<pre>&nbsp;;;;;;;;;;;;;;;;;;;;;;;
+&nbsp;; Dynamic Extensions&nbsp;;
+&nbsp;;;;;;;;;;;;;;;;;;;;;;; 
+</pre>
+<p>It is these extensions that we have been referring to as "ext". These extensions are important as they are the tools that provide additional functionality in the Windows environment. 
+</p><p>If a line begins with <b>;extension =</b>, that is, a semi-colon precedes the word "extension", it means that this extension is commented out, it is inactive.
+To activate the extensions we need, we simply delete the semi-colon.
+Delete the semi-colon from these lines - if there is one there.
+</p>
+<pre> extension=php_curl.dll
+ extension=php_exif.dll
+ extension=php_gd2.dll
+ extension=php_gettext.dll
+ extension=php_imap.dll
+ extension=php_ldap.dll
+ extension=php_mbstring.dll
+ extension=php_mcrypt.dll
+ extension=php_mime_magic.dll
+ extension=php_ming.dll
+ extension=php_mssql.dll
+ extension=php_mysql.dll
+ extension=php_mysqli.dll
+ extension=php_openssl.dll
+ extension=php_pdf.dll
+ extension=php_pdo.dll
+ extension=php_pdo_mssql.dll
+ extension=php_pdo_mysql.dll
+ extension=php_sockets.dll
+ extension=php_sqlite.dll
+ extension=php_xmlrpc.dll
+ extension=php_xsl.dll
+ extension=php_zip.dll
+</pre>
+<p>Some of these, like the ldap extension, you may not need, but include it anyway. 
+</p><p><b>Save and close</b> the file.
+</p>
+<h3><span class="mw-headline" id="Configuring_PHP_and_Apache">Configuring PHP and Apache</span></h3>
+<p>Once that is done, we need to make sure that Apache can not only access PHP but can use it. 
+</p><p>Using your text editor, navigate to open the <b>..\Apache\conf\httpd.conf</b> file.  
+</p><p>Once opened, search for the text <b>LoadModule</b> note: LoadModule is one word. This should be about line 58.
+</p><p>The Apache configuration file uses the # key as a comment marker. Any line added or edited must not have that # marker at its beginning. 
+</p><p>At line 61, or thereabouts, add in the text <b>LoadModule php5_module "G:/php/php5apache2_2.dll"</b> (Use your own path) For later versions of Apache, PHP extension numbers might read something like php5apache2_3.dll. (This was current at the time of writing.) 
+</p><p>Around line 240 you will find the following text:
+</p>
+<pre> &lt;IfModule dir_module&gt;
+    DirectoryIndex index.html index.htm index.shtml
+ &lt;/IfModule&gt;
+</pre>
+<p>The DirectoryIndex determines what type of files Apache can use to create its index files. While not so important with HTML pages, this is critical for PHP pages, so change the section to read:
+</p>
+<pre> &lt;IfModule dir_module&gt;
+    DirectoryIndex index.php index.php4 index.php3 index.cgi index.pl index.html index.htm index.shtml index.phtml
+    #  DirectoryIndex index.html index.htm index.shtml
+ &lt;/IfModule&gt;
+</pre>
+<p>We then need to find the line <b>TypesConfig conf/mime.types</b> 
+which is about line 366 and a little below that we see the <b>AddType</b> statements. Scrolling down a little further, to about line 385, add in the line 
+</p>
+<pre> <b>AddType application/x-httpd-php .php</b>. 
+</pre>
+<p>About 10 lines below that we see  <b>#AddHandler cgi-script .cgi</b>, leaving that line and in the next line we add     
+</p>
+<pre> <b>AddHandler application/x-httpd-php .php </b>    
+</pre>
+<dl><dt>Note In XP</dt>
+<dd>At the very end of the file add the line  <b>PHPIniDIR "G:\php"</b> EXACTLY as is here, except with your path.</dd></dl>
+<dl><dt>Note In Vista and Windows 7</dt>
+<dd>At the very start of the file add in the line <b>PHPIniDIR "G:\php"</b> EXACTLY as is here, except with your path.</dd></dl>
+<p>The Apache documentation does mention adding this statement but does not specify where it should go. For some reason, it works as outlined here. 
+</p><p>Save the file and close it.
+</p>
+<h3><span class="mw-headline" id="First_Test_and_restart">First Test and restart</span></h3>
+<p>Once you have done that then you can open a cmd window, again, and no matter where it opens you should be able to type in php -v and it will tell you what version of PHP you are using. It will tell you also if there is any of the dll files missing from the ext folder, for example you have uncommented the <b>extension = hp_pdf.dll file</b>, but it may not be there, so search for it on the Web and download it. If zipped, then unzip it and place into the ext folder.
+</p><p>Windows, being Windows, requires a restart at this point, to ensure that the php server has been properly embedded into the Apache Server. (While this step may not be necessary in Windows 7, it is needed in XP and Vista.)
+</p><p>Once restarted, the Apache icon should be displaying the green arrow.
+</p>
+<h3><span class="mw-headline" id="Specific_PHP_Testing.">Specific PHP Testing.</span></h3>
+<p>Open your text editing program. 
+</p><p>Create a new file and enter the text 
+</p>
+<pre> &lt;?php 
+      phpinfo(); 
+&nbsp;?&gt;
+</pre>
+<p>Save the file as, say, <b>info.php</b> in the document root folder, as specified in the <b>php.ini</b> and <b>httpd.conf</b> files.  
+</p><p>Open your browser and aim it at "<a rel="nofollow" class="external free" href="http://localhost/info.php">http://localhost/info.php</a>" and you should see something like the image to the right. 
+</p>
+<figure class="mw-halign-right" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:php04.png" class="mw-file-description"><img src="images_en/thumb/3/37/php04.png/a584607b7e7f254347ed61dfc46eda4f.png" decoding="async" width="200" height="107" class="mw-file-element" srcset="/502/en/images_en/thumb/3/37/php04.png/300px-php04.png 1.5x, /502/en/images_en/thumb/3/37/php04.png/400px-php04.png 2x" data-file-width="605" data-file-height="323"></a><figcaption>PHP Info file</figcaption></figure>
+<p>If you have saved the file to the right place, and installed php properly, and edited the Apache httpd.conf file DirectoryIndex correctly, it should now be showing the PHP configuration file. Scroll through it, and it should be showing you a set of tables with all the information about PHP.
+</p><p>If the file is not displaying properly, for example you see it is properly tabled and has headings at the start, but a couple of tables down it then just reads the php.ini file, you know that you have edited the httpd.conf file correctly, but the php.ini file is not quite right. Go back to the instructions above and check them against what you have done. While you are almost there, PHP will not work until it is completely correct, you may have a semi-colon where there needs to be a colon. It will be something simple and easily overlooked.
+</p><p>At this point, you have <a href="4725aba5f0cff8ce26b44eeac5079ee8.html" title="Installing Apache on Windows"> Apache</a> and PHP installed, now for <a href="c038c59ef97e6132a04b33a161a6e707.html" title="Installing MySQL on Windows">Installing MySQL on Windows</a>.
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li><a href="https://docs.moodle.org/502/en/index.php?title=Beginning_Administration_FAQ&amp;action=edit&amp;redlink=1" class="new" title="Beginning Administration FAQ (page does not exist)">Beginning Administration FAQ</a></li>
+<li><a href="4725aba5f0cff8ce26b44eeac5079ee8.html" title="Installing Apache on Windows">Installing Apache on Windows</a></li>
+<li><a href="c038c59ef97e6132a04b33a161a6e707.html" title="Installing MySQL on Windows">Installing MySQL on Windows</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260823014757
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.012 seconds
+Real time usage: 0.057 seconds
+Preprocessor visited node count: 30/1000000
+Post&#8208;expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:10453-0!canonical and timestamp 20260823014757 and revision id 107573. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Installing_PHP_on_Windows&amp;oldid=107573">https://docs.moodle.org/502/en/index.php?title=Installing_PHP_on_Windows&amp;oldid=107573</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="7f264aa70db3768dcef1896a8ec93e70.html" title="Category:Installation">Installation</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdiw1ut4e">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdiw1uthn"></button>
+					<div class="collapse navbar-collapse igdiw1uthn" id="igdiw1uthn">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Installing_PHP_on_Windows" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Installing_PHP_on_Windows" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_PHP_on_Windows&amp;oldid=107573" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_PHP_on_Windows&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 8 November 2013, at 14:30.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":170,"wgPageParseReport":{"limitreport":{"cputime":"0.012","walltime":"0.057","ppvisitednodes":{"value":30,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260823014757","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

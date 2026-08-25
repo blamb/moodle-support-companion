@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Using Forum - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"15f51b50434e2e2e75616631","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Using_Forum","wgTitle":"Using Forum","wgCurRevisionId":155788,"wgRevisionId":155788,"wgArticleId":1306,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Forum","New features"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Using_Forum","wgRelevantArticleId":1306,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Using_Forum">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Using_Forum rootpage-Using_Forum layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhnlrie5"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhnlrie5" id="igdhnlrie5">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Using+Forum" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Using_Forum">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Using_Forum">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Using_Forum">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="e07c07b2fb170dee73bbc690cc3f70be.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Using_Forum" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Using_Forum&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Using_Forum&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Using Forum</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="c93eb5dfaca94ad219ccb0d560e9af0f.html" title="Managing a Moodle course">Managing a Moodle course</a> ► <a href="9e64708c111f312d3017aabec2d5768e.html" title="Activities">Activities</a> ► <a href="357f18b8c8759a4f741623e5aa33ccc5.html" title="Forum activity">Forum activity</a> ► <a class="mw-selflink selflink">Using Forum</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">		
+<div class="header"><a href="357f18b8c8759a4f741623e5aa33ccc5.html" title="Forum activity">Forum activity</a></div>	
+<div class="content">
+<ul><li><a href="35dad786ff71dfaf74badb5e98bafeda.html" title="Forum settings">Forum settings</a></li>
+<li><a class="mw-selflink selflink">Using Forum</a></li>
+<li><a href="9a55c6390e4773e71ee98d17ef0f0d2d.html" title="Forum FAQ">Forum FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p>This page explains how students and teachers can use the <a href="357f18b8c8759a4f741623e5aa33ccc5.html" title="Forum activity">Forum activity</a> and explores ways to make the most of it in your Moodle course.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Which_forum_do_I_need?"><span class="tocnumber">1</span> <span class="toctext">Which forum do I need?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Using_Forum:_All_users"><span class="tocnumber">2</span> <span class="toctext">Using Forum: All users</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Replying_to_discussions"><span class="tocnumber">2.1</span> <span class="toctext">Replying to discussions</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Star_discussions"><span class="tocnumber">2.2</span> <span class="toctext">Star discussions</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Sort_discussions"><span class="tocnumber">2.3</span> <span class="toctext">Sort discussions</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Permalinks"><span class="tocnumber">2.4</span> <span class="toctext">Permalinks</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Forum_preferences"><span class="tocnumber">2.5</span> <span class="toctext">Forum preferences</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Experimental_nested_view"><span class="tocnumber">2.5.1</span> <span class="toctext">Experimental nested view</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#Subscribing_to_forum_discussions"><span class="tocnumber">2.6</span> <span class="toctext">Subscribing to forum discussions</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Track_read_and_unread_forum_posts"><span class="tocnumber">2.7</span> <span class="toctext">Track read and unread forum posts</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Display_options"><span class="tocnumber">2.8</span> <span class="toctext">Display options</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Forum_posting"><span class="tocnumber">2.9</span> <span class="toctext">Forum posting</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#Adding_images,_sound_and_video"><span class="tocnumber">2.9.1</span> <span class="toctext">Adding images, sound and video</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Tags"><span class="tocnumber">2.9.2</span> <span class="toctext">Tags</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Post_editing_time_limit"><span class="tocnumber">2.9.3</span> <span class="toctext">Post editing time limit</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Moving_between_forum_threads"><span class="tocnumber">2.9.4</span> <span class="toctext">Moving between forum threads</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-17"><a href="#Reply_to_posts_via_email"><span class="tocnumber">2.10</span> <span class="toctext">Reply to posts via email</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Exporting_forum_posts"><span class="tocnumber">2.11</span> <span class="toctext">Exporting forum posts</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Using_Forum:_Teachers"><span class="tocnumber">3</span> <span class="toctext">Using Forum: Teachers</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#Private_replies"><span class="tocnumber">3.1</span> <span class="toctext">Private replies</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Pinned_posts"><span class="tocnumber">3.2</span> <span class="toctext">Pinned posts</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Manually_locking_discussion_threads"><span class="tocnumber">3.3</span> <span class="toctext">Manually locking discussion threads</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#'Send_forum_post_notifications_with_no_editing_time_delay'"><span class="tocnumber">3.4</span> <span class="toctext">'Send forum post notifications with no editing time delay'</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Display_period"><span class="tocnumber">3.5</span> <span class="toctext">Display period</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Locking_a_discussion"><span class="tocnumber">3.6</span> <span class="toctext">Locking a discussion</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Moving_a_discussion"><span class="tocnumber">3.7</span> <span class="toctext">Moving a discussion</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Splitting_a_discussion"><span class="tocnumber">3.8</span> <span class="toctext">Splitting a discussion</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Using_groups_with_forums"><span class="tocnumber">3.9</span> <span class="toctext">Using groups with forums</span></a>
+<ul>
+<li class="toclevel-3 tocsection-29"><a href="#If_the_group_mode_is_set_to_separate_groups"><span class="tocnumber">3.9.1</span> <span class="toctext">If the group mode is set to separate groups</span></a></li>
+<li class="toclevel-3 tocsection-30"><a href="#If_the_group_mode_is_set_to_visible_groups"><span class="tocnumber">3.9.2</span> <span class="toctext">If the group mode is set to visible groups</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-31"><a href="#Forum_grading"><span class="tocnumber">3.10</span> <span class="toctext">Forum grading</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="#Ideas_for_using_forums"><span class="tocnumber">4</span> <span class="toctext">Ideas for using forums</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#See_also..."><span class="tocnumber">5</span> <span class="toctext">See also...</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Which_forum_do_I_need.3F"></span><span class="mw-headline" id="Which_forum_do_I_need?">Which forum do I need?</span></h2>
+<p>In the (default) <b>Standard forum for general use</b>, students will see an introduction text in a separate space above the list of discussions. Students see a button to start a new discussion (thread).
+</p><p><br>
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:standardforum.png" class="mw-file-description"><img src="images_en/thumb/b/bb/standardforum.png/145cb5f76590f833585eeb33b4cf9c46.png" decoding="async" width="467" height="155" class="mw-file-element" srcset="/502/en/images_en/thumb/b/bb/standardforum.png/701px-standardforum.png 1.5x, /502/en/images_en/thumb/b/bb/standardforum.png/934px-standardforum.png 2x" data-file-width="2208" data-file-height="734"></a><figcaption>Student view of "Standard forum" type</figcaption></figure>
+<p>The <b>Each person posts one discussion</b> type allows each person to start one discussion but to reply to as many others as they wish. This is very useful if you want learners to 'take ownership' of a particular forum discussion, for example to share something they have created and get feedback from others who will reply to the initial post.
+</p><p><br>
+In a <b>Single, simple discussion</b> the teachers posts a question and students are able only to reply. They cannot start a new topic of discussion. This is useful if you wish to keep a discussion focused. <b>Note</b>: This forum type does not work with separate groups.
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:Single_simple_discussion.png" class="mw-file-description"><img src="images_en/thumb/b/b0/Single_simple_discussion.png/5c5bebf44b9bbaa4b86c6eee45abe4fa.png" decoding="async" width="450" height="190" class="mw-file-element" srcset="/502/en/images_en/thumb/b/b0/Single_simple_discussion.png/675px-Single_simple_discussion.png 1.5x, /502/en/images_en/thumb/b/b0/Single_simple_discussion.png/900px-Single_simple_discussion.png 2x" data-file-width="2212" data-file-height="932"></a><figcaption>Student view of "A single simple discussion" forum type</figcaption></figure>
+<p>The <b>Question and Answer forum</b> is best used when you have a particular question that you wish to have answered. The teacher posts a question and students respond with possible answers. By default a Q and A forum requires students to post once before viewing other students' postings. Note that the maximum editing time for forum posts (set globally by the admin in Site administration &gt; Security &gt; Site security settings) has to be passed before students can see the other posts.
+</p><p>Students can now send Q and A forum post replies with no editing time delay by checking the box <i>Send forum post notifications with no editing-time delay</i> from the Advanced link.
+</p>
+<table>
+<tbody><tr>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:QA1.png" class="mw-file-description"><img src="images_en/thumb/0/0e/QA1.png/b9ca194bf8ef600428696237a3e15393.png" decoding="async" width="300" height="114" class="mw-file-element" srcset="/502/en/images_en/thumb/0/0e/QA1.png/450px-QA1.png 1.5x, /502/en/images_en/thumb/0/0e/QA1.png/600px-QA1.png 2x" data-file-width="774" data-file-height="293"></a><figcaption>Initial view of Q&amp;A forum</figcaption></figure>
+</td>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:QA2.png" class="mw-file-description"><img src="images_en/thumb/6/66/QA2.png/ce580a02904a410c80634d35034b1082.png" decoding="async" width="300" height="243" class="mw-file-element" srcset="/502/en/images_en/thumb/6/66/QA2.png/450px-QA2.png 1.5x, /502/en/images_en/thumb/6/66/QA2.png/600px-QA2.png 2x" data-file-width="773" data-file-height="626"></a><figcaption>Students cannot see posts until they post</figcaption></figure>
+</td>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:QA3.png" class="mw-file-description"><img src="images_en/thumb/6/69/QA3.png/c19b50d39175e66a2014f17df9dd48f8.png" decoding="async" width="300" height="197" class="mw-file-element" srcset="/502/en/images_en/thumb/6/69/QA3.png/450px-QA3.png 1.5x, /502/en/images_en/thumb/6/69/QA3.png/600px-QA3.png 2x" data-file-width="766" data-file-height="504"></a><figcaption>Other posts visible when editing time is over</figcaption></figure>
+</td></tr></tbody></table>
+<p><br>
+The <b>Standard forum displayed in a blog-like format</b> works like the standard forum for general use, but the  first post of each discussion is displayed (as in a blog) so that users can read it and then choose to respond by clicking the "Discuss this topic" button bottom right of the post.
+</p><p><br>
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:Bloglikeforum.png" class="mw-file-description"><img src="images_en/thumb/d/d3/Bloglikeforum.png/b71120e590f0d03aa333818a2ea6618e.png" decoding="async" width="450" height="286" class="mw-file-element" srcset="/502/en/images_en/thumb/d/d3/Bloglikeforum.png/675px-Bloglikeforum.png 1.5x, /502/en/images_en/thumb/d/d3/Bloglikeforum.png/900px-Bloglikeforum.png 2x" data-file-width="1812" data-file-height="1150"></a><figcaption>Blog like forum</figcaption></figure>
+<h2><span class="mw-headline" id="Using_Forum:_All_users">Using Forum: All users</span></h2>
+<h3><span class="mw-headline" id="Replying_to_discussions">Replying to discussions</span></h3>
+<p>Similar to when starting a new discussion, the reply box appears inline, allowing the user to respond quickly. If a more detailed reply is needed, for example, needing the editing toolbar or attachment box, clicking Advanced will display the full version.
+</p>
+<h3><span class="mw-headline" id="Star_discussions">Star discussions</span></h3>
+<p>Discussions may be favourited or 'starred' either by clicking the three dots to the right of the discussion or by clicking directly on the star. This setting is individual and will move the discussion to the top of the discussion list, under any pinned discussions.
+<span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:SmallStar.png" class="mw-file-description"><img src="images_en/thumb/e/e8/SmallStar.png/cf43af9fa13e0283e93d19eef9f73ace.png" decoding="async" width="600" height="73" class="mw-file-element" srcset="/502/en/images_en/thumb/e/e8/SmallStar.png/900px-SmallStar.png 1.5x, /502/en/images_en/thumb/e/e8/SmallStar.png/1200px-SmallStar.png 2x" data-file-width="1568" data-file-height="192"></a></span>
+</p>
+<h3><span class="mw-headline" id="Sort_discussions">Sort discussions</span></h3>
+<p>Discussions may be sorted by replies, last post or created, by clicking the linked words at the top of the discussion list.
+</p>
+<h3><span class="mw-headline" id="Permalinks">Permalinks</span></h3>
+<p>A permalink allows you to link directly to a specific forum post so you can share it easily with others. You will see the permalink option when clicking to reply to a post. If you click the permalink <i>(1)</i>, it is highlighted to the side <i>(2)</i>, and you will have a particular web address <i>(3)</i> which you can then copy and paste to use elsewhere:
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:permalinkexample.png" class="mw-file-description"><img src="images_en/thumb/3/38/permalinkexample.png/bf86106666164a2fa515998fa45ec74e.png" decoding="async" width="600" height="526" class="mw-file-element" srcset="/502/en/images_en/thumb/3/38/permalinkexample.png/900px-permalinkexample.png 1.5x, /502/en/images_en/thumb/3/38/permalinkexample.png/1200px-permalinkexample.png 2x" data-file-width="1290" data-file-height="1130"></a><figcaption>Linking directly to a single post</figcaption></figure>
+<h3><span class="mw-headline" id="Forum_preferences">Forum preferences</span></h3>
+<p>Users can set their forum preferences via Preferences in the user menu top right. (Defaults for each of these settings can be set by an administrator in <i>Administration &gt; Site administration &gt; Accounts &gt; User default preferences</i>.)
+</p>
+<h4><span class="mw-headline" id="Experimental_nested_view">Experimental nested view</span></h4>
+<p>Enabling this will then make available a new discussion view.
+</p>
+<figure class="mw-halign-center" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:ExpNest.png" class="mw-file-description" title="Experimental nested view"><img alt="Experimental nested view" src="images_en/thumb/2/25/ExpNest.png/70ac5e3099e8d130f8ca8bedd544f049.png" decoding="async" width="600" height="242" class="mw-file-element" srcset="/502/en/images_en/thumb/2/25/ExpNest.png/900px-ExpNest.png 1.5x, /502/en/images_en/thumb/2/25/ExpNest.png/1200px-ExpNest.png 2x" data-file-width="1750" data-file-height="706"></a><figcaption>Experimental nested view</figcaption></figure>
+<h3><span class="mw-headline" id="Subscribing_to_forum_discussions">Subscribing to forum discussions</span></h3>
+<p>Users can subscribe to forum discussions in several ways, to receive notification about new posts.
+</p>
+<ol><li>From the Preferences link in the user menu they can choose to be automatically subscribed to forum discussions when they post</li>
+<li>They can click on the open envelope icon next to a forum discussion. (It will then change to a closed envelope.)</li>
+<li>They can click into the forum and click the cog icon top right and subscribe to the whole forum.</li></ol>
+<h3><span class="mw-headline" id="Track_read_and_unread_forum_posts">Track read and unread forum posts</span></h3>
+<ul><li>Access the Preferences page from the user menu and select 'Forum preferences'.</li>
+<li>For 'Forum tracking', choose <i>Yes: highlight new posts for me</i> and if the forum administrator has set the 'Read tracking for this forum?' to On or Optional then unread posts will be highlighted for you:</li></ul>
+<table>
+<tbody><tr>
+<td><figure class="mw-halign-left" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:forumtracking1.png" class="mw-file-description"><img src="images_en/thumb/a/a8/forumtracking1.png/727fe114f26b985e914eb6bd65da3977.png" decoding="async" width="296" height="50" class="mw-file-element" srcset="/502/en/images_en/thumb/a/a8/forumtracking1.png/444px-forumtracking1.png 1.5x, /502/en/images_en/thumb/a/a8/forumtracking1.png/592px-forumtracking1.png 2x" data-file-width="654" data-file-height="110"></a><figcaption>Unread posts alert</figcaption></figure>
+</td></tr></tbody></table>
+<p>The posts will be highlighted in the following places:
+</p>
+<ul><li>Course page</li>
+<li>Within the forum itself</li>
+<li>In forum discussion threads</li></ul>
+<table>
+<tbody><tr>
+<td><figure class="mw-halign-left" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:forumtracking2.png" class="mw-file-description"><img src="images_en/thumb/2/20/forumtracking2.png/41f476feec4c3ff7c6efa3b5b4326586.png" decoding="async" width="500" height="151" class="mw-file-element" srcset="/502/en/images_en/thumb/2/20/forumtracking2.png/750px-forumtracking2.png 1.5x, /502/en/images_en/thumb/2/20/forumtracking2.png/1000px-forumtracking2.png 2x" data-file-width="2220" data-file-height="670"></a><figcaption>Click to mark as read</figcaption></figure>
+</td></tr></tbody></table>
+<p>Only posts made in the last two weeks are tracked as read or unread. Older posts are all reported as read.
+</p><p>Note: You can also choose to have any forum post notifications automatically marked as read (so they don't appear in the Unread list.) Some people find this confusing and prefer to keep them as unread:
+</p>
+<table>
+<tbody><tr>
+<td><figure class="mw-halign-left" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:forumnotificationsread.png" class="mw-file-description"><img src="images_en/thumb/3/35/forumnotificationsread.png/f97617b963381a1fae4d52c75da55b1c.png" decoding="async" width="600" height="160" class="mw-file-element" srcset="/502/en/images_en/thumb/3/35/forumnotificationsread.png/900px-forumnotificationsread.png 1.5x, /502/en/images_en/thumb/3/35/forumnotificationsread.png/1200px-forumnotificationsread.png 2x" data-file-width="1344" data-file-height="358"></a><figcaption>Forum post notification options</figcaption></figure>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Display_options">Display options</span></h3>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:forumviewoptions.jpg" class="mw-file-description"><img src="images_en/thumb/6/6b/forumviewoptions.jpg/601a70bb3581fe2f8c4aec79abc0acaa.jpg" decoding="async" width="300" height="121" class="mw-file-element" srcset="/502/en/images_en/thumb/6/6b/forumviewoptions.jpg/450px-forumviewoptions.jpg 1.5x, /502/en/images_en/thumb/6/6b/forumviewoptions.jpg/600px-forumviewoptions.jpg 2x" data-file-width="1388" data-file-height="558"></a><figcaption>Reply display options</figcaption></figure><p>A discussion thread may be displayed in four ways. Use the pull-down menu at the top of each forum discussion to select a display type.
+</p><ul><li>Display replies flat, with oldest first</li>
+<li>Display replies flat, with newest first - The discussion will be displayed in one line and the chronological order from the newest to the oldest.  This view is the same as the above, just a different sort order.</li>
+<li>Display replies in threaded form - Only the post starting the discussion will be displayed in its full form; replies will be reduced to the headlines (including information about its author and date of release) and organised chronologically; moreover, replies will be shifted towards the right so that only replies to the same post were in the same line.</li>
+<li>Display replies in nested form - All posts are displayed in their full forms; replies will be reduced to the headlines (including information about its author and date of release) and organised chronologically; moreover, replies will be shifted towards the right so that only replies to the same post were in the same line.</li></ul>
+<table>
+<tbody><tr>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:Forum_Flat_form_mu.png" class="mw-file-description"><img src="images_en/thumb/a/aa/Forum_Flat_form_mu.png/53e9028ddcb06b70d0fc2a5d87ab1e82.png" decoding="async" width="300" height="356" class="mw-file-element" srcset="/502/en/images_en/thumb/a/aa/Forum_Flat_form_mu.png/450px-Forum_Flat_form_mu.png 1.5x, /502/en/images_en/thumb/a/aa/Forum_Flat_form_mu.png/600px-Forum_Flat_form_mu.png 2x" data-file-width="1490" data-file-height="1768"></a><figcaption>Flat Forum discussion, example from middle</figcaption></figure>
+</td>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:Forum_threaded_form_mu.png" class="mw-file-description"><img src="images_en/thumb/d/d5/Forum_threaded_form_mu.png/525f0e11f82657703017f88ffbd196bf.png" decoding="async" width="300" height="166" class="mw-file-element" srcset="/502/en/images_en/thumb/d/d5/Forum_threaded_form_mu.png/450px-Forum_threaded_form_mu.png 1.5x, /502/en/images_en/thumb/d/d5/Forum_threaded_form_mu.png/600px-Forum_threaded_form_mu.png 2x" data-file-width="1960" data-file-height="1084"></a><figcaption>Posts in threaded form</figcaption></figure>
+</td>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:Forum_nested_form_mu.png" class="mw-file-description"><img src="images_en/thumb/3/30/Forum_nested_form_mu.png/d08aa21cbaaefda93db89c7d43a66d92.png" decoding="async" width="300" height="168" class="mw-file-element" srcset="/502/en/images_en/thumb/3/30/Forum_nested_form_mu.png/450px-Forum_nested_form_mu.png 1.5x, /502/en/images_en/thumb/3/30/Forum_nested_form_mu.png/600px-Forum_nested_form_mu.png 2x" data-file-width="1974" data-file-height="1104"></a><figcaption>"Nested reply example"</figcaption></figure>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Forum_posting">Forum posting</span></h3>
+<p>The default content of <b>Subject</b> is usually 'Re: &lt;the name of the 'parent' post&gt;'. You can change it, though. 
+</p>
+<h4><span id="Adding_images.2C_sound_and_video"></span><span class="mw-headline" id="Adding_images,_sound_and_video">Adding images, sound and video</span></h4>
+<p>When an image is "attached" as a file to a forum message, it is immediately displayed full size after the message (i.e. no need to click on an attachment).  This is an excellent way of sharing images without having to go through the process of uploading them as files and linking them from within web pages. Images may be dragged and dropped into the box as well as uploading via the "add" link and the <a href="84a9aa8a6c94169071359cf96051665e.html" title="File picker">File picker</a>.
+</p><p>Audio or video may be added using the Insert audio/video file button in the Tiny editor. The file will be shown embedded in an appropriate media player. For more details, see the section 'Using the Moodle media icon' in <a href="8be5720bfe24930b9124a5ae23106a19.html" title="Audio">Audio</a> and <a href="6b065b3d928b2a6124fbbbb3b3a9d572.html" title="Video">Video</a>. Alternatively, the audio or video file may added as an attachment to the post, in which case the file will be displayed as an attachment.
+</p>
+<h4><span class="mw-headline" id="Tags">Tags</span></h4>
+<p>Forum posts may be tagged. 
+</p><p>Tags can be managed by a site administrator in <a href="6c384f59d583509cd631903a8b8f1b48.html" title="Managing tags">Manage tags</a> in the Site administration. Forum post tags may be added to a specified tag collection, and standard tags may be suggested or forced. If desired, forum post tagging may be disabled completely.
+</p>
+<h4><span class="mw-headline" id="Post_editing_time_limit">Post editing time limit</span></h4>
+<p>Once a post has been made, students can go back and edit it within a set time limit. This limit is 30 minutes by default and is set by an administrator in <a href="fc51905f901bc1765d31f570b453b7d9.html" title="Site security settings">Site security settings</a> in the Site administration. Note that teachers can always edit their posts.
+</p>
+<h4><span class="mw-headline" id="Moving_between_forum_threads">Moving between forum threads</span></h4>
+<p>Links top and bottom, left and right (where applicable) take you to the previous and next forum discussion in a list:
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:navigateforums1.png" class="mw-file-description"><img src="images_en/thumb/0/04/navigateforums1.png/8e9a3a5b97eef61fa79a7df23d3ede71.png" decoding="async" width="500" height="208" class="mw-file-element" srcset="/502/en/images_en/0/04/navigateforums1.png 1.5x" data-file-width="708" data-file-height="294"></a><figcaption></figcaption></figure>
+<h3><span class="mw-headline" id="Reply_to_posts_via_email">Reply to posts via email</span></h3>
+<p>If enabled by an administrator (in <a href="2e4b746825876fab71c58c0afb3555a0.html" title="Mail configuration">Mail configuration</a>), you can reply to forum posts via email.
+</p>
+<ol><li>Click the Reply by email link in the email. You will see a special unique email address to send your reply to.</li>
+<li>Reply using the email address provided. <b>IMPORTANT: Make sure you remove the original email content so that your forum post does not contain the quoted text.</b></li>
+<li>You should receive an email saying your reply has been successfully posted.</li>
+<li>Your post now appears in the forum.</li></ol>
+<table>
+<tbody><tr>
+<td><figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:forumemailreplylatest.png" class="mw-file-description"><img src="images_en/thumb/1/1c/forumemailreplylatest.png/8eac5824467bb06b035c99486d310e19.png" decoding="async" width="400" height="372" class="mw-file-element" srcset="/502/en/images_en/1/1c/forumemailreplylatest.png 1.5x" data-file-width="563" data-file-height="523"></a><figcaption>(1) Click to reply by email</figcaption></figure>
+</td>
+<td><figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:specialemailaddress.png" class="mw-file-description"><img src="https://docs.moodle.org/502/en/images_en/thumb/3/3f/specialemailaddress.png/300px-specialemailaddress.png" decoding="async" width="300" height="38" class="mw-file-element" srcset="/502/en/images_en/3/3f/specialemailaddress.png 1.5x" data-file-width="445" data-file-height="56"></a><figcaption>(1a) Note the special email address to reply to</figcaption></figure>
+</td>
+<td><figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:forumemailreply2.png" class="mw-file-description"><img src="images_en/thumb/2/27/forumemailreply2.png/a67b62fb6688ab742969225e1fc5ff91.png" decoding="async" width="400" height="222" class="mw-file-element" srcset="/502/en/images_en/thumb/2/27/forumemailreply2.png/600px-forumemailreply2.png 1.5x, /502/en/images_en/2/27/forumemailreply2.png 2x" data-file-width="720" data-file-height="400"></a><figcaption>(2) Type and send your reply</figcaption></figure>
+</td></tr></tbody></table>
+<table>
+<tbody><tr>
+<td><figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:forumemailreply3.png" class="mw-file-description"><img src="images_en/thumb/6/64/forumemailreply3.png/0beaca90221323908f99f472a3ecc469.png" decoding="async" width="400" height="235" class="mw-file-element" srcset="/502/en/images_en/6/64/forumemailreply3.png 1.5x" data-file-width="587" data-file-height="345"></a><figcaption>(3) The success message</figcaption></figure>
+</td>
+<td><figure typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:forumemailreply4.png" class="mw-file-description"><img src="images_en/thumb/2/27/forumemailreply4.png/b30488d3eac7cdf5004bc98f449de7b9.png" decoding="async" width="400" height="171" class="mw-file-element" srcset="/502/en/images_en/2/27/forumemailreply4.png 1.5x" data-file-width="583" data-file-height="249"></a><figcaption> (4) Your reply is posted to the forum</figcaption></figure>
+</td></tr></tbody></table>
+<p><br>
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:navigateforums1.png" class="mw-file-description"><img src="images_en/thumb/0/04/navigateforums1.png/8e9a3a5b97eef61fa79a7df23d3ede71.png" decoding="async" width="500" height="208" class="mw-file-element" srcset="/502/en/images_en/0/04/navigateforums1.png 1.5x" data-file-width="708" data-file-height="294"></a><figcaption></figcaption></figure>
+<h3><span class="mw-headline" id="Exporting_forum_posts">Exporting forum posts</span></h3>
+<p>Users with the <i>mod/forum:exportdiscussion</i> or <i>mod/forum:exportownpost</i> or <i>mod/forum:exportpost</i> permission can export forum posts to any portfolio the administrator has enabled:
+</p><p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Exportforum.png" class="mw-file-description"><img src="images_en/thumb/c/c4/Exportforum.png/725acc005355267de8273a734eeae620.png" decoding="async" width="200" height="132" class="mw-file-element" srcset="/502/en/images_en/thumb/c/c4/Exportforum.png/300px-Exportforum.png 1.5x, /502/en/images_en/thumb/c/c4/Exportforum.png/400px-Exportforum.png 2x" data-file-width="405" data-file-height="268"></a></span>
+</p><p>See the discussion <a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=320382">Printing/exporting forum discussions</a> for further details.
+</p>
+<h2><span class="mw-headline" id="Using_Forum:_Teachers">Using Forum: Teachers</span></h2>
+<h3><span class="mw-headline" id="Private_replies">Private replies</span></h3>
+<p>Teachers (or anyone with the capability <a href="Capabilities/mod/e25b03c4e47d241e24d7aee0dee83c65.html" title="Capabilities/mod/forum:postprivatereply">mod/forum:postprivatereply</a> can reply privately to a forum message. By default, the reply is only seen by the recipient and the teachers of the course, and cannot be replied.
+</p><p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:SmallPrivateReply.png" class="mw-file-description"><img src="images_en/thumb/f/f0/SmallPrivateReply.png/02d46f2f9a5a9f5a7694956ecc5b1196.png" decoding="async" width="400" height="198" class="mw-file-element" srcset="/502/en/images_en/thumb/f/f0/SmallPrivateReply.png/600px-SmallPrivateReply.png 1.5x, /502/en/images_en/thumb/f/f0/SmallPrivateReply.png/800px-SmallPrivateReply.png 2x" data-file-width="816" data-file-height="404"></a></span>
+</p>
+<h3><span class="mw-headline" id="Pinned_posts">Pinned posts</span></h3>
+<p>When adding a new discussion as a teacher, you can 'pin' it from the three dots to the right of the discussion. (See screenshot below.) Any forum discussions which come after that will appear underneath this pinned post. If you later click to 'unpin' it, it will display as a regular forum discussion, moving down the list when others are posted.
+</p>
+<h3><span class="mw-headline" id="Manually_locking_discussion_threads">Manually locking discussion threads</span></h3>
+<p>By clicking 'Lock this discussion' from three dots to the right of a discussion, you can manually lock a thread so that nobody can post to it anymore. A label 'Locked' will appear underneath the locked discussion subject. You can unlock it with the three dots to the right of the discussion again if necessary:
+</p><p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:SmallForumStarPinLock.png" class="mw-file-description"><img src="images_en/thumb/b/bd/SmallForumStarPinLock.png/72bcf67081bceccc7f803e678a094bf7.png" decoding="async" width="300" height="228" class="mw-file-element" srcset="/502/en/images_en/thumb/b/bd/SmallForumStarPinLock.png/450px-SmallForumStarPinLock.png 1.5x, /502/en/images_en/thumb/b/bd/SmallForumStarPinLock.png/600px-SmallForumStarPinLock.png 2x" data-file-width="628" data-file-height="478"></a></span>
+</p>
+<h3><span id=".27Send_forum_post_notifications_with_no_editing_time_delay.27"></span><span class="mw-headline" id="'Send_forum_post_notifications_with_no_editing_time_delay'">'Send forum post notifications with no editing time delay'</span></h3>
+<p>Teachers (and others with the <a href="Capabilities/moodle/00f9a7e03835b8fcf6f333644be2bea2.html" title="Capabilities/moodle/course:manageactivities">capability to manage course activities</a>) will see this option when posting to a forum. Ticking this box will send a notification to everyone subscribed to that forum with no editing time delay. (Users have 30 minutes by default to edit their posts.)
+</p><p>Note: For users who have enabled email digests in their forum preferences, the notification is NOT sent separately from other forum post notifications.
+</p>
+<h3><span class="mw-headline" id="Display_period">Display period</span></h3>
+<p>Teachers (and others with the capability <a href="Capabilities/mod/f7cffff70e429f5252edea60fc960a19.html" title="Capabilities/mod/forum:viewhiddentimedposts">mod/forum:viewhiddentimedposts</a>) can set a display period of a date and time for the forum post to appear.
+</p><p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:timedposts.png" class="mw-file-description"><img src="images_en/thumb/e/ee/timedposts.png/ccfb50675b7dc9919ecc67cc3b3d93b0.png" decoding="async" width="500" height="97" class="mw-file-element" srcset="/502/en/images_en/thumb/e/ee/timedposts.png/750px-timedposts.png 1.5x, /502/en/images_en/thumb/e/ee/timedposts.png/1000px-timedposts.png 2x" data-file-width="1656" data-file-height="322"></a></span>
+</p><p>Note: Timed forum posts were included in previous versions of Moodle as an experimental feature. In Moodle 3.1 onwards, it is enabled by default for new installations. For sites upgrading from a previous version, it may be enabled via <i>Site administration &gt; Plugins &gt; Activity modules &gt; Forum</i>.
+</p>
+<h3><span class="mw-headline" id="Locking_a_discussion">Locking a discussion</span></h3>
+<p>Forum threads may be automatically locked after a certain period of inactivity. This is done from the setting 'Discussion locking' when creating or editing a new forum.
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:discussionlocking.png" class="mw-file-description"><img src="images_en/thumb/3/34/discussionlocking.png/21528307f354a30942dd5fcc9d4c4e92.png" decoding="async" width="600" height="42" class="mw-file-element" srcset="/502/en/images_en/3/34/discussionlocking.png 1.5x" data-file-width="859" data-file-height="60"></a><figcaption>Locked discussion alert when viewing a forum.</figcaption></figure>
+<ul><li><span class="small-info-right"><a href="4559ca34b9e04e34424b54f6039900b9.html" title="Category:New features">New feature<br>in <b>Moodle 5.2</b>!</a></span></li></ul>
+<p>From Moodle 5.2, the lock period is set by entering a number and choosing a time unit (seconds, minutes, hours, days, or weeks), allowing for flexible inactivity periods. The default is for discussions not to be locked.
+</p>
+<ul><li>Teachers and other users with the <a href="Capabilities/mod/35a199a9767bc7256b44e0b68c38f61f.html" title="Capabilities/mod/forum:canoverridediscussionlock">capability to override locked discussions</a> can unlock discussions simply by posting a reply.</li></ul>
+<h3><span class="mw-headline" id="Moving_a_discussion">Moving a discussion</span></h3>
+<p>Teachers and other users with the <a href="Capabilities/mod/d418945c8f85d5a3b6811f61c086716f.html" title="Capabilities/mod/forum:movediscussions">capability to move discussions</a> can move a discussion to any other forum in the course for which they have appropriate rights.
+</p>
+<ol><li>Click on the arrow in the 'Move this discussion to...' dropdown menu in the top right corner of the page and select a destination forum.</li>
+<li>Click the Move button.</li></ol>
+<p>Note: Moving a forum post will display incorrect results in the <a href="07005b0b09d3efe764eeb21a31e4735d.html" title="Participation report">course participation report</a> for the affected forums. For example, take a student who posted in forum A and had their post moved to forum B. In the course participation report, the student will still be listed as having made a post in forum A, but will not be listed as having made a post yet in forum B.
+</p><p>Note: Discussion subscriptions are retained when a post is moved.
+</p>
+<h3><span class="mw-headline" id="Splitting_a_discussion">Splitting a discussion</span></h3>
+<p>Teachers and other users with the <a href="Capabilities/mod/93de43ea0a426cb1108bfea03b5f7d8e.html" title="Capabilities/mod/forum:splitdiscussions">capability to split discussions</a> can split a discussion thread. Splitting a discussion means that beginning with the post selected and going to the end of that sub-thread, the posts are cut from the current discussion topic and put into a newly created discussion topic. If a discussion has strayed away from the original topic, splitting the discussion can provide new attention and space for the tangent discussion while keeping the original discussion on topic.
+</p>
+<ol><li>Click the link 'Split' in the forum post</li>
+<li>Enter a new discussion name (optional)</li>
+<li>Click the Split button</li></ol>
+<p>Note: Discussion subscriptions are NOT retained when a post is split.
+</p>
+<h3><span class="mw-headline" id="Using_groups_with_forums">Using groups with forums</span></h3>
+<p>'Group mode' available from the Common module settings has three options. (Note that you must have groups in your course to use this feature.)
+</p>
+<h4><span class="mw-headline" id="If_the_group_mode_is_set_to_separate_groups">If the group mode is set to separate groups</span></h4>
+<ul><li>Teachers (and other users with the <a href="Capabilities/mod/b97826e0383ab9e027a90874539c93ff.html" title="Capabilities/mod/forum:canposttomygroups">capability to post in all groups they have access to</a>) are given the option when posting of adding a new discussion topic for all participants or a selected group.</li></ul>
+<figure class="mw-default-size mw-halign-center" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:postallgroups445.png" class="mw-file-description"><img src="images_en/3/3a/c191aa64e5d45089f20c08e53581c332.png" decoding="async" width="472" height="346" class="mw-file-element" data-file-width="472" data-file-height="346"></a><figcaption></figcaption></figure>
+<p><br>
+If a teacher adds a new discussion topic for a selected group, then only group members can reply to it. If the teacher adds a new discussion topic for all participants, they need to also tick the box 'Post a copy to all groups', otherwise students will only be able to view their post and not reply to it.
+</p>
+<figure class="mw-halign-center" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:allgroupsposts.png" class="mw-file-description" title="Forum with discussion to all participants with 'Post a copy to all groups' ticked"><img alt="Forum with discussion to all participants with 'Post a copy to all groups' ticked" src="images_en/thumb/f/fe/allgroupsposts.png/a58da2ed1c6924987975bfce9266bc60.png" decoding="async" width="500" height="157" class="mw-file-element" srcset="/502/en/images_en/thumb/f/fe/allgroupsposts.png/750px-allgroupsposts.png 1.5x, /502/en/images_en/thumb/f/fe/allgroupsposts.png/1000px-allgroupsposts.png 2x" data-file-width="1084" data-file-height="340"></a><figcaption>Forum with discussion to all participants with 'Post a copy to all groups' ticked</figcaption></figure>
+<ul><li>Students can only start discussions for their group.</li>
+<li>Students can only reply to discussions started by other group members or discussions for their group started by a teacher.</li></ul>
+<h4><span class="mw-headline" id="If_the_group_mode_is_set_to_visible_groups">If the group mode is set to visible groups</span></h4>
+<ul><li>Teachers are given the option of adding a new discussion topic for all participants or a selected group. If a teacher adds a new discussion topic for All participants then students can see it but not reply.</li>
+<li>If a teacher adds a new discussion topic for a selected group, then only group members can reply to it.</li>
+<li>Students can only start and reply to discussions for their group, as long as the teacher selected their group or ticked 'Post a copy to all groups'.</li>
+<li>Students can view, but not reply to discussions in other groups.</li></ul>
+<p>Teachers, and other users with the capability <a href="Capabilities/moodle/b0ef169562673febe4af071283584cd9.html" title="Capabilities/moodle/site:accessallgroups">moodle/site:accessallgroups</a> set to allow, can view and post in all forum discussions, regardless of the group mode setting.
+</p><p>Where visible groups are used, the user's groups will be shown first in the list, followed by other groups:
+</p><p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:mygroupsfirst.png" class="mw-file-description"><img src="images_en/thumb/c/c6/mygroupsfirst.png/4be2c2092d602a9e5cc01442b4916169.png" decoding="async" width="200" height="124" class="mw-file-element" srcset="/502/en/images_en/thumb/c/c6/mygroupsfirst.png/300px-mygroupsfirst.png 1.5x, /502/en/images_en/thumb/c/c6/mygroupsfirst.png/400px-mygroupsfirst.png 2x" data-file-width="652" data-file-height="404"></a></span>
+</p><p>Note: Single simple discussions cannot be set to separate groups (as this feature is not implemented). Instead, a standard forum should be used. If required, a permissions override may be set to prevent students from starting new discussions.
+For teachers who have access to all or several groups in a forum, this setting allows them to post the same message once only to all groups.
+</p>
+<h3><span class="mw-headline" id="Forum_grading">Forum grading</span></h3>
+<p>To be able to grade forum posts, in the forum settings in the section 'Whole forum grading', you need to set the grade type to Point or Scale. You can then choose a grading method, such as a marking guide or rubric. After saving the forum settings, you'll find a 'Grade users' button on the forum page.
+</p>
+<h2><span class="mw-headline" id="Ideas_for_using_forums">Ideas for using forums</span></h2>
+<p>Ask yourself 
+</p>
+<ol><li>you wish to have involvement in the forum or if you want the students to lead and own the space</li>
+<li>you want the forum to add value to the face to face environment or have a life of its own in its own right outside the lecture theatre/classroom or seminar room</li>
+<li>you are prepared to make appropriate contributions to the discussion to:
+<ol><li>encourage discussion if students are quiet</li>
+<li>help shape ideas if students begin to wander off-task</li>
+<li>your role will be defined as discussions/a course progresses</li>
+<li>you will explicitly but gradually relinquish control of the discussions</li>
+<li>you will encourage and support learners to share control of discussions (for example you might ask a learner/group of learners to summarise contributions to a discussion thread/topic, or you might ask learners to initiate discussion topics)</li></ol></li></ol>
+<h2><span class="mw-headline" id="See_also...">See also...</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://moodle.academy/course/view.php?id=12">Assessment: Exploring forums</a> - An intermediate-level Moodle Academy course that explores how to use forums for both formative and summative assessment.</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822234126
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.086 seconds
+Real time usage: 0.962 seconds
+Preprocessor visited node count: 162/1000000
+Post&#8208;expand include size: 490/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.753      1 -total
+ 60.77%    3.496      1 Template:New_features
+ 33.70%    1.939      1 Template:Forum
+ 28.74%    1.653      1 Template:Version
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:1306-0!canonical and timestamp 20260822234126 and revision id 155788. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Using_Forum&amp;oldid=155788">https://docs.moodle.org/502/en/index.php?title=Using_Forum&amp;oldid=155788</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="429bbf13648565d7e3a7cc7b3a833ccf.html" title="Category:Forum">Forum</a></li><li><a href="4559ca34b9e04e34424b54f6039900b9.html" title="Category:New features">New features</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhnlrkso">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhnlrl7z"></button>
+					<div class="collapse navbar-collapse igdhnlrl7z" id="igdhnlrl7z">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Using_Forum" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Using_Forum" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Using_Forum&amp;oldid=155788" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Using_Forum&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Forum_nutzen" title="Forum nutzen – Deutsch" lang="de" hreflang="de" data-title="Forum nutzen" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Afficher_un_forum" title="Afficher un forum – français" lang="fr" hreflang="fr" data-title="Afficher un forum" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/フォーラムの閲覧" title="フォーラムの閲覧 – 日本語" lang="ja" hreflang="ja" data-title="フォーラムの閲覧" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Usando_Foro" title="Usando Foro – español" lang="es" hreflang="es" data-title="Usando Foro" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 3 June 2026, at 02:13.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":179,"wgPageParseReport":{"limitreport":{"cputime":"0.086","walltime":"0.962","ppvisitednodes":{"value":162,"limit":1000000},"postexpandincludesize":{"value":490,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    5.753      1 -total"," 60.77%    3.496      1 Template:New_features"," 33.70%    1.939      1 Template:Forum"," 28.74%    1.653      1 Template:Version"]},"cachereport":{"timestamp":"20260822234126","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Installing plugins - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"9d6ceafb5f441cadcc6567db","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Installing_plugins","wgTitle":"Installing plugins","wgCurRevisionId":156180,"wgRevisionId":156180,"wgArticleId":6306,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Installing_plugins","wgRelevantArticleId":6306,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Installing_contributed_modules_or_plugins","wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgInternalRedirectTargetUrl":"/502/en/Installing_plugins","ev-youtube-config":{"class":"embedvideo-player","loading":"lazy","frameborder":0,"allow":"accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; autoplay","modestbranding":1,"allowfullscreen":"true","frameBorder":0,"width":640,"height":360},"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.embedVideo.styles":"ready","ext.pygments":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.embedVideo.consent","ext.pygments.view","mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="593ae70845242c812b361a340a53fb46.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.pygments%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Installing_plugins">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Installing_plugins rootpage-Installing_plugins layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhy5yk9d"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhy5yk9d" id="igdhy5yk9d">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Installing+plugins" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Installing_contributed_modules_or_plugins">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Installing_contributed_modules_or_plugins">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Installing_contributed_modules_or_plugins">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="b8a47099f49d74586081af402e096238.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Installing_plugins" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_plugins&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_plugins&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Installing plugins</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"><span class="mw-redirectedfrom">(Redirected from <a href="https://docs.moodle.org/502/en/index.php?title=Installing_contributed_modules_or_plugins&amp;redirect=no" class="mw-redirect" title="Installing contributed modules or plugins">Installing contributed modules or plugins</a>)</span></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a> ► <a class="mw-selflink selflink">Installing plugins</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a></div>	
+<div class="content">
+<ul><li><a href="553207f76ae3b1e85403f96c2ca316f1.html" title="Installing Moodle">Installing Moodle</a></li>
+<li><a href="399ca91535c3410845bff1400293dbc5.html" title="Installation quick guide">Installation quick guide</a></li>
+<li><a href="37fc181470a569556f94c1f35940d0a7.html" title="Cron">Cron</a></li>
+<li><a href="081d50b0942d418fa28114398527e388.html" title="Nginx">Nginx</a></li>
+<li><a href="6831e4affebb174320f861bc76b08775.html" title="Apache">Apache</a></li>
+<li><a href="68065410acf60db421f4e2aac18bc951.html" title="Internet Information Services">IIS</a></li>
+<li><a href="838fe95223f139a5c86fa0eace52fb64.html" title="Configuring the Router">Routing</a></li>
+<li><a class="mw-selflink selflink">Installing plugins</a></li>
+<li><a href="52d1d262bc125752f9747df1abc77de6.html" title="Installation FAQ">Installation FAQ</a></li>
+<li><a href="b38923733584457a7e29bf0e898e9c97.html" title="Upgrading">Upgrading</a></li>
+<li><a href="451fc5f44047acbcf3c960e787eb56c6.html" title="Upgrade overview">Upgrade overview</a></li>
+<li><a href="784f6d5df0514efb399c81a6f803d2c7.html" title="Automatic updates deployment">Automatic updates deployment</a></li>
+<li><a href="14569a6d13e60324f1803b54b2ffb589.html" title="Git for Administrators">Git guide</a></li>
+<li><a href="8428d1ac0de33e2b0f542d6d962f1fa6.html" title="Administration via command line">Administration via command line</a></li>
+<li><a href="6aeead2c752a1a71fc9b37a62d913491.html" title="Upgrading FAQ">Upgrading FAQ</a></li>
+<li><a href="1a1489d94778d66d38f3a8e70fedc938.html" title="Moodle migration">Moodle migration</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Why_install_additional_plugins?"><span class="tocnumber">1</span> <span class="toctext">Why install additional plugins?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Choosing_the_best_plugins_for_your_site"><span class="tocnumber">2</span> <span class="toctext">Choosing the best plugins for your site</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Plugins_for_school_teaching"><span class="tocnumber">2.1</span> <span class="toctext">Plugins for school teaching</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Plugins_for_university_teaching"><span class="tocnumber">2.2</span> <span class="toctext">Plugins for university teaching</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Considerations_for_production_sites_(skip_if_you're_just_moodling)"><span class="tocnumber">3</span> <span class="toctext">Considerations for production sites (skip if you're just moodling)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Installing_a_plugin"><span class="tocnumber">4</span> <span class="toctext">Installing a plugin</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Installing_plugins_with_Composer_(Packagist)"><span class="tocnumber">4.1</span> <span class="toctext">Installing plugins with Composer (Packagist)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Before_you_start"><span class="tocnumber">4.1.1</span> <span class="toctext">Before you start</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Install_a_plugin"><span class="tocnumber">4.1.2</span> <span class="toctext">Install a plugin</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Update_a_plugin"><span class="tocnumber">4.1.3</span> <span class="toctext">Update a plugin</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Remove_a_plugin"><span class="tocnumber">4.1.4</span> <span class="toctext">Remove a plugin</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Good_practice_for_Composer-managed_sites"><span class="tocnumber">4.1.5</span> <span class="toctext">Good practice for Composer-managed sites</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Notes"><span class="tocnumber">4.1.6</span> <span class="toctext">Notes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#Installing_via_uploaded_ZIP_file"><span class="tocnumber">4.2</span> <span class="toctext">Installing via uploaded ZIP file</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Installing_manually_at_the_server"><span class="tocnumber">4.3</span> <span class="toctext">Installing manually at the server</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Troubleshooting"><span class="tocnumber">5</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Errors"><span class="tocnumber">5.1</span> <span class="toctext">Errors</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#A_file_permissions_error_has_occurred"><span class="tocnumber">5.2</span> <span class="toctext">A file permissions error has occurred</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Default_exception_handler:_Error_writing_to_database_Debug:_Duplicate_entry_'en_us-..."><span class="tocnumber">5.3</span> <span class="toctext">Default exception handler: Error writing to database Debug: Duplicate entry 'en_us-...</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#When_installing_manually"><span class="tocnumber">5.4</span> <span class="toctext">When installing manually</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Obtaining_help"><span class="tocnumber">5.5</span> <span class="toctext">Obtaining help</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#Uninstalling_a_plugin"><span class="tocnumber">6</span> <span class="toctext">Uninstalling a plugin</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Plugins_overview"><span class="tocnumber">7</span> <span class="toctext">Plugins overview</span></a>
+<ul>
+<li class="toclevel-2 tocsection-24"><a href="#Plugin_updating_from_within_Moodle"><span class="tocnumber">7.1</span> <span class="toctext">Plugin updating from within Moodle</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#Preventing_installing_plugins_from_within_Moodle"><span class="tocnumber">8</span> <span class="toctext">Preventing installing plugins from within Moodle</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#See_also"><span class="tocnumber">9</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Why_install_additional_plugins.3F"></span><span class="mw-headline" id="Why_install_additional_plugins?">Why install additional plugins?</span></h2>
+<p>Plugins enable you to add additional features and functionality to Moodle, such as new activities, new quiz question types, new reports, integrations with other systems and many more. 
+</p><p>Note: Certain hosting solutions, such as <a rel="nofollow" class="external text" href="https://moodle.com/cloud/">MoodleCloud</a>, prevent plugins being installed from within Moodle.
+</p>
+<h2><span class="mw-headline" id="Choosing_the_best_plugins_for_your_site">Choosing the best plugins for your site</span></h2>
+<p>Install and test plugins in a non-production environment before using them on a production site.
+</p><p>When choosing a plugin in <a rel="nofollow" class="external text" href="https://marketplace.moodle.com/">Moodle Marketplace</a>:
+</p>
+<ul><li>check that it supports your Moodle version</li>
+<li>review its description, documentation and installation requirements</li>
+<li>check when it was last updated and whether it appears to be actively maintained</li>
+<li>review its support information</li>
+<li>check whether it requires an external service, license or additional payment</li>
+<li>review any awards shown on the plugin page, such as the Privacy friendly or Mobile app award</li></ul>
+<h3><span class="mw-headline" id="Plugins_for_school_teaching">Plugins for school teaching</span></h3>
+<p>For the various school environments (ages 4 - 18 ) consider the following:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://marketplace.moodle.com/plugins/mod_attendance">Attendance</a></li>
+<li><a rel="nofollow" class="external text" href="https://marketplace.moodle.com/plugins/mod_checklist">Checklist</a></li>
+<li><a rel="nofollow" class="external text" href="https://marketplace.moodle.com/plugins/atto_chemistry">Chemistry editor</a></li>
+<li><a rel="nofollow" class="external text" href="https://marketplace.moodle.com/plugins/mod_choicegroup">Group choice</a></li>
+<li><a rel="nofollow" class="external text" href="https://marketplace.moodle.com/plugins/block_xp">Level up!</a></li>
+<li><a rel="nofollow" class="external text" href="https://marketplace.moodle.com/plugins/mod_quizgame">Quizventure</a></li>
+<li><a rel="nofollow" class="external text" href="https://marketplace.moodle.com/plugins/tinymce_wordcount">Word count</a></li></ul>
+<h3><span class="mw-headline" id="Plugins_for_university_teaching">Plugins for university teaching</span></h3>
+<p>For universities, there is a <a rel="nofollow" class="external text" href="https://docs.moodle.org/en/Tertiary_education#Moodle_plugins_by.2Ffor_Universities">list of plugins by/for Universities</a>, and a <a rel="nofollow" class="external text" href="https://docs.moodle.org/en/Tertiary_education#Discipline-specific_plugins">link to discipline-specific plugins</a>, which might be worth considering.
+</p>
+<h2><span id="Considerations_for_production_sites_.28skip_if_you.27re_just_moodling.29"></span><span class="mw-headline" id="Considerations_for_production_sites_(skip_if_you're_just_moodling)">Considerations for production sites (skip if you're just moodling)</span></h2>
+<p><b>VERY IMPORTANT!</b> 
+</p><p><b>Some plugins in the directory have not been reviewed for quality or suitability for your Moodle site, so please use discretion when installing them because a plugin may not behave as expected, and in rare cases could introduce security issues. This is improving as the Moodle Marketplace evolves.</b>
+</p>
+<ul><li>If you have a large site for production purposes consider if you <b>really</b> need the plugin? More functionality means more things to support, more things to (potentially) go wrong and more things to worry about at upgrade time.</li>
+<li>Is the plugin supported and maintained? If something goes wrong can you get support? Will bugs be fixed?</li>
+<li>If the plugin does not work in a future version of Moodle, what will you do about it?</li>
+<li>Be cautious of any plugin whose installation instructions ask you to manually modify or replace core Moodle files. This isn't standard practice, and isn't guaranteed to survive a future Moodle upgrade, since it bypasses Moodle's normal plugin structure.</li>
+<li>Look at <a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=340821#p1373707">this</a> forum thread and <a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=346296">also this</a> forum thread since both discuss examples of users worried about installing a plugin.</li></ul>
+<h2><span class="mw-headline" id="Installing_a_plugin">Installing a plugin</span></h2>
+<figure class="embedvideo" data-service="youtube" data-iframeconfig='{"src":"https://www.youtube-nocookie.com/embed/p2FDsAiwGpA?autoplay=1"}' style="width:640px">
+	<div class="embedvideo-wrapper" style="height:360px"><div class="embedvideo-consent" data-show-privacy-notice="1">
+	<div class="embedvideo-overlay">
+		<div class="embedvideo-loader" role="button">
+			<div class="embedvideo-loader__fakeButton">Load video</div>
+			<div class="embedvideo-loader__footer">
+				<div class="embedvideo-loader__service">YouTube</div>
+			</div>
+		</div>
+		<div class="embedvideo-privacyNotice hidden">
+			<div class="embedvideo-privacyNotice__content">YouTube might collect personal data. <a href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank" class="embedvideo-privacyNotice__link">Privacy Policy</a></div>
+			<div class="embedvideo-privacyNotice__buttons">
+<p>				<button class="embedvideo-privacyNotice__continue">Continue</button>
+				<button class="embedvideo-privacyNotice__dismiss">Dismiss</button>
+</p>
+			</div>
+		</div>
+	</div>
+</div></div><figcaption>Installing plugins from admin interface</figcaption>
+</figure>
+<p>To install a plugin, its source code must be put (deployed) into the appropriate location inside the Moodle installation directory and the main administration page <i>Site administration &gt; Notifications</i> must be visited. You can deploy a plugin by:
+</p>
+<ul><li>uploading a plugin ZIP file through the Moodle administration interface</li>
+<li>installing a compatible plugin with Composer, if your Moodle site is Composer-managed</li>
+<li>copying the plugin files to the server manually</li></ul>
+<p>To upload a ZIP file through the administration interface, the web server process must have write access to the relevant plugin-type directory.
+</p>
+<div class="alert alert-info"><b>Note:</b> Whenever you install or download a plugin from the Moodle plugins directory, it is extremely important that you have correctly chosen your <a href="4b22e47dbbc8debd92ed9661a89c3019.html" title="Moodle version">Moodle version</a>. If you mistakenly download and install the wrong version of a plugin for your Moodle server, this may lead to some serious problems, even freezing of the Moodle site.</div>
+<p><br>
+</p>
+<h3><span id="Installing_plugins_with_Composer_.28Packagist.29"></span><span class="mw-headline" id="Installing_plugins_with_Composer_(Packagist)">Installing plugins with Composer (Packagist)</span></h3>
+<p>If your Moodle site is Composer-managed, you can install compatible plugins directly from Packagist.
+</p>
+<h4><span class="mw-headline" id="Before_you_start">Before you start</span></h4>
+<ul><li>Confirm your site is Composer-managed.</li>
+<li>Confirm your project requires `moodle/composer-installer` in production dependencies.</li>
+<li>Confirm the target plugin is available on Packagist and declares correct Moodle Composer metadata.</li></ul>
+<h4><span class="mw-headline" id="Install_a_plugin">Install a plugin</span></h4>
+<p>From your project root:
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>composer<span class="w"> </span>require<span class="w"> </span>abgreeve/moodle-block_stash
+</pre></div>
+<p>Then complete the Moodle upgrade process if prompted.
+</p>
+<h4><span class="mw-headline" id="Update_a_plugin">Update a plugin</span></h4>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>composer<span class="w"> </span>update<span class="w"> </span>abgreeve/moodle-block_stash
+</pre></div>
+<h4><span class="mw-headline" id="Remove_a_plugin">Remove a plugin</span></h4>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>composer<span class="w"> </span>remove<span class="w"> </span>abgreeve/moodle-block_stash
+</pre></div>
+<p>After removal, complete the Moodle uninstall or upgrade flow as needed.
+</p>
+<h4><span class="mw-headline" id="Good_practice_for_Composer-managed_sites">Good practice for Composer-managed sites</span></h4>
+<ul><li>Commit changes to `composer.json` and `composer.lock` together.</li>
+<li>Test plugin changes in a non-production environment first.</li>
+<li>Use one installation method per plugin to avoid drift.</li></ul>
+<h4><span class="mw-headline" id="Notes">Notes</span></h4>
+<ul><li>This method does not apply to non-Composer Moodle sites.</li>
+<li>If a plugin is not in Packagist or is not Composer-compatible, use the standard installation methods described elsewhere on this page.</li></ul>
+<h3><span class="mw-headline" id="Installing_via_uploaded_ZIP_file">Installing via uploaded ZIP file</span></h3>
+<ol><li>Go to the Moodle Marketplace, Sign in, select your current <a href="4b22e47dbbc8debd92ed9661a89c3019.html" title="Moodle version">Moodle version</a> and download the appropriate plugin version as a ZIP file.</li>
+<li>Login to your Moodle site as an admin and go to <i>Site administration &gt; Plugins &gt; Install plugins</i>. (a) There are two options you can choose when you get to this page. One of them is the <b>"Install plugins from the Moodle plugins directory"</b> button. This used to install a plugin directly; that direct-install flow ended with the launch of Moodle Marketplace, so the button now takes you to a temporary page with a link through to Moodle Marketplace instead. Click through, log in to Marketplace, find the plugin you want, and download the ZIP file. (b) The second option on this page (if you haven't clicked the above mentioned button) allows you to upload a previously downloaded zip file.</li></ol>
+<ol><li>Upload the ZIP file. You should only be prompted to add extra details (in the Show more section) if the location where your plugin will install is not automatically detected.</li>
+<li>If your target directory is not writeable, you will see a warning message.</li>
+<li>Check the plugin validation report.</li></ol>
+<table>
+<tbody><tr>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:plugin1.png" class="mw-file-description"><img src="images_en/thumb/c/c7/plugin1.png/74202150871a7f4b7bfceb555ca19c94.png" decoding="async" width="300" height="228" class="mw-file-element" srcset="/502/en/images_en/thumb/c/c7/plugin1.png/450px-plugin1.png 1.5x, /502/en/images_en/thumb/c/c7/plugin1.png/600px-plugin1.png 2x" data-file-width="716" data-file-height="544"></a><figcaption>Install plugins</figcaption></figure>
+</td>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:add-on_package_validation.png" class="mw-file-description"><img src="images_en/thumb/4/4d/add-on_package_validation.png/ebc0ff9bbf02276553abb57ffed16d6d.png" decoding="async" width="300" height="136" class="mw-file-element" srcset="/502/en/images_en/thumb/4/4d/add-on_package_validation.png/450px-add-on_package_validation.png 1.5x, /502/en/images_en/thumb/4/4d/add-on_package_validation.png/600px-add-on_package_validation.png 2x" data-file-width="1048" data-file-height="475"></a><figcaption>Plugin package validation</figcaption></figure>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Installing_manually_at_the_server">Installing manually at the server</span></h3>
+<p>If you can't deploy the plugin code via the administration web interface, you have to copy it to the server file system manually (e.g. if the web server process does not have write access to the Moodle installation tree to do this for you).
+</p><p>First, establish the correct place in the Moodle code tree for the plugin type. Common locations are:
+</p>
+<ul><li>/path/to/moodle/theme/ - themes</li>
+<li>/path/to/moodle/mod/ - activity modules and resources</li>
+<li>/path/to/moodle/blocks/ - sidebar blocks</li>
+<li>/path/to/moodle/question/type/ - question types</li>
+<li>/path/to/moodle/question/behaviour/ - question behaviours</li>
+<li>/path/to/moodle/course/format/ - course formats</li>
+<li>/path/to/moodle/admin/report/ - admin reports</li></ul>
+<p>See <a href="https://docs.moodle.org/dev/Plugin_types" class="extiw" title="dev:Plugin types">dev:Plugin types</a> for the full list of all plugin types and their locations within the Moodle tree.
+</p>
+<ol><li>Go to the <a rel="nofollow" class="external text" href="https://moodle.org/plugins">Moodle plugins directory</a>; select your current <a href="4b22e47dbbc8debd92ed9661a89c3019.html" title="Moodle version">Moodle version</a>, then choose a plugin with a Download button and download the ZIP file.</li>
+<li>Upload or copy it to your Moodle server.</li>
+<li>Unzip it in the right place for the plugin type (or follow the plugin instructions).</li>
+<li>In your Moodle site (as admin) go to <i>Site administration &gt; Notifications</i> (you should, for most plugin types, get a message saying the plugin is installed).</li></ol>
+<p>Note: The plugin may contain language files.  They'll be found by your Moodle automatically. These language strings can be customized using the standard <i>Site administration &gt; Language</i> editing interface. If you get a "Database error" when you try to edit your language files, there is a strong chance that the language files included within the downloaded ZIP file of this plugin have a coding problem. If you delete the <i>plugin_name/lang/other_language_different_to_English/</i> folder with the new language strings and the database error disappears, this is indeed the case. Please notify the plugin maintainer, so that it can be fixed in future releases.
+</p>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<h3><span class="mw-headline" id="Errors">Errors</span></h3>
+<p>If you obtain an error, please <a href="03dea8f6a86c43cbbe5f79b5364cac24.html" title="Debugging">turn debugging on</a> to obtain additional information about the cause of the error.
+</p>
+<dl><dt>Database error while doing a language customization</dt>
+<dd>May not be related to the <a href="56428a496f9a3b7ce781cd5352e611df.html#Database_error" title="Language customisation">Language customization</a>, but rather a problem with a recently installed plugin.</dd></dl>
+<dl><dt>tool_installaddon/err_curl_exec - cURL error 60</dt>
+<dd>This suggests problems with the validation of the SSL certificate of the remote (moodle.org) site. This is also a known problem in Moodle Windows 7 servers running the Moodle package for Windows. See <a href="e06734a3f0a7bacb5bcd5e99d013f0d8.html" title="SSL certificate for moodle.org">SSL certificate for moodle.org</a> for more info and possible solutions.</dd></dl>
+<h3><span class="mw-headline" id="A_file_permissions_error_has_occurred">A file permissions error has occurred</span></h3>
+<p>On certain 3.0.x versions, when installing plugins via the administration interface, Moodle uses the configuration settings <tt>$CFG-&gt;directorypermissions</tt> and <tt>$CFG-&gt;filepermissions</tt>. If these are not defined explicitly in your config.php, the default value is set automatically to 777 (rwxrwxrwx) for directories and 666 (rw-rw-rw-) for files (see lib/setup.php).
+</p><p>If this default behaviour does not fit your needs and hosting environment, you may wish to specify more strict setting such as
+</p>
+<pre>$CFG-&gt;directorypermissions = 02750;
+</pre>
+<p>A common error after installing plugins is that when you create an instance of the module and then save and display it, it reports the error, "A file permissions error has occurred. Please check the permissions on the script and the directory it is in and try again." If you get this, the file permissions of the package are most likely set to 711 preventing them from running correctly. With your preferred FTP client or via your web hosts control panel, set the file permissions of all the files and directories in the installed module, e.g. /moodle/mod/[myplugin]/ to 755 and then see if you can successfully view the module instance.
+</p>
+<h3><span id="Default_exception_handler:_Error_writing_to_database_Debug:_Duplicate_entry_.27en_us-..."></span><span class="mw-headline" id="Default_exception_handler:_Error_writing_to_database_Debug:_Duplicate_entry_'en_us-...">Default exception handler: Error writing to database Debug: Duplicate entry 'en_us-...</span></h3>
+<ul><li>These errors are usually caused by a third party plugin.</li>
+<li>To find the involved plugin, go to <a rel="nofollow" class="external text" href="http://lang.moodle.org/">http://lang.moodle.org</a> and use the AMOS tool to find all the strings with the given string identifier.</li>
+<li>Remove the suspected plugin and check if the error has disappeared. If so, please contact the plugin maintainer and report this issue.</li>
+<li>Please see <a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=219504">this forum thread</a> for known causes and fixes.</li></ul>
+<h3><span class="mw-headline" id="When_installing_manually">When installing manually</span></h3>
+<ul><li>Check the file permissions. The web server needs to be able to read the plugin files. If the rest of Moodle works then try to make the plugin permissions and ownership match.</li>
+<li>Did you <b>definitely</b> unzip or install the plugin in the correct place?</li>
+<li>Because Moodle scans plugin folders for new plugins you cannot have any other files or folders there. Make sure you delete the zip file and don't try to rename (for example) an old version of the plugin to some other name - it will break.</li>
+<li>Make sure the directory name for the plugin is correct. All the names <b>have</b> to match. If you change the name, then it won't work.</li></ul>
+<h3><span class="mw-headline" id="Obtaining_help">Obtaining help</span></h3>
+<p>Ask in a forum in <a rel="nofollow" class="external text" href="http://moodle.org/course/view.php?id=5">Moodle in English</a>. Make sure you describe your system (including versions of MySQL, PHP etc.), what you tried and what happened. Copy and paste error messages exactly. Provide the link to the version of the plugin you downloaded (some have very similar names).
+</p>
+<h2><span class="mw-headline" id="Uninstalling_a_plugin">Uninstalling a plugin</span></h2>
+<p>To uninstall a plugin
+</p>
+<ol><li>Go to <i>Site Administration &gt; Plugins &gt; Plugins overview</i> and click the Uninstall link opposite the plugin you wish to remove</li>
+<li>Use a file manager to remove/delete the actual plugin directory as instructed, otherwise Moodle will reinstall it next time you access the site administration</li></ol>
+<h2><span class="mw-headline" id="Plugins_overview">Plugins overview</span></h2>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:plugins_overview.png" class="mw-file-description"><img src="images_en/thumb/1/10/plugins_overview.png/1ed8cc472fa359bfde1bdebfa2c40a73.png" decoding="async" width="400" height="119" class="mw-file-element" srcset="/502/en/images_en/thumb/1/10/plugins_overview.png/600px-plugins_overview.png 1.5x, /502/en/images_en/1/10/plugins_overview.png 2x" data-file-width="731" data-file-height="217"></a><figcaption>Plugins overview highlighting available check button</figcaption></figure>
+<p>The Plugins overview page in <i>Site Administration &gt; Plugins &gt; Plugins overview</i> lists all installed plugins, together with the version number,release, availability (enabled or disabled) and settings link (if applicable).
+</p><p>A 'Check for available updates' button enables admins to quickly check for any updates available for plugins installed on the site (from <a rel="nofollow" class="external text" href="https://marketplace.moodle.com/">Moodle Marketplace</a>). Any updates available are highlighted, with further information and a download link in the notes column opposite the plugin.
+</p>
+<h3><span class="mw-headline" id="Plugin_updating_from_within_Moodle">Plugin updating from within Moodle</span></h3>
+<p>An administrator can enable updates deployment in  <i>Site Administration &gt; Server &gt; Update notifications</i>. Then when updates are available, 'Install this update' buttons are shown on the Plugins overview page. See <a href="784f6d5df0514efb399c81a6f803d2c7.html" title="Automatic updates deployment">Automatic updates deployment</a> for more details.
+</p>
+<h2><span class="mw-headline" id="Preventing_installing_plugins_from_within_Moodle">Preventing installing plugins from within Moodle</span></h2>
+<p>If required, installing and updating from within Moodle can be prevented by copying the following lines of code from config-dist.php and pasting them in config.php.
+</p>
+<div class="mw-highlight mw-highlight-lang-php mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// Use the following flag to completely disable the installation of plugins</span>
+<span class="c1">// (new plugins, available updates and missing dependencies) and related</span>
+<span class="c1">// features (such as cancelling the plugin installation or upgrade) via the</span>
+<span class="c1">// server administration web interface.</span>
+<span class="nv">$CFG</span><span class="o">-&gt;</span><span class="na">disableupdateautodeploy</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="b094e7441478a193776f1c57de59a2ff.html" title="Notifications">Notifications</a> for further details of update notifications</li>
+<li><a href="818d1fd8881de7504a69b0a94bb369b9.html" title="Plugin Review Criteria">Plugin Review Criteria</a></li>
+<li><a href="a47581ef3670e711eb5c2a0e07d58ef3.html" title="Plugins FAQ">Plugins FAQ</a></li>
+<li>Moodle in English <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/view.php?id=44">General plugins forum</a></li>
+<li><a href="0c378c3ffe5925d7a83ac1465e85220c.html#Installing_a_contributed_extension_from_its_Git_repository" class="mw-redirect" title="Installing Moodle from Git repository">Installing a contributed extension from its Git repository</a></li></ul>
+<p>For developers:
+</p>
+<ul><li><a href="https://docs.moodle.org/dev/Category:Plugins" class="extiw" title="dev:Category:Plugins">Plugins developer documentation</a></li>
+<li><a href="https://docs.moodle.org/dev/Plugin_validation" class="extiw" title="dev:Plugin validation">dev:Plugin validation</a></li>
+<li><a href="https://docs.moodle.org/dev/On-click_add-on_installation" class="extiw" title="dev:On-click add-on installation">dev:On-click add-on installation</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822103527
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.037 seconds
+Real time usage: 0.113 seconds
+Preprocessor visited node count: 143/1000000
+Post&#8208;expand include size: 1086/2097152 bytes
+Template argument size: 407/2097152 bytes
+Highest expansion depth: 4/100
+Expensive parser function count: 4/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 2584/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    7.346      1 -total
+ 57.10%    4.195      1 Template:MediaPlayer
+ 23.62%    1.735      1 Template:Installing_Moodle
+ 16.15%    1.186      1 Template:Note
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:6306-0!canonical and timestamp 20260822103527 and revision id 156180. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Installing_plugins&amp;oldid=156180">https://docs.moodle.org/502/en/index.php?title=Installing_plugins&amp;oldid=156180</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="7f264aa70db3768dcef1896a8ec93e70.html" title="Category:Installation">Installation</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhy5ymfw">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhy5ymuv"></button>
+					<div class="collapse navbar-collapse igdhy5ymuv" id="igdhy5ymuv">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Installing_plugins" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Installing_plugins" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_plugins&amp;oldid=156180" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Installing_plugins&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Plugins_installieren" title="Plugins installieren – Deutsch" lang="de" hreflang="de" data-title="Plugins installieren" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Instalar_complementos" title="Instalar complementos – español" lang="es" hreflang="es" data-title="Instalar complementos" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Installation_de_plugins" title="Installation de plugins – français" lang="fr" hreflang="fr" data-title="Installation de plugins" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-it nav-item mw-list-item"><a href="https://docs.moodle.org/it/Installare_plugin" title="Installare plugin – italiano" lang="it" hreflang="it" data-title="Installare plugin" data-language-autonym="Italiano" data-language-local-name="italiano" class="interlanguage-link-target nav-link">Italiano</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 13 August 2026, at 09:03.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":131,"wgPageParseReport":{"limitreport":{"cputime":"0.037","walltime":"0.113","ppvisitednodes":{"value":143,"limit":1000000},"postexpandincludesize":{"value":1086,"limit":2097152},"templateargumentsize":{"value":407,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":4,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2584,"limit":5000000},"timingprofile":["100.00%    7.346      1 -total"," 57.10%    4.195      1 Template:MediaPlayer"," 23.62%    1.735      1 Template:Installing_Moodle"," 16.15%    1.186      1 Template:Note"]},"cachereport":{"timestamp":"20260822103527","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

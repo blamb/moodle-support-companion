@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Performance FAQ - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"63a66a67b2c4f457d4296ccc","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Performance_FAQ","wgTitle":"Performance FAQ","wgCurRevisionId":144199,"wgRevisionId":144199,"wgArticleId":7069,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Performance","FAQ"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Performance_FAQ","wgRelevantArticleId":7069,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Performance_FAQ">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Performance_FAQ rootpage-Performance_FAQ layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhlefi0k"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhlefi0k" id="igdhlefi0k">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Performance+FAQ" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Performance_FAQ">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Performance_FAQ">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Performance_FAQ">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="feb17c47f320c7a15f1a8c7227d5cb24.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Performance_FAQ&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Performance_FAQ&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Performance_FAQ&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Performance FAQ</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a>  ► <a href="7a58329819b7734d857d3e22b0a64aee.html" title="Performance">Performance</a>  ►  <a class="mw-selflink selflink">Performance FAQ</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="7a58329819b7734d857d3e22b0a64aee.html" title="Performance">Performance</a></div>	
+<div class="content">
+<ul><li><a href="d2fef13d731df9445395a9c2e0a9fd89.html" title="Performance recommendations">Performance recommendations</a></li>
+<li><a href="05642fc14b4b5693d5b9f5f1b41457c2.html" title="Performance settings">Performance settings</a></li>
+<li><a href="3b9888b802def8a854abd442a794d782.html" title="Performance overview">Performance overview</a></li>
+<li><a href="47336288cd5208e83a741bd312d28b86.html" title="Caching">Caching</a></li>
+<li><a class="mw-selflink selflink">Performance FAQ</a></li>
+<li><a href="3fd917476a40e649c2b898555d692120.html" title="MUC FAQ">MUC FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#How_do_you_define_%22concurrent_users%22?"><span class="tocnumber">1</span> <span class="toctext">How do you define "concurrent users"?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Why_is_%22concurrent_users%22_not_a_useful_metric?"><span class="tocnumber">1.1</span> <span class="toctext">Why is "concurrent users" not a useful metric?</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#What_would_be_a_better_metric?"><span class="tocnumber">1.2</span> <span class="toctext">What would be a better metric?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#What_hardware_should_I_buy_for_'n'_concurrent_users?"><span class="tocnumber">2</span> <span class="toctext">What hardware should I buy for 'n' concurrent users?</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#What_is_the_easiest_way_to_increase_performance?"><span class="tocnumber">3</span> <span class="toctext">What is the easiest way to increase performance?</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#How_do_I_benchmark_a_Moodle-site?"><span class="tocnumber">4</span> <span class="toctext">How do I benchmark a Moodle-site?</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#What_are_PHP-accelerators?"><span class="tocnumber">5</span> <span class="toctext">What are PHP-accelerators?</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#How_do_I_cluster_Moodle?"><span class="tocnumber">6</span> <span class="toctext">How do I cluster Moodle?</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#How_do_I_replicate_Moodle?"><span class="tocnumber">7</span> <span class="toctext">How do I replicate Moodle?</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#My_site_is_very_slow,_what_should_I_do?"><span class="tocnumber">8</span> <span class="toctext">My site is very slow, what should I do?</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#What_are_the_requirements_for_N_users?"><span class="tocnumber">9</span> <span class="toctext">What are the requirements for N users?</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#How_many_users_will_my_installation_support?"><span class="tocnumber">10</span> <span class="toctext">How many users will my installation support?</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#What_is_the_best_webserver?"><span class="tocnumber">11</span> <span class="toctext">What is the best webserver?</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Should_I_go_for_64_bit_or_is_32_bit_OK?"><span class="tocnumber">12</span> <span class="toctext">Should I go for 64 bit or is 32 bit OK?</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#What_hosting_provider_do_you_recommend?"><span class="tocnumber">13</span> <span class="toctext">What hosting provider do you recommend?</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#See_also"><span class="tocnumber">14</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span id="How_do_you_define_.22concurrent_users.22.3F"></span><span class="mw-headline" id='How_do_you_define_"concurrent_users"?'>How do you define "concurrent users"?</span></h2>
+<p>As has been repeatedly stressed in the <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/view.php?f=94">Hardware and performance</a> forum, the load on the server at a particular time depends on the number of concurrent users. Not on the total number of user accounts and not on the number of users logged-in. The term "concurrent users" is used to mean those users for whom the server is actively doing something . It may by processing a webpage written in PHP, querying the database or simply transferring a file. (see also Wikipedia <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Concurrency_(computer_science)">Concurrency</a>). Strictly speaking we mean the number of active web server processes (each of which consume memory) and also the number of database connections.
+</p>
+<h3><span id="Why_is_.22concurrent_users.22_not_a_useful_metric.3F"></span><span class="mw-headline" id='Why_is_"concurrent_users"_not_a_useful_metric?'>Why is "concurrent users" not a useful metric?</span></h3>
+<p>When considering a new site or new hardware, this metric is not very useful because you have no idea how many 'concurrent users' (a better term might be 'concurrent requests') you will have. 
+</p><p>For example, if you have 10,000 registered users and you estimate that, during times of peak load, about 1,000 of those users will be using the system, there is no easy way to obtain the number of 'concurrent users'.
+</p>
+<ul><li>It depends on what the users are doing (if they are contributing to a forum they will make fairly frequent requests but with long pauses to write posts; if they are downloading a PDF they will only make a single request but it will take a long time; if they are doing a quiz they will make very frequent requests).</li></ul>
+<ul><li>It also depends on system performance. If your system can serve a typical page in 0.1 seconds then if you have 10 people making a request within a second this is an average of 1 concurrent user. If your system takes 1 second to serve a page then the same usage pattern results in an average of 10 concurrent users.</li></ul>
+<p>In addition, the number of concurrent users is not a very accurate measure of demand because a "concurrent user" may be downloading a large file, which takes time to transfer based on the speed of their network connection. While this does place a demand on the server, a server may well be able to cope easily with sending out 10 large PDF files to 10 concurrent users with slow network connections, whereas it might struggle if 10 users were continuously making separate PHP requests to a complex page such as quiz.
+</p>
+<h3><span id="What_would_be_a_better_metric.3F"></span><span class="mw-headline" id="What_would_be_a_better_metric?">What would be a better metric?</span></h3>
+<p>Peak requests per second (either from web logs, mdl_log lines, or similar) is probably a better way to roughly estimate demand on the server - but it is still very difficult to work this out for a new server with unknown usage patterns.
+</p>
+<h2><span id="What_hardware_should_I_buy_for_.27n.27_concurrent_users.3F"></span><span class="mw-headline" id="What_hardware_should_I_buy_for_'n'_concurrent_users?">What hardware should I buy for 'n' concurrent users?</span></h2>
+<p>Firstly see above to make sure you express 'n' somewhere near correctly. Unfortunately, the answer is "it depends". It will depend primarily on your chosen operating system, your software configuration (especially web server and database tuning) and what the users will be doing. The worst possible scenario is a large class all starting a timed quiz at exactly the same time. Luckily, users sat reading stuff are not generating any server load at all (until they click for the next activity/page). Very roughly, worst case, your Moodle site may only handle as few as 10-20 concurrent users per GB of memory. Moodle is a large application and can easily use more that 50MB (sometimes a lot more) of RAM per process. If you are planning a very large site, you are strongly encouraged to run a pilot first and take some measurements or resources used.
+</p><p>Prospective Moodle users tend to vastly over-estimate the required concurrency. It's potentially a very expensive mistake if you get this wrong.
+</p>
+<h2><span id="What_is_the_easiest_way_to_increase_performance.3F"></span><span class="mw-headline" id="What_is_the_easiest_way_to_increase_performance?">What is the easiest way to increase performance?</span></h2>
+<p>Buy more memory!
+</p>
+<h2><span id="How_do_I_benchmark_a_Moodle-site.3F"></span><span class="mw-headline" id="How_do_I_benchmark_a_Moodle-site?">How do I benchmark a Moodle-site?</span></h2>
+<p>You can of course benchmark parts of the system separately: the hardware as seen by the operating system (e.g. CPU, disk access), web server performance, database server performance, execution on PHP operations, etc. For further details see <a href="d2fef13d731df9445395a9c2e0a9fd89.html#Obtain_a_baseline_benchmark" title="Performance recommendations">Performance recommendations#Obtain a baseline benchmark</a>.
+</p><p>But there is no easy formula to deduce the maximum number of concurrent users from those results. There is a PHP-script, the <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=57028">Performance perspectives - a little script</a>, circulating among the Moodle-community which calculates a ballpark figure. The current version is attached to <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=57028&amp;parent=772267%7Cthe">posting on 25. March 2011</a>.
+</p><p>Warning: Note that running this script on a production server may have unwanted side-effects. You are strongly adviced to run it on a test-site.
+</p>
+<h2><span id="What_are_PHP-accelerators.3F"></span><span class="mw-headline" id="What_are_PHP-accelerators?">What are PHP-accelerators?</span></h2>
+<p>See Wikipedia <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/PHP_accelerator">PHP accelerator</a>.
+</p><p>Available software are documented under <a href="d2fef13d731df9445395a9c2e0a9fd89.html#PHP_performance" title="Performance recommendations">Performance recommendations#PHP performance</a>. 
+</p><p>You find some user suggestions here <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=168965">Update on PHP-accelerators</a>.
+</p>
+<h2><span id="How_do_I_cluster_Moodle.3F"></span><span class="mw-headline" id="How_do_I_cluster_Moodle?">How do I cluster Moodle?</span></h2>
+<p>See <a href="d2fef13d731df9445395a9c2e0a9fd89.html#Scalability" title="Performance recommendations">Performance recommendations#Scalability</a>
+</p>
+<h2><span id="How_do_I_replicate_Moodle.3F"></span><span class="mw-headline" id="How_do_I_replicate_Moodle?">How do I replicate Moodle?</span></h2>
+<p><a href="3876bca0f25c15262de227005fed3de1.html" title="Mirroring Moodle">Mirroring Moodle</a>
+</p><p><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=173408&amp;parent=760514">How to Replicate MOODLE&nbsp;??!!</a>
+</p>
+<h2><span id="My_site_is_very_slow.2C_what_should_I_do.3F"></span><span class="mw-headline" id="My_site_is_very_slow,_what_should_I_do?">My site is very slow, what should I do?</span></h2>
+<p>First find out "how slow". (The theme-trick here).
+</p><p>The next question is, whether the performance is normal or something malfunctions. There are many things which can malfunction:
+</p>
+<ul><li>hardware</li>
+<li>crashed filesystems, specially network filesystems</li>
+<li>memory leaks or other crashes in the system</li>
+<li>bug in Moodle</li>
+<li>corrupted database</li>
+<li>networking issues (DNS, firewalls, ...)</li></ul>
+<p>Or your performance could be "normal" under the given circumstances:
+</p>
+<ul><li>Are you on a dedicated server or a shared (virtual) server?</li>
+<li>How much RAM, processing power do you have?</li>
+<li>What is the software stack you use? (Unix or Windows, Apache or IIS, MySQL, PostgreSQL or SQL-Server, ...?)</li>
+<li>how many concurrent users can you support</li>
+<li>what modules/activities you use? Check <a href="d2fef13d731df9445395a9c2e0a9fd89.html#Performance_of_different_Moodle_modules" title="Performance recommendations">Performance recommendations#Performance of different Moodle modules</a></li></ul>
+<p><a href="d2fef13d731df9445395a9c2e0a9fd89.html#Obtain_a_baseline_benchmark" title="Performance recommendations">Performance recommendations#Obtain a baseline benchmark</a> and compare it with the published figures.
+</p>
+<h2><span id="What_are_the_requirements_for_N_users.3F"></span><span class="mw-headline" id="What_are_the_requirements_for_N_users?">What are the requirements for N users?</span></h2>
+<p><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=111847">A moodle setup for 10K simultaneous users</a>
+</p>
+<h2><span id="How_many_users_will_my_installation_support.3F"></span><span class="mw-headline" id="How_many_users_will_my_installation_support?">How many users will my installation support?</span></h2>
+<p>This is another way of asking the same question as above. Please move up.
+</p>
+<h2><span id="What_is_the_best_webserver.3F"></span><span class="mw-headline" id="What_is_the_best_webserver?">What is the best webserver?</span></h2>
+<p>It depends who you ask. <a href="6831e4affebb174320f861bc76b08775.html" title="Apache">Apache</a> is almost universal on Unix and Linux. but <a href="081d50b0942d418fa28114398527e388.html" title="Nginx">Nginx</a> is out performing latest Apache versions and <a rel="nofollow" class="external text" href="https://news.netcraft.com/archives/2017/01/12/january-2017-web-server-survey.html">gaining momentum</a> for the last couple of years. <a href="cba9ab1b99071f282ee1fffff19b4574.html" class="mw-redirect" title="IIS">IIS</a> is native to Windows Server but Apache can be used as well. As always, the latest version available is likely to provide the best performance. There are other "niche" web servers. If you are interested in one of those you are likely to know about it already.
+</p><p>Here are some latest <a rel="nofollow" class="external text" href="https://www.rootusers.com/web-server-performance-benchmark">web servers benchmarks</a>.
+</p>
+<h2><span id="Should_I_go_for_64_bit_or_is_32_bit_OK.3F"></span><span class="mw-headline" id="Should_I_go_for_64_bit_or_is_32_bit_OK?">Should I go for 64 bit or is 32 bit OK?</span></h2>
+<p>Most servers these days will be 64 bit anyway. On desktops - if you have a choice - 32 bit is probably better supported.
+</p>
+<h2><span id="What_hosting_provider_do_you_recommend.3F"></span><span class="mw-headline" id="What_hosting_provider_do_you_recommend?">What hosting provider do you recommend?</span></h2>
+<p><a rel="nofollow" class="external text" href="https://moodle.com/partners/">Moodle Partners</a> are approved by Moodle HQ, have extensive Moodle expertise and can provide comprehensive support. However, they are unlikely to be the cheapest solution (although it's worth asking) if your budget is tight. Cheap 'shared hosting' may not provide sufficient resources to run Moodle properly. There are many other options and it really depends on your needs. For one discussion see <a rel="nofollow" class="external free" href="http://moodle.org/mod/forum/discuss.php?d=99405">http://moodle.org/mod/forum/discuss.php?d=99405</a>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://tjhunt.blogspot.co.uk/2013/05/performance-testing-moodle.html">Performance-testing Moodle blog post</a> from Tim Hunt</li></ul>
+<p>Using Moodle forum discussions
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=227745">Moodle 2.4 performance</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=102978">1000 concurrent users</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=103040">Tool to estimate server's maximum concurrent users</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=144718">Handling Moodle database load - a solution!</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=191277">December 2011 Thread on Concurrent Users v2.03</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=192162">How do you monitor your Moodle server?</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/search.php?notwords=Re:&amp;id=5&amp;subject=performance">All performance related discussions</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/search.php?notwords=Re:&amp;id=5&amp;forumid=33&amp;&amp;subject=performance">Performance related discussions in the General Developer forum</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=236560">What (hardware/config) made the Teaching with Moodle MOOC course run so well&nbsp;?</a> forum thread</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822231903
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.018 seconds
+Real time usage: 0.025 seconds
+Preprocessor visited node count: 65/1000000
+Post&#8208;expand include size: 424/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.035      1 Template:Performance
+100.00%    3.035      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:7069-0!canonical and timestamp 20260822231903 and revision id 144199. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Performance_FAQ&amp;oldid=144199">https://docs.moodle.org/502/en/index.php?title=Performance_FAQ&amp;oldid=144199</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="b2af25392fa4f78dbbfc102122d1af22.html" title="Category:Performance">Performance</a></li><li><a href="d6b0775565520759d6ccd9ae1d47581b.html" title="Category:FAQ">FAQ</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhlefko5">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhleflb6"></button>
+					<div class="collapse navbar-collapse igdhleflb6" id="igdhleflb6">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Performance_FAQ" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Performance_FAQ" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Performance_FAQ&amp;oldid=144199" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Performance_FAQ&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/FAQ_de_Performances" title="FAQ de Performances – français" lang="fr" hreflang="fr" data-title="FAQ de Performances" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Desempeño_FAQ" title="Desempeño FAQ – español" lang="es" hreflang="es" data-title="Desempeño FAQ" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Geschwindigkeit_FAQ" title="Geschwindigkeit FAQ – Deutsch" lang="de" hreflang="de" data-title="Geschwindigkeit FAQ" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 15 September 2022, at 15:09.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":84,"wgPageParseReport":{"limitreport":{"cputime":"0.018","walltime":"0.025","ppvisitednodes":{"value":65,"limit":1000000},"postexpandincludesize":{"value":424,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    3.035      1 Template:Performance","100.00%    3.035      1 -total"]},"cachereport":{"timestamp":"20260822231903","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Performance recommendations - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"8bb3ee0f6815f16ddf78ace5","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Performance_recommendations","wgTitle":"Performance recommendations","wgCurRevisionId":147626,"wgRevisionId":147626,"wgArticleId":1802,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Performance"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Performance_recommendations","wgRelevantArticleId":1802,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="593ae70845242c812b361a340a53fb46.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.pygments%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Performance_recommendations">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Performance_recommendations rootpage-Performance_recommendations layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhlc1mcu"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhlc1mcu" id="igdhlc1mcu">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Performance+recommendations" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Performance_recommendations">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Performance_recommendations">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Performance_recommendations">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="d2fef13d731df9445395a9c2e0a9fd89.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Performance_recommendations&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Performance_recommendations&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Performance_recommendations&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Performance recommendations</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a>  ► <a href="7a58329819b7734d857d3e22b0a64aee.html" title="Performance">Performance</a>  ►  <a class="mw-selflink selflink">Performance recommendations</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="7a58329819b7734d857d3e22b0a64aee.html" title="Performance">Performance</a></div>	
+<div class="content">
+<ul><li><a class="mw-selflink selflink">Performance recommendations</a></li>
+<li><a href="05642fc14b4b5693d5b9f5f1b41457c2.html" title="Performance settings">Performance settings</a></li>
+<li><a href="3b9888b802def8a854abd442a794d782.html" title="Performance overview">Performance overview</a></li>
+<li><a href="47336288cd5208e83a741bd312d28b86.html" title="Caching">Caching</a></li>
+<li><a href="feb17c47f320c7a15f1a8c7227d5cb24.html" title="Performance FAQ">Performance FAQ</a></li>
+<li><a href="3fd917476a40e649c2b898555d692120.html" title="MUC FAQ">MUC FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p>Moodle can be made to perform very well, at small usage levels or scaling up to many thousands of users. The factors involved in performance are basically the same as for any PHP-based database-driven system. When trying to optimize your server, try to focus on the factor which will make the most difference to the user. For example, if you have relatively more users browsing than accessing the database, look to improve the webserver performance.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Obtain_a_baseline_benchmark"><span class="tocnumber">1</span> <span class="toctext">Obtain a baseline benchmark</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Scalability"><span class="tocnumber">2</span> <span class="toctext">Scalability</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Server_cluster"><span class="tocnumber">2.1</span> <span class="toctext">Server cluster</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Hardware_configuration"><span class="tocnumber">3</span> <span class="toctext">Hardware configuration</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Operating_System"><span class="tocnumber">4</span> <span class="toctext">Operating System</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Caching_Performance"><span class="tocnumber">5</span> <span class="toctext">Caching Performance</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Web_Server_Performance"><span class="tocnumber">6</span> <span class="toctext">Web Server Performance</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#PHP_Performance"><span class="tocnumber">6.1</span> <span class="toctext">PHP Performance</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#APC"><span class="tocnumber">6.1.1</span> <span class="toctext">APC</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#Apache_Performance"><span class="tocnumber">6.2</span> <span class="toctext">Apache Performance</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#IIS_Performance"><span class="tocnumber">6.3</span> <span class="toctext">IIS Performance</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#OpenLiteSpeed"><span class="tocnumber">6.4</span> <span class="toctext">OpenLiteSpeed</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Lighttpd,_NginX_and_Cherokee_Performance"><span class="tocnumber">6.5</span> <span class="toctext">Lighttpd, NginX and Cherokee Performance</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#X-Sendfile"><span class="tocnumber">6.6</span> <span class="toctext">X-Sendfile</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Cron_Performance"><span class="tocnumber">7</span> <span class="toctext">Cron Performance</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Database_Performance"><span class="tocnumber">8</span> <span class="toctext">Database Performance</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#MariaDB_Performance"><span class="tocnumber">8.1</span> <span class="toctext">MariaDB Performance</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#MySQL_Performance"><span class="tocnumber">8.2</span> <span class="toctext">MySQL Performance</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#PostgreSQL_Performance"><span class="tocnumber">8.3</span> <span class="toctext">PostgreSQL Performance</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Read_replicas"><span class="tocnumber">8.4</span> <span class="toctext">Read replicas</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Other_database_performance_links"><span class="tocnumber">8.5</span> <span class="toctext">Other database performance links</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#Performance_of_different_Moodle_modules"><span class="tocnumber">9</span> <span class="toctext">Performance of different Moodle modules</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#See_also"><span class="tocnumber">10</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Obtain_a_baseline_benchmark">Obtain a baseline benchmark</span></h2>
+<p>Before attempting any optimization, you should obtain a baseline benchmark of the component of the system you are trying to improve. For Linux try <a rel="nofollow" class="external text" href="http://lbs.sourceforge.net/">LBS</a> (Note: Last updated May 2002) and for Windows use the Performance Monitor. Once you have quantitative data about how your system is performing currently, you'll be able to determine if the change you have made has had any real impact.
+</p><p>The overall aim of adjustments to improve performance is to use RAM (cacheing) and to reduce disk-based activity. It is especially important to try to eliminate swap file usage as much as you can. If your system starts swapping, this is a sign that you need more RAM. 
+</p><p>The <b>optimization order preference</b> is usually: primary storage (more RAM), secondary storage (faster hard disks/improved hard disk configuration), processor (more and faster).
+</p><p>It can be interesting to install and use the <a rel="nofollow" class="external text" href="https://moodle.org/plugins/report_benchmark">Benchmark plugin</a> in order to find the bottlenecks of your system that specifically affect Moodle or do a load test / stress test with tool like JMeter. See <a rel="nofollow" class="external text" href="https://docs.moodle.org/dev/JMeter">moodledev JMeter documentation</a>
+</p>
+<h2><span class="mw-headline" id="Scalability">Scalability</span></h2>
+<p>Moodle's design (with clear separation of application layers) allows for strongly scalable setups. (Please check the list of <a href="12b3d9a42b47c6d1b21b46f535414785.html" title="Large installations">large Moodle installations</a>.)
+</p><p>Large sites usually separate the web server and database onto separate servers, although for smaller installations this is typically not necessary.
+</p><p>It is possible to load-balance a Moodle installation, for example by using more than one webserver. The separate webservers should query the same database and refer to the same filestore and cache areas (see <a href="47336288cd5208e83a741bd312d28b86.html" title="Caching">Caching</a>), but otherwise the separation of the application layers is complete enough to make this kind of clustering feasible. Similarly, the database could be a cluster of servers (e.g. a MySQL cluster), but this is not an easy task and you should seek expert support, e.g. from a Moodle Partner.
+</p><p>On very large, load-balanced, systems the performance of the shared components become critical. It's important that your shared file areas are properly tuned and that you use an effective cache (Redis is highly recommended). A good understanding of these areas of system administration should be considered a minimum requirement. 
+</p>
+<h3><span class="mw-headline" id="Server_cluster">Server cluster</span></h3>
+<p>Using Moodle forum discussions:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=57202">Moodle clustering</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=44470">Software load balancing</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=49986">TCP load balancing</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=88214">Installation for 3000 simultaneous users</a></li></ul>
+<h2><span class="mw-headline" id="Hardware_configuration">Hardware configuration</span></h2>
+<p><b>Note</b>: The fastest and most effective change that you can make to improve performance is to <b>increase the amount of RAM on your web server</b> - get as much as possible (e.g. 4GB or more). Increasing primary memory will reduce the need for processes to swap to disk and will enable your server to handle more users.
+</p>
+<ul><li>Better performance is gained by obtaining the best <b>processor capability</b> you can, i.e. dual or dual core processors. A modern BIOS should allow you to enable hyperthreading, but check if this makes a difference to the overall performance of the processors by using a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Super_PI">CPU benchmarking tool</a>.</li>
+<li>If you can afford them, use <b>SCSI hard disks</b> instead of SATA drives. SATA drives will increase your system's CPU utilization, whereas SCSI drives have their own integrated processors and come into their own when you have multiple drives. If you must have SATA drives, check that your motherboard and the drives themselves support NCQ (Native Command Queuing).</li>
+<li>Purchase hard disks with a <b>low seek time</b>. This will improve the overall speed of your system, especially when accessing Moodle's reports. Naturally these days Solid State Drives outperform rotating media immensely, especially Enterprise-Grade SSD's.</li>
+<li>Size your <b>swap file</b> correctly. The general advice is to set it to 4 x physical RAM.</li>
+<li>Use a <b>RAID disk system</b>. Although there are many different RAID configurations you can create, the following generally works best:
+<ul><li>install a hardware RAID controller (if you can)</li>
+<li>the operating system and swap drive on one set of disks configured as RAID-1.</li>
+<li>Moodle, Web server and Database server on another set of disks configured as RAID-5.</li></ul></li>
+<li>If your 'moodleData' area is going to be on relatively slow storage (e.g. NFS mount on to a NAS device) you will have performance issues with the default cache configuration (which writes to this storage). See the page on <a href="47336288cd5208e83a741bd312d28b86.html" title="Caching">Caching</a> and choose an alternative. <a href="83650e1458408d473e108837eda43ce6.html" title="Redis cache store">Redis</a> is recommended. Using <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/GlusterFS">GlusterFS</a> / <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/OCFS2">OCFS2</a> / <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/GFS2">GFS2</a> on a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Storage_Area_Network">SAN</a> device and <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Fibre_Channel">Fiber Channel</a> could improve performance (See more info on the Moodle <a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=214680#p1123124">forum thread</a>, <a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=310501#p1242382">NFS performance tuing</a> )</li>
+<li>Use <b>gigabit ethernet</b> for improved latency and throughput. This is especially important when you have your webserver and database server separated out on different hosts.</li>
+<li>Check the settings on your <b>network card</b>. You may get an improvement in performance by increasing the use of buffers and transmit/receive descriptors (balance this with processor and memory overheads) and off-loading TCP checksum calculation onto the card instead of the OS.</li>
+<li>Read this <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=68579">Case Study</a> on a server stress test with 300 users.</li>
+<li>See this <a rel="nofollow" class="external text" href="http://elearning.sgu.ac.jp/doc/PT/">accompanying report</a> on network traffic and server loads.</li>
+<li>Also see this SFSU presentation at Educause (using VMWare): <a rel="nofollow" class="external autonumber" href="http://www.educause.edu/Resources/AnOpenSourceLMSforaMissionCrit/162843">[1]</a></li></ul>
+<h2><span class="mw-headline" id="Operating_System">Operating System</span></h2>
+<ul><li>You can use <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Linux">Linux</a>(recommended), Unix-based, Windows or Mac OS X for the server <b>operating system</b>. *nix operating systems generally require less memory than Mac OS X or Windows servers for doing the same task as the server is configured with just a shell interface. Additionally Linux does not have licensing fees attached, but can have a big learning curve if you're used to another operating system. If you have a large number of processors running SMP, you may also want to consider using a highly tuned OS such as <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Solaris_Operating_Environment">Solaris</a>.</li>
+<li>Check your own OS and <b>vendor specific instructions</b> for optimization steps.
+<ul><li>For Linux look at the <a rel="nofollow" class="external text" href="http://linuxperf.sourceforge.net/">Linux Performance Team</a> site.</li>
+<li>For Linux investigate the hdparm command, e.g. hdparm -m16 -d1 can be used to enable read/write on multiple sectors and DMA. Mount disks with the <a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=310501#p1242382">"async" and "noatime"</a> options.</li>
+<li>For Windows set the sever to be optimized for network applications (Control Panel, Network Connections, LAN connection, Properties, File &amp; Printer Sharing for Microsoft Networks, Properties, Optimization). You can also search the <a rel="nofollow" class="external text" href="http://technet.microsoft.com/">Microsoft TechNet site</a> for optimization documents.</li></ul></li></ul>
+<h2><span class="mw-headline" id="Caching_Performance">Caching Performance</span></h2>
+<p>Caching in Moodle can default to disk for a lot of the different caches which is rather slow overall, and so pretty solid gains can be made by moving this to RAM, by use of a Memory Caching Application such as <a href="83650e1458408d473e108837eda43ce6.html" title="Redis cache store">Redis</a> or Memcached. In fact I'd go as far to say the single biggest improvement we made to our (relatively small) Moodle site was installing Redis, and this is amplified when you're using classic Hard Drives rather than SSD's, and especially when they slowly but surely begin to fail (the classic slow to write, but no SMART errors or write errors - just reeeeaaallly slow). 
+</p><p>These will also cache some database queries, meaning that they don't have to be re-run, again improving performance there. Personally, I would recommend Redis over Memcached due to better security features and being more up to date/developed. For more information/how to install Redis in particular, visit the <a href="83650e1458408d473e108837eda43ce6.html" title="Redis cache store">Redis cache store</a> page.
+</p>
+<h2><span class="mw-headline" id="Web_Server_Performance">Web Server Performance</span></h2>
+<p>Most web browsers these days feature Inspector elements which will allow you to watch the time it takes for each page component to load, typically found under the "Network" tab. Also, the <a rel="nofollow" class="external text" href="https://addons.mozilla.org/en-US/firefox/addon/5369">Yslow</a> extension will evaluate your page against Yahoo's <a rel="nofollow" class="external text" href="http://www.skrenta.com/2007/05/14_rules_for_fast_web_pages_by_1.html">14 rules</a>, full text <a rel="nofollow" class="external text" href="http://developer.yahoo.com/performance/rules.html">Best Practices for Speeding Up Your Web Site</a>, <s>(<a rel="nofollow" class="external text" href="http://video.yahoo.com/video/play?vid=1040890">video</a>)</s> for fast loading websites.
+</p>
+<h3><span class="mw-headline" id="PHP_Performance">PHP Performance</span></h3>
+<ul><li>PHP contains a built-in accelerator (for more recent versions of PHP, this is OpCache). Make sure it is enabled.</li>
+<li>Improvements in read/write performance can be improved by putting the cached PHP pages on a <a href="https://docs.moodle.org/502/en/index.php?title=TMPFS&amp;action=edit&amp;redlink=1" class="new" title="TMPFS (page does not exist)">TMPFS</a> filesystem - but remember that you'll lose the cache contents when there is a power failure or the server is rebooted.</li>
+<li>Performance of PHP is better when installed as an <b>Apache/IIS6 ISAPI module</b> (rather than a CGI). IIS 7.0/7.5 (Windows Server 2008/R2) users should choose a FastCGI installation for best performance.</li>
+<li>Also check the <b>memory_limit</b> in php.ini. The default value for the memory_limit directive is 128M. On some sites, it may need to be larger - especially for some backup operations.</li>
+<li>Also see <a href="773028de29c0184a5c285ec7c5e01d8e.html" class="mw-redirect" title="PHP settings by Moodle version">PHP settings by Moodle version</a></li>
+<li>Use <a rel="nofollow" class="external text" href="http://blog.bitnami.com/2014/06/performance-enhacements-for-apache-and.html">PHP-FPM</a> (with apache).</li></ul>
+<h4><span class="mw-headline" id="APC">APC</span></h4>
+<ul><li><a rel="nofollow" class="external text" href="http://2bits.com/articles/installing-php-apc-gnulinux-centos-5.html">APC on CentOS 5.x (linux)</a></li>
+<li><a rel="nofollow" class="external text" href="http://fplanque.com/dev/linux/install-apc-php-cache-debian-lenny">APC on Debian (linux)</a></li></ul>
+<h3><span class="mw-headline" id="Apache_Performance">Apache Performance</span></h3>
+<ul><li>If you are using Apache on a Windows server, use the build from <a rel="nofollow" class="external text" href="https://www.apachelounge.com/">Apache Lounge</a> which is reported to have <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=93358">performance and stability improvements</a> compared to the official Apache download. Note that this is an unofficial build, so may not keep up with official releases.</li>
+<li>Set the <b>MaxRequestWorkers</b> directive correctly (<b>MaxClients</b> before Apache 2.4). Use this formula to help (which uses 80% of available memory to leave room for spare):</li></ul>
+<pre>MaxRequestWorkers = Total available memory * 80% / Max memory usage of apache process
+</pre>
+<dl><dd>Memory usage of apache process is usually 10MB but Moodle can easily use up to 100MB per process, so a general rule of thumb is to divide your available memory in megabytes by 100 to get a conservative setting for MaxClients. You are quite likely to find yourself lowering the MaxRequestWorkers from its default of 150 on a Moodle server. To get a more accurate estimate read the value from the shell command:</dd></dl>
+<pre>#ps -ylC httpd --sort:rss
+</pre>
+<dl><dd>If you need to increase the value of <b>MaxRequestWorkers</b> beyond 256, you will also need to set the <b>ServerLimit</b> directive.</dd></dl>
+<dl><dd><b>Warning</b>: Do not be tempted to set the value of MaxRequestWorkers higher than your available memory as your server will consume more RAM than available and start to swap to disk.</dd></dl>
+<ul><li>Consider reducing the <b>number of modules</b> that Apache loads in the httpd.conf file to the minimum necessary to reduce the memory needed.</li>
+<li>Use the <b>latest version of Apache</b> - Apache 2 has an improved memory model which reduces memory usage further.</li>
+<li>For Unix/Linux systems, consider lowering <b>MaxConnectionsPerChild</b> (<b>MaxRequestsPerChild</b> before Apache 2.4) in httpd.conf to as low as 20-30 (if you set it any lower the overhead of forking begins to outweigh the benefits).</li>
+<li>For a heavily loaded server, consider setting <b>KeepAlive Off</b> (do this only if your Moodle pages do not contain links to resources or uploaded images) or lowering the <b>KeepAliveTimeout</b> to between 2 and 5. The default is 15 (seconds) - the higher the value the more server processes will be kept waiting for possibly idle connections. A more accurate value for KeepAliveTimeout is obtained by observing how long it takes your users to download a page. After altering any of the KeepAlive variables, monitor your CPU utilization as there may be an additional overhead in initiating more worker processes/threads.</li>
+<li>As an alternative to using KeepAlive Off, consider setting-up a <b>Reverse Proxy server</b> in front of the Moodle server to cache HTML files with images. You can then return Apache to using keep-alives on the Moodle server.</li>
+<li>If you do not use a .htaccess file, set the <b>AllowOverride</b> variable to AllowOverride None to prevent .htaccess lookups.</li>
+<li>Set <b>DirectoryIndex</b> correctly so as to avoid content-negotiation. Here's an example from a production server:</li></ul>
+<pre>DirectoryIndex index.php index.html index.htm
+</pre>
+<ul><li>Unless you are doing development work on the server, set <b>ExtendedStatus Off</b> and disable mod_info as well as mod_status.</li>
+<li>Leave <b>HostnameLookups Off</b> (as default) to reduce DNS latency.</li>
+<li>Consider reducing the value of <b>TimeOut</b> to between 30 and 60 (seconds).</li>
+<li>For the <b>Options directive</b>, avoid Options Multiviews as this performs a directory scan. To reduce disk I/O further use</li></ul>
+<pre>Options -Indexes FollowSymLinks
+</pre>
+<ul><li>Compression reduces response times by reducing the size of the HTTP response</li></ul>
+<ol><li>Install and enable mod_deflate - refer to documentation or man pages</li>
+<li>Add this code to the virtual server config file within the &lt;directory&gt; section for the root directory (or within the .htaccess file if AllowOverrides is On):</li></ol>
+<pre>&lt;ifModule mod_deflate.c&gt;
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/x-js text/javascript text/css application/javascript
+&lt;/ifmodule&gt;
+</pre>
+<ul><li>Use Apache <a rel="nofollow" class="external text" href="http://blog.bitnami.com/2014/06/performance-enhacements-for-apache-and.html">event</a> <a rel="nofollow" class="external text" href="http://httpd.apache.org/docs/current/mpm.html">MPM</a> (and not the default Prefork or Worker)</li></ul>
+<h3><span class="mw-headline" id="IIS_Performance">IIS Performance</span></h3>
+<p>All alter this location in the registry:
+</p>
+<pre>HKLM\SYSTEM\CurrentControlSet\Services\Inetinfo\Parameters\
+</pre>
+<ul><li>The equivalent to KeepAliveTimeout is <b>ListenBackLog</b> (IIS - registry location is HKLM\ SYSTEM\ CurrentControlSet\ Services\ Inetinfo\ Parameters). Set this to between 2 and 5.</li>
+<li>Change the <b>MemCacheSize</b> value to adjust the amount of memory (Mb) that IIS will use for its file cache (50% of available memory by default).</li>
+<li>Change the <b>MaxCachedFileSize</b> to adjust the maximum size of a file cached in the file cache in bytes. Default is 262,144 (256K).</li>
+<li>Create a new DWORD called <b>ObjectCacheTTL</b> to change the length of time (in milliseconds) that objects in the cache are held in memory. Default is 30,000 milliseconds (30 seconds).</li></ul>
+<h3><span class="mw-headline" id="OpenLiteSpeed">OpenLiteSpeed</span></h3>
+<p>OpenLiteSpeed has its own built in cache called <a rel="nofollow" class="external text" href="https://docs.litespeedtech.com/lscache/">LSCache</a>, which is controlled through the Web GUI, and also is compatible with PHP OpCache. More info on optimizing OpenLiteSpeed can be found on the <a href="3ac4249ba2cbf317d282d165134daded.html" title="OpenLiteSpeed">OpenLiteSpeed</a> page.
+</p>
+<h3><span id="Lighttpd.2C_NginX_and_Cherokee_Performance"></span><span class="mw-headline" id="Lighttpd,_NginX_and_Cherokee_Performance">Lighttpd, NginX and Cherokee Performance</span></h3>
+<p>You can increase server performance by using a <b>light-weight</b> webserver like <a rel="nofollow" class="external text" href="http://www.lighttpd.net/">lighttpd</a>, <a rel="nofollow" class="external text" href="http://nginx.net/">nginx</a> or <a rel="nofollow" class="external text" href="http://www.cherokee-project.com/">cherokee</a> in combination with PHP in FastCGI-mode. Lighttpd was originally created as a proof-of-concept <a rel="nofollow" class="external autonumber" href="http://www.lighttpd.net/story">[2]</a> to address the <a rel="nofollow" class="external text" href="http://www.kegel.com/c10k.html">C10k problem</a> and while primarily recommended for memory-limited servers, its design origins and asynchronous-IO model make it a suitable and proven <a rel="nofollow" class="external autonumber" href="http://blog.lighttpd.net/articles/2006/12/28/lighttpd-powers-5-alexa-top-250-sites">[3]</a> alternative HTTP server for high-load websites and web apps, including Moodle. See the <a href="773ede55bc3a898ff3682cb69c106695.html" title="lighttpd">MoodleDocs Lighttpd page</a> for additional information, configuration example and links.
+</p><p>Alternatively, both <a rel="nofollow" class="external text" href="http://www.lighttpd.net/">lighttpd</a> and <a rel="nofollow" class="external text" href="http://nginx.net/">nginx</a> are capable of performing as a load-balancer and/or reverse-proxy to alleviate load on back-end servers <a rel="nofollow" class="external autonumber" href="http://www.linuxjournal.com/article/10108">[4]</a>, providing benefit without requiring an actual software change on existing servers.
+</p><p>Do note that these are likely to be the least tested server environments of all particularly if you are using advanced features such as web services and/or Moodle Networking. They are probably best considered for heavily used Moodle sites with relatively simple configurations.
+</p>
+<h3><span class="mw-headline" id="X-Sendfile">X-Sendfile</span></h3>
+<p>X-Sendfile modules improve performance when sending large files from Moodle. It is recommended to configure your web server and Moodle to use this feature if available.
+</p><p>Configure web server:
+</p>
+<ul><li>Apache - <a rel="nofollow" class="external free" href="https://tn123.org/mod_xsendfile/">https://tn123.org/mod_xsendfile/</a></li>
+<li>Lighttpd - <a rel="nofollow" class="external free" href="http://redmine.lighttpd.net/projects/lighttpd/wiki/X-LIGHTTPD-send-file">http://redmine.lighttpd.net/projects/lighttpd/wiki/X-LIGHTTPD-send-file</a></li>
+<li>Nginx - <a rel="nofollow" class="external free" href="http://wiki.nginx.org/XSendfile">http://wiki.nginx.org/XSendfile</a></li>
+<li>OpenLiteSpeed - <a rel="nofollow" class="external free" href="https://www.litespeedtech.com/support/wiki/doku.php/litespeed_wiki:config:internal-redirect">https://www.litespeedtech.com/support/wiki/doku.php/litespeed_wiki:config:internal-redirect</a></li></ul>
+<p><br>
+Enable support in config.php (see config-dist.php):
+</p>
+<div class="mw-highlight mw-highlight-lang-php mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">//     $CFG-&gt;xsendfile = 'X-Sendfile';           // Apache {@see https://tn123.org/mod_xsendfile/}</span>
+<span class="c1">//     $CFG-&gt;xsendfile = 'X-LIGHTTPD-send-file'; // Lighttpd {@see http://redmine.lighttpd.net/projects/lighttpd/wiki/X-LIGHTTPD-send-file}</span>
+<span class="c1">//     $CFG-&gt;xsendfile = 'X-Accel-Redirect';     // Nginx {@see http://wiki.nginx.org/XSendfile}</span>
+</pre></div>
+<p>Configure file location prefixes if your server implementation requires it:
+</p>
+<div class="mw-highlight mw-highlight-lang-php mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">//     $CFG-&gt;xsendfilealiases = array(</span>
+<span class="c1">//         '/dataroot/' =&gt; $CFG-&gt;dataroot,</span>
+<span class="c1">//         '/cachedir/' =&gt; '/var/www/moodle/cache',    // for custom $CFG-&gt;cachedir locations</span>
+<span class="c1">//         '/localcachedir/' =&gt; '/var/local/cache',    // for custom $CFG-&gt;localcachedir locations</span>
+<span class="c1">//         '/tempdir/'  =&gt; '/var/www/moodle/temp',     // for custom $CFG-&gt;tempdir locations</span>
+<span class="c1">//         '/filedir'   =&gt; '/var/www/moodle/filedir',  // for custom $CFG-&gt;filedir locations</span>
+<span class="c1">//     );</span>
+</pre></div>
+<h2><span class="mw-headline" id="Cron_Performance">Cron Performance</span></h2>
+<p>Cron is a very important part of the overall performance of Moodle as many asynchronous processes are offloaded to Cron, so it needs to be running and have enough through put to handle the work being given to it by the front ends.
+</p><p>See <a href="30c8375de7da943d3dee8332dc69a5d6.html#High_performance_cron_tasks" title="Cron with Unix or Linux">Cron with Unix or Linux#High performance cron tasks</a>
+</p>
+<h2><span class="mw-headline" id="Database_Performance">Database Performance</span></h2>
+<h3><span class="mw-headline" id="MariaDB_Performance">MariaDB Performance</span></h3>
+<p>MariaDB Optimizations are similar to MySQL, but at the same time different due to the way MariaDB operates. Performance as a whole is typically better than MySQL using MariaDB, so if you're looking for Database Optimization, potentially switching from MySQL to MariaDB may help with performance, otherwise if you're already using MariaDB and looking to Optimize it, Performance Recommendations can be found on the <a href="b0cd9749b4df4e8c98a3d559d046d352.html" title="MariaDB">MariaDB</a> Page.
+</p>
+<h3><span class="mw-headline" id="MySQL_Performance">MySQL Performance</span></h3>
+<p>The <b>number one thing</b> you can do to improve MySQL performance is to read, understand and implement the recommendations in the <a rel="nofollow" class="external text" href="https://dev.mysql.com/doc/refman/5.7/en/innodb-buffer-pool.html">Innodb Buffer Pool</a> article.
+</p><p>The <a rel="nofollow" class="external text" href="https://dev.mysql.com/doc/refman/5.7/en/innodb-buffer-pool-resize.html">buffer pool size</a> can safely be changed while your server is running, as long as your server has enough memory (RAM) to accommodate the value you set. On a machine that is dedicated to MySQL, you can safely set this value to 80% of available memory.
+</p><p>Consider setting <a rel="nofollow" class="external text" href="https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_buffer_pool_instances">innodb_buffer_pool_instances</a> to the number of cores, vCPUs, or chips you have available. Adjust this value in accordance with the recommendations in the <a rel="nofollow" class="external text" href="https://dev.mysql.com/doc/refman/5.7/en/innodb-buffer-pool-resize.html">MySQL documentation</a>.
+</p><p>The following are MySQL specific settings which can be adjusted for better performance in your my.cnf (my.ini in Windows). The file contains a list of settings and their values. To see the current values use these commands
+</p>
+<pre>SHOW STATUS;
+SHOW VARIABLES; 
+</pre>
+<p><b>Important</b>: You must make backups of your database before attempting to change any MySQL server configuration. After any change to the my.cnf, restart mysqld.
+</p><p>If you are able, the <a rel="nofollow" class="external text" href="http://mysqltuner.pl/">MySQLTuner</a> tool can be run against your MySQL server and will calculate appropriate configuration values for most of the following settings based on your current load, status and variables automatically.
+</p>
+<ul><li>Enable the <b>query cache</b> with</li></ul>
+<pre>query_cache_type = 1. 
+</pre>
+<p>For most Moodle installs, set the following:
+</p>
+<pre>query_cache_size = 36M 
+query_cache_min_res_unit = 2K. 
+</pre>
+<p>The query cache will improve performance if you are doing few updates on the database. 
+</p>
+<ul><li>Set the <b>table cache</b> correctly. For Moodle 1.6 set</li></ul>
+<pre>table_cache = 256 #(table_open_cache in MySQL &gt; 5.1.2)
+</pre>
+<p>(min), and for Moodle 1.7 set 
+</p>
+<pre>table_cache = 512 #(table_open_cache in MySQL &gt; 5.1.2)
+</pre>
+<p>(min). The table cache is used by all threads (connections), so monitor the value of opened_tables to further adjust - if opened_tables &gt; 3 * table_cache(table_open_cache in MySQL &gt; 5.1.2) then increase table_cache up to your OS limit. Note also that the figure for table_cache will also change depending on the number of modules and plugins you have installed. Find the number for your server by executing the mysql statement below. Look at the number returned and set table_cache to this value.
+</p>
+<pre>mysql&gt;SELECT COUNT(table_name) FROM information_schema.tables WHERE table_schema='yourmoodledbname';
+</pre>
+<ul><li>Set the <b>thread cache</b> correctly. Adjust the value so that your thread cache utilization is as close to 100% as possible by this formula:</li></ul>
+<pre>thread cache utilization (%) = (threads_created / connections) * 100
+</pre>
+<ul><li>The <b>key buffer</b> can improve the access speed to Moodle's SELECT queries. The correct size depends on the size of the index files (.myi) and in Moodle 1.6 or later (without any additional modules and plugins), the recommendation for this value is key_buffer_size = 32M. Ideally you want the database to be reading once from the disk for every 100 requests so monitor that the value is suitable for your install by adjusting the value of key_buffer_size so that the following formulas are true:</li></ul>
+<pre>key_read / key_read_requests &lt; 0.01
+key_write / key_write_requests &lt;= 1.0
+</pre>
+<ul><li>Set the <b>maximum number of connections</b> so that your users will not see a "Too many connections" message. Be careful that this may have an impact on the total memory used. MySQL connections usually last for milliseconds, so it is unusual even for a heavily loaded server for this value to be over 200.</li>
+<li>Manage <b>high burst activity</b>. If your Moodle install uses a lot of quizzes and you are experiencing performance problems (check by monitoring the value of threads_connected - it should not be rising) consider increasing the value of back_log.</li>
+<li><b>Optimize your tables weekly and after upgrading Moodle</b>. It is good practice to also optimize your tables after performing a large data deletion exercise, e.g. at the end of your semester or academic year. This will ensure that index files are up to date. Backup your database first and then use:</li></ul>
+<pre>mysql&gt;CHECK TABLE mdl_tablename;
+mysql&gt;OPTIMIZE TABLE mdl_tablename;
+</pre>
+<dl><dd>The common tables in Moodle to check are mdl_course_sections, mdl_forum_posts, mdl_log and mdl_sessions (if using dbsessions). Any errors need to be corrected using REPAIR TABLE (see the <a rel="nofollow" class="external text" href="http://dev.mysql.com/doc/refman/5.0/en/repair-table.html">MySQL manual</a> and this <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=58208#p279638">forum script</a>).</dd></dl>
+<ul><li><b>Maintain the key distribution</b>. Every month or so it is a good idea to stop the mysql server and run these myisamchk commands.</li></ul>
+<pre>#myisamchk -a -S /pathtomysql/data/moodledir/*.MYI
+</pre>
+<dl><dd><b>Warning</b>: You must stop the mysql database process (mysqld) before running any myisamchk command. If you do not, you risk data loss.</dd></dl>
+<ul><li>Reduce the number of <b>temporary tables saved to disk</b>. Check this with the created_tmp_disk_tables value. If this is relatively large (&gt;5%) increase tmp_table_size until you see a reduction. Note that this will have an impact on RAM usage.</li></ul>
+<h3><span class="mw-headline" id="PostgreSQL_Performance">PostgreSQL Performance</span></h3>
+<p>There are some good papers around on tuning PostgreSQL (like <a rel="nofollow" class="external text" href="http://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server">this one</a>), and Moodle's case does not seem to be different to the general case.
+</p><p>The first thing to recognise is that if you really need to worry about tuning you should be using a separate machine for the database server. If you are not using a separate machine then the answers to many performance questions are substantially muddied by the memory requirements of the rest of the application.
+</p><p>You should probably <b>enable autovacuum</b>, unless you know what you are doing. Many e-learning sites have predictable periods of low use, so disabling autovacuum and running a specific vacuum at those times can be a good option. Or perhaps leave autovacuum running but do a full vacuum weekly in a quiet period.
+</p><p>Set <b>shared_buffers</b> to something reasonable. For versions up to 8.1 my testing has shown that peak performance is almost always obtained with buffers &lt; 10000, so if you are using such a version, and have more than 512M of RAM just set shared_buffers to 10,000 (8MB).
+</p><p>The buffer management had a big overhaul in 8.2 and "reasonable" is now a much larger number. I have not conducted performance tests with 8.2, but the recommendations from others are generally that you should now scale shared_buffers much more with memory and may continue to reap benefits even up to values like 100,000 (80MB). Consider using 1-2% of system RAM.
+</p><p>PostgreSQL will also assume that the operating system is caching its files, so setting <b>effective_cache_size</b> to a reasonable value is also a good idea. A reasonable value will usually be (total RAM - RAM in use by programs). If you are running Linux and leave the system running for a day or two you can look at 'free' and under the 'cached' column you will see what it currently is. Consider taking that number (which is kB) and dividing it by 10 (i.e. allow 20% for other programs cache needs and then divide by 8 to get pages). If you are not using a dedicated database server you will need to decrease that value to account for usage by other programs.
+</p><p>Some other useful parameters that can have positive effects, and the values I would typically set them to on a machine with 4G RAM, are:
+</p>
+<pre>work_mem = 10240
+</pre>
+<p>That's 10M of RAM to use instead of on-disk sorting and so forth. That can give a big speed increase, but it is per connection and 200 connections * 10M is 2G, so it can theoretically chew up a lot of RAM.
+</p>
+<pre>maintenance_work_mem = 163840
+</pre>
+<p>That's 160M of RAM which will be used by (e.g.) VACUUM, index rebuild, cluster and so forth. This should only be used periodically and should be freed when those processes exit, so I believe it is well worth while.
+</p>
+<pre>wal_buffers = 64
+</pre>
+<p>These buffers are used for the write-ahead log, and there have been a number of reports on the PostgreSQL mailing lists of improvement from this level of increase.
+</p><p>This is a little out of date now (version 8.0) but still worth a read: <a rel="nofollow" class="external free" href="http://www.powerpostgresql.com/Docs">http://www.powerpostgresql.com/Docs</a>
+</p><p>And there is lots of good stuff here as well: <a rel="nofollow" class="external free" href="http://www.varlena.com/GeneralBits/Tidbits/index.php">http://www.varlena.com/GeneralBits/Tidbits/index.php</a>
+</p><p><i>Based on Andrew McMillan's post at <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=68558">Tuning PostgreSQL</a> forum thread.</i>
+</p>
+<ul><li>Splitting <b>mdl_log</b> to several tables and using a VIEW with UNION to read them as one. (See Tim Hunt <a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=243531#p1104165">explanation</a> on the Moodle forums)</li></ul>
+<h3><span class="mw-headline" id="Read_replicas">Read replicas</span></h3>
+<p>Since Moodle 3.9 you can configure read replica's to be used where possible. For very large systems as much as 80-90% of the DB load can be moved away from the primary. For configuration see config-dist:
+</p><p><a rel="nofollow" class="external free" href="https://github.com/moodle/moodle/blob/master/config-dist.php#L84-L117">https://github.com/moodle/moodle/blob/master/config-dist.php#L84-L117</a>
+</p>
+<h3><span class="mw-headline" id="Other_database_performance_links">Other database performance links</span></h3>
+<ul><li>Consider using a <b>distributed caching system</b> like <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Memcached">memcached</a> but note that memcached does not have any security features so it should be used behind a firewall.</li>
+<li>Consider using PostgreSQL. See <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=49195">how to migrate from MySQL to PostgreSQL</a> (forum discussion).</li>
+<li><a rel="nofollow" class="external text" href="http://dev.mysql.com/doc/refman/5.0/en/server-parameters.html">General advice on tuning MySQL parameters</a> (advice from the MySQL manual)</li>
+<li><a rel="nofollow" class="external text" href="http://www.mysqlperformanceblog.com/2007/11/01/innodb-performance-optimization-basics/">InnoDB performance optimization</a> taken from the <a rel="nofollow" class="external text" href="http://www.mysqlperformanceblog.com/">MySQL performance blog</a> site.</li></ul>
+<h2><span class="mw-headline" id="Performance_of_different_Moodle_modules">Performance of different Moodle modules</span></h2>
+<p>Moodle's activity modules, filters, and other plugins can be activated/deactivated. If necessary, you may wish to deactivate some features (such as chat) if not required - but this isn't necessary. Some notes on the performance of certain modules:
+</p>
+<ul><li>The <b>Chat</b> module is <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=37979&amp;parent=175079">said</a> to be a hog in terms of frequent HTTP requests to the main server. This can be reduced by setting the module to use <i>Streamed</i> updates, or, if you're using a Unix-based webserver, by running the chat in daemon mode. When using the Chat module use the configuration settings to tune for your expected load. Pay particular attention to the <i>chat_old_ping</i> and <i>chat_refresh</i> parameters as these can have greatest impact on server load.</li>
+<li>The Moodle <b>Cron</b> task is triggered by calling the script <i>cron.php</i>. If this is called over HTTP (e.g. using wget or curl) it can take a large amount of memory on large installations. If it is called by directly invoking the php command (e.g. <i>php -f /path/to/moodle/directory/admin/cli/cron.php</i>) efficiency can be much improved.</li>
+<li>The <b>Recent activities</b> block is consuming too many resources if you have huge number of records <code>mdl_log</code>. This is being tested to optimize the SQL query.</li>
+<li>The <b>Quiz</b> module is known to stretch database performance. However, it has been getting better in recent versions, and we don't know of any good, up-to-date performance measurements. (Here is a <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=68579">case study from 2007 with 300 quiz users</a>.). The following suggestions were described by <a rel="nofollow" class="external text" href="https://moodle.org/user/view.php?id=94615&amp;course=5">Al Rachels</a> in <a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=347126">this forum thread</a>:
+<ul><li>make sure both Moodle, and the operating system, are installed on a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Solid-state_drive">solid state drive</a></li>
+<li>upgrade to and use <a rel="nofollow" class="external text" href="https://docs.moodle.org/dev/Moodle_and_PHP7">PHP 7</a></li>
+<li>run MySQLTuner and implement its recommendations</li></ul></li></ul>
+<p>See <a href="05642fc14b4b5693d5b9f5f1b41457c2.html" title="Performance settings">Performance settings</a> for more information on performance-related Moodle settings.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li>Using Moodle: <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/view.php?f=94">Hardware and Performance</a> forum</li>
+<li><a rel="nofollow" class="external text" href="http://opensourceelearning.blogspot.be/2012/10/why-your-moodle-site-is-slow-five.html">Why Your Moodle Site is Slow: Five Simple Settings</a> blog post from Jonathan Moore</li>
+<li>I teach with Moodle performance testing: <a rel="nofollow" class="external free" href="http://www.iteachwithmoodle.com/2012/11/17/moodle-2-4-beta-performance-test-comparison-with-moodle-2-3/">http://www.iteachwithmoodle.com/2012/11/17/moodle-2-4-beta-performance-test-comparison-with-moodle-2-3/</a></li>
+<li><a rel="nofollow" class="external text" href="http://jfilip.ca/2013/08/20/moodle-2-4-5-vs-2-5-1-performance-and-muc-apc-cache-store/">Moodle 2.4.5 vs 2.5.2 performance and MUC APC cahe store</a></li>
+<li><a rel="nofollow" class="external text" href="http://jfilip.ca/2013/09/25/moodle-performance-testing-2-4-6-vs-2-5-2-vs-2-6dev/">Moodle performance testing 2.4.6 vs 2.5.2 vs 2.6dev</a></li>
+<li><a rel="nofollow" class="external text" href="http://jfilip.ca/2013/09/24/moodle-performance-analysis-revisted-now-with-mariadb/">Moodle performance analysis revisited (now with MariaDB)</a></li>
+<li><a rel="nofollow" class="external text" href="http://tjhunt.blogspot.ca/2013/05/performance-testing-moodle.html">Tim Hunt's blog (May 2, 2013) on performance testing Moodle</a></li>
+<li><a rel="nofollow" class="external text" href="http://newrelic.com/">New Relic, Application Performance Monitoring</a></li>
+<li><a rel="nofollow" class="external text" href="http://blog.bitnami.com/2014/06/performance-enhacements-for-apache-and.html">Performance enhancements for Apache and PHP (Apache Event MPM and PHP-FPM)</a></li>
+<li><a rel="nofollow" class="external text" href="https://scholarlms.net/performance-recommendations/">Performance recommendations</a></li>
+<li><a rel="nofollow" class="external text" href="https://enovation.ie/moodle-performance-investigation-using-performance-info/">Moodle performance investigation &ndash; using performance info </a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/dev/images_dev/2/29/Caching_Moodle_at_Scale.pdf">Moodle Caching at Scale</a></li></ul>
+<p>There have been a lot of discussions on moodle.org about performance, here are some of the more interesting and (potentially) useful ones:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=83057">Performance woes!</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=57028">Performance perspectives - a little script</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=88927">Comments on planned server hardware</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=102978#p461624">Moodle performance in a pil by Martin Langhoff</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=240391#unread">Advice on optimising php/db code in moodle2+</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=243531">Moodle 2.5 performance testing at the OU</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=273602">100 active users limit with 4vCPU</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=336603#p1356423">Performance Tip ... shared...</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822131330
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.028 seconds
+Real time usage: 0.036 seconds
+Preprocessor visited node count: 100/1000000
+Post&#8208;expand include size: 448/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 2/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 1487/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.651      1 Template:Performance
+100.00%    4.651      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:1802-0!canonical and timestamp 20260822131330 and revision id 147626. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Performance_recommendations&amp;oldid=147626">https://docs.moodle.org/502/en/index.php?title=Performance_recommendations&amp;oldid=147626</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="b2af25392fa4f78dbbfc102122d1af22.html" title="Category:Performance">Performance</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhlc1qn8">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhlc1r3d"></button>
+					<div class="collapse navbar-collapse igdhlc1r3d" id="igdhlc1r3d">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Performance_recommendations" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Performance_recommendations" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Performance_recommendations&amp;oldid=147626" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Performance_recommendations&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Recomendaciones_sobre_desempeño" title="Recomendaciones sobre desempeño – español" lang="es" hreflang="es" data-title="Recomendaciones sobre desempeño" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Recommandations_de_performance" title="Recommandations de performance – français" lang="fr" hreflang="fr" data-title="Recommandations de performance" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/パフォーマンス" title="パフォーマンス – 日本語" lang="ja" hreflang="ja" data-title="パフォーマンス" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Geschwindigkeitsempfehlungen" title="Geschwindigkeitsempfehlungen – Deutsch" lang="de" hreflang="de" data-title="Geschwindigkeitsempfehlungen" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 11 January 2024, at 15:57.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":253,"wgPageParseReport":{"limitreport":{"cputime":"0.028","walltime":"0.036","ppvisitednodes":{"value":100,"limit":1000000},"postexpandincludesize":{"value":448,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":2,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1487,"limit":5000000},"timingprofile":["100.00%    4.651      1 Template:Performance","100.00%    4.651      1 -total"]},"cachereport":{"timestamp":"20260822131330","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

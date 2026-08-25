@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Windows installation using Git - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"0f0a1d7e07b1e4c365ad9da8","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Windows_installation_using_Git","wgTitle":"Windows installation using Git","wgCurRevisionId":108141,"wgRevisionId":108141,"wgArticleId":15913,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Windows_installation_using_Git","wgRelevantArticleId":15913,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Windows_installation_using_Git">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Windows_installation_using_Git rootpage-Windows_installation_using_Git layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhxvrijd"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhxvrijd" id="igdhxvrijd">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Windows+installation+using+Git" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Windows_installation_using_Git">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Windows_installation_using_Git">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Windows_installation_using_Git">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="89e0255d983c1ae6b50eb13ddeeb0a56.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Windows_installation_using_Git&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Windows_installation_using_Git&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Windows_installation_using_Git&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Windows installation using Git</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a> ► <a class="mw-selflink selflink">Windows installation using Git</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a></div>	
+<div class="content">
+<ul><li><a href="553207f76ae3b1e85403f96c2ca316f1.html" title="Installing Moodle">Installing Moodle</a></li>
+<li><a href="399ca91535c3410845bff1400293dbc5.html" title="Installation quick guide">Installation quick guide</a></li>
+<li><a href="37fc181470a569556f94c1f35940d0a7.html" title="Cron">Cron</a></li>
+<li><a href="081d50b0942d418fa28114398527e388.html" title="Nginx">Nginx</a></li>
+<li><a href="6831e4affebb174320f861bc76b08775.html" title="Apache">Apache</a></li>
+<li><a href="68065410acf60db421f4e2aac18bc951.html" title="Internet Information Services">IIS</a></li>
+<li><a href="838fe95223f139a5c86fa0eace52fb64.html" title="Configuring the Router">Routing</a></li>
+<li><a href="b8a47099f49d74586081af402e096238.html" title="Installing plugins">Installing plugins</a></li>
+<li><a href="52d1d262bc125752f9747df1abc77de6.html" title="Installation FAQ">Installation FAQ</a></li>
+<li><a href="b38923733584457a7e29bf0e898e9c97.html" title="Upgrading">Upgrading</a></li>
+<li><a href="451fc5f44047acbcf3c960e787eb56c6.html" title="Upgrade overview">Upgrade overview</a></li>
+<li><a href="784f6d5df0514efb399c81a6f803d2c7.html" title="Automatic updates deployment">Automatic updates deployment</a></li>
+<li><a href="14569a6d13e60324f1803b54b2ffb589.html" title="Git for Administrators">Git guide</a></li>
+<li><a href="8428d1ac0de33e2b0f542d6d962f1fa6.html" title="Administration via command line">Administration via command line</a></li>
+<li><a href="6aeead2c752a1a71fc9b37a62d913491.html" title="Upgrading FAQ">Upgrading FAQ</a></li>
+<li><a href="1a1489d94778d66d38f3a8e70fedc938.html" title="Moodle migration">Moodle migration</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p>This page is for non-technical Windows users who would like to be able to keep a copy of Moodle on their computers that they can easily and regularly update.
+</p><p><b>NOTE:</b> <i>These guidelines are intended for a Standard Moodle installation on a Windows PC for a private or test Moodle installation, NOT a production (public) site or service. If you wish to install Moodle on a public site using Git then please see <a href="14569a6d13e60324f1803b54b2ffb589.html" title="Git for Administrators">Git for Administrators</a></i>. <i>If you wish to contribute fixes or improvements using Git please see <a href="https://docs.moodle.org/dev/Git_for_developers" title="Development:Git for developers">Development: Git for developers</a></i>
+</p><p>If you prefer screencasts to reading, there is a  <a rel="nofollow" class="external text" href="https://youtu.be/CORFciSlHuo">youtube tutorial here</a>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#What_you_need_to_install_Moodle_on_your_Windows_pc"><span class="tocnumber">1</span> <span class="toctext">What you need to install Moodle on your Windows pc</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#What_is_Git_and_why_use_it?"><span class="tocnumber">2</span> <span class="toctext">What is Git and why use it?</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Getting_the_WAMP_server"><span class="tocnumber">3</span> <span class="toctext">Getting the WAMP server</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Making_the_database"><span class="tocnumber">4</span> <span class="toctext">Making the database</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Preparing_to_install_Moodle"><span class="tocnumber">5</span> <span class="toctext">Preparing to install Moodle</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Getting_hold_of_Git"><span class="tocnumber">6</span> <span class="toctext">Getting hold of Git</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Getting_hold_of_Moodle"><span class="tocnumber">7</span> <span class="toctext">Getting hold of Moodle</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Installing_Moodle"><span class="tocnumber">8</span> <span class="toctext">Installing Moodle</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#What_are_server_checks?"><span class="tocnumber">8.1</span> <span class="toctext">What are server checks?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Completing_the_installation"><span class="tocnumber">9</span> <span class="toctext">Completing the installation</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Updating_your_Moodle"><span class="tocnumber">10</span> <span class="toctext">Updating your Moodle</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Troubleshooting_and_FAQ"><span class="tocnumber">11</span> <span class="toctext">Troubleshooting and FAQ</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#I_can't_get_cURL_extension_to_green_(or_even_yellow)_whatever_I_try."><span class="tocnumber">11.1</span> <span class="toctext">I can't get cURL extension to  green (or even yellow) whatever I try.</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#I_type_localhost/moodle_but_it_doesn't_work!"><span class="tocnumber">11.2</span> <span class="toctext">I type localhost/moodle but it doesn't work!</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#I_want_a_different_version_of_Moodle"><span class="tocnumber">11.3</span> <span class="toctext">I want a different version of Moodle</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#I_want_Moodle_in_localhost_and_NOT_localhost/moodle"><span class="tocnumber">11.4</span> <span class="toctext">I want Moodle in localhost and NOT localhost/moodle</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#See_also"><span class="tocnumber">12</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="What_you_need_to_install_Moodle_on_your_Windows_pc">What you need to install Moodle on your Windows pc</span></h2>
+<ol><li>somewhere on your pc to house it and keep it working,with a database to maintain its records. We will use <a rel="nofollow" class="external text" href="http://www.wampserver.com/en/">WAMP server</a></li>
+<li>the Moodle files themselves. We will use <a rel="nofollow" class="external text" href="https://windows.github.com/">Github for Windows</a></li></ol>
+<h2><span id="What_is_Git_and_why_use_it.3F"></span><span class="mw-headline" id="What_is_Git_and_why_use_it?">What is Git and why use it?</span></h2>
+<p><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Git_(software)">Git</a> allows Moodlers not only to quickly download the latest versions of Moodle but also to </p><figure class="mw-halign-left" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:git-pushpull-modelEDITED.png" class="mw-file-description"><img src="images_en/thumb/3/34/git-pushpull-modelEDITED.png/e9065dcce4307cb51ac6881f57e9678e.png" decoding="async" width="200" height="98" class="mw-file-element" srcset="/502/en/images_en/thumb/3/34/git-pushpull-modelEDITED.png/300px-git-pushpull-modelEDITED.png 1.5x, /502/en/images_en/thumb/3/34/git-pushpull-modelEDITED.png/400px-git-pushpull-modelEDITED.png 2x" data-file-width="594" data-file-height="292"></a><figcaption>Git cycle</figcaption></figure><p> download and test out fixes by developers and to share with others their own changes which may potentially get integrated into Moodle for the benefit of everyone. In this page we are merely going to use the system to download Moodle onto our computer- (see the cycle in yellow in the screenshot)Git makes it easy for us to update Moodle when new versions come out each week, and it gives you the potential when more familiar with it to grab other changes and help test it. However, if   you merely want to have Moodle on your Windows pc to practise and try things out and are NOT really interested in having all the latest changes then it might be easier for you to use the <a rel="nofollow" class="external text" href="http://download.moodle.org/windows/">All in one Windows Installer package</a> instead.
+</p><h2><span class="mw-headline" id="Getting_the_WAMP_server">Getting the WAMP server</span></h2>
+<figure class="mw-halign-left" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:wamplocation.png" class="mw-file-description"><img src="images_en/thumb/9/9c/wamplocation.png/b63ef839092368ad8ed27897a04a525b.png" decoding="async" width="200" height="95" class="mw-file-element" srcset="/502/en/images_en/thumb/9/9c/wamplocation.png/300px-wamplocation.png 1.5x, /502/en/images_en/thumb/9/9c/wamplocation.png/400px-wamplocation.png 2x" data-file-width="605" data-file-height="286"></a><figcaption>path to your wamp folder</figcaption></figure><p>1. Go to <a rel="nofollow" class="external text" href="http://www.wampserver.com/en/">Wampserver</a> and click the Download button
+</p><p>2. You will probably need to click the button <b>Wampserver (64 bits &amp;PHP 5.3) 2.2E</b> but to be sure, here is how to  <a rel="nofollow" class="external text" href="http://tips4pc.com/computer_tips_and_tricks/do_i_have_a_32bit_or_64bit_operating_system.htm">check if your pc is 64 bit or 32 bit</a>)
+</p><p>3. You may get a warning <b>You must install Visual C++ 2010 SP1 Redistributable Package x86 or x64</b> - download the appropriate package for you. This may take some time.
+</p><p>4. When it is done, come back to <a rel="nofollow" class="external text" href="http://www.wampserver.com/en/">Wampserver</a> and click the Download button again.
+Download, save and run the program, making sure you keep a note of where it has installed it on your computer. It will be in a folder called <i>wamp.</i> as in the screenshot to the left.
+</p>
+<h2><span class="mw-headline" id="Making_the_database">Making the database</span></h2>
+<p>Once  wampserver is installed you will see a <b>W</b> icon, either on your desktop, start menu or taskbar (according to what you selected when installing.) Click it to bring up its options and then click PhpMyadmin as in Screenshot A below.
+</p><p><i>Tip: You can also reach this screen by typing into your browser: <a rel="nofollow" class="external free" href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a></i> 
+</p><p>1.Make sure that Server connection collation says "utf8_general_ci" (1 in Screenshot B below)
+</p><p>2.Click "databases" - (2 in Screenshot B below)
+</p>
+<table>
+<tbody><tr>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:phpmyadminscreenshot.png" class="mw-file-description"><img src="images_en/8/80/59c7c8b35b621c8d104d5f57b2c6476c.png" decoding="async" width="284" height="350" class="mw-file-element" data-file-width="284" data-file-height="350"></a><figcaption>Screenshot A</figcaption></figure>
+</td>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:phpmyadmin12.png" class="mw-file-description"><img src="images_en/thumb/7/76/phpmyadmin12.png/1a5e64717b2a232fbab3fe0e355a194c.png" decoding="async" width="300" height="172" class="mw-file-element" srcset="/502/en/images_en/thumb/7/76/phpmyadmin12.png/450px-phpmyadmin12.png 1.5x, /502/en/images_en/thumb/7/76/phpmyadmin12.png/600px-phpmyadmin12.png 2x" data-file-width="794" data-file-height="455"></a><figcaption>Screenshot B</figcaption></figure>
+</td></tr></tbody></table>
+<p>3. Type a name for your database (how about "moodle"?) Make sure you remember its name. Ensure Collation is set to utf8_general-ci. Click "Create".
+<span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:create_database.png" class="mw-file-description"><img src="images_en/1/1d/3d7c506e5d651776bc1a4489f72edc34.png" decoding="async" width="512" height="90" class="mw-file-element" data-file-width="512" data-file-height="90"></a></span>
+</p><p>4.Click the  "check privileges" to the right of your database name and then click "add user".
+</p><p>5. Add your details as the database administrator. Choose "local" for the host Make sure you remember the name and password you set. Tick (check) all privileges and click "add user".
+</p>
+<h2><span class="mw-headline" id="Preparing_to_install_Moodle">Preparing to install Moodle</span></h2>
+<figure class="mw-halign-left" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:moodledatascreenshot.png" class="mw-file-description"><img src="images_en/thumb/e/e8/moodledatascreenshot.png/b48bb23f161eea87fa73f0a02f7feae6.png" decoding="async" width="200" height="103" class="mw-file-element" srcset="/502/en/images_en/thumb/e/e8/moodledatascreenshot.png/300px-moodledatascreenshot.png 1.5x, /502/en/images_en/thumb/e/e8/moodledatascreenshot.png/400px-moodledatascreenshot.png 2x" data-file-width="633" data-file-height="327"></a><figcaption>Where Moodle and Moodledata go</figcaption></figure>
+<p>Along with the folder containing all the Moodle files, we need another folder to hold all the user data once Moodle is up and running. This is traditionally called the "moodledata" folder. We need to create a new folder for this before downloading Moodle.
+</p><p><br>
+</p>
+<ol><li>Find your wampserver on your computer - for instance, in C:\wamp.</li>
+<li>Note there is a folder called "www". We will install Moodle into there.</li>
+<li>If you wish, create a new folder called "moodledata" in the wampserver folder, as in the screenshot - but if not, Moodle will create it for you and suggest its name.</li></ol>
+<h2><span class="mw-headline" id="Getting_hold_of_Git">Getting hold of Git</span></h2>
+<ol><li>Go to <a rel="nofollow" class="external text" href="https://windows.github.com/">Github for Windows</a> and click the download button (currently in green, top right)</li>
+<li>You don't need to make an account but if you do, it will help you later if you wish to use Git at a more advanced level.</li>
+<li>Let Windows do its work; save it and run it. It might take some time.</li>
+<li>Once  it is installed, you will have two cat-like creature icons on your desktop, taskbar or start menu (depending on what you selected)</li>
+<li>Click the one called "Git shell". It will bring up a black box:</li></ol>
+<p><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:gitshell.png" class="mw-file-description" title="Git shell"><img alt="Git shell" src="images_en/thumb/9/92/gitshell.png/d636b5af59eb06c093fe530df2990bf8.png" decoding="async" width="400" height="201" class="mw-file-element" srcset="/502/en/images_en/thumb/9/92/gitshell.png/600px-gitshell.png 1.5x, /502/en/images_en/9/92/gitshell.png 2x" data-file-width="608" data-file-height="306"></a></span>
+</p><p><br>
+</p>
+<h2><span class="mw-headline" id="Getting_hold_of_Moodle">Getting hold of Moodle</span></h2>
+<p>The file path shown in your black box ("Windows power shell") is where Git has made your personal repository. You can download Moodle into there if you wish, but you will then have to copy the Moodle folder into your wampserver directory. Instead, we will download Moodle straight into the www folder of our wampserver directory.
+</p><p>1. Type <code>cd C:\wamp\www</code> (or whatever the path is to your wampserver directory and where you want to put Moodle)
+</p><p>2. Type <code>git clone -b MOODLE_26_STABLE <a rel="nofollow" class="external free" href="git://git.moodle.org/moodle.git">git://git.moodle.org/moodle.git</a></code> (If you want a different version, see the <a href="#Troubleshooting_and_FAQ">#Troubleshooting and FAQ</a> below.)
+</p><p>3. Wait! Lots of lines will appear and it might take a while. At the end you should see "Checking out files:100% done"
+</p>
+<table>
+<tbody><tr>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:cdstep1.png" class="mw-file-description"><img src="images_en/thumb/2/2e/cdstep1.png/7edd0dd9b6a55a905328e0de4c4118ac.png" decoding="async" width="300" height="63" class="mw-file-element" srcset="/502/en/images_en/thumb/2/2e/cdstep1.png/450px-cdstep1.png 1.5x, /502/en/images_en/2/2e/cdstep1.png 2x" data-file-width="589" data-file-height="124"></a><figcaption>Step 1</figcaption></figure>
+</td>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:step2.png" class="mw-file-description"><img src="images_en/thumb/5/5f/step2.png/9a29a33a7960ebfc2e4d31594cf274d8.png" decoding="async" width="300" height="61" class="mw-file-element" srcset="/502/en/images_en/thumb/5/5f/step2.png/450px-step2.png 1.5x, /502/en/images_en/thumb/5/5f/step2.png/600px-step2.png 2x" data-file-width="633" data-file-height="128"></a><figcaption>Step2</figcaption></figure>
+</td>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:step3.png" class="mw-file-description"><img src="images_en/thumb/7/72/step3.png/f0129a1e1f5ed548ac0a0109a24e7ef0.png" decoding="async" width="300" height="119" class="mw-file-element" srcset="/502/en/images_en/thumb/7/72/step3.png/450px-step3.png 1.5x, /502/en/images_en/thumb/7/72/step3.png/600px-step3.png 2x" data-file-width="666" data-file-height="264"></a><figcaption>Step3</figcaption></figure>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Installing_Moodle">Installing Moodle</span></h2>
+<ol><li>In your browser, type <i>localhost/moodle</i></li>
+<li>The Moodle set up screen will appear.</li>
+<li>Much of this is straightforward form-filling. Pay attention to:
+<ol><li>the paths -does it know where to find your wampserver folder for Moodle and moodledata?</li>
+<li>the database details (which you should have remembered when setting up in section 4 above)</li>
+<li>the server check.</li></ol></li></ol>
+<table>
+<tbody><tr>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:path.png" class="mw-file-description"><img src="images_en/thumb/7/78/path.png/e325087e0b614ad05d7730a77c4f316f.png" decoding="async" width="300" height="68" class="mw-file-element" srcset="/502/en/images_en/thumb/7/78/path.png/450px-path.png 1.5x, /502/en/images_en/thumb/7/78/path.png/600px-path.png 2x" data-file-width="608" data-file-height="137"></a><figcaption>Check correct paths</figcaption></figure>
+</td>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:databaseremember.png" class="mw-file-description"><img src="images_en/thumb/3/3f/databaseremember.png/104df9173012df193b2daba9683b83c5.png" decoding="async" width="300" height="101" class="mw-file-element" srcset="/502/en/images_en/thumb/3/3f/databaseremember.png/450px-databaseremember.png 1.5x, /502/en/images_en/3/3f/databaseremember.png 2x" data-file-width="533" data-file-height="180"></a><figcaption>Database details</figcaption></figure>
+</td>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:serverchecks.png" class="mw-file-description"><img src="images_en/thumb/b/bb/serverchecks.png/648b5246c09ebd0a3e99512e582e976e.png" decoding="async" width="300" height="102" class="mw-file-element" srcset="/502/en/images_en/thumb/b/bb/serverchecks.png/450px-serverchecks.png 1.5x, /502/en/images_en/thumb/b/bb/serverchecks.png/600px-serverchecks.png 2x" data-file-width="655" data-file-height="222"></a><figcaption>Server check</figcaption></figure>
+</td></tr></tbody></table>
+<h3><span id="What_are_server_checks.3F"></span><span class="mw-headline" id="What_are_server_checks?">What are server checks?</span></h3>
+<p>Moodle needs to ensure our wampserver has all the features ("extensions") enabled to run it successfully.
+</p><p>Anything in green is fine. Anything in yellow is OK (but would be better in green). Anything in red will stop us installing Moodle.
+</p>
+<ol><li>Make a note of the ones in yellow or red (names are under the Information column)</li>
+<li>Click your <b>W</b> wampserver icon and click "php extensions" (screenshot 1 below)</li>
+<li>Tick those extensions you noted were yellow or red (screenshot 2 below)</li></ol>
+<table>
+<tbody><tr>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:phpextensions1.png" class="mw-file-description"><img src="images_en/8/8d/34f46902eddd20395576f2fc20a3e1d2.png" decoding="async" width="298" height="295" class="mw-file-element" data-file-width="298" data-file-height="295"></a><figcaption>Php extensions 1</figcaption></figure>
+</td>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:phpextensions2.png" class="mw-file-description"><img src="images_en/f/fd/ea188ed473bd2f5fe46baf19ef678f31.png" decoding="async" width="274" height="425" class="mw-file-element" data-file-width="274" data-file-height="425"></a><figcaption>Php extensions 2</figcaption></figure>
+</td></tr></tbody></table>
+<p><i><b>Note:</b> If you have problems enabling the curl extension, see the <a href="#Troubleshooting_and_FAQ">#Troubleshooting and FAQ</a> below.</i>
+</p>
+<h2><span class="mw-headline" id="Completing_the_installation">Completing the installation</span></h2>
+<ol><li>Once your server checks page shows all green or all green with some yellow, you can click "Continue"</li>
+<li>Moodle will install - this will take some time. Be patient. When you see "workshop" you know you are nearly done.</li>
+<li>Complete details for your admin username and password (and remember them!)</li>
+<li>Complete details for your front page (name of your Moodle, etc)</li>
+<li>Give yourself a pat on the back!</li></ol>
+<h2><span class="mw-headline" id="Updating_your_Moodle">Updating your Moodle</span></h2>
+<p>You can get a newer version of Moodle every Thursday. To do this using Git:
+</p>
+<ol><li>Click the Git shell avatar to open up the Windows powershell black box.</li>
+<li>If it shows a different directory from where you installed Moodle, change the path by typing in <code>C:\wamp\www\moodle</code> or wherever the path to your Moodle folder is.</li>
+<li>You will see it now displays the name of the Moodle version you installed (Screenshot 1 below)</li>
+<li>Type <code>git pull</code></li>
+<li>Lines will appear and your Moodle will update itself automatically!(Screenshot 2 below)</li>
+<li>Note that <code>git pull</code> will also tell you if your version is currently up to date (Screenshot 3 below)</li></ol>
+<table>
+<tbody><tr>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:updating1.png" class="mw-file-description"><img src="images_en/thumb/e/e2/updating1.png/45919aaec9c519fff3d6459a68212013.png" decoding="async" width="300" height="58" class="mw-file-element" srcset="/502/en/images_en/thumb/e/e2/updating1.png/450px-updating1.png 1.5x, /502/en/images_en/e/e2/updating1.png 2x" data-file-width="588" data-file-height="113"></a><figcaption>1: Moodle folder ready for update </figcaption></figure>
+</td>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:gitpullscreenshot.png" class="mw-file-description"><img src="images_en/thumb/7/71/gitpullscreenshot.png/654efd4cbc9bbfd8eaa575d32c5f2505.png" decoding="async" width="300" height="154" class="mw-file-element" srcset="/502/en/images_en/thumb/7/71/gitpullscreenshot.png/450px-gitpullscreenshot.png 1.5x, /502/en/images_en/thumb/7/71/gitpullscreenshot.png/600px-gitpullscreenshot.png 2x" data-file-width="657" data-file-height="338"></a><figcaption>2: Moodle has  been updated</figcaption></figure>
+</td>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:updating2.png" class="mw-file-description"><img src="images_en/thumb/1/17/updating2.png/bc5cb48712c47723f25eb19aedebc806.png" decoding="async" width="300" height="69" class="mw-file-element" srcset="/502/en/images_en/thumb/1/17/updating2.png/450px-updating2.png 1.5x, /502/en/images_en/1/17/updating2.png 2x" data-file-width="588" data-file-height="136"></a><figcaption>3: Currently up to date</figcaption></figure>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Troubleshooting_and_FAQ">Troubleshooting and FAQ</span></h2>
+<h3><span id="I_can.27t_get_cURL_extension_to_green_.28or_even_yellow.29_whatever_I_try."></span><span class="mw-headline" id="I_can't_get_cURL_extension_to_green_(or_even_yellow)_whatever_I_try.">I can't get cURL extension to  green (or even yellow) whatever I try.</span></h3>
+<p>It could be your downloaded wampserver had a corrupted cURL extension (mine did). Go to <a rel="nofollow" class="external text" href="http://www.mediafire.com/?qwgdzgccthzwc15">mediafire.com</a> and download the cURL extenstion there. Unzip it and then add it into (for example) <i>wamp&gt;bin&gt;php&gt;php 5.3.13&gt;ext.</i> (The exact path will depend on where you saved your wampserver.) Let it override the original and try again.
+</p>
+<h3><span id="I_type_localhost.2Fmoodle_but_it_doesn.27t_work.21"></span><span class="mw-headline" id="I_type_localhost/moodle_but_it_doesn't_work!">I type localhost/moodle but it doesn't work!</span></h3>
+<p>Make sure your wampserver is working ("online") The <b>W</b> icon should be green. If it isn't, then click it and click "restart all services" or "start all services" and try again.
+</p>
+<h3><span class="mw-headline" id="I_want_a_different_version_of_Moodle">I want a different version of Moodle</span></h3>
+<p>If you want an earlier version such as Moodle 2.2 then type <code>git clone -b MOODLE_22_STABLE <a rel="nofollow" class="external free" href="git://git.moodle.org/moodle.git">git://git.moodle.org/moodle.git</a></code>
+</p><p>If you  want the latest, non-stable, development version of Moodle (currently 2.4) then type <code> git clone <a rel="nofollow" class="external free" href="git://git.moodle.org/moodle.git">git://git.moodle.org/moodle.git</a></code>
+</p>
+<h3><span id="I_want_Moodle_in_localhost_and_NOT_localhost.2Fmoodle"></span><span class="mw-headline" id="I_want_Moodle_in_localhost_and_NOT_localhost/moodle">I want Moodle in localhost and NOT localhost/moodle</span></h3>
+<p>In the <a href="#Getting_hold_of_Moodle">#Getting hold of Moodle</a> section,  make sure your path does not include "www". It might be for instance "C:\wamp". Moodle will then download directly into your wampserver directory. Rename your "www" folder to "wwwOLD" and then rename your newly arrived moodle folder to "www".
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<p><a rel="nofollow" class="external text" href="https://youtu.be/CORFciSlHuo">Video tutorial on youtube</a>
+</p><p>Using Moodle forum thread <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=208904">Git for Dummies</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260823011506
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.092 seconds
+Real time usage: 1.134 seconds
+Preprocessor visited node count: 82/1000000
+Post&#8208;expand include size: 684/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    7.313      1 Template:Installing_Moodle
+100.00%    7.313      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:15913-0!canonical and timestamp 20260823011506 and revision id 108141. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Windows_installation_using_Git&amp;oldid=108141">https://docs.moodle.org/502/en/index.php?title=Windows_installation_using_Git&amp;oldid=108141</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="7f264aa70db3768dcef1896a8ec93e70.html" title="Category:Installation">Installation</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhxvrtqw">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhxvruar"></button>
+					<div class="collapse navbar-collapse igdhxvruar" id="igdhxvruar">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Windows_installation_using_Git" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Windows_installation_using_Git" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Windows_installation_using_Git&amp;oldid=108141" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Windows_installation_using_Git&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 2 December 2013, at 13:51.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1842,"wgPageParseReport":{"limitreport":{"cputime":"0.092","walltime":"1.134","ppvisitednodes":{"value":82,"limit":1000000},"postexpandincludesize":{"value":684,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    7.313      1 Template:Installing_Moodle","100.00%    7.313      1 -total"]},"cachereport":{"timestamp":"20260823011506","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

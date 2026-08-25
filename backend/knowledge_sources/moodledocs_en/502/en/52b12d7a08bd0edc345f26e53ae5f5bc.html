@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Group self-selection module - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"e36330d69f375d2d6a587dd5","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Group_self-selection_module","wgTitle":"Group self-selection module","wgCurRevisionId":142725,"wgRevisionId":142725,"wgArticleId":14507,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Plugin","Contributed code"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Group_self-selection_module","wgRelevantArticleId":14507,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Group_self-selection_module">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Group_self-selection_module rootpage-Group_self-selection_module layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdj1j1fq3"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdj1j1fq3" id="igdj1j1fq3">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Group+self-selection+module" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Group_self-selection_module">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Group_self-selection_module">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Group_self-selection_module">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="52b12d7a08bd0edc345f26e53ae5f5bc.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Group_self-selection_module&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Group_self-selection_module&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Group_self-selection_module&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Group self-selection module</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock">
+<table class="infobox">
+
+<tbody><tr>
+<th><b><a class="mw-selflink selflink">Group self-selection module</a></b>
+</th></tr>
+<tr>
+<td>Type
+</td>
+<td>Activity
+</td></tr>
+<tr>
+<td>Set
+</td>
+<td>N/A
+</td></tr>
+<tr>
+<td>Downloads
+</td>
+<td><a rel="nofollow" class="external free" href="https://moodle.org/plugins/mod_groupselect">https://moodle.org/plugins/mod_groupselect</a>
+</td></tr>
+<tr>
+<td>Issues
+</td>
+<td><a rel="nofollow" class="external free" href="https://github.com/BLC-HTWChur/moodle-mod_groupselect/issues">https://github.com/BLC-HTWChur/moodle-mod_groupselect/issues</a>
+</td></tr>
+<tr>
+<td>Discussion
+</td>
+<td><a rel="nofollow" class="external free" href="https://moodle.org/plugins/mod_groupselect">https://moodle.org/plugins/mod_groupselect</a>
+</td></tr>
+<tr>
+<td>Maintainer(s)
+</td>
+<td><a href="https://docs.moodle.org/502/en/index.php?title=User:Roger_Barras&amp;action=edit&amp;redlink=1" class="new"><bdi>Roger Barras</bdi></a>
+</td></tr>
+</tbody></table>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+<p>The Group selection activity module allows students to select a group in the course that they want to be members of. Groupless students can create new groups (optional feature). Supervisors may be randomly assigned to groups. Group data is exportable as a CSV-file.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Background"><span class="tocnumber">1</span> <span class="toctext">Background</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Settings"><span class="tocnumber">2</span> <span class="toctext">Settings</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#General"><span class="tocnumber">2.1</span> <span class="toctext">General</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#General_permissions"><span class="tocnumber">2.2</span> <span class="toctext">General permissions</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Miscellaneous_settings"><span class="tocnumber">2.3</span> <span class="toctext">Miscellaneous settings</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Common_module_setting"><span class="tocnumber">2.4</span> <span class="toctext">Common module setting</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Capabilities"><span class="tocnumber">3</span> <span class="toctext">Capabilities</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Usage_as_a_student"><span class="tocnumber">4</span> <span class="toctext">Usage as a student</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Usage_as_a_teacher"><span class="tocnumber">5</span> <span class="toctext">Usage as a teacher</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Addional_Features"><span class="tocnumber">5.1</span> <span class="toctext">Addional Features</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Installation"><span class="tocnumber">6</span> <span class="toctext">Installation</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Background">Background</span></h2>
+<p>The first versions of such functionality appeared already for Moodle 1.4. Versions up to 2.1 have been written by Petr &Scaron;koda and Helen Foster with the help of other developers. For version 3.0 Pirkka Pyykk&ouml;nen did also a lot of development.
+</p>
+<h2><span class="mw-headline" id="Settings">Settings</span></h2>
+<p>The activity has a number of options available when adding to a course
+</p>
+<h3><span class="mw-headline" id="General">General</span></h3>
+<ul><li>Open from (default disabled) - Selections can only be made after this time</li>
+<li>Open until (default disabled) - Selections can only be made before this time</li>
+<li>Select groups from grouping (default all groups) - Restrict the groups that are shown to students to a certain grouping, also specifies the grouping of student created groups</li>
+<li>Min members per group (default 0) - Minimum number of members per group, adds notifications for members of groups which are under this limit</li>
+<li>Max members per group (default 0) - Maximum number of members per group, 0 for unlimited</li>
+<li>Maximum number of groups to participate in (default 1) - Maximum number of groups to participate in. 0 means that no participation is possible</li></ul>
+<h3><span class="mw-headline" id="General_permissions">General permissions</span></h3>
+<ul><li>Participants can join groups (default enabled) - The role capabilities can be set further over permissions</li>
+<li>Participants can leave groups (default enabled) - The role capabilities can be set further over permissions</li>
+<li>Participants can create groups (default enabled) - Participants without a group (in the selected grouping) can create groups. The role capabilities can be set further over permissions</li>
+<li>Participants can set the name of new groups (default enabled)</li>
+<li>Participants can set and edit group description (default enabled) - Participants can set a group description when creating a group and group members can edit the description</li>
+<li>Participants can set and edit group description (default disabled)</li></ul>
+<h3><span class="mw-headline" id="Miscellaneous_settings">Miscellaneous settings</span></h3>
+<ul><li>Assign supervisors to groups (default disabled) - Enables a button which assigns non-editing teachers to groups (if course has non-editing teachers)</li>
+<li>Supervisor role (default non-editing teacher) - Set the role for the supervisors, which will be assigned</li>
+<li>Show assigned supervisors (default disabled) - Show assigned supervisors in group member listings (so students know who their assigned teacher is)</li>
+<li>Hide full groups from the main view (default disabled) - Hide all groups, which have reached max member count, from the main list view</li>
+<li>Show message, if the open until date is reached - Displays a message when the due date has been reached</li>
+<li>Delete group when last student leaves (default enabled) - Automatically delete a group if last student leaves from it</li></ul>
+<h3><span class="mw-headline" id="Common_module_setting">Common module setting</span></h3>
+<ul><li>Group mode - No groups, Visible groups means that group members are visible to everyone on the course, Separate groups means that students only see their own groups members (recommended)</li></ul>
+<p><br>
+<span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:groupselect_setting_small_new.png" class="mw-file-description" title="Activity Settings"><img alt="Activity Settings" src="images_en/c/c7/d893fcf91139aa7cf5fb2986e29fafd3.png" decoding="async" width="1039" height="1342" class="mw-file-element" data-file-width="1039" data-file-height="1342"></a></span>
+<br>
+</p>
+<h2><span class="mw-headline" id="Capabilities">Capabilities</span></h2>
+<table cellpadding="3" cellspacing="0" border="1">
+<tbody><tr>
+<th>Capability
+</th>
+<th>Description
+</th>
+<th>Default enabled roles
+</th></tr>
+<tr>
+<td>mod/groupselect:addinstance
+</td>
+<td>Allow adding a new group self-selection
+</td>
+<td>editingteacher, manager
+</td></tr>
+
+<tr>
+<td>mod/groupselect:assign
+</td>
+<td>Allow to assign supervisors to groups
+</td>
+<td>editingteacher, manager
+</td></tr>
+<tr>
+<td>mod/groupselect:create
+</td>
+<td>Allow creating of groups
+</td>
+<td>student, editingteacher, manager
+</td></tr>
+<tr>
+<td>mod/groupselect:export
+</td>
+<td>Allow export of group members
+</td>
+<td>editingteacher, manager
+</td></tr>
+<tr>
+<td>mod/groupselect:select
+</td>
+<td>Allow to join groups
+</td>
+<td>student, teacher, editingteacher, manager
+</td></tr>
+<tr>
+<td>mod/groupselect:unselect
+</td>
+<td>Allow leaving of groups
+</td>
+<td>student, teacher, editingteacher, manager
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Usage_as_a_student">Usage as a student</span></h2>
+<ul><li>As default, student may have access to four actions in the main view: (s)he may create a group, become a member of a group, leave a group, or edit groups description</li></ul>
+<p><br>
+<span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:groupselect_studentview_new.png" class="mw-file-description" title="Groupless students view"><img alt="Groupless students view" src="images_en/f/fa/d3ab1ccdd6e3b3c836498298e01c3583.png" decoding="async" width="1375" height="306" class="mw-file-element" data-file-width="1375" data-file-height="306"></a></span>
+</p>
+<ul><li>Selecting and leaving of a group is done by pressing the corresponding button in Action column for the desired group</li>
+<li>Creating/selecting is only possible if the student is not a member of a group (in the selected grouping). When creating a group, student can set a password for the group to prevent unwanted members from joining. Password protected groups have a lock icon displayed in the main view</li></ul>
+<p><br>
+<span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:groupselect_create_new.png" class="mw-file-description" title="Group creation"><img alt="Group creation" src="images_en/f/fc/385d5af3f96ed16e0898a4078b64865f.png" decoding="async" width="541" height="294" class="mw-file-element" data-file-width="541" data-file-height="294"></a></span>
+</p>
+<ul><li>Clicking own groups description text sets it editable (if Students can set and edit group description is enabled), OK saves changes and clicking elsewhere discards changes</li></ul>
+<p><br>
+<span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:groupselect_edit_new.png" class="mw-file-description" title="Editing description"><img alt="Editing description" src="images_en/3/3e/0feec489917e53f6fe59bd3319f7bc78.png" decoding="async" width="1434" height="120" class="mw-file-element" data-file-width="1434" data-file-height="120"></a></span>
+</p>
+<ul><li>If the activity has Min members per group setting enabled, red warning icons are displayed for every group not satisfying this limit, also the members of such a group have a text notification displayed at notifications area</li></ul>
+<p><br>
+<span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:groupselect_mainview_new.png" class="mw-file-description" title="Main view"><img alt="Main view" src="images_en/5/5e/c536a4965dda8ed99fed6397e02d9990.png" decoding="async" width="1426" height="808" class="mw-file-element" data-file-width="1426" data-file-height="808"></a></span>
+<br>
+</p>
+<h2><span class="mw-headline" id="Usage_as_a_teacher">Usage as a teacher</span></h2>
+<ul><li>Teacher has a couple of possible actions: CSV-export and assigning supervisors. Per default he also got the possibility to see the buttons to join, leave or create groups if enabled.</li>
+<li>Exporting group data as a CSV-file is done by clicking corresponging button on the main view. This creates a download link, which can then be clicked to initiate download. A row represents one group in the CSV-file and the values are comma separated. Latest Excel and Libreoffice software should manage to open the file directly, if not, try different separator and character set options</li>
+<li>Assigning supervisors to groups is possible if corresponding setting is enabled and the course has participants with the corresponding role for supervisors. Pressing the assignment button divides the groups randomly and evenly to supervisors. Assignment is reversible and can be redone. If students should know their assigned person, it is recommended to enable setting "Show assigned supervisors", otherwise the assignments show up only in the export file</li></ul>
+<p><br>
+<span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:groupselect_teachersview_small_new.png" class="mw-file-description" title="Teachers view with assigned supervisors visible"><img alt="Teachers view with assigned supervisors visible" src="images_en/e/e3/e66c89d8f5e98169d324c22115c7b60c.png" decoding="async" width="1238" height="510" class="mw-file-element" data-file-width="1238" data-file-height="510"></a></span>
+<br>
+</p>
+<h3><span class="mw-headline" id="Addional_Features">Addional Features</span></h3>
+<p>The Groupselect can also be used to show the participants in which groups they are in. For this the permissions in the setting of the groupselect to join, leave or create groups can be removed.
+</p><p><br>
+</p>
+<h2><span class="mw-headline" id="Installation">Installation</span></h2>
+<p>Download and unpack the activity folder.
+Place the folder (e.g. "groupselect") in the "mod" subdirectory.
+Visit <a rel="nofollow" class="external free" href="http://yoursite.com/admin">http://yoursite.com/admin</a> to complete the installation
+Turn editing on in any home or course page.
+Add the activity to the page
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://moodle.org/plugins/mod_groupselect">Group Self-selection</a> Module home page</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822162431
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.043 seconds
+Real time usage: 1.329 seconds
+Preprocessor visited node count: 64/1000000
+Post&#8208;expand include size: 434/2097152 bytes
+Template argument size: 186/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.543      1 Template:Infobox_plugin
+100.00%    3.543      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:14507-0!canonical and timestamp 20260822162431 and revision id 142725. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Group_self-selection_module&amp;oldid=142725">https://docs.moodle.org/502/en/index.php?title=Group_self-selection_module&amp;oldid=142725</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="25a190cf836432207b62ebb9ebca358b.html" title="Category:Plugin">Plugin</a></li><li><a href="27cec39c9633dd48770872338440a43c.html" title="Category:Contributed code">Contributed code</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdj1j1hrj">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdj1j1i7x"></button>
+					<div class="collapse navbar-collapse igdj1j1i7x" id="igdj1j1i7x">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Group_self-selection_module" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Group_self-selection_module" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Group_self-selection_module&amp;oldid=142725" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Group_self-selection_module&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/PlugIn_Freie_Gruppeneinteilung" title="PlugIn Freie Gruppeneinteilung – Deutsch" lang="de" hreflang="de" data-title="PlugIn Freie Gruppeneinteilung" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Módulo_de_auto-selección_de_grupo" title="Módulo de auto-selección de grupo – español" lang="es" hreflang="es" data-title="Módulo de auto-selección de grupo" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/self_selection" title="self selection – français" lang="fr" hreflang="fr" data-title="self selection" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 9 December 2021, at 17:07.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":111,"wgPageParseReport":{"limitreport":{"cputime":"0.043","walltime":"1.329","ppvisitednodes":{"value":64,"limit":1000000},"postexpandincludesize":{"value":434,"limit":2097152},"templateargumentsize":{"value":186,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    3.543      1 Template:Infobox_plugin","100.00%    3.543      1 -total"]},"cachereport":{"timestamp":"20260822162431","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

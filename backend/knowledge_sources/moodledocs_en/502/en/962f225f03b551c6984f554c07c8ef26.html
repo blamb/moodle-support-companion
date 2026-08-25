@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Migrations Technical - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"866336680e1de62624d90057","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Migrations_Technical","wgTitle":"Migrations Technical","wgCurRevisionId":155226,"wgRevisionId":155226,"wgArticleId":25654,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Workplace"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Migrations_Technical","wgRelevantArticleId":25654,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Migration_Web_services","wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgInternalRedirectTargetUrl":"/502/en/Migrations_Technical#Web_services","wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Migrations_Technical#Web_services">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Migrations_Technical rootpage-Migrations_Technical layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkj1o0of"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdkj1o0of" id="igdkj1o0of">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Migrations+Technical" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Migration_Web_services">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Migration_Web_services">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Migration_Web_services">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="2d10bb82a81daddecd9dd3257cf94a56.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Migrations_Technical&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Migrations_Technical&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Migrations_Technical&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Migrations Technical</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"><span class="mw-redirectedfrom">(Redirected from <a href="https://docs.moodle.org/502/en/index.php?title=Migration_Web_services&amp;redirect=no" class="mw-redirect" title="Migration Web services">Migration Web services</a>)</span></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="5005ef9062eb9f52704277d7e5764a8a.html" title="Moodle Workplace">Moodle Workplace</a></div>	
+<div class="content">
+<ul><li><a href="6fec4c5dcd9d154ff23d46e2e133d435.html" title="Multi-tenancy">Multi-tenancy</a></li>
+<li><a href="24af730ae0df0835ebaf33795be5027d.html" title="Programs">Programs</a></li>
+<li><a href="64281e9b4c1975d18f3275e75580176d.html" title="Certifications">Certifications</a></li>
+<li><a href="e71b0cf0176eb80673cd157945822828.html" title="Dynamic rules">Dynamic rules</a></li>
+<li><a href="fc0a853d3881e4fc65d1b41f74e5b14d.html" title="Organisation structure">Organisations</a></li>
+<li><a href="dfeacc84bc200bd03ef249e87a91fa91.html" title="Report builder">Report builder</a></li>
+<li><a href="d99f766a0cfcbdabde4fbcb06919e924.html" title="Custom pages">Custom pages</a></li>
+<li><a href="9c1741fa79af3ca782b4f84eb29f4389.html" title="Certificates">Certificates</a></li>
+<li><a href="a561ccaef5590a82764540b46d322997.html" title="Catalogue">Learning catalogue</a></li>
+<li><b>Migrations</b></li>
+<li><a href="1d466d8ced71062fd319faa436dc6ea9.html" title="Migrations">&gt; Overview</a></li>
+<li><a href="1422fc2b05b329eefba28c5d9110236b.html" title="Migrations Configuration">&gt; Configuration</a></li>
+<li><a href="98c5e9f35ba8ce6e2d28e9260b46d429.html" title="Migrations Use cases">&gt; Use cases</a></li>
+<li><a href="4c517192d0ea73ed6d50a7daf0508abe.html" title="Migrations Tenants">&gt; Tenants</a></li>
+<li><a class="mw-selflink selflink">&gt; Technical</a></li></ul>
+<hr>
+<ul><li><a href="2654643b183ad0020e11d2b7c7ef55ea.html" title="Teams">Teams &amp; Managers</a></li>
+<li><a href="b199a356b44bc512734bbdb6650fe404.html" title="Staff">Staff &amp; Learners</a></li>
+<li><a href="0dfa327dd98a4c57cb9d46f1b0c4bea1.html" title="Appointments">Trainers</a></li>
+<li><a href="a44b2e342c2d0deff379b452bfae8393.html" title="Moodle Workplace App">Workplace App</a></li></ul>
+</div></div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div class="alert alert-info"> <span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:workplacelogo.png" class="mw-file-description"><img src="images_en/thumb/b/b6/workplacelogo.png/634acbf0524aef964358ae94d60d8582.png" decoding="async" width="24" height="24" class="mw-file-element" srcset="/502/en/images_en/thumb/b/b6/workplacelogo.png/36px-workplacelogo.png 1.5x, /502/en/images_en/thumb/b/b6/workplacelogo.png/48px-workplacelogo.png 2x" data-file-width="248" data-file-height="248"></a></span> This feature is part of <b><a href="5005ef9062eb9f52704277d7e5764a8a.html" title="Moodle Workplace">Moodle Workplace</a></b>&trade;, which is available through <a rel="nofollow" class="external text" href="https://moodle.com/workplace/">Moodle Certified Partners and Service Providers</a> only.</div>
+
+<div class="alert alert-success"> <b>This page is intended for </b> Administrators</div>
+<p><br>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Migration_settings"><span class="tocnumber">1</span> <span class="toctext">Migration settings</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Command-line_interface"><span class="tocnumber">2</span> <span class="toctext">Command-line interface</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Capabilities"><span class="tocnumber">3</span> <span class="toctext">Capabilities</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Web_services"><span class="tocnumber">4</span> <span class="toctext">Web services</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Set_up"><span class="tocnumber">4.1</span> <span class="toctext">Set up</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Export"><span class="tocnumber">4.2</span> <span class="toctext">Export</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Dry_run"><span class="tocnumber">4.2.1</span> <span class="toctext">Dry run</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Schedule_export"><span class="tocnumber">4.2.2</span> <span class="toctext">Schedule export</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Get_status_of_export"><span class="tocnumber">4.2.3</span> <span class="toctext">Get status of export</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Retrieve_export_file"><span class="tocnumber">4.2.4</span> <span class="toctext">Retrieve export file</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Additional_parameters"><span class="tocnumber">4.2.5</span> <span class="toctext">Additional parameters</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Import"><span class="tocnumber">4.3</span> <span class="toctext">Import</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#Upload_file"><span class="tocnumber">4.3.1</span> <span class="toctext">Upload file</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Dry-run"><span class="tocnumber">4.3.2</span> <span class="toctext">Dry-run</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Scheduling_import"><span class="tocnumber">4.3.3</span> <span class="toctext">Scheduling import</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Retrieving_the_import_logs"><span class="tocnumber">4.3.4</span> <span class="toctext">Retrieving the import logs</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Additional_parameters_2"><span class="tocnumber">4.3.5</span> <span class="toctext">Additional parameters</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Get_status_of_import"><span class="tocnumber">4.3.6</span> <span class="toctext">Get status of import</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<hr>
+<h2><span class="mw-headline" id="Migration_settings">Migration settings</span></h2>
+<p>Migration settings can be found in <b>General &gt; Migration settings</b>.
+</p><p>The <b>Allow course content backup</b> settings controls whether users who have the permission to backup courses (<a href="Capabilities/moodle/f166c8bdb8b83b2718f26bf1378c7531.html" title="Capabilities/moodle/backup:backupcourse">moodle/backup:backupcourse</a>) are allowed to include content as part of a migration export. If not set (the default), only users who have permission to edit site configuration (<a href="Capabilities/moodle/6d5dbcdd1157f8ff43427b53c834247f.html" title="Capabilities/moodle/site:config">moodle/site:config</a>) can export content as part of migration.
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Migration_-_Migration_settings.png" class="mw-file-description"><img alt="" src="images_en/thumb/0/06/Migration_-_Migration_settings.png/c4264ce371d2653d6b9393a6d417b8dc.png" decoding="async" width="900" height="285" class="mw-file-element" srcset="/502/en/images_en/thumb/0/06/Migration_-_Migration_settings.png/1350px-Migration_-_Migration_settings.png 1.5x, /502/en/images_en/thumb/0/06/Migration_-_Migration_settings.png/1800px-Migration_-_Migration_settings.png 2x" data-file-width="1854" data-file-height="588"></a><figcaption></figcaption></figure>
+<p>Enabling this setting is likely to cause a significant increase in the size of your migration export files.
+</p>
+<h2><span class="mw-headline" id="Command-line_interface">Command-line interface</span></h2>
+<p>The following commands will allow you to perform export and import from CLI:
+</p><p><code>php admin/tool/wp/cli/export.php</code>
+</p><p><code>php admin/tool/wp/cli/import.php</code>
+</p><p>Use the <code>--help</code> parameter to display all the available options, alongside a short description of each parameter. Exporter and importer-specific parameters are passed as JSON-encoded strings.
+</p><p>The two migration CLIs support interactive and non-interactive modes.
+</p><p>During <b>interactive mode</b>, you will be asked various questions, such as the program name to be exported, and you have to confirm actions, such as the usage of default values. This is particularly useful during one-off operations and when testing new processes.
+</p><p>In <b>non-interactive mode</b>, no questions are asked, no confirmations are needed, and default values are used. It is intended for usage in scripts to automate regular processes fully.
+</p><p>When run in interactive mode, the non-interactive counterpart, that is, the valid command will be displayed. That way, you can create your command step by step and, once completed, use it in your shell scripts.
+</p>
+<span typeof="mw:File"><figure class="embedvideo" data-service="local-embed" data-iframeconfig='{"src":""}' style="width:600px"> 	<div class="embedvideo-wrapper" style="height:338px"><div class="embedvideo-consent" data-show-privacy-notice="1"><div class="embedvideo-thumbnail"></div> 	<div class="embedvideo-overlay"> 		<div class="embedvideo-loader" role="button"> 			<div class="embedvideo-loader__fakeButton">Load video</div> 			<div class="embedvideo-loader__footer"> 				<div class="embedvideo-loader__service">Local File</div> 			</div> 		</div> 		<div class="embedvideo-privacyNotice hidden"> 			<div class="embedvideo-privacyNotice__content">Local File might collect personal data.</div> 			<div class="embedvideo-privacyNotice__buttons"> 				<button class="embedvideo-privacyNotice__continue">Continue</button> 				<button class="embedvideo-privacyNotice__dismiss">Dismiss</button> 			</div> 		</div> 	</div> </div><video src="images_en/f/f1/a8165c2138a4224bfea2533d30e83615.qt" width="600" height="338" style="max-width: 100%; max-height: 100%; width: 600px; height: 338px;" controls=""><a href="https://docs.moodle.org/502/en/File:workplace_migration_cli.mov">https://docs.moodle.org/502/en/File:workplace_migration_cli.mov</a></video></div> </figure></span>
+<h2><span class="mw-headline" id="Capabilities">Capabilities</span></h2>
+<p>The following capabilities are available for handling migrations:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="Capabilities/tool/16547de5b104d9f71910927403098dc8.html"><b>tool/wp:manageexportimport</b></a>: Manage Workplace export/import</li>
+<li><a rel="nofollow" class="external text" href="Capabilities/tool/a705ce153860d6edc079428de56a505f.html"><b>tool/wp:useexportimport</b></a>: Use Workplace export/import</li></ul>
+<h2><span class="mw-headline" id="Web_services">Web services</span></h2>
+<p>The following web services are available for migrations:
+</p>
+<ul><li>tool_wp_perform_export</li>
+<li>tool_wp_perform_import</li>
+<li>tool_wp_get_export_file</li>
+<li>tool_wp_get_export_status</li>
+<li>tool_wp_get_import_status</li>
+<li>tool_wp_delete_export</li>
+<li>tool_wp_delete_import</li>
+<li>tool_wp_export</li>
+<li>tool_wp_export_file_preview</li>
+<li>tool_wp_import</li></ul>
+<p><br>
+Standard Moodle LMS functionality is available for uploading a file, see <a rel="nofollow" class="external text" href="https://docs.moodle.org/dev/Web_services_files_handling">Web services files handling</a>
+</p><p>To see the exact description of the parameters and return values of these web services in your version of Moodle Workplace, please turn on the admin setting <b>$CFG-&gt;enablewsdocumentation</b> and navigate to <b>Site administration &gt; Plugins &gt; Web services&gt; API Documentation</b>
+</p>
+<h3><span class="mw-headline" id="Set_up">Set up</span></h3>
+<ul><li>Create a new service with the functions: <b>tool_wp_perform_export</b>, <b>tool_wp_perform_import</b>, <b>tool_wp_get_export_file</b>, <b>tool_wp_get_export_status</b>, <b>tool_wp_get_import_status</b> or add these functions to the existing service</li>
+<li>Allow this service for everybody or for users who you want to be able to use them</li>
+<li>Create tokens for the users, enable protocols, add capabilities to use protocols</li></ul>
+<p>See more information under <a href="7ec58cb687872294bb69e8a674682e21.html" title="Using web services">Using web services</a>
+</p>
+<h3><span class="mw-headline" id="Export">Export</span></h3>
+<p>The following examples use command-line calls using the REST protocol. The output is piped through <b>jq</b> command to display JSON in a more readable way. There are many ways to call web-services and there are other alternatives of how to parse JSON. Adjust commands as needed. Do not forget to replace the site name and the token with your token.
+</p>
+<h4><span class="mw-headline" id="Dry_run">Dry run</span></h4>
+<p>First execute the web-service <tt>tool_wp_perform_export</tt> with the parameter <tt>dryrun=1</tt>, it will validate input, show some information but will not actually schedule an export. You must pass parameter exporter. If the exporter is not available the error message will be displayed. The error message contains the list of all available exporters. For example:
+</p><p><code>
+$ curl '<a rel="nofollow" class="external free" href="https://sitename/webservice/rest/server.php?moodlewsrestformat=json'">https://SITENAME/webservice/rest/server.php?moodlewsrestformat=json'</a> \
+--data 'wsfunction=tool_wp_perform_export&amp;exporter=&amp;dryrun=1&amp;wstoken=cf3788edbe41d7a89e963d9432b15331' \
+| jq
+{
+</code></p><code><pre> "exception": "invalid_parameter_exception",
+ "errorcode": "invalidparameter",
+ "message": "Invalid parameter value detected (Could not find exporter <i>\nChoose from: tool_certification\\tool_wp\\exporter\\certifications, tool_dynamicrule\\tool_wp\\exporter\\rules, tool_organisation\\tool_wp\\exporter\\jobs, tool_organisation\\tool_wp\\exporter\\orgstructure, tool_program\\tool_wp\\exporter\\programs, tool_reportbuilder\\tool_wp\\exporter\\customreports, tool_tenant\\tool_wp\\exporter\\tenants, tool_wp\\tool_wp\\exporter\\certificates, tool_wp\\tool_wp\\exporter\\cohorts, tool_wp\\tool_wp\\exporter\\coursecategories, tool_wp\\tool_wp\\exporter\\courses, tool_wp\\tool_wp\\exporter\\site, tool_wp\\tool_wp\\exporter\\users)"</i>
+</pre></code><code><p><br>
+</p></code><p><code>}
+</code>
+</p><p>Now try again with the exporter name:
+</p><p><code>
+$ curl '<a rel="nofollow" class="external free" href="https://sitename/webservice/rest/server.php?moodlewsrestformat=json'">https://SITENAME/webservice/rest/server.php?moodlewsrestformat=json'</a> \
+--data 'wsfunction=tool_wp_perform_export&amp;exporter=tool_organisation\tool_wp\exporter\orgstructure&amp;dryrun=1&amp;wstoken=cf3788edbe41d7a89e963d9432b15331' \
+| jq
+{
+</code></p><code><pre>   "id": 0,
+   "settings": "{\"export_instances\":\"all\",\"select_frameworks\":[]}"
+</pre></code><code><p><br>
+</p></code><p><code>}
+</code>
+</p><p>Because it is a dry-run, the <tt>id=0</tt> is returned (export was not actually scheduled). The web service also returns the list of settings that will be applied to the export. You may wish to change some of these settings, for example, we can export only positions by adding <b>&amp;settings={"export_instances": "positions"}</b> to the URL (to pass more settings use a different index). Consider html encoding settings parameter value, as depending on use, there might be issues when you pass it in request.
+</p>
+<h4><span class="mw-headline" id="Schedule_export">Schedule export</span></h4>
+<p>Call the web service <tt>tool_wp_perform_export</tt> without the <tt>dryrun=1</tt> parameter. For example:
+</p><p><code>
+curl '<a rel="nofollow" class="external free" href="https://sitename/webservice/rest/server.php?moodlewsrestformat=json'">https://SITENAME/webservice/rest/server.php?moodlewsrestformat=json'</a> \
+--data 'wsfunction=tool_wp_perform_export&amp;exporter=tool_organisation\tool_wp\exporter\orgstructure&amp;settings={"export_instances": "positions"}&amp;wstoken=cf3788edbe41d7a89e963d9432b15331' \
+| jq
+{
+</code></p><code><pre> "id": 19,
+ "settings": "{\"export_instances\":\"positions\",\"select_frameworks\":[]}"
+</pre></code><code><p><br>
+</p></code><p><code>}
+</code>
+</p><p>This call returned id 19, we will need it in the next command.
+</p>
+<h4><span class="mw-headline" id="Get_status_of_export">Get status of export</span></h4>
+<p>Call the web service <tt>tool_wp_get_export_status</tt> with id from previous example to retrieve the status of the export:
+</p><p><code>
+curl '<a rel="nofollow" class="external free" href="https://sitename/webservice/rest/server.php?moodlewsrestformat=json'">https://SITENAME/webservice/rest/server.php?moodlewsrestformat=json'</a> \
+--data 'wsfunction=tool_wp_get_export_status&amp;exportid=72&amp;wstoken=f1355062bead0eab2f3d101e54243e0d' \
+| jq
+{
+</code></p><code><pre> "status": 2,
+ "statusstr": "Scheduled",
+ "progress": 0
+</pre></code><code><p><br>
+</p></code><p><code>}
+</code>
+</p>
+<h4><span class="mw-headline" id="Retrieve_export_file">Retrieve export file</span></h4>
+<p>After the next cron run on the server you can retrieve the export file. If the cron has not run yet this command will return an error "Export not ready". Successful return will look like this:
+</p><p><code>
+$ curl '<a rel="nofollow" class="external free" href="https://sitename/webservice/rest/server.php?moodlewsrestformat=json'">https://SITENAME/webservice/rest/server.php?moodlewsrestformat=json'</a> \
+--data 'wsfunction=tool_wp_get_export_file&amp;exportid=19&amp;wstoken=cf3788edbe41d7a89e963d9432b15331' \
+| jq
+[
+</code></p><code><pre> {
+   "filename": "organisation-structure-frameworks-export-20210115-1534.zip",
+   "filepath": "/",
+   "filesize": 3396,
+   "fileurl": "<a rel="nofollow" class="external free" href="https://sitename/webservice/pluginfile.php/1/tool_wp/export/19/organisation-structure-frameworks-export-20210115-1534.zip">https://SITENAME/webservice/pluginfile.php/1/tool_wp/export/19/organisation-structure-frameworks-export-20210115-1534.zip</a>",
+   "timemodified": 1610721298,
+   "mimetype": "application/zip",
+   "isexternalfile": false
+ }
+</pre></code><code><p><br>
+</p></code><p><code>]
+</code>
+</p><p>To download the file you need to add your token to the fileurl:
+</p><p><code>
+$ curl <a rel="nofollow" class="external free" href="https://sitename/webservice/pluginfile.php/1/tool_wp/export/19/organisation-structure-frameworks-export-20210115-1534.zip?token=cf3788edbe41d7a89e963d9432b15331">https://SITENAME/webservice/pluginfile.php/1/tool_wp/export/19/organisation-structure-frameworks-export-20210115-1534.zip?token=cf3788edbe41d7a89e963d9432b15331</a> &gt; exportfile.zip
+</code>
+</p>
+<h4><span class="mw-headline" id="Additional_parameters">Additional parameters</span></h4>
+<p>Additionally, the <tt>tool_wp_perform_export</tt> web service has parameters:
+</p>
+<ul><li>tenant (int|string) - Database ID or non-numeric idnumber of the tenant where the export should be made</li>
+<li>notenant (bool) - Perform export without the tenant (only for exporters that support this).</li></ul>
+<p>They can be used by global administrator or another user who has permission to switch between tenants.
+</p>
+<h3><span class="mw-headline" id="Import">Import</span></h3>
+<p>The web service <tt>tool_wp_perform_import</tt> is responsible for importing.
+</p><p>You can perform an import from an export file or upload a local file. To perform import from a previous Workplace export with id 19 add <tt>exportid=19</tt> to the parameters. To perform import from a file you need to first upload a file and then use a draft item id as an argument, for example <tt>file=123456678</tt> . Similar to the export, you can use <tt>dryrun=1</tt> parameter to validate parameters without actually scheduling import.
+</p>
+<h4><span class="mw-headline" id="Upload_file">Upload file</span></h4>
+<p>In this example we upload a local file <b>positions.csv</b>. It will be placed in a draft area for the current user. The script returns itemid of the draft area. It can be used only by the same user and will be automatically deleted by Moodle after two days.
+</p><p>Imagine we have a file with the name <b>positions.csv</b> with the following contents:
+</p><p><code>
+idnumber,parent,name,description,ismanager
+CEO,,Chief Executive Officer,Chief Executive Officer position,1
+COO,CEO,Chief Operating Officer,Chief Operating Officer position,1
+HMD,COO,Head of Marketing and Design,Head of Marketing and Design position,1
+MCO,HMD,Marketing Consultant,Marketing Consultant position,0
+OM,COO,Office Manager,Office Manager position,0
+</code>
+</p><p><i>Note1: To demonstrate custom column mappings in this tutorial we called the last column "ismanager". If you call it "manager" or "globalmanager" you will not need to change the default mappings.</i>
+</p><p><i>Note2: File name is important. If you choose to create a new framework during the import (default behavior), the file name will become a framework name</i>
+</p><p>Standard Moodle LMS functionality is available for uploading a file, see <a rel="nofollow" class="external text" href="https://docs.moodle.org/dev/Web_services_files_handling">Web services files handling</a>, for example:
+</p><p><code>
+$ curl -X POST -F "image=@positions.csv" <a rel="nofollow" class="external free" href="https://sitename/webservice/upload.php?token=cf3788edbe41d7a89e963d9432b15331">https://SITENAME/webservice/upload.php?token=cf3788edbe41d7a89e963d9432b15331</a> \
+| jq
+[
+</code></p><code><pre> {
+   "component": "user",
+   "contextid": 567,
+   "userid": "123",
+   "filearea": "draft",
+   "filename": "positions.csv",
+   "filepath": "/",
+   "itemid": 880413439,
+   "license": "allrightsreserved",
+   "author": "User User",
+   "source": "O:8:\"stdClass\":1:{s:6:\"source\";s:13:\"positions.csv\";}"
+ }
+</pre></code><code><p><br>
+</p></code><p><code>]
+</code>
+</p>
+<h4><span class="mw-headline" id="Dry-run">Dry-run</span></h4>
+<p>Example importing the export with id 19:
+</p><p><code>
+curl '<a rel="nofollow" class="external free" href="https://sitename/webservice/rest/server.php?moodlewsrestformat=json'">https://SITENAME/webservice/rest/server.php?moodlewsrestformat=json'</a> \
+--data 'wsfunction=tool_wp_perform_import&amp;exportid=19&amp;dryrun=1&amp;wstoken=cf3788edbe41d7a89e963d9432b15331' \
+| jq
+</code>
+</p><p>Example importing the file that is located in the draft area with itemid 880413439. This is a CSV file and there are several available importers, therefore an error will be raised. The error message will contain the list of available importers:
+</p><p><code>
+curl '<a rel="nofollow" class="external free" href="https://sitename/webservice/rest/server.php?moodlewsrestformat=json'">https://SITENAME/webservice/rest/server.php?moodlewsrestformat=json'</a> \
+--data 'wsfunction=tool_wp_perform_import&amp;file=880413439&amp;dryrun=1&amp;wstoken=cf3788edbe41d7a89e963d9432b15331' \
+| jq
+{
+</code></p><code><pre> "exception": "invalid_parameter_exception",
+ "errorcode": "invalidparameter",
+ "message": "Invalid parameter value detected (More than one importer is available, importer must be specified\nChoose from: tool_organisation\\tool_wp\\importer\\departments_csv, tool_organisation\\tool_wp\\importer\\positions_csv)"
+</pre></code><code><p><br>
+</p></code><p><code>}
+</code>
+</p><p>At the moment of writing this, there are two CSV importers in the Moodle Workplace distribution:
+</p>
+<ul><li><tt>tool_organisation\tool_wp\importer\positions_csv</tt></li>
+<li><tt>tool_organisation\tool_wp\importer\departments_csv</tt></li></ul>
+<p>More importers may be added later to the Moodle Workplace and also more importers may be implemented by the plugins.
+</p><p>Let's execute the same web service <tt>tool_wp_perform_import</tt> specifying the positions importer:
+</p><p><code>
+$ curl '<a rel="nofollow" class="external free" href="https://sitename/webservice/rest/server.php?moodlewsrestformat=json'">https://SITENAME/webservice/rest/server.php?moodlewsrestformat=json'</a> \
+&gt; --data 'wsfunction=tool_wp_perform_import&amp;file=880413439&amp;importer=tool_organisation\tool_wp\importer\positions_csv&amp;dryrun=1&amp;wstoken=cf3788edbe41d7a89e963d9432b15331' \
+&gt; | jq
+{
+</code></p><code><pre> "id": 0,
+ "settings": "{\"target_framework\":\"new\",\"hierarchy\":\"selected\",\"identifier\":\"idnumber\",\"csvmapping:name\":\"name\",\"csvmapping:idnumber\":\"idnumber\",\"csvmapping:description\":\"description\",\"csvmapping:descriptionformat\":\"\",\"csvdefault:descriptionformat\":\"1\",\"csvmapping:parentid\":\"parent\",\"csvmapping:globalmanager\":\"\",\"csvmapping:departmentmanager\":\"\",\"select_framework\":null}"
+</pre></code><code><p><br>
+</p></code><p><code>}
+</code>
+</p><p>The mapping of columns in the CSV file is picked automatically in the most cases, however the column <tt>ismanager</tt> was not mapped because the importer expects it to be called <tt>globalmanager</tt> (or <tt>manager</tt>). We can correct the mapping by adding to the request: <tt>&amp;settings={"csvmapping:globalmanager": "ismanager"}</tt>
+</p>
+<h4><span class="mw-headline" id="Scheduling_import">Scheduling import</span></h4>
+<p>Now we can execute the <tt>tool_wp_perform_import</tt> web service without dryrun parameter. The result will return the import id:
+</p><p><code>
+$ curl '<a rel="nofollow" class="external free" href="https://sitename/webservice/rest/server.php?moodlewsrestformat=json'">https://SITENAME/webservice/rest/server.php?moodlewsrestformat=json'</a> \
+--data 'wsfunction=tool_wp_perform_import&amp;file=880413439&amp;settings[0][name]=csvmapping:globalmanager&amp;settings={"csvmapping:globalmanager":"ismanager"}&amp;wstoken=cf3788edbe41d7a89e963d9432b15331' \
+| jq
+{
+</code></p><code><pre> "id": 56,
+ "settings": "{\"target_framework\":\"new\",\"hierarchy\":\"selected\",\"identifier\":\"idnumber\",\"csvmapping:name\":\"name\",\"csvmapping:idnumber\":\"idnumber\",\"csvmapping:description\":\"description\",\"csvmapping:descriptionformat\":\"\",\"csvdefault:descriptionformat\":\"1\",\"csvmapping:parentid\":\"parent\",\"csvmapping:globalmanager\":\"ismanager\",\"csvmapping:departmentmanager\":\"\",\"select_framework\":null}"
+</pre></code><code><p><br>
+</p></code><p><code>}
+</code>
+</p><p>The next cron run will execute this import.
+</p>
+<h4><span class="mw-headline" id="Retrieving_the_import_logs">Retrieving the import logs</span></h4>
+<p>Currently you can only see the import logs via the web interface. We will add a new web service for it soon.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:wp_ws_import_log_example.png" class="mw-file-description"><img src="images_en/b/bb/b63fb6aa32738646c4c129dbd7118d01.png" decoding="async" width="670" height="899" class="mw-file-element" data-file-width="670" data-file-height="899"></a></span>
+</p>
+<h4><span class="mw-headline" id="Additional_parameters_2">Additional parameters</span></h4>
+<p>Additionally, the <tt>tool_wp_perform_import</tt> web service has parameters:
+</p>
+<ul><li>tenant (int|string) - Database ID or non-numeric idnumber of the tenant where the import should be made</li>
+<li>notenant (bool) - Perform import without the tenant (only for importers that support this).</li></ul>
+<p>They can be used by global administrator or another user who has permission to switch between tenants.
+</p>
+<h4><span class="mw-headline" id="Get_status_of_import">Get status of import</span></h4>
+<p>Call the web service <tt>tool_wp_get_import_status</tt> with id from scheduling import example to retrieve the status of the import:
+</p><p><code>
+curl '<a rel="nofollow" class="external free" href="https://sitename/webservice/rest/server.php?moodlewsrestformat=json'">https://SITENAME/webservice/rest/server.php?moodlewsrestformat=json'</a> \
+--data 'wsfunction=tool_wp_get_import_status&amp;importid=72&amp;wstoken=f1355062bead0eab2f3d101e54243e0d' \
+| jq
+{
+</code></p><code><pre> "status": 2,
+ "statusstr": "Scheduled",
+ "progress": 0
+</pre></code><code><p><br>
+</p></code><p><code>}
+</code>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260823003206
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.032 seconds
+Real time usage: 0.169 seconds
+Preprocessor visited node count: 77/1000000
+Post&#8208;expand include size: 1261/2097152 bytes
+Template argument size: 14/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.958      1 -total
+ 67.79%    3.361      1 Template:WorkplaceMenuMigrations
+ 31.08%    1.541      1 Template:Target_Audience
+ 30.80%    1.527      1 Template:Workplace_Only
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:25654-0!canonical and timestamp 20260823003206 and revision id 155226. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Migrations_Technical&amp;oldid=155226#Web_services">https://docs.moodle.org/502/en/index.php?title=Migrations_Technical&amp;oldid=155226#Web_services</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="08f1cd224f4501ea8a1a05323a55ba30.html" title="Category:Workplace">Workplace</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdkj1o2yu">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkj1o3ct"></button>
+					<div class="collapse navbar-collapse igdkj1o3ct" id="igdkj1o3ct">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Migrations_Technical" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Migrations_Technical" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Migrations_Technical&amp;oldid=155226" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Migrations_Technical&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 24 March 2026, at 11:24.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":132,"wgPageParseReport":{"limitreport":{"cputime":"0.032","walltime":"0.169","ppvisitednodes":{"value":77,"limit":1000000},"postexpandincludesize":{"value":1261,"limit":2097152},"templateargumentsize":{"value":14,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    4.958      1 -total"," 67.79%    3.361      1 Template:WorkplaceMenuMigrations"," 31.08%    1.541      1 Template:Target_Audience"," 30.80%    1.527      1 Template:Workplace_Only"]},"cachereport":{"timestamp":"20260823003206","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

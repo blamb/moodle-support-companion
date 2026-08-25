@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Working with files - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"5930d1693aa6fe3bb8e2968f","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Working_with_files","wgTitle":"Working with files","wgCurRevisionId":148966,"wgRevisionId":148966,"wgArticleId":12988,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Working_with_files","wgRelevantArticleId":12988,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Files","wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgInternalRedirectTargetUrl":"/502/en/Working_with_files","ev-youtube-config":{"class":"embedvideo-player","loading":"lazy","frameborder":0,"allow":"accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; autoplay","modestbranding":1,"allowfullscreen":"true","frameBorder":0,"width":640,"height":360},"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.embedVideo.styles":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.embedVideo.consent","mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Working_with_files">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Working_with_files rootpage-Working_with_files layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjq9cq5r"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdjq9cq5r" id="igdjq9cq5r">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Working+with+files" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Files">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Files">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Files">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="2063669ea2a565f6fd1f37fe4279f0da.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Working_with_files" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Working_with_files&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Working_with_files&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Working with files</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"><span class="mw-redirectedfrom">(Redirected from <a href="https://docs.moodle.org/502/en/index.php?title=Files&amp;redirect=no" class="mw-redirect" title="Files">Files</a>)</span></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a>  ► <a href="93f29184ae22eda8e4d19f1a15533ea9.html" title="Managing content">Managing content</a> ► <a class="mw-selflink selflink">Working with files</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="93f29184ae22eda8e4d19f1a15533ea9.html" title="Managing content">Managing content</a></div>	
+<div class="content">
+<ul><li><a class="mw-selflink selflink">Working with files</a></li>
+<li><a href="23498a4a98b92b15affb50f2a4298abd.html" title="Repositories">Repositories</a></li>
+<li><a href="3fb26e7727fd60f7f48c355eb80d8e10.html" title="Portfolios">Portfolios</a></li>
+<li><a href="59a9ded61ecb032a7475117b4478dd77.html" title="Working with media">Working with media</a></li>
+<li><a href="a80390745b8402c39c6da8f15f90e355.html" title="H5P">H5P</a></li>
+<li><a href="7144b61e93568a21937969977e8d37db.html" title="Content bank">Content bank</a></li>
+<li><a href="a5cf4b273cdf7f888958ac72d05a114b.html" title="Data formats">Data formats</a></li>
+<li><a href="d5972c74f0810f0c83c1090f9396191c.html" title="Document converters">Document converters</a></li>
+<li><a href="3f10295e83b0dde1d79e0a603c4f5e77.html" title="Filters">Filters</a></li>
+<li><a href="c5c8366460a3263b415709c51e251ccf.html" title="Licences">Licences</a></li>
+<li><a href="ecc9ca23ff30fcb0a438b5c77b2b1158.html" title="LTI External tools">LTI External tools</a></li>
+<li><a href="ac5dd92aa881de4a83d512d3f3b8587d.html" title="Plagiarism prevention">Plagiarism prevention</a></li>
+<li><a href="8a49644ae18e208a72123eae192b5c4e.html" title="Download course content">Download course content</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Adding_files_to_your_course"><span class="tocnumber">1</span> <span class="toctext">Adding files to your course</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Drag_and_drop"><span class="tocnumber">1.1</span> <span class="toctext">Drag and drop</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Add_a_resource_or_activity"><span class="tocnumber">1.2</span> <span class="toctext">Add a resource or activity</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Unzipping_uploaded_files"><span class="tocnumber">2</span> <span class="toctext">Unzipping uploaded files</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Viewing_uploaded_files"><span class="tocnumber">3</span> <span class="toctext">Viewing uploaded files</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Editing_or_updating_uploaded_files"><span class="tocnumber">4</span> <span class="toctext">Editing or updating uploaded files</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Creating_a_link_to_a_file"><span class="tocnumber">5</span> <span class="toctext">Creating a link to a file</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#SCORM_files_cannot_be_updated_where_alias/shortcut_are_used"><span class="tocnumber">6</span> <span class="toctext">SCORM files cannot be updated where alias/shortcut are used</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Areas_where_links_cannot_be_made"><span class="tocnumber">6.1</span> <span class="toctext">Areas where links cannot be made</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Site_administration_settings"><span class="tocnumber">7</span> <span class="toctext">Site administration settings</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Adding_a_new_file_type"><span class="tocnumber">7.1</span> <span class="toctext">Adding a new file type</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Restricting_allowed_file_types"><span class="tocnumber">7.2</span> <span class="toctext">Restricting allowed file types</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Removing_a_file_type"><span class="tocnumber">7.3</span> <span class="toctext">Removing a file type</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Editing_an_existing_file_type"><span class="tocnumber">7.4</span> <span class="toctext">Editing an existing file type</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Google_docs_and_docx"><span class="tocnumber">7.5</span> <span class="toctext">Google docs and docx</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Alternative_to_MS_PowerPoint_and_PDF_files"><span class="tocnumber">8</span> <span class="toctext">Alternative to MS PowerPoint and PDF files</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#See_also"><span class="tocnumber">9</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Adding_files_to_your_course">Adding files to your course</span></h2>
+<p>Moodle provides an easy way for a teacher to present materials to their students. These materials may take the form of files such as word-processed documents or slideshow presentations. The materials can be displayed on the page either as individual items or bundled together inside folders. One teacher might for instance wish to share a single research document in pdf format; another might have a folder of sample past examination papers for students to download. Most types of files can be uploaded and accessed through Moodle but the student needs to have the correct software to be able to open them.
+</p><p>To add files to a Moodle course, you must first ensure you have the editing turned on.
+</p>
+<h3><span class="mw-headline" id="Drag_and_drop">Drag and drop</span></h3>
+<ul><li>If you are using a modern browser, you can simply click, hold and drag and drop a file directly onto your course page. You will know if drag and drop is available to you because you will (briefly) see a message at the top of your screen:</li></ul>
+<p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:dragdropmessage.png" class="mw-file-description"><img src="images_en/a/a3/b14187051aee430c6d0a82eeecba18ca.png" decoding="async" width="517" height="58" class="mw-file-element" data-file-width="517" data-file-height="58"></a></span>
+</p><p>To drag and drop a folder, you must first compress/zip it using whichever program your computer has.
+</p>
+<figure class="embedvideo" data-service="youtube" data-iframeconfig='{"src":"https://www.youtube-nocookie.com/embed/f0dkLi37mg4?autoplay=1"}' style="width:640px">
+	<div class="embedvideo-wrapper" style="height:360px"><div class="embedvideo-consent" data-show-privacy-notice="1">
+	<div class="embedvideo-overlay">
+		<div class="embedvideo-loader" role="button">
+			<div class="embedvideo-loader__fakeButton">Load video</div>
+			<div class="embedvideo-loader__footer">
+				<div class="embedvideo-loader__service">YouTube</div>
+			</div>
+		</div>
+		<div class="embedvideo-privacyNotice hidden">
+			<div class="embedvideo-privacyNotice__content">YouTube might collect personal data. <a href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank" class="embedvideo-privacyNotice__link">Privacy Policy</a></div>
+			<div class="embedvideo-privacyNotice__buttons">
+<p>				<button class="embedvideo-privacyNotice__continue">Continue</button>
+				<button class="embedvideo-privacyNotice__dismiss">Dismiss</button>
+</p>
+			</div>
+		</div>
+	</div>
+</div></div><figcaption>Dragging and dropping files</figcaption>
+</figure>
+<h3><span class="mw-headline" id="Add_a_resource_or_activity">Add a resource or activity</span></h3>
+<ul><li>Instead of drag and drop, you can click the link 'Add an activity or resource' and  select either <a href="03d03f28ee47058b75c212697b13f9ab.html" class="mw-redirect" title="File">File</a> or <a href="fc51d861f431507abb638a2d5f348f8d.html" class="mw-redirect" title="Folder">Folder</a> from the activity chooser.</li></ul>
+<figure class="embedvideo" data-service="youtube" data-iframeconfig='{"src":"https://www.youtube-nocookie.com/embed/z4fWG8GEWo8?autoplay=1"}' style="width:640px">
+	<div class="embedvideo-wrapper" style="height:360px"><div class="embedvideo-consent" data-show-privacy-notice="1">
+	<div class="embedvideo-overlay">
+		<div class="embedvideo-loader" role="button">
+			<div class="embedvideo-loader__fakeButton">Load video</div>
+			<div class="embedvideo-loader__footer">
+				<div class="embedvideo-loader__service">YouTube</div>
+			</div>
+		</div>
+		<div class="embedvideo-privacyNotice hidden">
+			<div class="embedvideo-privacyNotice__content">YouTube might collect personal data. <a href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank" class="embedvideo-privacyNotice__link">Privacy Policy</a></div>
+			<div class="embedvideo-privacyNotice__buttons">
+<p>				<button class="embedvideo-privacyNotice__continue">Continue</button>
+				<button class="embedvideo-privacyNotice__dismiss">Dismiss</button>
+</p>
+			</div>
+		</div>
+	</div>
+</div></div><figcaption>Uploading files</figcaption>
+</figure>
+<p><br>
+</p>
+<ul><li>The screen for uploading and displaying a file (or folder of files) includes an "add" button. Clicking on this button takes you to the <a href="84a9aa8a6c94169071359cf96051665e.html" title="File picker">File picker</a> which is the name given to the file storage and access area within Moodle. Find out more about the places you can upload or add files from in the <a href="84a9aa8a6c94169071359cf96051665e.html" title="File picker">File picker</a> page.</li>
+<li>There is also a block (with an arrow) into which you can drag and drop a file straight from your desktop into Moodle.</li></ul>
+<h2><span class="mw-headline" id="Unzipping_uploaded_files">Unzipping uploaded files</span></h2>
+<p>If you upload a single zipped file, Moodle will automatically unzip it for your students to see it in Moodle.
+</p><p>If you upload a number of files as a single zipped file, either as <a href="03d03f28ee47058b75c212697b13f9ab.html" class="mw-redirect" title="File">File</a>, nor inside a <a href="fc51d861f431507abb638a2d5f348f8d.html" class="mw-redirect" title="Folder">Folder</a>, Moodle will force the download.
+</p>
+<h2><span class="mw-headline" id="Viewing_uploaded_files">Viewing uploaded files</span></h2>
+<ul><li>Once uploaded, files appear as thumbnails in the file manager for easy recognition.</li>
+<li>Files view can be easily toggled between icons view or a table view with sizes and dates, or a hierarchical list view.</li></ul>
+<table>
+<tbody><tr>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:truthumbnailsiconsview.png" class="mw-file-description"><img src="images_en/thumb/e/e0/truthumbnailsiconsview.png/4cd416f751e6b9ffd2fb4f90caec0c98.png" decoding="async" width="300" height="147" class="mw-file-element" srcset="/502/en/images_en/thumb/e/e0/truthumbnailsiconsview.png/450px-truthumbnailsiconsview.png 1.5x, /502/en/images_en/e/e0/truthumbnailsiconsview.png 2x" data-file-width="548" data-file-height="269"></a><figcaption>File picker icon view</figcaption></figure>
+</td>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:tableview.png" class="mw-file-description"><img src="images_en/thumb/d/d8/tableview.png/ca6683f57b97d0cb56d6d408e798c521.png" decoding="async" width="300" height="138" class="mw-file-element" srcset="/502/en/images_en/thumb/d/d8/tableview.png/450px-tableview.png 1.5x, /502/en/images_en/d/d8/tableview.png 2x" data-file-width="548" data-file-height="252"></a><figcaption>File picker table view</figcaption></figure>
+</td>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:hierarchicallistview.png" class="mw-file-description"><img src="images_en/thumb/b/b1/hierarchicallistview.png/46754a3d29ca0372f834f801d5c929e5.png" decoding="async" width="300" height="123" class="mw-file-element" srcset="/502/en/images_en/thumb/b/b1/hierarchicallistview.png/450px-hierarchicallistview.png 1.5x, /502/en/images_en/b/b1/hierarchicallistview.png 2x" data-file-width="548" data-file-height="224"></a><figcaption>File picker hierarchical list view</figcaption></figure>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Editing_or_updating_uploaded_files">Editing or updating uploaded files</span></h2>
+<ul><li>Clicking on the  name of an uploaded file opens up a pop up dialogue box which allows file details quickly to be altered.</li></ul>
+<h2><span class="mw-headline" id="Creating_a_link_to_a_file">Creating a link to a file</span></h2>
+<ul><li>When an uploaded file - or a file from the <a href="7144b61e93568a21937969977e8d37db.html" title="Content bank">Content bank</a>, Private files, Dropbox, File system or NextCloud repositories - is re-used elsewhere on Moodle, the teacher has the option to make a copy (a new, unconnected version) or to link to it (formerly known as a shortcut or alias).</li>
+<li>If a link is created, then when the original file is updated, it will change in all instances of the link. So a teacher might add course notes to their private files for example, and then add them into a number of courses. When the teacher makes an alteration in the file in their private files, this alteration will be reflected in all instances of the course notes.</li>
+<li>A link can be recognised by its thumbnail. See the difference in the screenshot below between the original file (left) and the link (right):</li>
+<li>To update a file, go to its original location (for example Private files) and upload your new version <i>with the same name</i> . You will be prompted to override or rename the file. Choose "override" and this file will replace your original file and the alisas/shortcuts will remain and all be updated to your latest version.</li></ul>
+<table>
+<tbody><tr>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:LinktoFile.png" class="mw-file-description"><img src="images_en/thumb/4/44/LinktoFile.png/9b1fd3cebef0ea465fb6b310b0fbffe2.png" decoding="async" width="300" height="413" class="mw-file-element" srcset="/502/en/images_en/4/44/LinktoFile.png 1.5x" data-file-width="441" data-file-height="607"></a><figcaption>Creating a link</figcaption></figure>
+</td>
+<td><figure typeof="mw:File/Frame"><a href="https://docs.moodle.org/502/en/File:LinkIcon.png" class="mw-file-description"><img src="images_en/7/75/8751d76d74695f84ec034264ba77241f.png" decoding="async" width="357" height="224" class="mw-file-element" data-file-width="357" data-file-height="224"></a><figcaption></figcaption></figure>
+</td></tr></tbody></table>
+<h2><span id="SCORM_files_cannot_be_updated_where_alias.2Fshortcut_are_used"></span><span class="mw-headline" id="SCORM_files_cannot_be_updated_where_alias/shortcut_are_used">SCORM files cannot be updated where alias/shortcut are used</span></h2>
+<p>Note: while it is possible to create alias files for SCORM activities, it is not possible to update the source file and have changes replicated in the alias.
+Updating the original SCORM (.zip) file will update this location but all alias will convert to 'true copies' of the original and alias will be removed.
+</p>
+<h3><span class="mw-headline" id="Areas_where_links_cannot_be_made">Areas where links cannot be made</span></h3>
+<p>A link cannot be made in the following areas of Moodle:
+</p>
+<ul><li>an assignment submission</li>
+<li>a forum post attachment</li>
+<li>a workshop submission</li>
+<li>a quiz essay</li>
+<li>a database activity file field</li></ul>
+<p>This is to prevent cases such as a student uploading an item for assessment and then subsequently changing the original in their private files. When a student uses a file from their private files in one of these instances, they do not see the options to "copy" or "link". Below is an example of a file added to an assignment:
+</p>
+<table>
+<tbody><tr>
+<td><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:nolinkstudent.png" class="mw-file-description"><img src="images_en/thumb/9/98/nolinkstudent.png/94d54d44d890e7500db53bce850f5889.png" decoding="async" width="300" height="202" class="mw-file-element" srcset="/502/en/images_en/thumb/9/98/nolinkstudent.png/450px-nolinkstudent.png 1.5x, /502/en/images_en/thumb/9/98/nolinkstudent.png/600px-nolinkstudent.png 2x" data-file-width="646" data-file-height="434"></a><figcaption>Assignment submission with no option to create an alias</figcaption></figure>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Site_administration_settings">Site administration settings</span></h2>
+<p>An administrator can add new file types and view, edit and delete existing file types from <i>Site administration &gt; Server &gt; File types</i>. This means that, for example, if teachers and students on your site use a lot of files specific to a particular program, such files can now be recognised by Moodle, and, when downloaded, they will open in the correct program, rather than presenting themselves as a generic zip file.
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:Filetypes1.png" class="mw-file-description"><img src="images_en/thumb/a/a5/Filetypes1.png/12f3591b319f590355832f101d68fb57.png" decoding="async" width="500" height="247" class="mw-file-element" srcset="/502/en/images_en/thumb/a/a5/Filetypes1.png/750px-Filetypes1.png 1.5x, /502/en/images_en/thumb/a/a5/Filetypes1.png/1000px-Filetypes1.png 2x" data-file-width="2844" data-file-height="1404"></a><figcaption>Some examples from the list</figcaption></figure>
+<h3><span class="mw-headline" id="Adding_a_new_file_type">Adding a new file type</span></h3>
+<p>1. Scroll down to the bottom of the page and click the "Add" button
+</p><p>2. Add the details of your file type, using the example below as a guide. This example will add the .mobi extension (for a Kindle ebook) with the standard document icon.
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:newfiletype.png" class="mw-file-description"><img src="images_en/thumb/2/25/newfiletype.png/7f878b59f57eb61c7d20f67c72d6f45d.png" decoding="async" width="500" height="270" class="mw-file-element" srcset="/502/en/images_en/thumb/2/25/newfiletype.png/750px-newfiletype.png 1.5x, /502/en/images_en/thumb/2/25/newfiletype.png/1000px-newfiletype.png 2x" data-file-width="1750" data-file-height="946"></a><figcaption>Adding a new filetype</figcaption></figure>
+<p><b>NOTE: The mimetype is set for a file when it is added/uploaded in Moodle (not when it is downloaded). If you change the mimetype associated with a file extension it will not make any difference to existing files. Only files uploaded in the future will have the new mimetype.</b>
+</p><p>3. Click to save the changes and you will see your new file type has been added to the list:
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:customfileypesuccess.png" class="mw-file-description"><img src="images_en/thumb/1/18/customfileypesuccess.png/1d04471969e3bc5894153448def69ca6.png" decoding="async" width="500" height="23" class="mw-file-element" srcset="/502/en/images_en/thumb/1/18/customfileypesuccess.png/750px-customfileypesuccess.png 1.5x, /502/en/images_en/thumb/1/18/customfileypesuccess.png/1000px-customfileypesuccess.png 2x" data-file-width="2784" data-file-height="128"></a><figcaption>New type in the list</figcaption></figure>
+<h3><span class="mw-headline" id="Restricting_allowed_file_types">Restricting allowed file types</span></h3>
+<ul><li>Allowed file types for <a href="67f411328c2cef3583072d52c0f16d89.html" class="mw-redirect" title="Workshop">Workshop</a> submissions may be restricted</li>
+<li>It is possible to restrict file types for assignments. See <a href="1279b6020bc944f4d046ef466ee54850.html" title="Assignment settings">Assignment settings</a>.</li></ul>
+<h3><span class="mw-headline" id="Removing_a_file_type">Removing a file type</span></h3>
+<ul><li>Clicking the X next to a file type will remove it from the site. You will be prompted to confirm before deletion.</li></ul>
+<h3><span class="mw-headline" id="Editing_an_existing_file_type">Editing an existing file type</span></h3>
+<ul><li>Clicking the edit icon next to a file type will allow you to change certain details, for example the associated icon and description. If you don't wish to use the default description, you can specify your own custom description (with multi-language tags if your site supports multi-languages) or you can use an alternative language string from mimetypes.php.</li></ul>
+<h3><span class="mw-headline" id="Google_docs_and_docx">Google docs and docx</span></h3>
+<p>Importing Google docs files as docx.  See <a rel="nofollow" class="external free" href="https://moodle.org/mod/forum/discuss.php?d=320144">https://moodle.org/mod/forum/discuss.php?d=320144</a>
+</p>
+<h2><span class="mw-headline" id="Alternative_to_MS_PowerPoint_and_PDF_files">Alternative to MS PowerPoint and PDF files</span></h2>
+<p>The <a rel="nofollow" class="external text" href="https://moodle.org/plugins/mod_revealjs">Presentation</a> additional plugin displays multimedia HTML5 presentations and slide shows in users' web browsers. A web friendly and more feature rich alternative to MS PowerPoint and PDF. However, presentations must be uploaded to moodledata via FTP and you'll need to learn some basic HTML to create presentations for it.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li>How to share a single file with students: <a href="ce79cf7f8874323dc83a32d5691e388b.html" title="File resource">File resource</a>.</li>
+<li>How to share a folder of files with students: <a href="fc51d861f431507abb638a2d5f348f8d.html" class="mw-redirect" title="Folder">Folder</a>.</li>
+<li>Questions about the file picker: <a href="0c05890484aaabf33450500990657c9d.html" title="File picker FAQ">File picker FAQ</a>.</li>
+<li><a href="29e33eb10f35259d32798a9f2450baff.html" title="Restoring file aliases">Restoring file aliases</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822153607
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.048 seconds
+Real time usage: 0.337 seconds
+Preprocessor visited node count: 116/1000000
+Post&#8208;expand include size: 624/2097152 bytes
+Template argument size: 138/2097152 bytes
+Highest expansion depth: 4/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 2292/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   13.140      1 -total
+ 54.48%    7.159      2 Template:MediaPlayer
+ 43.64%    5.734      1 Template:Managing_content
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:12988-0!canonical and timestamp 20260822153607 and revision id 148966. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Working_with_files&amp;oldid=148966">https://docs.moodle.org/502/en/index.php?title=Working_with_files&amp;oldid=148966</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdjq9cszc">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjq9ctim"></button>
+					<div class="collapse navbar-collapse igdjq9ctim" id="igdjq9ctim">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Working_with_files" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Working_with_files" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Working_with_files&amp;oldid=148966" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Working_with_files&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Utilisation_de_fichiers" title="Utilisation de fichiers – français" lang="fr" hreflang="fr" data-title="Utilisation de fichiers" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Arbeiten_mit_Dateien_und_Verzeichnissen" title="Arbeiten mit Dateien und Verzeichnissen – Deutsch" lang="de" hreflang="de" data-title="Arbeiten mit Dateien und Verzeichnissen" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Trabajando_con_archivos" title="Trabajando con archivos – español" lang="es" hreflang="es" data-title="Trabajando con archivos" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 5 July 2024, at 08:56.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":135,"wgPageParseReport":{"limitreport":{"cputime":"0.048","walltime":"0.337","ppvisitednodes":{"value":116,"limit":1000000},"postexpandincludesize":{"value":624,"limit":2097152},"templateargumentsize":{"value":138,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2292,"limit":5000000},"timingprofile":["100.00%   13.140      1 -total"," 54.48%    7.159      2 Template:MediaPlayer"," 43.64%    5.734      1 Template:Managing_content"]},"cachereport":{"timestamp":"20260822153607","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

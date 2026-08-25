@@ -70,14 +70,21 @@ Open **http://localhost:5173** in your browser.
 
 ### Knowledge Base Ingestion
 
-Source documents are read from the paths defined in `backend/app/config.py`:
+Source documents are committed under `backend/knowledge_sources/`, which the
+Dockerfile copies into the image, so the deployed container can ingest without
+any extra setup:
 
-- `moodledocs_en/<version>/en/` — the official MoodleDocs HTML export (looked for
-  next to the repo, in `backend/knowledge_sources/`, and in the parent
-  "Moodle Help" folder, in that order)
+- `moodledocs_en/<version>/en/` — the MoodleDocs HTML export
 - `olproduction.WordPress.*.xml` — OL Production WordPress export
 - `trubox.WordPress.*.xml` — TRU Box WordPress export
 - `TRU Moodle FAQ.docx` — the FAQ document
+
+Only the HTML the parser actually reads is committed — `images_en/`, `skins/`,
+and the CSS are excluded, which takes the export from 300 MB to about 19 MB
+compressed. The full export can also live at the repo root as
+`moodledocs_en/<version>/en/` (gitignored); config prefers that copy locally and
+falls back to `backend/knowledge_sources/` in the container. Both yield the same
+2,671 documents.
 
 Then trigger ingestion:
 
@@ -92,7 +99,9 @@ cd backend && python -m app.ingestion.pipeline
 ```
 
 Ingestion resets the vector store and rebuilds it from scratch, so keep a copy
-of `data/chroma_db/` if you need to roll back.
+of `data/chroma_db/` if you need to roll back. If no source file is found at all
+the run aborts before the reset and returns `aborted_no_sources`, leaving the
+existing store intact rather than emptying it.
 
 ### Upgrading to a new Moodle release
 
@@ -107,8 +116,11 @@ To upgrade:
 1. Download the MoodleDocs HTML export for the new release and unpack it as
    `moodledocs_en/<code>/en/` — the code is `major * 100 + minor`, so 5.2 is
    `502`. (`MOODLE_DOCS_DIR` in the environment overrides the lookup entirely.)
-2. Set `MOODLE_VERSION` to the new release.
-3. Re-run ingestion.
+2. Copy the `.html` files (excluding `images_en/` and `resources/`) into
+   `backend/knowledge_sources/moodledocs_en/<code>/en/` and commit them, so the
+   new docs ship in the container.
+3. Set `MOODLE_VERSION` to the new release.
+4. Re-run ingestion locally, and `POST /api/ingest` against the deployment.
 
 The export stores the same wiki page under several hashes (once per link that
 reached it, anchors included); the parser keeps the longest copy of each page so

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Gradebookplus - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"0957eb992cbed86ea2a43045","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Gradebookplus","wgTitle":"Gradebookplus","wgCurRevisionId":143613,"wgRevisionId":143613,"wgArticleId":3382,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Contributed code"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Gradebookplus","wgRelevantArticleId":3382,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Gradebookplus">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Gradebookplus rootpage-Gradebookplus layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjd5dqfl"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdjd5dqfl" id="igdjd5dqfl">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Gradebookplus" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Gradebookplus">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Gradebookplus">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Gradebookplus">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="44f75df608ad492c652ceee394d0ede0.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Gradebookplus&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Gradebookplus&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Gradebookplus&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Gradebookplus</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#The_GradebookPlus_Version_2_(GBPv2)_patch_adds_the_following_functionality_to_standard_gradebook"><span class="tocnumber">1</span> <span class="toctext">The GradebookPlus Version 2 (GBPv2) patch adds the following functionality to standard gradebook</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Migration_from_GBPv2_to_Moodle_1.9_(Experimental)"><span class="tocnumber">2</span> <span class="toctext">Migration from GBPv2 to Moodle 1.9 (Experimental)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Let_the_Moodle_upgrader_do_the_work_for_you"><span class="tocnumber">2.1</span> <span class="toctext">Let the Moodle upgrader do the work for you</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Step_1--Install_Moodle_1.9"><span class="tocnumber">2.2</span> <span class="toctext">Step 1--Install Moodle 1.9</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Step_2--Convert_Database_with_MySQL_Commands"><span class="tocnumber">2.3</span> <span class="toctext">Step 2--Convert Database with MySQL Commands</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Add_all_of_the_grade_events_to_grade_items"><span class="tocnumber">2.3.1</span> <span class="toctext">Add all of the grade_events to grade_items</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Replace_the_old_categoryid_with_the_new_categoryid_(where_possible)"><span class="tocnumber">2.3.2</span> <span class="toctext">Replace the old categoryid with the new categoryid (where possible)</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Assign_a_generic_categoryid_for_any_thing_that_was_not_categorized_(it_is_presumed_that_the_grade_event_was_not_previously_categorised_in_the_course_it_was_in)"><span class="tocnumber">2.3.3</span> <span class="toctext">Assign a generic categoryid for any thing that was not categorized (it is presumed that the grade event was not previously categorised in the course it was in)</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Double-checking_categories"><span class="tocnumber">2.3.4</span> <span class="toctext">Double-checking categories</span></a>
+<ul>
+<li class="toclevel-4 tocsection-10"><a href="#Add_the_path"><span class="tocnumber">2.3.4.1</span> <span class="toctext">Add the path</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-11"><a href="#Populate_the_previously_NULL_categoryids"><span class="tocnumber">2.3.5</span> <span class="toctext">Populate the previously NULL categoryids</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Copy_scores_from_old_tables_into_new_tables"><span class="tocnumber">2.3.6</span> <span class="toctext">Copy scores from old tables into new tables</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Issues_with_grade_aggregation"><span class="tocnumber">2.3.7</span> <span class="toctext">Issues with grade aggregation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#Summary_of_SQL_Commands_for_Migration_from_GBPv2_in_Moodle_1.8_to_Moodle_1.9"><span class="tocnumber">2.4</span> <span class="toctext">Summary of SQL Commands for Migration from GBPv2 in Moodle 1.8 to Moodle 1.9</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span id="The_GradebookPlus_Version_2_.28GBPv2.29_patch_adds_the_following_functionality_to_standard_gradebook"></span><span class="mw-headline" id="The_GradebookPlus_Version_2_(GBPv2)_patch_adds_the_following_functionality_to_standard_gradebook">The GradebookPlus Version 2 (GBPv2) patch adds the following functionality to standard gradebook</span></h2>
+<ul><li>in-place editing of gradebook</li>
+<li>multi-column editing (spreadheet-style) for all numerically marked activities in a given category</li>
+<li>create graded events that are not course activities (this gets around the issue in the gradebook where users had to create offline assignments for non-Moodle course work).</li></ul>
+<ul><li>Works with Moodle versions 1.5 and 1.6</li></ul>
+<dl><dd>18STABLE branch works with Moodle 1.8 (and probably Moodle 1.7). Efforts are made to merge changes from 18STABLE branch of Moodle's standard gradebook with the GBPv2 patch 18STABLE branch. Anthony hopes that the GBPv2 patch will be made obsolete by the improvements and new features made available in Moodle 1.9. Current plans are to fix bugs in the GBPv2 patch as they are identified and reported in the CONTRIB section of the Moodle Tracker.</dd></dl>
+<p>More information about the GBPv2 Patch is available at: <a rel="nofollow" class="external free" href="http://moodle.org/mod/data/view.php?d=13&amp;rid=929">http://moodle.org/mod/data/view.php?d=13&amp;rid=929</a>
+</p>
+<h2><span id="Migration_from_GBPv2_to_Moodle_1.9_.28Experimental.29"></span><span class="mw-headline" id="Migration_from_GBPv2_to_Moodle_1.9_(Experimental)">Migration from GBPv2 to Moodle 1.9 (Experimental)</span></h2>
+<p>The gradebook in Moodle was completely reworked for Moodle 1.9.  GBPv2 does not work with Moodle 1.9 or later and will not be updated to do so because Moodle 1.9 has advanced beyond the level of GBPv2.  The following steps were developed by <a href="https://docs.moodle.org/502/en/User:Anthony_Borrow"><bdi>Anthony Borrow</bdi></a> to help users migrating the GBPv2 data from Moodle 1.8 to 1.9. Here is Anthony's disclaimer about the steps:
+</p>
+<dl><dd>Please keep in mind that these queries are intended to only show the relationship between the tables so that we can work out a migration plan. They are NOT intended to be run on a production site! My typical warning of using it in so far as it is helpful and avoiding it in so far as it is not helpful doubly applies. With that said, I see the migration as involving 2 steps. Migrating the grade events (1.8) to grade items (1.9) and grade event grades (1.8) to grade grades. What may complicate things or what I am least clear on at this point is moving from grade category (1.8) to grade categories (1.9). I recognize that the current scheme is a bit tenuous.</dd></dl>
+<h3><span class="mw-headline" id="Let_the_Moodle_upgrader_do_the_work_for_you">Let the Moodle upgrader do the work for you</span></h3>
+<p>The first step in moving from Moodle 1.8 to 1.9 is to download and install the latest build of Moodle 1.9.x.  Unfortunately, in the installation process Moodle will drop some of the tables that you need for the migration.   Thus it is necessary to preserve that data in one way or another if you hope to merge it into the gradebook for Moodle 1.9.  The easiest way to preserve that data is to comment out the section of <code>moodle/lib/db/upgrade.php</code> responsible for dropping the tables.  The comment out option is described below in "Step 1", but you can make it even easier on yourself by adding the MySQL commands to <code>moodle/lib/db/upgrade.php</code> so the data conversion occurs automagically and then drops the unnecessary tables.
+</p><p>To set up automatic conversion, unzip the latest version of Moodle 1.9.x and open the new <code>moodle/lib/db/upgrade.php</code> file in your favorite text editor.  Find the code indicated in the table below and replace it with the replacement code listed.  Save the file, make sure you have backed up your MySQL database, copied <code>moodle/config.php</code> from your previous Moodle folder into the new Moodle folder, and changed the names of the folders so the new Moodle folder has the name Moodle will be looking for.  Finally, using your web browser go to <code>&lt;your moodle path&gt;/admin</code> to begin the upgrade process.
+</p><p>Text to be replaced in <code>moodle/lib/db/upgrade.php</code> (approximately lines 2555 - 2570):
+</p>
+<pre>/// drop old gradebook tables
+    if ($result &amp;&amp; $oldversion &lt; 2007100903) {
+        $tables = array('grade_category',
+                        'grade_item',
+                        'grade_letter',
+                        'grade_preferences',
+                        'grade_exceptions');
+
+        foreach ($tables as $table) {
+            $table = new XMLDBTable($table);
+            if (table_exists($table)) {
+                drop_table($table);
+            }
+        }
+
+        upgrade_main_savepoint($result, 2007100903);
+    }
+</pre>
+<p>Text to put in its place:
+</p>
+<pre>///Convert GradebookPlus v2 data, then drop old gradebook tables
+    if ($result &amp;&amp; $oldversion &lt; 2007100903) {
+
+        {
+            ///Add all of the grade_events to grade_items
+            $sql = "INSERT INTO {$CFG-&gt;prefix}grade_items (courseid, categoryid, itemname, itemtype, 
+                iteminfo, idnumber, grademax, grademin, timecreated, timemodified) SELECT gi.courseid 
+                as courseid, gi.category as categoryid, ge.name as itemname, 'manual' as itemtype, 
+                ge.description as iteminfo, concat('GBE-',ge.id) as idnumber, ge.grade as grademax, 
+                0 as grademin, ge.timemodified as timecreated, ge.timemodified as timemodified 
+                FROM {$CFG-&gt;prefix}grade_item as gi, {$CFG-&gt;prefix}grade_events as ge 
+                WHERE gi.courseid=ge.course AND gi.modid=0 AND gi.cminstance=ge.id"; 
+            execute_sql($sql);
+
+            ///Replace the old categoryid with the new categoryid (where possible) 
+            $sql = "UPDATE {$CFG-&gt;prefix}grade_items as gi LEFT JOIN ({$CFG-&gt;prefix}grade_category 
+                as gc) ON (gi.categoryid=gc.id) LEFT JOIN ({$CFG-&gt;prefix}grade_categories as gcs) 
+                ON (gi.courseid=gcs.courseid AND gc.name=gcs.fullname) SET gi.categoryid = gcs.id, 
+                gi.idnumber=replace(gi.idnumber,'GBE','GBI') WHERE gi.idnumber LIKE 'GBE%'"; 
+            execute_sql($sql);
+
+            ///Assign a generic categoryid for any thing that was not categorized 
+            $sql = "UPDATE {$CFG-&gt;prefix}grade_items as gi LEFT JOIN ({$CFG-&gt;prefix}grade_categories 
+                as gcs) ON (gi.courseid=gcs.courseid AND gcs.parent IS NULL) 
+                SET gi.categoryid = gcs.id WHERE gi.idnumber LIKE 'GBI%' AND gi.categoryid IS NULL"; 
+            execute_sql($sql);
+ 
+            ///Double-checking categories
+            $sql = "INSERT INTO {$CFG-&gt;prefix}grade_categories (courseid, depth, fullname, 
+                timecreated, timemodified) SELECT DISTINCT courseid, 1 as depth, 
+                'Course grade category' as fullname, unix_timestamp() as timecreated, 
+                unix_timestamp() as timemodified FROM {$CFG-&gt;prefix}grade_items WHERE idnumber 
+                LIKE 'GBI%' AND categoryid IS NULL"; 
+            execute_sql($sql);
+
+            ///Add the path 
+            $sql = "UPDATE {$CFG-&gt;prefix}grade_categories SET path = concat('/',id,'/') WHERE path 
+                IS NULL AND depth=1"; 
+            execute_sql($sql);
+
+            ///Populate the previously NULL categoryids
+            $sql = "UPDATE {$CFG-&gt;prefix}grade_items as gi LEFT JOIN ({$CFG-&gt;prefix}grade_categories 
+                as gcs) ON (gi.courseid=gcs.courseid AND gcs.parent IS NULL) SET gi.categoryid = 
+                gcs.id WHERE gi.idnumber LIKE 'GBI%' AND gi.categoryid IS NULL"; 
+            execute_sql($sql);
+
+            ///Copy scores from old tables into new tables 
+            $sql = "INSERT INTO {$CFG-&gt;prefix}grade_grades (itemid, userid, usermodified, finalgrade, 
+                timecreated, timemodified) SELECT gi.id as itemid, geg.userid as userid, geg.teacher 
+                as usermodified, geg.grade as finalgrade, geg.timemarked as timecreated, 
+                geg.timemarked as timemodified FROM {$CFG-&gt;prefix}grade_events_grades as geg, 
+                {$CFG-&gt;prefix}grade_items as gi WHERE replace(gi.idnumber,'GBI-','')=geg.event"; 
+            execute_sql($sql);
+
+            ///Set aggregation within each category to simple weighted mean
+            $sql = "UPDATE {$CFG-&gt;prefix}grade_categories SET aggregation = 11 WHERE depth&nbsp;!= 1"; 
+            execute_sql($sql);
+        }
+        
+        $tables = array('grade_category',
+                        'grade_item',
+                        'grade_letter',
+                        'grade_preferences',
+                        'grade_exceptions');
+
+        foreach ($tables as $table) {
+            $table = new XMLDBTable($table);
+            if (table_exists($table)) {
+                drop_table($table);
+            }
+        }
+
+        upgrade_main_savepoint($result, 2007100903);
+    }
+</pre>
+<p>That should do it!  Do be aware, however, that the new ability to ignore blank grades will change averages if it is used.  Also, extra credit is pretty much broken so extra credit assignments and assignments with scores in excess of 100% will now affect the grades differently.
+</p>
+<h3><span class="mw-headline" id="Step_1--Install_Moodle_1.9">Step 1--Install Moodle 1.9</span></h3>
+<p>If you prefer to do the conversion manually, you must first preserve your GBPv2 data through the upgrade process.  Before you log into Moodle with your web browser (to start the upgrade process) edit <code>moodle/lib/db/upgrade.php</code> and comment out (or delete if you prefer) the lines that drop the gradebook tables quoted below.  They should be approximately lines 2555 - 2570:
+</p>
+<pre>    if ($result &amp;&amp; $oldversion &lt; 2007100903) {
+        $tables = array('grade_category',
+                        'grade_item',
+                        'grade_letter',
+                        'grade_preferences',
+                        'grade_exceptions');
+
+        foreach ($tables as $table) {
+            $table = new XMLDBTable($table);
+            if (table_exists($table)) {
+                drop_table($table);
+            }
+        }
+
+        upgrade_main_savepoint($result, 2007100903);
+    }
+</pre>
+<p>After making the edit, complete your installation (the conversion of files that Moodle does this the first time you log in after installing the new files) and move on to step 2.
+</p>
+<h3><span class="mw-headline" id="Step_2--Convert_Database_with_MySQL_Commands">Step 2--Convert Database with MySQL Commands</span></h3>
+<p>Using your favorite MySQL tool (I recommend installing <a rel="nofollow" class="external text" href="http://moodle.org/mod/data/view.php?d=13&amp;rid=448">MySQL Admin</a> which is <a rel="nofollow" class="external text" href="https://www.phpmyadmin.net/home_page/index.php">phpMyAdmin</a> adapted for Moodle) run each of the following commands on your Moodle database.  Note that the commands below assume that you used mdl_ as the prefix for your Moodle tables.  If you did not, then you will need to change all table names accordingly.  At the end of this document, all of these commands are placed together so you can copy and paste the entire set of commands in one action.
+</p>
+<h4><span class="mw-headline" id="Add_all_of_the_grade_events_to_grade_items">Add all of the grade_events to grade_items</span></h4>
+<dl><dd><table border="1">
+
+<tbody><tr>
+<td style="background:azure; color:black">INSERT INTO mdl_grade_items (courseid, categoryid, itemname, itemtype, iteminfo, idnumber, grademax, grademin, timecreated, timemodified) SELECT gi.courseid as courseid, gi.category as categoryid, ge.name as itemname, 'manual' as itemtype, ge.description as iteminfo, concat('GBE-',ge.id) as idnumber, ge.grade as grademax, 0 as grademin, ge.timemodified as timecreated, ge.timemodified as timemodified FROM mdl_grade_item as gi, mdl_grade_events as ge WHERE gi.courseid=ge.course AND gi.modid=0 AND gi.cminstance=ge.id;
+</td></tr>
+</tbody></table></dd></dl>
+<h4><span id="Replace_the_old_categoryid_with_the_new_categoryid_.28where_possible.29"></span><span class="mw-headline" id="Replace_the_old_categoryid_with_the_new_categoryid_(where_possible)">Replace the old categoryid with the new categoryid (where possible)</span></h4>
+<dl><dd><table border="1">
+
+<tbody><tr>
+<td style="background:azure; color:black">UPDATE mdl_grade_items as gi LEFT JOIN (mdl_grade_category as gc) ON (gi.categoryid=gc.id) LEFT JOIN (mdl_grade_categories as gcs) ON (gi.courseid=gcs.courseid AND gc.name=gcs.fullname) SET gi.categoryid = gcs.id, gi.idnumber=replace(gi.idnumber,'GBE','GBI') WHERE gi.idnumber LIKE 'GBE%';
+</td></tr>
+</tbody></table></dd></dl>
+<h4><span id="Assign_a_generic_categoryid_for_any_thing_that_was_not_categorized_.28it_is_presumed_that_the_grade_event_was_not_previously_categorised_in_the_course_it_was_in.29"></span><span class="mw-headline" id="Assign_a_generic_categoryid_for_any_thing_that_was_not_categorized_(it_is_presumed_that_the_grade_event_was_not_previously_categorised_in_the_course_it_was_in)">Assign a generic categoryid for any thing that was not categorized (it is presumed that the grade event was not previously categorised in the course it was in)</span></h4>
+<dl><dd><table border="1">
+
+<tbody><tr>
+<td style="background:azure; color:black">UPDATE mdl_grade_items as gi  LEFT JOIN (mdl_grade_categories as gcs)  ON (gi.courseid=gcs.courseid AND gcs.parent IS NULL) SET gi.categoryid = gcs.id WHERE gi.idnumber LIKE 'GBI%' AND gi.categoryid IS NULL;
+</td></tr>
+</tbody></table></dd></dl>
+<p>-- I still had 2 items that were not categorised and would suggest creating the records in mdl_grade_categories and re-running the query above
+</p>
+<h4><span class="mw-headline" id="Double-checking_categories">Double-checking categories</span></h4>
+<dl><dd><table border="1">
+
+<tbody><tr>
+<td style="background:azure; color:black">INSERT INTO mdl_grade_categories (courseid, depth, fullname, timecreated, timemodified) SELECT DISTINCT courseid, 1 as depth, 'Course grade category' as fullname, unix_timestamp() as timecreated, unix_timestamp() as timemodified FROM mdl_grade_items WHERE idnumber LIKE 'GBI%' AND categoryid IS NULL;
+</td></tr>
+</tbody></table></dd></dl>
+<h5><span class="mw-headline" id="Add_the_path">Add the path</span></h5>
+<p>-- There may be a way to do this above but I do not know how to do it with the auto incrementing id field so I let it first insert the record and then I use the data
+</p>
+<dl><dd><table border="1">
+
+<tbody><tr>
+<td style="background:azure; color:black">UPDATE mdl_grade_categories SET path = concat('/',id,'/') WHERE path IS NULL AND depth=1;
+</td></tr>
+</tbody></table></dd></dl>
+<h4><span class="mw-headline" id="Populate_the_previously_NULL_categoryids">Populate the previously NULL categoryids</span></h4>
+<dl><dd><table border="1">
+
+<tbody><tr>
+<td style="background:azure; color:black">UPDATE mdl_grade_items as gi  LEFT JOIN (mdl_grade_categories as gcs) ON (gi.courseid=gcs.courseid AND gcs.parent IS NULL) SET gi.categoryid = gcs.id WHERE gi.idnumber LIKE 'GBI%' AND gi.categoryid IS NULL;
+</td></tr>
+</tbody></table></dd></dl>
+<p>-- I have used the grade event (1.8) id field concatenated with the GBE- string as the id number to easily identify the items as GBP items. After assigning a category the idnumber becomes GBI- even if it is NULL. This will also facilitate linking the items (1.9) and assigning the grades from events_grades to grade_grades.
+-- OK - now that hopefully all of the grade events have been turned into grade items and the new categories have been found or assigned let us go ahead and attempt to pull the grades over.
+</p>
+<h4><span class="mw-headline" id="Copy_scores_from_old_tables_into_new_tables">Copy scores from old tables into new tables</span></h4>
+<dl><dd><table border="1">
+
+<tbody><tr>
+<td style="background:azure; color:black">INSERT INTO mdl_grade_grades (itemid, userid, usermodified, finalgrade, timecreated, timemodified)  SELECT gi.id as itemid, geg.userid as userid, geg.teacher as usermodified, geg.grade as finalgrade, geg.timemarked as timecreated, geg.timemarked as timemodified FROM mdl_grade_events_grades as geg, mdl_grade_items as gi WHERE replace(gi.idnumber,'GBI-','')=geg.event;
+</td></tr>
+</tbody></table></dd></dl>
+<p>I have tested these queries on production data on a test server and it seems to work for me; however, I suspect there are other cases out there for which this may not be a total solution but my hope is that it is at least a step in the right direction. For those who are chomping at the bit, if you could test this with some production data on a test server and report back that would be most helpful. I appreciate any feedback, questions, critiques, etc. Peace - Anthony
+</p>
+<h4><span class="mw-headline" id="Issues_with_grade_aggregation">Issues with grade aggregation</span></h4>
+<p>Grade aggregation is fine if teachers selected to "Use Percent" to assign letter grade&mdash;all assignments and categories will be switched to "Simple Mean of Grades" and the calculated grade will be unchanged.  However, if teachers selected "Use Weight" to assign letter grade, all assignments and categories for the class will be set to "Weighted Mean of Grades" but all assignments will have a null weighting factor.
+</p><p>Based on the original suggestion by <a rel="nofollow" class="external text" href="http://moodle.org/user/view.php?id=5845&amp;course=5">Bob Puffer</a>, the following should fix grade aggregation problems:
+</p><p>First, set all assignments and categories that are NOT the course grade to "Simple Weighted Mean of Grade" with the MySQL command below:
+</p>
+<dl><dd><table border="1">
+
+<tbody><tr>
+<td style="background:azure; color:black">UPDATE mdl_grade_categories SET aggregation = 11 WHERE depth&nbsp;!= 1;
+</td></tr>
+</tbody></table></dd></dl>
+<p>It is now necessary to force Moodle to reaggregate grades.  This can be accomplished with the following steps:
+</p>
+<ol><li>Go into <b>Site Administration-&gt;Grades-&gt;General Settings</b></li>
+<li>Toggle the "Include Scales in Aggregation" checkbox on or off</li>
+<li>Save Changes. It will take a while for grades in the system to recalculate.</li>
+<li>Toggle the "Include Scales in Aggregation" back to its original position before step 3</li>
+<li>Save Changes again.</li></ol>
+<h3><span class="mw-headline" id="Summary_of_SQL_Commands_for_Migration_from_GBPv2_in_Moodle_1.8_to_Moodle_1.9">Summary of SQL Commands for Migration from GBPv2 in Moodle 1.8 to Moodle 1.9</span></h3>
+<p>For the brave (but not brave enough to let upgrade.php do the work for you), here are all of the SQL commands combined so you can copy and paste just once:
+</p>
+<pre>INSERT INTO mdl_grade_items (courseid, categoryid, itemname, itemtype, iteminfo, idnumber, grademax, grademin, timecreated, timemodified) SELECT gi.courseid as courseid, gi.category as categoryid, ge.name as itemname, 'manual' as itemtype, ge.description as iteminfo, concat('GBE-',ge.id) as idnumber, ge.grade as grademax, 0 as grademin, ge.timemodified as timecreated, ge.timemodified as timemodified FROM mdl_grade_item as gi, mdl_grade_events as ge WHERE gi.courseid=ge.course AND gi.modid=0 AND gi.cminstance=ge.id; 
+UPDATE mdl_grade_items as gi LEFT JOIN (mdl_grade_category as gc) ON (gi.categoryid=gc.id) LEFT JOIN (mdl_grade_categories as gcs) ON (gi.courseid=gcs.courseid AND gc.name=gcs.fullname) SET gi.categoryid = gcs.id, gi.idnumber=replace(gi.idnumber,'GBE','GBI') WHERE gi.idnumber LIKE 'GBE%';
+UPDATE mdl_grade_items as gi LEFT JOIN (mdl_grade_categories as gcs) ON (gi.courseid=gcs.courseid AND gcs.parent IS NULL) SET gi.categoryid = gcs.id WHERE gi.idnumber LIKE 'GBI%' AND gi.categoryid IS NULL; 
+INSERT INTO mdl_grade_categories (courseid, depth, fullname, timecreated, timemodified) SELECT DISTINCT courseid, 1 as depth, 'Course grade category' as fullname, unix_timestamp() as timecreated, unix_timestamp() as timemodified FROM mdl_grade_items WHERE idnumber LIKE 'GBI%' AND categoryid IS NULL; 
+UPDATE mdl_grade_categories SET path = concat('/',id,'/') WHERE path IS NULL AND depth=1;
+UPDATE mdl_grade_items as gi LEFT JOIN (mdl_grade_categories as gcs) ON (gi.courseid=gcs.courseid AND gcs.parent IS NULL) SET gi.categoryid = gcs.id WHERE gi.idnumber LIKE 'GBI%' AND gi.categoryid IS NULL; 
+INSERT INTO mdl_grade_grades (itemid, userid, usermodified, finalgrade, timecreated, timemodified) SELECT gi.id as itemid, geg.userid as userid, geg.teacher as usermodified, geg.grade as finalgrade, geg.timemarked as timecreated, geg.timemarked as timemodified FROM mdl_grade_events_grades as geg, mdl_grade_items as gi WHERE replace(gi.idnumber,'GBI-','')=geg.event; 
+UPDATE mdl_grade_categories SET aggregation = 11 WHERE depth&nbsp;!= 1;
+</pre>
+<!-- 
+NewPP limit report
+Cached time: 20260823020423
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.016 seconds
+Real time usage: 0.021 seconds
+Preprocessor visited node count: 101/1000000
+Post&#8208;expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 9344/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:3382-0!canonical and timestamp 20260823020423 and revision id 143613. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Gradebookplus&amp;oldid=143613">https://docs.moodle.org/502/en/index.php?title=Gradebookplus&amp;oldid=143613</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="27cec39c9633dd48770872338440a43c.html" title="Category:Contributed code">Contributed code</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdjd5dsyw">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjd5dtcf"></button>
+					<div class="collapse navbar-collapse igdjd5dtcf" id="igdjd5dtcf">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Gradebookplus" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Gradebookplus" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Gradebookplus&amp;oldid=143613" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Gradebookplus&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 9 June 2022, at 14:56.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":202,"wgPageParseReport":{"limitreport":{"cputime":"0.016","walltime":"0.021","ppvisitednodes":{"value":101,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":9344,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260823020423","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

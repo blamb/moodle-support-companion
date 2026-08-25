@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Backup and restore FAQ - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"4fc44f9ea4ca1f0e4290d201","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Backup_and_restore_FAQ","wgTitle":"Backup and restore FAQ","wgCurRevisionId":154741,"wgRevisionId":154741,"wgArticleId":1585,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Backup","FAQ"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Backup_and_restore_FAQ","wgRelevantArticleId":1585,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="c86f4931be931ca80f947773b7309feb.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.page.gallery.styles%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Backup_and_restore_FAQ">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Backup_and_restore_FAQ rootpage-Backup_and_restore_FAQ layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhlk544m"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhlk544m" id="igdhlk544m">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Backup+and+restore+FAQ" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Backup_and_restore_FAQ">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Backup_and_restore_FAQ">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Backup_and_restore_FAQ">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="c2a342a5b913497746e49976cdc22342.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Backup_and_restore_FAQ" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Backup_and_restore_FAQ&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Backup_and_restore_FAQ&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Backup and restore FAQ</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a>  ► <a href="b3fe4983408ca4b6871be863fef334b5.html" title="Backup">Backup</a>  ►  <a class="mw-selflink selflink">Backup and restore FAQ</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="b3fe4983408ca4b6871be863fef334b5.html" title="Backup">Backup</a></div>	
+<div class="content">
+<ul><li><a href="9a7509e03babc1def9f404e05acd8435.html" title="Site backup">Site backup</a></li>
+<li><a href="d1b446b10a0e278070a3a2b68ec3de60.html" title="Course backup">Course backup</a></li>
+<li><a href="ccfeb94fb0acbb1d2ac9e0729704e1d2.html" title="Course copy">Course copy</a></li>
+<li><a href="8ed54550c139400f0c10a941cfad4b31.html" title="Course restore">Course restore</a></li>
+<li><a href="d06ad6961a670c6f02617c2c5602a8dc.html" title="Automated course backup">Automated course backup</a></li>
+<li><a href="75555cb349aa9417f0faeda463cbc4f8.html" title="Year-end procedures">Year-end procedures</a></li>
+<li><a href="2ef040d98eafb25aff4e580a77003cff.html" title="Context freezing">Context freezing</a></li>
+<li><a href="44993ab3f5a9a5fac312fb872d5c4b6c.html" title="IMS Common Cartridge import and export">IMS CC import and export</a></li>
+<li><a class="mw-selflink selflink">Backup FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#How_do_I_backup_a_course?"><span class="tocnumber">1</span> <span class="toctext">How do I backup a course?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#How_do_I_restore_a_course?"><span class="tocnumber">2</span> <span class="toctext">How do I restore a course?</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#How_do_I_backup_my_site?"><span class="tocnumber">3</span> <span class="toctext">How do I backup my site?</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#What_are_the_pros_and_cons_of_course_versus_site_backups?"><span class="tocnumber">4</span> <span class="toctext">What are the pros and cons of course versus site backups?</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#What_data_is_not_contained_in_course_backups?"><span class="tocnumber">5</span> <span class="toctext">What data is not contained in course backups?</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#How_do_I_fix_backups_that_lack_the_student_log_and_participation_data?"><span class="tocnumber">6</span> <span class="toctext">How do I fix backups that lack the student log and participation data?</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#How_do_I_fix_backups_that_lack_the_student_grade_history?"><span class="tocnumber">7</span> <span class="toctext">How do I fix backups that lack the student grade history?</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#How_do_I_fix_backups_that_remain_as_'Backup_in_progress'_and_don't_complete?"><span class="tocnumber">8</span> <span class="toctext">How do I fix backups that remain as 'Backup in progress' and don't complete?</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#What_do_the_backup_file_names_mean?"><span class="tocnumber">9</span> <span class="toctext">What do the backup file names mean?</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#How_can_I_backup_or_restore_a_very_large_course?"><span class="tocnumber">10</span> <span class="toctext">How can I backup or restore a very large course?</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#The_process_ends_with:_%22Error:_An_error_occurred_deleting_old_backup_data%22._What_should_I_do?"><span class="tocnumber">11</span> <span class="toctext">The process ends with: "Error: An error occurred deleting old backup data". What should I do?</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#The_process_ends_with:_%22XML_error:_not_well-formed_(invalid_token)_at_line_YYYY%22._What_can_I_do?"><span class="tocnumber">12</span> <span class="toctext">The process ends with: "XML error: not well-formed (invalid token) at line YYYY". What can I do?</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#I_Still_get_an_XML_error._How_can_I_clean_the_borked_XML_file?"><span class="tocnumber">13</span> <span class="toctext">I Still get an XML error. How can I clean the borked XML file?</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#What_does_%22Some_of_your_courses_weren't_saved!!%22_mean?"><span class="tocnumber">14</span> <span class="toctext">What does "Some of your courses weren't saved!!" mean?</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Why_are_some_courses_being_skipped?"><span class="tocnumber">15</span> <span class="toctext">Why are some courses being skipped?</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Why_does_restore_stop,_rather_than_completing?"><span class="tocnumber">16</span> <span class="toctext">Why does restore stop, rather than completing?</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Restore_stops_with_the_message_%22Trying_to_restore_user_xxxx_from_backup_file_will_cause_conflict%22"><span class="tocnumber">17</span> <span class="toctext">Restore stops with the message "Trying to restore user xxxx from backup file will cause conflict"</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Restored_users_lose_their_passwords_-_How_can_they_reset_them?"><span class="tocnumber">18</span> <span class="toctext">Restored users lose their passwords - How can they reset them?</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Why_are_certain_course_links_broken_in_a_restored_course?"><span class="tocnumber">19</span> <span class="toctext">Why are certain course links broken in a restored course?</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Restoring_a_course_results_in_broken_HTML_tags._What_can_I_do?"><span class="tocnumber">20</span> <span class="toctext">Restoring a course results in broken HTML tags. What can I do?</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#How_can_I_extract_original_files_from_a_Moodle_backup_file?"><span class="tocnumber">21</span> <span class="toctext">How can I extract original files from a Moodle backup file?</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#MySQL_dmlwriteexception_error_when_restoring_a_course"><span class="tocnumber">22</span> <span class="toctext">MySQL dmlwriteexception error when restoring a course</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#What_is_the_default_format_used_in_Moodle_backup_files?"><span class="tocnumber">23</span> <span class="toctext">What is the default format used in Moodle backup files?</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Any_further_questions?"><span class="tocnumber">24</span> <span class="toctext">Any further questions?</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#See_also"><span class="tocnumber">25</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span id="How_do_I_backup_a_course.3F"></span><span class="mw-headline" id="How_do_I_backup_a_course?">How do I backup a course?</span></h2>
+<p>See <a href="d1b446b10a0e278070a3a2b68ec3de60.html" title="Course backup">Course backup</a> and <a href="faecb5288745bba952a57aedab69c463.html" class="mw-redirect" title="Automated backup setup">Automated backup setup</a>. 
+</p>
+<h2><span id="How_do_I_restore_a_course.3F"></span><span class="mw-headline" id="How_do_I_restore_a_course?">How do I restore a course?</span></h2>
+<p>See <a href="8ed54550c139400f0c10a941cfad4b31.html" title="Course restore">Course restore</a>.
+</p>
+<h2><span id="How_do_I_backup_my_site.3F"></span><span class="mw-headline" id="How_do_I_backup_my_site?">How do I backup my site?</span></h2>
+<p>See <a href="9a7509e03babc1def9f404e05acd8435.html" title="Site backup">Site backup</a>.
+</p>
+<h2><span id="What_are_the_pros_and_cons_of_course_versus_site_backups.3F"></span><span class="mw-headline" id="What_are_the_pros_and_cons_of_course_versus_site_backups?">What are the pros and cons of course versus site backups?</span></h2>
+<p><a href="9a7509e03babc1def9f404e05acd8435.html" title="Site backup">Site backups</a> are recommended in order to have all data saved with the best confidence and the shortest recovery time.
+</p><p>For a site administrator, <a href="d06ad6961a670c6f02617c2c5602a8dc.html" title="Automated course backup">automated course backups</a> are more expensive in terms of time, CPU usage and storage. The recovery time to have a site running again takes longer than a site backup. However, teachers and site administrators might find a course backups as a way to create a "fresh" copy of a course that can be re-used (in older versions of Moodle, in newer versions see <a href="40d3abdacaac2938479cd2d59d1de0e7.html" title="Import course data">Import course data</a>) or as a method to distribute a course(s) to other Moodle sites.
+</p>
+<h2><span id="What_data_is_not_contained_in_course_backups.3F"></span><span class="mw-headline" id="What_data_is_not_contained_in_course_backups?">What data is not contained in course backups?</span></h2>
+<p>By selecting all the options when setting up the backup you can include almost all the data in the course. However you should be aware of the fact that some things are not backed up:
+</p>
+<ul><li>Quiz questions are only backed up if at least one question from their category has been added to a quiz.</li>
+<li>Scales are only backed up if they are used by at least one activity.</li>
+<li>Users' passwords are not backed up when the "Include enrolled users" option is selected.</li>
+<li>Glossary data</li>
+<li>Badges - if they have not been awarded to at least one user and users are not included in the course backup.</li></ul>
+<h2><span id="How_do_I_fix_backups_that_lack_the_student_log_and_participation_data.3F"></span><span class="mw-headline" id="How_do_I_fix_backups_that_lack_the_student_log_and_participation_data?">How do I fix backups that lack the student log and participation data?</span></h2>
+<p>In <i>Site administration &gt; Courses &gt; Backups &gt; General backup defaults</i>, there is a setting for "Include logs." By default, this is off.
+</p><p>If you enable this, then the logs from the user activities can be saved as the option "Include course logs" will now appear on the backup menu of items to include in the backup. These logs provide the data that the various reports such as Course participation, Logs, and Activity report, use to produce their reports.
+</p>
+<h2><span id="How_do_I_fix_backups_that_lack_the_student_grade_history.3F"></span><span class="mw-headline" id="How_do_I_fix_backups_that_lack_the_student_grade_history?">How do I fix backups that lack the student grade history?</span></h2>
+<p>In <i>Site administration &gt; Courses &gt; Backups &gt; General backup defaults</i>, there is a setting for "Include histories." By default, this is off.
+</p><p>If you enable this, then the logs from the user grade history and its changes made by teachers manually or by certain activities can be saved when performing a Backup. The option "Include grade history" will now appear on the backup menu of items to include in the backup.
+</p>
+<h2><span id="How_do_I_fix_backups_that_remain_as_.27Backup_in_progress.27_and_don.27t_complete.3F"></span><span class="mw-headline" id="How_do_I_fix_backups_that_remain_as_'Backup_in_progress'_and_don't_complete?">How do I fix backups that remain as 'Backup in progress' and don't complete?</span></h2>
+<ul><li>In most cases the fix is running the Moodle <a href="37fc181470a569556f94c1f35940d0a7.html" title="Cron">Cron</a> process, which shoul be running regularly.</li></ul>
+<ul><li>If the [Cron]] didn't fix the problem, the might be some tasks that are not running  correctly, and they might report some type of error when thy run. These errors can be seen from the terminal as a result of the <a href="9fed8aed6bd20d84147ad0ceb0ed4567.html" class="mw-redirect" title="cron">cron</a> running. In the graphic interface the errors can be seen in  /report/status/  y there you may find information about how to fix the errors.</li></ul>
+<ul><li>One error that can stop the backup of a course is caused because H5P content types can not be downloaded.</li></ul>
+<ul class="gallery mw-gallery-traditional">
+		<li class="gallerybox" style="width: 155px">
+			<div class="thumb" style="width: 150px; height: 150px;"><span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Error_al_descargar_tipos_de_contenido_H5P.jpg" class="mw-file-description" title="Error al descargar tipos de contenido H5P"><img alt="Error al descargar tipos de contenido H5P" src="images_en/thumb/f/f7/Error_al_descargar_tipos_de_contenido_H5P.jpg/975ba179661563f26d9351de09dd2bc5.jpg" decoding="async" width="120" height="50" class="mw-file-element" srcset="/502/en/images_en/thumb/f/f7/Error_al_descargar_tipos_de_contenido_H5P.jpg/180px-Error_al_descargar_tipos_de_contenido_H5P.jpg 1.5x, /502/en/images_en/thumb/f/f7/Error_al_descargar_tipos_de_contenido_H5P.jpg/240px-Error_al_descargar_tipos_de_contenido_H5P.jpg 2x" data-file-width="1600" data-file-height="668"></a></span></div>
+			<div class="gallerytext">Error al descargar tipos de contenido H5P</div>
+		</li>
+</ul>
+<p><br>
+</p>
+<ul><li>If, after taking the previous steps, the course backups remain unfinished, one solutin might be to clear the records of these pending tasks in the mdl_backup_controllers table in the database. You are strongly advised to make a backup of your database BEFORE making changes in it.</li></ul>
+<h2><span id="What_do_the_backup_file_names_mean.3F"></span><span class="mw-headline" id="What_do_the_backup_file_names_mean?">What do the backup file names mean?</span></h2>
+<p>The default backup file name is composed of the following parts:
+</p>
+<ul><li>backup-moodle2- &nbsp;:: This tells you that it is backup file of version 2 backup, which have been used since Moodle 2.0, and so it not a Moodle 1 backup file</li>
+<li>course-##- &nbsp;::  This tells you it is a course backup and the ## is the internal id number of the course, as seen in the course url</li>
+<li>shortname- &nbsp;:: Then follows the shortname of the course as set in the course settings</li>
+<li>date-time- &nbsp;::  This is the date and time in ISO format when the backup was made</li>
+<li>nu-nf &nbsp;::  optional suffixes: If the backup does not contain enrolled users, the -nu will be added; if the backup does not include files, the -nf will be added</li>
+<li>.mbz &nbsp;:: The file extension stands for "Moodle backup zip" and you can rename to .zip or .gzip (depending on your server OS) to expand it</li></ul>
+<p>Example: backup-moodle2-course-27-HISTORY101-20210124-0916-nu-nf.mbz
+</p><p>Deciphered: This is a backup file from Moodle 2 or above of course with id 27 with shortname HISTORY-101 made on Jan 24, 2021 at 09:16 AM with no enrolled users and no files included in it.
+</p>
+<h2><span id="How_can_I_backup_or_restore_a_very_large_course.3F"></span><span class="mw-headline" id="How_can_I_backup_or_restore_a_very_large_course?">How can I backup or restore a very large course?</span></h2>
+<p>See Backup via CLI in <a href="d1b446b10a0e278070a3a2b68ec3de60.html" title="Course backup">Course backup</a> and Restore via CLI in <a href="8ed54550c139400f0c10a941cfad4b31.html" title="Course restore">Course restore</a>.
+</p>
+<h2><span id="The_process_ends_with:_.22Error:_An_error_occurred_deleting_old_backup_data.22._What_should_I_do.3F"></span><span class="mw-headline" id='The_process_ends_with:_"Error:_An_error_occurred_deleting_old_backup_data"._What_should_I_do?'>The process ends with: "Error: An error occurred deleting old backup data". What should I do?</span></h2>
+<p>This part of the backup (or restore) procedure tries to delete old info, used in previous executions, performing the following tasks:
+</p>
+<ol><li>Delete old records from "backup_ids" table: Check the table exists, repair it and try again.</li>
+<li>Delete old records from "backup_files" table: Check the table exists, repair it and try again.</li>
+<li>Delete old files from "moodledata/temp/backup": Delete the dir completely and try again.</li></ol>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:BackupProblem.gif" class="mw-file-description"><img src="images_en/thumb/5/5f/BackupProblem.gif/a845276920fa98e11dd12f8128cfeda3.gif" decoding="async" width="300" height="91" class="mw-file-element" srcset="/502/en/images_en/thumb/5/5f/BackupProblem.gif/450px-BackupProblem.gif 1.5x, /502/en/images_en/thumb/5/5f/BackupProblem.gif/600px-BackupProblem.gif 2x" data-file-width="762" data-file-height="231"></a><figcaption>Backup error message</figcaption></figure>
+<p>For points 1 &amp; 2, there are various ways of repairing tables, including using MySQL Admin.
+</p><p>For point 3 see below:
+</p><p>The error message states that the "directory not empty" and gives the path to that directory. If you go there with an FTP program you can see what is there and clean up. It could be just some empty subfolders that were leftover. Deleting these has been able to help. One can also delete the dir "moodledata/temp/backup" completely. That can take a bit longer but may solve several problems at once.
+</p>
+<h2><span id="The_process_ends_with:_.22XML_error:_not_well-formed_.28invalid_token.29_at_line_YYYY.22._What_can_I_do.3F"></span><span class="mw-headline" id='The_process_ends_with:_"XML_error:_not_well-formed_(invalid_token)_at_line_YYYY"._What_can_I_do?'>The process ends with: "XML error: not well-formed (invalid token) at line YYYY". What can I do?</span></h2>
+<p>This problem can appear at any point in the restore process. It's caused when the XML parser detects something incorrect in the backup file that prevent correct operation. Usually, it's caused by some "illegal" characters added in the original course due to some copy/paste of text containing them (control characters, or invalid sequences...).
+</p><p>The best method to handle this issue is:
+</p>
+<ul><li>Unzip the problematic backup file under one empty folder.</li></ul>
+<ul><li>Open the moodle.xml with Firefox. It will show you where (exact char) the problem is happening.</li></ul>
+<ul><li>Edit the moodle.xml file with some UTF8-compatible editor and delete such characters. Save changes.</li></ul>
+<ul><li>Test the moodle.xml file again with Firefox until no error was displayed.</li></ul>
+<ul><li>Zip everything again (all the folder contents but not the folder itself!).</li></ul>
+<ul><li>Restore the course. It should work now.</li></ul>
+<ul><li>Restore still not working? See the next question.</li></ul>
+<p>Also, if possible, it's highly recommended to solve those problems in the original course too from Moodle itself. Once "repaired" there, problems will be out if you create new backup files in the future.
+</p>
+<h2><span id="I_Still_get_an_XML_error._How_can_I_clean_the_borked_XML_file.3F"></span><span class="mw-headline" id="I_Still_get_an_XML_error._How_can_I_clean_the_borked_XML_file?">I Still get an XML error. How can I clean the borked XML file?</span></h2>
+<p>In some cases XML backup files may contain characters causing the restore process to abort, even after the steps described in the previous question. In such cases you may want to try the following:
+</p>
+<ul><li>Download the <a rel="nofollow" class="external text" href="https://confluence.atlassian.com/jira/files/12079/atlassian-xml-cleaner-0.1.jar">Atlassian XML Cleaner Utility</a> from the <a rel="nofollow" class="external text" href="http://confluence.atlassian.com/display/JIRA/Removing+invalid+characters+from+XML+backups">JIRA Atlassian site</a>.</li></ul>
+<ul><li>Unzip the problematic Moodle backup file under one empty folder. Moodle will create the course file folders as long as the unclean moodle.xml file. Please unzip using the Moodle unzip feature.</li></ul>
+<ul><li>Rename the unclean moodle.xml file to moodle-unclean.xml.</li></ul>
+<ul><li>If you don't have access to your Moodle server's command prompt, using the Moodle zip feature, zip the moodle-unclean.xml file only, download the zip file locally and unzip it. It is very important to download the xml file in zipped format to avoid unwanted character encoding when transferring from an operating system to another.</li></ul>
+<ul><li>Move the downloaded Atlassian XML Cleaner Utility in the same folder where is your moodle-unclean.xml file.</li></ul>
+<ul><li>Issue the following command from the command prompt:</li></ul>
+<pre>java -jar atlassian-xml-cleaner-0.1.jar moodle-unclean.xml &gt; moodle.xml
+</pre>
+<ul><li>If you launched the utility on your local computer, zip the just created (and hopefully cleaned) moodle.xml file and upload it in the same place from where you downloaded the moodle-unclean.xml file. Once uploaded, unzip it using the Moodle unzip feature.</li></ul>
+<ul><li>Zip everything again (all the folder contents but the folder itself!).</li></ul>
+<ul><li>Restore the course. It should work now.</li></ul>
+<h2><span id="What_does_.22Some_of_your_courses_weren.27t_saved.21.21.22_mean.3F"></span><span class="mw-headline" id="What_does_&quot;Some_of_your_courses_weren't_saved!!&quot;_mean?">What does "Some of your courses weren't saved!!" mean?</span></h2>
+<p>There are three possible causes of this problem:
+</p>
+<ol><li>Error - this happens when the backup procedure has found an error and so hasn't finished the backup of a particular course. These are "controlled" errors and the scheduled backup continues with the next course.</li>
+<li>Unfinished - this happens when the backup procedure dies without knowing why. When the cron is next executed it detects that the last execution went wrong, and continues skipping the problematic course. A possible solution would be to raise the PHP/Apache limit in your installation (memory, time of execution...). By taking a look to your log tables you should be able to see if the "crash" is happening at exact time intervals (usually a problem with the max_execution_time php's variable), or if there is some exact point were all the courses are breaking.</li>
+<li>Skipped - this happens when a course is unavailable to students and has not been changed in the last month (31 days). This isn't an error situation - it's a feature, especially useful for sites with many unavailable old courses, saving process time.</li></ol>
+<h2><span id="Why_are_some_courses_being_skipped.3F"></span><span class="mw-headline" id="Why_are_some_courses_being_skipped?">Why are some courses being skipped?</span></h2>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:autobackup_skip_settings.png" class="mw-file-description"><img src="images_en/thumb/5/56/autobackup_skip_settings.png/ecaa588fcdfe27d8550c5051c6193eea.png" decoding="async" width="300" height="119" class="mw-file-element" srcset="/502/en/images_en/thumb/5/56/autobackup_skip_settings.png/450px-autobackup_skip_settings.png 1.5x, /502/en/images_en/thumb/5/56/autobackup_skip_settings.png/600px-autobackup_skip_settings.png 2x" data-file-width="1496" data-file-height="592"></a><figcaption>AutoBackup <b>skip</b> settings</figcaption></figure><p>Moodle's <i>Course backups</i> routines are instructed to automatically skip courses based on three settings in <i>Administration &gt; Site administration &gt; Courses &gt; Backups &gt; Automated backup setup.</i> The Moodle administrator(s) use those settings to specify whether to <i>Skip hidden courses</i> (set by default to 'Yes'), <i>Skip courses not modified since</i> (set by default to '30 days'), and <i>Skip courses not modified since previous backup</i> (set by default to 'No'). A course which meets any of the enabled criteria will be skipped during the next run of <i>Course backups</i>.
+</p><h2><span id="Why_does_restore_stop.2C_rather_than_completing.3F"></span><span class="mw-headline" id="Why_does_restore_stop,_rather_than_completing?">Why does restore stop, rather than completing?</span></h2>
+<p>Attempting to restore a course to an older version of Moodle than the one the course was backed up on can result in the restore process failing to complete. To ensure a successful restore, make sure that the version of Moodle you are restoring the course to is the same, or newer, than the one the course was backed up on.
+</p><p>If it stop unexpectedly with no errors shown try again with <a href="03dea8f6a86c43cbbe5f79b5364cac24.html" title="Debugging">Debugging</a> switched on. Any errors you now see can help experts in the support forums diagnose your problem. You can also check the discussion links in the See also section below for further advice.
+</p>
+<h2><span id="Restore_stops_with_the_message_.22Trying_to_restore_user_xxxx_from_backup_file_will_cause_conflict.22"></span><span class="mw-headline" id='Restore_stops_with_the_message_"Trying_to_restore_user_xxxx_from_backup_file_will_cause_conflict"'>Restore stops with the message "Trying to restore user xxxx from backup file will cause conflict"</span></h2>
+<p>This message is displayed when:
+</p>
+<ol><li>The target site has a user xxxx (xxxx being the username) - often the admin user</li>
+<li>The backup archive being restored also contains a user xxxx (same username)</li>
+<li>After various comparisons, Moodle has determined that the target site user xxxx and the backup user xxxx aren't the same person, for example: if these users have different email addresses.</li></ol>
+<p><br>
+If 1, 2 and 3 are all true, the restore process stops in order to prevent the backup user xxxx's activities (forum posts, quiz attempts, assignment uploads, etc.) from being associated with the target site user xxxx. 
+</p><p>Here are the possible methods to make the xxxx users match and resolve the conflict:
+</p>
+<ol style="list-style-type:lower-alpha">
+  <li>Modify the backup archive's <b>users.xml</b> file and make the <i>email</i> or <i>firstaccess</i> fields match the ones in target site. Note that the <b><i>backup-&lt;...&gt;</i>.mbz</b> is a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Tar_(computing)">tarball</a> and can be extracted by creating a temporary folder and running <b>tar -xzf <i>/PATH/TO/backup-&lt;...&gt;</i>.mbz</b>. When editing is complete recompress the file with <b>tar -czf <i>/PATH/TO/backup-&lt;...&gt;</i>.mbz *</b>.</li>
+  <li>Modify the target site and set the user <i>email</i> or <i>firstaccess</i> fields to match the ones in <b>users.xml</b>.</li>
+  <li>For admin user conflicts only: enable the setting 'Allow admin conflict resolution' in <i>Site administration &gt; Courses &gt; Backups &gt; General import defaults</i>. This will result in the username in the backup file being renamed to 'admin_xyz'.</li>
+</ol>
+<h2><span id="Restored_users_lose_their_passwords_-_How_can_they_reset_them.3F"></span><span class="mw-headline" id="Restored_users_lose_their_passwords_-_How_can_they_reset_them?">Restored users lose their passwords - How can they reset them?</span></h2>
+<p>When a course is restored with enroled users included, any new users not already in the system will have new accounts created for them. Backups with enroled users do not include the user passwords. Instead, a password of "restored" is placed in the database for such users. When the user attempts to log into the new site, Moodle will recognise they were restored from a course backup and give the user the following message:
+</p>
+<pre>Restored Account. 
+This account was imported from another server and the password has been lost. To set a new password by email, please click "Continue"</pre>
+<p>When the user clicks the "Continue" button, they will then be sent a change password email to the email address associated with the restored account, just as if they had used the normal "Forgotten password" process. This will allow them to set a new password.
+</p><p>If you are the administrator and wish to avoid users getting such emails, remember that you can use the <a href="8521918b0d88043de3d8c67f42a8a2f5.html" title="Upload users">Upload users tool</a> to bulk set new passwords.
+</p>
+<h2><span id="Why_are_certain_course_links_broken_in_a_restored_course.3F"></span><span class="mw-headline" id="Why_are_certain_course_links_broken_in_a_restored_course?">Why are certain course links broken in a restored course?</span></h2>
+<p>Inter-activity links must be absolute (full) URLs e.g. <code>http://site.com/mod/resource/view.php?id=xxx</code> in order to be processed properly during backup and restore.
+</p><p>Any relative URLs e.g. <code>/mod/resource/view.php?id=xxx</code>, <code>../resource/view.php?id=xxx</code> or <code>view.php?id=xxx</code> will result in broken links when the course is restored.
+</p>
+<h2><span id="Restoring_a_course_results_in_broken_HTML_tags._What_can_I_do.3F"></span><span class="mw-headline" id="Restoring_a_course_results_in_broken_HTML_tags._What_can_I_do?">Restoring a course results in broken HTML tags. What can I do?</span></h2>
+<p>This has been known to be caused by older versions of   libxml2 and PHP  - try updating them to the latest versions.
+</p>
+<h2><span id="How_can_I_extract_original_files_from_a_Moodle_backup_file.3F"></span><span class="mw-headline" id="How_can_I_extract_original_files_from_a_Moodle_backup_file?">How can I extract original files from a Moodle backup file?</span></h2>
+<p>If you really want to get original files from the backup file (an .mbz file) you downloaded (from the course's restore page), you can do so in much the same way as is suggested above. 
+</p><p>The backup file can be opened with the command <b>tar -xzf <i>/PATH/TO/backup-&lt;...&gt;</i>.mbz</b>. Create a temporary folder to extract the backup's files into.
+</p><p>Next step would be to open the <b>files.xml</b> file in a text editor, and:
+</p>
+<ol><li>Search for the name of each file you want to get.</li>
+<li>Take note of the value of the corresponding contenthash tag.</li>
+<li>In the <b>files</b> folder you extracted, locate the file whose name is the same as the value of the contenthash and which will be located in a folder whose name corresponds to the two first characters of the file name.</li></ol>
+<p><br>
+For example, let's assume there is a <b>backup_courses-120730.mbz</b> file of which the <b>files.xml</b> file and the <b>files</b> folder have been extracted. There is a PDF file named <b>Leadership.pdf</b> that is required for another purpose.
+</p><p>Open the <b>files.xml</b> file and:
+</p><p>1. Search for the string <b>Leadership.pdf</b>, which in this case is found under the following &lt;file id...&gt; group tag:
+</p>
+<pre> &lt;file id="12345"&gt;
+ &lt;contenthash&gt;fb6cf43a9b2d432403c70a2cb4c340dbb6225631&lt;/contenthash&gt;
+               &#8942;
+ &lt;filename&gt;Leadership.pdf&lt;/filename&gt;
+               &#8942;
+ &lt;license&gt;allrightsreserved&lt;/license&gt;
+ &lt;sortorder&gt;1&lt;/sortorder&gt;
+ &lt;/file&gt;
+</pre>
+<p>2. Take note of the corresponding contenthash value: fb6cf43a9b2d432403c70a2cb4c340dbb6225631.
+</p><p>3. As the first two characters of the contenthash are "fb", open the <b>fb</b> subfolder inside the <b>files</b> folder, and there is a file named <b>fb6cf43a9b...</b>. Rename that file as <b>Leadership.pdf</b> and move it to the desired location. Repeat this for all the files required, using the corresponding contenthash value each time.
+</p>
+<h2><span class="mw-headline" id="MySQL_dmlwriteexception_error_when_restoring_a_course">MySQL dmlwriteexception error when restoring a course</span></h2>
+<p>If you obtain a  dmlwriteexception error when restoring a course, it is recommended that InnoDB tables are converted to the Barracuda file format. See the section 'Converting InnoDB tables to Barracuda' in <a href="8428d1ac0de33e2b0f542d6d962f1fa6.html" title="Administration via command line">Administration via command line</a> for details of why this is recommended plus information on a tool for converting tables.
+</p>
+<h2><span id="What_is_the_default_format_used_in_Moodle_backup_files.3F"></span><span class="mw-headline" id="What_is_the_default_format_used_in_Moodle_backup_files?">What is the default format used in Moodle backup files?</span></h2>
+<p>The default format in Moodle backups is <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Gzip">TGZ</a>.
+If you make a backup, 
+and examine the file with an HEX file viewer,
+you can see that the file starts with #1F8B (gzip file marker).
+</p><p>But,  if you add the following line to your config.php file:
+</p>
+<pre>$CFG-&gt;usezipbackups = true;
+</pre>
+<p>and examine the file with an HEX file viewer, 
+you will see that the file starts with #504B0304 (<a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/ZIP_(file_format)">zip</a> file marker)
+</p>
+<h2><span id="Any_further_questions.3F"></span><span class="mw-headline" id="Any_further_questions?">Any further questions?</span></h2>
+<p>Please post in the <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/view.php?f=128">Backup and restore forum</a> on moodle.org.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="9a7509e03babc1def9f404e05acd8435.html" title="Site backup">Site backup</a></li>
+<li><a href="1a1489d94778d66d38f3a8e70fedc938.html" title="Moodle migration">Moodle migration</a></li></ul>
+<p>Moodle forum discussions:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=345466">Backing up and restoring course eliminates gradebook categories and items</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260823010316
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.026 seconds
+Real time usage: 0.060 seconds
+Preprocessor visited node count: 116/1000000
+Post&#8208;expand include size: 549/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 1205/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    1.883      1 Template:Backup
+100.00%    1.883      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:1585-0!canonical and timestamp 20260823010316 and revision id 154741. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Backup_and_restore_FAQ&amp;oldid=154741">https://docs.moodle.org/502/en/index.php?title=Backup_and_restore_FAQ&amp;oldid=154741</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="6f6957cc42d50b7341b23c6eda851266.html" title="Category:Backup">Backup</a></li><li><a href="d6b0775565520759d6ccd9ae1d47581b.html" title="Category:FAQ">FAQ</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhlk56ai">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhlk56pu"></button>
+					<div class="collapse navbar-collapse igdhlk56pu" id="igdhlk56pu">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Backup_and_restore_FAQ" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Backup_and_restore_FAQ" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Backup_and_restore_FAQ&amp;oldid=154741" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Backup_and_restore_FAQ&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Respaldo_y_restauración_FAQ" title="Respaldo y restauración FAQ – español" lang="es" hreflang="es" data-title="Respaldo y restauración FAQ" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-pl nav-item mw-list-item"><a href="https://docs.moodle.org/pl/Backup_FAQ" title="Backup FAQ – polski" lang="pl" hreflang="pl" data-title="Backup FAQ" data-language-autonym="Polski" data-language-local-name="polski" class="interlanguage-link-target nav-link">Polski</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/FAQ_de_sauvegarde" title="FAQ de sauvegarde – français" lang="fr" hreflang="fr" data-title="FAQ de sauvegarde" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/バックアップFAQ" title="バックアップFAQ – 日本語" lang="ja" hreflang="ja" data-title="バックアップFAQ" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+								<div class="interlanguage-link interwiki-pt nav-item mw-list-item"><a href="https://docs.moodle.org/pt/FAQ_sobre_cópias_de_segurança" title="FAQ sobre cópias de segurança – português" lang="pt" hreflang="pt" data-title="FAQ sobre cópias de segurança" data-language-autonym="Português" data-language-local-name="português" class="interlanguage-link-target nav-link">Português</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Sicherung_und_Wiederherstellung_FAQ" title="Sicherung und Wiederherstellung FAQ – Deutsch" lang="de" hreflang="de" data-title="Sicherung und Wiederherstellung FAQ" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 19 November 2025, at 14:37.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":211,"wgPageParseReport":{"limitreport":{"cputime":"0.026","walltime":"0.060","ppvisitednodes":{"value":116,"limit":1000000},"postexpandincludesize":{"value":549,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1205,"limit":5000000},"timingprofile":["100.00%    1.883      1 Template:Backup","100.00%    1.883      1 -total"]},"cachereport":{"timestamp":"20260823010316","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

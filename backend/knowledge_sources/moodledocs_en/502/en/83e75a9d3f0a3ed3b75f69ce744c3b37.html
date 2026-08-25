@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>GDPR for administrators - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"0a3eb56d2f54202bd2c4a15b","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"GDPR_for_administrators","wgTitle":"GDPR for administrators","wgCurRevisionId":143601,"wgRevisionId":143601,"wgArticleId":21935,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["GDPR"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"GDPR_for_administrators","wgRelevantArticleId":21935,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/GDPR_for_administrators">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-GDPR_for_administrators rootpage-GDPR_for_administrators layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdiuf4z8u"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdiuf4z8u" id="igdiuf4z8u">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=GDPR+for+administrators" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/GDPR_for_administrators">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/GDPR_for_administrators">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/GDPR_for_administrators">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="83e75a9d3f0a3ed3b75f69ce744c3b37.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:GDPR_for_administrators&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=GDPR_for_administrators&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=GDPR_for_administrators&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">GDPR for administrators</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="66d1cad605f94eda88c9980224fe2aff.html" title="GDPR">GDPR</a> ► <a class="mw-selflink selflink">GDPR for administrators</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="66d1cad605f94eda88c9980224fe2aff.html" title="GDPR">GDPR</a></div>	
+<div class="content">
+</div>
+<ul><li><a class="mw-selflink selflink">GDPR for admins</a></li>
+<li><a href="c79afec3f8aa2fe81acc50aecf2250c9.html" title="GDPR FAQ">GDPR FAQ</a></li></ul>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p>Disclaimer: The advice in this document is provided for informational purposes only, and not be construed as legal or professional advice. Moodle Pty Ltd does not warrant that the advice is accurate, complete, reliable, current or error-free.  Please ensure to obtain your own independent legal and IT advice.
+</p>
+<h2><span class="mw-headline" id="Checklist">Checklist</span></h2>
+<ol>
+<li> Is the Moodle site hosted in an EU member state, or is it possible that any user of the Moodle site is an individual from an EU member state?
+<ul>
+<li> If you answered no to this question, you are not affected by this regulation. However, the benefits of data protection afforded by the regulation are universally applicable and you may consider voluntarily complying with this legislation for the benefit of your site users.</li>
+</ul>
+</li>
+<li>
+Do you require your site users to accept a site or privacy policy document before using your site (either in Moodle or something outside of Moodle, like a paper form)?
+<ul>
+<li>If you answered no to this question, you must start doing so. Users need to be aware of their rights and the processes with which they can exercise their rights.</li>
+<li>If you answered yes to this question you must review your policy to make sure it covers all requirements of the new regulations (see &ldquo;Site policy&rdquo; below). If you change your policy you must get all site users to accept the new policy before they can continue using the site.</li>
+</ul>
+</li>
+<li>Is it possible that your site is used by minors? (Under 16 in most member states, but some states may reduce this as low as 13 years).
+<ul>
+<li>If you answered yes to this question, you must ensure that the consent is obtained from their legal guardian. Keep in mind that collecting and processing personal information on minors may impact your risk assessment. You should take extra care to adequately secure this information, and retain it for as short a period as is necessary.</li>
+</ul>
+</li>
+<li>Is it the collection or storage of personal data from your site users likely to result in a high risk to their rights and freedoms?
+<ul>
+<li>Some examples that would indicate high risk are:
+<ul>
+<li>a systematic and extensive evaluation of personal aspects relating to natural persons which is based on automated processing, including profiling, and on which decisions are based that produce legal effects concerning the natural person or similarly significantly affect the natural person</li>
+<li>processing on a large scale of special categories of data including
+<ul>
+<li>Racial or ethnic origin</li>
+<li>Political opinions</li>
+<li>Religious or philosophical beliefs</li>
+<li>Trade union membership</li>
+<li>Genetic data</li>
+<li>Biometric data</li>
+<li>Data concerning health</li>
+<li>Sexual orientation</li>
+<li>Data concerning a natural person's sex life</li>
+<li>Criminal convictions</li>
+</ul>
+</li>
+<li>This is not an exhaustive list and if you are unsure if you should consider the data collected from your users as &ldquo;High risk&rdquo; you should refer to the legislation and seek professional advice.</li>
+</ul>
+</li>
+<li>If the answer is &ldquo;Yes&rdquo;, you should perform a Data Protection Impact Assessment. Refer to the legislation and seek professional advice.</li>
+</ul>
+</li>
+<li>Do you use any of the collected personal information for the purposes of marketing?
+<ul>
+<li>If you answered yes to this question - you must obtain a separate consent from each user to use this data for this purpose. Consent to use the data for marketing must be separately withdrawable by the user.</li>
+</ul>
+</li>
+<li>Do you use any of the collected personal information for the purposes of research?
+<ul>
+<li>If you answered yes to this question, you must either obtain a specific consent from each user to use the data for this purpose, or completely anonymise the data before using it for research. 
+
+<a rel="nofollow" class="external text" href="https://github.com/moodlehq/moodle-local_anonymise">https://github.com/moodlehq/moodle-local_anonymise</a> is an example of a tool designed to anonymise all the data on a moodle site.</li>
+</ul>
+</li>
+<li>Do you share any of the collected data with any third parties? This includes sites and services that integrate with Moodle such as: Google analytics, LTI, Repositories (Google Docs, OneDrive etc.), Authentication systems etc. This also includes sites and services used in the provision of your own Moodle site such as hosting providers.
+<ul>
+<li>If you answered yes to this question then you are responsible for all data that is shared with a third party. You must obtain the user's consent to share this data with each third party. If the list of third party services changes you must re-obtain consent from all site users for each new third party site/service. You should also take reasonable steps to ensure that each third party will adequately protect users personal data including:
+<ul>
+<li>Reviewing the third party privacy policy to make sure it is congruent with your own</li>
+<li>Monitoring and notifying your site users about changes to the third party privacy policy</li>
+<li>Identify the mechanism for processing requests to erase or correct personal data with each third party so that you can follow this process when you receive one of these requests for your own site</li>
+<li>Identify and list the data protection officer, and privacy policy for each third party site as part of your own privacy policy</li>
+</ul>
+</li>
+<li>Google analytics for example has not yet provided clear updated instructions on how to comply with the new GDPR when using their service. It is probable that they will issue guidance on how to use Google Analytics in compliance with the GDPR before it becomes enforceable, but this example demonstrates that it is your responsibility to ensure the protection of privacy of the users of your site and it is not legal to use cloud services without considering the privacy implications of each and every service provider.</li>
+</ul>
+</li>
+<li>Do you follow best practice policies and procedures to ensure data security?
+<ul>
+<li>If you answered no to this question then you have must review your policies and procedures to ensure you are not placing your sites users personal data at risk.
+<ul>
+<li>&ldquo;Best practices&rdquo; includes but is not limited to organisational and technical measures to ensure a level of security appropriate to the risk such that:
+<ul>
+<li>pseudonymisation and encryption of personal data</li>
+<li>the ability to ensure the ongoing confidentiality, integrity, availability and resilience of processing systems and services</li>
+<li>the ability to restore the availability and access to personal data in a timely manner in the event of a physical or technical incident</li>
+<li>a process for regularly testing, assessing and evaluating the effectiveness of technical and organisational measures for ensuring the security of the processing</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li>Appropriate use of encryption (https)</li>
+<li>Maintaining all systems and software with relevant security updates.</li>
+<li>Deletion of personal data as soon as possible, once it is no longer required for the purpose it was collected.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Do you have defined policies and procedures for disclosing data breaches?
+<ul>
+<li>If you answered no this question then you must define some</li>
+<li>If you have existing policies and procedures they should be reviewed</li>
+<li>These policies and procedures must include notifying the Supervisory Authority within 72 hours of the data breach and notifying all affected users if they have been adversely affected (personal data disclosed).</li>
+</ul>
+</li>
+<li>Have you appointed a data protection officer, and listed them in your privacy policy?
+<ul>
+<li>If you answered no to this question then you must appoint one and list them in your site's privacy policy. The data protection officer is expected to be &ldquo;proficient at managing IT processes, data security (including dealing with cyber-attacks) and other critical business continuity issues around the holding and processing of personal and sensitive data <a href="#ref1">1</a>.</li>
+</ul>
+</li>
+<li>Do you have a mechanism with with your site users can request their personal data is erased, corrected or made available to the requesting user on your site?
+<ul>
+<li>If you answered yes to this question then must ensure it is listed in your site's privacy policy</li>
+<li>If you answered no to this question then you define one and list it in your site's privacy policy
+<ul>
+<li>For a Moodle site that does not make use of the GDPR plugins, a suitable mechanism would be an email address, reserved for this purpose that is monitored by an administrator for your Moodle site. Once a request is received, reasonable steps should be taken to ensure the authenticity of the request and the identity of the user making the request</li>
+<li>Corrections to personal data can be processed by changing the data in Moodle directly using an administrator account</li>
+<li>Erasures of personal data can be processed by either deleting the user account, or by editing the user account to remove all identifying information and making it inactive</li>
+<li>Records of personal data can be obtained from the &ldquo;Site Administration -&gt; Reports -&gt; Logs&rdquo; by downloading all the logs for a single user as a CSV file. There will likely be additional personal data about a user that is stored outside of Moodle, such as web server access logs.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Does your organisation have more than 250 employees?
+<ul>
+<li>If you answered yes to this question then you must maintain detailed records on all processing of personal data. Refer to the regulation for details of the records that must be maintained</li>
+</ul>
+</li>
+</ol>
+<h2><span class="mw-headline" id="Site_policy">Site policy</span></h2>
+<p>A site policy can be used to collect consent for the purposes of GDPR compliance. The site policy document should be reviewed carefully to make sure it covers all the information listed below, in succinct, simple language.
+</p><p>In Moodle 3.4.2 onwards, to enable a site policy, enter the URL of the page in 'Site policy URL' (sitepolicy) in 'Policy settings' in the Site administration.
+</p><p>The site policy page should contain all of the information listed below. The site policy will be displayed in an iframe as part of the login process, so it does not require headers and footers.
+</p><p>A recommended practice is to create a file resource on the front page of the Moodle site and copy the URL for this resource to use as the site policy. This means the site policy is always available for your users to access, and can be updated easily from within Moodle. Note that this technique is incompatible with the &ldquo;Force users to log in (forcelogin)&rdquo; setting, (also in 'Site policies' in the Site administration) as the file resource will no longer be visible until the user has logged into the site.
+</p><p>The site policy must include all of the following information in simple language:
+</p>
+<ol><li>What information is collected.</li>
+<li>The purpose of all processing to be performed on the users data. Marketing must be listed separately with a separate revocable &ldquo;consent&rdquo;.</li>
+<li>The identity of the data controller and contact information</li>
+<li>List of rights</li>
+<li>The period the data is stored</li>
+<li>The mechanism for withdrawing consent</li>
+<li>The mechanism for requesting corrections, or erasures of personal data</li>
+<li>The mechanism for requesting a record of all personal data</li>
+<li>List of third parties that data will be shared with (This includes integrations such as LTI, portfolios, plagiarism, repositories, authentication etc.) including:
+<ol><li>The contact details of the data protection officer for each</li>
+<li>The privacy policy for each.</li></ol></li>
+<li>Whether the personal data will be used for any automated decision-making process, including the significance and details of the process (e.g. analytics).</li></ol>
+<!-- 
+NewPP limit report
+Cached time: 20260823014623
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.009 seconds
+Real time usage: 0.013 seconds
+Preprocessor visited node count: 15/1000000
+Post&#8208;expand include size: 314/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.416      1 Template:GDPR
+100.00%    3.416      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:21935-0!canonical and timestamp 20260823014623 and revision id 143601. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=GDPR_for_administrators&amp;oldid=143601">https://docs.moodle.org/502/en/index.php?title=GDPR_for_administrators&amp;oldid=143601</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="d59bd20e78264a7815c1fb7f590ff90b.html" title="Category:GDPR">GDPR</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdiuf50w7">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdiuf51ag"></button>
+					<div class="collapse navbar-collapse igdiuf51ag" id="igdiuf51ag">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/GDPR_for_administrators" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/GDPR_for_administrators" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=GDPR_for_administrators&amp;oldid=143601" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=GDPR_for_administrators&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/RGPD_pour_les_Administrateurs" title="RGPD pour les Administrateurs – français" lang="fr" hreflang="fr" data-title="RGPD pour les Administrateurs" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/GDPR_para_administradores" title="GDPR para administradores – español" lang="es" hreflang="es" data-title="GDPR para administradores" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/DSGVO_für_Administrator/innen" title="DSGVO für Administrator/innen – Deutsch" lang="de" hreflang="de" data-title="DSGVO für Administrator/innen" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 2 June 2022, at 15:24.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":156,"wgPageParseReport":{"limitreport":{"cputime":"0.009","walltime":"0.013","ppvisitednodes":{"value":15,"limit":1000000},"postexpandincludesize":{"value":314,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    3.416      1 Template:GDPR","100.00%    3.416      1 -total"]},"cachereport":{"timestamp":"20260823014623","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

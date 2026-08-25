@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Migrations Configuration - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"157dcee8a3b43149b2d52297","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Migrations_Configuration","wgTitle":"Migrations Configuration","wgCurRevisionId":155568,"wgRevisionId":155568,"wgArticleId":25653,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Workplace"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Migrations_Configuration","wgRelevantArticleId":25653,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="593ae70845242c812b361a340a53fb46.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.pygments%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Migrations_Configuration">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Migrations_Configuration rootpage-Migrations_Configuration layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkbgd9z0"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdkbgd9z0" id="igdkbgd9z0">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Migrations+Configuration" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Migrations_Configuration">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Migrations_Configuration">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Migrations_Configuration">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="1422fc2b05b329eefba28c5d9110236b.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Migrations_Configuration&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Migrations_Configuration&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Migrations_Configuration&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Migrations Configuration</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="5005ef9062eb9f52704277d7e5764a8a.html" title="Moodle Workplace">Moodle Workplace</a></div>	
+<div class="content">
+<ul><li><a href="6fec4c5dcd9d154ff23d46e2e133d435.html" title="Multi-tenancy">Multi-tenancy</a></li>
+<li><a href="24af730ae0df0835ebaf33795be5027d.html" title="Programs">Programs</a></li>
+<li><a href="64281e9b4c1975d18f3275e75580176d.html" title="Certifications">Certifications</a></li>
+<li><a href="e71b0cf0176eb80673cd157945822828.html" title="Dynamic rules">Dynamic rules</a></li>
+<li><a href="fc0a853d3881e4fc65d1b41f74e5b14d.html" title="Organisation structure">Organisations</a></li>
+<li><a href="dfeacc84bc200bd03ef249e87a91fa91.html" title="Report builder">Report builder</a></li>
+<li><a href="d99f766a0cfcbdabde4fbcb06919e924.html" title="Custom pages">Custom pages</a></li>
+<li><a href="9c1741fa79af3ca782b4f84eb29f4389.html" title="Certificates">Certificates</a></li>
+<li><a href="a561ccaef5590a82764540b46d322997.html" title="Catalogue">Learning catalogue</a></li>
+<li><b>Migrations</b></li>
+<li><a href="1d466d8ced71062fd319faa436dc6ea9.html" title="Migrations">&gt; Overview</a></li>
+<li><a class="mw-selflink selflink">&gt; Configuration</a></li>
+<li><a href="98c5e9f35ba8ce6e2d28e9260b46d429.html" title="Migrations Use cases">&gt; Use cases</a></li>
+<li><a href="4c517192d0ea73ed6d50a7daf0508abe.html" title="Migrations Tenants">&gt; Tenants</a></li>
+<li><a href="2d10bb82a81daddecd9dd3257cf94a56.html" title="Migrations Technical">&gt; Technical</a></li></ul>
+<hr>
+<ul><li><a href="2654643b183ad0020e11d2b7c7ef55ea.html" title="Teams">Teams &amp; Managers</a></li>
+<li><a href="b199a356b44bc512734bbdb6650fe404.html" title="Staff">Staff &amp; Learners</a></li>
+<li><a href="0dfa327dd98a4c57cb9d46f1b0c4bea1.html" title="Appointments">Trainers</a></li>
+<li><a href="a44b2e342c2d0deff379b452bfae8393.html" title="Moodle Workplace App">Workplace App</a></li></ul>
+</div></div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div class="alert alert-info"> <span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:workplacelogo.png" class="mw-file-description"><img src="images_en/thumb/b/b6/workplacelogo.png/634acbf0524aef964358ae94d60d8582.png" decoding="async" width="24" height="24" class="mw-file-element" srcset="/502/en/images_en/thumb/b/b6/workplacelogo.png/36px-workplacelogo.png 1.5x, /502/en/images_en/thumb/b/b6/workplacelogo.png/48px-workplacelogo.png 2x" data-file-width="248" data-file-height="248"></a></span> This feature is part of <b><a href="5005ef9062eb9f52704277d7e5764a8a.html" title="Moodle Workplace">Moodle Workplace</a></b>&trade;, which is available through <a rel="nofollow" class="external text" href="https://moodle.com/workplace/">Moodle Certified Partners and Service Providers</a> only.</div>
+
+<div class="alert alert-success"> <b>This page is intended for </b> Administrators</div>
+<p><br>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Migration_Export"><span class="tocnumber">1</span> <span class="toctext">Migration Export</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Step_1_-_General_settings"><span class="tocnumber">1.1</span> <span class="toctext">Step 1 - General settings</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Step_2_-_Options"><span class="tocnumber">1.2</span> <span class="toctext">Step 2 - Options</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Step_3_-_Review"><span class="tocnumber">1.3</span> <span class="toctext">Step 3 - Review</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Migration_Import"><span class="tocnumber">2</span> <span class="toctext">Migration Import</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Step_1_-_Select_source"><span class="tocnumber">2.1</span> <span class="toctext">Step 1 - Select source</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Step_2_-_General_settings"><span class="tocnumber">2.2</span> <span class="toctext">Step 2 - General settings</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Step_2a_-_General_settings_(Importing_a_file_in_Workplace_format)"><span class="tocnumber">2.2.1</span> <span class="toctext">Step 2a - General settings (Importing a file in Workplace format)</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Step_2b_-_General_settings_(Importing_a_file_in_CSV_format)"><span class="tocnumber">2.2.2</span> <span class="toctext">Step 2b - General settings (Importing a file in CSV format)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#Step_3_-_Options"><span class="tocnumber">2.3</span> <span class="toctext">Step 3 - Options</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Step_3a_-_Options_(Importing_a_file_in_Workplace_format)"><span class="tocnumber">2.3.1</span> <span class="toctext">Step 3a - Options (Importing a file in Workplace format)</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Step_3b_-_Options_(Importing_a_file_in_CSV_format)"><span class="tocnumber">2.3.2</span> <span class="toctext">Step 3b - Options (Importing a file in CSV format)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-13"><a href="#Step_4_-_Conflicts"><span class="tocnumber">2.4</span> <span class="toctext">Step 4 - Conflicts</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Step_5_-_Review"><span class="tocnumber">2.5</span> <span class="toctext">Step 5 - Review</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Migration_notifications"><span class="tocnumber">3</span> <span class="toctext">Migration notifications</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Migration_Export">Migration Export</span></h2>
+<p>You can access the migration tool via <b>Site administration &gt; Migration</b> or directly via the <b>Migration</b> icon in the Workplace launcher. On the <b>Exports</b> tab, you will see a list of any exports, which contains the following columns:
+</p>
+<ul><li><b>Date</b> (filter): Date and time the export was created</li>
+<li><b>Created by</b>: User account that initiated the export</li>
+<li><b>Exporter</b> (filter): Type of exporter</li>
+<li><b>Tenant</b> (filter): Name of the tenant that the export was created for</li>
+<li><b>Size</b>: Size of the export file</li>
+<li><b>Status</b> (filter): Scheduled / In progress / Success / Error</li>
+<li><b>Actions</b>:
+<ul><li><b>New import from this file</b>: Use the export file as input and start the migration importer. This will take you directly to <a href="1d466d8ced71062fd319faa436dc6ea9.html#Step_2_-_General_settings" title="Migrations">Step 2</a> of the import process.</li>
+<li><b>Download</b>: Download the export file</li>
+<li><b>View export</b>: Show a status report that includes a status or error log</li>
+<li><b>Delete</b>: Remove the export file</li></ul></li></ul>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Migration_-_Exports.png" class="mw-file-description"><img alt="" src="images_en/thumb/3/32/Migration_-_Exports.png/8389321d6b881e30f0a261f62f8bd99c.png" decoding="async" width="900" height="708" class="mw-file-element" srcset="/502/en/images_en/thumb/3/32/Migration_-_Exports.png/1350px-Migration_-_Exports.png 1.5x, /502/en/images_en/3/32/Migration_-_Exports.png 2x" data-file-width="1774" data-file-height="1396"></a><figcaption></figcaption></figure><p>To create a new migration export, select the <b>+ Export</b> button on the <b>Exports</b> tab. You will then be guided through the 3-step export process.
+</p><h3><span class="mw-headline" id="Step_1_-_General_settings">Step 1 - General settings</span></h3><p>
+The first step of the migration process is to choose an exporter.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Migration_-_Export_Step_1a.png" class="mw-file-description"><img src="images_en/thumb/a/aa/Migration_-_Export_Step_1a.png/eab0862b4d2d8efbd108300829fc5b97.png" decoding="async" width="900" height="475" class="mw-file-element" srcset="/502/en/images_en/thumb/a/aa/Migration_-_Export_Step_1a.png/1350px-Migration_-_Export_Step_1a.png 1.5x, /502/en/images_en/thumb/a/aa/Migration_-_Export_Step_1a.png/1800px-Migration_-_Export_Step_1a.png 2x" data-file-width="2560" data-file-height="1352"></a><figcaption></figcaption></figure><p>Some exporters offer a <b>Site / Current tenant</b> switch, which allows you to define whether you want to export entities from the whole site, or only those associated with the current tenant.
+</p><table class="wikitable">
+<tbody><tr>
+<td><b>Exporter</b>
+</td>
+<td><b>Site / Current tenant switch</b>
+</td>
+<td><b>Description</b>
+</td></tr>
+<tr>
+<td><b>Certificates</b>
+</td>
+<td>Yes
+</td>
+<td>Issued certificates and templates
+</td></tr>
+<tr>
+<td><b>Certifications</b>
+</td>
+<td>No
+</td>
+<td>Certifications with their associated programs, courses, user allocations and component dynamic rules
+</td></tr>
+<tr>
+<td><b>Cohorts</b>
+</td>
+<td>Yes
+</td>
+<td>Cohorts supporting cohort custom fields, including cohort members without user data
+</td></tr>
+<tr>
+<td><b>Course categories</b>
+</td>
+<td>Yes
+</td>
+<td>Course categories and subcategories
+</td></tr>
+<tr>
+<td><b>Courses</b>
+</td>
+<td>Yes
+</td>
+<td>Courses without user data, using <a rel="nofollow" class="external text" href="d1b446b10a0e278070a3a2b68ec3de60.html#General_backup_defaults">default course backup configuration</a> (see details below table)
+</td></tr>
+<tr>
+<td><b>Custom reports</b>
+</td>
+<td>No
+</td>
+<td>Custom reports, including audience and schedule data
+</td></tr>
+<tr>
+<td><b>Custom reports from outdated version</b>
+</td>
+<td>No
+</td>
+<td>Custom reports, including audience and schedule data from Moodle Workplace version 3.x
+</td></tr>
+<tr>
+<td><b>Dynamic rules</b>
+</td>
+<td>No
+</td>
+<td>Dynamic rules definition, conditions and actions
+</td></tr>
+<tr>
+<td><b>Organisation structure departments (CSV)</b>
+</td>
+<td>No
+</td>
+<td>Department frameworks with the whole hierarchy
+</td></tr>
+<tr>
+<td><b>Organisation structure frameworks</b>
+</td>
+<td>No
+</td>
+<td>Frameworks with the whole hierarchy for departments and/or positions
+</td></tr>
+<tr>
+<td><b>Organisation structure jobs</b>
+</td>
+<td>No
+</td>
+<td>Jobs with their associated department and position frameworks
+</td></tr>
+<tr>
+<td><b>Organisation structure jobs (CSV)</b>
+</td>
+<td>No
+</td>
+<td>Jobs with their associated department and position frameworks
+</td></tr>
+<tr>
+<td><b>Organisation structure positions (CSV)</b>
+</td>
+<td>No
+</td>
+<td>Position frameworks with the whole hierarchy
+</td></tr>
+<tr>
+<td><b>Programs</b>
+</td>
+<td>No
+</td>
+<td>Programs with their courses, user allocations and component dynamic rules
+</td></tr>
+<tr>
+<td><b>Site</b>
+</td>
+<td>No
+</td>
+<td>Full site content including all tenants along with all entities contained within them. Course backups will include all content and user data except logs.
+</td></tr>
+<tr>
+<td><b>Tenants</b>
+</td>
+<td>Yes
+</td>
+<td>Tenants along with all entities contained within them
+</td></tr>
+<tr>
+<td><b>Users</b>
+</td>
+<td>Yes
+</td>
+<td>Site and tenant users
+</td></tr></tbody></table><p>When courses are included in the export, the following default course backup configuration settings are taken into account:
+</p><ul><li>Include filters</li>
+<li>Include groups and groupings</li></ul>
+<p><br>
+When all course content is exported, for example, when exporting the entire site or a tenant, the following default course backup configuration settings are also taken into account: 
+</p>
+<ul><li>Include users</li>
+<li>Include role assignments</li>
+<li>Include activities and resources</li>
+<li>Include blocks</li>
+<li>Include comments</li>
+<li>Include badges</li>
+<li>Include calendar events</li>
+<li>Include user completion information</li>
+<li>Include histories</li>
+<li>Include question bank</li>
+<li>Include competencies</li>
+<li>Include content bank content</li></ul>
+<h3><span class="mw-headline" id="Step_2_-_Options">Step 2 - Options</span></h3>
+<p>During the second step, you can narrow down your selection and specify which elements you want to export. The exporter options always contain the following two elements (except when exporting the entire site):
+</p>
+<ul><li><b>Content</b>: Which attributes and settings may or may not be included in the export file.</li>
+<li><b>Instances</b>: Which elements will be included in the export file.</li></ul><p>
+The content and instances available depend on the chosen exporter. Details about each setting are displayed in the balloon help indicated by a question mark.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Migration_-_Export_Step_2.png" class="mw-file-description"><img alt="" src="images_en/thumb/3/33/Migration_-_Export_Step_2.png/9783b7b26b922169d1258827b437b478.png" decoding="async" width="900" height="861" class="mw-file-element" srcset="/502/en/images_en/thumb/3/33/Migration_-_Export_Step_2.png/1350px-Migration_-_Export_Step_2.png 1.5x, /502/en/images_en/3/33/Migration_-_Export_Step_2.png 2x" data-file-width="1754" data-file-height="1678"></a><figcaption></figcaption></figure><p>The table below lists all <b>Content</b> and <b>Instances</b> settings (l<i>ocked entries in italics</i>) for each exporter plugin.
+</p><table class="wikitable">
+<tbody><tr>
+<td><b>Exporter</b>
+</td>
+<td><b>Content</b>
+</td>
+<td><b>Instances</b>
+</td></tr>
+<tr>
+<td><b>Certificates</b>
+</td>
+<td><i>Certificate template details</i>
+<p>Issued certificates
+</p>
+</td>
+<td>Select all certificate templates
+<p>Select categories and subcategories manually&hellip;
+</p><p>Select certificate templates manually...
+</p>
+</td></tr>
+<tr>
+<td><b>Certifications</b>
+</td>
+<td><i>Settings</i>
+<p>Associated programs
+</p><p>Course structure
+</p><p>Include course content
+</p><p>Certification user allocations
+</p><p>Dynamic rules
+</p>
+</td>
+<td>Select all active certifications
+<p>Select active and archived certifications
+</p><p>Select manually&hellip;
+</p><p>Include shared entities
+</p>
+</td></tr>
+<tr>
+<td><b>Cohorts</b>
+</td>
+<td><i>Cohort details</i>
+<p>Cohort members
+</p>
+</td>
+<td>All cohorts
+<p>All system cohorts
+</p><p>Select categories and subcategories manually...
+</p><p>Select manually...
+</p>
+</td></tr>
+<tr>
+<td><b>Course categories</b>
+</td>
+<td><i>Course category details</i>
+<p>Course structure
+</p><p>Include course content
+</p><p>Certificate templates
+</p><p>Cohort details including members
+</p>
+</td>
+<td>Select categories
+</td></tr>
+<tr>
+<td><b>Courses</b>
+</td>
+<td><i>Course structure</i>
+<p>Include course content
+</p>
+</td>
+<td>Select categories and subcategories manually&hellip;
+<p>Select courses manually...
+</p>
+</td></tr>
+<tr>
+<td><b>Custom reports</b>
+</td>
+<td><i>Report definitions</i>
+<p>Audiences
+</p><p>Schedules
+</p>
+</td>
+<td>Export all custom reports
+<p>Export specific custom reports...
+</p>
+</td></tr>
+<tr>
+<td><b>Custom reports from outdated version</b>
+</td>
+<td><i>Report definitions</i>
+<p>Audiences
+</p><p>Schedules
+</p>
+</td>
+<td>Export all custom reports
+<p>Export specific custom reports...
+</p>
+</td></tr>
+<tr>
+<td><b>Dynamic rules</b>
+</td>
+<td><i>Rule definitions, conditions and actions</i>
+</td>
+<td>Select all Dynamic rules (excluding archived)
+<p>Select all enabled Dynamic rules
+</p><p>Select all Dynamic rules (including archived)
+</p>
+</td></tr>
+<tr>
+<td><b>Organisation structure departments (CSV)</b>
+</td>
+<td><i>Descriptions and hierarchy</i>
+</td>
+<td>Select department framework...
+</td></tr>
+<tr>
+<td><b>Organisation structure frameworks</b>
+</td>
+<td><i>Descriptions, hierarchy and permissions</i>
+</td>
+<td>Select all department and position frameworks
+<p>Select all department frameworks
+</p><p>Select all position frameworks
+</p><p>Select manually...
+</p><p>Include shared entities
+</p>
+</td></tr>
+<tr>
+<td><b>Organisation structure jobs</b>
+</td>
+<td><i>Job assignments</i>
+<p>Department and position frameworks
+</p>
+</td>
+<td>Select all active jobs
+<p>Select all active and past jobs
+</p><p>Select all jobs in any of the selected frameworks...
+</p>
+</td></tr>
+<tr>
+<td><b>Organisation structure jobs (CSV)</b>
+</td>
+<td><i>Job assignments</i>
+</td>
+<td>Select all active jobs
+<p>Select all active and past jobs
+</p><p>Select all jobs in any of the selected frameworks...
+</p>
+</td></tr>
+<tr>
+<td><b>Organisation structure positions (CSV)</b>
+</td>
+<td><i>Descriptions, hierarchy and permissions</i>
+</td>
+<td>Select position framework...
+</td></tr>
+<tr>
+<td><b>Programs</b>
+</td>
+<td><i>Settings</i>
+<p>Course structure
+</p><p>Include course content
+</p><p>Program user allocations
+</p><p>Dynamic rules
+</p>
+</td>
+<td>Select all active programs
+<p>Select all active and archived programs
+</p><p>Select manually...
+</p><p>Include shared entities
+</p>
+</td></tr>
+<tr>
+<td><b>Site</b>
+</td>
+<td><i>Details</i>
+<p><i>Appearance</i>
+</p><p><i>Users</i>
+</p><p><i>Content: courses, categories, programs and certifications</i>
+</p><p>Cohort details including members
+</p><p>Certificate templates
+</p><p>Organisation structure
+</p><p>Dynamic rules
+</p><p>Custom reports
+</p>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><b>Tenants</b>
+</td>
+<td><i>Details</i>
+<p>Appearance
+</p><p>Users
+</p><p>Course categories, with cohorts and course structure
+</p><p>Include course content
+</p><p>Certificate templates
+</p><p>Programs
+</p><p>Certifications
+</p><p>Organisation structure
+</p><p>Dynamic rules
+</p><p>Custom reports
+</p>
+</td>
+<td>Select all tenants (excluding archived)
+<p>Select all tenants (including archived)
+</p><p>Select tenants manually...
+</p>
+</td></tr>
+<tr>
+<td><b>Users</b>
+</td>
+<td><i>User profiles</i>
+<p>User pictures
+</p><p>Include suspended users
+</p>
+</td>
+<td>Select all users
+<p>Select users manually...
+</p>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Step_3_-_Review">Step 3 - Review</span></h3><p>
+During the third and final step, you need to review and execute the export process. You will be presented with a summary of the selected and unselected options for content and instances. The export can only be started when the resulting file will be non-empty; that is, at least one instance has been selected. For instance, if you choose a course category that does not contain any courses, the Export button will remain deactivated. Finally, you have to confirm the execution of the export.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Migration_-_Export_Step_3.png" class="mw-file-description"><img alt="" src="images_en/thumb/1/1f/Migration_-_Export_Step_3.png/a494f66247ee30130609cb4200d069a0.png" decoding="async" width="900" height="716" class="mw-file-element" srcset="/502/en/images_en/thumb/1/1f/Migration_-_Export_Step_3.png/1350px-Migration_-_Export_Step_3.png 1.5x, /502/en/images_en/1/1f/Migration_-_Export_Step_3.png 2x" data-file-width="1774" data-file-height="1412"></a><figcaption></figcaption></figure><p>Once the export has been initiated, its status will be set to <b>Scheduled</b>. The export will commence on the subsequent <a href="37fc181470a569556f94c1f35940d0a7.html" title="Cron">cron</a> execution. While the export file is being generated, the status will be changed to <b>In progress</b>. This might take some time on larger exports. When the export file is ready for download or import, the status changes again to <b>Success</b>. You will also receive a notification via the usual on-board mechanism. If an <b>Error</b> occurred during the export process, details would be displayed on the status page.
+</p><h2><span class="mw-headline" id="Migration_Import">Migration Import</span></h2>
+<p>You can access the migration tool via <b>Site administration &gt; Migration</b> or directly via the <b>Migration</b> icon in the Workplace launcher.
+</p><p>On the <b>Imports</b> tab, you will see a list of any imports which contains the following columns:
+</p>
+<ul><li><b>Date</b> (filter): Date and time the import was created</li>
+<li><b>Created by</b>: User account that initiated the import</li>
+<li><b>Importer</b> (filter): Type of importer</li>
+<li><b>Tenant</b> (filter): Name of the tenant that the import was created for</li>
+<li><b>Size</b>: Size of the import file</li>
+<li><b>Status</b> (filter): Scheduled / In progress / Success / Error</li>
+<li><b>Actions</b>:
+<ul><li><b>Download</b>: Download the import file</li>
+<li><b>View import</b>: Show a status report that includes a status or error log</li>
+<li><b>Delete</b>: Remove the import file</li></ul></li></ul>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Migration_-_Imports.png" class="mw-file-description"><img alt="" src="images_en/thumb/2/24/Migration_-_Imports.png/1ac730722792265fd82dd2c122681abc.png" decoding="async" width="900" height="576" class="mw-file-element" srcset="/502/en/images_en/thumb/2/24/Migration_-_Imports.png/1350px-Migration_-_Imports.png 1.5x, /502/en/images_en/thumb/2/24/Migration_-_Imports.png/1800px-Migration_-_Imports.png 2x" data-file-width="1836" data-file-height="1176"></a><figcaption></figcaption></figure><p>To create a new migration export, select the <b>+ Import</b> button on the <b>Imports</b> tab. You will then be guided through the 5-step import process.
+</p><h3><span class="mw-headline" id="Step_1_-_Select_source">Step 1 - Select source</span></h3><p>
+In step 1, you must provide an input file: You will need to upload either a migration export file or a CSV file.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Migration_-_Import_Step_1.png" class="mw-file-description"><img alt="" src="images_en/thumb/4/4e/Migration_-_Import_Step_1.png/5cf6fc98d39ffe253f2eab46119f6966.png" decoding="async" width="900" height="694" class="mw-file-element" srcset="/502/en/images_en/thumb/4/4e/Migration_-_Import_Step_1.png/1350px-Migration_-_Import_Step_1.png 1.5x, /502/en/images_en/thumb/4/4e/Migration_-_Import_Step_1.png/1800px-Migration_-_Import_Step_1.png 2x" data-file-width="1850" data-file-height="1426"></a><figcaption></figcaption></figure><p>By default, the importer automatically detects what export type has been used before proceeding to step 2. In addition to the <b>Detect automatically</b> option, you can also select the <b>File format</b>, choosing between <b>Workplace format</b> and <b>CSV</b>. When the latter is used, make sure the <b>CSV delimiter</b> and <b>Encoding</b> settings are correct. The CSV import format only supports departments and positions.
+</p><h3><span class="mw-headline" id="Step_2_-_General_settings">Step 2 - General settings</span></h3>
+<p>The second step differs depending on what type of import file you have uploaded.
+</p>
+<h4><span id="Step_2a_-_General_settings_.28Importing_a_file_in_Workplace_format.29"></span><span class="mw-headline" id="Step_2a_-_General_settings_(Importing_a_file_in_Workplace_format)">Step 2a - General settings (Importing a file in Workplace format)</span></h4>
+<p>The following two sections are available when importing a file in Workplace format:
+</p>
+<ul><li><b>About this file</b>: Metadata about the file and its content is displayed</li>
+<li><b>Destination</b>: Select the tenant the file has to be imported to. You can either opt for the current tenant or select a tenant from your site. This section is not available when you wish to import a tenant import file. For some import files, the option <b>Available for all tenants</b> is offered; that is, it will be imported into Shared space.</li></ul>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Migration_-_Import_Step_2a.png" class="mw-file-description"><img alt="" src="images_en/thumb/7/76/Migration_-_Import_Step_2a.png/adde50188ea90002d83813b948822f56.png" decoding="async" width="900" height="773" class="mw-file-element" srcset="/502/en/images_en/thumb/7/76/Migration_-_Import_Step_2a.png/1350px-Migration_-_Import_Step_2a.png 1.5x, /502/en/images_en/thumb/7/76/Migration_-_Import_Step_2a.png/1800px-Migration_-_Import_Step_2a.png 2x" data-file-width="1810" data-file-height="1554"></a><figcaption></figcaption></figure>
+<h4><span id="Step_2b_-_General_settings_.28Importing_a_file_in_CSV_format.29"></span><span class="mw-headline" id="Step_2b_-_General_settings_(Importing_a_file_in_CSV_format)">Step 2b - General settings (Importing a file in CSV format)</span></h4>
+<p>The following three sections are available when importing a file in CSV format:
+</p>
+<ul><li><b>About this file</b>: A preview of the first three rows is displayed, along with an option to show additional records.</li>
+<li><b>Select importer</b>: Moodle Workplace supports a <b>Departments importer</b> and a <b>Positions importer</b>. The formats of those files will be shown in <a href="1d466d8ced71062fd319faa436dc6ea9.html#Step_3b_-_Options_(Importing_a_file_in_CSV_format)" title="Migrations">Step 3b - Options</a>.</li>
+<li><b>Destination</b>: Select the tenant the file has to be imported to. You can either opt for the current tenant or select a tenant from your site.</li></ul>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Migration_-_Import_Step_2b.png" class="mw-file-description"><img alt="" src="images_en/thumb/c/cc/Migration_-_Import_Step_2b.png/d05ed5f755e7b9fab832c7a4a6a2f85c.png" decoding="async" width="900" height="889" class="mw-file-element" srcset="/502/en/images_en/thumb/c/cc/Migration_-_Import_Step_2b.png/1350px-Migration_-_Import_Step_2b.png 1.5x, /502/en/images_en/thumb/c/cc/Migration_-_Import_Step_2b.png/1800px-Migration_-_Import_Step_2b.png 2x" data-file-width="1816" data-file-height="1794"></a><figcaption></figcaption></figure>
+<h3><span class="mw-headline" id="Step_3_-_Options">Step 3 - Options</span></h3>
+<p>During the third step, you can narrow down your selection and specify which elements you want to import.
+</p>
+<h4><span id="Step_3a_-_Options_.28Importing_a_file_in_Workplace_format.29"></span><span class="mw-headline" id="Step_3a_-_Options_(Importing_a_file_in_Workplace_format)">Step 3a - Options (Importing a file in Workplace format)</span></h4>
+<p>When importing a file in Workplace format, the importer options always contains at least the following two elements (except when importing tenants or the entire site):
+</p>
+<ul><li><b>Content</b>: Which attributes and settings may or may not be included when importing the file.</li>
+<li><b>Instances</b>: Which elements will be included when importing the file.</li></ul><p>
+The content and instances available depend on the chosen importer. Details about each setting are displayed in the balloon help indicated by a question mark.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Migration_-_Import_Step_3a.png" class="mw-file-description"><img alt="" src="images_en/thumb/d/d2/Migration_-_Import_Step_3a.png/8dd17bfb6273db9e92c8a912cb8df7e8.png" decoding="async" width="900" height="572" class="mw-file-element" srcset="/502/en/images_en/thumb/d/d2/Migration_-_Import_Step_3a.png/1350px-Migration_-_Import_Step_3a.png 1.5x, /502/en/images_en/thumb/d/d2/Migration_-_Import_Step_3a.png/1800px-Migration_-_Import_Step_3a.png 2x" data-file-width="1816" data-file-height="1154"></a><figcaption></figcaption></figure><p>The table below lists all <b>Content</b> and <b>Instances</b> settings (<i>locked entries in italics</i>) for each importer plugin.
+</p><table class="wikitable">
+<tbody><tr>
+<td><b>Importer</b>
+</td>
+<td><b>Content</b>
+</td>
+<td colspan="2"><b>Instances</b>
+</td></tr>
+<tr>
+<td><b>Certificates</b>
+</td>
+<td>Certificate template details
+<p>Issued certificates
+</p>
+</td>
+<td colspan="2">Select all certificate templates in this file
+<p>Select certificate templates manually&hellip;
+</p><p>Course category&hellip;
+</p>
+</td></tr>
+<tr>
+<td><b>Certifications</b>
+</td>
+<td>Settings
+<p>Associated programs
+</p><p>Course backups excluding user data
+</p><p>Select course category...
+</p><p>Certification user allocations (if available)
+</p><p>Dynamic rules
+</p>
+</td>
+<td colspan="2">Select all certifications in this file
+<p>Select manually...
+</p>
+</td></tr>
+<tr>
+<td><b>Cohorts</b>
+</td>
+<td>Cohort details
+<p>Cohort members
+</p>
+</td>
+<td colspan="2">Select all cohorts in this file
+<p>Select manually...
+</p><p>Import all in system context
+</p><p>Import all in the selected category...
+</p>
+</td></tr>
+<tr>
+<td><b>Course categories</b>
+</td>
+<td>Course category details
+<p>Course backups excluding user data
+</p><p>Certificate templates (if available)
+</p><p>Cohort details including members (if available)
+</p>
+</td>
+<td colspan="2">Select all course categories in this file
+<p>Select categories and subcategories manually&hellip;
+</p><p>Parent category...
+</p>
+</td></tr>
+<tr>
+<td><b>Courses</b>
+</td>
+<td>Course backups excluding user data
+</td>
+<td colspan="2">Select all courses in this file
+<p>Select courses manually&hellip;
+</p><p>Course category...
+</p>
+</td></tr>
+<tr>
+<td><b>Custom reports</b>
+</td>
+<td>Report definitions
+<p>Audiences
+</p><p>Schedules
+</p>
+</td>
+<td colspan="2">Import all custom reports
+<p>Import specific custom reports...
+</p>
+</td></tr>
+<tr>
+<td><b>Custom reports from outdated version</b>
+</td>
+<td>Report definitions
+<p>Audiences
+</p><p>Schedules
+</p>
+</td>
+<td colspan="2">Import all custom reports
+<p>Import specific custom reports...
+</p>
+</td></tr>
+<tr>
+<td><b>Dynamic rules</b>
+</td>
+<td>Rule definitions, conditions and actions
+</td>
+<td colspan="2">Select all Dynamic rules in this file
+<p>Select manually...
+</p>
+</td></tr>
+<tr>
+<td><b>Organisation structure frameworks</b>
+</td>
+<td>Descriptions, hierarchy and permissions
+</td>
+<td colspan="2">Select all department and position frameworks
+<p>Select all department frameworks
+</p><p>Select all position frameworks
+</p><p>Select manually...
+</p>
+</td></tr>
+<tr>
+<td><b>Organisation structure jobs</b>
+</td>
+<td>Job assignments
+<p>Department and position frameworks
+</p>
+</td>
+<td colspan="2">Select all jobs in this file
+<p>Select all jobs from specific frameworks...
+</p>
+</td></tr>
+<tr>
+<td><b>Programs</b>
+</td>
+<td>Settings
+<p>Course backups excluding user data
+</p><p>Course category...
+</p><p>Dynamic rules
+</p>
+</td>
+<td colspan="2">Select all the programs in this file
+<p>Select manually...
+</p>
+</td></tr>
+<tr>
+<td><b>Site</b>
+</td>
+<td>Details
+<p>Appearance
+</p><p>Users
+</p><p>Content: courses, categories, programs and certifications
+</p><p>Cohort details including members
+</p><p>Certificate templates
+</p><p>Organisation structure
+</p><p>Dynamic rules
+</p><p>Custom reports
+</p>
+</td>
+<td colspan="2">
+</td></tr>
+<tr>
+<td><b>Tenants</b>
+</td>
+<td>Details
+<p>Appearance
+</p><p>Users
+</p><p>Course categories, with cohorts and course structure
+</p><p>Certificate templates
+</p><p>Programs
+</p><p>Certifications
+</p><p>Organisation structure
+</p><p>Dynamic rules
+</p><p>Custom reports
+</p>
+</td>
+<td colspan="2">Merge into existing tenant...
+<p>Create new tenants
+</p><p>Select all tenants
+</p><p>Select tenants manually...
+</p>
+</td></tr>
+<tr>
+<td><b>Users</b>
+</td>
+<td>User profiles
+<p>User pictures
+</p>
+</td>
+<td colspan="2">Select all users
+<p>Select users manually...
+</p>
+</td></tr></tbody></table><p><b>Note</b>: To import job assignments, you need to make use of the Upload user tool (<a href="d4564b5ac7036ef83d6ca81440914b64.html#Job_assignments" title="Upload users in Moodle Workplace">Upload users in Moodle Workplace#Job assignments</a>).
+</p><h4><span id="Step_3b_-_Options_.28Importing_a_file_in_CSV_format.29"></span><span class="mw-headline" id="Step_3b_-_Options_(Importing_a_file_in_CSV_format)">Step 3b - Options (Importing a file in CSV format)</span></h4>
+<p>The following three sections exist when you're importing either departments or positions via CSV files:
+</p>
+<ul><li><b>Position/Department framework</b>: Either create a new (generic) framework where a name will be provided automatically (Import &lt;name of import file&gt;) or select an existing framework.</li>
+<li><b>Hierarchy</b>: Positions and departments can either be arranged hierarchically or as a list. If the organisation structure is hierarchical, a position identifier must be provided, which will be used to identify the parent.</li>
+<li><b>Field mapping</b>: The import file contains the following fields:
+<ul><li><b>name</b>: Name of the position or department</li>
+<li><b>idnumber</b>: ID number of the position or department</li>
+<li><b>description</b>: Textual description of the position or department</li>
+<li><b>descriptionformat</b>: 1 = Moodle auto format (default), 2 = Plain text format, 3 = HTML format, 4 = Markdown format</li>
+<li><b>parent</b>: ID number of the parent. The mapping for this field cannot be the same as the position identifier provided in the hierarchy section.</li>
+<li><b>manager</b> (positions only): Toggle whether the manager role permissions are all available (1) or not (0)</li>
+<li><b>departmentlead</b> (positions only): Toggle whether the department lead role permissions are all available (1) or not (0)</li></ul></li></ul>
+<p><br>
+</p><p>
+When the import file does not follow the notation laid out here, you have the option to select CSV columns manually.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Migration_-_Import_Step_3b.png" class="mw-file-description"><img alt="" src="images_en/thumb/e/ef/Migration_-_Import_Step_3b.png/ddb918faafda79babc30eee348741540.png" decoding="async" width="900" height="872" class="mw-file-element" srcset="/502/en/images_en/thumb/e/ef/Migration_-_Import_Step_3b.png/1350px-Migration_-_Import_Step_3b.png 1.5x, /502/en/images_en/thumb/e/ef/Migration_-_Import_Step_3b.png/1800px-Migration_-_Import_Step_3b.png 2x" data-file-width="1816" data-file-height="1760"></a><figcaption></figcaption></figure><p>Sample departments import file:</p><div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>idnumber,parent,name,description
+SAL,,Sales,Sales department
+SAD,SAL,Sales development,Sales development department
+CSC,SAL,Customer Success,Customer Success department
+EDI,,Editorial,Editorial department
+AND,EDI,Art and design,Art and design department
+PRO,EDI,Production,Production department
+RNE,EDI,Research and Education,Research and Education department
+MED,RNE,Medical advising,Medical advising department
+MHR,RNE,Mental Health research,Mental Health research department
+ONR,RNE,Oncology research,Oncology research department
+MKT,,"Marketing, Promotion and Advertising","Marketing, Promotion and Advertising department"
+PUB,MKT,Publicity,Publicity department
+MH,MKT,Mental Health,Mental Health department
+ONC,MKT,Oncology,Oncology department
+IT,,Information and Technology,Information and Technology department
+SUP,IT,ICT Support,ICT Support department
+ASP,IT,Applications support,Applications support department
+ADE,IT,Applications development,Applications development department
+INF,IT,Infraestructure,Infraestructure department
+HR,,Human Resources,Human Resources department
+LND,HR,Learning and Development,Learning and Development department
+ADM,,Administration,Administration department
+LNC,ADM,Legal and Contracts,Legal and Contracts department
+SRI,LNC,Subsidiary Rights,Subsidiary Rights department
+FNA,ADM,Finance and Accounting,Finance and Accounting department
+</pre></div><p>Sample positions import file:</p><div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>idnumber,parent,name,description,manager
+CEO,,Chief Executive Officer,Chief Executive Officer position,1
+COO,CEO,Chief Operating Officer,Chief Operating Officer position,1
+HMD,COO,Head of Marketing and Design,Head of Marketing and Design position,1
+DES,HMD,Designer,Designer position,0
+MCO,HMD,Marketing Consultant,Marketing Consultant position,0
+OM,COO,Office Manager,Office Manager position,0
+PM,COO,Project Manager,Project Manager position,1
+EDI,PM,Editor,Editor position,0
+MEW,PM,Medical Writer,Medical Writer position,0
+CTO,CEO,Chief Technology Officer,Chief Technology Officer position,1
+LDE,CTO,Lead Developer,Lead Developer position,1
+DEV,LDE,Developer,Developer position,0
+LDO,CTO,Lead DevOps,Lead DevOps position,1
+DEO,LDO,DevOps,DevOps position,0
+SA,CTO,Sysadmin,Sysadmin position,1
+OPE,SA,Operator,Operator position,0
+CFO,CEO,Chief Financial Officer,Chief Financial Officer position,1
+AC,CFO,Accountant,Accountant position,0
+DPO,CFO,Data Privacy Officer,Data Privacy Officer position,0
+LEA,CFO,Legal advisor,Legal advisor position,0
+HHR,CFO,HR Manager,HR Manager position,1
+ODA,HHR,Organisational Development advisor,Organisational Development advisor position,0
+CCO,CEO,Chief Commercial Officer,Chief Commercial Officer position,1
+AMG,CCO,Account Manager,Account Manager position,0
+SAR,CCO,Sales Representative,Sales Representative position,0
+</pre></div>
+<h3><span class="mw-headline" id="Step_4_-_Conflicts">Step 4 - Conflicts</span></h3><p>
+If the import file contains any inconsistencies that the migration tool cannot resolve automatically, the conflict resolution screen will be shown, and action must be taken.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Migration_-_Import_Step_4.png" class="mw-file-description"><img alt="" src="images_en/thumb/a/a7/Migration_-_Import_Step_4.png/f1c2e052f3b91abf2d07cbd909ed6dc8.png" decoding="async" width="900" height="840" class="mw-file-element" srcset="/502/en/images_en/thumb/a/a7/Migration_-_Import_Step_4.png/1350px-Migration_-_Import_Step_4.png 1.5x, /502/en/images_en/thumb/a/a7/Migration_-_Import_Step_4.png/1800px-Migration_-_Import_Step_4.png 2x" data-file-width="1810" data-file-height="1689"></a><figcaption></figcaption></figure><p>Typical conflicts are that a record already exists (for instance, the username or an organisation ID) or an associated user account does not exist. Depending on the conflict, two types of resolution mechanisms are offered: either a solution is provided, or the record has to be skipped.
+</p><h3><span class="mw-headline" id="Step_5_-_Review">Step 5 - Review</span></h3><p>
+During the fifth and final step, you need to review and execute the import process. You will be presented with a summary of the content that will be imported.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Migration_-_Import_Step_5.png" class="mw-file-description"><img alt="" src="images_en/thumb/e/eb/Migration_-_Import_Step_5.png/04ca9f70c7bfe12ffd3b4e21ba9a4471.png" decoding="async" width="900" height="680" class="mw-file-element" srcset="/502/en/images_en/thumb/e/eb/Migration_-_Import_Step_5.png/1350px-Migration_-_Import_Step_5.png 1.5x, /502/en/images_en/thumb/e/eb/Migration_-_Import_Step_5.png/1800px-Migration_-_Import_Step_5.png 2x" data-file-width="1830" data-file-height="1382"></a><figcaption></figcaption></figure><p>Once the import has been initiated, its status will be set to <b>Scheduled</b>. The import will commence on the subsequent <a href="37fc181470a569556f94c1f35940d0a7.html" title="Cron">cron</a> execution. While the import is being processed, the status will be changed to <b>In progress</b>. This might take some time on larger imports. When the import is completed, the status changes again to <b>Success</b>. You will also receive a notification via the usual on-board mechanism. If an <b>Error</b> occurred during the import process, details would be displayed on the status page.
+</p><h2><span class="mw-headline" id="Migration_notifications">Migration notifications</span></h2>
+<p>Migration notifications are enabled by default, using Moodle's standard <a href="b094e7441478a193776f1c57de59a2ff.html" title="Notifications">Notifications</a> mechanism. To configure the default settings for certifications notifications, navigate to <b>General &gt; Messaging &gt; Notification settings</b> and scroll down to the <b>Workplace</b> section.
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Migration_-_Notifications_defaults.png" class="mw-file-description"><img src="images_en/thumb/9/96/Migration_-_Notifications_defaults.png/6edc99e246f1cf66feaff4616237ad21.png" decoding="async" width="900" height="213" class="mw-file-element" srcset="/502/en/images_en/thumb/9/96/Migration_-_Notifications_defaults.png/1350px-Migration_-_Notifications_defaults.png 1.5x, /502/en/images_en/thumb/9/96/Migration_-_Notifications_defaults.png/1800px-Migration_-_Notifications_defaults.png 2x" data-file-width="2704" data-file-height="639"></a><figcaption></figcaption></figure>
+<p><br>
+</p><p>Here, you can specify the default settings for the following events for each enabled channel: <b>Export completed</b> and <b>Import completed</b>.
+</p><p>Unless you lock the settings, users have the option to override these settings in the <b>Notification settings</b> in their <b>Preferences</b>.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260823023721
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.048 seconds
+Real time usage: 0.201 seconds
+Preprocessor visited node count: 89/1000000
+Post&#8208;expand include size: 1261/2097152 bytes
+Template argument size: 14/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 2/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 3058/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.003      1 -total
+ 66.18%    3.311      1 Template:WorkplaceMenuMigrations
+ 32.76%    1.639      1 Template:Target_Audience
+ 28.56%    1.429      1 Template:Workplace_Only
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:25653-0!canonical and timestamp 20260823023721 and revision id 155568. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Migrations_Configuration&amp;oldid=155568">https://docs.moodle.org/502/en/index.php?title=Migrations_Configuration&amp;oldid=155568</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="08f1cd224f4501ea8a1a05323a55ba30.html" title="Category:Workplace">Workplace</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdkbgdcnh">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkbgdd59"></button>
+					<div class="collapse navbar-collapse igdkbgdd59" id="igdkbgdd59">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Migrations_Configuration" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Migrations_Configuration" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Migrations_Configuration&amp;oldid=155568" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Migrations_Configuration&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 5 May 2026, at 04:42.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":370,"wgPageParseReport":{"limitreport":{"cputime":"0.048","walltime":"0.201","ppvisitednodes":{"value":89,"limit":1000000},"postexpandincludesize":{"value":1261,"limit":2097152},"templateargumentsize":{"value":14,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":2,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":3058,"limit":5000000},"timingprofile":["100.00%    5.003      1 -total"," 66.18%    3.311      1 Template:WorkplaceMenuMigrations"," 32.76%    1.639      1 Template:Target_Audience"," 28.56%    1.429      1 Template:Workplace_Only"]},"cachereport":{"timestamp":"20260823023721","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>
