@@ -3,7 +3,13 @@
 import logging
 import time
 
-from ..config import MOODLE_DOCS_DIR, OL_PRODUCTION_XML, TRUBOX_XML, TRU_FAQ_DOCX
+from ..config import (
+    MOODLE_DOCS_DIR,
+    OL_PRODUCTION_XML,
+    TRUBOX_XML,
+    ORIENTATION_XML,
+    TRU_FAQ_DOCX,
+)
 from ..models.schemas import Document
 from ..search.vector_store import reset_collection, add_chunks
 from .parsers.moodle_html import parse_moodle_docs
@@ -61,6 +67,20 @@ def run_ingestion() -> dict:
         logger.info(f"  → {len(trubox_docs)} TRU Box documents")
     else:
         logger.warning(f"TRU Box XML not found: {TRUBOX_XML}")
+
+    # 3b. Parse Moodle Orientation WordPress export (TRU team resources)
+    if ORIENTATION_XML.exists():
+        logger.info(f"Parsing Moodle Orientation from {ORIENTATION_XML.name}")
+        orientation_docs = parse_wordpress_xml(
+            ORIENTATION_XML,
+            source_name="orientation",
+            post_types=["post", "page"],
+        )
+        all_documents.extend(orientation_docs)
+        sources_ingested.append("orientation")
+        logger.info(f"  → {len(orientation_docs)} Orientation documents")
+    else:
+        logger.warning(f"Orientation XML not found: {ORIENTATION_XML}")
 
     # 4. Parse TRU Moodle FAQ
     if TRU_FAQ_DOCX.exists():

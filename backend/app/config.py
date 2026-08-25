@@ -99,6 +99,7 @@ def _resolve_source_file(filename: str) -> Path:
 
 OL_PRODUCTION_XML = _resolve_source_file("olproduction.WordPress.2026-04-07.xml")
 TRUBOX_XML = _resolve_source_file("trubox.WordPress.2026-04-07.xml")
+ORIENTATION_XML = _resolve_source_file("moodleorientation.WordPress.2026-08-25.xml")
 TRU_FAQ_DOCX = _resolve_source_file("TRU Moodle FAQ.docx")
 
 # Static frontend build (for production serving)
