@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Turnitin's Moodle Direct Integration (Administrator Guide) - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"402b41b9edd5ea1b80f79ec5","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Turnitin's_Moodle_Direct_Integration_(Administrator_Guide)","wgTitle":"Turnitin's Moodle Direct Integration (Administrator Guide)","wgCurRevisionId":143436,"wgRevisionId":143436,"wgArticleId":11059,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Turnitin's Moodle Direct Integration","Contributed code"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Turnitin's_Moodle_Direct_Integration_(Administrator_Guide)","wgRelevantArticleId":11059,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Turnitin%27s_Moodle_Direct_Integration_(Administrator_Guide)">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Turnitin_s_Moodle_Direct_Integration_Administrator_Guide rootpage-Turnitin_s_Moodle_Direct_Integration_Administrator_Guide layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkkupt1d"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdkkupt1d" id="igdkkupt1d">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Turnitin%27s+Moodle+Direct+Integration+%28Administrator+Guide%29" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Turnitin%27s_Moodle_Direct_Integration_(Administrator_Guide)">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Turnitin%27s_Moodle_Direct_Integration_(Administrator_Guide)">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Turnitin%27s_Moodle_Direct_Integration_(Administrator_Guide)">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="16238dd432c3211353dae4344f029b43.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Turnitin%27s_Moodle_Direct_Integration_(Administrator_Guide)&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Turnitin%27s_Moodle_Direct_Integration_(Administrator_Guide)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Turnitin%27s_Moodle_Direct_Integration_(Administrator_Guide)&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Turnitin's Moodle Direct Integration (Administrator Guide)</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a href="d9c6f29ad96f496e6f25ac118a984420.html" title="Turnitin's Moodle Direct Integration">Turnitin's Moodle Direct</a></div>
+<div class="content">
+<ul><li><a class="mw-selflink selflink">Administrator Guide</a></li>
+<li><a href="395fc22f5a0444971ab1c33dec754fa4.html" title="Turnitin's Moodle Direct Integration (Instructor Guide)">Instructor Guide</a></li>
+<li><a href="2478ae74bbedef6b88e686ff5130e326.html" title="Turnitin's Moodle Direct Integration (Student Guide)">Student Guide</a></li>
+<li><a href="d5858f9b64bac916a8e80ca6f1ff8542.html" title="Turnitin's Moodle Direct Integration - Frequently Asked Questions">FAQs</a></li>
+<li><a rel="nofollow" class="external text" href="http://download.moodle.org/download.php/plugins/mod/turnitintool.zip">Download Latest Build</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Enabling_the_Moodle_Direct_Integration_in_Turnitin"><span class="tocnumber">1</span> <span class="toctext">Enabling the Moodle Direct Integration in Turnitin</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Downloading_the_Moodle_Direct_Integration_in_Turnitin"><span class="tocnumber">2</span> <span class="toctext">Downloading the Moodle Direct Integration in Turnitin</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Installation_and_Configuration"><span class="tocnumber">3</span> <span class="toctext">Installation and Configuration</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Recommended_Moodle_Settings"><span class="tocnumber">4</span> <span class="toctext">Recommended Moodle Settings</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Configuring_the_Module_within_Moodle"><span class="tocnumber">5</span> <span class="toctext">Configuring the Module within Moodle</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Testing_your_installation"><span class="tocnumber">6</span> <span class="toctext">Testing your installation</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Troubleshooting"><span class="tocnumber">7</span> <span class="toctext">Troubleshooting</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Time_Zones"><span class="tocnumber">8</span> <span class="toctext">Time Zones</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Paper_Repository_Options"><span class="tocnumber">9</span> <span class="toctext">Paper Repository Options</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Enabling_the_Moodle_Direct_Integration_in_Turnitin">Enabling the Moodle Direct Integration in Turnitin</span></h2>
+<p>In order to create the credentials necessary to run the Turnitin Moodle Direct integration activity module the account administrator should log into their Turnitin account at either turnitin.com or submit.ac.uk depending on your account settings.
+</p><p>To configure the Moodle code package follow these steps:
+</p>
+<ol><li>Log in as the Turnitin account administrator at the Turnitin homepage and enter your email address and password.</li>
+<li>Click on the integrations button for the account, if your account is authorised to use integrations their will be a link in the integration column beside your account settings that says either 'unconfigured' or 'configured'. Click this link.</li>
+<li>Scroll down the list of integrations available to 'Moodle Direct' and click the 'configure' link</li>
+<li>Fill out the required fields:
+<ol><li>A shared key containing 8 alphanumerical characters</li>
+<li>Your Moodle installation's IP address or default 255.255.255.255</li>
+<li>An error call back URL or the default as stated below the input field</li></ol></li>
+<li>Click submit to finalise the configuration of Moodle</li></ol>
+<h2><span class="mw-headline" id="Downloading_the_Moodle_Direct_Integration_in_Turnitin">Downloading the Moodle Direct Integration in Turnitin</span></h2>
+<p>To download the latest version of the plug in from within your Turnitin account follow steps 1 and 2 above, then:
+</p>
+<ol><li>Scroll to the bottom of the page and click 'Download'</li>
+<li>Scroll down the page to the table containing the Moodle Direct packages</li>
+<li>Click the 'download' link in the 'Code Package' column</li></ol>
+<p><br>
+</p>
+<ul><li>Note: this integration is also available to download from <a rel="nofollow" class="external text" href="http://www.moodle.org/modules">Modules and Plugins</a></li></ul>
+<h2><span class="mw-headline" id="Installation_and_Configuration">Installation and Configuration</span></h2>
+<p>The activity module follows standard Moodle installation guidelines, to install the code package unzip the code package and copy the directory 'turnitintool' to the 'mod' directory. A typical install would be in '/mod/turnitintool'.
+</p><p>More information on how to install an activity module can be found <a href="af0f49b9c544fa6087d00cec55f64553.html" class="mw-redirect" title="Installing contributed modules or plugins">here</a>.
+</p><p>The activity module requires cURL in order to initiate outbound communications to the Turnitin API, you will need to enable cURL functionality in PHP. In most cases enabling cURL is done by uncommenting the following line in your php.ini file:
+</p>
+<pre>;extension=php_curl.dll</pre>
+<dl><dd><dl><dd><b>OR</b></dd></dl></dd></dl>
+<pre>;extension=php_curl.so</pre>
+<p>Remove the semi-colon at the start of the line to activate the library and restart your web server service to make the changes active.
+</p><p>More information about cURL and more detailed instructions for installing it can be found here: <a rel="nofollow" class="external text" href="http://uk3.php.net/curl">http://uk3.php.net/curl</a>
+</p>
+<h2><span class="mw-headline" id="Recommended_Moodle_Settings">Recommended Moodle Settings</span></h2>
+<p>The activity module performs better when dbpersist is turned off, to do this in the config.php file for your Moodle install add the following line:
+</p><p><code>$CFG-&gt;dbpersist=false;</code>
+</p>
+<h2><span class="mw-headline" id="Configuring_the_Module_within_Moodle">Configuring the Module within Moodle</span></h2>
+<p>Log in to Moodle as Administrator and navigate to:
+</p>
+<dl><dd><dl><dd>Site Administration -&gt; Modules -&gt; Activities -&gt; Turnitin Assignment</dd></dl></dd></dl>
+<p>Configure the plug in:
+</p>
+<ol><li>Enter your Turnitin Account ID</li>
+<li>Enter your Turnitin Secret Key</li>
+<li>Enter the Turnitin API, for UK users enter <a rel="nofollow" class="external free" href="https://submit.ac.uk/api.asp">https://submit.ac.uk/api.asp</a> and for other users enter <a rel="nofollow" class="external free" href="https://api.turnitin.com/api.asp">https://api.turnitin.com/api.asp</a></li>
+<li>Choose whether to enable GradeMark functionality by using the drop down menu. If your account has purchased WriteCycle or GradeMark select Yes.</li>
+<li>Select whether to use Anonymous Marking. Anonymous Marking is only available for TurnitinUK users.</li>
+<li>Enter a disclaimer/agreement in the text box. Student's will have to check a box agreeing to this statement before submitting a paper.</li>
+<li>To stop students being sent an email that enables them to log in to the Turnitin website select <i>No</i>. The default is <i>Yes</i>.</li>
+<li>Diagnostic mode prints extra diagnostic information in error messages and produces log files to track communication with the API. Do not select Yes for Enable Diagnostic Mode option unless asked to by Turnitin Support. The default is No.</li>
+<li>Click on the 'Save Changes button to save your changes.</li></ol>
+<h2><span class="mw-headline" id="Testing_your_installation">Testing your installation</span></h2>
+<p>To test your installation navigate to:
+</p>
+<dl><dd><dl><dd>Site Administration -&gt; Modules -&gt; Activities -&gt; Turnitin Assignment</dd></dl></dd></dl>
+<p>Click the 'Run Connectivity Test' link, Moodle will attempt to connect to your Turnitin account based on the settings you enter in the configuration screen mentioned above. If Moodle successfully connects to Turnitin you will see a message that says, "Moodle has successfully connected to Turnitin". If the connection test fails you will receive a descriptive error message that may contain information as to the reason for the failure, in the event of connection failure check you configuration data and retry the test.
+</p>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<p>The activity module has a number of mechanisms for tracking down problems:
+</p>
+<ol><li><i><b>Show Data Dump / Save Data Dump</b></i> is used to map out the database entries for the activity module, this information can be useful for checking Moodle to Turnitin data relationships and may be requested when reporting problems to Turnitin Support.</li>
+<li><i><b>Unlink Users</b></i> is used to remove the tie between the Moodle user and the Turnitin user. The activity module maps the Moodle Internal User ID with the Turnitin User ID in rare cases it is necessary to break that tie so the system can remake the tie on the next user communication. You should not use this feature unless specifically requested to do so by Turnitin Support.</li>
+<li><i><b>Diagnostic Mode</b></i> can be enabled to help Turnitin Support to track down issues. When you enable this mode a communication log is produced in /moodledata/temp/turnitintool/logs this log may be requested by Turntin Support to help track down communication issues. Diagnostic mode also adds file and line number information to error messages to help the support team to track down scripting errors.</li></ol>
+<h2><span class="mw-headline" id="Time_Zones">Time Zones</span></h2>
+<p>The integration operates in the timezone of your Moodle server, in order for Turnitin to represent the same assignment start, due and post dates you must ensure that your Turnitin account is operating in the same time zone as your Moodle server.
+</p>
+<h2><span class="mw-headline" id="Paper_Repository_Options">Paper Repository Options</span></h2>
+<p>The Turnitin administrator can select paper repository options to allow instructors to have access to paper repository options when setting up an assignment. To change these options:
+</p>
+<ol><li>Log in to Turnitin as the administrator and click the edit icon to the right of the account you wish to edit.</li>
+<li>Select one of the three options</li>
+<li>Click on submit to save your changes</li></ol>
+<!-- 
+NewPP limit report
+Cached time: 20260823024623
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.012 seconds
+Real time usage: 0.014 seconds
+Preprocessor visited node count: 45/1000000
+Post&#8208;expand include size: 681/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 67/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    2.004      1 Template:Turnitin_Moodle_Direct
+100.00%    2.004      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:11059-0!canonical and timestamp 20260823024623 and revision id 143436. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Turnitin%27s_Moodle_Direct_Integration_(Administrator_Guide)&amp;oldid=143436">https://docs.moodle.org/502/en/index.php?title=Turnitin%27s_Moodle_Direct_Integration_(Administrator_Guide)&amp;oldid=143436</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="4a0ebaa1fa7bf2d75b39657b9e3d1d7b.html" title="Category:Turnitin&#039;s Moodle Direct Integration">Turnitin&#039;s Moodle Direct Integration</a></li><li><a href="27cec39c9633dd48770872338440a43c.html" title="Category:Contributed code">Contributed code</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdkkupux7">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkkupv9k"></button>
+					<div class="collapse navbar-collapse igdkkupv9k" id="igdkkupv9k">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Turnitin%27s_Moodle_Direct_Integration_(Administrator_Guide)" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Turnitin%27s_Moodle_Direct_Integration_(Administrator_Guide)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Turnitin%27s_Moodle_Direct_Integration_(Administrator_Guide)&amp;oldid=143436" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Turnitin%27s_Moodle_Direct_Integration_(Administrator_Guide)&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 19 May 2022, at 14:38.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":318,"wgPageParseReport":{"limitreport":{"cputime":"0.012","walltime":"0.014","ppvisitednodes":{"value":45,"limit":1000000},"postexpandincludesize":{"value":681,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":67,"limit":5000000},"timingprofile":["100.00%    2.004      1 Template:Turnitin_Moodle_Direct","100.00%    2.004      1 -total"]},"cachereport":{"timestamp":"20260823024623","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

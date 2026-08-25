@@ -11,7 +11,7 @@ from __future__ import annotations
 import logging
 from typing import List, Optional, Tuple
 
-from ..config import MAX_CONTEXT_CHUNKS
+from ..config import MAX_CONTEXT_CHUNKS, MOODLE_VERSION
 from ..search.query import search_knowledge_base
 from ..cases.database import search_cases as search_past_cases, init_database
 
@@ -28,8 +28,9 @@ TOOL_DEFINITIONS = [
     {
         "name": "search_knowledge_base",
         "description": (
-            "Search TRU's Moodle knowledge base (Moodle 4.5 documentation, TRU "
-            "FAQs, and internal guides) using semantic search. Call this BEFORE "
+            f"Search TRU's Moodle knowledge base (Moodle {MOODLE_VERSION} "
+            "documentation, TRU FAQs, and internal guides) using semantic "
+            "search. Call this BEFORE "
             "diagnosing any issue that involves a specific Moodle feature, "
             "setting, or behavior — do not rely on general Moodle knowledge "
             "when documentation might exist. If the first search doesn't "

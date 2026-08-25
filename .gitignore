@@ -33,3 +33,9 @@ Thumbs.db
 
 # Uploads
 data/mbz_uploads/
+
+# The working copy of the docs export at the repo root — large, and mostly
+# images the parser skips. The subset that actually gets ingested is committed
+# under backend/knowledge_sources/ so it ships in the container.
+/moodledocs_en/
+

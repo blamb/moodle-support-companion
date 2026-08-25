@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Dataform Tests - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"50e71c33cb6f310849dabb13","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Dataform_Tests","wgTitle":"Dataform Tests","wgCurRevisionId":111737,"wgRevisionId":111737,"wgArticleId":17672,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Contributed code","Dataform module"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Dataform_Tests","wgRelevantArticleId":17672,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Dataform_Tests">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Dataform_Tests rootpage-Dataform_Tests layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjbzjfwp"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdjbzjfwp" id="igdjbzjfwp">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Dataform+Tests" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Dataform_Tests">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Dataform_Tests">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Dataform_Tests">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="0f8474ba6bcac75c23b2d49c5c2f34c5.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Dataform_Tests&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_Tests&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_Tests&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Dataform Tests</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><i><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="c93eb5dfaca94ad219ccb0d560e9af0f.html" title="Managing a Moodle course">Managing a Moodle course</a> ► <a href="9e64708c111f312d3017aabec2d5768e.html" title="Activities">Activities</a> ► <a href="7dc44b9d10259bc60658cf60b67229bc.html" title="Dataform module">Dataform</a> </i>
+  ► <a class="mw-selflink selflink">Dataform Tests</a><i></i></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="7dc44b9d10259bc60658cf60b67229bc.html" title="Dataform module">Dataform</a></div>	
+<div class="content">
+<ul><li><a href="ab0de103b356d940bc36729a7d6b83dc.html" title="Dataform releases">Releases</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/plugins/browse.php?list=set&amp;id=4">Downloads</a></li>
+<li><a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/CONTRIB/component/13430">Issues</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/view.php?id=8192">Discussion</a></li></ul>
+<div style="font-style: italic;font-weight: bold;">Module administration</div>
+<ul><li><a href="44241329db53ce20214e7d4f1594351d.html" title="Dataform installation">Installation</a></li>
+<li><a href="50184c980ea6c7d084515fe3ba330d8e.html" title="Dataform Plugins">Plugins and Components</a></li>
+<li><a href="2242fb586e2c802760e98a5a0ec957bd.html" title="Dataform capabilities">Capabilities</a></li>
+<li><a href="59f22745fae0650c8f9a060ee700f07e.html" title="Dataform System events">System events</a></li>
+<li><a class="mw-selflink selflink">Tests</a></li></ul>
+<div style="font-style: italic;font-weight: bold;">Creating an activity</div>
+<ul><li><a href="289cc88f71f24d8e698639764aa60ff8.html" title="Dataform Overview">Overview</a></li>
+<li><a href="6a9ca9d7d66942725b40feb6b8f6d556.html" title="Dataform Activity administration">Activity administration</a></li>
+<li><a href="f648ee5661ef5fde1e2a178d856767e8.html" title="Dataform building">Building an activity</a></li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_CSS_Tips&amp;action=edit&amp;redlink=1" class="new" title="Dataform CSS Tips (page does not exist)">CSS tips and tricks</a></li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_JS_Tips&amp;action=edit&amp;redlink=1" class="new" title="Dataform JS Tips (page does not exist)">JS tips and tricks</a></li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_RSS&amp;action=edit&amp;redlink=1" class="new" title="Dataform RSS (page does not exist)">Activating RSS</a></li>
+<li><a href="ff3efb7377e2c473b83e5f84448cceb7.html" title="Dataform Workflow">Activity workflow</a></li>
+<li><a href="a973d364212f4e323cab4e7e902116e0.html" title="Dataform Grading">Grading</a></li></ul>
+<div style="font-style: italic;font-weight: bold;">Working with the activity</div>
+<ul><li><a href="1f0964fd0ec28c1594cf25f3b3ab1075.html" title="Dataform Activity navigation">Activity navigation</a></li>
+<li><a href="6b13c1349f3193411f230a4649f7e00a.html" title="Dataform Entries">Submission and display</a></li>
+<li><a href="8aa74a33373c19bf60d80dbd87a3bfbe.html" title="Dataform search sort">Search and Sort </a></li>
+<li><a href="e1d64be4b1682353da205ec83dfa13ac.html" title="Dataform Import Export">Import and Export</a></li>
+<li><a href="e938882d8a958ce4968bde30ea152c8c.html" title="Dataform Applications">Applications</a></li></ul>
+<div style="font-style: italic;font-weight: bold;">See also</div>
+<ul><li><a href="0c4c9abd93308ab00bb985fbcb6111ad.html" title="Dataform FAQ">FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p><br>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Unit_tests"><span class="tocnumber">1</span> <span class="toctext">Unit tests</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Available_tests"><span class="tocnumber">1.1</span> <span class="toctext">Available tests</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Generator"><span class="tocnumber">1.1.1</span> <span class="toctext">Generator</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#Events"><span class="tocnumber">1.1.2</span> <span class="toctext">Events</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Access"><span class="tocnumber">1.1.3</span> <span class="toctext">Access</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#CSV_Import"><span class="tocnumber">1.1.4</span> <span class="toctext">CSV Import</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Acceptance_tests"><span class="tocnumber">2</span> <span class="toctext">Acceptance tests</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Available_features"><span class="tocnumber">2.1</span> <span class="toctext">Available features</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Activity"><span class="tocnumber">2.1.1</span> <span class="toctext">Activity</span></a>
+<ul>
+<li class="toclevel-4 tocsection-10"><a href="#Basics"><span class="tocnumber">2.1.1.1</span> <span class="toctext">Basics</span></a></li>
+<li class="toclevel-4 tocsection-11"><a href="#Max_entries"><span class="tocnumber">2.1.1.2</span> <span class="toctext">Max entries</span></a></li>
+<li class="toclevel-4 tocsection-12"><a href="#Max_entries_with_interval"><span class="tocnumber">2.1.1.3</span> <span class="toctext">Max entries with interval</span></a></li>
+<li class="toclevel-4 tocsection-13"><a href="#Not_ready"><span class="tocnumber">2.1.1.4</span> <span class="toctext">Not ready</span></a></li>
+<li class="toclevel-4 tocsection-14"><a href="#Separate_participants"><span class="tocnumber">2.1.1.5</span> <span class="toctext">Separate participants</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-15"><a href="#field"><span class="tocnumber">2.1.2</span> <span class="toctext">field</span></a>
+<ul>
+<li class="toclevel-4 tocsection-16"><a href="#field_checkbox"><span class="tocnumber">2.1.2.1</span> <span class="toctext">field checkbox</span></a></li>
+<li class="toclevel-4 tocsection-17"><a href="#field_duration"><span class="tocnumber">2.1.2.2</span> <span class="toctext">field duration</span></a></li>
+<li class="toclevel-4 tocsection-18"><a href="#field_file"><span class="tocnumber">2.1.2.3</span> <span class="toctext">field file</span></a></li>
+<li class="toclevel-4 tocsection-19"><a href="#field_number"><span class="tocnumber">2.1.2.4</span> <span class="toctext">field number</span></a></li>
+<li class="toclevel-4 tocsection-20"><a href="#field_picture"><span class="tocnumber">2.1.2.5</span> <span class="toctext">field picture</span></a></li>
+<li class="toclevel-4 tocsection-21"><a href="#field_radiobutton"><span class="tocnumber">2.1.2.6</span> <span class="toctext">field radiobutton</span></a></li>
+<li class="toclevel-4 tocsection-22"><a href="#field_select"><span class="tocnumber">2.1.2.7</span> <span class="toctext">field select</span></a></li>
+<li class="toclevel-4 tocsection-23"><a href="#field_selectmulti"><span class="tocnumber">2.1.2.8</span> <span class="toctext">field selectmulti</span></a></li>
+<li class="toclevel-4 tocsection-24"><a href="#field_text"><span class="tocnumber">2.1.2.9</span> <span class="toctext">field text</span></a></li>
+<li class="toclevel-4 tocsection-25"><a href="#field_textarea"><span class="tocnumber">2.1.2.10</span> <span class="toctext">field textarea</span></a></li>
+<li class="toclevel-4 tocsection-26"><a href="#field_time"><span class="tocnumber">2.1.2.11</span> <span class="toctext">field time</span></a></li>
+<li class="toclevel-4 tocsection-27"><a href="#field_url"><span class="tocnumber">2.1.2.12</span> <span class="toctext">field url</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-28"><a href="#view"><span class="tocnumber">2.1.3</span> <span class="toctext">view</span></a>
+<ul>
+<li class="toclevel-4 tocsection-29"><a href="#view_all_submission_buttons"><span class="tocnumber">2.1.3.1</span> <span class="toctext">view all submission buttons</span></a></li>
+<li class="toclevel-4 tocsection-30"><a href="#view_aligned"><span class="tocnumber">2.1.3.2</span> <span class="toctext">view aligned</span></a></li>
+<li class="toclevel-4 tocsection-31"><a href="#view_csv"><span class="tocnumber">2.1.3.3</span> <span class="toctext">view csv</span></a></li>
+<li class="toclevel-4 tocsection-32"><a href="#view_grid"><span class="tocnumber">2.1.3.4</span> <span class="toctext">view grid</span></a></li>
+<li class="toclevel-4 tocsection-33"><a href="#view_interval"><span class="tocnumber">2.1.3.5</span> <span class="toctext">view interval</span></a></li>
+<li class="toclevel-4 tocsection-34"><a href="#view_rss"><span class="tocnumber">2.1.3.6</span> <span class="toctext">view rss</span></a></li>
+<li class="toclevel-4 tocsection-35"><a href="#view_tabular"><span class="tocnumber">2.1.3.7</span> <span class="toctext">view tabular</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-36"><a href="#Available_steps"><span class="tocnumber">2.2</span> <span class="toctext">Available steps</span></a>
+<ul>
+<li class="toclevel-3 tocsection-37"><a href="#Given_I_start_afresh_with_dataform_%22DATAFORM_NAME_STRING%22"><span class="tocnumber">2.2.1</span> <span class="toctext">Given I start afresh with dataform "DATAFORM_NAME_STRING"</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="#Given_I_go_to_dataform_page_%22DATAFORM_URL_STRING%22"><span class="tocnumber">2.2.2</span> <span class="toctext">Given I go to dataform page "DATAFORM_URL_STRING"</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="#Given_I_add_a_dataform_with_%22DATAFORM_URL_STRING%22"><span class="tocnumber">2.2.3</span> <span class="toctext">Given I add a dataform with "DATAFORM_URL_STRING"</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="#Then_the_dataform_settings_should_match_%22FORM_DATA_STRING%22"><span class="tocnumber">2.2.4</span> <span class="toctext">Then the dataform settings should match "FORM_DATA_STRING"</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="#Given_I_add_a_test_dataform"><span class="tocnumber">2.2.5</span> <span class="toctext">Given I add a test dataform</span></a></li>
+<li class="toclevel-3 tocsection-42"><a href="#Given_I_delete_this_dataform"><span class="tocnumber">2.2.6</span> <span class="toctext">Given I delete this dataform</span></a></li>
+<li class="toclevel-3 tocsection-43"><a href="#Given_I_go_to_manage_dataform_%22TAB_NAME_STRING%22"><span class="tocnumber">2.2.7</span> <span class="toctext">Given I go to manage dataform "TAB_NAME_STRING"</span></a></li>
+<li class="toclevel-3 tocsection-44"><a href="#Given_I_add_a_dataform_field_%22FIELD_TYPE_STRING%22_with_%22FORM_DATA_STRING%22"><span class="tocnumber">2.2.8</span> <span class="toctext">Given I add a dataform field "FIELD_TYPE_STRING" with "FORM_DATA_STRING"</span></a></li>
+<li class="toclevel-3 tocsection-45"><a href="#Given_I_add_a_dataform_view_%22VIEW_TYPE_STRING%22_with_%22FORM_DATA_STRING%22"><span class="tocnumber">2.2.9</span> <span class="toctext">Given I add a dataform view "VIEW_TYPE_STRING" with "FORM_DATA_STRING"</span></a></li>
+<li class="toclevel-3 tocsection-46"><a href="#Given_I_set_view_%22VIEW_NAME_STRING%22_as_default_view"><span class="tocnumber">2.2.10</span> <span class="toctext">Given I set view "VIEW_NAME_STRING" as default view</span></a></li>
+<li class="toclevel-3 tocsection-47"><a href="#Given_I_add_a_dataform_filter_with_%22FORM_DATA_STRING%22"><span class="tocnumber">2.2.11</span> <span class="toctext">Given I add a dataform filter with "FORM_DATA_STRING"</span></a></li>
+<li class="toclevel-3 tocsection-48"><a href="#Given_I_prepend_%22TEXT_STRING%22_to_field_%22FIELD_STRING%22"><span class="tocnumber">2.2.12</span> <span class="toctext">Given I prepend "TEXT_STRING" to field "FIELD_STRING"</span></a></li>
+<li class="toclevel-3 tocsection-49"><a href="#Given_I_apppend_%22TEXT_STRING%22_to_field_%22FIELD_STRING%22"><span class="tocnumber">2.2.13</span> <span class="toctext">Given I apppend "TEXT_STRING" to field "FIELD_STRING"</span></a></li>
+<li class="toclevel-3 tocsection-50"><a href="#Given_I_set_dataform_field_%22FIELD_NAME_STRING%22_options_to_%22OPTIONS_STRING%22"><span class="tocnumber">2.2.14</span> <span class="toctext">Given I set dataform field "FIELD_NAME_STRING" options to "OPTIONS_STRING"</span></a></li>
+<li class="toclevel-3 tocsection-51"><a href="#Given_I_set_the_field_%22FIELD_NAME_STRING%22_to"><span class="tocnumber">2.2.15</span> <span class="toctext">Given I set the field "FIELD_NAME_STRING" to</span></a></li>
+<li class="toclevel-3 tocsection-52"><a href="#Given_I_fill_textarea_%22FIELD_STRING%22_with_%22TEXT_STRING%22"><span class="tocnumber">2.2.16</span> <span class="toctext">Given I fill textarea "FIELD_STRING" with "TEXT_STRING"</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-53"><a href="#Step_values"><span class="tocnumber">2.3</span> <span class="toctext">Step values</span></a>
+<ul>
+<li class="toclevel-3 tocsection-54"><a href="#FORM_DATA_STRING"><span class="tocnumber">2.3.1</span> <span class="toctext">FORM_DATA_STRING</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-55"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Unit_tests">Unit tests</span></h2>
+<h3><span class="mw-headline" id="Available_tests">Available tests</span></h3>
+<h4><span class="mw-headline" id="Generator">Generator</span></h4>
+<p>Dataform instance creation and gradebook integration.
+</p>
+<h4><span class="mw-headline" id="Events">Events</span></h4>
+<p>Triggers, captures and validate events for:
+</p>
+<ul><li>View</li>
+<li>Field</li>
+<li>Filter</li>
+<li>Entry</li></ul>
+<h4><span class="mw-headline" id="Access">Access</span></h4>
+<p>Validates access for:
+</p>
+<ul><li>entry view</li>
+<li>entry add</li>
+<li>entry update</li>
+<li>entry delete</li>
+<li>field view</li>
+<li>field update</li>
+<li>view access</li></ul>
+<h4><span class="mw-headline" id="CSV_Import">CSV Import</span></h4>
+<p>Import of base patterns of standard fields.
+</p>
+<h2><span class="mw-headline" id="Acceptance_tests">Acceptance tests</span></h2>
+<h3><span class="mw-headline" id="Available_features">Available features</span></h3>
+<h4><span class="mw-headline" id="Activity">Activity</span></h4>
+<h5><span class="mw-headline" id="Basics">Basics</span></h5>
+<ul><li>Adds a Dataform activity to a course.</li>
+<li>Adds all standard fields with default settings.</li>
+<li>Adds all standard views with default settings.</li>
+<li>Submits a new entry with content in the text field in each view.</li>
+<li>Sets quick filter
+<ul><li>Sets quick per page and navigates between pages with the paging bar</li>
+<li>Filters entries with the quick search</li>
+<li>Resets the quick filter</li></ul></li>
+<li>Adds standard filters with sort and search criteria and applies them to the view</li>
+<li>Adds advanced (user) filter and applies it to the view</li></ul>
+<h5><span class="mw-headline" id="Max_entries">Max entries</span></h5>
+<h5><span class="mw-headline" id="Max_entries_with_interval">Max entries with interval</span></h5>
+<h5><span class="mw-headline" id="Not_ready">Not ready</span></h5>
+<h5><span class="mw-headline" id="Separate_participants">Separate participants</span></h5>
+<h4><span class="mw-headline" id="field">field</span></h4>
+<h5><span class="mw-headline" id="field_checkbox">field checkbox</span></h5>
+<h5><span class="mw-headline" id="field_duration">field duration</span></h5>
+<h5><span class="mw-headline" id="field_file">field file</span></h5>
+<h5><span class="mw-headline" id="field_number">field number</span></h5>
+<h5><span class="mw-headline" id="field_picture">field picture</span></h5>
+<h5><span class="mw-headline" id="field_radiobutton">field radiobutton</span></h5>
+<h5><span class="mw-headline" id="field_select">field select</span></h5>
+<h5><span class="mw-headline" id="field_selectmulti">field selectmulti</span></h5>
+<h5><span class="mw-headline" id="field_text">field text</span></h5>
+<h5><span class="mw-headline" id="field_textarea">field textarea</span></h5>
+<h5><span class="mw-headline" id="field_time">field time</span></h5>
+<h5><span class="mw-headline" id="field_url">field url</span></h5>
+<h4><span class="mw-headline" id="view">view</span></h4>
+<h5><span class="mw-headline" id="view_all_submission_buttons">view all submission buttons</span></h5>
+<ul><li>Scenario: Submit entries with different submission buttons</li>
+<li>Scenario: Submission should not be allowed when no submission buttons enabled</li></ul>
+<h5><span class="mw-headline" id="view_aligned">view aligned</span></h5>
+<h5><span class="mw-headline" id="view_csv">view csv</span></h5>
+<h5><span class="mw-headline" id="view_grid">view grid</span></h5>
+<h5><span class="mw-headline" id="view_interval">view interval</span></h5>
+<h5><span class="mw-headline" id="view_rss">view rss</span></h5>
+<h5><span class="mw-headline" id="view_tabular">view tabular</span></h5>
+<h3><span class="mw-headline" id="Available_steps">Available steps</span></h3>
+<h4><span id="Given_I_start_afresh_with_dataform_.22DATAFORM_NAME_STRING.22"></span><span class="mw-headline" id='Given_I_start_afresh_with_dataform_"DATAFORM_NAME_STRING"'>Given I start afresh with dataform "DATAFORM_NAME_STRING"</span></h4>
+<p>Prepares  a fresh environment with the following components and a dataform activity 'Test dataform' in Course 1.
+Course:
+</p>
+<pre>| fullname | shortname | category
+| Course 1 | C1 | 0
+
+</pre>
+<p>Users:
+</p>
+<pre>| username | firstname | lastname | email
+| teacher1 | Teacher | 1 | teacher1@asd.com
+| assistant1 | Assistant | 1 | assistant1@asd.com
+| student1 | Student | 1 | student1@asd.com
+| student2 | Student | 2 | student2@asd.com
+| student3 | Student | 3 | student3@asd.com
+</pre>
+<p>Enrollments:
+</p>
+<pre>| user | course | role
+| teacher1 | C1 | editingteacher
+| assistant1 | C1 | teacher
+| student1 | C1 | student
+| student2 | C1 | student
+
+</pre>
+<p>Groups:
+</p>
+<pre>| name    | description | course  | idnumber |
+| Group 1 | Anything    | C1 | G1   |
+| Group 2 | Anything    | C1 | G2   |
+</pre>
+<p>Group members:
+</p>
+<pre>| user     | group  |
+| student1 | G1 |        
+| student2 | G2 |        
+</pre>
+<p>It also resets (truncates) all Dataform tables to remove any records and reset sequences.
+</p><p>This step is essential for any standalone scenario that adds or updates entries with content since such a scenario has to refer to input elements by fixed field ids and entry ids.
+</p>
+<h4><span id="Given_I_go_to_dataform_page_.22DATAFORM_URL_STRING.22"></span><span class="mw-headline" id='Given_I_go_to_dataform_page_"DATAFORM_URL_STRING"'>Given I go to dataform page "DATAFORM_URL_STRING"</span></h4>
+<p>Opens Dataform url.
+</p>
+<h4><span id="Given_I_add_a_dataform_with_.22DATAFORM_URL_STRING.22"></span><span class="mw-headline" id='Given_I_add_a_dataform_with_"DATAFORM_URL_STRING"'>Given I add a dataform with "DATAFORM_URL_STRING"</span></h4>
+<p>Adds a dataform as teacher 1 in course 1 and displays the dataform.
+</p>
+<h4><span id="Then_the_dataform_settings_should_match_.22FORM_DATA_STRING.22"></span><span class="mw-headline" id='Then_the_dataform_settings_should_match_"FORM_DATA_STRING"'>Then the dataform settings should match "FORM_DATA_STRING"</span></h4>
+<p>Validates dataform activity settings.
+</p>
+<h4><span class="mw-headline" id="Given_I_add_a_test_dataform">Given I add a test dataform</span></h4>
+<p>Adds a test dataform as teacher 1 in course 1 and displays the dataform.
+</p>
+<h4><span class="mw-headline" id="Given_I_delete_this_dataform">Given I delete this dataform</span></h4>
+<p>Deletes the dataform.
+</p>
+<h4><span id="Given_I_go_to_manage_dataform_.22TAB_NAME_STRING.22"></span><span class="mw-headline" id='Given_I_go_to_manage_dataform_"TAB_NAME_STRING"'>Given I go to manage dataform "TAB_NAME_STRING"</span></h4>
+<p>Go to the specified manage tab of the current dataform.
+</p>
+<h4><span id="Given_I_add_a_dataform_field_.22FIELD_TYPE_STRING.22_with_.22FORM_DATA_STRING.22"></span><span class="mw-headline" id='Given_I_add_a_dataform_field_"FIELD_TYPE_STRING"_with_"FORM_DATA_STRING"'>Given I add a dataform field "FIELD_TYPE_STRING" with "FORM_DATA_STRING"</span></h4>
+<p>Adds a field of the specified type to the current dataform with the provided table data (usually Name).
+</p>
+<h4><span id="Given_I_add_a_dataform_view_.22VIEW_TYPE_STRING.22_with_.22FORM_DATA_STRING.22"></span><span class="mw-headline" id='Given_I_add_a_dataform_view_"VIEW_TYPE_STRING"_with_"FORM_DATA_STRING"'>Given I add a dataform view "VIEW_TYPE_STRING" with "FORM_DATA_STRING"</span></h4>
+<p>Adds a view of the specified type to the current dataform with the provided table data (usually Name).
+</p>
+<h4><span id="Given_I_set_view_.22VIEW_NAME_STRING.22_as_default_view"></span><span class="mw-headline" id='Given_I_set_view_"VIEW_NAME_STRING"_as_default_view'>Given I set view "VIEW_NAME_STRING" as default view</span></h4>
+<p>Sets a view as the default view of a dataform instance.
+</p>
+<h4><span id="Given_I_add_a_dataform_filter_with_.22FORM_DATA_STRING.22"></span><span class="mw-headline" id='Given_I_add_a_dataform_filter_with_"FORM_DATA_STRING"'>Given I add a dataform filter with "FORM_DATA_STRING"</span></h4>
+<p>Adds a filter with the specified data to the current dataform.
+</p>
+<h4><span id="Given_I_prepend_.22TEXT_STRING.22_to_field_.22FIELD_STRING.22"></span><span class="mw-headline" id='Given_I_prepend_"TEXT_STRING"_to_field_"FIELD_STRING"'>Given I prepend "TEXT_STRING" to field "FIELD_STRING"</span></h4>
+<p>Prepends text to the field's content.
+</p>
+<h4><span id="Given_I_apppend_.22TEXT_STRING.22_to_field_.22FIELD_STRING.22"></span><span class="mw-headline" id='Given_I_apppend_"TEXT_STRING"_to_field_"FIELD_STRING"'>Given I apppend "TEXT_STRING" to field "FIELD_STRING"</span></h4>
+<p>Appends text to the field's content.
+</p>
+<h4><span id="Given_I_set_dataform_field_.22FIELD_NAME_STRING.22_options_to_.22OPTIONS_STRING.22"></span><span class="mw-headline" id='Given_I_set_dataform_field_"FIELD_NAME_STRING"_options_to_"OPTIONS_STRING"'>Given I set dataform field "FIELD_NAME_STRING" options to "OPTIONS_STRING"</span></h4>
+<p>Sets a dataform field setting to the given content.
+</p>
+<h4><span id="Given_I_set_the_field_.22FIELD_NAME_STRING.22_to"></span><span class="mw-headline" id='Given_I_set_the_field_"FIELD_NAME_STRING"_to'>Given I set the field "FIELD_NAME_STRING" to</span></h4>
+<p>Sets field value to the specified text passed as PyStringNode.
+</p>
+<h4><span id="Given_I_fill_textarea_.22FIELD_STRING.22_with_.22TEXT_STRING.22"></span><span class="mw-headline" id='Given_I_fill_textarea_"FIELD_STRING"_with_"TEXT_STRING"'>Given I fill textarea "FIELD_STRING" with "TEXT_STRING"</span></h4>
+<p>Fills a textarea with the specified text replacing \n with new lines.
+</p>
+<h3><span class="mw-headline" id="Step_values">Step values</span></h3>
+<h4><span class="mw-headline" id="FORM_DATA_STRING">FORM_DATA_STRING</span></h4>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://docs.moodle.org/dev/Acceptance_testing">Acceptance testing</a> - information about preparing your Moodle installation for acceptance testing. Note that this is not recommended for production sites.</li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/dev/Acceptance_testing#Writing_features">Writing features</a> - general test writing guidelines.</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260823020316
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.025 seconds
+Real time usage: 0.030 seconds
+Preprocessor visited node count: 182/1000000
+Post&#8208;expand include size: 1698/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.020      1 -total
+ 57.39%    2.881      1 Template:Dataform
+ 41.32%    2.074      1 Template:Dataform_Docs_Note_1
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:17672-0!canonical and timestamp 20260823020316 and revision id 111737. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Dataform_Tests&amp;oldid=111737">https://docs.moodle.org/502/en/index.php?title=Dataform_Tests&amp;oldid=111737</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="27cec39c9633dd48770872338440a43c.html" title="Category:Contributed code">Contributed code</a></li><li><a href="34af9ecf8e2507d482d83d261a9d1fcd.html" title="Category:Dataform module">Dataform module</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdjbzjie8">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjbzjir3"></button>
+					<div class="collapse navbar-collapse igdjbzjir3" id="igdjbzjir3">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Dataform_Tests" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Dataform_Tests" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_Tests&amp;oldid=111737" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_Tests&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 13 April 2014, at 22:53.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":178,"wgPageParseReport":{"limitreport":{"cputime":"0.025","walltime":"0.030","ppvisitednodes":{"value":182,"limit":1000000},"postexpandincludesize":{"value":1698,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    5.020      1 -total"," 57.39%    2.881      1 Template:Dataform"," 41.32%    2.074      1 Template:Dataform_Docs_Note_1"]},"cachereport":{"timestamp":"20260823020316","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

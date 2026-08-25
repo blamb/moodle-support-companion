@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Datalynx Fields - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"eb120afff8be5e4cbd2189f0","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Datalynx_Fields","wgTitle":"Datalynx Fields","wgCurRevisionId":113047,"wgRevisionId":113047,"wgArticleId":18540,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Contributed code","Datalynx module","Pages with broken file links"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Datalynx_Fields","wgRelevantArticleId":18540,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Datalynx_Fields">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Datalynx_Fields rootpage-Datalynx_Fields layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjcl1o9n"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdjcl1o9n" id="igdjcl1o9n">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Datalynx+Fields" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Datalynx_Fields">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Datalynx_Fields">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Datalynx_Fields">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="fe9a6119d06408f654b35026b8b60579.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Datalynx_Fields&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Datalynx_Fields&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Datalynx_Fields&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Datalynx Fields</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><i><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="c93eb5dfaca94ad219ccb0d560e9af0f.html" title="Managing a Moodle course">Managing a Moodle course</a> ► <a href="9e64708c111f312d3017aabec2d5768e.html" title="Activities">Activities</a> ► <a href="d2d1b08803fcd17003fb2e3d5764bf99.html" title="Datalynx module">Datalynx</a> ► <a class="mw-selflink selflink">Datalynx Fields</a></i></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="d2d1b08803fcd17003fb2e3d5764bf99.html" title="Datalynx module">Datalynx</a></div>	
+<div class="content">
+<div style="font-weight: bold;">Module administration</div>
+<ul><li><a href="4ac5ab8367de9439e3fb9ee22096ec59.html" title="Datalynx installation">Installation</a></li>
+<li><a href="d908f096c60b96a8517d9e548ac755c6.html" title="Datalynx global settings">Global settings</a></li>
+<li><a href="c9a63545c44fa0908cae835d7e30c759.html" title="Datalynx permissions">Permissions</a></li></ul>
+<div style="font-weight: bold;">Creating an activity</div>
+<ul><li><a href="8d094d8a57109734120dce0555da80e1.html" title="Datalynx create">Create a datalynx activity</a></li>
+<li><a href="7bfde8ceea42ae11ce7c765dea81e8f2.html" title="Datalynx settings">Activity settings</a></li></ul>
+<div style="font-weight: bold;">Manage datalynx activities</div>
+<ul><li><a href="1a6acb1922e48514c89ce4a8d60d875d.html" title="Datalynx Views">Views</a>
+<ul><li><a href="0c2a9167f17179d2f34363a0c044b04e.html" title="Datalynx View settings">General view settings</a></li>
+<li><a href="d447d5fb989fb9c7fdc82bee7f11bb10.html" title="Datalynx Grid view">Grid view</a></li>
+<li><a href="eb00f587d75707ce207201d20bd96ff7.html" title="Datalynx Tabular view">Tabular view</a></li>
+<li><a href="1f802dcb3810151ca9e856621617cf02.html" title="Datalynx PDF view">PDF view</a></li>
+<li><a href="6b812a086b792be5d3b746745ebf520a.html" title="Datalynx CSV view">CSV view</a></li></ul></li>
+<li><a class="mw-selflink selflink">Fields</a></li>
+<li><a href="13c8606321e8de80250195d0d7aeacde.html" title="Datalynx Filter, Search and Sort">Filter, Search and Sort</a></li>
+<li><a href="c055908a4889763430cdb541dad43df4.html" title="Datalynx Tags">Datalynx Tags</a></li>
+<li><a href="2d718594e96c48140c706a6c4144bc4c.html" title="Datalynx Statistics">Statistics</a></li>
+<li><a href="8c93e0693afacb1d153224098b14d068.html" title="Datalynx Notifications">Notifications</a></li>
+<li><a href="42035b679d350ffb0a6e7a8a0c55c4e8.html" title="Datalynx JavaScript, CSS">JavaScript, CSS</a></li>
+<li><a href="51ffacdeab49ceb2fff206d9f4e7fbb5.html" title="Datalynx Calculations">Calculations</a></li></ul>
+<div style="font-weight: bold;">See also</div>
+<ul><li><a href="https://docs.moodle.org/502/en/index.php?title=Datalynx_FAQ&amp;action=edit&amp;redlink=1" class="new" title="Datalynx FAQ (page does not exist)">FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p>Datalynx fields are used to collect and display predefined data elements such as text, dates or numbers in an entry. You can choose between a huge amount of fields. Field administration can be accessed via the tab "Manage -&gt; Fields".
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#General_field_settings"><span class="tocnumber">1</span> <span class="toctext">General field settings</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Name"><span class="tocnumber">1.1</span> <span class="toctext">Name</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Description"><span class="tocnumber">1.2</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Visible_to"><span class="tocnumber">1.3</span> <span class="toctext">Visible to</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Editable"><span class="tocnumber">1.4</span> <span class="toctext">Editable</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Field_label"><span class="tocnumber">1.5</span> <span class="toctext">Field label</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Example"><span class="tocnumber">1.5.1</span> <span class="toctext">Example</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#My_number_is:_40._It_is_the_best_number_of_all!"><span class="tocnumber">2</span> <span class="toctext">My number is: 40. It is the best number of all!</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Adding_a_field"><span class="tocnumber">2.1</span> <span class="toctext">Adding a field</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Setting_visibility"><span class="tocnumber">2.2</span> <span class="toctext">Setting visibility</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Setting_editability"><span class="tocnumber">2.3</span> <span class="toctext">Setting editability</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Updating_a_field"><span class="tocnumber">2.4</span> <span class="toctext">Updating a field</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Duplicating_one_or_more_fields"><span class="tocnumber">2.5</span> <span class="toctext">Duplicating one or more fields</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Deleting_one_or_more_fields"><span class="tocnumber">2.6</span> <span class="toctext">Deleting one or more fields</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Available_fields"><span class="tocnumber">2.7</span> <span class="toctext">Available fields</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="#Checkbox"><span class="tocnumber">2.7.1</span> <span class="toctext">Checkbox</span></a>
+<ul>
+<li class="toclevel-4 tocsection-16"><a href="#Add_options"><span class="tocnumber">2.7.1.1</span> <span class="toctext">Add options</span></a></li>
+<li class="toclevel-4 tocsection-17"><a href="#Default_values_(one_per_line)"><span class="tocnumber">2.7.1.2</span> <span class="toctext">Default values (one per line)</span></a></li>
+<li class="toclevel-4 tocsection-18"><a href="#Options_separator"><span class="tocnumber">2.7.1.3</span> <span class="toctext">Options separator</span></a></li>
+<li class="toclevel-4 tocsection-19"><a href="#Allow_adding_options"><span class="tocnumber">2.7.1.4</span> <span class="toctext">Allow adding options</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-20"><a href="#Course_grade_item"><span class="tocnumber">2.7.2</span> <span class="toctext">Course grade item</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Course_group"><span class="tocnumber">2.7.3</span> <span class="toctext">Course group</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Datalynx_view"><span class="tocnumber">2.7.4</span> <span class="toctext">Datalynx view</span></a>
+<ul>
+<li class="toclevel-4 tocsection-23"><a href="#Datalynx"><span class="tocnumber">2.7.4.1</span> <span class="toctext">Datalynx</span></a></li>
+<li class="toclevel-4 tocsection-24"><a href="#View"><span class="tocnumber">2.7.4.2</span> <span class="toctext">View</span></a></li>
+<li class="toclevel-4 tocsection-25"><a href="#Filter_by"><span class="tocnumber">2.7.4.3</span> <span class="toctext">Filter by</span></a></li>
+<li class="toclevel-4 tocsection-26"><a href="#Custom_sort"><span class="tocnumber">2.7.4.4</span> <span class="toctext">Custom sort</span></a></li>
+<li class="toclevel-4 tocsection-27"><a href="#Custom_search"><span class="tocnumber">2.7.4.5</span> <span class="toctext">Custom search</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-28"><a href="#Duration"><span class="tocnumber">2.7.5</span> <span class="toctext">Duration</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="#File"><span class="tocnumber">2.7.6</span> <span class="toctext">File</span></a></li>
+<li class="toclevel-3 tocsection-30"><a href="#Identifier"><span class="tocnumber">2.7.7</span> <span class="toctext">Identifier</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="#Nanogong"><span class="tocnumber">2.7.8</span> <span class="toctext">Nanogong</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="#Number"><span class="tocnumber">2.7.9</span> <span class="toctext">Number</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="#Picture"><span class="tocnumber">2.7.10</span> <span class="toctext">Picture</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="#Radio_button"><span class="tocnumber">2.7.11</span> <span class="toctext">Radio button</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="#Select"><span class="tocnumber">2.7.12</span> <span class="toctext">Select</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="#Select_(multiple)"><span class="tocnumber">2.7.13</span> <span class="toctext">Select (multiple)</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="#Team_member_select"><span class="tocnumber">2.7.14</span> <span class="toctext">Team member select</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="#Text"><span class="tocnumber">2.7.15</span> <span class="toctext">Text</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="#Text_area"><span class="tocnumber">2.7.16</span> <span class="toctext">Text area</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="#Time"><span class="tocnumber">2.7.17</span> <span class="toctext">Time</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="#Url"><span class="tocnumber">2.7.18</span> <span class="toctext">Url</span></a></li>
+<li class="toclevel-3 tocsection-42"><a href="#User_custom_info"><span class="tocnumber">2.7.19</span> <span class="toctext">User custom info</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="General_field_settings">General field settings</span></h2>
+<p>These settings are available for all field types. For the settings of a specific field type have a look at the documentation of the specific field type.
+</p>
+<h3><span class="mw-headline" id="Name">Name</span></h3>
+<p>Name of the field. Will be used for creating the tag, that will be placed in a view. Example: Name = Car brands, the tag to place in view will be <a href="https://docs.moodle.org/502/en/index.php?title=Car_brands&amp;action=edit&amp;redlink=1" class="new" title="Car brands (page does not exist)">Car brands</a>. Make the field name as short and simple as possible.
+</p>
+<h3><span class="mw-headline" id="Description">Description</span></h3>
+<p>Optional description of the field. Is not really used except in the fields overview in the "Manage" area.
+</p>
+<h3><span class="mw-headline" id="Visible_to">Visible to</span></h3>
+<ul><li>Everyone: Use this, if you want, that every course member (role with capability to access a view) can see the field. Example: Photo for a photo activity, that should be reviewed by other course members</li>
+<li>Owners and managers: Use this, if you want to hide critical or personal informaation to be seen by other people than managers or the person who created the entry (= owner). Example: Hiding bank account numbers or other sensitive personal info.</li>
+<li>Managers only: Use this to hide comments from the owner, such as evaluation comments, that should only be seen by other managers.</li></ul>
+<h3><span class="mw-headline" id="Editable">Editable</span></h3>
+<ul><li>Yes: Owner and managers can edit</li>
+<li>No: Only manager can edit the value (Example: Used for certification purposes)</li></ul>
+<h3><span class="mw-headline" id="Field_label">Field label</span></h3>
+<p>The field label allows for specifying a designated field label that can be added to the view by means of the [[fieldname@]] field pattern. This field pattern observes the field visibility and is hidden if the field is set to be hidden. The field label can also serve as a field display template and it interprets patterns of that field if included in the label. For example, with a number field called Number and the field label defined as 'You have earned [[Number]] credits.' and an entry where the number value is 47 the pattern [[Number@]] would be displayed as 'You have earned 47 credits.'
+</p>
+<h4><span class="mw-headline" id="Example">Example</span></h4>
+<ul><li>Field name: My number</li>
+<li>Field label: &lt;h1&gt; My number is: [[My number]]. It is the best number of all! &lt;/h1&gt;</li>
+<li>Tag to be used in a view: [[My number@]]</li></ul>
+<p>Result in a view, that displays a chosen value: The tag [[My number@]] will be replaced with the field label and the field value, if the field is visible in a view. Assume you entered the number 40, then the result would look like this (it is a heading):
+</p>
+<h1><span id="My_number_is:_40._It_is_the_best_number_of_all.21"></span><span class="mw-headline" id="My_number_is:_40._It_is_the_best_number_of_all!">My number is: 40. It is the best number of all!</span></h1>
+<p>Result in a view, that is used for data input (creating an entry): Same as display, but instead of the number to display, the input field, where you have to enter the number will be displayed.
+</p>
+<h2><span class="mw-headline" id="Adding_a_field">Adding a field</span></h2>
+<p>To add a field select the field type from the 'Add a field' dropdown. This will open the field configuration form where you can name the field instance and configure other settings as required.
+</p>
+<h2><span class="mw-headline" id="Setting_visibility">Setting visibility</span></h2>
+<p>You can set the field visibility either in the field configuration form or by clicking the field's eye icon in the Visible column. The field can be visible to everyone (default), entry-author and managers, or only managers (where managers are users with manageentries capability in the context).
+</p>
+<h2><span class="mw-headline" id="Setting_editability">Setting editability</span></h2>
+<p>You can set the field editability either in the field configuration form or by clicking the field's lock icon in the Editable column. The field can be editable by the entry-author and managers (default) or only by managers (where managers are users with manageentries capability in the context).
+</p>
+<h2><span class="mw-headline" id="Updating_a_field">Updating a field</span></h2>
+<p>You can click on the field's name or the edit icon of the field to open the configuration form for updating.
+</p>
+<h2><span class="mw-headline" id="Duplicating_one_or_more_fields">Duplicating one or more fields</span></h2>
+<p>You can duplicate a field by clicking the duplicate icon of the field. This will create an exact copy of the duplicated fiel with a different name. You can then proceed to update the field settings. 
+</p><p>You can duplicate more than one field in one go by selecting the designated fields and clicking the bulk-duplicate icon (in the list's header). 
+</p>
+<h2><span class="mw-headline" id="Deleting_one_or_more_fields">Deleting one or more fields</span></h2>
+<p>You can delete a field by clicking the delete icon of the field.
+You can delete more than one field in one go by selecting the designated fields and clicking and bulk-delete icon (in the list's header).
+</p>
+<h2><span class="mw-headline" id="Available_fields">Available fields</span></h2>
+<p>A list of fields, available for data input and display
+</p>
+<h3><span class="mw-headline" id="Checkbox">Checkbox</span></h3>
+<p>Suitable for choosing multiple option values. (Multiselect). You can add new option values or update existing option values. Datalynx deals also with the case, if someone already did choose a certain option value, and you rename or delete this option value. 
+</p>
+<h4><span class="mw-headline" id="Add_options">Add options</span></h4>
+<p>One option per line
+</p>
+<h4><span id="Default_values_.28one_per_line.29"></span><span class="mw-headline" id="Default_values_(one_per_line)">Default values (one per line)</span></h4>
+<p>These are the options with an already activated checkbox, when a user creates a new entry.
+</p>
+<h4><span class="mw-headline" id="Options_separator">Options separator</span></h4>
+<p>Choose how the options should be displayed. 
+</p>
+<h4><span class="mw-headline" id="Allow_adding_options">Allow adding options</span></h4>
+<p>If enabled, a user is not limited to select from the given options, but can also add a new option to the already defined options.
+</p>
+<h3><span class="mw-headline" id="Course_grade_item">Course grade item</span></h3>
+<p>Select a grade item from a course activity.
+</p>
+<h3><span class="mw-headline" id="Course_group">Course group</span></h3>
+<p>Display course group of the owner.
+</p>
+<h3><span class="mw-headline" id="Datalynx_view">Datalynx view</span></h3>
+<p>The fields embeds another datalynx activity in the hosting activity. It displays entries of the embedded activity according to the filter settings of the field. 
+<b>Example:</b> Display all the entries of datalynx activity B of the owner of an entry in datalynx activity A.
+</p>
+<h4><span class="mw-headline" id="Datalynx">Datalynx</span></h4>
+<p>Choose the Datalynx whose view you want to display. You can select any Datalynx in this site for which you have 'managetemplates' capability.
+</p>
+<h4><span class="mw-headline" id="View">View</span></h4>
+<p>Choose the view you want to display from the selectd Datalynx.
+</p>
+<h4><span class="mw-headline" id="Filter_by">Filter by</span></h4>
+<p>Select Entry author to include in the displayed view only entries by the author of the hosting entry.
+Select Entry group to include in the displayed view only entries by members of the hosting entry author's group.
+</p>
+<h4><span class="mw-headline" id="Custom_sort">Custom sort</span></h4>
+<p>You can add custom sort criteria that would be applied to the displayed view. Each criterion is a comma separated [[field name]],ASC/DESC pair. One criterion per line. The pattern must be included in the selected view template. For example, assuming the patterns ##author:firstname## and [[Count]] are included in the selected view template, by the following criteria the view will display the entries sorted by the author first name in ascending order and counts in descending order: ##author:firstname##,ASC
+[[Count]],DESC
+</p>
+<h4><span class="mw-headline" id="Custom_search">Custom search</span></h4>
+<p>You can add custom search criteria that would be applied to the displayed view. Each criterion is a comma separated AND/OR,remote field pattern,0/1,operator,local field pattern/value. One criterion per line. The pattern must be included in the selected view template. For example, assuming the patterns ##author:firstname## is included in the selected view template, by the following criteria the view will display only entries by the author first name: AND,##author:firstname##,0,=,##author:firstname##
+</p>
+<h3><span class="mw-headline" id="Duration">Duration</span></h3>
+<p>The only duration config option is the width of the input box. The input box is used to enter a number when editing an entry. It looks like this:
+</p>
+<figure class="mw-default-size mw-halign-none" typeof="mw:Error mw:File"><a href="https://docs.moodle.org/502/en/index.php?title=Special:Upload&amp;wpDestFile=datalynx-field-duration.png" class="new" title="File:datalynx-field-duration.png"><span class="mw-file-element mw-broken-media">Datalynx field duration</span></a><figcaption>Datalynx field duration</figcaption></figure>
+<h3><span class="mw-headline" id="File">File</span></h3>
+<p>Upload one or more files.
+</p><p>Specific settings for this field:
+</p>
+<ul><li>Total size of uploaded files</li>
+<li>Max number of uploaded files</li>
+<li>Accepted file types: Any file, HTML, image.</li></ul>
+<h3><span class="mw-headline" id="Identifier">Identifier</span></h3>
+<p>Create automatically a unique ID for an entry. Specific settings are:
+</p>
+<ul><li>Salt source: Usually you should use Random for that option</li>
+<li>Salt size: Numerical value, default 10</li>
+<li>Uniqueness: YES/NO: Checks if generated Identifier is really unique. If not it is calculated again.</li></ul>
+<h3><span class="mw-headline" id="Nanogong">Nanogong</span></h3>
+<p>Input live audio.
+This field has been removed. Please use <a rel="nofollow" class="external free" href="https://moodle.org/plugins/view.php?plugin=repository_recordaudio">https://moodle.org/plugins/view.php?plugin=repository_recordaudio</a> instead to record and upload audio files.
+</p>
+<h3><span class="mw-headline" id="Number">Number</span></h3>
+<p>Input a number. Settings available:
+</p>
+<ul><li>Decimals: How many decimals should be accepted</li>
+<li>Width: Width of the input field used in edit mode</li></ul>
+<h3><span class="mw-headline" id="Picture">Picture</span></h3>
+<p>Upload one or more pictures.
+</p>
+<ul><li>Display dimensions (width x height)px: fixed dimensions, image will be scaled disproportionally if both values width and height are given. If only width or height is given the other value is scaled proportionally</li>
+<li>Max dimensions (width x height)px:</li>
+<li>Thumb dimensions (width x height)px: Size of the thumbnail. To generate a thumb use tha tag <a href="https://docs.moodle.org/502/en/index.php?title=imagefieldname:thumb&amp;action=edit&amp;redlink=1" class="new" title="imagefieldname:thumb (page does not exist)">imagefieldname:thumb</a></li>
+<li>Total size of uploded files</li>
+<li>Max number of uploaded files</li>
+<li>Accepted file types: all image files, jpg only, png only or gif only</li></ul>
+<h3><span class="mw-headline" id="Radio_button">Radio button</span></h3>
+<p>Choose one option from many available options. Available settings:
+</p>
+<ul><li>Add options: Fill in one option per line</li>
+<li>Default: Default value to use, optional.</li>
+<li>Allow adding options: If set, users are not limited to choose from the given values defined in "Add options", but can add a completely new option value. This option value is added to "Add options" so that other users can choose the newly created option value</li>
+<li>Limit choices for users: Enable this to prevent a user from choosing the same option more than once in separate entries.</li>
+<li>Options separator: How to display the options</li></ul>
+<h3><span class="mw-headline" id="Select">Select</span></h3>
+<p>Like radio, but a dropdown menu is displayed for choosing a value.
+</p>
+<h3><span id="Select_.28multiple.29"></span><span class="mw-headline" id="Select_(multiple)">Select (multiple)</span></h3>
+<p>Select multiple values from a list
+</p>
+<h3><span class="mw-headline" id="Team_member_select">Team member select</span></h3>
+<p>Select users who are enrolled and have the given role. You can also define if a team member is notified when it is added.
+</p>
+<ul><li>Maximum team size: Specify the maximum size of the team. It must be a positive integer.</li>
+<li>Minimum team size: Enter the miminum allowed number of team members here. 0 for unlimited team members</li>
+<li>Admissible roles: Users possessing any of the selected roles will be admissible to the team. At least one role must be selected.
+<ul><li>Student</li>
+<li>Non-editing teacher</li>
+<li>Teacher</li>
+<li>Manager</li></ul></li>
+<li>List format:</li>
+<li>Notify team members: Select this option to inform team members of their membership status change.</li>
+<li>Team field: Check this box to designate this field as a team field. When approving an entry with a specified team that entry will be copied and assigned to every team member. Only one field per Datalynx instance may be designated as a team field.</li>
+<li>Reference field: Select a field to serve as a duplicate prevention field. This will skip creating entries for users who already have an approved entry with the same field value as the one being approved.</li></ul>
+<h3><span class="mw-headline" id="Text">Text</span></h3>
+<p>Enter a single line of text. 
+</p>
+<ul><li>Allow autolink:</li>
+<li>Width: The width of the input field in edit mode</li>
+<li>Format: Restrict the input text to one of the following values
+<ul><li>You must enter only letters or numbers here.</li>
+<li>You must enter only letters here.</li>
+<li>You must enter a number here.</li>
+<li>You must enter a valid email address here.</li>
+<li>You must enter no punctuation characters here.</li></ul></li></ul>
+<ul><li>Number of characters: Restrict the allowed number of chars to:
+<ul><li>Minimun</li>
+<li>Max</li>
+<li>Ramge</li></ul></li></ul>
+<h3><span class="mw-headline" id="Text_area">Text area</span></h3>
+<p>Enter complex HTML with a visual editor.
+</p>
+<ul><li>Enable editor: Choose whether a visual editor should be used for formatting the text.</li>
+<li>Columns: Width of the input field</li>
+<li>Rows: Height of the input field</li>
+<li>Trust text: Users can input malicious code, prevent them from doing that?</li>
+<li>Total size of uploded files: You can upload files with the editor to be included in the text</li>
+<li>Max number of uploaded files:</li></ul>
+<h3><span class="mw-headline" id="Time">Time</span></h3>
+<p>Enter a time or a date. Available settings:
+</p>
+<ul><li>Date only: Select this option to display only the date portion of the field value and a date only selector when the field is edited.</li>
+<li>Masked: Select this option to render Time/Date selector dropdowns with labels (e.g. Year, Month, Day) for empty values. The labels are defined in the language pack.</li>
+<li>Start year: Year value (YYYY). This value determines the min year value in the date/time selector in editing mode. Leave 0 or empty to use Moodle default.</li>
+<li>Stop year:Year value (YYYY). This value determines the max year value in the date/time selector in editing mode. Leave 0 or empty to use Moodle default.</li>
+<li>Display format:You can set a custom display format for the field value. Format options can be found at PHP strftime format. <a rel="nofollow" class="external free" href="http://php.net/manual/en/function.strftime.php">http://php.net/manual/en/function.strftime.php</a></li></ul>
+<h3><span class="mw-headline" id="Url">Url</span></h3>
+<p>Enter an url
+</p>
+<ul><li>Use url picker when editing: Use moodle url picker</li>
+<li>Force name for the link: When set this string is used as link text, otherwise user can choose a link text.</li>
+<li>CSS classes: Style to append to the link</li>
+<li>'target' attribute: User the value _blank for new window, otherwise leave empty.</li></ul>
+<h3><span class="mw-headline" id="User_custom_info">User custom info</span></h3>
+<p>If custom user profile fields are defined, select a custom user profile field to display. 
+More info on user profile fields: <a href="https://docs.moodle.org/502/en/User_profile_fields" title="User profile fields">User profile fields</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260823020350
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.041 seconds
+Real time usage: 0.145 seconds
+Preprocessor visited node count: 187/1000000
+Post&#8208;expand include size: 1364/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 108/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.615      1 Template:Datalynx
+100.00%    3.615      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:18540-0!canonical and timestamp 20260823020350 and revision id 113047. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Datalynx_Fields&amp;oldid=113047">https://docs.moodle.org/502/en/index.php?title=Datalynx_Fields&amp;oldid=113047</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="27cec39c9633dd48770872338440a43c.html" title="Category:Contributed code">Contributed code</a></li><li><a href="https://docs.moodle.org/502/en/index.php?title=Category:Datalynx_module&amp;action=edit&amp;redlink=1" class="new" title="Category:Datalynx module (page does not exist)">Datalynx module</a></li><li><a href="2857ebcdd13583f9ff714fc8230b3c14.html" title="Category:Pages with broken file links">Pages with broken file links</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdjcl1s6p">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjcl1spf"></button>
+					<div class="collapse navbar-collapse igdjcl1spf" id="igdjcl1spf">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Datalynx_Fields" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Datalynx_Fields" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Datalynx_Fields&amp;oldid=113047" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Datalynx_Fields&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 10 June 2014, at 21:56.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":656,"wgPageParseReport":{"limitreport":{"cputime":"0.041","walltime":"0.145","ppvisitednodes":{"value":187,"limit":1000000},"postexpandincludesize":{"value":1364,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":108,"limit":5000000},"timingprofile":["100.00%    3.615      1 Template:Datalynx","100.00%    3.615      1 -total"]},"cachereport":{"timestamp":"20260823020350","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

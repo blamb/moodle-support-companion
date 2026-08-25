@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Creating SCORM Content - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"fdd12fdff5941ccec81b905a","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Creating_SCORM_Content","wgTitle":"Creating SCORM Content","wgCurRevisionId":154772,"wgRevisionId":154772,"wgArticleId":13356,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["SCORM","Pages with broken file links","Pages requiring updating"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Creating_SCORM_Content","wgRelevantArticleId":13356,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Creating_SCORM_Content">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Creating_SCORM_Content rootpage-Creating_SCORM_Content layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdielrug1"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdielrug1" id="igdielrug1">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Creating+SCORM+Content" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Creating_SCORM_Content">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Creating_SCORM_Content">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Creating_SCORM_Content">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="da24c0f5480205bd91a1e77e176f88b6.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Creating_SCORM_Content&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Creating_SCORM_Content&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Creating_SCORM_Content&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Creating SCORM Content</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="c93eb5dfaca94ad219ccb0d560e9af0f.html" title="Managing a Moodle course">Managing a Moodle course</a> ► <a href="9e64708c111f312d3017aabec2d5768e.html" title="Activities">Activities</a> ► <a href="8adedfce89ac011b6388b084235bd62c.html" title="SCORM activity">SCORM activity</a> ► <a class="mw-selflink selflink">Creating SCORM Content</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="8adedfce89ac011b6388b084235bd62c.html" title="SCORM activity">SCORM activity</a></div>	
+<div class="content">
+<ul><li><a href="9dc7f8fbb3be30a69605dbec14581543.html" title="SCORM settings">SCORM settings</a></li>
+<li><a href="a669e16f5ab07eef7cf0c35a5bf5914c.html" title="Using SCORM">Using SCORM</a></li>
+<li><a class="mw-selflink selflink">Creating SCORM Content</a></li>
+<li><a href="740d97505a2927c0ad9dcb81b056e4e5.html" title="SCORM FAQ">SCORM FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Creating_SCORM_Content"><span class="tocnumber">1</span> <span class="toctext">Creating SCORM Content</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Before_Investing_in_SCORM_Authoring_Software"><span class="tocnumber">2</span> <span class="toctext">Before Investing in SCORM Authoring Software</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Tools_for_Authoring"><span class="tocnumber">3</span> <span class="toctext">Tools for Authoring</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Tools_for_Testing_and_Debugging"><span class="tocnumber">4</span> <span class="toctext">Tools for Testing and Debugging</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#SCORM_Tools_Debugger"><span class="tocnumber">4.1</span> <span class="toctext">SCORM Tools Debugger</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Free_OpenSource"><span class="tocnumber">5</span> <span class="toctext">Free OpenSource</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#eXe_OPEN_SOURCE_SCORM_Development_Package"><span class="tocnumber">5.1</span> <span class="toctext">eXe OPEN SOURCE SCORM Development Package</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#ScenariChain_Opale_/_OpaleSup"><span class="tocnumber">5.2</span> <span class="toctext">ScenariChain Opale / OpaleSup</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Xerte_OPEN_SOURCE_SCORM_Development_Package"><span class="tocnumber">5.3</span> <span class="toctext">Xerte OPEN SOURCE SCORM Development Package</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Freeware_not_OpenSource"><span class="tocnumber">6</span> <span class="toctext">Freeware not OpenSource</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Easygenerator"><span class="tocnumber">6.1</span> <span class="toctext">Easygenerator</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Free_QuizMaker_by_iSpring"><span class="tocnumber">6.2</span> <span class="toctext">Free QuizMaker by iSpring</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#isEazy_Author"><span class="tocnumber">6.3</span> <span class="toctext">isEazy Author</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#iSpring_Free_-_Create_Mobile-Ready_Courses_in_PowerPoint"><span class="tocnumber">6.4</span> <span class="toctext">iSpring Free - Create Mobile-Ready Courses in PowerPoint</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#MyUdutu"><span class="tocnumber">6.5</span> <span class="toctext">MyUdutu</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Commercial"><span class="tocnumber">7</span> <span class="toctext">Commercial</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#ActivePresenter"><span class="tocnumber">7.1</span> <span class="toctext">ActivePresenter</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Articulate"><span class="tocnumber">7.2</span> <span class="toctext">Articulate</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Camtasia"><span class="tocnumber">7.3</span> <span class="toctext">Camtasia</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Captivate"><span class="tocnumber">7.4</span> <span class="toctext">Captivate</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Claro"><span class="tocnumber">7.5</span> <span class="toctext">Claro</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Composica"><span class="tocnumber">7.6</span> <span class="toctext">Composica</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Easygenerator_2"><span class="tocnumber">7.7</span> <span class="toctext">Easygenerator</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#isEazy_Author_2"><span class="tocnumber">7.8</span> <span class="toctext">isEazy Author</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#iSpring_Suite"><span class="tocnumber">7.9</span> <span class="toctext">iSpring Suite</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#GOMO"><span class="tocnumber">7.10</span> <span class="toctext">GOMO</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Lectora"><span class="tocnumber">7.11</span> <span class="toctext">Lectora</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Creating_SCORM_Content">Creating SCORM Content</span></h2>
+<p>Moodle <b>does not</b> generate scorm content. Moodle presents the content in SCORM packages to learners, and saves data from learner interactions with the SCORM package.
+</p><p>Some people hand-code SCORM objects using HTML, JavaScript, and sometimes SWF files. There are some templates provided by ADL and by others, which make this process easier. 
+</p><p>Others use SCORM authoring software to generate SCORM packages. This process is easier for non-technical users, but not as foolproof.
+</p>
+<h2><span class="mw-headline" id="Before_Investing_in_SCORM_Authoring_Software">Before Investing in SCORM Authoring Software</span></h2>
+<p>Please be aware that vendors can edit entries on this wiki page. No SCORM authoring software is without bugs, and some have significant issues when used with Moodle. Just because products are listed on this page does not mean that Moodle.org either supports or endorses them. Be sure to test all products extensively before purchase, and be sure that the built-in Moodle authoring tools will not meet your needs. Also take the time to search for past issues with a particular product in the <a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/view.php?id=1951">Using Moodle SCORM forum</a>, and read the rest of the Moodle SCORM documentation.
+</p><p>Many of these products piggyback on Powerpoint&reg;, or present talking head video to a learner. Powerpoint presentations and talking heads do not promote social learning. It is valuable to consider, before embarking upon SCORM development, whether your organization wants to limit itself to the <a rel="nofollow" class="external text" href="https://www.mylearningspace.com.au/news/scorm-the-good-bad-and-ugly">pedagogical approaches</a> provided by the SCORM API.
+</p><p>It is also important to know that one does not need to purchase or obtain any product in order to produce SCORM content. SCORM content is a collection of HTML, JavaScript, and multimedia files, all of which can be produced by regular humans. Humans are, in addition, capable of testing your content in your LMS and writing code which addresses the nuances of your LMS, a valuable service which authorware does not provide. 
+</p><p>In addition, an authorware production model, in which non-programmers produce content using graphical user interfaces, can present issues because non-programmers do not understand some of the basic tenets of the Web. It is a good idea to educate authorware users about best practices with regard to issues such as file size, file naming conventions, how to publish images for the Web, and so forth, before turning them loose with an authorware product.
+</p>
+<h2><span class="mw-headline" id="Tools_for_Authoring">Tools for Authoring</span></h2>
+<p>Here is a list of tools to create SCORM packages, both open source and commercial. Moodle is a modular authoring tool for courses but at this time does not create SCORM packages.
+</p>
+<h2><span class="mw-headline" id="Tools_for_Testing_and_Debugging">Tools for Testing and Debugging</span></h2>
+<h3><span class="mw-headline" id="SCORM_Tools_Debugger">SCORM Tools Debugger</span></h3>
+<p>SCORM Debugger is a cloud-based solution for testing, debugging, and validating SCORM content created with various e-learning authoring tools such as Articulate Storyline, iSpring, isEazy, EasyGenerator, and Adobe Captivate. It allows users to upload their content in SCORM 1.2 or SCORM 2004 format and view it as if it were hosted in an LMS. The SCORM Debugger also includes features such as a console that displays all SCORM interactions, a real-time SCORM variable tracker, the ability to create restore points, and the option to share content with guests for remote testing and feedback. Additionally, the Debugger is compatible with Articulate Storyline and allows users to monitor internal project variables in real time, create breakpoints, and much more.
+It has a free plan as well as other pricing plans.
+More information can be found at <a rel="nofollow" class="external free" href="https://www.scormtools.net/scorm-debugger/">https://www.scormtools.net/scorm-debugger/</a>.
+</p>
+<h2><span class="mw-headline" id="Free_OpenSource">Free OpenSource</span></h2>
+<h3><span class="mw-headline" id="eXe_OPEN_SOURCE_SCORM_Development_Package">eXe OPEN SOURCE SCORM Development Package</span></h3>
+<p>The eXe project is developing a freely available Open Source authoring application to assist teachers and academics in the publishing of web content without the need to become proficient in HTML or XML markup. Resources authored in eXe can be exported in IMS Content Package, SCORM 1.2, SCORM 2004 or IMS Common Cartridge formats or as simple self-contained web pages.
+</p><p>The new eXeLearning:
+</p><p><a rel="nofollow" class="external free" href="http://exelearning.net/?lang=en">http://exelearning.net/?lang=en</a>
+</p><p>The original project: 
+</p><p><a rel="nofollow" class="external free" href="http://exelearning.org/">http://exelearning.org/</a>
+</p>
+<h3><span id="ScenariChain_Opale_.2F_OpaleSup"></span><span class="mw-headline" id="ScenariChain_Opale_/_OpaleSup">ScenariChain Opale / OpaleSup</span></h3>
+<p>Website and community&nbsp;: <a rel="nofollow" class="external free" href="https://scenari.software/en/">https://scenari.software/en/</a>
+</p>
+<h3><span class="mw-headline" id="Xerte_OPEN_SOURCE_SCORM_Development_Package">Xerte OPEN SOURCE SCORM Development Package</span></h3>
+<p>The Xerte Project provides a full suite of open source tools for elearning developers and content authors producing interactive learning materials.
+</p><p>Standalone tool: Xerte <a rel="nofollow" class="external free" href="http://www.nottingham.ac.uk/xerte/">http://www.nottingham.ac.uk/xerte/</a>
+</p><p>Online tool: Toolkits <a rel="nofollow" class="external free" href="http://www.nottingham.ac.uk/xerte/toolkits.aspx">http://www.nottingham.ac.uk/xerte/toolkits.aspx</a>
+</p>
+<h2><span class="mw-headline" id="Freeware_not_OpenSource">Freeware not OpenSource</span></h2>
+<h3><span class="mw-headline" id="Easygenerator">Easygenerator</span></h3>
+<p>Easygenerator has a free edition but it is not open source. SaaS based platform in connection to a windows application. Collaborative and special thanks to adaptive options for courses, lot of features like powerpoint import, WYSIWYG interface, Template based. Is now on version 8.3.
+Use the HTML publication to the web, school/university intranet, blog, Facebook or your app. Use Scorm 1.2 or 2004 for any LMS. SCORM, You can track and trace learners&rsquo; results through Scorm or Xapi.
+Using easygenerator ensures your developed courses will be optimized for any device: desktop, tablet or smartphone. Create content once and publish courses for any l device without having to recreate the course.
+Publish to a website, blog, Facebook or app and track and trace learners advancements through TinCan (Xapi).
+Easygenerator comes with multiple question types to help create the most engaging courses: Multiple Choice, Multiple select, Drag and Drop Text and fill in the blanks.
+Co-Author with multiple domain experts, invite subject matter experts to review your course without requiring additional licences.
+Build Instructional sound courses fast with easygenerator templates: Quiz, Examn, Adaptive Learning templates and the simple course template.
+</p><p>Homepage: <a rel="nofollow" class="external text" href="http://www.easygenerator.com/">Easygenerator's home page</a>
+Signup: <a rel="nofollow" class="external text" href="http://www.easygenerator.com/register">for instant activation</a>
+</p>
+<h3><span class="mw-headline" id="Free_QuizMaker_by_iSpring">Free QuizMaker by iSpring</span></h3>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:iSpring_Free_QuizMaker.png" class="mw-file-description"><img alt="" src="images_en/thumb/7/71/iSpring_Free_QuizMaker.png/aa6e5daa33c505debea6f53e4c9d666b.png" decoding="async" width="300" height="200" class="mw-file-element" srcset="/502/en/images_en/thumb/7/71/iSpring_Free_QuizMaker.png/450px-iSpring_Free_QuizMaker.png 1.5x, /502/en/images_en/thumb/7/71/iSpring_Free_QuizMaker.png/600px-iSpring_Free_QuizMaker.png 2x" data-file-width="900" data-file-height="600"></a><figcaption>Free QuizMaker by iSpring</figcaption></figure>
+<p>With a free, full-featured QuizMaker by iSpring you can quickly develop interactive quizzes and surveys. Easy and fast, it ensures rapid authoring of True/False, Multiple Choice, and Multiple Response quizzes and surveys. In addition, you can enhance quizzes with audio, video, images and formulas. <a rel="nofollow" class="external text" href="http://www.ispringsolutions.com/free-quiz-maker">View sample quizzes</a>. Advanced functions allow you to insert slides with additional info, and create random sequencing of questions and possible answers in a question.
+Quizzes and surveys created with Free QuizMaker are compatible with SCORM 2004 R3 standard and can be easily integrated with Moodle CMS.
+</p><p><a rel="nofollow" class="external text" href="http://www.ispringsolutions.com/free-quiz-maker">Download Free QuizMaker by iSpring</a>
+</p>
+<h3><span class="mw-headline" id="isEazy_Author">isEazy Author</span></h3>
+<p>isEazy Author provides a free account which allows to create up to 3 projects with the tool's full functionality.
+</p><p><a rel="nofollow" class="external text" href="https://www.iseazy.com/author/">iseazy.com</a>
+</p>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:Ispring-free-toolbar.jpg" class="mw-file-description"><img src="images_en/thumb/f/ff/Ispring-free-toolbar.jpg/df6953bf4b55cc66ef3a8655c856e3dd.jpg" decoding="async" width="300" height="103" class="mw-file-element" srcset="/502/en/images_en/thumb/f/ff/Ispring-free-toolbar.jpg/450px-Ispring-free-toolbar.jpg 1.5x, /502/en/images_en/thumb/f/ff/Ispring-free-toolbar.jpg/600px-Ispring-free-toolbar.jpg 2x" data-file-width="700" data-file-height="241"></a><figcaption>Free PowerPoint add-in for eLearning course authoring</figcaption></figure>
+<h3><span class="mw-headline" id="iSpring_Free_-_Create_Mobile-Ready_Courses_in_PowerPoint">iSpring Free - Create Mobile-Ready Courses in PowerPoint</span></h3>
+<p>With iSpring freeware, you can create SCORM-compliant eLearning courses with quizzes that can be integrated with Moodle CMS. Easy for both experts and non-tech users, iSpring Free works as a PowerPoint add-in, accurately converting PowerPoint courses into HTML5 mobile-ready format. Use PowerPoint to its fullest advantage as iSpring features:
+</p>
+<ul><li>PowerPoint animation and slide transition support</li>
+<li>Trigger animation support</li>
+<li>Hyperlinks, action buttons, PowerPoint branching support</li>
+<li>Building interactive quizzes and surveys with various types of questions and images, formulas, audio, and video</li></ul>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:iSpring_Free.png" class="mw-file-description"><img alt="" src="images_en/thumb/a/a9/iSpring_Free.png/747b2c8926615442d3ef3a7b734dc386.png" decoding="async" width="300" height="200" class="mw-file-element" srcset="/502/en/images_en/thumb/a/a9/iSpring_Free.png/450px-iSpring_Free.png 1.5x, /502/en/images_en/thumb/a/a9/iSpring_Free.png/600px-iSpring_Free.png 2x" data-file-width="900" data-file-height="600"></a><figcaption>iSpring Free publish window</figcaption></figure>
+<ul><li>Creating mobile-responsive courses</li>
+<li>SCORM 2004 r3 compliant course authoring for Moodle LMS</li></ul>
+<p><a rel="nofollow" class="external text" href="https://www.ispringsolutions.com/ispring-free">Download iSpring Free</a>.
+</p><p>iSpring Free with its ease of use, responsive course creation for various mobile devices, and SCORM compliance is a great choice considering that it can be used free of charge commercially and non-commercially.
+</p><p><a rel="nofollow" class="external free" href="http://www.mindonsite.com/en/produits/mos-solo/">http://www.mindonsite.com/en/produits/mos-solo/</a>
+</p>
+<h3><span class="mw-headline" id="MyUdutu">MyUdutu</span></h3>
+<p>Free software for creating elearning courses with flash interactivity. Website here: <a rel="nofollow" class="external text" href="https://www.udutu.com/">http://www.udutu.com/</a> and an explanatory video here: <a rel="nofollow" class="external text" href="https://www.udutu.com/my_udutu_video.html">http://www.udutu.com/my_udutu_video.html</a> It is free to sign up and make the courses - there are many customisable templates enabling users to import images/video/audio/etc and incorporate them into scored questions of varying formats. The finished course can be exported as SCORM 2004 or SCORM 1.2 compliant -again for free and then hosted on a Moodle or other site. (The courses can also be hosted on the udutu site, either for free but with a watermark or for a fee) Quite intuitive to use and offering many features, it is however dependent on good connection to the site as it is created online. Also doesn't seem to like working in Opera.
+</p>
+<h2><span class="mw-headline" id="Commercial">Commercial</span></h2>
+<h3><span class="mw-headline" id="ActivePresenter">ActivePresenter</span></h3>
+<p>ActivePresenter allows you to create interactive contents with branching capabilities, quizzes, audios, videos, closed captions, zoom effects, annotations with flexible hotspot, object styling, integration with LMS (SCORM 1.2 and SCORM 2004).  It is suitable for creating software demonstrations, presentations, tutorials, assessments, and surveys. More information can be found at <a rel="nofollow" class="external free" href="http://atomisystems.com/">http://atomisystems.com</a>.
+</p>
+<h3><span class="mw-headline" id="Articulate">Articulate</span></h3>
+<p>Use Articulate Storyline (<a rel="nofollow" class="external text" href="http://www.articulate.com/products/storyline-top-features.php">Features</a>) or older tools like: Articulate Presenter '09, coupled with Articulate Quizmaker '09, is a solution in developing SCORM content for Moodle. Both Articulate Presenter '09 and Articulate Quizmaker '09 are SCORM certified by an independent ADL certification expert (both SCORM 1.2 AND SCORM 2004). This means that Articulate Presenter '09 and Quizmaker '09 will seamlessly report results to Moodle by uploading the published project as a SCORM package. With the complete suite of products from Articulate, you'll be able to quickly create e-learning courses from PowerPoint and develop interactive content, quizzes, assessments, and surveys.
+</p><p>Here is a screencast <a rel="nofollow" class="external autonumber" href="http://screenr.com/RON">[1]</a> to show you how to upload and track from Articulate Quizmaker '09 in Moodle.
+</p><p>To learn more about the products from Articulate, go to <a rel="nofollow" class="external free" href="http://www.articulate.com/">http://www.articulate.com</a> and download a 30-day trial of any of the products including: Articulate Presenter '09, Articulate Quizmaker '09, Articulate Engage '09, and Articulate Video Encoder '09.
+</p><p>Note: Articulate products run only in Windows. There is no Mac or Linux version.
+</p>
+<h3><span class="mw-headline" id="Camtasia">Camtasia</span></h3>
+<p>This is a commercial screen-recording product for producing demonstrations and tutorials. It has SCORM compliant output as an option, and permits quizzing and branching. The SCORM output option creates a single .zip file that is appropriate for uploading into a SCORM activity for Moodle. Retail price for Camtasia is US$299, but non-profit educational discounts of about 50% are offered. 30 day trials are also available.
+</p><p>Note: only the Windows client has SCORM output ability. The Mac OSX version does not. 
+</p><p>More information can be found at <a rel="nofollow" class="external free" href="http://www.techsmith.com/products.asp">http://www.techsmith.com/products.asp</a>
+</p>
+<h3><span class="mw-headline" id="Captivate">Captivate</span></h3>
+<p>Adobe's Captivate software allows you to create fully functioning interactive lessons with quizzes, scoring, and integration (via SCORM) with Moodle. You can create anything from a simple slide show, to a complete branching software simulation or evaluation, all delivered via Flash without learning any code. It is the most straightforward package and makes it a lot of fun to work with - even adding closed-captioning is really easy! Adobe have a page on Captivate here: <a rel="nofollow" class="external autonumber" href="http://www.adobe.com/products/captivate/">[2]</a> - the latest version is Captivate 7.0.
+</p><p>One difficulty with Captivate is that it tends to save important reporting values to a string in suspend_data, rather than in lesson_status, lesson_location, and the like. This makes it more difficult to write custom reports, or to debug interactions.
+</p>
+<h3><span class="mw-headline" id="Claro">Claro</span></h3>
+<p><a rel="nofollow" class="external text" href="http://www.dominknow.com/">dominKnow</a> award-winning HTML5-compliant collaborative authoring tool can publish AICC, SCORM 1.2 up to SCORM 2004, ADLNet's Experience API (also known as the Tin Can API), web, and exe packages (Print available in March 2012). Claro's web based collaborative content creation tool can be accessed by authors using Firefox, IE, Chrome and Safari on any platform. Learners and reviewers are able to use any browser or tablet device to access content. Sporting an easy to use interface based off the Microsoft Ribbon toolbar, Claro includes all the basic content creation features, as well as things like screen recordings, image editing, and extensive interactions. Besides content creation, it is a collaborate environment that enables content developers and reviewers to work together using a central repository with reusable content. See Claro's full <a rel="nofollow" class="external text" href="http://www.dominknow.com/index.cfm#features">feature list</a>
+</p>
+<ul><li>YouTube channel: <a rel="nofollow" class="external text" href="https://www.youtube.com/dominknow">http://www.youtube.com/dominknow</a></li>
+<li>Try <a rel="nofollow" class="external text" href="http://clarolive.com/">clarolive.com</a></li></ul>
+<h3><span class="mw-headline" id="Composica">Composica</span></h3>
+<p>Composica is a social e-learning authoring system that offers real-time collaboration among team members and provides a powerful programming- free WYSIWYG environment to create and deliver high-quality interactive e-learning content with embedded social media.
+</p><p>Composica offers extensive multimedia support, including central repository, thousands of media files, customizable media player, built-in audio recording, automatic narration synchronization and mashups with leading external services such as YouTube, Google, Twitter, Facebook and more.
+</p><p>The system provides large variety of fully customizable e-Learning interactions which can be integrated into a test or a game and communicated to the LMS via SCORM 1.2 / 2004.
+</p><p>Composica encourages authoring teams to share knowledge and remove development bottle-necks through a unique groupware environment, powerful tasks system and task reports, project blog, comments, community dashboards and built-in chats.
+</p><p>In addition, Composica includes Social Media tools, to create a real learning community around each course - learners can share knowledge with others, learn from each other, comment on anything, rate everything and more.
+For more information see: <a rel="nofollow" class="external free" href="http://www.composica.com/features/">http://www.composica.com/features/</a>
+</p>
+<h3><span class="mw-headline" id="Easygenerator_2">Easygenerator</span></h3>
+<p>Easygenerator has a free and a paid version. SaaS based platform in connection to a windows application. Collaborative and special thanks to adaptive options for courses, lot of features like powerpoint import, WYSIWYG interface, Template based. Is now on version 8.3.
+Use the HTML publication to the web, school/university intranet, blog, Facebook or your app. Use Scorm 1.2 or 2004 for any LMS. SCORM, You can track and trace learners&rsquo; results through Scorm or Xapi.
+Using easygenerator ensures your developed courses will be optimized for any device: desktop, tablet or smartphone. Create content once and publish courses for any l device without having to recreate the course.
+Publish to a website, blog, Facebook or app and track and trace learners advancements through TinCan (Xapi).
+Easygenerator comes with multiple question types to help create the most engaging courses: Multiple Choice, Multiple select, Drag and Drop Text and fill in the blanks.
+Co-Author with multiple domain experts, invite subject matter experts to review your course without requiring additional licences.
+Build Instructional sound courses fast with easygenerator templates: Quiz, Examn, Adaptive Learning templates and the simple course template.
+</p><p>Homepage: <a rel="nofollow" class="external text" href="http://www.easygenerator.com/">Easygenerator's home page</a>
+Signup: <a rel="nofollow" class="external text" href="http://www.easygenerator.com/register">for instant activation</a>
+</p>
+<h3><span class="mw-headline" id="isEazy_Author_2">isEazy Author</span></h3>
+<p>isEazy Author is the authoring tool which you'll be able to create and share multidevice courses with, all without worries. Born in the cloud, it's ready for the challenges of today.
+</p><p>With a slide-based content and a really intuitive layout system, it allows you to achieve professional results without any technical knowledge.
+</p><p>isEazy provides a <b>free</b> account and three payment accounts: Professional (&euro;69/month) and Business (&euro;199/month), for team-work oriented users.
+</p><p>It provides a great variety of interactive resources that drives you to create attractive and dynamic content to engage your students. You can check out an example course created with isEazy: <a rel="nofollow" class="external text" href="https://iseazy.com/dl/dcc8c0e6122f41eeb1d1bfac163cde6a">demo course</a>
+</p><p>These are the most outstanding highlights of the tool:
+</p>
+<ul><li>All-in-one platform: Create, distribute, and analyze your courses effortlessly.</li>
+<li>Intuitive and powerful: Only worry about the content and maximize your productivity. Real time editing with WYSIWYG interface.</li>
+<li>Spectacular results with your corporate image: Personalize your courses in seconds with SmartColors.</li>
+<li>One content for all devices.</li>
+<li>Free trial, no strings attached, no waiting: Discover isEazy Author and fall in love.</li>
+<li>More than 25 interactive ready-to-use: Developed to engage, enjoy, and learn.Great variety of interactive resources, games and exercises. Furthermore, with the Linked Images element you can develop countless pedagogies: choice trees, choose-your-own-adventure games, role-plays...</li>
+<li>Games ready-to-use. See <a rel="nofollow" class="external text" href="https://iseazy.com/dl/9cbd893d06ab4309a23703d80bf071c1">demo games</a></li>
+<li>Integrated image bank (more than 450k professional photos).</li>
+<li>Adapted to your needs: As many authors as you need, collaborative editing, role management.</li>
+<li>Collaborative edition between team co-workers.</li>
+<li>Allowance to duplicate projects, slides and interactive elements with great agility.</li>
+<li>SCORM and xApi exporting ready for report completeness or mark.</li>
+<li>Direct link distribution.</li></ul>
+<p><br>
+One of isEazy's most stunning features is its smooth high performance user experience, that lets you focus on creativity and let it all flow.
+</p><p><a rel="nofollow" class="external text" href="https://www.iseazy.com/author/">iseazy.com</a>
+</p>
+<h3><span class="mw-headline" id="iSpring_Suite">iSpring Suite</span></h3>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:Suite.png" class="mw-file-description"><img alt="" src="images_en/thumb/e/e3/Suite.png/64205a6b4947730980334f42fb5deb9b.png" decoding="async" width="300" height="185" class="mw-file-element" srcset="/502/en/images_en/thumb/e/e3/Suite.png/450px-Suite.png 1.5x, /502/en/images_en/thumb/e/e3/Suite.png/600px-Suite.png 2x" data-file-width="800" data-file-height="492"></a><figcaption>iSpring Suite</figcaption></figure>
+<p><b>An intuitive PowerPoint-based eLearning authoring tool.</b> 
+</p><p>iSpring Suite is an eLearning authoring tool that works directly within MS PowerPoint, making the course development process highly intuitive and quick, without requiring any special training. The tool supports all modern eLearning standards, including SCORM 1.2 and SCORM 2004 (2nd, 3rd, and 4th editions).
+</p><p>
+iSpring Suite allows you to create a wide variety of eLearning content, including slide courses, training videos, smart screencasts, scenario-based role-playing simulations, and 14 types of interactive quizzes and cheat-proof knowledge checks. To save course developers time, iSpring Suite also includes a built-in Content Library with over 116,000 pre-designed assets, such as course templates, characters, locations, objects, icons, and more.</p><figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:13.png" class="mw-file-description"><img alt="" src="images_en/thumb/c/c0/13.png/84e60ae81e3a6394da68b704fcf8849c.png" decoding="async" width="300" height="175" class="mw-file-element" srcset="/502/en/images_en/thumb/c/c0/13.png/450px-13.png 1.5x, /502/en/images_en/thumb/c/c0/13.png/600px-13.png 2x" data-file-width="828" data-file-height="483"></a><figcaption>Create mobile eLearning courses with iSpring</figcaption></figure><p>The tool smoothly integrates with the Moodle&trade; LMS. With the iSpring Suite plug-in for Moodle, you can access comprehensive visual LMS reports on iSpring quizzes and knowledge checks. Gather, filter, and analyze data such as time spent on training, scores, completion rates, and more &mdash; while keeping your statistics intact, even when reloading content.
+</p><p><a rel="nofollow" class="external text" href="https://www.ispringsolutions.com/ispring-suite">Start your free 14-day trial &rarr;</a>
+</p><p><a rel="nofollow" class="external text" href="https://www.ispringsolutions.com/ispring-suite/demos">View sample courses &rarr;</a>
+</p><p><br>
+</p>
+<h3><span class="mw-headline" id="GOMO">GOMO</span></h3>
+<p>gomo is multi-device e-learning authoring tool. It is the easiest way to create beautiful learning which look sand feels bespoke, for content that suits your needs perfectly.
+</p><p>Easily create interactive content - Video, audio, graphic and text content are just a drag and drop away with gomo's intuitive user interface for fast, flexible content creation.
+</p>
+<ul><li>Simple and rich authoring</li>
+<li>Easy course management</li>
+<li>Library of themes</li>
+<li>Team-based development</li>
+<li>Shared central resources</li>
+<li>Hassle-free multi-device publishing</li>
+<li>HTML5, SCORM, TinCan (xAPI)</li></ul>
+<p><a rel="nofollow" class="external text" href="http://www.gomolearning.com/">Gomo learning</a>
+</p>
+<hr>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:lectora-authoring.jpg" class="mw-file-description"><img src="images_en/thumb/c/c1/lectora-authoring.jpg/5fc3e4da59d3c23a372e8ba6b77fde9d.jpg" decoding="async" width="300" height="166" class="mw-file-element" srcset="/502/en/images_en/thumb/c/c1/lectora-authoring.jpg/450px-lectora-authoring.jpg 1.5x, /502/en/images_en/thumb/c/c1/lectora-authoring.jpg/600px-lectora-authoring.jpg 2x" data-file-width="1500" data-file-height="830"></a><figcaption>Lectora Authoring Suite</figcaption></figure>
+<h3><span class="mw-headline" id="Lectora">Lectora</span></h3>
+<p>Lectora is a user-friendly, award-winning authoring tool available as both a cloud-based and desktop solution. Part of the ELB Learning's Authoring Suites, Lectora empowers you to quickly create, WCAG-friendly interactive eLearning courses that achieve extraordinary results. With more productivity shortcuts than any other authoring tool, Lectora is as simple or advanced as you need it to be. Highlights include:
+</p><p>Responsive Course Design: Automatically Adapts to Mobile Screen Sizes
+</p><p>Easiest Accessible Design with Built-in Guide 
+</p><p>In-App Access to Prebuilt Courses &amp; 120 Million Media Assets
+</p><p>Other benefits include unmatched interactivity options, direct integration with BranchTrack for branching scenarios, ReviewLink for course review and approvals, a collaborative authoring environment with automated versioning, translations, and easy integration with learning games, VR objects, and your favorite multimedia editing suites. 
+</p><p>Publishing options include: SCORM and AICC-compliant Learning Management Systems, HTML, xAPI, cmi5, mobile, or deploy directly to your Moodle course data directory using FTP. Lectora also offers 1-click publishing to Docebo, CourseMill, The Rockstar Learning Platform, and more. Free trials and affordable plan options are available: <a rel="nofollow" class="external free" href="https://www.elblearning.com/create-learning/lectora">https://www.elblearning.com/create-learning/lectora</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260822154156
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.042 seconds
+Real time usage: 0.599 seconds
+Preprocessor visited node count: 95/1000000
+Post&#8208;expand include size: 408/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.640      1 Template:SCORM
+100.00%    3.640      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:13356-0!canonical and timestamp 20260822154156 and revision id 154772. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Creating_SCORM_Content&amp;oldid=154772">https://docs.moodle.org/502/en/index.php?title=Creating_SCORM_Content&amp;oldid=154772</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="c0285297c985a95ecd8f7dec1ea21bce.html" title="Category:SCORM">SCORM</a></li><li><a href="2857ebcdd13583f9ff714fc8230b3c14.html" title="Category:Pages with broken file links">Pages with broken file links</a></li><li><a href="d9e4fee0c3eee71cb267efdcdb2121f2.html" title="Category:Pages requiring updating">Pages requiring updating</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdielrwl6">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdielrwyh"></button>
+					<div class="collapse navbar-collapse igdielrwyh" id="igdielrwyh">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Creating_SCORM_Content" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Creating_SCORM_Content" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Creating_SCORM_Content&amp;oldid=154772" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Creating_SCORM_Content&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Autorenwerkzeuge" title="Autorenwerkzeuge – Deutsch" lang="de" hreflang="de" data-title="Autorenwerkzeuge" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Creando_contenido_SCORM" title="Creando contenido SCORM – español" lang="es" hreflang="es" data-title="Creando contenido SCORM" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 26 November 2025, at 12:50.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":123,"wgPageParseReport":{"limitreport":{"cputime":"0.042","walltime":"0.599","ppvisitednodes":{"value":95,"limit":1000000},"postexpandincludesize":{"value":408,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    3.640      1 Template:SCORM","100.00%    3.640      1 -total"]},"cachereport":{"timestamp":"20260822154156","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>ForumNG - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"7a80cfc66cc0378516cfcd43","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"ForumNG","wgTitle":"ForumNG","wgCurRevisionId":143542,"wgRevisionId":143542,"wgArticleId":11506,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Contributed code"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"ForumNG","wgRelevantArticleId":11506,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/ForumNG">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-ForumNG rootpage-ForumNG layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjd3gn6i"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdjd3gn6i" id="igdjd3gn6i">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=ForumNG" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/ForumNG">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/ForumNG">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/ForumNG">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="ac72a74e5f4c5a149fe5b402d9ae51a9.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:ForumNG&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=ForumNG&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=ForumNG&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">ForumNG</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p>January 2012.  There is some more talk about <b>forumNG</b> getting included in Moodle core.  See his discussion: <a rel="nofollow" class="external free" href="http://moodle.org/mod/forum/discuss.php?d=195094#p851412">http://moodle.org/mod/forum/discuss.php?d=195094#p851412</a> --<a href="https://docs.moodle.org/502/en/User:Derek_Chirnside"><bdi>Derek Chirnside</bdi></a> 05:20, 13 February 2012 (WST)
+Update: <a rel="nofollow" class="external free" href="http://tracker.moodle.org/browse/MDL-34144">http://tracker.moodle.org/browse/MDL-34144</a> Call for comments on ForumNG. We may be getting closer. --<a href="https://docs.moodle.org/502/en/User:Derek_Chirnside"><bdi>Derek Chirnside</bdi></a> 10:36, 19 October 2012 (WST)
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Caveat"><span class="tocnumber">1</span> <span class="toctext">Caveat</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#What_is_ForumNG"><span class="tocnumber">2</span> <span class="toctext">What is ForumNG</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Official_Notes"><span class="tocnumber">3</span> <span class="toctext">Official Notes</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#ForumNG_features_(Partial_List)"><span class="tocnumber">4</span> <span class="toctext">ForumNG features (Partial List)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Release_Notes"><span class="tocnumber">5</span> <span class="toctext">Release Notes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Pre-release_%22stable_version%22"><span class="tocnumber">5.1</span> <span class="toctext">Pre-release "stable version"</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#About_the_stable_version"><span class="tocnumber">5.1.1</span> <span class="toctext">About the stable version</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#ForumNG_version:_Stable_R1.0"><span class="tocnumber">5.2</span> <span class="toctext">ForumNG version: Stable R1.0</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#New_Version_numbering"><span class="tocnumber">5.2.1</span> <span class="toctext">New Version numbering</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Bug_reporting"><span class="tocnumber">5.2.2</span> <span class="toctext">Bug reporting</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Upgrade_problems"><span class="tocnumber">5.2.3</span> <span class="toctext">Upgrade problems</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Download"><span class="tocnumber">5.2.4</span> <span class="toctext">Download</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#What_is_not_there_in_NG_(At_the_moment)"><span class="tocnumber">6</span> <span class="toctext">What is not there in NG (At the moment)</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#FAQ"><span class="tocnumber">7</span> <span class="toctext">FAQ</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Where_can_I_get_a_version_doe_Moodle_2.1?"><span class="tocnumber">7.1</span> <span class="toctext">Where can I get a version doe Moodle 2.1?</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#What_new_features_may_be_added_in_the_future?"><span class="tocnumber">7.2</span> <span class="toctext">What new features may be added in the future?</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#What_does_NG_mean?"><span class="tocnumber">7.3</span> <span class="toctext">What does NG mean?</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Is_there_a_Standard_forum_to_NG_convertor?"><span class="tocnumber">7.4</span> <span class="toctext">Is there a Standard forum to NG convertor?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Using_ForumNG"><span class="tocnumber">9</span> <span class="toctext">Using ForumNG</span></a></li>
+</ul>
+</div>
+
+<h4><span class="mw-headline" id="Caveat">Caveat</span></h4>
+<p>This page is set up to centralise some of the discussion, information and help around ForumNG.  In a sense at this stage this is an <i>unofficial</i> page, just an aggregation of information from the tracker, the forums and the plug in directory.  <a href="https://docs.moodle.org/502/en/User:Derek_Chirnside"><bdi>Derek Chirnside</bdi></a> 00:02, 9 August 2010 (UTC)
+</p>
+<h2><span class="mw-headline" id="What_is_ForumNG">What is ForumNG</span></h2>
+<p>ForumNG is an alternative to the built in Moodle forum, and is installed as a plugin.  
+</p><p>It was developed by the OU. The original discussion is here: <a rel="nofollow" class="external free" href="http://moodle.org/mod/forum/discuss.php?d=110546">http://moodle.org/mod/forum/discuss.php?d=110546</a>
+</p><p>There has been some talk of this code replacing the Moodle forums in 2.1. See <a rel="nofollow" class="external text" href="http://tracker.moodle.org/browse/MDL-21538">Comment in the Bug Tracker</a> This is referred to in the <a rel="nofollow" class="external text" href="http://lyceum.open.ac.uk/temp/forum_redesign.pdf">original specifications</a>.
+</p><p><a rel="nofollow" class="external text" href="http://moodle.org/mod/data/view.php?d=13&amp;rid=2927">Get the code</a>
+</p><p><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=137549">The announcement post in the developer forum</a>
+</p><p><a rel="nofollow" class="external text" href="http://learn.open.ac.uk/mod/oublog/view.php?user=11&amp;tag=forumng">Sam Marshall's blog posts on ForumNG</a>
+</p><p><a rel="nofollow" class="external text" href="http://tracker.moodle.org/browse/CONTRIB/component/10572">Bug Tracker for ForumNG</a>
+</p>
+<h2><span class="mw-headline" id="Official_Notes">Official Notes</span></h2>
+<p>From <a rel="nofollow" class="external free" href="http://tracker.moodle.org/browse/CONTRIB/component/10572">http://tracker.moodle.org/browse/CONTRIB/component/10572</a>
+</p><p>"ForumNG is an alternative forum for Moodle 1.9, developed by the Open University. It sits alongside the existing Moodle forum and is completely independent; you can set up new forums using either system. 
+The forum has some additional features (and just a few that are still missing, such as most of the forum types). 
+Here are some of the new features: 
+</p>
+<ul><li>Advanced DHTML/AJAX (dynamic web page) support in the discussion page, which allows you to reply to, edit, rate, and delete posts without leaving the page.</li>
+<li>Unique (single) discussion view which combines the benefits of 'nested' and date-related views; it is a nested view, so you can see the discussion structure, but except for unread posts (and their immediate parents), posts are 'collapsed' to a short summary, so you don't have to scroll through mounds of junk to get to the unread posts. Expanding a post is one click away.</li>
+<li>Administrative improvements such as the ability to merge discussions.</li>
+<li>The rating system has friendly star graphics and can be used for grading or without a grade."</li></ul>
+<h2><span id="ForumNG_features_.28Partial_List.29"></span><span class="mw-headline" id="ForumNG_features_(Partial_List)">ForumNG features (Partial List)</span></h2>
+<dl><dt>Subscription at the discussion level</dt>
+<dd><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=154450#p679058">Forum Post</a></dd>
+<dt>Export of forum postings into a document.</dt>
+<dt>"Save as draft" option for posts.</dt>
+<dd>this may do away with the need for an editing time?</dd>
+<dt>Ability to set up a discussion private to individual students and the teacher.</dt>
+<dd>This answers a lot of needs, such as journals, private conversations with teachers etc.</dd>
+<dt>Flagging posts.</dt>
+<dt>Sticky posts.</dt>
+<dt>Ability to lock a discussion.</dt>
+<dt>Ability to look at readers of a thread.</dt></dl>
+<p>Yes, we do realise 'reading has a different meaning on the web'
+</p>
+<dl><dt>Simplified view of a thread, e.g. repeated or blank subject lines are ignored.</dt>
+<dt>Hybrid discussion view</dt>
+<dd>A combination of nested and threaded.  Brought to you through the magic of AJAX. This description from the doc: (to come)</dd>
+<dt>Three attached files possible</dt></dl>
+<h2><span class="mw-headline" id="Release_Notes">Release Notes</span></h2>
+<h3><span id="Pre-release_.22stable_version.22"></span><span class="mw-headline" id='Pre-release_"stable_version"'>Pre-release "stable version"</span></h3>
+<p>From <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=137549#p681805">Sam's forum post</a> on 11 Aug 2010:  <b>A new stable release version of ForumNG for Moodle 1.9.x is now available.</b>
+</p>
+<h4><span class="mw-headline" id="About_the_stable_version">About the stable version</span></h4>
+<p>This is actually older the current CVS version that was previously available. However, it is a tested version that has (so far) been through about half of our typical release testing schedule.
+</p><p>This will not be updated immediately with developer changes, only with bugfixes.
+</p><p>As of September, this (well the latest version available by the link) will be the same code that's live on the OU system, which means it will be undergoing heavy daily usage and is likely not to be totally broken, but will contain any necessary critical bugfixes that we do.
+</p><p>Warning: Although I'm calling it stable, we still don't guarantee anything about the release! You must test it and satisfy yourself that it works on your servers before updating a live system. Although this version should be more reliable, there are certain differences between standard Moodle 1.9.x and the OU version, and it's possible that we might accidentally introduce dependencies on these (thus breaking it for everyone else), so please do test.
+</p>
+<h3><span class="mw-headline" id="ForumNG_version:_Stable_R1.0">ForumNG version: Stable R1.0</span></h3>
+<h4><span class="mw-headline" id="New_Version_numbering">New Version numbering</span></h4>
+<p>In addition to this new stable version, there is a new numbering scheme. With new versions of the CVS build, if you look on the ForumNG settings page, you'll see:
+</p><p>ForumNG version: Unstable development version (use at own risk)
+</p>
+<h4><span class="mw-headline" id="Bug_reporting">Bug reporting</span></h4>
+<p>Please continue to report bugs via Moodle Tracker (under 'Contributed code', 'Module: ForumNG'). In the text of your bug, please make sure to include the ForumNG version as above, and please upgrade to latest stable version (or at least latest with the same first number, i.e. 1.latest) in case the bug was already fixed.
+</p>
+<h4><span class="mw-headline" id="Upgrade_problems">Upgrade problems</span></h4>
+<p>If you are currently running the latest version from CVS you won't be able to upgrade to this stable version because its Moodle version number is lower. You'll need to uninstall (which will delete all forums) and reinstall - or wait until the stable release catches up, which should be in December.
+</p><p>Not sure? Check your version (you can see this on the manage activities page) - the stable version is 2010 05 13 00. If your version number is lower than this, or the same, then you can upgrade to the stable version. Otherwise you can't. (The current CVS version, for instance, is 2010 07 21 00.)
+</p>
+<h4><span class="mw-headline" id="Download">Download</span></h4>
+<p>Download via the link on the standard Modules and Plugins page (you want the link that goes to a Google Docs folder with the file forumng.1.0.zip in it).
+</p>
+<h2><span id="What_is_not_there_in_NG_.28At_the_moment.29"></span><span class="mw-headline" id="What_is_not_there_in_NG_(At_the_moment)">What is not there in NG (At the moment)</span></h2>
+<ol><li>Integration with 'core moodle functions' like grading, notifications in Recent Activity block <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=137549#p601578">Forum comment on this</a></li>
+<li>Different forum types available in Standard Moodle</li></ol>
+<h2><span class="mw-headline" id="FAQ">FAQ</span></h2>
+<h3><span id="Where_can_I_get_a_version_doe_Moodle_2.1.3F"></span><span class="mw-headline" id="Where_can_I_get_a_version_doe_Moodle_2.1?">Where can I get a version doe Moodle 2.1?</span></h3>
+<p>Updated Feb 2012: There is now a version for 2.1+.  See the OU public GIT repo: <a rel="nofollow" class="external free" href="https://github.com/moodleou/moodle-mod_forumng">https://github.com/moodleou/moodle-mod_forumng</a>
+</p><p>See <a rel="nofollow" class="external free" href="http://tracker.moodle.org/browse/CONTRIB/component/10572">http://tracker.moodle.org/browse/CONTRIB/component/10572</a> for Bug reports.
+</p>
+<h3><span id="What_new_features_may_be_added_in_the_future.3F"></span><span class="mw-headline" id="What_new_features_may_be_added_in_the_future?">What new features may be added in the future?</span></h3>
+<p>Check <a rel="nofollow" class="external text" href="http://learn.open.ac.uk/mod/oublog/view.php?user=11&amp;tag=forumng">Sam's Blog</a> and the original <a rel="nofollow" class="external text" href="http://lyceum.open.ac.uk/temp/forum_redesign.pdf">specs document</a>.
+</p><p>At the moment, the OU is doing all the development, and so naturally we are prioritising the things we need for our courses.
+</p><p>However, one of the things we would like to happen is to have ForumNG become the standard forum in Moodle, and that is only possible if ForumNG can do everything the old forum can do, so we are also aiming to re-implement all the existing features. (Except for course news forums, where Moodle HQ developers have been talking about developing a purpose-build solution for course news, separate from the forum module.)
+</p>
+<h3><span id="What_does_NG_mean.3F"></span><span class="mw-headline" id="What_does_NG_mean?">What does NG mean?</span></h3>
+<p>It stands for Next Generation, like Star Trek NG.
+</p><p>This may not be the best name ever, but we had to find something different from 'forum' that was not already used, and you are not allowed numbers in Moodle module names, so forum2 was out.
+</p>
+<h3><span id="Is_there_a_Standard_forum_to_NG_convertor.3F"></span><span class="mw-headline" id="Is_there_a_Standard_forum_to_NG_convertor?">Is there a Standard forum to NG convertor?</span></h3>
+<p>Yes.  See <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=137549#p681846">Forum Post</a> 
+</p><p>Go to add activity and choose forumng. Instead of actually adding one, scroll down to the bottom of the page - you should see a link to convert old forums. (Will only appear if there are old forums on the course that it can convert.) You can then select which ones to convert and it will hopefully work. (Converting doesn't delete the old forums, only hides them, so no worries if something goes wrong.)
+</p><p>It can't convert old forums with a forum type other than 'general' (i.e. you can't convert news forum or Q&amp;A type forum).
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li>ForumNG is used on the <a rel="nofollow" class="external text" href="http://openlearn.open.ac.uk/">OpenLearn</a> site. For example, the <a rel="nofollow" class="external text" href="http://openlearn.open.ac.uk/mod/forumng/view.php?id=396256">Help and Support forum</a>. (Please do not use these forums just to experiment with the functionality.)</li>
+<li>OpenLearn also has some brief <a rel="nofollow" class="external text" href="http://openlearn.open.ac.uk/course/view.php?id=2909">user documentation</a>.</li></ul>
+<h2><span class="mw-headline" id="Using_ForumNG">Using ForumNG</span></h2>
+<!-- 
+NewPP limit report
+Cached time: 20260823020420
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.015 seconds
+Real time usage: 0.018 seconds
+Preprocessor visited node count: 63/1000000
+Post&#8208;expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:11506-0!canonical and timestamp 20260823020420 and revision id 143542. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=ForumNG&amp;oldid=143542">https://docs.moodle.org/502/en/index.php?title=ForumNG&amp;oldid=143542</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="27cec39c9633dd48770872338440a43c.html" title="Category:Contributed code">Contributed code</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdjd3gov7">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjd3gp6a"></button>
+					<div class="collapse navbar-collapse igdjd3gp6a" id="igdjd3gp6a">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/ForumNG" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/ForumNG" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=ForumNG&amp;oldid=143542" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=ForumNG&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 20 May 2022, at 14:14.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":136,"wgPageParseReport":{"limitreport":{"cputime":"0.015","walltime":"0.018","ppvisitednodes":{"value":63,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260823020420","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Cron - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"613cf9a0114664a1de91bc18","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Cron","wgTitle":"Cron","wgCurRevisionId":149782,"wgRevisionId":149782,"wgArticleId":2523,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Cron","wgRelevantArticleId":2523,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"cron","wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgInternalRedirectTargetUrl":"/502/en/Cron","wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="593ae70845242c812b361a340a53fb46.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.pygments%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Cron">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Cron rootpage-Cron layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhspw33i"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhspw33i" id="igdhspw33i">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Cron" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/cron">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/cron">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/cron">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="37fc181470a569556f94c1f35940d0a7.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Cron" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Cron&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Cron&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Cron</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"><span class="mw-redirectedfrom">(Redirected from <a href="https://docs.moodle.org/502/en/index.php?title=cron&amp;redirect=no" class="mw-redirect" title="cron">cron</a>)</span></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a> ► <a class="mw-selflink selflink">Cron</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a></div>	
+<div class="content">
+<ul><li><a href="553207f76ae3b1e85403f96c2ca316f1.html" title="Installing Moodle">Installing Moodle</a></li>
+<li><a href="399ca91535c3410845bff1400293dbc5.html" title="Installation quick guide">Installation quick guide</a></li>
+<li><a class="mw-selflink selflink">Cron</a></li>
+<li><a href="081d50b0942d418fa28114398527e388.html" title="Nginx">Nginx</a></li>
+<li><a href="6831e4affebb174320f861bc76b08775.html" title="Apache">Apache</a></li>
+<li><a href="68065410acf60db421f4e2aac18bc951.html" title="Internet Information Services">IIS</a></li>
+<li><a href="838fe95223f139a5c86fa0eace52fb64.html" title="Configuring the Router">Routing</a></li>
+<li><a href="b8a47099f49d74586081af402e096238.html" title="Installing plugins">Installing plugins</a></li>
+<li><a href="52d1d262bc125752f9747df1abc77de6.html" title="Installation FAQ">Installation FAQ</a></li>
+<li><a href="b38923733584457a7e29bf0e898e9c97.html" title="Upgrading">Upgrading</a></li>
+<li><a href="451fc5f44047acbcf3c960e787eb56c6.html" title="Upgrade overview">Upgrade overview</a></li>
+<li><a href="784f6d5df0514efb399c81a6f803d2c7.html" title="Automatic updates deployment">Automatic updates deployment</a></li>
+<li><a href="14569a6d13e60324f1803b54b2ffb589.html" title="Git for Administrators">Git guide</a></li>
+<li><a href="8428d1ac0de33e2b0f542d6d962f1fa6.html" title="Administration via command line">Administration via command line</a></li>
+<li><a href="6aeead2c752a1a71fc9b37a62d913491.html" title="Upgrading FAQ">Upgrading FAQ</a></li>
+<li><a href="1a1489d94778d66d38f3a8e70fedc938.html" title="Moodle migration">Moodle migration</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p>The Moodle 'cron' process is a PHP script (part of the standard Moodle installation) that must be run regularly in the background. The Moodle cron script runs different tasks at differently scheduled intervals.
+</p><p><b>IMPORTANT: Do not skip setting up the cron process on your server for your Moodle. Your site will not work properly without it.</b>
+</p><p>It is recommended that <i>the cron is run every minute</i>, as required for asynchronous activity deletion when using the <a href="5ae004492c5a513795f55917f37ee957.html" class="mw-redirect" title="recycle bin">recycle bin</a>.
+</p><p>The cron program (that runs the Moodle script) is a core part of Unix-based systems (including Linux and OSX) being used to run all manner of time-dependent services. On Windows the simplest solution is to create a task in the Windows Task Scheduler and set it to run at regular intervals. On shared hosting, you should find the documentation (or ask support) how cron is configured. Most shared hosting systems use CPanel to manage sites, and usually will have a section for Cron Jobs on the panel.
+</p><p>Essentially, the task involves adding a single command to the list of cron activities on your system. On Unix based systems this list is a file called a 'crontab' which all users have. 
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#General_discussion"><span class="tocnumber">1</span> <span class="toctext">General discussion</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Working_out_the_Moodle_cron_command"><span class="tocnumber">1.1</span> <span class="toctext">Working out the Moodle cron command</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#The_web_based_Moodle_cron_command"><span class="tocnumber">1.2</span> <span class="toctext">The web based Moodle cron command</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Finding_the_right_place_to_put_the_command"><span class="tocnumber">1.3</span> <span class="toctext">Finding the right place to put the command</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Setting_up_cron_on_your_system"><span class="tocnumber">2</span> <span class="toctext">Setting up cron on your system</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Using_third_party_cron_service"><span class="tocnumber">3</span> <span class="toctext">Using third party cron service</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Cron_settings_in_Moodle"><span class="tocnumber">3.1</span> <span class="toctext">Cron settings in Moodle</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Remote_cron"><span class="tocnumber">3.2</span> <span class="toctext">Remote cron</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Scheduling_tasks"><span class="tocnumber">4</span> <span class="toctext">Scheduling tasks</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Running_cron_for_several_Moodle_servers"><span class="tocnumber">5</span> <span class="toctext">Running cron for several Moodle servers</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Debugging_Scheduled_Tasks"><span class="tocnumber">6</span> <span class="toctext">Debugging Scheduled Tasks</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Logging_and_monitoring"><span class="tocnumber">7</span> <span class="toctext">Logging and monitoring</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Low_latency_adhoc_tasks"><span class="tocnumber">8</span> <span class="toctext">Low latency adhoc tasks</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Scaling_up_cron_with_multiple_processes"><span class="tocnumber">9</span> <span class="toctext">Scaling up cron with multiple processes</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#See_also"><span class="tocnumber">10</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="General_discussion">General discussion</span></h2>
+<p>See the later sections for your server type; this section contains some general background information. 
+</p><p>There are essentially two steps to implementing cron:
+</p>
+<ol><li>identifying the correct command to run</li>
+<li>finding the right place on your system to put the command</li></ol>
+<h3><span class="mw-headline" id="Working_out_the_Moodle_cron_command">Working out the Moodle cron command</span></h3>
+<p>Moodle has two different ways to deploy cron which use different scripts within the Moodle install. These are as follows...
+</p>
+<ol><li>The CLI (command line interpreter) script. This will be at the path <pre>/path/to/moodle/admin/cli/cron.php</pre> If in doubt, this is the correct script to use. This needs to be run by a 'PHP CLI' program on your computer. So the final command may look something like <pre>/usr/bin/php /path/to/moodle/admin/cli/cron.php</pre> You can (and should) try this on your command line to see if it works. <b>WARNING: Check your command-line PHP version is compatible with your chosen version of Moodle. The command-line PHP program is different to the one running your web site and is not always the same version.</b></li>
+<li>If, for some reason, you cannot run the CLI script there is the web based script. Note that this is now deprecated and may be removed in future versions. This needs to be run from a web browser and will be accessed via a web url something like <b><a rel="nofollow" class="external free" href="http://your.moodle.site/admin/cron.php">http://your.moodle.site/admin/cron.php</a></b>. You can find command line based web browser (e.g. wget) so the final command may look like <pre>/usr/bin/wget http://your.moodle.site/admin/cron.php</pre> This has the advantage that it can be run from *anywhere*. If you can't get cron to work on your machine it can be run somewhere else.</li></ol>
+<h3><span class="mw-headline" id="The_web_based_Moodle_cron_command">The web based Moodle cron command</span></h3>
+<ul><li>If you have a choice, do not use the web based cron. It is likely to be removed in a future Moodle version.</li>
+<li>From Moodle 2.9 onwards, the cron job can no longer be run from web by default. You will get an error message:</li></ul>
+<pre>!!! Sorry, internet access to this page has been disabled by the administrator.&nbsp;!!! 
+</pre>
+<ul><li>You can change this in ' Dashboard &#9658; Site administration &#9658; Security &#9658; Site policies ' by deselecting 'Cron execution via command line only'.
+<ul><li>You will be warned that 'Running the cron from a web browser can expose privileged information to anonymous users. Thus it is recommended to only run the cron from the command line or set a cron password for remote access.'</li>
+<li>You can then write a 'Cron password for remote access'. If this field is left empty, no password is required.</li>
+<li>This means that the cron.php script cannot be run from a web browser without supplying the password using the following form of URL:</li></ul></li></ul>
+<pre> <a rel="nofollow" class="external free" href="http://site.example.com/admin/cron.php?password=opensesame">http://site.example.com/admin/cron.php?password=opensesame</a>
+</pre>
+<h3><span class="mw-headline" id="Finding_the_right_place_to_put_the_command">Finding the right place to put the command</span></h3>
+<p>This really does depend on the system you are using and you should find and read the documentation for your platform or hosting. In most cases getting the Moodle cron to run consists of establishing the correct command (above) and then adding it, and the time to run the command, to some sort of file. This might be either through a specific user interface or by editing the file directly.
+</p><p>If using the CLI version you also need to make sure that the cron process is run as the correct user. This is not an issue with the web version. 
+</p><p>Example... installing cron on Ubuntu/Debian Linux. Assuming logged in as root..
+</p><p><i>use the crontab command to open a crontab editor window for the www-data user. This is the user that Apache (the web server) runs as on Debian based systems</i>
+</p>
+<pre>$ crontab -u www-data -e
+</pre>
+<p><i>This will open an editor window. To run the cli cron script every 1 minute, add the line:</i>
+</p>
+<pre>* * * * * /usr/bin/php  /path/to/moodle/admin/cli/cron.php &gt;/dev/null
+</pre>
+<p>NOTE: the final <b>&gt;/dev/null</b> sends all the output to the 'bin' and stops you getting an email every 1 minute.
+</p>
+<h2><span class="mw-headline" id="Setting_up_cron_on_your_system">Setting up cron on your system</span></h2>
+<p>Choose the information for your server type:
+</p>
+<ul><li><a href="30c8375de7da943d3dee8332dc69a5d6.html" title="Cron with Unix or Linux">Cron with Unix or Linux</a>- Cron services on various UNIX and Linux flavored operating systems.</li>
+<li><a href="270f3de9244aed7b1e988ebbebfeb061.html" title="Cron with Windows OS">Cron with Windows OS</a> - Cron services in Windows</li>
+<li><i>Apple OSX</i> - use the built-in 'crontab' service which is exactly the same as <a href="30c8375de7da943d3dee8332dc69a5d6.html" title="Cron with Unix or Linux">Cron with Unix or Linux</a>. However, you might want to do it the 'Apple way' using launchd - see <a href="5283a553ca75c81ab27ac28e19214d05.html" title="Cron with MAC OS X">Cron with MAC OS X</a></li>
+<li><a href="e670df693f7d350849acad3e1496957e.html" class="mw-redirect" title="Cron with web hosting services">Cron with web hosting services</a>- Cron services in various web hosting examples.</li></ul>
+<p>Here are some more instructions for specific hosts (please check that these are up to date):
+</p>
+<ul><li><a href="9f9418ac9427ad515f47786d4f6141fe.html" title="Cron on 1and1 shared servers">Cron on 1and1 shared servers</a></li></ul>
+<h2><span class="mw-headline" id="Using_third_party_cron_service">Using third party cron service</span></h2>
+<p>Besides using cron hosted on your own server, you may use third party cron service (usually called webcron):
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://cron-job.org/">cron-job.org</a> is a free service. (1Minute cron is possible)</li></ul>
+<ul><li><a rel="nofollow" class="external text" href="https://www.easycron.com/">EasyCron</a> - A webcron service provider that eliminates the need of crontab or other task schedulers to set cron job.</li></ul>
+<ul><li><a rel="nofollow" class="external text" href="https://webcron.talent-factory.ch/">WebCron</a> - A free and easy webcron service provider.</li></ul>
+<h3><span class="mw-headline" id="Cron_settings_in_Moodle">Cron settings in Moodle</span></h3>
+<p>An admin can set cron execution via command line only or a cron password for remote access in 'Site security settings' in the Site administration.
+</p>
+<h3><span class="mw-headline" id="Remote_cron">Remote cron</span></h3>
+<p>Using the 'web based' version of cron it is perfectly ok to place the cron process on a different machine to the Moodle server. For example, the cron service on a Unix server can invoke the cron web 'page' on a Windows-based Moodle server.
+</p>
+<h2><span class="mw-headline" id="Scheduling_tasks">Scheduling tasks</span></h2>
+<p>An administrator can schedule cron tasks very precisely from Administration &gt; Site administration &gt; Server &gt; Scheduled tasks, see <a href="9b3501d6968f4decc5503b86391b6b6d.html" title="Scheduled tasks">Scheduled tasks</a>
+</p>
+<h2><span class="mw-headline" id="Running_cron_for_several_Moodle_servers">Running cron for several Moodle servers</span></h2>
+<ul><li>Tasks can run in parallel and processes use locking to prevent tasks from running at the same time which allows cron to be triggered from multiple web servers that serve the same Moodle instance.</li></ul>
+<ul><li>If you are running different Moodle instances on the same server, then each Moodle instance needs a cron job. (Even a single Apache web server can run different Moodle instances on different domains by using its virtual hosts capability <a rel="nofollow" class="external text" href="https://httpd.apache.org/docs/2.2/vhosts/index.html">https://httpd.apache.org/docs/2.2/vhosts/index.html</a>.)</li></ul>
+<h2><span class="mw-headline" id="Debugging_Scheduled_Tasks">Debugging Scheduled Tasks</span></h2>
+<p>Sometimes, a particular cron task may not be working correctly. In Moodle versions before 2.7 - any cron task that was throwing exceptions would prevent the rest of cron from running. The only way to monitor if cron was completing each time, was to add some automated checking of the output of running cron (e.g. searching for the string "Cron completed at ").
+</p><p>In Moodle 2.7 and later, a single failing scheduled task will not prevent the remaining tasks from completing. When any single scheduled task fails, it is marked as a failure, and scheduled to be reattempted. If the task keeps failing, the next scheduled time will be backed off until it is attempted at most once every 24 hours. But checking the <a href="9b3501d6968f4decc5503b86391b6b6d.html" title="Scheduled tasks">Scheduled tasks</a> admin page, you can see if any task is currently failing (it will have a non-zero fail delay - which is the number of seconds to wait before reattempting a failed task). A simple way to debug a failing task, is to run it immediately using the <a href="8428d1ac0de33e2b0f542d6d962f1fa6.html#Scheduled_tasks" title="Administration via command line">cli scheduled task runner</a> and monitor the output.
+</p>
+<h2><span class="mw-headline" id="Logging_and_monitoring">Logging and monitoring</span></h2>
+<p>Ideally you should also be logging the output of cron somewhere and monitoring it for issues. You can monitor the overall status of cron to make sure there are no errors by visiting:
+</p><p>Site administration / Reports / System status (/report/status/index.php)
+</p><p>You can also wire this status report up to tools like Icinga / Nagios using the Check API (<a rel="nofollow" class="external free" href="https://docs.moodle.org/dev/Check_API">https://docs.moodle.org/dev/Check_API</a>) cli commands or with the help of plugins like <a rel="nofollow" class="external free" href="https://github.com/catalyst/moodle-tool_heartbeat">https://github.com/catalyst/moodle-tool_heartbeat</a>.
+</p><p><code>
+/admin/cli/checks.php
+</code>
+</p><p>If there are errors then you can get more details for recently run tasks from the Logs column on the Scheduled task page, but this won't show ad hoc task failures:
+</p><p>Site administration / Server / Tasks / Scheduled tasks (/admin/tool/task/scheduledtasks.php)
+</p><p>To see ad hoc task failures you either need to rerun the task manually yourself and see the errors, or you need to have already collected the logs for review. For a Moodle running on a single box you could log to a simple log file, or for a cluster you might want to use syslogd or similar, e.g.:
+</p>
+<pre> * * * * * /usr/bin/php  /path/to/moodle/admin/cli/cron.php 2&gt;&amp;1 | /usr/bin/logger ...
+</pre>
+<h2><span class="mw-headline" id="Low_latency_adhoc_tasks">Low latency adhoc tasks</span></h2>
+<p>Each time cron is run, after the scheduled tasks the ad hoc tasks are also run. While scheduled tasks can run at most once a minute, ad hoc tasks can be queued at any moment, and generally you want them processed as soon as possible and to not have to wait for the scheduled task to run first. If you only run the normal admin/cli/cron.php then not only might it have to wait to process all the scheduled tasks first, if it has already finished you will have to wait until the next minute for cron to start again for it to be processed.
+</p><p>Instead you can run one or more dedicated ad hoc task processors which run in parallel to the main cron process.
+</p>
+<pre> * * * * * /usr/bin/php  /path/to/moodle/admin/cli/adhoc_task.php --execute --keep-alive=59
+ * * * * * /usr/bin/php  /path/to/moodle/admin/cli/adhoc_task.php --execute --keep-alive=59
+...
+</pre>
+<p>Starting from Moodle 3.9 the&mdash;keep-alive option runs like a daemon so when the queue is empty rather than exiting it waits for new tasks to be queued so it can start processing as soon as possible.
+</p>
+<h2><span class="mw-headline" id="Scaling_up_cron_with_multiple_processes">Scaling up cron with multiple processes</span></h2>
+<p>As your site grows many of the scheduled tasks will take longer to complete, and also there will be more ad hoc tasks queued which need to be processed. The cron system is designed to work in parallel but each individual process can only process one task at a time so you must run multiple cron cli's. You can generally run a fairly high number of cron processes on a dedicated cron instance before needing to run multiple cron instances. To run more than one process simply spawn multiple cron processes each minute:
+</p>
+<pre>* * * * * /usr/bin/php  /path/to/moodle/admin/cli/cron.php
+* * * * * /usr/bin/php  /path/to/moodle/admin/cli/cron.php
+* * * * * /usr/bin/php  /path/to/moodle/admin/cli/cron.php
+&#8942;
+* * * * * /usr/bin/php  /path/to/moodle/admin/cli/adhoc_task.php --execute --keep-alive=59
+* * * * * /usr/bin/php  /path/to/moodle/admin/cli/adhoc_task.php --execute --keep-alive=59
+* * * * * /usr/bin/php  /path/to/moodle/admin/cli/adhoc_task.php --execute --keep-alive=59
+&#8942;
+</pre>
+<p>It can be especially important to increase the number of adhoc_task.php processes as certain plugins and systems can generate very large numbers of ad hoc tasks, or tasks that can take a long time to process. Especially tasks like document conversions and automated backups can build up more quickly than they are processed if they are left on default settings.
+</p><p>By default only 3 scheduled tasks and 3 ad hoc tasks can be run concurrently so as you add more processes you need to increase the level of allowed concurrency:
+</p><p>Site administration &gt; Server &gt; Tasks &gt; Task processing
+</p><p>Or in <code>config.php</code>:
+</p>
+<div class="mw-highlight mw-highlight-lang-php mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">$CFG</span><span class="o">-&gt;</span><span class="na">task_scheduled_concurrency_limit</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">// Defaults to 3</span>
+<span class="nv">$CFG</span><span class="o">-&gt;</span><span class="na">task_adhoc_concurrency_limit</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span> <span class="c1">// Defaults to 3</span>
+</pre></div>
+<p>Whatever you set these to make sure the server(s) hosting them can comfortably handle this many processes. Often the bottleneck will be a shared service, usually the database.
+</p><p>You may find that certain types of very long running tasks will consume all the available task processes which means no other tasks will run. e.g. if you have 5 cli processes, but in the task queue there are 20 ad hoc tasks for an automated backup, each of which will take ten minutes to complete, then very quickly all 5 processes will be consumed by backups and nothing else. Other small very fast and light tasks like a document conversion or forum emails will not get sent until the backups are complete and a process frees up. To manage this you can limit the concurrency of specific types of ad hoc tasks. A good rule of thumb is that if all of the 'heavy' tasks consume all of their own limits then you should still have another few processes standing by on idle waiting for anything else which may be added to the queue.
+</p><p>Automated backups are the worst known offender, so hypothetically if you are running 50 ad hoc task processes concurrently a reasonable restriction might be to cap the backups to consume no more than half of those processes, i.e. 25 at most:
+</p><p>In <code>config.php</code>:
+</p>
+<div class="mw-highlight mw-highlight-lang-php mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">$CFG</span><span class="o">-&gt;</span><span class="na">task_concurrency_limit</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">'core\task\course_backup_task'</span> <span class="o">=&gt;</span> <span class="mi">25</span><span class="p">,</span>
+    <span class="s1">'core_course\task\course_delete_modules'</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">,</span>
+<span class="p">];</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="9b3501d6968f4decc5503b86391b6b6d.html" title="Scheduled tasks">Scheduled tasks</a></li>
+<li><a rel="nofollow" class="external text" href="https://learn1.open.ac.uk/mod/oublog/viewpost.php?post=281238">Useful blog post on Cron by Sam Marshall from the UK OU.</a></li>
+<li><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Cron">Wikipedia article on cron function</a></li>
+<li><a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/MDL-50694">MDL-50694</a> - Cron message "The operation timed out while waiting for a lock" isn't really an error</li></ul>
+<p>Forum discussions:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=139263#p609060">How to log the output of a Scheduled Task on Windows</a> - this discussion explains a nice trick that can be very useful when you are experiencing problems with your Windows Scheduled Task and you need to log the output of the Scheduled Task to a log file.</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822115743
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.017 seconds
+Real time usage: 0.023 seconds
+Preprocessor visited node count: 109/1000000
+Post&#8208;expand include size: 632/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 2/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 1830/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    2.884      1 Template:Installing_Moodle
+100.00%    2.884      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:2523-0!canonical and timestamp 20260822115743 and revision id 149782. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Cron&amp;oldid=149782">https://docs.moodle.org/502/en/index.php?title=Cron&amp;oldid=149782</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="7f264aa70db3768dcef1896a8ec93e70.html" title="Category:Installation">Installation</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhspw581">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhspw5pz"></button>
+					<div class="collapse navbar-collapse igdhspw5pz" id="igdhspw5pz">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Cron" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Cron" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Cron&amp;oldid=149782" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Cron&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Cron" title="Cron – español" lang="es" hreflang="es" data-title="Cron" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Cron" title="Cron – français" lang="fr" hreflang="fr" data-title="Cron" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/Cron" title="Cron – 日本語" lang="ja" hreflang="ja" data-title="Cron" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Cron-Job" title="Cron-Job – Deutsch" lang="de" hreflang="de" data-title="Cron-Job" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 24 October 2024, at 11:21.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":102,"wgPageParseReport":{"limitreport":{"cputime":"0.017","walltime":"0.023","ppvisitednodes":{"value":109,"limit":1000000},"postexpandincludesize":{"value":632,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":2,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1830,"limit":5000000},"timingprofile":["100.00%    2.884      1 Template:Installing_Moodle","100.00%    2.884      1 -total"]},"cachereport":{"timestamp":"20260822115743","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

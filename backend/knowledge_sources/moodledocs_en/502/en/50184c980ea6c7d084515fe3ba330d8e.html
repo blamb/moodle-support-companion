@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Dataform Plugins - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"2a3431f5eb494e88ce8ce603","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Dataform_Plugins","wgTitle":"Dataform Plugins","wgCurRevisionId":117640,"wgRevisionId":117640,"wgArticleId":17670,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Contributed code","Dataform module"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Dataform_Plugins","wgRelevantArticleId":17670,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Dataform_Plugins">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Dataform_Plugins rootpage-Dataform_Plugins layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjbv67yk"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdjbv67yk" id="igdjbv67yk">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Dataform+Plugins" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Dataform_Plugins">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Dataform_Plugins">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Dataform_Plugins">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="50184c980ea6c7d084515fe3ba330d8e.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Dataform_Plugins&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_Plugins&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_Plugins&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Dataform Plugins</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><i><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="c93eb5dfaca94ad219ccb0d560e9af0f.html" title="Managing a Moodle course">Managing a Moodle course</a> ► <a href="9e64708c111f312d3017aabec2d5768e.html" title="Activities">Activities</a> ► <a href="7dc44b9d10259bc60658cf60b67229bc.html" title="Dataform module">Dataform</a> </i>
+► Module administration ► <a class="mw-selflink selflink">Dataform Plugins</a><i></i></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="7dc44b9d10259bc60658cf60b67229bc.html" title="Dataform module">Dataform</a></div>	
+<div class="content">
+<ul><li><a href="ab0de103b356d940bc36729a7d6b83dc.html" title="Dataform releases">Releases</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/plugins/browse.php?list=set&amp;id=4">Downloads</a></li>
+<li><a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/CONTRIB/component/13430">Issues</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/view.php?id=8192">Discussion</a></li></ul>
+<div style="font-style: italic;font-weight: bold;">Module administration</div>
+<ul><li><a href="44241329db53ce20214e7d4f1594351d.html" title="Dataform installation">Installation</a></li>
+<li><a class="mw-selflink selflink">Plugins and Components</a></li>
+<li><a href="2242fb586e2c802760e98a5a0ec957bd.html" title="Dataform capabilities">Capabilities</a></li>
+<li><a href="59f22745fae0650c8f9a060ee700f07e.html" title="Dataform System events">System events</a></li>
+<li><a href="0f8474ba6bcac75c23b2d49c5c2f34c5.html" title="Dataform Tests">Tests</a></li></ul>
+<div style="font-style: italic;font-weight: bold;">Creating an activity</div>
+<ul><li><a href="289cc88f71f24d8e698639764aa60ff8.html" title="Dataform Overview">Overview</a></li>
+<li><a href="6a9ca9d7d66942725b40feb6b8f6d556.html" title="Dataform Activity administration">Activity administration</a></li>
+<li><a href="f648ee5661ef5fde1e2a178d856767e8.html" title="Dataform building">Building an activity</a></li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_CSS_Tips&amp;action=edit&amp;redlink=1" class="new" title="Dataform CSS Tips (page does not exist)">CSS tips and tricks</a></li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_JS_Tips&amp;action=edit&amp;redlink=1" class="new" title="Dataform JS Tips (page does not exist)">JS tips and tricks</a></li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_RSS&amp;action=edit&amp;redlink=1" class="new" title="Dataform RSS (page does not exist)">Activating RSS</a></li>
+<li><a href="ff3efb7377e2c473b83e5f84448cceb7.html" title="Dataform Workflow">Activity workflow</a></li>
+<li><a href="a973d364212f4e323cab4e7e902116e0.html" title="Dataform Grading">Grading</a></li></ul>
+<div style="font-style: italic;font-weight: bold;">Working with the activity</div>
+<ul><li><a href="1f0964fd0ec28c1594cf25f3b3ab1075.html" title="Dataform Activity navigation">Activity navigation</a></li>
+<li><a href="6b13c1349f3193411f230a4649f7e00a.html" title="Dataform Entries">Submission and display</a></li>
+<li><a href="8aa74a33373c19bf60d80dbd87a3bfbe.html" title="Dataform search sort">Search and Sort </a></li>
+<li><a href="e1d64be4b1682353da205ec83dfa13ac.html" title="Dataform Import Export">Import and Export</a></li>
+<li><a href="e938882d8a958ce4968bde30ea152c8c.html" title="Dataform Applications">Applications</a></li></ul>
+<div style="font-style: italic;font-weight: bold;">See also</div>
+<ul><li><a href="0c4c9abd93308ab00bb985fbcb6111ad.html" title="Dataform FAQ">FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p><br>
+Click on the plugin name for more information about the plugin.
+</p>
+<table class="" style="background-color:inherit;border:0;vertical-align:top;">
+
+<tbody><tr>
+<td colspan="2"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1"><a href="#View_plugins"><span class="tocnumber">1</span> <span class="toctext">View plugins</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Standard"><span class="tocnumber">1.1</span> <span class="toctext">Standard</span></a></li>
+<li class="toclevel-2"><a href="#Add-ons"><span class="tocnumber">1.2</span> <span class="toctext">Add-ons</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Field_plugins"><span class="tocnumber">2</span> <span class="toctext">Field plugins</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Internal"><span class="tocnumber">2.1</span> <span class="toctext">Internal</span></a></li>
+<li class="toclevel-2"><a href="#Standard_2"><span class="tocnumber">2.2</span> <span class="toctext">Standard</span></a></li>
+<li class="toclevel-2"><a href="#Add-ons_2"><span class="tocnumber">2.3</span> <span class="toctext">Add-ons</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Other_components"><span class="tocnumber">3</span> <span class="toctext">Other components</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Text_filters"><span class="tocnumber">3.1</span> <span class="toctext">Text filters</span></a></li>
+<li class="toclevel-2"><a href="#Blocks"><span class="tocnumber">3.2</span> <span class="toctext">Blocks</span></a></li>
+<li class="toclevel-2"><a href="#Mods"><span class="tocnumber">3.3</span> <span class="toctext">Mods</span></a></li>
+<li class="toclevel-2"><a href="#Availability_conditions"><span class="tocnumber">3.4</span> <span class="toctext">Availability conditions</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="View_plugins">View plugins</span></h2>
+</td></tr>
+<tr>
+<td colspan="2"><h3><span class="mw-headline" id="Standard">Standard</span></h3>
+</td></tr>
+<tr style="font-weight:bold;background-color:#F2F2F2;">
+<td></td>
+<td>Description
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="cc677b97fdf1a7ad4d9d2a596c49c921.html" title="Dataformview Aligned">Aligned</a></td>
+<td>Displays entries in an aligned table with a simplified template design which takes a simple list of field patterns and creates one table column per pattern.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="f0e5d5092df8ee0fed74a8328847d95f.html" title="Dataformview CSV">CSV</a></td>
+<td>Allows CSV import and export of entries.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="295126096aaaa581c9b9ff26192505d0.html" title="Dataformview Grid">Grid</a></td>
+<td>Displays entries in a grid (each entry in a table cell). Allows setting the number of columns and rows of the grid.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="8dc3ece4a09577ae470a6c6a50f28713.html" title="Dataformview Interval">Interval</a></td>
+<td>This view allows you to set duration interval according to which the information is displayed. You can group the information by certain field tag or rating and you can control the the number of entries to be displayed on each page. This view is particularly useful for content display.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="a3d780b785cdee4277304795a773f4e9.html" title="Dataformview RSS">RSS</a></td>
+<td>Allows designing and generating RSS feeds from the activity entries.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="3d7f59f6560a3ace04a384228eaac481.html" title="Dataformview Tabular">Tabular</a></td>
+<td>Displays entries in an aligned table. The template is designed with an html table in a WYSIWYG editor.
+</td></tr>
+<tr>
+<td colspan="2"><h3><span class="mw-headline" id="Add-ons">Add-ons</span></h3>
+</td></tr>
+<tr style="font-weight:bold;background-color:#F2F2F2;">
+<td></td>
+<td>Description
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="56c7003786c507d826bc560543fb71d8.html" title="Dataformview chart">Chart</a></td>
+<td>Displays one or more charts based on the view entries content.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="e5bc0265c65ea7887cfacca41e30f800.html" title="Dataformview PDF">PDF</a></td>
+<td>Allows designing a PDF template and exporting entries to a PDF file.
+</td></tr>
+<tr>
+<td colspan="2"><h2><span class="mw-headline" id="Field_plugins">Field plugins</span></h2>
+</td></tr>
+<tr>
+<td colspan="2"><h3><span class="mw-headline" id="Internal">Internal</span></h3>
+</td></tr>
+<tr style="font-weight:bold;background-color:#F2F2F2;">
+<td></td>
+<td>Description
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="231cd39cec1eb2e67310685f472e4829.html" title="Dataformfield entryactions">Entry actions</a></td>
+<td>Displays the entry action links/icons (e.g. edit, delete, duplicate  etc.).
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="ef5e65f1ca0e8df27dbf33090f00320d.html" title="Dataformfield entryauthor">Entry author</a></td>
+<td>Displays info about the entry author (e.g. first name, last name, user picture etc.).
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="dd741f57715aec3b2bb9113af5f86f1e.html" title="Dataformfield entrygroup">Entry group</a></td>
+<td>Displays info about the group the entry belongs to.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="38487f0f764b2e7decfe63387226d032.html" title="Dataformfield entrytime">Entry time</a></td>
+<td>Displays the entry time created and modified.
+</td></tr>
+<tr>
+<td colspan="2"><h3><span class="mw-headline" id="Standard_2">Standard</span></h3>
+</td></tr>
+<tr style="font-weight:bold;background-color:#F2F2F2;">
+<td></td>
+<td>Description
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="f61c427350768f8d8eac57fce66dcec2.html" title="Dataformfield checkbox">Checkbox</a></td>
+<td>Allows the user to select options by ticking checkboxes.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="58058d84514401a9465f3eea5e34da6b.html" title="Dataformfield entrystate">Entry state</a></td>
+<td>Allows the user to set the entry state (with ajax support).
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="b5e1f892746930856581bb2c128a07ec.html" title="Dataformfield file">File</a></td>
+<td>Allows the user to upload files to the entry.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="31e14a0a82f86fd6c46a84b156ff5600.html" title="Dataformfield commentmdl">Comment Mdl</a></td>
+<td>Allows the user to add moodle comments  to the entry.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="a692eb80cfebe4d9250c39ff59808c45.html" title="Dataformfield number">Number</a></td>
+<td>Allows the user to enter a number.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="a64042b951d4582fbcc70a85a90faf9f.html" title="Dataformfield picture">Picture</a></td>
+<td>Allows the user to upload images to the entry.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="020e8772ed607fffd09711d1b355d212.html" title="Dataformfield radiobutton">Radio button</a></td>
+<td>Allows the user to select an option by ticking a radio button.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="c20544b88adb7ca56ac54c2e263a00d7.html" title="Dataformfield ratingmdl">Rating Mdl</a></td>
+<td>Allows the user to add moodle ratings to the entry.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="4ef6dfd6197b1e8a27f19c08a7b8270f.html" title="Dataformfield select">Select</a></td>
+<td>Allows the user to select an option from a dropdown.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="6193cfbbe01f84417aee71dc1e26f72b.html" title="Dataformfield selectmulti">Select (multiple)</a></td>
+<td>Allows the user to select multiple options from a dropdown.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="4d8c1c986e6d134614095812a12a396b.html" title="Dataformfield text">Text</a></td>
+<td>Allows the user to enter single-line text.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="65077a84d38923ffa7c9e0d1ed41d0b7.html" title="Dataformfield textarea">Text area</a></td>
+<td>Allows the user to enter multi-line text or rich text (supports the moodle editor).
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="2d6e4696642c6d5f0f5b2a4cde67f191.html" title="Dataformfield time">Time</a></td>
+<td>Allows the user to enter data/time via dropdowns or javascript calendar popup.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="48e179fea50f0810ecb2f8618349e37f.html" title="Dataformfield url">Url</a></td>
+<td>Allows the user to enter a clickable link.
+</td></tr>
+<tr>
+<td colspan="2"><h3><span class="mw-headline" id="Add-ons_2">Add-ons</span></h3>
+</td></tr>
+<tr style="font-weight:bold;background-color:#F2F2F2;">
+<td></td>
+<td>Description
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="https://docs.moodle.org/502/en/index.php?title=Dataformfield_captcha&amp;action=edit&amp;redlink=1" class="new" title="Dataformfield captcha (page does not exist)">Captcha</a></td>
+<td>Displays a required Google re-captcha when editing the entry.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="https://docs.moodle.org/502/en/index.php?title=Dataformfield_chart&amp;action=edit&amp;redlink=1" class="new" title="Dataformfield chart (page does not exist)">Chart</a></td>
+<td>Displays a YUI chart based on entry content.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="https://docs.moodle.org/502/en/index.php?title=Dataformfield_clicker&amp;action=edit&amp;redlink=1" class="new" title="Dataformfield clicker (page does not exist)">Clicker</a></td>
+<td>Allows choosing an option by clicking a numbered button .
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="https://docs.moodle.org/502/en/index.php?title=Dataformfield_dataformview&amp;action=edit&amp;redlink=1" class="new" title="Dataformfield dataformview (page does not exist)">Dataform view</a></td>
+<td>Displays the content of a selected view with optional filtering based on entry content.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="10da833408f89c56b60a0db5a990f4ee.html" title="Dataformfield duration">Duration</a></td>
+<td>Allows the user to specify a duration in various units.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="https://docs.moodle.org/502/en/index.php?title=Dataformfield_latlong&amp;action=edit&amp;redlink=1" class="new" title="Dataformfield latlong (page does not exist)">Latlong</a></td>
+<td>Allows the user to enter a geographic location with latitude and longitude.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="https://docs.moodle.org/502/en/index.php?title=Dataformfield_mailto&amp;action=edit&amp;redlink=1" class="new" title="Dataformfield mailto (page does not exist)">Mail to</a></td>
+<td>Displays a mailto link that will open an email editor in the user's local email client.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="https://docs.moodle.org/502/en/index.php?title=Dataformfield_xentryactions&amp;action=edit&amp;redlink=1" class="new" title="Dataformfield xentryactions (page does not exist)">Entry actions plus</a></td>
+<td>Allows a templates manager to configure the appearance and behavior of the entry actions.
+</td></tr>
+<tr>
+<td colspan="2"><h2><span class="mw-headline" id="Other_components">Other components</span></h2>
+</td></tr>
+<tr>
+<td colspan="2"><h3><span class="mw-headline" id="Text_filters">Text filters</span></h3>
+</td></tr>
+<tr style="font-weight:bold;background-color:#F2F2F2;">
+<td></td>
+<td>Description
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_auto_linking_filter&amp;action=edit&amp;redlink=1" class="new" title="Dataform auto linking filter (page does not exist)">Dataform auto linking</a></td>
+<td>A site <a href="e6baedb95f025b21528c38f28a771457.html" class="mw-redirect" title="Filter">Filter</a> that will create links to a Dataform entry where the name/title (word or phrase) of the Dataform entry is used within the same course in which the Dataform is located.  This includes forum postings, pages, labels etc.
+</td></tr>
+<tr>
+<td colspan="2"><h3><span class="mw-headline" id="Blocks">Blocks</span></h3>
+</td></tr>
+<tr style="font-weight:bold;background-color:#F2F2F2;">
+<td></td>
+<td>Description
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="286b8e28be562b182fe0ef8f0741cfa1.html" title="Dataform view block">Dataform view</a></td>
+<td>Allows for displaying and interacting with the content of a Dataform activity via a block on the course page.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="e6fec53fdfca0a90a90d524f7cf8affa.html" title="Dataform view access block">View access</a></td>
+<td>Allows setting view permissions for specified views.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="cb36abb7f4dddc029b8ca302b4f0eca1.html" title="Dataform entry access block">Entry access</a></td>
+<td>Allows setting access permissions (view, update, delete, export) for entries that have a specified content in specified views.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="1040d19f8340f71402e51865114815f6.html" title="Dataform field access block">Field access</a></td>
+<td>Allows setting access permissions (view, update, export) for entry field in specified views.
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="3faa51d88b1bc01975abe12494d12a50.html" title="Dataform notification block">Notification</a></td>
+<td>Allows setting custom messages to be sent to specified recipients on specified Dataform events.
+</td></tr>
+<tr>
+<td colspan="2"><h3><span class="mw-headline" id="Mods">Mods</span></h3>
+</td></tr>
+<tr style="font-weight:bold;background-color:#F2F2F2;">
+<td></td>
+<td>Description
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="a3666a03c5a6425f819bb9af7949fc2e.html" title="Dataform view module">Dataform view</a></td>
+<td>A label-like resource module that allows for displaying and interacting with the content of a Dataform activity in a course section on the course page.
+</td></tr>
+<tr>
+<td colspan="2"><h3><span class="mw-headline" id="Availability_conditions">Availability conditions</span></h3>
+</td></tr>
+<tr style="font-weight:bold;background-color:#F2F2F2;">
+<td></td>
+<td>Description
+</td></tr>
+<tr style="vertical-align:top;">
+<td><a href="c0ddeacf29fefbf216a6cc4f7d13ea8c.html" title="Availability dataformcontent">Dataform content</a></td>
+<td>An availability condition plugin that allows teachers to restrict user access to an activity or section based on content of a designated Dataform instance in the course.
+</td></tr></tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260823020309
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.028 seconds
+Real time usage: 0.038 seconds
+Preprocessor visited node count: 351/1000000
+Post&#8208;expand include size: 8542/2097152 bytes
+Template argument size: 5287/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   14.569      1 -total
+ 65.87%    9.596     42 Template:Dataform_plugins_list_table_row
+ 19.49%    2.840      1 Template:Dataform
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:17670-0!canonical and timestamp 20260823020309 and revision id 117640. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Dataform_Plugins&amp;oldid=117640">https://docs.moodle.org/502/en/index.php?title=Dataform_Plugins&amp;oldid=117640</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="27cec39c9633dd48770872338440a43c.html" title="Category:Contributed code">Contributed code</a></li><li><a href="34af9ecf8e2507d482d83d261a9d1fcd.html" title="Category:Dataform module">Dataform module</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdjbv6a5s">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjbv6ajb"></button>
+					<div class="collapse navbar-collapse igdjbv6ajb" id="igdjbv6ajb">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Dataform_Plugins" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Dataform_Plugins" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_Plugins&amp;oldid=117640" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_Plugins&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Dataform_Plugins" title="Dataform Plugins – español" lang="es" hreflang="es" data-title="Dataform Plugins" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 23 March 2015, at 13:17.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":178,"wgPageParseReport":{"limitreport":{"cputime":"0.028","walltime":"0.038","ppvisitednodes":{"value":351,"limit":1000000},"postexpandincludesize":{"value":8542,"limit":2097152},"templateargumentsize":{"value":5287,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   14.569      1 -total"," 65.87%    9.596     42 Template:Dataform_plugins_list_table_row"," 19.49%    2.840      1 Template:Dataform"]},"cachereport":{"timestamp":"20260823020309","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

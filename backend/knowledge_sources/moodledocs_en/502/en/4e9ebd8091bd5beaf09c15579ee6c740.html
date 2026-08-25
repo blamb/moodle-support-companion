@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>External database enrolment - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"81c31a3d1a9de61f3cd0cb26","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"External_database_enrolment","wgTitle":"External database enrolment","wgCurRevisionId":151276,"wgRevisionId":151276,"wgArticleId":2617,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Enrolment"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"External_database_enrolment","wgRelevantArticleId":2617,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/External_database_enrolment">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-External_database_enrolment rootpage-External_database_enrolment layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhknq6ov"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhknq6ov" id="igdhknq6ov">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=External+database+enrolment" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/External_database_enrolment">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/External_database_enrolment">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/External_database_enrolment">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="4e9ebd8091bd5beaf09c15579ee6c740.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:External_database_enrolment" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=External_database_enrolment&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=External_database_enrolment&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">External database enrolment</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a>  ► <a href="d69f24af24539c9e8b59f1589f5750ef.html" title="Enrolments">Enrolments</a>  ►  <a class="mw-selflink selflink">External database enrolment</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="d69f24af24539c9e8b59f1589f5750ef.html" title="Enrolments">Enrolments</a></div>	
+<div class="content">
+<ul><li><a href="4c690970b52898313d12a0f35fddc97c.html" title="Enrolment plugins">Enrolment plugins</a></li>
+<li><a href="619fda231557b649532577d9654676d9.html" title="Manual enrolment">Manual enrolment</a></li>
+<li><a href="b76b9d7c78ded6ea2d436d2819d2de8b.html" title="Self enrolment">Self enrolment</a></li>
+<li><a href="d258e934a15f4e04f5589d5687990d4e.html" title="Cohort sync">Cohort sync</a></li>
+<li><a href="1a4f06a61b500c93fd3cdbab68cc958e.html" class="mw-redirect" title="Course meta link">Course meta link</a></li>
+<li><a href="19a0135e306acc84d0d05d9bc7536423.html" title="Guest access">Guest access</a></li>
+<li><a href="788864c41c282bfce7c45419228174a5.html" title="Category enrolments">Category enrolments</a></li>
+<li><a class="mw-selflink selflink">External database</a></li>
+<li><a href="5a08887b848b18627167cc641d17d730.html" title="Enrolment on payment">Enrolment on payment</a></li>
+<li><a href="b4bc5c015846d2eb4fe076f976569a53.html" title="Flat file">Flat file</a></li>
+<li><a href="6a86c8f6130fe570dffa74e60f4162b1.html" title="IMS Enterprise">IMS Enterprise</a></li>
+<li><a href="eb413066979c0b05cf833e12371b4660.html" title="LDAP enrolment">LDAP enrolment</a></li>
+<li><a href="16fa70b0a2c93446b02bb1db1bd08167.html" title="PayPal enrolment">PayPal enrolment</a></li>
+<li><a href="30c3436397b962d0fd358eca0c04c846.html" title="Publish as LTI tool">Publish as LTI tool</a></li>
+<li><a href="21d02e3bdec237c416f5997b85e4d6ac.html" title="Enrolment FAQ">Enrolment FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Using_an_external_database_to_control_enrolments"><span class="tocnumber">1</span> <span class="toctext">Using an external database to control enrolments</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Enrolment_and_unenrolment"><span class="tocnumber">2</span> <span class="toctext">Enrolment and unenrolment</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Hidden_courses"><span class="tocnumber">3</span> <span class="toctext">Hidden courses</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Enrolment_and_roles"><span class="tocnumber">4</span> <span class="toctext">Enrolment and roles</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Unenrolment"><span class="tocnumber">5</span> <span class="toctext">Unenrolment</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Creating_courses"><span class="tocnumber">6</span> <span class="toctext">Creating courses</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Synchronising_external_database_enrolments"><span class="tocnumber">7</span> <span class="toctext">Synchronising external database enrolments</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Scheduled_task"><span class="tocnumber">7.1</span> <span class="toctext">Scheduled task</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#User_accounts"><span class="tocnumber">7.2</span> <span class="toctext">User accounts</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Setting_up_enrolment_sync_(How_to)"><span class="tocnumber">8</span> <span class="toctext">Setting up enrolment sync (How to)</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Field_Mapping_Example"><span class="tocnumber">9</span> <span class="toctext">Field Mapping Example</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Potential_gotchas"><span class="tocnumber">10</span> <span class="toctext">Potential gotchas</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Errors_and_diagnostics"><span class="tocnumber">11</span> <span class="toctext">Errors and diagnostics</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#See_also"><span class="tocnumber">12</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Using_an_external_database_to_control_enrolments">Using an external database to control enrolments</span></h2>
+<p>You may use an external database (of nearly any kind) to control your enrolments. It is assumed your external database contains a field containing a course ID, a field containing a user ID, and optionally a field containing a role. These are compared against fields that you choose in the local course, user tables, and role tables.
+</p><p>The following are the supported data sources, but note that you will need to have to compiled PHP with the appropriate options or through ODBC.
+</p>
+<ul><li>access</li>
+<li>ado</li>
+<li>mssql</li>
+<li>borland_ibase</li>
+<li>csv</li>
+<li>db2</li>
+<li>fbsql</li>
+<li>firebird</li>
+<li>ibase</li>
+<li>informix72</li>
+<li>informix</li>
+<li>mysql (deprecated, please use mysqli instead)</li>
+<li>mysqli</li>
+<li>mysqlt</li>
+<li>oci805</li>
+<li>oci8</li>
+<li>oci8po</li>
+<li>odbc</li>
+<li>odbc_mssql</li>
+<li>odbc_oracle</li>
+<li>oracle</li>
+<li>postgres64</li>
+<li>postgres7</li>
+<li>postgres</li>
+<li>proxy</li>
+<li>sqlanywhere</li>
+<li>sybase</li>
+<li>vfp</li></ul>
+<h2><span class="mw-headline" id="Enrolment_and_unenrolment">Enrolment and unenrolment</span></h2>
+<p>External database enrolment happens at the moment when a user logs into Moodle. The plugin will attempt to automatically enrol the student in all their courses according to the data in the external database and, optionally, create empty courses where they do not already exist. To check if it is working, you can log in as a student and then check that their list of courses is as you would expect. 
+</p><p>The process also unenrols users from courses if they are no longer in the database. User records are marked according to their original enrolment method. Therefore, the external database plugin can only unenrol users who were enroled by the plugin in the first place.
+</p>
+<h2><span class="mw-headline" id="Hidden_courses">Hidden courses</span></h2>
+<p>Courses that are set to "Course is not available to students" can be ignored for enrolment purposes by setting the "enrol_db_ignorehiddencourse" to <b>yes</b>.
+</p>
+<h2><span class="mw-headline" id="Enrolment_and_roles">Enrolment and roles</span></h2>
+<p>The "enrol_database | defaultrole" setting in the plugin settings page specifies the role that the user will take when they are added to the course. The default setting will set them to the course default setting (initially "student"). However, you can specify a field in the external table (specified in the "enrol_database | remoterolefield" setting) that contains the short name or id for the user's role. This could, for example, be used to enrol both students and teachers into courses using a suitably configured database.
+</p>
+<h2><span class="mw-headline" id="Unenrolment">Unenrolment</span></h2>
+<p>The  External unenrol action ("enrol_database | unenrolaction") setting in the plugin settings page defines what action should be taken when a user enrolment disappears from external enrolment source. Each setting does the following:
+</p>
+<ol><li><b>"Unenrol user from course"</b> When the user disappears from the external source, the enrolment is completely removed and all the roles removed. This means some user data and settings are purged from course during course unenrolment (that usually include grades, activity attempts, etc.)</li>
+<li><b>"Keep user enrolled"</b> When the user disappears from the external source, the enrolment is kept as is, and the user is still able to enter the course and perform activities, access resources, etc. It's a "do nothing" option.</li>
+<li><b>"Disable course enrolment"</b> When the user disappears from the external source, user enrolment is suspended (the user can't access the course, but user data and settings are kept), and roles are kept as is. You might use this because in some cases the user needs a role with some capability to be visible in UI - such has in gradebook, assignments, etc.</li>
+<li><b>"Disable course enrolment and remove roles"</b> When the user disappears from the external source, the enrolment is suspended and roles assigned by enrol instance are removed. Please note that user may "disappear" from gradebook and other areas.</li></ol>
+<h2><span class="mw-headline" id="Creating_courses">Creating courses</span></h2>
+<p>Optionally courses that do not exist in the Moodle site can be created.
+</p><p>You can additionally specify the Category into which the new course will be placed, in the <b>New course category id field</b>. The data in this field must be the id of a currently existing category; it will not create a new category. The id number is number assigned by Moodle in the database when the category is created (e.g. mdl_course_categories.id). 
+</p>
+<ul><li>Do not confuse this <i>category id</i> with the new custom <i>category id number</i> field that you can manually assign to a category. (See <a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/MDL-28518">MDL-28518</a> and <a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/MDL-31845">MDL-31845</a>).</li>
+<li>Leaving the category id data empty means that a course will be assigned to the default category.</li>
+<li>If you assign data to categories that do  not exist already in Moodle, the courses will not be created.</li></ul>
+<p><b>Default new course category</b> is the category to which courses will be assigned and created in, unless you set up and so indicate in the data field of the "New course category id field."
+</p><p>You may also specify a <b>New course template</b>: a "template" course from which the new course will be copied. The data for this field should be the <i>shortname</i> of the template course.
+</p><p>In Moodle 4.5 onwards, you can set a new course start and end date in <i>Site administration &gt; Plugins &gt; External database</i>. If dates are not set, the course start date will be set to the current date and the course end date will be set according to the default course duration.
+</p>
+<h2><span class="mw-headline" id="Synchronising_external_database_enrolments">Synchronising external database enrolments</span></h2>
+<h3><span class="mw-headline" id="Scheduled_task">Scheduled task</span></h3>
+<p>A scheduled task called "Synchronise external database enrolments task" synchronises all user enrolments at once - both adding and removing user enrolments (and creating courses if specified) (<a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/MDL-59986">MDL-59986</a>). The settings for this are in <i>Site administration &gt; Server &gt; Tasks &gt; Scheduled tasks</i>. You should make sure that this script is enabled and set to run as often as you need to perform the enrolments. By default it is disabled and set to run only once a day.
+</p><p>(Note: a deprecated script had been provided from Moodle 3.6 to 3.10 to use in case of issues with the Scheduled task added to Moodle 3.6. <a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/MDL-63266">This has been removed as of Moodle 3.11</a>).
+</p>
+<h3><span class="mw-headline" id="User_accounts">User accounts</span></h3>
+<p>This is a reminder that you need to make sure all the users present in the external enrolments are already have accounts created in Moodle, because users not existing in Moodle can't be enrolled in a course. If you are using external authentication plugins (db, ldap, etc.) you can use the scripts provided by those plugins to synchronise your users before running this script.
+</p>
+<h2><span id="Setting_up_enrolment_sync_.28How_to.29"></span><span class="mw-headline" id="Setting_up_enrolment_sync_(How_to)">Setting up enrolment sync (How to)</span></h2>
+<p>You will need to perform (as a minimum) the following steps to enable external database enrolment - only a single table is required in the database which contains a record for every user/course combination. If the table is large it is a good idea to make sure appropriate indexes have been created:
+</p>
+<ul><li>Use an existing database or create a new one. Use an existing table or create a new one with the following minimum fields.
+<ol><li>A unique course identifier to match one of the following fields.
+<ul><li>the "idnumber" field in Moodle's course table (varchar 100), which is manually specified as the "Course ID number" when editing a course's settings</li>
+<li>the "shortname" field in Moodle's course table (varchar 255), which is manually specified as the "Course short name" when editing a course's settings</li>
+<li>the "id" field in Moodle's course table (int 10), which is based on course creation order</li></ul></li>
+<li>A unique user identifier to match one of the following fields.
+<ul><li>the "idnumber" field in Moodle's user table (varchar 255), which is manually specified as the "ID number" when editing a user's profile</li>
+<li>the "username" field in Moodle's user table (varchar 100), which is manually specified as the "Username" when editing a user's profile</li>
+<li>the "email" field in Moodle's user table (varchar 100), which is manually specified as the "Email address" when editing a user's profile</li>
+<li>the "id" field in Moodle's user table (int 10), which is based on user creation order</li></ul></li>
+<li>(optional) A unique role identifier to match one of the following fields.
+<ul><li>the "shortname" field in Moodle's role table (varchar 100), for example editingteacher, coursecreator, student, ...</li>
+<li>the "name" field in Moodle's role table (varchar 255), for example Teacher, Course creator, Student, ...</li>
+<li>the "id" field in Moodle's role table (int 10), which is based on initial installation and new role creation order</li></ul></li></ol></li>
+<li>Populate the database table. Each user/course combination to have a record in the table.</li>
+<li>In Moodle, go to <i>Site administration &gt; Plugins &gt; Enrolments &gt; Manage enrol plugins</i>, find External Database in the list, enable it (click the closed-eye icon) and click Settings.</li>
+<li>In the top panel, select the database type (make sure you have the necessary configuration in PHP for that type) and then supply the information to connect to the database.</li>
+<li>The middle panel creates the mapping between Moodle and the external database. The first three settings are for the local (Moodle) field names and the last three for the remote (external database) settings. They are in the same order.
+<ul><li>enrol_localcoursefield / enrol_remotecoursefield - in Moodle the name of the field in the course settings the uniquely identifies the course (e.g., idnumber). In the external database the name of the matching field.</li>
+<li>enrol_localuserfield / enrol_remoteuserfield - in Moodle the name of the field in the user profile that uniquely identified the user (e.g., idnumber). In the external database the name of the matching field.</li>
+<li>enrol_db_localrolefield / enrol_db_remoterolefield - (optional) in Moodle the name of the field in the role edit page the uniquely identifies the role (e.g., shortname). In the external database the name of the matching field.</li></ul></li>
+<li>The Roles panel specifies the role that the user will get in the course if their role is not specified in the external database.</li>
+<li>A new optional field enrol_database | remoteotheruserfield allows those with the role "Other users" to be added but not to be included as course participants.</li>
+<li>The final panel enables auto creation of courses.</li>
+<li>Save changes, and then tick the box to enable external database enrolment.</li></ul>
+<h2><span class="mw-headline" id="Field_Mapping_Example">Field Mapping Example</span></h2>
+<p>Choose your fields from the Moodle database:
+</p>
+<ul><li>enrol_localcoursefield:  A course identifier from mdl_course, e.g. "idnumber"</li>
+<li>enrol_localuserfield: A user identifier from mdl_user, e.g. "idnumber"</li>
+<li>enrol_localrolefield: (optional) A role identifier from mdl_role, e.g. "shortname"</li></ul>
+<p>Create a view in your external database which matches the chosen field values from Moodle:
+</p>
+<ul><li>enrol_remotecoursefield: A matching course identifier from your external database table, e.g. "course_number"</li>
+<li>enrol_remoteuserfield: A matching user identifier from your external database table, e.g. "userid"</li>
+<li>enrol_remoterolefield: (optional) A matching role identifier from your external database table, e.g. "role_name"</li></ul>
+<h2><span class="mw-headline" id="Potential_gotchas">Potential gotchas</span></h2>
+<ul><li>It almost goes without saying that the integrity of the external database is important. If data is missing from the database then there is a potential for users being unenrolled from some or all of their courses. The unenrollment process will remove them from any group assignments and also poll each module type to give the module the option of removing that user's data if appropriate (for example, however, forum posts are never deleted). It is therefore prudent that you take the utmost care to ensure that the data in the external database is correct at all times.</li>
+<li><b>Minor Security Issue</b> Consider that if the ID number field you use to identify your students is editable by the students (in their profile), then there is a potential for them changing this to the id of another valid student and gaining access to resources that they should not. (However, they will still appear as themselves, they cannot impersonate the other user or otherwise gain access to their resources.) To prevent this and similar issues, you can lock the ID number as well as other fields so the user can not change them. Do this in the <b>Data mapping</b> section of <i>Site administration &gt; Plugins &gt; Authentication &gt; External database</i>.</li></ul>
+<h2><span class="mw-headline" id="Errors_and_diagnostics">Errors and diagnostics</span></h2>
+<p>The plugin produces a number of diagnostic messages and/or errors which are recorded to the PHP error log (as defined in the php.ini file). In addition messages about courses that are in the database for the user but that do not exist in the Moodle site will only be produced if debugging is set to ALL or DEVELOPER.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=74133">Someone explain external database enrolment, please??</a> forum discussion</li>
+<li>Example Setup <a rel="nofollow" class="external autonumber" href="https://docs.moodle.org/en/Talk:External_database_enrolment#Example_External_Enrollment">[1]</a> Example Database Enrollment Setup</li>
+<li><a href="b44394139ca450747843f44c94938068.html" title="External database authentication">External database authentication</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260823010224
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.022 seconds
+Real time usage: 0.040 seconds
+Preprocessor visited node count: 50/1000000
+Post&#8208;expand include size: 657/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    8.805      1 Template:Enrolment
+100.00%    8.805      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:2617-0!canonical and timestamp 20260823010224 and revision id 151276. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=External_database_enrolment&amp;oldid=151276">https://docs.moodle.org/502/en/index.php?title=External_database_enrolment&amp;oldid=151276</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="b9b2e8a8d4193d67312bdf7dfdd9f5c5.html" title="Category:Enrolment">Enrolment</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhknq9dd">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhknqa0f"></button>
+					<div class="collapse navbar-collapse igdhknqa0f" id="igdhknqa0f">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/External_database_enrolment" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/External_database_enrolment" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=External_database_enrolment&amp;oldid=151276" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=External_database_enrolment&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Inscripción_por_BasedeDatos_externa" title="Inscripción por BasedeDatos externa – español" lang="es" hreflang="es" data-title="Inscripción por BasedeDatos externa" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Inscription_par_base_de_données_externe" title="Inscription par base de données externe – français" lang="fr" hreflang="fr" data-title="Inscription par base de données externe" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Einschreibung_über_externe_Datenbank" title="Einschreibung über externe Datenbank – Deutsch" lang="de" hreflang="de" data-title="Einschreibung über externe Datenbank" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/外部データベース登録" title="外部データベース登録 – 日本語" lang="ja" hreflang="ja" data-title="外部データベース登録" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 20 March 2025, at 15:42.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":334,"wgPageParseReport":{"limitreport":{"cputime":"0.022","walltime":"0.040","ppvisitednodes":{"value":50,"limit":1000000},"postexpandincludesize":{"value":657,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    8.805      1 Template:Enrolment","100.00%    8.805      1 -total"]},"cachereport":{"timestamp":"20260823010224","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

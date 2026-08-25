@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Development:Developer documentation - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"8076b8e29ff1841fa3baa30d","wgCanonicalNamespace":"Development","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Development:Developer_documentation","wgTitle":"Developer documentation","wgCurRevisionId":83044,"wgRevisionId":83044,"wgArticleId":1290,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Developer","Developer tools"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Development:Developer_documentation","wgRelevantArticleId":1290,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Developer_documentation","wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgInternalRedirectTargetUrl":"/502/en/Development:Developer_documentation","wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Development:Developer_documentation">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-100 ns-subject page-Development_Developer_documentation rootpage-Development_Developer_documentation layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkkzmw6b"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdkkzmw6b" id="igdkkzmw6b">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Development%3ADeveloper+documentation" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Developer_documentation">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Developer_documentation">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Developer_documentation">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-development" class="selected mw-list-item"><a href="https://docs.moodle.org/dev/Developer_documentation" title="View the subject page [c]" accesskey="c" class="selected ca-nstab-development">Development</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/dev/talk:Developer_documentation" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Development:Developer_documentation&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Development:Developer_documentation&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-namespace">Development</span><span class="mw-page-title-separator">:</span><span class="mw-page-title-main">Developer documentation</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"><span class="mw-redirectedfrom">(Redirected from <a href="https://docs.moodle.org/502/en/index.php?title=Developer_documentation&amp;redirect=no" class="mw-redirect" title="Developer documentation">Developer documentation</a>)</span></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><figure class="mw-halign-right" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:moodle-development-logo.jpg" class="mw-file-description"><img src="images_en/thumb/6/6a/moodle-development-logo.jpg/637aa658a3bf1ee6f66f246d1267d00d.jpg" decoding="async" width="400" height="99" class="mw-file-element" srcset="/502/en/images_en/thumb/6/6a/moodle-development-logo.jpg/600px-moodle-development-logo.jpg 1.5x, /502/en/images_en/thumb/6/6a/moodle-development-logo.jpg/800px-moodle-development-logo.jpg 2x" data-file-width="4045" data-file-height="1000"></a><figcaption></figcaption></figure>
+<p>This <a href="d7b6770687f1584dd7077ddf50ca2429.html" title="Category:Developer">Developer</a> section of Moodle Docs is aimed at developers who contribute to the Moodle code, plugins, themes, and so on.
+</p>
+<ul><li>If you manage a Moodle site, <a href="6e3383897522c3b976f5a423d366dca8.html" class="mw-redirect" title="Administrator documentation">Administrator documentation</a> may suit your needs better.</li>
+<li>If you teach using Moodle, try <a href="dbb27226139545e4a356d4b050cebd4d.html" class="mw-redirect" title="Teacher documentation">Teacher documentation</a>.</li></ul>
+<p><br>
+</p>
+<p class="note"><b>Note:</b> New developer documentation pages should be added to the <i>Development namespace</i> by typing <code>Development:</code> before the new page name i.e. <code>[[Development:New page name]]</code>. If you are a developer, you probably want to change your <a href="https://docs.moodle.org/502/en/Special:Preferences" title="Special:Preferences">preferences</a> to include the Development namespace in searches.<br><br>
+
+A page may be added to the Developer category by adding the template <code>{{CategoryDeveloper}}</code> to the bottom of the page. - If required, you can use <code>[[Category:Developer|Sort key]]</code> to provide a sort key other than the default page name.</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#How_Moodle_development_works"><span class="tocnumber">1</span> <span class="toctext">How Moodle development works</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Guidelines"><span class="tocnumber">2</span> <span class="toctext">Guidelines</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Documentation_for_core_components"><span class="tocnumber">3</span> <span class="toctext">Documentation for core components</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Core_components"><span class="tocnumber">3.1</span> <span class="toctext">Core components</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Core_libraries_with_a_more_specific_uses"><span class="tocnumber">3.2</span> <span class="toctext">Core libraries with a more specific uses</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Modules_included_in_the_standard_distribution"><span class="tocnumber">3.3</span> <span class="toctext">Modules included in the standard distribution</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#How_you_can_contribute"><span class="tocnumber">4</span> <span class="toctext">How you can contribute</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Make_a_new_plugin"><span class="tocnumber">4.1</span> <span class="toctext">Make a new plugin</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Change_core_code"><span class="tocnumber">4.2</span> <span class="toctext">Change core code</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Ways_to_contribute_that_do_not_involve_PHP_programming"><span class="tocnumber">4.3</span> <span class="toctext">Ways to contribute that do not involve PHP programming</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Plans_for_the_future"><span class="tocnumber">5</span> <span class="toctext">Plans for the future</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Resources"><span class="tocnumber">6</span> <span class="toctext">Resources</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Tools"><span class="tocnumber">7</span> <span class="toctext">Tools</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#IDEs"><span class="tocnumber">7.1</span> <span class="toctext">IDEs</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Browser_add-ons"><span class="tocnumber">7.2</span> <span class="toctext">Browser add-ons</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Miscellaneous"><span class="tocnumber">7.3</span> <span class="toctext">Miscellaneous</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="How_Moodle_development_works">How Moodle development works</span></h2>
+<p>The <a href="https://docs.moodle.org/dev/Overview" title="Development:Overview">overview of the Moodle development process</a> explains how Moodle development occurs and how people become Moodle developers. Current plans are listed on the <a href="fe7e5436a01b7ae59dfd805d7bb479e3.html" title="Roadmap">Roadmap</a>.
+</p><p>You can also enrol in one of the <a rel="nofollow" class="external text" href="http://dev.moodle.org/">Moodle Developer Courses</a>.
+</p>
+<h2><span class="mw-headline" id="Guidelines">Guidelines</span></h2>
+<p>The following guidelines are crucial reading for anyone wanting to contribute to the Moodle code base:
+</p>
+<ul><li><a href="https://docs.moodle.org/dev/Coding" title="Development:Coding">Coding guidelines</a> have to be followed by all Moodle developers</li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_architecture&amp;action=edit&amp;redlink=1" class="new" title="Moodle architecture (page does not exist)">Moodle architecture</a> gives an overview of how the Moodle code works</li>
+<li><a href="https://docs.moodle.org/dev/Process" title="Development:Process">Development:Process</a> explains how changes are incorporated into Moodle</li>
+<li><a href="91290a7647e4898356bc6fce96d230c5.html" class="mw-redirect" title="Tracker">Tracker</a> explains the Moodle Tracker for keeping track of bugs, issues, feature requests etc</li>
+<li><a href="https://docs.moodle.org/dev/Working_with_the_Community" title="Development:Working with the Community">Working with the Community</a> explains how to engage with the dev community and discuss changes</li>
+<li><a href="https://docs.moodle.org/dev/Unit_tests" title="Development:Unit tests">Unit tests</a> explains how to run the unit tests, and how to write new test cases.</li>
+<li><a href="https://docs.moodle.org/dev/Profiling_PHP" title="Development:Profiling PHP">Profiling PHP</a> how to analyse your code to find out why it is slow.</li>
+<li><a href="https://docs.moodle.org/dev/Fast_portable_SQL" title="Development:Fast portable SQL">Development:Fast portable SQL</a> shows SQL techniques that are fast, efficient, and known to work on all supported DBs.</li>
+<li><a href="https://docs.moodle.org/dev/Development_hints_and_tips" title="Development:Development hints and tips">Development:Development hints and tips</a> a (developing) list of general wisdom to help with your Moodle projects.</li></ul>
+<h2><span class="mw-headline" id="Documentation_for_core_components">Documentation for core components</span></h2>
+<p>This section is for documentation of specific components of the existing core Moodle code. Discussion of components that are under discussion or in development can be found in the <a href="https://docs.moodle.org/dev/Developer_notes" title="Development:Developer notes">developer notes</a> or on the <a href="fe7e5436a01b7ae59dfd805d7bb479e3.html" title="Roadmap">roadmap</a>.
+</p><p>The documents below give a general overview. For detailed function-by-function documentation, see the <a rel="nofollow" class="external text" href="http://phpdocs.moodle.org/">phpDocumentor</a> documentation that is automatically generated from the comments in the code. 
+</p><p>And don't forget that the most up-to-date and detailed description of how the code works is the code itself, and you can <a rel="nofollow" class="external text" href="http://xref.moodle.org/nav.html?index.html">browse the code online</a> using <a href="https://docs.moodle.org/dev/PHPXref" title="Development:PHPXref">PHPXref</a>.
+</p>
+<h3><span class="mw-headline" id="Core_components">Core components</span></h3>
+<ul><li><a href="https://docs.moodle.org/dev/XMLDB_Documentation" title="Development:XMLDB Documentation">Database abstraction layer</a> @ v<a href="https://docs.moodle.org/502/en/index.php?title=1.7&amp;action=edit&amp;redlink=1" class="new" title="1.7 (page does not exist)">1.7</a></li>
+<li><a href="https://docs.moodle.org/dev/Roles" title="Development:Roles">Roles and Capabilities system</a> @ v<a href="https://docs.moodle.org/502/en/index.php?title=1.7&amp;action=edit&amp;redlink=1" class="new" title="1.7 (page does not exist)">1.7</a> for controlling who can do what</li>
+<li><a href="https://docs.moodle.org/dev/lib/formslib.php" title="Development:lib/formslib.php">Forms library</a> @ v<a href="https://docs.moodle.org/502/en/index.php?title=1.8&amp;action=edit&amp;redlink=1" class="new" title="1.8 (page does not exist)">1.8</a> for creating accessible and secure HTML forms that let users edit things</li>
+<li><a href="https://docs.moodle.org/dev/Using_the_file_API" class="mw-redirect" title="Development:Using the file API">File API</a> @ v<a href="https://docs.moodle.org/502/en/index.php?title=2.0&amp;action=edit&amp;redlink=1" class="new" title="2.0 (page does not exist)">2.0</a> for managing files stored by Moodle</li>
+<li><a href="https://docs.moodle.org/dev/Database_schema_introduction" title="Development:Database schema introduction">The database schema</a></li>
+<li><a href="https://docs.moodle.org/dev/What_happens_when_you_require_config.php" title="Development:What happens when you require config.php">What happens when you require config.php</a></li>
+<li><a href="https://docs.moodle.org/dev/lib/moodlelib.php" title="Development:lib/moodlelib.php">lib/moodlelib.php</a></li>
+<li><a href="https://docs.moodle.org/dev/lib/weblib.php" title="Development:lib/weblib.php">lib/weblib.php</a> for outputting stuff</li></ul>
+<h3><span class="mw-headline" id="Core_libraries_with_a_more_specific_uses">Core libraries with a more specific uses</span></h3>
+<ul><li><a href="1c510d9e5f73fd621c3dff99f50434c6.html" class="mw-redirect" title="Authentication API">Authentication API</a></li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Cookieless_Sessions&amp;action=edit&amp;redlink=1" class="new" title="Cookieless Sessions (page does not exist)">Cookieless Sessions</a></li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Email_processing&amp;action=edit&amp;redlink=1" class="new" title="Email processing (page does not exist)">Email processing</a></li>
+<li><a href="https://docs.moodle.org/dev/Environment_checking" title="Development:Environment checking">Environment checking</a> before install, check the user's server to ensure Moodle will work there.</li>
+<li><a href="https://docs.moodle.org/dev/Groups" title="Development:Groups">Groups system</a></li>
+<li><a href="https://docs.moodle.org/dev/Grades" title="Development:Grades">Gradebook</a></li>
+<li><a href="https://docs.moodle.org/dev/Moodle_Network" class="mw-redirect" title="Development:Moodle Network">Moodle Network</a></li>
+<li><a href="269391e04e3d733c529a97bdaae5baac.html" class="mw-redirect" title="Question engine">Question engine</a></li>
+<li><a href="cd58896c583f8b52870636ffcabdc2b1.html" class="mw-redirect" title="Stats package">Stats package</a></li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=UTF-8_migration&amp;action=edit&amp;redlink=1" class="new" title="UTF-8 migration (page does not exist)">Migration to UTF-8</a> @ v<a href="https://docs.moodle.org/502/en/index.php?title=Category:Moodle_1.6&amp;action=edit&amp;redlink=1" class="new" title="Category:Moodle 1.6 (page does not exist)">1.6</a></li>
+<li><a rel="nofollow" class="external text" href="http://developer.yahoo.com/yui">YUI JavaScript library</a> - YUI was selected as the official AJAX library for Moodle.</li>
+<li><a href="https://docs.moodle.org/dev/lib/graphlib" title="Development:lib/graphlib">lib/graphlib</a></li>
+<li><a href="https://docs.moodle.org/dev/Admin_settings" title="Development:Admin settings">Admin settings</a></li></ul>
+<h3><span class="mw-headline" id="Modules_included_in_the_standard_distribution">Modules included in the standard distribution</span></h3>
+<ul><li><a href="https://docs.moodle.org/dev/Lesson_Specification" title="Development:Lesson Specification">Lesson Specification</a></li>
+<li><a href="7507b5016131fc8e2980faeeaf1c2f18.html" class="mw-redirect" title="Quiz developer docs">Quiz module</a></li>
+<li><a href="2e0866a22abed5d0af0327acd58b56d6.html" class="mw-redirect" title="SCORM schema">SCORM module 1.5 schema</a></li></ul>
+<h2><span class="mw-headline" id="How_you_can_contribute">How you can contribute</span></h2>
+<h3><span class="mw-headline" id="Make_a_new_plugin">Make a new plugin</span></h3>
+<p>The M in Moodle stands for modular, and the easiest, most maintainable way to add new functionality to Moodle is by using one of the many plugin APIs. There are many types of plugin you can write:
+</p>
+<ul><li><a href="https://docs.moodle.org/dev/Modules" title="Development:Modules">Activity modules</a>, see also <a href="https://docs.moodle.org/dev/NEWMODULE_Documentation" title="Development:NEWMODULE Documentation">Development:NEWMODULE Documentation</a> (work in progress)
+<ul><li>and <a href="https://docs.moodle.org/dev/Subplugins" title="Development:Subplugins">Sub-Plugins</a> (2.0 Onwards)</li></ul></li>
+<li><a href="https://docs.moodle.org/dev/Admin_reports" title="Development:Admin reports">Admin reports</a></li>
+<li><a href="https://docs.moodle.org/dev/Assignment_types" title="Development:Assignment types">Assignment types</a></li>
+<li><a href="https://docs.moodle.org/dev/Authentication_plugins" title="Development:Authentication plugins">Authentication plugins</a></li>
+<li><a href="https://docs.moodle.org/dev/Blocks" title="Development:Blocks">Blocks</a></li>
+<li>Content editors (2.0 onwards)</li>
+<li><a href="d7d3674e10c99817c5583f1e3bbbb967.html" title="Course formats">Course formats</a></li>
+<li><a href="https://docs.moodle.org/dev/Course_Report_Plugins" title="Development:Course Report Plugins">Course reports</a></li>
+<li>Course importers (2.0 onwards)</li>
+<li><a href="https://docs.moodle.org/dev/Database_fields" title="Development:Database fields">Database fields</a></li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Development:Database_presets&amp;action=edit&amp;redlink=1" class="new" title="Development:Database presets (page does not exist)">Database presets</a></li>
+<li><a href="https://docs.moodle.org/dev/Enrolment_plugins" title="Development:Enrolment plugins">Enrolment plugins</a></li>
+<li><a href="https://docs.moodle.org/dev/Filters" title="Development:Filters">Filters</a></li>
+<li><a href="https://docs.moodle.org/dev/Gradebook_Report_Tutorial" title="Development:Gradebook Report Tutorial">Gradebook report</a></li>
+<li><a href="https://docs.moodle.org/dev/Gradebook_export" title="Development:Gradebook export">Gradebook export</a></li>
+<li><a href="https://docs.moodle.org/dev/Gradebook_import" title="Development:Gradebook import">Gradebook import</a></li>
+<li>Message senders (2.0 onwards)</li>
+<li>Mnet services</li>
+<li>Plagiarism detection plugins (2.0 onwards)</li>
+<li><a href="https://docs.moodle.org/dev/Writing_a_Portfolio_Plugin" title="Development:Writing a Portfolio Plugin">Portfolio plugins</a> (2.0 onwards)</li>
+<li><a href="https://docs.moodle.org/dev/Question_type_plugin_how_to" title="Development:Question type plugin how to">Question types</a></li>
+<li><a href="https://docs.moodle.org/dev/Question_import/export_formats" title="Development:Question import/export formats">Question import/export formats</a></li>
+<li><a href="https://docs.moodle.org/dev/How_to_write_a_quiz_report_plugin" title="Development:How to write a quiz report plugin">Quiz reports</a></li>
+<li><a href="https://docs.moodle.org/dev/Repository_plugins" title="Development:Repository plugins">Repository plugins</a> (2.0 onwards)</li>
+<li><a href="https://docs.moodle.org/dev/Resource_types" title="Development:Resource types">Resource types</a></li>
+<li><a href="https://docs.moodle.org/502/en/Development:Search_engine_adapters" title="Development:Search engine adapters">Search engine adapters</a></li>
+<li>Themes which are different in <a href="https://docs.moodle.org/dev/Themes_2.0" title="Development:Themes 2.0">Moodle 2.0</a>, and <a href="https://docs.moodle.org/502/en/index.php?title=Theme_basics&amp;action=edit&amp;redlink=1" class="new" title="Theme basics (page does not exist)">earlier versions</a>.</li>
+<li>User profile fields</li>
+<li><a href="https://docs.moodle.org/dev/Web_services_(2.0_onwards)" title="Development:Web services (2.0 onwards)">Web services (2.0 onwards)</a></li>
+<li>Workshop allocators (2.0 onwards)</li>
+<li>Workshop forms (2.0 onwards)</li>
+<li>Workshop evaluators (2.0 onwards)</li></ul>
+<p>General information that applies to all types of plugins
+</p>
+<ul><li><a href="https://docs.moodle.org/dev/Places_to_search_for_lang_strings" title="Development:Places to search for lang strings">Where to put language strings for your plugin</a></li>
+<li><a href="https://docs.moodle.org/dev/Installing_and_upgrading_plugin_database_tables" title="Development:Installing and upgrading plugin database tables">Defining the database tables for your plugin</a></li></ul>
+<p>Please see the <a href="https://docs.moodle.org/dev/Guidelines_for_contributed_code" title="Development:Guidelines for contributed code">Guidelines for contributed code</a> for an overview of how to contribute to the Moodle code.
+</p><p>Sometimes it is not possible to write a proper plugin for what you want to do, in which case you may have to resort to using the <a href="https://docs.moodle.org/dev/Local_customisation" title="Development:Local customisation">local customisations</a> hook.
+</p>
+<h3><span class="mw-headline" id="Change_core_code">Change core code</span></h3>
+<p>Some types of change can only be made by editing the core Moodle code. Such changes are much harder to maintain than plugins. If you want your core change to be considered for inclusion in the official Moodle release, you need to create an issue in the <a href="91290a7647e4898356bc6fce96d230c5.html" class="mw-redirect" title="Tracker">tracker</a>, and attach your change as a <a href="https://docs.moodle.org/dev/How_to_create_a_patch" title="Development:How to create a patch">patch</a>. It is also a good idea to discuss your ideas in the forums first.  See <a href="https://docs.moodle.org/dev/Overview#Major_Development" title="Development:Overview">Development:Overview#Major_Development</a> for more details.
+</p>
+<h3><span class="mw-headline" id="Ways_to_contribute_that_do_not_involve_PHP_programming">Ways to contribute that do not involve PHP programming</span></h3>
+<ul><li><a href="2d157e17919850cfc4ee65707b03c26d.html" title="Themes">Create Moodle themes</a></li>
+<li><a href="782863596a4271b3717edcee291caa0f.html" title="Translation">Translate Moodle into other languages</a></li>
+<li><a href="6f636bc9d392b0bb4114b9cfe8279339.html" title="MoodleDocs:Guidelines for contributors">Help document Moodle</a></li>
+<li><a href="https://docs.moodle.org/dev/Tests" title="Development:Tests">Join the testing effort</a>, which involves <a href="91290a7647e4898356bc6fce96d230c5.html" class="mw-redirect" title="Tracker">participating in the bug tracker</a></li></ul>
+<h2><span class="mw-headline" id="Plans_for_the_future">Plans for the future</span></h2>
+<p>Ideas for and details of planned future features of Moodle are initially discussed on the forums in the <a rel="nofollow" class="external text" href="http://moodle.org/course/view.php?id=5">Using Moodle</a> course at moodle.org. That developer discussions are intermixed with user discussions in the same forums may seem strange at first but is one of the reasons for the success of Moodle. It is important that both end-users and developers discuss the future features together.
+</p><p>Once ideas begin to crystallize on the forums they can be summarized in this wiki, either as part of the <a href="fe7e5436a01b7ae59dfd805d7bb479e3.html" title="Roadmap">roadmap</a> or in the form of <a href="https://docs.moodle.org/dev/Developer_notes" title="Development:Developer notes">developer notes</a>. These pages then form the basis for further discussion in the forums.
+</p>
+<ul><li><a href="fe7e5436a01b7ae59dfd805d7bb479e3.html" title="Roadmap">Roadmap</a></li>
+<li><a href="https://docs.moodle.org/dev/Developer_notes" title="Development:Developer notes">Developer notes</a></li>
+<li><a href="e949314ab2806bf3348e6ab1600d59d1.html" class="mw-redirect" title="Student projects">Student projects</a></li>
+<li><a href="ede810d530beec74953a52fabfa70c25.html" class="mw-redirect" title="Developer meetings">Developer meetings</a></li></ul>
+<h2><span class="mw-headline" id="Resources">Resources</span></h2>
+<ul><li><a href="https://docs.moodle.org/502/en/index.php?title=Developer_FAQ&amp;action=edit&amp;redlink=1" class="new" title="Developer FAQ (page does not exist)">Developer FAQ</a> - frequently asked questions, especially useful for newcomers to Moodle</li>
+<li><a href="https://docs.moodle.org/dev/Finding_your_way_into_the_Moodle_code" title="Development:Finding your way into the Moodle code">Finding your way into the Moodle code</a> - also aimed at newcomers</li>
+<li><a rel="nofollow" class="external text" href="http://tracker.moodle.org/">Moodle tracker</a> - bug reports, feature requests and other tracked issues
+<ul><li><a href="https://docs.moodle.org/502/en/index.php?title=Firefox_tracker_search&amp;action=edit&amp;redlink=1" class="new" title="Firefox tracker search (page does not exist)">Firefox tracker search</a> - How to setup a firefox quicksearch to easily navigate to moodle bugs</li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Firefox_tracker_search&amp;action=edit&amp;redlink=1" class="new" title="Firefox tracker search (page does not exist)">Firefox Search Plugins</a> - Find tracked issues even more easily</li></ul></li>
+<li><a href="237fca25dec4c34982488a0a486f512d.html" class="mw-redirect" title="Unmerged files">Unmerged files</a> - changes on the stable branch in CVS that have not been merged to <a href="https://docs.moodle.org/502/en/index.php?title=HEAD&amp;action=edit&amp;redlink=1" class="new" title="HEAD (page does not exist)">HEAD</a></li>
+<li>Browse the code online:
+<ul><li><a rel="nofollow" class="external text" href="http://cvs.moodle.org/moodle/">the code with a complete change history from CVS</a></li>
+<li><a rel="nofollow" class="external text" href="http://xref.moodle.org/index.html">the code, with links generated by PHPXref</a></li></ul></li>
+<li><a rel="nofollow" class="external text" href="http://phpdocs.moodle.org/">Moodle PHP doc reference</a> - compiled nightly from the comment attached to each class and function in the code.</li>
+<li><a href="https://docs.moodle.org/dev/Database_Schema" title="Development:Database Schema">Database Schema</a> - for recent releases</li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/course/view.php?id=5#4">Development news and discussion</a> section of Using Moodle course
+<ul><li>especially the <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/view.php?id=55">General developer forum</a></li>
+<li><a href="797636fb4d3570c15bba19b4c9975808.html" title="Filters used on the Moodle.org forums">cool tricks you can use in the moodle.org forums</a></li></ul></li></ul>
+<h2><span class="mw-headline" id="Tools">Tools</span></h2>
+<p>Some tools people use when working on Moodle code:
+</p>
+<h3><span class="mw-headline" id="IDEs">IDEs</span></h3>
+<ul><li><a href="https://docs.moodle.org/dev/Setting_up_Netbeans" title="Development:Setting up Netbeans">Setting up NetBeans for Moodle development</a> - NetBeans for PHP is a great out-of-the-box editor.</li>
+<li><a href="https://docs.moodle.org/dev/Setting_up_Eclipse" title="Development:Setting up Eclipse">Setting up Eclipse for Moodle development</a> - Eclipse is a great editor to use for php development, if you can work out how to set it up.</li>
+<li><a href="https://docs.moodle.org/dev/vim" title="Development:vim">Setting up Vim for Moodle development</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.aptana.com/">Aptana Studio 2</a></li></ul>
+<h3><span class="mw-headline" id="Browser_add-ons">Browser add-ons</span></h3>
+<ul><li><a rel="nofollow" class="external text" href="http://getfirebug.com/">Firebug</a>, see <a href="https://docs.moodle.org/502/en/index.php?title=Firebug&amp;action=edit&amp;redlink=1" class="new" title="Firebug (page does not exist)">Firebug</a> for details.</li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Web_developer_extension&amp;action=edit&amp;redlink=1" class="new" title="Web developer extension (page does not exist)">Web developer extension</a></li>
+<li><a rel="nofollow" class="external text" href="https://addons.mozilla.org/en-US/firefox/addon/394">ViewSourceWith</a> - The main goal is to view page source with external applications, but you can do a lot of other things as well.</li></ul>
+<h3><span class="mw-headline" id="Miscellaneous">Miscellaneous</span></h3>
+<ul><li><a href="https://docs.moodle.org/dev/ctags" title="Development:ctags">Ctags</a> - Using a tags file to navigate code</li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=W3C_validation&amp;action=edit&amp;redlink=1" class="new" title="W3C validation (page does not exist)">W3C HTML validator</a> - Moodle has built in support to make using it easier.</li>
+<li><a href="https://docs.moodle.org/dev/Windows_Installer" title="Development:Windows Installer">Windows Installer</a> - Windows Installer documentation for developer.</li></ul>
+<p>See also: <a rel="nofollow" class="external text" href="http://dev.moodle.org/mod/forum/view.php?id=18">Useful Development Tools forum</a>in the <a rel="nofollow" class="external text" href="http://dev.moodle.org/course/view.php?id=2">Introduction to Moodle Programming course</a>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://moodle.org/security/">Moodle Security Announcements</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.com/partners/">Moodle Partners</a> - providers of custom Moodle development services</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260823024631
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.035 seconds
+Real time usage: 0.052 seconds
+Preprocessor visited node count: 176/1000000
+Post&#8208;expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 81/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:1290-0!canonical and timestamp 20260823024631 and revision id 83044. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Development:Developer_documentation&amp;oldid=83044">https://docs.moodle.org/502/en/index.php?title=Development:Developer_documentation&amp;oldid=83044</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="d7b6770687f1584dd7077ddf50ca2429.html" title="Category:Developer">Developer</a></li><li><a href="5a4d8e6a8164f616edfd060d1eeb50aa.html" title="Category:Developer tools">Developer tools</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdkkzmyr3">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkkzmzgr"></button>
+					<div class="collapse navbar-collapse igdkkzmzgr" id="igdkkzmzgr">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Development:Developer_documentation" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Development:Developer_documentation" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Development:Developer_documentation&amp;oldid=83044" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Development:Developer_documentation&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-ru nav-item mw-list-item"><a href="https://docs.moodle.org/ru/Development:Краткий_обзор" title="Development:Краткий обзор – русский" lang="ru" hreflang="ru" data-title="Development:Краткий обзор" data-language-autonym="Русский" data-language-local-name="русский" class="interlanguage-link-target nav-link">Русский</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Documentación_para_Desarrolladores" title="Documentación para Desarrolladores – español" lang="es" hreflang="es" data-title="Documentación para Desarrolladores" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Documentation_développeur" title="Documentation développeur – français" lang="fr" hreflang="fr" data-title="Documentation développeur" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-pt nav-item mw-list-item"><a href="https://docs.moodle.org/pt/Desenvolvimento:Documentação_para_programadores" title="Desenvolvimento:Documentação para programadores – português" lang="pt" hreflang="pt" data-title="Desenvolvimento:Documentação para programadores" data-language-autonym="Português" data-language-local-name="português" class="interlanguage-link-target nav-link">Português</a></div>
+								<div class="interlanguage-link interwiki-zh nav-item mw-list-item"><a href="https://docs.moodle.org/zh/开发者文档" title="开发者文档 – 中文" lang="zh" hreflang="zh" data-title="开发者文档" data-language-autonym="中文" data-language-local-name="中文" class="interlanguage-link-target nav-link">中文</a></div>
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/開発者ドキュメント" title="開発者ドキュメント – 日本語" lang="ja" hreflang="ja" data-title="開発者ドキュメント" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+								<div class="interlanguage-link interwiki-fi nav-item mw-list-item"><a href="https://docs.moodle.org/fi/Ohjelmoijan_opas" title="Ohjelmoijan opas – suomi" lang="fi" hreflang="fi" data-title="Ohjelmoijan opas" data-language-autonym="Suomi" data-language-local-name="suomi" class="interlanguage-link-target nav-link">Suomi</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 26 April 2011, at 21:33.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":253,"wgPageParseReport":{"limitreport":{"cputime":"0.035","walltime":"0.052","ppvisitednodes":{"value":176,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":81,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260823024631","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

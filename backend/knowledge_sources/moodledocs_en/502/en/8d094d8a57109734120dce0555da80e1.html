@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Datalynx create - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"cf42c2d79c91b70c324f1a1b","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Datalynx_create","wgTitle":"Datalynx create","wgCurRevisionId":141797,"wgRevisionId":141797,"wgArticleId":18523,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Contributed code","Datalynx module","Pages with broken file links"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Datalynx_create","wgRelevantArticleId":18523,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Datalynx_create">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Datalynx_create rootpage-Datalynx_create layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjck8xsu"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdjck8xsu" id="igdjck8xsu">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Datalynx+create" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Datalynx_create">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Datalynx_create">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Datalynx_create">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="8d094d8a57109734120dce0555da80e1.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Datalynx_create&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Datalynx_create&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Datalynx_create&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Datalynx create</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><i><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="c93eb5dfaca94ad219ccb0d560e9af0f.html" title="Managing a Moodle course">Managing a Moodle course</a> ► <a href="9e64708c111f312d3017aabec2d5768e.html" title="Activities">Activities</a> ► <a href="d2d1b08803fcd17003fb2e3d5764bf99.html" title="Datalynx module">Datalynx</a> ► <a class="mw-selflink selflink">Datalynx create</a></i></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="d2d1b08803fcd17003fb2e3d5764bf99.html" title="Datalynx module">Datalynx</a></div>	
+<div class="content">
+<div style="font-weight: bold;">Module administration</div>
+<ul><li><a href="4ac5ab8367de9439e3fb9ee22096ec59.html" title="Datalynx installation">Installation</a></li>
+<li><a href="d908f096c60b96a8517d9e548ac755c6.html" title="Datalynx global settings">Global settings</a></li>
+<li><a href="c9a63545c44fa0908cae835d7e30c759.html" title="Datalynx permissions">Permissions</a></li></ul>
+<div style="font-weight: bold;">Creating an activity</div>
+<ul><li><a class="mw-selflink selflink">Create a datalynx activity</a></li>
+<li><a href="7bfde8ceea42ae11ce7c765dea81e8f2.html" title="Datalynx settings">Activity settings</a></li></ul>
+<div style="font-weight: bold;">Manage datalynx activities</div>
+<ul><li><a href="1a6acb1922e48514c89ce4a8d60d875d.html" title="Datalynx Views">Views</a>
+<ul><li><a href="0c2a9167f17179d2f34363a0c044b04e.html" title="Datalynx View settings">General view settings</a></li>
+<li><a href="d447d5fb989fb9c7fdc82bee7f11bb10.html" title="Datalynx Grid view">Grid view</a></li>
+<li><a href="eb00f587d75707ce207201d20bd96ff7.html" title="Datalynx Tabular view">Tabular view</a></li>
+<li><a href="1f802dcb3810151ca9e856621617cf02.html" title="Datalynx PDF view">PDF view</a></li>
+<li><a href="6b812a086b792be5d3b746745ebf520a.html" title="Datalynx CSV view">CSV view</a></li></ul></li>
+<li><a href="fe9a6119d06408f654b35026b8b60579.html" title="Datalynx Fields">Fields</a></li>
+<li><a href="13c8606321e8de80250195d0d7aeacde.html" title="Datalynx Filter, Search and Sort">Filter, Search and Sort</a></li>
+<li><a href="c055908a4889763430cdb541dad43df4.html" title="Datalynx Tags">Datalynx Tags</a></li>
+<li><a href="2d718594e96c48140c706a6c4144bc4c.html" title="Datalynx Statistics">Statistics</a></li>
+<li><a href="8c93e0693afacb1d153224098b14d068.html" title="Datalynx Notifications">Notifications</a></li>
+<li><a href="42035b679d350ffb0a6e7a8a0c55c4e8.html" title="Datalynx JavaScript, CSS">JavaScript, CSS</a></li>
+<li><a href="51ffacdeab49ceb2fff206d9f4e7fbb5.html" title="Datalynx Calculations">Calculations</a></li></ul>
+<div style="font-weight: bold;">See also</div>
+<ul><li><a href="https://docs.moodle.org/502/en/index.php?title=Datalynx_FAQ&amp;action=edit&amp;redlink=1" class="new" title="Datalynx FAQ (page does not exist)">FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#General_comments"><span class="tocnumber">1</span> <span class="toctext">General comments</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Activity_goals_of_this_example_activity"><span class="tocnumber">2</span> <span class="toctext">Activity goals of this example activity</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Views"><span class="tocnumber">2.1</span> <span class="toctext">Views</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Fields"><span class="tocnumber">2.2</span> <span class="toctext">Fields</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Other_components"><span class="tocnumber">2.3</span> <span class="toctext">Other components</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Step_1:_Add_a_new_datalynx_instance_to_the_course"><span class="tocnumber">3</span> <span class="toctext">Step 1: Add a new datalynx instance to the course</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Step_2:_Define_fields"><span class="tocnumber">4</span> <span class="toctext">Step 2: Define fields</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#General_settings"><span class="tocnumber">4.1</span> <span class="toctext">General settings</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Field_attributes"><span class="tocnumber">4.2</span> <span class="toctext">Field attributes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Step_3:_Define_default_view"><span class="tocnumber">5</span> <span class="toctext">Step 3: Define default view</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Manage_-&gt;_Views"><span class="tocnumber">5.1</span> <span class="toctext">Manage -&gt; Views</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Step_4:_Define_%22New_entry_view%22"><span class="tocnumber">6</span> <span class="toctext">Step 4: Define "New entry view"</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Step_5:_Define_%22More_view%22"><span class="tocnumber">7</span> <span class="toctext">Step 5: Define "More view"</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Customize_the_%22More_view%22"><span class="tocnumber">7.1</span> <span class="toctext">Customize the "More view"</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Comments"><span class="tocnumber">7.2</span> <span class="toctext">Comments</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#One_entry_per_page"><span class="tocnumber">7.3</span> <span class="toctext">One entry per page</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="General_comments">General comments</span></h2>
+<p>This page will show you how to create a simple datalynx activity. It is a step by step guide how to setup an activity for collecting and discussing photos in a course. This is the most basic setup for a datalynx activity. There are far more complex usages of the module like certification workflows, or course programme catalogues.
+</p>
+<h2><span class="mw-headline" id="Activity_goals_of_this_example_activity">Activity goals of this example activity</span></h2>
+<p><b>Students</b> should upload photos with a shallow depth of field using manual settings of their digital camera. By chosing the right combination of aperture and shutter speed, the object in the foreground should be completely sharp, whereas the background should be blurred.
+<b>Teachers</b> should rate the activity and comment on the photo quality. 
+</p><p>In order to achieve that we need the following:
+</p>
+<h3><span class="mw-headline" id="Views">Views</span></h3>
+<ul><li>A view for creating an entry</li>
+<li>A view for seeing all entries with thumbnail images</li>
+<li>A detailed view with large images ("more view")</li></ul>
+<h3><span class="mw-headline" id="Fields">Fields</span></h3>
+<p>A field of type <b>Image</b>. And user profile fields such as Username in order to identify who has made the entry
+</p>
+<h3><span class="mw-headline" id="Other_components">Other components</span></h3>
+<ul><li>Comments tag</li>
+<li>Notifications for comments and ratings</li></ul>
+<h2><span class="mw-headline" id="Step_1:_Add_a_new_datalynx_instance_to_the_course">Step 1: Add a new datalynx instance to the course</span></h2>
+<ol><li>Click on Add an activity or resource  <figure class="mw-halign-none" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:datalynx-add.png" class="mw-file-description" title="Add a datalynx instance"><img alt="Add a datalynx instance" src="images_en/thumb/f/ff/datalynx-add.png/4fef98e2db36619c43bd2a91f9b0281e.png" decoding="async" width="500" height="169" class="mw-file-element" srcset="/502/en/images_en/thumb/f/ff/datalynx-add.png/750px-datalynx-add.png 1.5x, /502/en/images_en/f/ff/datalynx-add.png 2x" data-file-width="897" data-file-height="304"></a><figcaption>Add a datalynx instance</figcaption></figure></li>
+<li>Fill out the settings
+<ol><li>Name: The name of the acivity</li>
+<li>Introduction: Contrary to other activities, the introduction is not used to be displayed within the activity. You can use it to display additional information on the course page by  checking the box "Display description on course pageHelp with Display description on course page"</li>
+<li>Timing: For this activity not applicable, you can set availability options if you want that the activity can only be access within a certain timeframe</li>
+<li>Rating: Define how to rate the activity: Points or stars, etc.</li>
+<li>Entry settings: If it is required, that student must make one entry and not more than one entry, you can set "Required entries" and "Maximum entries" to 1.
+<ul><li>Required entries</li>
+<li>Entries required before viewing</li>
+<li>Maximum entries</li></ul></li></ol></li>
+<li>Common module setings: Leave default values</li>
+<li>Click on "Save and display"</li></ol>
+<h2><span class="mw-headline" id="Step_2:_Define_fields">Step 2: Define fields</span></h2>
+<p>After clicking on "Save and display", there are 2 possibilities to continue. 
+</p>
+<ul><li>1st possibility: Click directly on the page on "Add fields"</li>
+<li>2nd possibility: In the tabular menu click on "Manage -&gt; Fields"</li></ul>
+<figure class="mw-halign-none" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:datalynx-create-field.png" class="mw-file-description" title='Go to "Datalynx -&gt; Manage -&gt; Field"'><img alt='Go to "Datalynx -&gt; Manage -&gt; Field"' src="images_en/thumb/2/2a/datalynx-create-field.png/409f6d4b0d31f98acdcecfc9d4448b99.png" decoding="async" width="600" height="338" class="mw-file-element" srcset="/502/en/images_en/2/2a/datalynx-create-field.png 1.5x" data-file-width="604" data-file-height="340"></a><figcaption>Go to "Datalynx -&gt; Manage -&gt; Field"</figcaption></figure>
+<p>You are then in the manage area of the datalynx activity. In the field section (field tab), there is the possibility to choose a field from a dropdown menu.
+</p><p>Select the field of the type "Picture".
+</p>
+<figure class="mw-halign-none" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:datalynx-add-field-picture.png" class="mw-file-description" title="Add picture field"><img alt="Add picture field" src="images_en/thumb/4/43/datalynx-add-field-picture.png/11af019e3ef638a621eca7896fcad2bc.png" decoding="async" width="600" height="405" class="mw-file-element" srcset="/502/en/images_en/4/43/datalynx-add-field-picture.png 1.5x" data-file-width="747" data-file-height="504"></a><figcaption>Add picture field</figcaption></figure>
+<h3><span class="mw-headline" id="General_settings">General settings</span></h3>
+<p>For the general settings, you can use these settings: 
+</p>
+<ul><li>Name: Give the name an understandable name, what kind of picture users should upload</li>
+<li>Description: Optional, not really used</li>
+<li>Visible to: This defines who can view the picture. In some cases other students should not see some fields, but in this case "Everyone" is the correct choice</li>
+<li>Editable: Yes</li>
+<li>Field label: The field label is a "conditional text", that only appears when a the field is present in a view. For mor information see the documentation of fields</li>
+<li>Display dimensions: Choose a size, that would fit in a screen. Example: 400px. Only define the width, if you want, that the height as scaled in the right proportoin.</li>
+<li>Max dimensions: Set this, if you want to limit the max dimension instead of a fixed dimension as on the previous setting</li>
+<li>Size of the thumbnail view.</li></ul>
+<figure class="mw-halign-none" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:datalynx-field-picture-general.png" class="mw-file-description" title="Picture: General settings"><img alt="Picture: General settings" src="images_en/thumb/f/f8/datalynx-field-picture-general.png/e25ca43bb497317b58490b8b1ee08eb5.png" decoding="async" width="600" height="392" class="mw-file-element" srcset="/502/en/images_en/f/f8/datalynx-field-picture-general.png 1.5x" data-file-width="829" data-file-height="542"></a><figcaption>Picture: General settings</figcaption></figure>
+<h3><span class="mw-headline" id="Field_attributes">Field attributes</span></h3>
+<ul><li>Total size of uploaded files: Define a file limit. You can tell users to optimize photos in order to fulfill the file size limit.</li>
+<li>Max number of uploaded files: Choose 1 in our case, but you can also tell users to upload to variations of one photo activity.</li></ul>
+<figure class="mw-halign-none" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:datalynx-field-picture-fieldattributes.png" class="mw-file-description" title="Picture: field attributes"><img alt="Picture: field attributes" src="images_en/thumb/d/dc/datalynx-field-picture-fieldattributes.png/609556877d3cdb2aa7446e4156e1b34c.png" decoding="async" width="600" height="216" class="mw-file-element" srcset="/502/en/images_en/d/dc/datalynx-field-picture-fieldattributes.png 1.5x" data-file-width="649" data-file-height="234"></a><figcaption>Picture: field attributes</figcaption></figure>
+<h2><span class="mw-headline" id="Step_3:_Define_default_view">Step 3: Define default view</span></h2>
+<p>After creating the field(s), it is time to create the views. Let us begin with the default view. The default view is shown after clicking on the Datalynx-link in the course. In our case, the default view will be the list of all entries of the students. We want to have an overview of all the added pictures, so that is the best choice for the default view. In order to create the view follow these steps.
+</p>
+<ol><li>Go to "Manage -&gt; Views"</li>
+<li>From the dropdown select "Grid view". Grid view is the standard view. Unless there is a special reason for using another view, grid view is the best choice.</li>
+<li>View settings
+<ol><li>General view settings
+<ul><li>Name: Choose a name for the view. For this example: Photos overview</li>
+<li>Description: Leave empty</li>
+<li>Visible to: Choose roles who can see the view</li>
+<li>Filter: Leave empty. This will display max. 50 entries per page</li></ul></li>
+<li>Redirect on submit option: This setting is only for editing views. Leave default value.</li>
+<li>View template: This setting defines the general layout of the view. Usually you have a header section with a paging bar, and a link to add a new entry. The header is followed by the repeated entries. In this case each student will add an entry with a photo. The tag ##entries## is a placeholder for the entries made by the users. The ##entries## tag will be replaced with the list of the photos. Just before the ##entries## tag you can add the instructions for the students. Example "With your digital camera in manual mode, set the aperture to the lowest value possible. Select an object such as an egg, a candle,... as foreground. Focus that object and make sure, that the background has enough depth. Focus the chosen object. Post the photo by clicking on "Add new entry" in this activity. Comment on photos of the other students."</li>
+<li>Grid settings: leave default. This will generate a list of photos with one column.</li>
+<li><figure class="mw-halign-none" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:datalynx-view-entrytemplate.png" class="mw-file-description" title="View setting: Entry template"><img alt="View setting: Entry template" src="images_en/thumb/c/cf/datalynx-view-entrytemplate.png/b56dd7363ac84f426dc7593b435eb2fe.png" decoding="async" width="600" height="216" class="mw-file-element" srcset="/502/en/images_en/c/cf/datalynx-view-entrytemplate.png 1.5x" data-file-width="830" data-file-height="299"></a><figcaption>View setting: Entry template</figcaption></figure> Entry template: This defines the layout of a single entry. All the fields and other information such as the the name of the user can be defined in this area. In our case we only need the name of the user, the photo and the link to the "more view". In the "more view" tags for commenting and rating a single entry are added. In order to display the name of the user, we use the following tag: ##author:name##. This tag can be chosen from the dropdown menu "Field tags" and inserted instead of the marked text, or at the curser position. The tags ##edit## and ##delete## allow the users to edit their own entries. We select the tag ##more## from the dropdown "Field tags" as placeholder for the link to the "more view".</li>
+<li>Save the view with clicking on "Save changes". You will be redirected to the overview of all views. Currently there is only one view: The one just created.</li></ol></li></ol>
+<h3><span id="Manage_-.3E_Views"></span><span class="mw-headline" id="Manage_-&gt;_Views">Manage -&gt; Views</span></h3>
+<p>Click in the column "D" on the icon in order to make the view the Default view. Result should look like that:
+</p><p><span class="mw-default-size mw-image-border" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:datalynx-manage-views-setdefault.png" class="mw-file-description" title="Manage: Views"><img alt="Manage: Views" src="images_en/8/83/ddc85dd01f3bc719d75efe6c2377775f.png" decoding="async" width="1006" height="127" class="mw-file-element" data-file-width="1006" data-file-height="127"></a></span>
+</p>
+<h2><span id="Step_4:_Define_.22New_entry_view.22"></span><span class="mw-headline" id='Step_4:_Define_"New_entry_view"'>Step 4: Define "New entry view"</span></h2>
+<ol><li>Add another view by choosing "Grid view" from the dropdown "Add a view".</li>
+<li>Save with default settings, except the name: Add new photo.</li>
+<li>Save changes and choose the view as "Edit View": Activate the checkbox in the column "E"</li></ol>
+<p><span class="mw-default-size mw-image-border" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:datalynx-manage-editview.png" class="mw-file-description" title="Manage: Define Editview"><img alt="Manage: Define Editview" src="images_en/f/f6/5b9c65767b560cbfa61f9885a12e5a0a.png" decoding="async" width="997" height="335" class="mw-file-element" data-file-width="997" data-file-height="335"></a></span>
+</p>
+<h2><span id="Step_5:_Define_.22More_view.22"></span><span class="mw-headline" id='Step_5:_Define_"More_view"'>Step 5: Define "More view"</span></h2>
+<p>This view will be the view, where the teacher can add comments and rate the entry. In order to create the view, instead of adding a new view, this time, you duplicate the "Add a photo" view and then edit this view by clicking on the "Edit" symbol.
+</p>
+<ol><li>Duplicate the view <figure class="mw-halign-none" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:datalynx-manage-duplicate-view.png" class="mw-file-description" title="Manage: Duplicate View"><img alt="Manage: Duplicate View" src="images_en/thumb/3/3c/datalynx-manage-duplicate-view.png/20467f9a0478000f9624fe3236985590.png" decoding="async" width="600" height="86" class="mw-file-element" srcset="/502/en/images_en/3/3c/datalynx-manage-duplicate-view.png 1.5x" data-file-width="791" data-file-height="113"></a><figcaption>Manage: Duplicate View</figcaption></figure></li>
+<li>Edit the view: Click on the edit symbol</li>
+<li>Add the tags for commenting and rating using the appropriate choices in Entry template "Field tags"</li>
+<li>The "Entry template" section of the "More view" should look similar to that:</li></ol>
+<figure class="mw-halign-none" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:datalynx-manage-moreview.png" class="mw-file-description" title="Manage: More View"><img alt="Manage: More View" src="images_en/thumb/3/30/datalynx-manage-moreview.png/5dc619bae6dc8b62195c877a6e7ef3ea.png" decoding="async" width="600" height="208" class="mw-file-element" srcset="/502/en/images_en/3/30/datalynx-manage-moreview.png 1.5x" data-file-width="847" data-file-height="294"></a><figcaption>Manage: More View</figcaption></figure>
+<p>After saving the more view, activate the checkbox in the column "M" in order to make the view the "More view".
+</p>
+<h3><span id="Customize_the_.22More_view.22"></span><span class="mw-headline" id='Customize_the_"More_view"'>Customize the "More view"</span></h3>
+<p>In the "More view" or "Single entry view" we want to achieve the following:
+</p>
+<ol><li>Add possibitlity to add comments</li>
+<li>Show only one entry per page</li></ol>
+<h3><span class="mw-headline" id="Comments">Comments</span></h3>
+<p>In order make it possible to add comments, we have to add the appropriate tag in the setting "Entry template". Just put the cursor in where you want to have the comments and add the tag via the dropdown "Field tags".
+</p>
+<figure class="mw-halign-none" typeof="mw:Error mw:File"><a href="https://docs.moodle.org/502/en/index.php?title=Special:Upload&amp;wpDestFile=datalynx-addcomments.png" class="new" title="File:datalynx-addcomments.png"><span class="mw-file-element mw-broken-media" data-width="600">Add comments</span></a><figcaption>Add comments</figcaption></figure>
+<p>The result in the view:
+</p>
+<figure class="mw-halign-none" typeof="mw:Error mw:File"><a href="https://docs.moodle.org/502/en/index.php?title=Special:Upload&amp;wpDestFile=datalynx-commentsview.png" class="new" title="File:datalynx-commentsview.png"><span class="mw-file-element mw-broken-media" data-width="600">Add comments</span></a><figcaption>Add comments</figcaption></figure>
+<h3><span class="mw-headline" id="One_entry_per_page">One entry per page</span></h3>
+<ol><li>Go To "Manage -&gt; Filters"</li>
+<li>Click on "Add a filter"</li>
+<li>Name it "Single view" or any other name</li>
+<li>In the settings "Filter -&gt; Per Page" choose 1 from the Dropdown</li>
+<li>Leave default options for all other settings</li>
+<li>Click on "Save changes"</li>
+<li>Go to "Manage -&gt; Views"</li>
+<li>In the "Single view" select the filter from the dropdown</li></ol>
+<figure class="mw-default-size mw-halign-none" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:datalynx-selectfilter.png" class="mw-file-description" title="Apply a filter"><img alt="Apply a filter" src="images_en/4/4a/77f28e6661e3a6516a65b2cdba8632c6.png" decoding="async" width="643" height="331" class="mw-file-element" data-file-width="643" data-file-height="331"></a><figcaption>Apply a filter</figcaption></figure>
+<!-- 
+NewPP limit report
+Cached time: 20260823020349
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.058 seconds
+Real time usage: 0.752 seconds
+Preprocessor visited node count: 73/1000000
+Post&#8208;expand include size: 1364/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.394      1 Template:Datalynx
+100.00%    3.394      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:18523-0!canonical and timestamp 20260823020349 and revision id 141797. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Datalynx_create&amp;oldid=141797">https://docs.moodle.org/502/en/index.php?title=Datalynx_create&amp;oldid=141797</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="27cec39c9633dd48770872338440a43c.html" title="Category:Contributed code">Contributed code</a></li><li><a href="https://docs.moodle.org/502/en/index.php?title=Category:Datalynx_module&amp;action=edit&amp;redlink=1" class="new" title="Category:Datalynx module (page does not exist)">Datalynx module</a></li><li><a href="2857ebcdd13583f9ff714fc8230b3c14.html" title="Category:Pages with broken file links">Pages with broken file links</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdjck904m">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjck90ga"></button>
+					<div class="collapse navbar-collapse igdjck90ga" id="igdjck90ga">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Datalynx_create" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Datalynx_create" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Datalynx_create&amp;oldid=141797" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Datalynx_create&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 22 September 2021, at 15:47.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1301,"wgPageParseReport":{"limitreport":{"cputime":"0.058","walltime":"0.752","ppvisitednodes":{"value":73,"limit":1000000},"postexpandincludesize":{"value":1364,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    3.394      1 Template:Datalynx","100.00%    3.394      1 -total"]},"cachereport":{"timestamp":"20260823020349","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

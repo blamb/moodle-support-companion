@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Dataform capabilities - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"03d5d375cce9cb51c4420ed3","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Dataform_capabilities","wgTitle":"Dataform capabilities","wgCurRevisionId":150500,"wgRevisionId":150500,"wgArticleId":17668,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Contributed code","Dataform module"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Dataform_capabilities","wgRelevantArticleId":17668,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Dataform_capabilities">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Dataform_capabilities rootpage-Dataform_capabilities layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjblf20l"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdjblf20l" id="igdjblf20l">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Dataform+capabilities" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Dataform_capabilities">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Dataform_capabilities">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Dataform_capabilities">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="2242fb586e2c802760e98a5a0ec957bd.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Dataform_capabilities&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_capabilities&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_capabilities&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Dataform capabilities</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><i><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="c93eb5dfaca94ad219ccb0d560e9af0f.html" title="Managing a Moodle course">Managing a Moodle course</a> ► <a href="9e64708c111f312d3017aabec2d5768e.html" title="Activities">Activities</a> ► <a href="7dc44b9d10259bc60658cf60b67229bc.html" title="Dataform module">Dataform</a> </i>
+  ► <a class="mw-selflink selflink">Dataform capabilities</a><i></i></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="7dc44b9d10259bc60658cf60b67229bc.html" title="Dataform module">Dataform</a></div>	
+<div class="content">
+<ul><li><a href="ab0de103b356d940bc36729a7d6b83dc.html" title="Dataform releases">Releases</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/plugins/browse.php?list=set&amp;id=4">Downloads</a></li>
+<li><a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/CONTRIB/component/13430">Issues</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/view.php?id=8192">Discussion</a></li></ul>
+<div style="font-style: italic;font-weight: bold;">Module administration</div>
+<ul><li><a href="44241329db53ce20214e7d4f1594351d.html" title="Dataform installation">Installation</a></li>
+<li><a href="50184c980ea6c7d084515fe3ba330d8e.html" title="Dataform Plugins">Plugins and Components</a></li>
+<li><a class="mw-selflink selflink">Capabilities</a></li>
+<li><a href="59f22745fae0650c8f9a060ee700f07e.html" title="Dataform System events">System events</a></li>
+<li><a href="0f8474ba6bcac75c23b2d49c5c2f34c5.html" title="Dataform Tests">Tests</a></li></ul>
+<div style="font-style: italic;font-weight: bold;">Creating an activity</div>
+<ul><li><a href="289cc88f71f24d8e698639764aa60ff8.html" title="Dataform Overview">Overview</a></li>
+<li><a href="6a9ca9d7d66942725b40feb6b8f6d556.html" title="Dataform Activity administration">Activity administration</a></li>
+<li><a href="f648ee5661ef5fde1e2a178d856767e8.html" title="Dataform building">Building an activity</a></li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_CSS_Tips&amp;action=edit&amp;redlink=1" class="new" title="Dataform CSS Tips (page does not exist)">CSS tips and tricks</a></li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_JS_Tips&amp;action=edit&amp;redlink=1" class="new" title="Dataform JS Tips (page does not exist)">JS tips and tricks</a></li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_RSS&amp;action=edit&amp;redlink=1" class="new" title="Dataform RSS (page does not exist)">Activating RSS</a></li>
+<li><a href="ff3efb7377e2c473b83e5f84448cceb7.html" title="Dataform Workflow">Activity workflow</a></li>
+<li><a href="a973d364212f4e323cab4e7e902116e0.html" title="Dataform Grading">Grading</a></li></ul>
+<div style="font-style: italic;font-weight: bold;">Working with the activity</div>
+<ul><li><a href="1f0964fd0ec28c1594cf25f3b3ab1075.html" title="Dataform Activity navigation">Activity navigation</a></li>
+<li><a href="6b13c1349f3193411f230a4649f7e00a.html" title="Dataform Entries">Submission and display</a></li>
+<li><a href="8aa74a33373c19bf60d80dbd87a3bfbe.html" title="Dataform search sort">Search and Sort </a></li>
+<li><a href="e1d64be4b1682353da205ec83dfa13ac.html" title="Dataform Import Export">Import and Export</a></li>
+<li><a href="e938882d8a958ce4968bde30ea152c8c.html" title="Dataform Applications">Applications</a></li></ul>
+<div style="font-style: italic;font-weight: bold;">See also</div>
+<ul><li><a href="0c4c9abd93308ab00bb985fbcb6111ad.html" title="Dataform FAQ">FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p><br>
+</p><p>The list below shows the <b>Dataform capabilities</b> and their default Allow setting.
+</p><p>The View capabilities can be set in the Dataform context for all views in the activity or in a <a href="https://docs.moodle.org/502/en/index.php?title=Dataformaccess_View&amp;action=edit&amp;redlink=1" class="new" title="Dataformaccess View (page does not exist)">Dataformaccess View</a> rule for a subset of the view. 
+The Entry capabilities can be set in the Dataform context for entries in all the views or in a <a href="https://docs.moodle.org/502/en/index.php?title=Dataformaccess_Entry&amp;action=edit&amp;redlink=1" class="new" title="Dataformaccess Entry (page does not exist)">Dataformaccess Entry</a> rule for a subset of entries in a subset of the views. 
+</p>
+<table class="" style="background-color:inherit;border:0;">
+
+<tbody><tr>
+<td style="text-align:left;" colspan="9"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1"><a href="#Activity_capabilities"><span class="tocnumber">1</span> <span class="toctext">Activity capabilities</span></a></li>
+<li class="toclevel-1"><a href="#View_capabilities"><span class="tocnumber">2</span> <span class="toctext">View capabilities</span></a></li>
+<li class="toclevel-1"><a href="#Entry_capabilities"><span class="tocnumber">3</span> <span class="toctext">Entry capabilities</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Entries_before_the_activity_is_available"><span class="tocnumber">3.1</span> <span class="toctext">Entries before the activity is available</span></a></li>
+<li class="toclevel-2"><a href="#Entries_after_the_activity_is_due"><span class="tocnumber">3.2</span> <span class="toctext">Entries after the activity is due</span></a></li>
+<li class="toclevel-2"><a href="#Entries_authored_by_the_current_user"><span class="tocnumber">3.3</span> <span class="toctext">Entries authored by the current user</span></a></li>
+<li class="toclevel-2"><a href="#Entries_authored_by_members_of_the_current_user's_group"><span class="tocnumber">3.4</span> <span class="toctext">Entries authored by members of the current user's group</span></a></li>
+<li class="toclevel-2"><a href="#Entries_that_are_not_own,_group,_or_anonymous"><span class="tocnumber">3.5</span> <span class="toctext">Entries that are not own, group, or anonymous</span></a></li>
+<li class="toclevel-2"><a href="#Entries_authored_anonymously"><span class="tocnumber">3.6</span> <span class="toctext">Entries authored anonymously</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Preset_capabilities"><span class="tocnumber">4</span> <span class="toctext">Preset capabilities</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Activity_capabilities">Activity capabilities</span></h2>
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD; font-weight:bold;background-color:#F2F2F2;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">Guest</td>
+<td style="border-bottom:1px solid #DDD;">Front page</td>
+<td style="border-bottom:1px solid #DDD;">Student</td>
+<td style="border-bottom:1px solid #DDD;">Teacher</td>
+<td style="border-bottom:1px solid #DDD;">Teacher (editing)</td>
+<td style="border-bottom:1px solid #DDD;">Manager
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:addinstance&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:addinstance (page does not exist)">dataform:addinstance</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Add a new Dataform activity</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:indexview&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:indexview (page does not exist)">dataform:indexview</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">View the course's Dataform index</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:messagingview&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:messagingview (page does not exist)">dataform:messagingview</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">View the messaging options of a Dataform activity</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:managetemplates&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:managetemplates (page does not exist)">dataform:managetemplates</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Can do everything in the Dataform activity</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:manageviews&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:manageviews (page does not exist)">dataform:manageviews</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Manage Dataform views</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:managefields&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:managefields (page does not exist)">dataform:managefields</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Manage Dataform fields</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:managefilters&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:managefilters (page does not exist)">dataform:managefilters</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Manage Dataform filters</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:managefilters&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:managefilters (page does not exist)">dataform:manageaccess</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Manage Dataform access rules</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:managefilters&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:managefilters (page does not exist)">dataform:managenotifications</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Manage Dataform notification rules</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:managefilters&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:managefilters (page does not exist)">dataform:managecss</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Manage Dataform css</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:managefilters&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:managefilters (page does not exist)">dataform:managejs</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Manage Dataform js</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:managefilters&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:managefilters (page does not exist)">dataform:managejs</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Manage Dataform tools</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr>
+<td style="text-align:left;" colspan="9"><h2><span class="mw-headline" id="View_capabilities">View capabilities</span></h2>
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD; font-weight:bold;background-color:#F2F2F2;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">Guest</td>
+<td style="border-bottom:1px solid #DDD;">Front page</td>
+<td style="border-bottom:1px solid #DDD;">Student</td>
+<td style="border-bottom:1px solid #DDD;">Teacher</td>
+<td style="border-bottom:1px solid #DDD;">Teacher (editing)</td>
+<td style="border-bottom:1px solid #DDD;">Manager
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:viewaccess&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:viewaccess (page does not exist)">dataform:viewaccess</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Access a non-hidden view</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:viewaccesshidden&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:viewaccesshidden (page does not exist)">dataform:viewaccesshidden</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Access a hidden view</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:viewaccessearly&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:viewaccessearly (page does not exist)">dataform:viewaccessearly</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Access a view before activity availability</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:viewaccesslate&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:viewaccesslate (page does not exist)">dataform:viewaccesslate</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Access a view after activity is due</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:viewfilteroverride&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:viewfilteroverride (page does not exist)">dataform:viewfilteroverride</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Override view filter</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr>
+<td style="text-align:left;" colspan="9"><h2><span class="mw-headline" id="Entry_capabilities">Entry capabilities</span></h2>
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD; font-weight:bold;background-color:#F2F2F2;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">Guest</td>
+<td style="border-bottom:1px solid #DDD;">Front page</td>
+<td style="border-bottom:1px solid #DDD;">Student</td>
+<td style="border-bottom:1px solid #DDD;">Teacher</td>
+<td style="border-bottom:1px solid #DDD;">Teacher (editing)</td>
+<td style="border-bottom:1px solid #DDD;">Manager
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:manageentries&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:manageentries (page does not exist)">dataform:manageentries</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Manage entries<br><br>*Can view hidden or owner-only  fields.<br>*Can update non-editable fields.<br>*Can add more than max entries.<br>*Not conditioned by required entries.<br>*Can view others' entries in separate participants mode.<br>*Can edit entry author (via the [[EAU:edit]] pattern).<br>*Can edit entry group (via the [[EGR:edit]] pattern).</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr>
+<td style="text-align:left;" colspan="9"><h3><span class="mw-headline" id="Entries_before_the_activity_is_available">Entries before the activity is available</span></h3>
+</td></tr>
+<tr>
+<td style="text-align:left;" colspan="9">If the activity is not yet available and these permissions are not granted, the user will not be able to do the corresponding actions on any type of entry.
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD; font-weight:bold;background-color:#F2F2F2;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">Guest</td>
+<td style="border-bottom:1px solid #DDD;">Front page</td>
+<td style="border-bottom:1px solid #DDD;">Student</td>
+<td style="border-bottom:1px solid #DDD;">Teacher</td>
+<td style="border-bottom:1px solid #DDD;">Teacher (editing)</td>
+<td style="border-bottom:1px solid #DDD;">Manager
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryearlyview&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryearlyview (page does not exist)">dataform:entryearlyview</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">View entries early</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryearlyadd&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryearlyadd (page does not exist)">dataform:entryearlyadd</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Add entries early</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryearlyupdate&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryearlyupdate (page does not exist)">dataform:entryearlyupdate</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Update entries early</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryearlydelete&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryearlydelete (page does not exist)">dataform:entryearlydelete</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Delete entries early</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr>
+<td style="text-align:left;" colspan="9"><h3><span class="mw-headline" id="Entries_after_the_activity_is_due">Entries after the activity is due</span></h3>
+</td></tr>
+<tr>
+<td style="text-align:left;" colspan="9">If the activity is past due and these permissions are not granted, the user will not be able to do the corresponding actions on any type of entry.
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD; font-weight:bold;background-color:#F2F2F2;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">Guest</td>
+<td style="border-bottom:1px solid #DDD;">Front page</td>
+<td style="border-bottom:1px solid #DDD;">Student</td>
+<td style="border-bottom:1px solid #DDD;">Teacher</td>
+<td style="border-bottom:1px solid #DDD;">Teacher (editing)</td>
+<td style="border-bottom:1px solid #DDD;">Manager
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entrylateview&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entrylateview (page does not exist)">dataform:entrylateview</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">View entries late</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entrylateadd&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entrylateadd (page does not exist)">dataform:entrylateadd</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Add entries late</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entrylateupdate&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entrylateupdate (page does not exist)">dataform:entrylateupdate</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Update entries late</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entrylatedelete&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entrylatedelete (page does not exist)">dataform:entrylatedelete</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Delete entries late</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr>
+<td style="text-align:left;" colspan="9"><h3><span class="mw-headline" id="Entries_authored_by_the_current_user">Entries authored by the current user</span></h3>
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD; font-weight:bold;background-color:#F2F2F2;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">Guest</td>
+<td style="border-bottom:1px solid #DDD;">Front page</td>
+<td style="border-bottom:1px solid #DDD;">Student</td>
+<td style="border-bottom:1px solid #DDD;">Teacher</td>
+<td style="border-bottom:1px solid #DDD;">Teacher (editing)</td>
+<td style="border-bottom:1px solid #DDD;">Manager
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryownview&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryownview (page does not exist)">dataform:entryownview</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">View own entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryownexport&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryownexport (page does not exist)">dataform:entryownexport</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Export own entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryownadd&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryownadd (page does not exist)">dataform:entryownadd</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Add own entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryownupdate&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryownupdate (page does not exist)">dataform:entryownupdate</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Update own entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryowndelete&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryowndelete (page does not exist)">dataform:entryowndelete</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Delete own entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr>
+<td style="text-align:left;" colspan="9"><h3><span id="Entries_authored_by_members_of_the_current_user.27s_group"></span><span class="mw-headline" id="Entries_authored_by_members_of_the_current_user's_group">Entries authored by members of the current user's group</span></h3>
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD; font-weight:bold;background-color:#F2F2F2;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">Guest</td>
+<td style="border-bottom:1px solid #DDD;">Front page</td>
+<td style="border-bottom:1px solid #DDD;">Student</td>
+<td style="border-bottom:1px solid #DDD;">Teacher</td>
+<td style="border-bottom:1px solid #DDD;">Teacher (editing)</td>
+<td style="border-bottom:1px solid #DDD;">Manager
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entrygroupview&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entrygroupview (page does not exist)">dataform:entrygroupview</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">View group entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entrygroupexport&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entrygroupexport (page does not exist)">dataform:entrygroupexport</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Export group entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entrygroupadd&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entrygroupadd (page does not exist)">dataform:entrygroupadd</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Add group entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entrygroupupdate&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entrygroupupdate (page does not exist)">dataform:entrygroupupdate</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Update group entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entrygroupdelete&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entrygroupdelete (page does not exist)">dataform:entrygroupdelete</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Delete group entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr>
+<td style="text-align:left;" colspan="9"><h3><span id="Entries_that_are_not_own.2C_group.2C_or_anonymous"></span><span class="mw-headline" id="Entries_that_are_not_own,_group,_or_anonymous">Entries that are not own, group, or anonymous</span></h3>
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD; font-weight:bold;background-color:#F2F2F2;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">Guest</td>
+<td style="border-bottom:1px solid #DDD;">Front page</td>
+<td style="border-bottom:1px solid #DDD;">Student</td>
+<td style="border-bottom:1px solid #DDD;">Teacher</td>
+<td style="border-bottom:1px solid #DDD;">Teacher (editing)</td>
+<td style="border-bottom:1px solid #DDD;">Manager
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryanyview&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryanyview (page does not exist)">dataform:entryanyview</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">View any entries</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryanyexport&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryanyexport (page does not exist)">dataform:entryanyexport</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Export any entries</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryanyadd&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryanyadd (page does not exist)">dataform:entryanyadd</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Add any entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryanyupdate&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryanyupdate (page does not exist)">dataform:entryanyupdate</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Update any entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryanydelete&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryanydelete (page does not exist)">dataform:entryanydelete</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Delete any entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr>
+<td style="text-align:left;" colspan="9"><h3><span class="mw-headline" id="Entries_authored_anonymously">Entries authored anonymously</span></h3>
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD; font-weight:bold;background-color:#F2F2F2;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">Guest</td>
+<td style="border-bottom:1px solid #DDD;">Front page</td>
+<td style="border-bottom:1px solid #DDD;">Student</td>
+<td style="border-bottom:1px solid #DDD;">Teacher</td>
+<td style="border-bottom:1px solid #DDD;">Teacher (editing)</td>
+<td style="border-bottom:1px solid #DDD;">Manager
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryanonymousview&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryanonymousview (page does not exist)">dataform:entryanonymousview</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">View anonymous entries</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryanonymousexport&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryanonymousexport (page does not exist)">dataform:entryanonymousexport</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Export anonymous entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryanonymousadd&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryanonymousadd (page does not exist)">dataform:entryanonymousadd</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Add anonymous entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryanonymousupdate&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryanonymousupdate (page does not exist)">dataform:entryanonymousupdate</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Update anonymous entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:entryanonymousdelete&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:entryanonymousdelete (page does not exist)">dataform:entryanonymousdelete</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Delete anonymous entries</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr>
+<td style="text-align:left;" colspan="9"><h2><span class="mw-headline" id="Preset_capabilities">Preset capabilities</span></h2>
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD; font-weight:bold;background-color:#F2F2F2;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">Guest</td>
+<td style="border-bottom:1px solid #DDD;">Front page</td>
+<td style="border-bottom:1px solid #DDD;">Student</td>
+<td style="border-bottom:1px solid #DDD;">Teacher</td>
+<td style="border-bottom:1px solid #DDD;">Teacher (editing)</td>
+<td style="border-bottom:1px solid #DDD;">Manager
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:managepresets&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:managepresets (page does not exist)">dataform:managepresets</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">Manage presets</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr>
+<tr style="vertical-align:top;text-align:center;border-bottom:1px solid #DDD;">
+<td style="text-align:left;border-bottom:1px solid #DDD;"><a href="https://docs.moodle.org/502/en/index.php?title=Capabilities/mod/dataform:presetsviewall&amp;action=edit&amp;redlink=1" class="new" title="Capabilities/mod/dataform:presetsviewall (page does not exist)">dataform:presetsviewall</a></td>
+<td style="text-align:left;border-bottom:1px solid #DDD;">View all presets</td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;"></td>
+<td style="border-bottom:1px solid #DDD;">V</td>
+<td style="border-bottom:1px solid #DDD;">V
+</td></tr></tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20260823020253
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.066 seconds
+Real time usage: 0.137 seconds
+Preprocessor visited node count: 1189/1000000
+Post&#8208;expand include size: 34505/2097152 bytes
+Template argument size: 6867/2097152 bytes
+Highest expansion depth: 4/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 24/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   25.503      1 -total
+ 59.65%   15.212     58 Template:Dataform_capability_table_row
+ 14.55%    3.712      1 Template:Dataform
+ 10.20%    2.602      1 Template:Dataform_Docs_Note_1
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:17668-0!canonical and timestamp 20260823020253 and revision id 150500. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Dataform_capabilities&amp;oldid=150500">https://docs.moodle.org/502/en/index.php?title=Dataform_capabilities&amp;oldid=150500</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="27cec39c9633dd48770872338440a43c.html" title="Category:Contributed code">Contributed code</a></li><li><a href="34af9ecf8e2507d482d83d261a9d1fcd.html" title="Category:Dataform module">Dataform module</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdjblfwow">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjblfxc6"></button>
+					<div class="collapse navbar-collapse igdjblfxc6" id="igdjblfxc6">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Dataform_capabilities" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Dataform_capabilities" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_capabilities&amp;oldid=150500" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dataform_capabilities&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 12 December 2024, at 16:07.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":599,"wgPageParseReport":{"limitreport":{"cputime":"0.066","walltime":"0.137","ppvisitednodes":{"value":1189,"limit":1000000},"postexpandincludesize":{"value":34505,"limit":2097152},"templateargumentsize":{"value":6867,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":24,"limit":5000000},"timingprofile":["100.00%   25.503      1 -total"," 59.65%   15.212     58 Template:Dataform_capability_table_row"," 14.55%    3.712      1 Template:Dataform"," 10.20%    2.602      1 Template:Dataform_Docs_Note_1"]},"cachereport":{"timestamp":"20260823020253","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Session Booking - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"e65ddd778b0b24ca93dcfc95","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Session_Booking","wgTitle":"Session Booking","wgCurRevisionId":150837,"wgRevisionId":150837,"wgArticleId":23809,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Activity modules","Plugin"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Session_Booking","wgRelevantArticleId":23809,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"ev-youtube-config":{"class":"embedvideo-player","loading":"lazy","frameborder":0,"allow":"accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; autoplay","modestbranding":1,"allowfullscreen":"true","frameBorder":0,"width":640,"height":360},"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.embedVideo.styles":"ready","ext.pygments":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.embedVideo.consent","ext.pygments.view","mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="593ae70845242c812b361a340a53fb46.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.pygments%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Session_Booking">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Session_Booking rootpage-Session_Booking layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdixyovt6"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdixyovt6" id="igdixyovt6">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Session+Booking" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Session_Booking">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Session_Booking">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Session_Booking">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="37e392f9f01469a1bf81c31090fa2dd9.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Session_Booking&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Session_Booking&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Session_Booking&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Session Booking</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="c93eb5dfaca94ad219ccb0d560e9af0f.html" title="Managing a Moodle course">Managing a Moodle course</a> ► <a href="9e64708c111f312d3017aabec2d5768e.html" title="Activities">Activities</a> ► <a class="mw-selflink selflink">Session Booking</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="9e64708c111f312d3017aabec2d5768e.html" title="Activities">Activities</a></div>	
+<div class="content">
+<ul><li><a href="2e572f8af8e9977ac2f071a874b1c5d6.html" title="Managing activities">Managing activities</a></li>
+<li><a href="415fb378e4e756673bec385b1c753a70.html" title="Assignment activity">Assignment</a></li>
+<li><a href="ce0854b5c0d615fcea764b3014ce0792.html" title="BigBlueButton">BigBlueButton</a></li>
+<li><a href="1f5a85a0c22709a332e911bd69aea223.html" title="Choice activity">Choice</a></li>
+<li><a href="e6c5e5ff24b98297489334bb37ad89dc.html" title="Database activity">Database</a></li>
+<li><a href="49046a3b50ba94cf342979001c0cfa11.html" title="Feedback activity">Feedback</a></li>
+<li><a href="357f18b8c8759a4f741623e5aa33ccc5.html" title="Forum activity">Forum</a></li>
+<li><a href="34b63855888eacc3a98a8468d1733c52.html" title="Glossary activity">Glossary</a></li>
+<li><a href="f3a82c9d2fb489ff931f77bf2d42fdad.html" title="H5P activity">H5P</a></li>
+<li><a href="1694ad724c0a61e0739db5eb232024fd.html" title="Lesson activity">Lesson</a></li>
+<li><a href="97fc1b57eb88e06b7dfb6bae6fdfb913.html" title="LTI External tool activity">LTI External tool</a></li>
+<li><a href="feae80e9eb8969981916e1967bac65cc.html" title="Quiz activity">Quiz</a></li>
+<li><a href="8adedfce89ac011b6388b084235bd62c.html" title="SCORM activity">SCORM</a></li>
+<li><a href="3128191977db20924799d6ae20b35c19.html" title="Wiki activity">Wiki</a></li>
+<li><a href="94244b51e7ab9d8b46a0fea3607c9023.html" title="Workshop activity">Workshop</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<div class="sideblock">
+<table class="infobox">
+
+<tbody><tr>
+<th><b><a class="mw-selflink selflink">Session Booking</a></b>
+</th></tr>
+<tr>
+<td>Type
+</td>
+<td>General plugins (Local)
+</td></tr>
+<tr>
+<td>Set
+</td>
+<td>N/A
+</td></tr>
+<tr>
+<td>Downloads
+</td>
+<td><a rel="nofollow" class="external free" href="https://github.com/bavirtual/session-booking">https://github.com/bavirtual/session-booking</a>
+</td></tr>
+<tr>
+<td>Issues
+</td>
+<td><a rel="nofollow" class="external free" href="https://github.com/bavirtual/session-booking/issues">https://github.com/bavirtual/session-booking/issues</a>
+</td></tr>
+<tr>
+<td>Discussion
+</td>
+<td><a rel="nofollow" class="external free" href="https://github.com/bavirtual/session-booking/wiki">https://github.com/bavirtual/session-booking/wiki</a>
+</td></tr>
+<tr>
+<td>Maintainer(s)
+</td>
+<td><a href="https://docs.moodle.org/502/en/index.php?title=User:Mustafa_Hajjar&amp;action=edit&amp;redlink=1" class="new"><bdi>Mustafa Hajjar</bdi></a>
+</td></tr>
+</tbody></table>
+</div>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#What_is_Session_Booking?"><span class="tocnumber">1</span> <span class="toctext">What is Session Booking?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Installation"><span class="tocnumber">2</span> <span class="toctext">Installation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Dependencies"><span class="tocnumber">2.1</span> <span class="toctext">Dependencies</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Moodle_plugins_install"><span class="tocnumber">2.2</span> <span class="toctext">Moodle plugins install</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#CLI_install"><span class="tocnumber">2.3</span> <span class="toctext">CLI install</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Setup"><span class="tocnumber">3</span> <span class="toctext">Setup</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Plugin_settings"><span class="tocnumber">3.1</span> <span class="toctext">Plugin settings</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Course_settings"><span class="tocnumber">3.2</span> <span class="toctext">Course settings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Capabilities"><span class="tocnumber">4</span> <span class="toctext">Capabilities</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Features"><span class="tocnumber">5</span> <span class="toctext">Features</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Availability_posting"><span class="tocnumber">6</span> <span class="toctext">Availability posting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Posting"><span class="tocnumber">6.1</span> <span class="toctext">Posting</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Copy/Paste"><span class="tocnumber">6.2</span> <span class="toctext">Copy/Paste</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Clear"><span class="tocnumber">6.3</span> <span class="toctext">Clear</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#All_students_view"><span class="tocnumber">6.4</span> <span class="toctext">All students view</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Pilot_logbook"><span class="tocnumber">7</span> <span class="toctext">Pilot logbook</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Booking_sessions"><span class="tocnumber">8</span> <span class="toctext">Booking sessions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Booking_a_session"><span class="tocnumber">8.1</span> <span class="toctext">Booking a session</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Grading_and_feedback"><span class="tocnumber">8.2</span> <span class="toctext">Grading and feedback</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Instructor_dashboard"><span class="tocnumber">8.3</span> <span class="toctext">Instructor dashboard</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Logbook_entry"><span class="tocnumber">8.4</span> <span class="toctext">Logbook entry</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Relevant_information"><span class="tocnumber">8.5</span> <span class="toctext">Relevant information</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#Calendars_integration"><span class="tocnumber">9</span> <span class="toctext">Calendars integration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-24"><a href="#Google_calendar"><span class="tocnumber">9.1</span> <span class="toctext">Google calendar</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Outlook_Live_calendar"><span class="tocnumber">9.2</span> <span class="toctext">Outlook Live calendar</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#iCal_calendar"><span class="tocnumber">9.3</span> <span class="toctext">iCal calendar</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="#Skillset_evaluation_&amp;_graduation"><span class="tocnumber">10</span> <span class="toctext">Skillset evaluation &amp; graduation</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#Advanced_configurations"><span class="tocnumber">11</span> <span class="toctext">Advanced configurations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-29"><a href="#Data_integration"><span class="tocnumber">11.1</span> <span class="toctext">Data integration</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Email_signature"><span class="tocnumber">11.2</span> <span class="toctext">Email signature</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#Notifications"><span class="tocnumber">11.3</span> <span class="toctext">Notifications</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="#Optional_user_profile_fields"><span class="tocnumber">12</span> <span class="toctext">Optional user profile fields</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#FAQ"><span class="tocnumber">13</span> <span class="toctext">FAQ</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="#How_to_report_a_bug"><span class="tocnumber">14</span> <span class="toctext">How to report a bug</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="#Feature_ideas_and_requests"><span class="tocnumber">15</span> <span class="toctext">Feature ideas and requests</span></a></li>
+</ul>
+</div>
+
+<h2><span id="What_is_Session_Booking.3F"></span><span class="mw-headline" id="What_is_Session_Booking?">What is Session Booking?</span></h2>
+<p>Session Booking is a plugin that allows aviation training organizations (ATO) manage instructor-led training sessions. The plugin allows student pilots to post their availability for instructor-led sessions, and instructors to book sessions against students availability. It provides a workflow that starts with students posting availability time slots, instructors booking against student posted time slots, and finally instructors grading assignments associated with joint sessions. 
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:workflow.png" class="mw-file-description" title="Session booking workflow"><img alt="Session booking workflow" src="images_en/thumb/b/b5/workflow.png/4ac5530a72368f77e68103d1e49549dc.png" decoding="async" width="800" height="503" class="mw-file-element" srcset="/502/en/images_en/thumb/b/b5/workflow.png/1200px-workflow.png 1.5x, /502/en/images_en/thumb/b/b5/workflow.png/1600px-workflow.png 2x" data-file-width="1628" data-file-height="1024"></a><figcaption>Session booking workflow</figcaption></figure>
+<p><br>
+</p><p>The plugin also allows course managers in assigning students to specific instructors, and monitor instructor participation in instructor-led sessions. In addition, student sessions are prioritized according to students activity, whereby active students that complete lesson modules for the upcoming session and and availability slot posting. Lesson module completion requirement can be configured in the course settings for the Session Booking section in course settings (Requires lesson completion).
+</p><p>The module was created and is currently maintained by <a href="https://docs.moodle.org/502/en/index.php?title=User:Mustafa_Hajjar&amp;action=edit&amp;redlink=1" class="new"><bdi>Mustafa Hajjar</bdi></a>.
+</p>
+<figure class="embedvideo" data-service="youtube" data-iframeconfig='{"src":"https://www.youtube-nocookie.com/embed/QhfHDO27kf8?autoplay=1"}' style="width:640px">
+	<div class="embedvideo-wrapper" style="height:360px"><div class="embedvideo-consent" data-show-privacy-notice="1">
+	<div class="embedvideo-overlay">
+		<div class="embedvideo-loader" role="button">
+			<div class="embedvideo-loader__fakeButton">Load video</div>
+			<div class="embedvideo-loader__footer">
+				<div class="embedvideo-loader__service">YouTube</div>
+			</div>
+		</div>
+		<div class="embedvideo-privacyNotice hidden">
+			<div class="embedvideo-privacyNotice__content">YouTube might collect personal data. <a href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank" class="embedvideo-privacyNotice__link">Privacy Policy</a></div>
+			<div class="embedvideo-privacyNotice__buttons">
+<p>				<button class="embedvideo-privacyNotice__continue">Continue</button>
+				<button class="embedvideo-privacyNotice__dismiss">Dismiss</button>
+</p>
+			</div>
+		</div>
+	</div>
+</div></div>
+</figure>
+<h2><span class="mw-headline" id="Installation">Installation</span></h2>
+<h3><span class="mw-headline" id="Dependencies">Dependencies</span></h3>
+<ul><li>The plugin requires the open source library <a rel="nofollow" class="external text" href="https://github.com/zcodemonkeyz/SessionBooking/archive/refs/heads/main.zip">InputMask-5 by Robin Herbots</a> , which is already packaged in the plugin installation process.</li></ul>
+<ul><li>The plugin requires three roles are defined to benefit from certain access restricted capability.</li></ul>
+<ol><li><b>Instructor</b>: [shortname=instructor] ARCHETYPE: <b>Teacher (non-editing)</b></li>
+<li><span class="s1"></span><b>Senior Instructor</b>: [shortname=seniorinstructor] ARCHETYPE: <b>Teacher (editing)</b></li>
+<li><span class="s1"></span><b>Examiner</b>: [shortname= examiner] ARCHETYPE: <b>Teacher (editing)</b></li>
+<li><span class="s1"></span><b>Flight Training Manager</b>: [shortname= flighttrainingmanager] ARCHETYPE: <b>Manager</b></li></ol>
+<ul><li>Course assignment activities for sessions to be booked against.</li>
+<li>If the course requires skills evaluation (configured in course setting), the last assignment is considered as the final examination or skill test / check ride.</li>
+<li>Participants enrolled as students, instructors, and examiners.</li></ul>
+<h3><span class="mw-headline" id="Moodle_plugins_install">Moodle plugins install</span></h3>
+<p>1. Download <a rel="nofollow" class="external text" href="https://github.com/bavirtual/session-booking/archive/refs/heads/main.zip">session-booking</a> zip
+</p><p>2. Site administration &gt; Plugins &gt; Install plugins
+</p><p>3. Drop or upload the zip file
+</p>
+<h3><span class="mw-headline" id="CLI_install">CLI install</span></h3>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="o">[</span>path-to-moodle<span class="o">]</span><span class="se">\l</span>ocal
+</pre></div><div class="mw-highlight mw-highlight-lang-php mw-content-ltr" dir="ltr"><pre><span></span><span class="err">$</span> <span class="nb">mkdir</span> <span class="nx">booking</span>
+</pre></div><div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>booking
+</pre></div><div class="mw-highlight mw-highlight-lang-php mw-content-ltr" dir="ltr"><pre><span></span><span class="err">$</span> <span class="nx">git</span> <span class="k">clone</span> <span class="nx">https</span><span class="o">://</span><span class="nx">github</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">bavirtual</span><span class="o">/</span><span class="nx">session</span><span class="o">-</span><span class="nx">booking</span><span class="o">.</span><span class="nx">git</span>
+</pre></div>
+<h2><span class="mw-headline" id="Setup">Setup</span></h2>
+<p>Session booking has multiple settings that can be set to configure the plugin's behavior. There are two kinds of settings for Session booking, one set that affects the plugin behavior that is only accessible to site administrators 'Plugin settings', and the other set is specific to each course and accessible to course managers 'Course settings'.
+</p>
+<h3><span class="mw-headline" id="Plugin_settings">Plugin settings</span></h3>
+<ul><li><b>Authorized Training Organization (ATO)</b>
+<ul><li>ATO name: the authorized training organization's name.</li></ul></li>
+<li><b>Availability posting</b>
+<ul><li>First session time: the starting hour for availability posting.</li>
+<li>Last session time: the ending hour for availability posting.</li>
+<li>Availability posting weeks lookahead: how many weeks ahead a student can post availability</li></ul></li></ul>
+<ul><li><b>Integrations</b>
+<ul><li>Advanced configurations: JSON format property/value list of configuration information for <a href="https://docs.moodle.org/502/en/index.php?title=external_data_source_integration&amp;action=edit&amp;redlink=1" class="new" title="external data source integration (page does not exist)">external data source integration</a>.</li></ul></li></ul>
+<figure class="embedvideo" data-service="youtube" data-iframeconfig='{"src":"https://www.youtube-nocookie.com/embed/EyTmXRgZ-E4?autoplay=1"}' style="width:640px">
+	<div class="embedvideo-wrapper" style="height:360px"><div class="embedvideo-consent" data-show-privacy-notice="1">
+	<div class="embedvideo-overlay">
+		<div class="embedvideo-loader" role="button">
+			<div class="embedvideo-loader__fakeButton">Load video</div>
+			<div class="embedvideo-loader__footer">
+				<div class="embedvideo-loader__service">YouTube</div>
+			</div>
+		</div>
+		<div class="embedvideo-privacyNotice hidden">
+			<div class="embedvideo-privacyNotice__content">YouTube might collect personal data. <a href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank" class="embedvideo-privacyNotice__link">Privacy Policy</a></div>
+			<div class="embedvideo-privacyNotice__buttons">
+<p>				<button class="embedvideo-privacyNotice__continue">Continue</button>
+				<button class="embedvideo-privacyNotice__dismiss">Dismiss</button>
+</p>
+			</div>
+		</div>
+	</div>
+</div></div>
+</figure>
+<h3><span class="mw-headline" id="Course_settings">Course settings</span></h3>
+<ul><li><b>Enable session booking</b>: a checkbox that indicates whether or not to enable 'Session booking' for the course.</li></ul>
+<ul><li><b>Training type</b>: Dual and Multi-crew type training.</li>
+<li><b>Course outcome</b>: course completion outcome or certification.</li>
+<li><b>Posting wait restriction</b>: A restriction period in days between the last conducted session and the next time a student can post availability (0 = disable restriction).</li>
+<li><b>On-hold restriction</b>: A restriction period in days after which inactive students will be automatically placed on-hold (0 = disable restriction).</li>
+<li><b>Suspension restriction</b>: A restriction period in days after which inactive students will be automatically suspended from the course (0 = disable restriction).</li>
+<li><b>Instructor session overdue notification</b>: A period in days after which inactive instructors will be automatically sent a notification (0 = disable restriction).</li>
+<li><b>Minimum slot period</b>: Minimum amount of hours required to book an availability slot (0 = disable restriction).</li>
+<li><b>Requires lesson completion</b>: Whether lesson completion is required prior to an air exercise.</li>
+<li><b>Home airport ICAO</b>: the course's home airport ICAO code.</li></ul>
+<ul><li><b>Training aircraft ICAO</b>: the course training aircraft ICAO(s).</li></ul>
+<ul><li><b>Course exercise titles</b>: allows customization of the course assignment activities (exercises) of the student progression grid column titles in the Instructor dashboard page. Each column title in a new line for each assignment activity in the course.</li>
+<li><b>Requires skills evaluation</b>: a checkbox indicating whether skills evaluation is required at the end of the course.</li>
+<li><b>Message subject &amp; Message body</b>: a congratulatory graduation message to notify course participants of a student's graduation. This can be left blank to prevent notifications from being sent. Leave blank if prevent sending notifications. For more details refer to <a class="mw-selflink-fragment" href="#Skillset_evaluation_&amp;_graduation">Skillset evaluation &amp; graduation</a></li></ul>
+<h2><span class="mw-headline" id="Capabilities">Capabilities</span></h2>
+<p>Role capability mapping should is depicted in the diagram below.  Make sure the plugin custom defined roles follow this capability map. This can be accomplished from the Site Administration &gt; Users &gt; Capability overview.  Roles and capabilities are supported since the version for Moodle 1.9. 
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Capability
+</th>
+<th>Description
+</th>
+<th>Status
+</th></tr>
+<tr>
+<td>local/booking:view
+</td>
+<td>an instructor can view session booking.
+</td>
+<td>implemented in 1.0
+</td></tr>
+<tr>
+<td>local/booking:availabilityview
+</td>
+<td>a student can post availability (add and delete).
+</td>
+<td>implemented in 1.0
+</td></tr>
+<tr>
+<td>local/booking:logbookview
+</td>
+<td>a student can view own log book entries.
+</td>
+<td>implemented in 1.0
+</td></tr>
+<tr>
+<td>local/booking:participationview
+</td>
+<td>a course manager can instructor participation in instructor-led session booking.
+</td>
+<td>implemented in 1.0
+</td></tr>
+<tr>
+<td>local/booking:studentnotification
+</td>
+<td>an instructor can send email notifications to student, including booking notifications, session cancellations.
+</td>
+<td>implemented in 1.0
+</td></tr>
+<tr>
+<td>local/booking:instructornotification
+</td>
+<td>a student can send email notifications to instructors with booked session confirmation.
+</td>
+<td>implemented in 1.0
+</td></tr></tbody></table>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:capability.png" class="mw-file-description"><img alt="Capabilities" src="images_en/thumb/d/d8/capability.png/a68b055d6622da5064775fab4897fefd.png" decoding="async" width="1000" height="478" class="mw-file-element" srcset="/502/en/images_en/thumb/d/d8/capability.png/1500px-capability.png 1.5x, /502/en/images_en/thumb/d/d8/capability.png/2000px-capability.png 2x" data-file-width="2276" data-file-height="1088"></a><figcaption>Capability</figcaption></figure>
+<p class="note">Note: a Beta User role can be defined at soft-launch with capability '/local/booking:availabilityview' while removing the capability from students during the beta period.</p>
+<h2><span class="mw-headline" id="Features">Features</span></h2>
+<figure class="embedvideo" data-service="youtube" data-iframeconfig='{"src":"https://www.youtube-nocookie.com/embed/KVYrDdsu7Sc?autoplay=1"}' style="width:640px">
+	<div class="embedvideo-wrapper" style="height:360px"><div class="embedvideo-consent" data-show-privacy-notice="1">
+	<div class="embedvideo-overlay">
+		<div class="embedvideo-loader" role="button">
+			<div class="embedvideo-loader__fakeButton">Load video</div>
+			<div class="embedvideo-loader__footer">
+				<div class="embedvideo-loader__service">YouTube</div>
+			</div>
+		</div>
+		<div class="embedvideo-privacyNotice hidden">
+			<div class="embedvideo-privacyNotice__content">YouTube might collect personal data. <a href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank" class="embedvideo-privacyNotice__link">Privacy Policy</a></div>
+			<div class="embedvideo-privacyNotice__buttons">
+<p>				<button class="embedvideo-privacyNotice__continue">Continue</button>
+				<button class="embedvideo-privacyNotice__dismiss">Dismiss</button>
+</p>
+			</div>
+		</div>
+	</div>
+</div></div>
+</figure>
+<p><br>
+The following are the highlights and key features of Session Booking:
+</p>
+<ul><li>Allows instructors to book students based on their recorded availability.</li>
+<li>Allows students to record and manage their weekly availability for sessions.</li>
+<li>Allows course managers in assigning students to instructors.</li>
+<li>Tracks instructor participation in conducting student sessions.</li>
+<li>Tracks flight data and tracks student pilot log book entries.</li>
+<li>Manages email communication between students and instructors.</li>
+<li>Provides a dashboard for instructors and course administrators to visualize student progression throughout the course.</li>
+<li>Provides a custom student prioritization mechanism for booking sessions based on student's session recency, course activity, availability posting, and lesson completion.</li>
+<li>Provides session calendar integration with Moodle, Google, and Outlook Live calendars, including (ics) standard iCal calendar file download.</li>
+<li>Provides simple course specific logbook and EASA format.</li>
+<li>Allows for Administration and flight time analysis reporting.</li>
+<li>Allows for configuration-specific integration with external data sources for PIREP, aircraft, and fleet lookup.</li>
+<li>Provides automatic notification for student inactivity warnings, placement on-hold, suspension and instructor inactivity.</li>
+<li>Provides course-specific student profile with relevant information along with administration functions to manage logbook entries, on-hold management, overdue restriction override, keep alive for inactive students placed on-hold.</li></ul>
+<h2><span class="mw-headline" id="Availability_posting">Availability posting</span></h2>
+<figure class="mw-halign-right" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:availability.png" class="mw-file-description"><img src="images_en/thumb/2/27/availability.png/f8535efb9677aab2e5bf18fad66788af.png" decoding="async" width="200" height="357" class="mw-file-element" srcset="/502/en/images_en/thumb/2/27/availability.png/300px-availability.png 1.5x, /502/en/images_en/thumb/2/27/availability.png/399px-availability.png 2x" data-file-width="442" data-file-height="790"></a><figcaption></figcaption></figure>
+<p>Students can post their availability on a weekly calendar view once a preset restriction wait period had passed after the student&rsquo;s last instructor-led session. The calendar view can be accessed from Moodle's left navigation panel under the 'My availability' link. The navigation panel can be displayed by clicking the 'hamburger' icon to toggle the navigation drawer.
+</p>
+<figure class="embedvideo" data-service="youtube" data-iframeconfig='{"src":"https://www.youtube-nocookie.com/embed/1FY07P5KAec?autoplay=1"}' style="width:640px">
+	<div class="embedvideo-wrapper" style="height:360px"><div class="embedvideo-consent" data-show-privacy-notice="1">
+	<div class="embedvideo-overlay">
+		<div class="embedvideo-loader" role="button">
+			<div class="embedvideo-loader__fakeButton">Load video</div>
+			<div class="embedvideo-loader__footer">
+				<div class="embedvideo-loader__service">YouTube</div>
+			</div>
+		</div>
+		<div class="embedvideo-privacyNotice hidden">
+			<div class="embedvideo-privacyNotice__content">YouTube might collect personal data. <a href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank" class="embedvideo-privacyNotice__link">Privacy Policy</a></div>
+			<div class="embedvideo-privacyNotice__buttons">
+<p>				<button class="embedvideo-privacyNotice__continue">Continue</button>
+				<button class="embedvideo-privacyNotice__dismiss">Dismiss</button>
+</p>
+			</div>
+		</div>
+	</div>
+</div></div>
+</figure>
+<h3><span class="mw-headline" id="Posting">Posting</span></h3>
+<p>To post availability simply click and drag on any set of contiguous time slot in the active area of the displayed week. This will result in the selected time slots turning green as shown in the diagram below. To deselect the selected slot, simply click and drag again, and the selected time slots will turn back to a white background. Once all desired time slots are selected, click the [Save] button to record marked availability posts. 
+</p>
+<h3><span id="Copy.2FPaste"></span><span class="mw-headline" id="Copy/Paste">Copy/Paste</span></h3>
+<p>Students can copy previously saved postings of a week and paste them into a different week by navigating to the week containing the desired slots, clicking on the [Copy] button, navigating to a different week (previous or next), then clicking the [Paste] button. After pasting, make sure to click the [Save] button prior to navigating away from the current week or to a different page. 
+</p>
+<h3><span class="mw-headline" id="Clear">Clear</span></h3>
+<p>To delete all postings of a specific week, simply click on the [Clear] button, which will clear all posted availability time slots. Don't forget to [Save] before navigating away from the current week or to a different page. 
+</p>
+<h3><span class="mw-headline" id="All_students_view">All students view</span></h3>
+<p>The link at the bottom of the page [<i>View everyone's availability</i>] allows students to view all posted availability for everyone in the course for that week. Also, this gives an indication of the number of booked sessions during that week.
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:availability_posting2.png" class="mw-file-description"><img alt="Availability posting" src="images_en/thumb/a/a5/availability_posting2.png/e81637f37f4c2496705903b992138e02.png" decoding="async" width="1000" height="606" class="mw-file-element" srcset="/502/en/images_en/thumb/a/a5/availability_posting2.png/1500px-availability_posting2.png 1.5x, /502/en/images_en/a/a5/availability_posting2.png 2x" data-file-width="1518" data-file-height="920"></a><figcaption>Availability posting</figcaption></figure>
+<p class="note">Note: Booking sessions is disabled for instructors when the 'Require lesson completion' is enabled in course settings and the student did not complete pending lesson modules.</p>
+<h2><span class="mw-headline" id="Pilot_logbook">Pilot logbook</span></h2>
+<p>Upon completion of an instructor-led session, the instructor adds the flight time duration, session duration, and potentially solo flight time duration when applicable. Students can access their logbook from the left navigation panel under the 'My logbook' link. The view provides a summary of the total flight times, session times, and solo flight times. For each session a more detailed log data is displayed including flight date, flight durations, aircraft type, pilot callsign, the primary and secondary pilot in command, PIREP number, and finally departure and arrival airport ICAO code. 
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:logbook.png" class="mw-file-description"><img alt="Student course logbook" src="images_en/1/16/62a203b9cb116ac2efbeee0af5c7cb8e.png" decoding="async" width="868" height="736" class="mw-file-element" data-file-width="868" data-file-height="736"></a><figcaption>Student course logbook</figcaption></figure>
+<figure class="mw-halign-none" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:logbookeasa.png" class="mw-file-description"><img alt="Student EASA logbook" src="images_en/0/00/b9b93540aa5cd4285c6fc570e301a916.png" decoding="async" width="1255" height="622" class="mw-file-element" data-file-width="1255" data-file-height="622"></a><figcaption>Student EASA logbook</figcaption></figure>
+<h2><span class="mw-headline" id="Booking_sessions">Booking sessions</span></h2>
+<p>Instructors can book against student posted availability from the second navigation menu under the 'Session booking' option. The view lists all active students, their session wait days since last session, booking &amp; grading actions, and course progression for each student. Completed and graded sessions are marked in blue, tentatively booked sessions prior to student confirmation are marked in orange, and confirmed bookings are marked in green. 
+</p>
+<h3><span class="mw-headline" id="Booking_a_session">Booking a session</span></h3>
+<figure class="embedvideo" data-service="youtube" data-iframeconfig='{"src":"https://www.youtube-nocookie.com/embed/Wci-4KeLGM8?autoplay=1"}' style="width:640px">
+	<div class="embedvideo-wrapper" style="height:360px"><div class="embedvideo-consent" data-show-privacy-notice="1">
+	<div class="embedvideo-overlay">
+		<div class="embedvideo-loader" role="button">
+			<div class="embedvideo-loader__fakeButton">Load video</div>
+			<div class="embedvideo-loader__footer">
+				<div class="embedvideo-loader__service">YouTube</div>
+			</div>
+		</div>
+		<div class="embedvideo-privacyNotice hidden">
+			<div class="embedvideo-privacyNotice__content">YouTube might collect personal data. <a href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank" class="embedvideo-privacyNotice__link">Privacy Policy</a></div>
+			<div class="embedvideo-privacyNotice__buttons">
+<p>				<button class="embedvideo-privacyNotice__continue">Continue</button>
+				<button class="embedvideo-privacyNotice__dismiss">Dismiss</button>
+</p>
+			</div>
+		</div>
+	</div>
+</div></div>
+</figure>
+<h3><span class="mw-headline" id="Grading_and_feedback">Grading and feedback</span></h3>
+<figure class="embedvideo" data-service="youtube" data-iframeconfig='{"src":"https://www.youtube-nocookie.com/embed/WRxzxqVDPTY?autoplay=1"}' style="width:640px">
+	<div class="embedvideo-wrapper" style="height:360px"><div class="embedvideo-consent" data-show-privacy-notice="1">
+	<div class="embedvideo-overlay">
+		<div class="embedvideo-loader" role="button">
+			<div class="embedvideo-loader__fakeButton">Load video</div>
+			<div class="embedvideo-loader__footer">
+				<div class="embedvideo-loader__service">YouTube</div>
+			</div>
+		</div>
+		<div class="embedvideo-privacyNotice hidden">
+			<div class="embedvideo-privacyNotice__content">YouTube might collect personal data. <a href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank" class="embedvideo-privacyNotice__link">Privacy Policy</a></div>
+			<div class="embedvideo-privacyNotice__buttons">
+<p>				<button class="embedvideo-privacyNotice__continue">Continue</button>
+				<button class="embedvideo-privacyNotice__dismiss">Dismiss</button>
+</p>
+			</div>
+		</div>
+	</div>
+</div></div>
+</figure>
+<h3><span class="mw-headline" id="Instructor_dashboard">Instructor dashboard</span></h3>
+<p>At the bottom of the 'Session booking' page, the instructor can see two sections that lists the instructors active bookings under 'My active bookings', and assigned students under 'My assigned students'. The instructor can cancel any active booking by clicking on the [Cancel] button next to the active booking, which will in turn prompt the instructor to provide a comment to the student regarding the cancellation.
+</p><p>Course managers can find an added section at the bottom that lists instructors' participation in the course, which notes the instructor role(s), last instructor-led session with a student, and the days since last conducted session.
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:session_booking2.png" class="mw-file-description"><img alt="Session Booking" src="images_en/thumb/8/88/session_booking2.png/ce0dee6fbcadacae7d80dd908f3a0c25.png" decoding="async" width="1200" height="668" class="mw-file-element" srcset="/502/en/images_en/8/88/session_booking2.png 1.5x" data-file-width="1764" data-file-height="982"></a><figcaption>Session Booking</figcaption></figure>
+<p><br>
+Inactive [Book] button indicates that the student has not completed pending lessons for the upcoming exercise (assignment). Once the student completes current and all past lessons, the [Book] button will turn active with a green background.
+</p>
+<h3><span class="mw-headline" id="Logbook_entry">Logbook entry</span></h3>
+<figure class="embedvideo" data-service="youtube" data-iframeconfig='{"src":"https://www.youtube-nocookie.com/embed/r7LLOdx7Yk8?autoplay=1"}' style="width:640px">
+	<div class="embedvideo-wrapper" style="height:360px"><div class="embedvideo-consent" data-show-privacy-notice="1">
+	<div class="embedvideo-overlay">
+		<div class="embedvideo-loader" role="button">
+			<div class="embedvideo-loader__fakeButton">Load video</div>
+			<div class="embedvideo-loader__footer">
+				<div class="embedvideo-loader__service">YouTube</div>
+			</div>
+		</div>
+		<div class="embedvideo-privacyNotice hidden">
+			<div class="embedvideo-privacyNotice__content">YouTube might collect personal data. <a href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank" class="embedvideo-privacyNotice__link">Privacy Policy</a></div>
+			<div class="embedvideo-privacyNotice__buttons">
+<p>				<button class="embedvideo-privacyNotice__continue">Continue</button>
+				<button class="embedvideo-privacyNotice__dismiss">Dismiss</button>
+</p>
+			</div>
+		</div>
+	</div>
+</div></div>
+</figure>
+<p>Instructors should add a new log book entry after each graded session to be reflected in the student's logbook. Log book entries can be added by clicking on the info icon after it is graded. Existing log book entries can be edited or deleted when clicking on an existing graded session as shown below:
+</p>
+<figure class="mw-halign-none" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:logsummary.png" class="mw-file-description"><img alt="" src="images_en/thumb/b/b0/logsummary.png/49d42eeb6159916348a90038824b76bb.png" decoding="async" width="616" height="728" class="mw-file-element" srcset="/502/en/images_en/b/b0/logsummary.png 1.5x" data-file-width="636" data-file-height="752"></a><figcaption></figcaption></figure>
+<figure class="mw-halign-none" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:newlogentry.png" class="mw-file-description"><img alt="" src="images_en/thumb/b/be/newlogentry.png/daabda1bddbaf1a0084120e98d7387cc.png" decoding="async" width="619" height="583" class="mw-file-element" srcset="/502/en/images_en/b/be/newlogentry.png 1.5x" data-file-width="730" data-file-height="688"></a><figcaption></figcaption></figure>
+<h3><span class="mw-headline" id="Relevant_information">Relevant information</span></h3>
+<figure class="mw-halign-none" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:instructordashboard.png" class="mw-file-description"><img alt="Instructor dashboard" src="images_en/thumb/2/2c/instructordashboard.png/d5d9f24f18a1adf196337eb30dc6f22a.png" decoding="async" width="1000" height="557" class="mw-file-element" srcset="/502/en/images_en/2/2c/instructordashboard.png 1.5x" data-file-width="1324" data-file-height="738"></a><figcaption>Instructor dashboard</figcaption></figure>
+<h2><span class="mw-headline" id="Calendars_integration">Calendars integration</span></h2>
+<p>Session calendar integration with Moodle, Google, and Outlook Live calendars, including (ics) standard iCal calendar file download.
+</p><p><a rel="nofollow" class="external text" href="https://moodle.bavirtual.net/mod/page/view.php?id=920">Privacy Policy for BAVirtual Session Booking</a>
+</p>
+<h3><span class="mw-headline" id="Google_calendar">Google calendar</span></h3><p>
+Requires <a rel="nofollow" class="external text" href="https://support.google.com/cloud/answer/9110914?hl=en">OAuth verification</a> by Google.</p><figure class="embedvideo" data-service="youtube" data-iframeconfig='{"src":"https://www.youtube-nocookie.com/embed/prIXeQl8i5A?autoplay=1"}' style="width:640px">
+	<div class="embedvideo-wrapper" style="height:360px"><div class="embedvideo-consent" data-show-privacy-notice="1">
+	<div class="embedvideo-overlay">
+		<div class="embedvideo-loader" role="button">
+			<div class="embedvideo-loader__fakeButton">Load video</div>
+			<div class="embedvideo-loader__footer">
+				<div class="embedvideo-loader__service">YouTube</div>
+			</div>
+		</div>
+		<div class="embedvideo-privacyNotice hidden">
+			<div class="embedvideo-privacyNotice__content">YouTube might collect personal data. <a href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank" class="embedvideo-privacyNotice__link">Privacy Policy</a></div>
+			<div class="embedvideo-privacyNotice__buttons">
+<p>				<button class="embedvideo-privacyNotice__continue">Continue</button>
+				<button class="embedvideo-privacyNotice__dismiss">Dismiss</button>
+</p>
+			</div>
+		</div>
+	</div>
+</div></div>
+</figure>
+<h3><span class="mw-headline" id="Outlook_Live_calendar">Outlook Live calendar</span></h3><p>
+Requires <a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/azure/active-directory/develop/publisher-verification-overview">OAuth verification</a> by Microsoft.</p><figure class="embedvideo" data-service="youtube" data-iframeconfig='{"src":"https://www.youtube-nocookie.com/embed/Ndv3xU39pFY?autoplay=1"}' style="width:640px">
+	<div class="embedvideo-wrapper" style="height:360px"><div class="embedvideo-consent" data-show-privacy-notice="1">
+	<div class="embedvideo-overlay">
+		<div class="embedvideo-loader" role="button">
+			<div class="embedvideo-loader__fakeButton">Load video</div>
+			<div class="embedvideo-loader__footer">
+				<div class="embedvideo-loader__service">YouTube</div>
+			</div>
+		</div>
+		<div class="embedvideo-privacyNotice hidden">
+			<div class="embedvideo-privacyNotice__content">YouTube might collect personal data. <a href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank" class="embedvideo-privacyNotice__link">Privacy Policy</a></div>
+			<div class="embedvideo-privacyNotice__buttons">
+<p>				<button class="embedvideo-privacyNotice__continue">Continue</button>
+				<button class="embedvideo-privacyNotice__dismiss">Dismiss</button>
+</p>
+			</div>
+		</div>
+	</div>
+</div></div>
+</figure>
+<h3><span class="mw-headline" id="iCal_calendar">iCal calendar</span></h3>
+<figure class="embedvideo" data-service="youtube" data-iframeconfig='{"src":"https://www.youtube-nocookie.com/embed/xWfzElWlSJc?autoplay=1"}' style="width:640px">
+	<div class="embedvideo-wrapper" style="height:360px"><div class="embedvideo-consent" data-show-privacy-notice="1">
+	<div class="embedvideo-overlay">
+		<div class="embedvideo-loader" role="button">
+			<div class="embedvideo-loader__fakeButton">Load video</div>
+			<div class="embedvideo-loader__footer">
+				<div class="embedvideo-loader__service">YouTube</div>
+			</div>
+		</div>
+		<div class="embedvideo-privacyNotice hidden">
+			<div class="embedvideo-privacyNotice__content">YouTube might collect personal data. <a href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank" class="embedvideo-privacyNotice__link">Privacy Policy</a></div>
+			<div class="embedvideo-privacyNotice__buttons">
+<p>				<button class="embedvideo-privacyNotice__continue">Continue</button>
+				<button class="embedvideo-privacyNotice__dismiss">Dismiss</button>
+</p>
+			</div>
+		</div>
+	</div>
+</div></div>
+</figure>
+<h2><span id="Skillset_evaluation_.26_graduation"></span><span class="mw-headline" id="Skillset_evaluation_&amp;_graduation">Skillset evaluation &amp; graduation</span></h2>
+<p>The plugin checks for the course assignment as the completion task, for example: final skills test or check-ride exercise. This course field allows for sending a congratulatory message to be sent to notify course participants of a student's course completion.  Under course settings Session Booking category, the congratulatory message can be customized or left blank to disable this feature.  Message text can use the fields below for customization:
+</p><p><b>{fullname}</b>: graduating student full name.
+</p><p><b>{firstname}</b>: graduating student first name.
+</p><p><b>{examinername}</b>: examiner name
+</p><p><b>{completiondate}</b>: course completion date.
+</p><p><b>{enroldate}</b>: student's course enrolment date.
+</p><p><b>{simulator}</b>: simulator used for the skill test / check ride.
+</p><p><b>{totallessons}</b>: total lessons completed by the student.
+</p><p><b>{totalsessions}</b>: total instructor-led sessions attended by the student.
+</p><p><b>{totalsessionhrs}</b>: total session courses completed by the student.
+</p><p><b>{totalflighthrs}</b>: total flight hours completed by the student.
+</p><p><b>{totaldualhrs}</b>: total dual training hours completed by the student.
+</p><p><b>{totalsolohrs}</b>: total solo hours completed by the student.
+</p><p><b>{totalmultihrs}</b>: total multi-crew hours completed by the student.
+</p><p><b>{totalcopilothrs}</b>: total copilot hours completed by the student.
+</p><p><b>{totalpicustime}</b>: total PICUS hours completed by the student.
+</p>
+<h2><span class="mw-headline" id="Advanced_configurations">Advanced configurations</span></h2>
+<p>The plugin provides the ability to read data from external databases and enables other hidden features as well through a JSON formatted string.  Hidden features include custom notifications, outgoing email signature, and ability to introduce future features.  Make sure to validate the JSON string before saving the plugin settings.  You can use an online JSON validation tool of choice (i.e. <a rel="nofollow" class="external free" href="https://jsonlint.com/">https://jsonlint.com/</a>).  Below are the different features that can be configured in the plugin. 
+</p>
+<figure class="mw-halign-none" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:moodledocs_json_format.png" class="mw-file-description"><img src="images_en/thumb/f/f6/moodledocs_json_format.png/8e789d8b71e0d28ea09f7830040ef88d.png" decoding="async" width="1247" height="451" class="mw-file-element" srcset="/502/en/images_en/thumb/f/f6/moodledocs_json_format.png/1871px-moodledocs_json_format.png 1.5x, /502/en/images_en/f/f6/moodledocs_json_format.png 2x" data-file-width="2381" data-file-height="862"></a><figcaption>Advanced configurations JSON format</figcaption></figure>
+<h3><span class="mw-headline" id="Data_integration">Data integration</span></h3>
+<p>Data integration includes lookup of pilot reports (PIREPs), aircraft, fleets, and engine-types.  The integration JSON string configuration can be toggled by the "enabled" property (0/1) and requires the string to be formatted as follows:
+</p>
+<figure class="mw-halign-none" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:moodledocs_external_data_json.png" class="mw-file-description"><img src="images_en/thumb/7/7c/moodledocs_external_data_json.png/3dd257bce5690c8f535f3e1f2f174698.png" decoding="async" width="1241" height="1025" class="mw-file-element" srcset="/502/en/images_en/thumb/7/7c/moodledocs_external_data_json.png/1862px-moodledocs_external_data_json.png 1.5x, /502/en/images_en/7/7c/moodledocs_external_data_json.png 2x" data-file-width="2363" data-file-height="1952"></a><figcaption>External data integration configurations</figcaption></figure>
+<h3><span class="mw-headline" id="Email_signature">Email signature</span></h3>
+<p>Advanced configurations also includes the ability to add an organisation's logo hyperlinked to the associated website. The 'ato' configuration key is a JSON format object that should include a 'website' attribute with the value set to the website URL, and a 'logourl' attribute with the value set to the desired logo URL value.  All communication notifications set by the plugin will include this email signature at the bottom of the message. 
+</p>
+<figure class="mw-halign-none" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:moodledocs_email_sign_json.png" class="mw-file-description"><img src="images_en/thumb/c/c9/moodledocs_email_sign_json.png/14741088a401ee6144490acf2a17aa48.png" decoding="async" width="1251" height="60" class="mw-file-element" srcset="/502/en/images_en/thumb/c/c9/moodledocs_email_sign_json.png/1877px-moodledocs_email_sign_json.png 1.5x, /502/en/images_en/c/c9/moodledocs_email_sign_json.png 2x" data-file-width="2364" data-file-height="114"></a><figcaption>Communications email signature configuration</figcaption></figure> 
+<h3><span class="mw-headline" id="Notifications">Notifications</span></h3>
+<p>The plugin allows for custom function-specific notifications in JSON format. One of which is <b>Graduation notifications</b>, the 'graduation_notification' configuration key allows for sending notifications upon student successful course completion (<i>message subject and body can be set from the course settings</i>).  There are three different course-specific modes for graduation notifications:
+</p>
+<ul><li>[Mode 0] sends notifications to the course manager and the examiner roles only.</li>
+<li>[Mode 1] sends notifications to all active course participants (instructors &amp; students)</li>
+<li>[Mode 2] sends notifications to active participants that are members of the same group as the graduating student.</li></ul>
+<figure class="mw-halign-none" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:moodledocs_grad_notify_json.png" class="mw-file-description"><img src="images_en/thumb/3/35/moodledocs_grad_notify_json.png/8fd562482c5f4166fa66a418e5245b44.png" decoding="async" width="1253" height="53" class="mw-file-element" srcset="/502/en/images_en/thumb/3/35/moodledocs_grad_notify_json.png/1880px-moodledocs_grad_notify_json.png 1.5x, /502/en/images_en/3/35/moodledocs_grad_notify_json.png 2x" data-file-width="2380" data-file-height="100"></a><figcaption>Notification configuration for graduating students</figcaption></figure>
+<h2><span class="mw-headline" id="Optional_user_profile_fields">Optional user profile fields</span></h2>
+<p>The following optional custom user profile fields can be added to the Moodle user profile from Site administration &gt; Users &gt; User profile fields.  Information from these fields is used in reports, log book entries, and the Instructor dashboard page:
+</p>
+<ul><li>VATSIM CID (shortname=vatsimcid, type='text'): VATSIM ID or CID for the course participant.</li>
+<li>Fleet (shortname=fleet, type='text'): fleet to which the course participant belongs to.</li>
+<li>Primary Simulator (shortname=simulator, type='menu): the course participant primary simulator (menu options could be MSFS, XP12, P3D...etc.)</li>
+<li>Secondary Simulator (shortname=simulator2, type='menu'): the course participant secondary simulator (menu options could be MSFS, XP12, P3D...etc.)</li>
+<li>Callsign (shortname=callsign, type='text'): the course participant callsign.</li></ul>
+<h2><span class="mw-headline" id="FAQ">FAQ</span></h2>
+<p><b>How to override restriction for students during the posting wait period?</b>
+</p><p>in the Session Booking interim page after clicking the Book button, click the 'Override' button with the label 'Restriction wait period'. After doing so the student can post availability period to the wait period.
+</p><p><b>How to override on-hold restriction to keep the student active?</b>
+</p><p>This restriction can be overwritten by removing the 'OnHold' group from the student Participants list and adding the 'Keep Active' instead, to keep the student active after on-hold restriction period had passed.
+</p><p><b>How to stop graduated students from showing in the Session Booking page?</b>
+</p><p>Add the graduating student to the 'Graduates' group to from the Participants list.
+</p><p><b>How to stop inactive instructors from showing in the Instructor Participation list in the Session Booking page?</b>
+</p><p>Add the inactive instructor to the 'Inactive Instructors' group from the Participants list.
+</p>
+<h2><span class="mw-headline" id="How_to_report_a_bug">How to report a bug</span></h2>
+<p>Please, use the plugin's <a rel="nofollow" class="external text" href="https://github.com/zcodemonkeyz/SessionBooking">github repository</a> issue tracking. Stamp collection if one of the components in "Non-core contributed modules" project. See the list of tracked issues at <a rel="nofollow" class="external free" href="https://github.com/bavirtual/session-booking/issues">https://github.com/bavirtual/session-booking/issues</a>.
+</p>
+<h2><span class="mw-headline" id="Feature_ideas_and_requests">Feature ideas and requests</span></h2>
+<p><i>Note: This section will be moved to the tracker feature requests.</i>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260823014947
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.060 seconds
+Real time usage: 0.369 seconds
+Preprocessor visited node count: 345/1000000
+Post&#8208;expand include size: 1710/2097152 bytes
+Template argument size: 1065/2097152 bytes
+Highest expansion depth: 4/100
+Expensive parser function count: 4/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 12385/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   14.242      1 -total
+ 58.92%    8.391     10 Template:MediaPlayer
+ 12.93%    1.842      1 Template:Infobox_plugin
+ 12.32%    1.754      1 Template:Activities
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:23809-0!canonical and timestamp 20260823014947 and revision id 150837. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Session_Booking&amp;oldid=150837">https://docs.moodle.org/502/en/index.php?title=Session_Booking&amp;oldid=150837</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="dec1c7d7316093cde86f83da9b0d6382.html" title="Category:Activity modules">Activity modules</a></li><li><a href="25a190cf836432207b62ebb9ebca358b.html" title="Category:Plugin">Plugin</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdixyoyks">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdixyoyw1"></button>
+					<div class="collapse navbar-collapse igdixyoyw1" id="igdixyoyw1">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Session_Booking" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Session_Booking" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Session_Booking&amp;oldid=150837" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Session_Booking&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 4 January 2025, at 16:48.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":507,"wgPageParseReport":{"limitreport":{"cputime":"0.060","walltime":"0.369","ppvisitednodes":{"value":345,"limit":1000000},"postexpandincludesize":{"value":1710,"limit":2097152},"templateargumentsize":{"value":1065,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":4,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":12385,"limit":5000000},"timingprofile":["100.00%   14.242      1 -total"," 58.92%    8.391     10 Template:MediaPlayer"," 12.93%    1.842      1 Template:Infobox_plugin"," 12.32%    1.754      1 Template:Activities"]},"cachereport":{"timestamp":"20260823014947","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

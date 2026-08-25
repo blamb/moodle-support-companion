@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>OAuth 2 Google service - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"dcb3008c5e6d63fabd9f49d9","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"OAuth_2_Google_service","wgTitle":"OAuth 2 Google service","wgCurRevisionId":154744,"wgRevisionId":154744,"wgArticleId":21324,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Site administration","OAuth 2"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"OAuth_2_Google_service","wgRelevantArticleId":21324,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/OAuth_2_Google_service">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-OAuth_2_Google_service rootpage-OAuth_2_Google_service layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdiqdn17e"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdiqdn17e" id="igdiqdn17e">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=OAuth+2+Google+service" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/OAuth_2_Google_service">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/OAuth_2_Google_service">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/OAuth_2_Google_service">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="18f6fa1f064370e1773b208796d05d4c.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:OAuth_2_Google_service&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=OAuth_2_Google_service&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=OAuth_2_Google_service&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">OAuth 2 Google service</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a>  ► <a href="402364aba1531988f549c8b1730fb016.html" title="Server settings">Server settings</a>  ► <a href="658c912ece9f520879622827f2a892b2.html" title="OAuth 2 services">OAuth 2 services</a> ► <a class="mw-selflink selflink">OAuth 2 Google service</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a href="658c912ece9f520879622827f2a892b2.html" title="OAuth 2 services">OAuth 2 services</a></div>	
+<div class="content">
+<ul><li><a href="81d4ef185cdf0be2625611c30aff1e1e.html" title="OAuth 2 Facebook service">Facebook service</a></li>
+<li><a class="mw-selflink selflink">Google service</a></li>
+<li><a href="15976b231ce76e660a9b1790c4094c16.html" title="OAuth 2 LinkedIn service">LinkedIn service</a></li>
+<li><a href="7022fedfd3979fb0fde81f8359a42431.html" title="OAuth 2 Microsoft service">Microsoft service</a></li>
+<li><a href="318ed5adfd9cff8ab2abb3efc3750010.html" title="OAuth 2 MoodleNet service">MoodleNet service</a></li>
+<li><a href="abb1c8ba4a7fbc5d2e9b23fad49b9a54.html" title="OAuth 2 Nextcloud service">Nextcloud service</a></li>
+<li><a href="bb1a33cbec7567fb5d019b37554092a6.html" title="OAuth 2 Open Badges service">Open Badges service</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Features_requiring_the_OAuth_2_Google_service"><span class="tocnumber">1</span> <span class="toctext">Features requiring the OAuth 2 Google service</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#OAuth_2_Google_service_setup"><span class="tocnumber">2</span> <span class="toctext">OAuth 2 Google service setup</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#App_verification"><span class="tocnumber">3</span> <span class="toctext">App verification</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Features_requiring_the_OAuth_2_Google_service">Features requiring the OAuth 2 Google service</span></h2>
+<p>You will need to set up an OAuth 2 Google service in order to use the following features:
+</p>
+<ul><li><a href="f57f9aa193c6f8ef1bd5dd468a095f14.html" title="Google Drive repository">Google Drive repository</a></li>
+<li><a href="e9d8f7e3af380059f76b8f5d4ab0fa61.html" title="OAuth 2 authentication">OAuth 2 authentication</a> for enabling users to log in to Moodle with their Google account</li>
+<li><a href="b473a651f0d6546985f8ffa2ef1a413e.html" title="Google Drive converter">Google Drive converter</a> for converting assignment submission files to PDF for teachers to annotate</li></ul>
+<h2><span class="mw-headline" id="OAuth_2_Google_service_setup">OAuth 2 Google service setup</span></h2>
+<p>To set up an OAuth 2 client with Google, log in to the <a rel="nofollow" class="external text" href="https://console.developers.google.com/">Google Developers Console</a> and click the arrow by 'Select a project'.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:SelectAProject.png" class="mw-file-description"><img src="images_en/1/11/4f9a11fe8dd2e70a8947b9b1edb739c3.png" decoding="async" width="496" height="287" class="mw-file-element" data-file-width="496" data-file-height="287"></a></span>
+</p><p>Click 'Create a new project'
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:New_project.png" class="mw-file-description"><img src="images_en/d/de/aba8caf6eef9bb75b500fa8617655541.png" decoding="async" width="670" height="205" class="mw-file-element" data-file-width="670" data-file-height="205"></a></span>
+</p><p>Give it a name. The name is not visible to anyone so you can choose any name you like.
+</p>
+<figure class="mw-halign-none" typeof="mw:File/Frame"><a href="https://docs.moodle.org/502/en/File:google-2-create-new-modal.png" class="mw-file-description"><img src="images_en/2/2a/108ccf14f84f64a61ccd38ab2b52569b.png" decoding="async" width="534" height="254" class="mw-file-element" data-file-width="534" data-file-height="254"></a><figcaption>Name the project</figcaption></figure>
+<p>Click Credentials from the menu on the left.
+</p>
+<figure class="mw-halign-none" typeof="mw:File/Frame"><a href="https://docs.moodle.org/502/en/File:google-3-credentials.png" class="mw-file-description"><img src="images_en/6/6f/d1a199a5bbe12d74c36aeb9f3de34293.png" decoding="async" width="270" height="195" class="mw-file-element" data-file-width="270" data-file-height="195"></a><figcaption>Switch to credentials page</figcaption></figure>
+<p>Setup the consent screen for your application. This is where you provide the public information that is shown to users when they are asked to authorise your application. Setting a product name is the minimum information that is required, but the more information you provide here - the more confidence users will have when granting this authorisation.
+</p>
+<figure class="mw-halign-none" typeof="mw:File/Frame"><a href="https://docs.moodle.org/502/en/File:app_information.png" class="mw-file-description"><img src="images_en/b/bf/e4b753c53d440ab5cb7345a0689e176e.png" decoding="async" width="543" height="408" class="mw-file-element" data-file-width="543" data-file-height="408"></a><figcaption>Setup consent screen</figcaption></figure>
+<p>Now you can create some client credentials. Click Credentials from the menu on the left again then click "+ Create credentials" and select OAuth client ID.
+</p>
+<figure class="mw-halign-none" typeof="mw:File/Frame"><a href="https://docs.moodle.org/502/en/File:google-5-oauth-credentials.png" class="mw-file-description"><img src="images_en/4/4b/f251abc3c3312795e43e7771447ec949.png" decoding="async" width="852" height="217" class="mw-file-element" data-file-width="852" data-file-height="217"></a><figcaption>Create an OAuth Client ID</figcaption></figure>
+<p>Select Web application as Application type and click to add an authorised redirect URI. This must be set to "your moodle site url + /admin/oauth2callback.php". If your Moodle site was accessible at https://lemon.edu/ then this callback URL should be set to https://lemon.edu/admin/oauth2callback.php. Enter the URL then click Create.
+</p>
+<figure class="mw-halign-none" typeof="mw:File/Frame"><a href="https://docs.moodle.org/502/en/File:google-6-web-application-credentials.png" class="mw-file-description"><img src="images_en/8/8e/4615ac160886bf756f97e7b7abfc9d4b.png" decoding="async" width="540" height="863" class="mw-file-element" data-file-width="540" data-file-height="863"></a><figcaption>Set the callback URL</figcaption></figure>
+<p>When you have saved the information on this page, Google will give you the client ID and client secret that you need to enter into Moodle.
+</p>
+<figure class="mw-halign-none" typeof="mw:File/Frame"><a href="https://docs.moodle.org/502/en/File:google-7-oauth-details.png" class="mw-file-description"><img src="images_en/b/bf/0092c544348faa729372c3ce0164d121.png" decoding="async" width="494" height="340" class="mw-file-element" data-file-width="494" data-file-height="340"></a><figcaption>Got my secrets!</figcaption></figure>
+<p>Finally we have to enable the Drive API (if we want to use the google drive repository or file converter plugins).
+</p><p>Click Library from the menu on the left.
+</p>
+<figure class="mw-halign-none" typeof="mw:File/Frame"><a href="https://docs.moodle.org/502/en/File:google-8-library.png" class="mw-file-description"><img src="images_en/9/9c/433bf6623c514ac83a2c6ba877fb64f1.png" decoding="async" width="262" height="177" class="mw-file-element" data-file-width="262" data-file-height="177"></a><figcaption>View the Library tab</figcaption></figure>
+<p>Search for drive and select Google Drive API. Click the Enable button.
+</p>
+<figure class="mw-halign-none" typeof="mw:File/Frame"><a href="https://docs.moodle.org/502/en/File:google-10-enable-drive.png" class="mw-file-description"><img src="images_en/e/e2/399047b22e20fa981f1b95469c62b0ad.png" decoding="async" width="643" height="203" class="mw-file-element" data-file-width="643" data-file-height="203"></a><figcaption>Enable the API</figcaption></figure>
+<h2><span class="mw-headline" id="App_verification">App verification</span></h2>
+<p>NOTE: If you are just using this for document conversion you will not need to verify (as it only uses one account). You will, however, need to verify your ownership of your domain (see <a rel="nofollow" class="external text" href="https://support.google.com/webmasters/answer/35179">Verify your site ownership - Search Console Help</a>.)
+</p><p>The Google Drive repository and Google Drive converter also require the app to be verified by completing the OAuth Developer Verification Form. The list of scopes that Moodle requires are: <code>openid profile email <a rel="nofollow" class="external free" href="https://www.googleapis.com/auth/drive.file">https://www.googleapis.com/auth/drive.file</a></code>.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<p>Moodle in English forum discussions:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=356871">Google Drive Repository and Moodle 3.3.1</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.org/mod/forum/discuss.php?d=416645">Setting up Oauth2 service Google</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822165821
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.030 seconds
+Real time usage: 0.286 seconds
+Preprocessor visited node count: 43/1000000
+Post&#8208;expand include size: 712/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 60/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.707      1 Template:OAuth2
+100.00%    4.707      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:21324-0!canonical and timestamp 20260822165821 and revision id 154744. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=OAuth_2_Google_service&amp;oldid=154744">https://docs.moodle.org/502/en/index.php?title=OAuth_2_Google_service&amp;oldid=154744</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="2aac34b4c717bbba405f973f3d7b4021.html" title="Category:Site administration">Site administration</a></li><li><a href="7816b750ea380551a114f92a133a09c2.html" title="Category:OAuth 2">OAuth 2</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdiqdn36d">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdiqdn3r5"></button>
+					<div class="collapse navbar-collapse igdiqdn3r5" id="igdiqdn3r5">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/OAuth_2_Google_service" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/OAuth_2_Google_service" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=OAuth_2_Google_service&amp;oldid=154744" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=OAuth_2_Google_service&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Servicio_OAuth_2_Google" title="Servicio OAuth 2 Google – español" lang="es" hreflang="es" data-title="Servicio OAuth 2 Google" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/OAuth2_Google_Service" title="OAuth2 Google Service – Deutsch" lang="de" hreflang="de" data-title="OAuth2 Google Service" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 20 November 2025, at 12:39.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":125,"wgPageParseReport":{"limitreport":{"cputime":"0.030","walltime":"0.286","ppvisitednodes":{"value":43,"limit":1000000},"postexpandincludesize":{"value":712,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":60,"limit":5000000},"timingprofile":["100.00%    4.707      1 Template:OAuth2","100.00%    4.707      1 -total"]},"cachereport":{"timestamp":"20260822165821","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

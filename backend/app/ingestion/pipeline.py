@@ -79,7 +79,26 @@ def run_ingestion() -> dict:
     all_chunks = chunk_documents(all_documents)
     logger.info(f"Total chunks created: {len(all_chunks)}")
 
-    # 6. Reset and populate vector store
+    # 6. Refuse to wipe a populated store when nothing was parsed. Ingestion
+    # resets the collection before repopulating it, so a run where every source
+    # path is missing (wrong working directory, sources absent from the
+    # container) would otherwise leave an empty knowledge base behind.
+    if not all_chunks:
+        duration = time.time() - start_time
+        logger.error(
+            "No documents parsed from any source — aborting before reset so the "
+            "existing vector store is left intact. Checked: "
+            f"{MOODLE_DOCS_DIR}, {OL_PRODUCTION_XML}, {TRUBOX_XML}, {TRU_FAQ_DOCX}"
+        )
+        return {
+            "status": "aborted_no_sources",
+            "sources_ingested": [],
+            "total_documents": 0,
+            "total_chunks": 0,
+            "duration_seconds": round(duration, 2),
+        }
+
+    # 7. Reset and populate vector store
     logger.info("Resetting vector store and ingesting chunks...")
     reset_collection()
     add_chunks(all_chunks)

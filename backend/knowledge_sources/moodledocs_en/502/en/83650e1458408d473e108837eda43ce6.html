@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Redis cache store - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"2f6bc2f32b04cc70f04795d2","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Redis_cache_store","wgTitle":"Redis cache store","wgCurRevisionId":154815,"wgRevisionId":154815,"wgArticleId":21145,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Performance"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Redis_cache_store","wgRelevantArticleId":21145,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Redis_cache_store">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Redis_cache_store rootpage-Redis_cache_store layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhxduhtm"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhxduhtm" id="igdhxduhtm">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Redis+cache+store" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Redis_cache_store">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Redis_cache_store">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Redis_cache_store">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="83650e1458408d473e108837eda43ce6.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Redis_cache_store" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Redis_cache_store&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Redis_cache_store&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Redis cache store</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a>  ► <a href="7a58329819b7734d857d3e22b0a64aee.html" title="Performance">Performance</a>  ►  <a class="mw-selflink selflink">Redis cache store</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="7a58329819b7734d857d3e22b0a64aee.html" title="Performance">Performance</a></div>	
+<div class="content">
+<ul><li><a href="d2fef13d731df9445395a9c2e0a9fd89.html" title="Performance recommendations">Performance recommendations</a></li>
+<li><a href="05642fc14b4b5693d5b9f5f1b41457c2.html" title="Performance settings">Performance settings</a></li>
+<li><a href="3b9888b802def8a854abd442a794d782.html" title="Performance overview">Performance overview</a></li>
+<li><a href="47336288cd5208e83a741bd312d28b86.html" title="Caching">Caching</a></li>
+<li><a href="feb17c47f320c7a15f1a8c7227d5cb24.html" title="Performance FAQ">Performance FAQ</a></li>
+<li><a href="3fd917476a40e649c2b898555d692120.html" title="MUC FAQ">MUC FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p>The Redis cache store is one of the best options to handle session and application cache as it supports: data guarantee, locking, key awareness. (and also can be used for <a href="fd185eaf15e9933888ef4b04ad5a2dcc.html#Redis_session_driver" title="Session handling">user's sessions caching</a> in the config.php file). Unfortunately due to the data types it supports and the data involved, it isn't fully compatible with the request cache, and so we'll only be configuring it for the Application and Session caches in this document. That isn't to say you couldn't have parts of the request cache using Redis, you would just need to manually set those cached objects to use Redis instead (and there are quite a few of them!).
+</p><p>Before Redis is available as a cache store, you will need to install Redis service (daemon) on your Moodle server, locally in case of a single Moodle app node architecture or externally if you are using a cluster of Moodle nodes. only then, you can configure Redis as an application or session level cache store.
+</p><p>If you are configuring a cluster of Moodle servers/nodes, the Redis service (daemon) should be installed on an external server and all Moodle nodes (servers/instances) should point to that external Redis, so that all the user's cached data (namely Session) is available when the user is using/connected to any of the Moodle nodes. An external Redis (NoSQL) service can be installed on the main SQL server alongside the MySQL/MariaDB service, just make sure you have enough memory allocated on that server for both services. 
+</p><p>A good practice is to give the Redis cache store prefix a proper short name and not leave it empty, as later on, it might conflict with user's session Redis cache you might choose to use, or other Moodle instances that will be installed on the same server. for example "my-school-name_cs_", where you replace "my-school-name" with your short school name. (and if you are also using a user's session store on the config.php file, you might like to prefix it with "my-school-name_us_")
+</p><p>When using a cluster setup with several Moodle instances on each node that belong to different Schools/Institutes/clients, make sure that you use the same Prefix for all Moodle instances that are on different nodes and are of the same School/Institute/Client.
+</p><p>Moodle also supports connecting to <b>Redis Cluster</b>, which is Redis&rsquo;s built-in mechanism for distributing data across multiple Redis nodes. Redis Cluster provides horizontal scaling, automatic failover, and high availability, making it ideal for large or high-traffic Moodle deployments, or sites using cloud-managed Redis services. Using a Redis Cluster does not change the user-facing experience, it only enhances performance and reliability in distributed Moodle architectures.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Installing_Redis_server"><span class="tocnumber">1</span> <span class="toctext">Installing Redis server</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Installing_Redis_php_driver"><span class="tocnumber">2</span> <span class="toctext">Installing Redis php driver</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Configuring_Redis_in_Moodle"><span class="tocnumber">3</span> <span class="toctext">Configuring Redis in Moodle</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Installing_Redis_server">Installing Redis server</span></h2>
+<p>There are plenty of guides on the internet on how to install Redis, so we won't repeat them here. Since Redis is a listening service, once it's installed it'll be ready to use (and should already be running) and ready to receive requests from Moodle, with no further configuration needed. With that said however, it's still wise to have a look through the configuration options and decide what is best for you and your setup - the DigitalOcean guide is a good place to start for adjusting these settings, as they're basically all in the redis.conf file.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-22-04">DigitalOcean's How To Install and Secure Redis on Ubuntu 22.04</a></li>
+<li><a href="fd185eaf15e9933888ef4b04ad5a2dcc.html#Redis_session_driver" title="Session handling">Session_handling#Redis_session_driver</a> and <a rel="nofollow" class="external text" href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-redis-server-as-a-session-handler-for-php-on-ubuntu-14-04">How to Set Up a Redis Server as a Session Handler for PHP</a></li>
+<li>Install <a rel="nofollow" class="external text" href="https://dl.iuscommunity.org/pub/ius/stable/CentOS/7/x86_64/repoview/redis5.html">Redis 5</a> via IUS CentOS 7 repository.</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/zkteco-home/redis-windows">Redis Windows Port - zkteco-home/redis-windows on GitHub</a></li></ul>
+<h2><span class="mw-headline" id="Installing_Redis_php_driver">Installing Redis php driver</span></h2>
+<ul><li>For CentOS, you can use either <a rel="nofollow" class="external text" href="https://rpms.remirepo.net/">Remi</a> or <a rel="nofollow" class="external text" href="https://ius.io/">IUS</a> repositories, and install the <a rel="nofollow" class="external text" href="https://dl.iuscommunity.org/pub/ius/stable/CentOS/7/x86_64/repoview/php71u-pecl-redis.html">php71u-pecl-redis</a> driver.</li>
+<li><a rel="nofollow" class="external text" href="https://gist.github.com/hollodotme/418e9b7c6ebc358e7fda">Redis php-fpm 7 driver on Ubuntu 14.04</a></li>
+<li><a rel="nofollow" class="external text" href="https://pecl.php.net/package/redis">Windows PHP extensions</a> including DLLs for Windows. Check your PHP version, CPU (64bit or x86) and thread-safe value (see Site Admin &gt; Server &gt; PHP Info) to get the right version; add DLL file to ext directory, add 'extension=php_redis.dll' entry to php.ini and restart your web server.</li></ul>
+<h2><span class="mw-headline" id="Configuring_Redis_in_Moodle">Configuring Redis in Moodle</span></h2>
+<ul><li>Navigate to Site admin &gt; Plugins &gt; Caching &gt; Configuration.</li>
+<li>When installed, you should see a green tick next to "Redis" under "Installed cache stores" and a link to add an instance.</li></ul>
+<p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Redis_cache_ready.png" class="mw-file-description"><img src="images_en/9/9d/bd7df183d5b053a49fd5ddb23ffe8566.png" decoding="async" width="1334" height="486" class="mw-file-element" data-file-width="1334" data-file-height="486"></a></span>
+</p>
+<ul><li>Click "Add instance".
+<ul><li>Give your Redis instance a name, like "Redis1".</li>
+<li>Tick the Cluster mode checkbox if you want to use the Redis Cluster. If the checkbox is disabled, it means your PHP Redis extension does not support the Cluster feature.</li>
+<li>Set the IP:port for the Redis server. If it is on the same machine, the default will be 127.0.0.1:6379. If cluster mode is enabled, specify servers separated by a new line, for example:<br><i>172.23.0.11</i><br><i>172.23.0.12</i><br><i>172.23.0.13</i></li>
+<li>Specify the file path to the Certificate Authority (CA) certificate to verify the TLS/SSL connection to a Redis server, confirming the server's authenticity. Leave it blank if you prefer not to use it.</li>
+<li>Enter the password for your Redis server. Leave it blank if you prefer not to use it.</li>
+<li>Enter a short, unique prefix that will be added to all Redis keys created by this Moodle site. Leave it blank if you prefer not to use it.</li>
+<li>Choose the method Moodle will use to encode cache data before storing it in Redis. If available, igbinary is recommended because it is faster and uses less memory than the default PHP serializer.If your system does not have igbinary installed, Moodle will fall back to the standard PHP serializer.</li>
+<li>Select whether Moodle should compress cache data before storing it in Redis.</li>
+<li>Set the maximum number of seconds Moodle will wait for a Redis node to accept a connection. If the Redis server is busy, overloaded, or unreachable, Moodle will stop waiting after this timeout and report a connection failure. Default is 3 seconds.</li>
+<li>Click the Save Changes button, and the new instance should appear under "Configured store instances" with a "Ready" tick.</li></ul></li></ul>
+<p><span class="mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:add_redis_store.png" class="mw-file-description"><img src="images_en/thumb/d/dc/add_redis_store.png/f0026849a89d6185205c809aac931835.png" decoding="async" width="831" height="641" class="mw-file-element" srcset="/502/en/images_en/d/dc/add_redis_store.png 1.5x" data-file-width="1026" data-file-height="791"></a></span>
+</p>
+<ul><li>Under "Stores used when no mapping is present" click <b>Edit mappings". Set "Redis1" (or the name used earlier) for the "Application" and "Session" caches.</b> Note that Redis won't appear under the "Request" Cache section, since it isn't fully compatible with all of the different parts of the request cache. (Refer to the <a href="47336288cd5208e83a741bd312d28b86.html" title="Caching">Caching</a> page to better understand how the Moodle Universal Cache works).</li></ul>
+<p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:Set_Redis_as_default_Application_and_Session_cache.png" class="mw-file-description"><img src="images_en/3/30/e5f32ba9b78e678bb00ec499c7e379d5.png" decoding="async" width="738" height="316" class="mw-file-element" data-file-width="738" data-file-height="316"></a></span>
+</p>
+<ul><li>After saving this, you should see Redis as the cache for most cache stores, and should hopefully see a performance boost almost immediately.</li>
+<li>Next Step: Celebrate!</li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://gist.github.com/kabel/10023961">Monitor Redis stats (a php one page app)</a></li>
+<li><a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/MDL-48468">MDL-48468</a>&nbsp;: Add a Redis cache store to Moodle core</li>
+<li>Redis lock&nbsp;: <a rel="nofollow" class="external free" href="https://github.com/open-lms-open-source/moodle-local_redislock">https://github.com/open-lms-open-source/moodle-local_redislock</a> (get it into core: <a rel="nofollow" class="external free" href="https://tracker.moodle.org/browse/MDL-67022">https://tracker.moodle.org/browse/MDL-67022</a>)</li>
+<li><a rel="nofollow" class="external text" href="https://redis.io/">Redis.io</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822195345
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.024 seconds
+Real time usage: 0.150 seconds
+Preprocessor visited node count: 26/1000000
+Post&#8208;expand include size: 428/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    2.837      1 Template:Performance
+100.00%    2.837      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:21145-0!canonical and timestamp 20260822195345 and revision id 154815. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Redis_cache_store&amp;oldid=154815">https://docs.moodle.org/502/en/index.php?title=Redis_cache_store&amp;oldid=154815</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="b2af25392fa4f78dbbfc102122d1af22.html" title="Category:Performance">Performance</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhxduk7b">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhxduktk"></button>
+					<div class="collapse navbar-collapse igdhxduktk" id="igdhxduktk">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Redis_cache_store" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Redis_cache_store" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Redis_cache_store&amp;oldid=154815" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Redis_cache_store&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Redis_Cache" title="Redis Cache – Deutsch" lang="de" hreflang="de" data-title="Redis Cache" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 16 December 2025, at 10:47.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":97,"wgPageParseReport":{"limitreport":{"cputime":"0.024","walltime":"0.150","ppvisitednodes":{"value":26,"limit":1000000},"postexpandincludesize":{"value":428,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    2.837      1 Template:Performance","100.00%    2.837      1 -total"]},"cachereport":{"timestamp":"20260822195345","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

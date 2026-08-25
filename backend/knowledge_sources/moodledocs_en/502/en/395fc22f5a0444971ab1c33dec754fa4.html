@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Turnitin's Moodle Direct Integration (Instructor Guide) - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"27513b2581c163e0baaedfaa","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Turnitin's_Moodle_Direct_Integration_(Instructor_Guide)","wgTitle":"Turnitin's Moodle Direct Integration (Instructor Guide)","wgCurRevisionId":141800,"wgRevisionId":141800,"wgArticleId":11062,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Turnitin's Moodle Direct Integration","Contributed code"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Turnitin's_Moodle_Direct_Integration_(Instructor_Guide)","wgRelevantArticleId":11062,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Turnitin%27s_Moodle_Direct_Integration_(Instructor_Guide)">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Turnitin_s_Moodle_Direct_Integration_Instructor_Guide rootpage-Turnitin_s_Moodle_Direct_Integration_Instructor_Guide layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkkv7jjl"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdkkv7jjl" id="igdkkv7jjl">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Turnitin%27s+Moodle+Direct+Integration+%28Instructor+Guide%29" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Turnitin%27s_Moodle_Direct_Integration_(Instructor_Guide)">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Turnitin%27s_Moodle_Direct_Integration_(Instructor_Guide)">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Turnitin%27s_Moodle_Direct_Integration_(Instructor_Guide)">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="395fc22f5a0444971ab1c33dec754fa4.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Turnitin%27s_Moodle_Direct_Integration_(Instructor_Guide)&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Turnitin%27s_Moodle_Direct_Integration_(Instructor_Guide)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Turnitin%27s_Moodle_Direct_Integration_(Instructor_Guide)&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Turnitin's Moodle Direct Integration (Instructor Guide)</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a href="d9c6f29ad96f496e6f25ac118a984420.html" title="Turnitin's Moodle Direct Integration">Turnitin's Moodle Direct</a></div>
+<div class="content">
+<ul><li><a href="16238dd432c3211353dae4344f029b43.html" title="Turnitin's Moodle Direct Integration (Administrator Guide)">Administrator Guide</a></li>
+<li><a class="mw-selflink selflink">Instructor Guide</a></li>
+<li><a href="2478ae74bbedef6b88e686ff5130e326.html" title="Turnitin's Moodle Direct Integration (Student Guide)">Student Guide</a></li>
+<li><a href="d5858f9b64bac916a8e80ca6f1ff8542.html" title="Turnitin's Moodle Direct Integration - Frequently Asked Questions">FAQs</a></li>
+<li><a rel="nofollow" class="external text" href="http://download.moodle.org/download.php/plugins/mod/turnitintool.zip">Download Latest Build</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Creating_a_Turnitin_Assignment"><span class="tocnumber">1</span> <span class="toctext">Creating a Turnitin Assignment</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Further_settings_for_a_Turnitin_assignment"><span class="tocnumber">2</span> <span class="toctext">Further settings for a Turnitin assignment</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Submission_Inbox_tab"><span class="tocnumber">2.1</span> <span class="toctext">Submission Inbox tab</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Submit_on_behalf_of_a_student"><span class="tocnumber">2.1.1</span> <span class="toctext">Submit on behalf of a student</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-5"><a href="#Turnitin_Tutors_tab"><span class="tocnumber">2.2</span> <span class="toctext">Turnitin Tutors tab</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Turnitin_Students_tab"><span class="tocnumber">2.3</span> <span class="toctext">Turnitin Students tab</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Creating_a_Turnitin_Assignment">Creating a Turnitin Assignment</span></h2>
+<p>To create a Turnitin Assignment open the course home page, after logging in as a tutor click the 'Turn editing on' button. Select 'Turnitin Assignment' from the 'Add an activity...' drop down menu.
+</p><p>General Turnitin Assignment settings:
+</p>
+<ol><li>Enter a <b>Name</b> for the Turnitin Assignment. This will display as a link for students, so make it intuitive.</li>
+<li>Type a <b>Summary</b>. This will display for students at the top of the assignment page.</li>
+<li>Select the 'Submission Type'. The first option is 'File Upload' (default). The second option is 'Text Submission' which will upload pasted text. The third is 'Any Submission Type' which allows either of those formats.</li>
+<li>Set the <b>Number Of Parts</b> (separate uploads) you want students to submit that assignment. For each you will set a <b>Start Date</b>, <b>Due Date</b> and <b>Post Date</b> a bit later.</li>
+<li>For <b>Maximum File Size</b> for submissions, the <b>Site Upload Limit</b> is often best. This will display to students on their submission page.</li>
+<li>Set <b>Anonymous Marking</b> if applicable.</li>
+<li><b>Allow Submission Of Any File Type</b> if students are expected to upload types of file which Turnitin cannot checked for originality.</li>
+<li><b>Display Originality Reports To Students</b> - if set to Yes the Originality Report generated by Turnitin is available to the student. Improve students' academic writing by allowing them to view their Originality Reports and supporting them to interpret it - ideally before the Due Date.</li>
+<li><b>Grade Display</b> - set whether students should see their grade as a fraction or a percentage.</li>
+<li><b>Auto Refresh Grades / Scores</b> - set  automatically sync changes to grades. If you have a very large cohort and this slows you down, you can set to Manual (but then you need to remember to refresh).</li>
+<li><b>Set These Values As Assignment Defaults</b> - this only applies to assignments you set up under your own account, and may be helpful if you have many similar assignments to create.</li></ol>
+<p>Grade settings
+</p>
+<ol><li>Set a <b>Type</b> - Point is a number out of a Maximum Grade. Scale allows you to choose from any grade Scales set by your institution e.g. Fail / First. None allows you to give feedback only.</li>
+<li><b>Grade Category</b> - if you've set these up in your Moodle Gradebook, then you can select one here.</li>
+<li><b>Grade To Pass</b> - if you have a threshold, setting it here will display passes and fails as green and red in the Gradebook.</li></ol>
+<p>Assignment Part settings
+</p>
+<ol><li><b>Name</b> - make it clear what you expect students to upload to this part. If you're only expecting a single upload, then something like 'Your work' may be more intuitive than Part 1.</li>
+<li><b>Start Date</b> - the earliest date students can submit.</li>
+<li><b>Due Date</b> - the deadline. If you have enabled late submissions any late submission will appear in red.</li>
+<li><b>Post Date</b> - the date that marks and feedback are returned to students. If you are using anonymous marking, then names are revealed to tutors at this point. Two things to keep in mind about the Post Date: one is that it can be changed (as long as it hasn't already passed) and the other is that you don't want to reveal marks and feedback until the entire cohort has been marked. You can set a Post Date further in the future than you need, but be aware students can see this date so you need to liaise with them separately.</li></ol>
+<p>Originality Report option settings
+</p>
+<ol><li><b>Allow Submissions after the Due Date</b> - decide whether you wish to allow students to submit after the Due Date. Those submissions will be clearly marked as late.</li>
+<li><b>Report Generation Speed</b> - decide when reports are generated and if students can have multiple attempts to submit. The options are:
+<ol><li><i>Generate reports immediately (resubmissions are not allowed)</i> - Originality reports are created immediately and students may not resubmit papers. Submissions must be deleted by the instructor to enable resubmission.</li>
+<li><i>Generate reports immediately (resubmissions are allowed until the due date)</i> - The Originality Report is generated immediately. Students may resubmit as often as the student wishes up until the due date. Turnitin will require students to wait 24 hours between viewing each subsequent Originality Report. Only the latest submission is available to the student and instructor. When the due date passes the originality report is regenerated and student submissions within the same assignment are included in the comparison which may result in a change to the originality report similarity index. Resubmissions are not allowed after the due date.</li>
+<li><i>Generate reports on due date</i> (resubmissions are allowed until the due date) - Originality reports for submissions are generated on the due date. Resubmissions are allowed up until the due date.</li></ol></li>
+<li><b>Store Student Papers</b> - choose whether student papers are stored in the Turnitin Student Paper Repository for comparison against future submissions. Choose 'No Repository' for particularly confidential or sensitive student work, or where you are testing the system.  Most common option: Standard Repository</li>
+<li><b>Check Against Stored Student Papers</b> - if set to Yes this includes checks against Turnitin's Student Paper Repository in the Originality Reports for papers. If set to No, the similarity index percentage may decrease.</li>
+<li><b>Check Against Internet</b> - determines whether submissions are checked against Turnitin's Internet Repository. If set to No, the similarity index percentage may decrease.</li>
+<li><b>Check against journals, periodicals and publications</b> determines whether submissions are checked against Turnitin's journal, periodical and publication sources. If set to No, the similarity index percentage may decrease.</li>
+<li><b>Exclude bibliography</b> - this setting allows the instructor to choose to exclude text appearing in the bibliography, works cited, or references sections of student papers from being checked for matches when generating Originality Reports. This setting can be overridden later in individual Originality Reports.</li>
+<li><b>Exclude Quoted Material</b> - allows the instructor to exclude text appearing in double quotation marks (i.e. " ") from being checked for matches when generating Originality Reports. This setting can be overridden in individual Originality Reports. Note that this setting will not allow misquotes to be identified, and note also that single quotation marks cannot be excluded.</li>
+<li><b>Exclude Small Matches</b> - allows the instructor to choose to exclude matches that are lower than a certain number of words (determined by the instructor) from being considered when generating Originality Reports. This setting can be overridden in individual Originality Reports.</li></ol>
+<p>Grademark option settings
+</p>
+<ol><li><b>Attach A Rubric To This Assignment</b> - to use a marking grid, enable it here (see Turnitin guidance on setting it up).</li></ol>
+<p>Advanced Turnitin Assignment settings:
+</p><p>The rest of the settings are not particular to Turnitin, so we won't cover them here.
+</p><p>Once you have selected all of the required options click 'Save and Display'. The assignment's summary page displays with options to configure each assignment part in more detail.
+</p>
+<h1><span class="mw-headline" id="Further_settings_for_a_Turnitin_assignment">Further settings for a Turnitin assignment</span></h1>
+<p>The summary screen displays settings organised in three tabs which we will describe in turn.
+</p>
+<h2><span class="mw-headline" id="Submission_Inbox_tab">Submission Inbox tab</span></h2>
+<p>When you are logged in as a Tutor you can access the student submission inbox by clicking the 'Submission Inbox' tab. Here you can edit some of  the settings you previously made (and access the rest via the Update button). You can also configure a Turnitin Rubric or QuickMark set (see Turnitin guidance on these), configure how many submissions display on each page, and refresh the submissions. You can notify students who have not submitted - particularly helpful if the submissions are anonymous.  Below those settings is the inbox of students' submitted work. 
+</p>
+<ul><li>If you have set up the assignment to use groups you will see a 'groups' dropdown located at the top of the page. Selecting a group will filter out all the students in other groups (not compatible with anonymous assignments).</li>
+<li>Next, you will see the title, start, due and post dates for the assignment. You can edit the dates simply by clicking on the date or the edit icon next to it. The post date is when any grades &amp; feedback will be revealed to students and anonymous assignments will become de-anonymised</li>
+<li>If you want to bulk download the assignments in either their original format or the Turnitin PDF format use the icons under the Export heading.</li>
+<li>The next icons provide quick links to the Rubric Manager and the Quickmark Manager.</li>
+<li>(If enabled) The next line down details any Peermark settings and provides a link to the Peermark Manager.</li>
+<li>The next section of the screen displays a table of all the submissions for the assignment</li>
+<li>You can control how many records you see on one page using the Show dropdown in the top left corner of the page. You can also use the Search function in the top left corner of the page if you need to search for one student.</li>
+<li>If a student's Similarity report says pending, you can click on the Refresh Submissions icon at the top of the table.</li>
+<li>The 'Student' column shows the name of the student (this will display anonymous if anonymous marking is enabled) The 'Similarity' column shows the percentage similarity score for the submission with a 'heat map' rectangle underneath it. If a submission is still being processed it will display 'Pending' and a grey rectangle. Note: Assignments should not usually take longer than &frac12; hr after submission to show the similarity report, however, at peak submission times this may take longer. If a report still says pending after several hours, please report this problem to ELE.</li>
+<li>The last two icons allow you to download or delete that individual submission. Note: Submission time stamps in red have been submitted after the deadline.</li></ul>
+<h3><span class="mw-headline" id="Submit_on_behalf_of_a_student">Submit on behalf of a student</span></h3>
+<p>You can submit on behalf of a student if necessary /  permissible by selecting the Cloud-Arrow icon in their record - though this won't work if submissions are set to be anonymous.
+</p>
+<h2><span class="mw-headline" id="Turnitin_Tutors_tab">Turnitin Tutors tab</span></h2>
+<p>This tab is usually only needed if you or colleagues expect to be accessing your assignment through Turnitin's web interface i.e. independently of Moodle. Here you can add any outstanding colleagues who need to be tutors. Difficulties bulk-downloading Turnitin inboxes are sometimes due to not being a Turnitin Tutor.
+</p>
+<h2><span class="mw-headline" id="Turnitin_Students_tab">Turnitin Students tab</span></h2>
+<p>This tab is usually only needed if you expect students to be accessing your assignment through Turnitin's web interface i.e. independently of Moodle. Here you can add any outstanding students whose work you need to access via Moodle.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260823021705
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.011 seconds
+Real time usage: 0.014 seconds
+Preprocessor visited node count: 24/1000000
+Post&#8208;expand include size: 681/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    2.685      1 Template:Turnitin_Moodle_Direct
+100.00%    2.685      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:11062-0!canonical and timestamp 20260823021705 and revision id 141800. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Turnitin%27s_Moodle_Direct_Integration_(Instructor_Guide)&amp;oldid=141800">https://docs.moodle.org/502/en/index.php?title=Turnitin%27s_Moodle_Direct_Integration_(Instructor_Guide)&amp;oldid=141800</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="4a0ebaa1fa7bf2d75b39657b9e3d1d7b.html" title="Category:Turnitin&#039;s Moodle Direct Integration">Turnitin&#039;s Moodle Direct Integration</a></li><li><a href="27cec39c9633dd48770872338440a43c.html" title="Category:Contributed code">Contributed code</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdkkv7n0e">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkkv7o4a"></button>
+					<div class="collapse navbar-collapse igdkkv7o4a" id="igdkkv7o4a">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Turnitin%27s_Moodle_Direct_Integration_(Instructor_Guide)" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Turnitin%27s_Moodle_Direct_Integration_(Instructor_Guide)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Turnitin%27s_Moodle_Direct_Integration_(Instructor_Guide)&amp;oldid=141800" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Turnitin%27s_Moodle_Direct_Integration_(Instructor_Guide)&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 22 September 2021, at 15:48.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":135,"wgPageParseReport":{"limitreport":{"cputime":"0.011","walltime":"0.014","ppvisitednodes":{"value":24,"limit":1000000},"postexpandincludesize":{"value":681,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    2.685      1 Template:Turnitin_Moodle_Direct","100.00%    2.685      1 -total"]},"cachereport":{"timestamp":"20260823021705","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Security recommendations - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"86a2ccfc3b919f2b017b4129","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Security_recommendations","wgTitle":"Security recommendations","wgCurRevisionId":155031,"wgRevisionId":155031,"wgArticleId":2072,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Security","Site administration"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Security_recommendations","wgRelevantArticleId":2072,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":["sysop"],"wgRestrictionMove":["sysop"],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Security_recommendations">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Security_recommendations rootpage-Security_recommendations layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhl4g0qb"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhl4g0qb" id="igdhl4g0qb">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Security+recommendations" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Security_recommendations">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Security_recommendations">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Security_recommendations">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="b859a9a32d3e71358a74bf06b4b09124.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Security_recommendations" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Security_recommendations&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Security_recommendations&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Security recommendations</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a> ► <a href="80d19145b4b4a905c08083096b6ab2b8.html" title="Security">Security</a> ► <a class="mw-selflink selflink">Security recommendations</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="80d19145b4b4a905c08083096b6ab2b8.html" title="Security">Security</a></div>	
+<div class="content">
+<ul><li><a class="mw-selflink selflink">Security recommendations</a></li>
+<li><a href="e25fca702c1df3293d49f8b5c8c7e368.html" title="Security checks">Security checks</a></li>
+<li><a href="fc51905f901bc1765d31f570b453b7d9.html" title="Site security settings">Site security settings</a></li>
+<li><a href="e65c00e4d2c98c0651dc6b367421a746.html" title="Site notifications">Site notifications</a></li>
+<li><a href="aa51869311177de786eb157fc89fdf06.html" title="Password salting">Password salting</a></li>
+<li><a href="9224458d8a9fc4c2083c7bd231bcd94f.html" title="Privacy">Privacy</a></li>
+<li><a href="fd2a052e22a9697929ab4c1677f9c8d0.html" title="Reducing spam in Moodle">Reducing spam</a></li>
+<li><a href="ce451eda7d5a9ddacf31674d9e1f6ebe.html" title="Security FAQ">Security FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p>All web application software is highly complex, and every application has security issues that are found from time to time, usually involving some combination of input that the programmers did not anticipate. The Moodle project takes security seriously, and is continuously improving Moodle to close such holes as we find them.
+</p><p><br>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Simple_security_measures"><span class="tocnumber">2</span> <span class="toctext">Simple security measures</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Basic_recommendations"><span class="tocnumber">3</span> <span class="toctext">Basic recommendations</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Run_regular_updates"><span class="tocnumber">4</span> <span class="toctext">Run regular updates</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Use_mailing_lists_to_stay_updated"><span class="tocnumber">5</span> <span class="toctext">Use mailing lists to stay updated</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Firewalls"><span class="tocnumber">6</span> <span class="toctext">Firewalls</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Password_policy"><span class="tocnumber">7</span> <span class="toctext">Password policy</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Be_prepared_for_the_worst"><span class="tocnumber">8</span> <span class="toctext">Be prepared for the worst</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Moodle_security_alerts"><span class="tocnumber">9</span> <span class="toctext">Moodle security alerts</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Miscellaneous_considerations"><span class="tocnumber">10</span> <span class="toctext">Miscellaneous considerations</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Most_secure/paranoid_file_permissions"><span class="tocnumber">11</span> <span class="toctext">Most secure/paranoid file permissions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Running_Moodle_on_a_dedicated_server"><span class="tocnumber">11.1</span> <span class="toctext">Running Moodle on a dedicated server</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Running_Moodle_on_a_shared_hosting_environment"><span class="tocnumber">11.2</span> <span class="toctext">Running Moodle on a shared hosting environment</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#See_also"><span class="tocnumber">12</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<ul><li>This page contains important security measures for your Moodle installation.</li>
+<li>If you find a potential security vulnerability in Moodle LMS, please see the <a rel="nofollow" class="external text" href="https://moodledev.io/general/development/process/security">Security procedures documentation</a> for instructions on how to safely report them. Reported issues will be triaged as soon as possible and fixes will be prioritised depending on the severity of the issue. On that page you can also see our responsible disclosure policy, which includes ensuring we inform registered Moodle sites before information about any vulnerabilities are published more widely.</li>
+<li>You should not post any details about potential security vulnerabilities either in the Moodle community forums or elsewhere on the web, particularly before a fix is announced on <a rel="nofollow" class="external free" href="https://moodle.org/security">https://moodle.org/security</a>, to ensure other Moodle sites are not exposed without having an opportunity to upgrade or patch the issue.</li></ul>
+<h2><span class="mw-headline" id="Simple_security_measures">Simple security measures</span></h2>
+<ul><li>The best security strategy is a good backup! But you don't have a good backup unless you are able to restore it. Test your restoration procedures!</li>
+<li>Load only software or services you will use</li>
+<li>Perform regular updates</li>
+<li>Model your security after the layers of clothing you wear on a cold winter day</li></ul>
+<h2><span class="mw-headline" id="Basic_recommendations">Basic recommendations</span></h2>
+<dl><dt>Update Moodle regularly on each release</dt>
+<dd>Published security holes draw crackers' attention after release. The older the version, the more vulnerabilities it is likely to contain.</dd>
+<dt>Use https to secure all pages (not just the login page)</dt>
+<dd>Protect all traffic from your Moodle instance and your users by making all pages accessible via https only. This not only protects passwords on login but also ensures the privacy of your users so that all user data cannot be intercepted or manipulated ("ad injections") from third parties like WLAN providers for example. Free https certificates are available from <a rel="nofollow" class="external free" href="https://letsencrypt.org/">https://letsencrypt.org/</a>. In addition, set httpslogin=yes in your moodle config to add an extra layer of protection for submitting login credentials.</dd>
+<dt><a href="admin/environment/custom_check/b2976a48c7ed439cabe21673d68e6d90.html" title="admin/environment/custom check/php check register globals">Register globals <b>MUST</b> be disabled</a></dt>
+<dd>This will help prevent against possible XSS problems in third-party scripts.</dd>
+<dt>Run the <a href="70b447067d8332c401b5f6e766369004.html" class="mw-redirect" title="Security overview report">Security Overview Report</a></dt>
+<dd>This identifies various configurations within your Moodle site that may pose a security risk, so any issues raised by that report should be investigated and action taken if necessary.</dd>
+<dt>Use strong passwords for admin and teachers</dt>
+<dd>Choosing "difficult" passwords is a basic security practice to protect against "brute force" cracking of accounts.</dd>
+<dt>Only give teacher accounts to trusted users. Avoid creating public sandboxes with free teacher accounts on production servers.</dt>
+<dd>Teacher accounts have much more liberal permissions and it is easier to create situations where data can be abused or stolen.</dd>
+<dt>Separate your systems as much as possible</dt>
+<dd>Another basic security technique is to use different passwords on different systems, use different machines for different services and so on.  This will prevent damage being widespread even if one account or one server is compromised.</dd></dl>
+<h2><span class="mw-headline" id="Run_regular_updates">Run regular updates</span></h2>
+<ul><li>Use auto update systems</li>
+<li>Windows Update</li>
+<li>Linux: up2date, yum, apt-get</li></ul>
+<dl><dd>Consider automating updates with a script scheduled via cron</dd></dl>
+<ul><li>Mac OSX update system</li>
+<li>Stay current with php, apache, and moodle</li></ul>
+<h2><span class="mw-headline" id="Use_mailing_lists_to_stay_updated">Use mailing lists to stay updated</span></h2>
+<ul><li>CISA Cybersecurity advisories - <a rel="nofollow" class="external free" href="https://www.cisa.gov/news-events/cybersecurity-advisories">https://www.cisa.gov/news-events/cybersecurity-advisories</a></li>
+<li>PHP - <a rel="nofollow" class="external free" href="http://www.php.net/mailing-lists.php">http://www.php.net/mailing-lists.php</a> - sign up for Announcements list</li>
+<li>MySQL - <a rel="nofollow" class="external free" href="http://lists.mysql.com/">http://lists.mysql.com</a> - sign up for MySQL Announcements</li></ul>
+<h2><span class="mw-headline" id="Firewalls">Firewalls</span></h2>
+<ul><li>Security experts recommend a dual firewall</li></ul>
+<dl><dd>Differing hardware/software combinations</dd></dl>
+<ul><li>Disabling unused services is often as effective as a firewall</li></ul>
+<dl><dd>Use netstat -a to review open network ports</dd></dl>
+<ul><li>Not a guarantee of protection</li>
+<li>Allow ports</li></ul>
+<dl><dd>80, 443(ssl), and 9111 (for chat),</dd>
+<dd>Remote admin: ssh 22, or rdp 3389</dd></dl>
+<h2><span class="mw-headline" id="Password_policy">Password policy</span></h2>
+<p>A password policy may be set up in <i>Settings &gt; Site administration &gt; Security &gt; <a href="0110860b4de758362cc79f71041d6882.html" class="mw-redirect" title="Site policies">Site policies</a></i>.
+</p><p>There is a check box to determine if password complexity should be enforced or not, the option to set the minimum length of the password, the minimum number of digits, the minimum number of lowercase characters, the minimum number of uppercase characters and the minimum number of non alphanumeric characters.
+</p><p>If a user enters a password that does not meet those requirements, they are given an error message indicating the nature of the problem with the entered password.
+</p><p>Enforcing password complexity along with requiring users to change their initial password go a long way in helping ensure that users choose and are in fact using "good passwords".
+</p><p>However, making the check too onerous just results in them writing it down so be realistic.
+</p>
+<h2><span class="mw-headline" id="Be_prepared_for_the_worst">Be prepared for the worst</span></h2>
+<ul><li>Have backups ready</li>
+<li>Practice recovery procedures ahead of time</li>
+<li>Use a rootkit detector on a regular basis
+<ul><li>Linux/MacOSX - <a rel="nofollow" class="external free" href="http://www.chkrootkit.org/">http://www.chkrootkit.org/</a></li>
+<li>Windows - <a rel="nofollow" class="external free" href="http://technet.microsoft.com/en-en/sysinternals/bb897445.aspx">http://technet.microsoft.com/en-en/sysinternals/bb897445.aspx</a> and <a rel="nofollow" class="external free" href="http://technet.microsoft.com/de-de/sysinternals/bb897445.aspx">http://technet.microsoft.com/de-de/sysinternals/bb897445.aspx</a></li></ul></li></ul>
+<h2><span class="mw-headline" id="Moodle_security_alerts">Moodle security alerts</span></h2>
+<ul><li>Register your site with Moodle.org</li></ul>
+<dl><dd>Registered users receive email alerts</dd></dl>
+<ul><li>Security alerts also posted online</li>
+<li>Web - <a rel="nofollow" class="external free" href="http://moodle.org/security">http://moodle.org/security</a></li>
+<li>RSS feed - <a rel="nofollow" class="external free" href="http://moodle.org/rss/file.php/1/1/forum/996/rss.xml">http://moodle.org/rss/file.php/1/1/forum/996/rss.xml</a></li></ul>
+<h2><span class="mw-headline" id="Miscellaneous_considerations">Miscellaneous considerations</span></h2>
+<p>These are all things you might consider that impact your overall security:
+</p>
+<ul><li>Use the secure forms setting</li>
+<li>Always set a mysql root user password</li>
+<li>Turn off mysql network access</li>
+<li>Use SSL, httpslogins=yes</li>
+<li>Use good passwords - set up a password policy in <i>Settings &gt; Site administration &gt; Security &gt; <a href="0110860b4de758362cc79f71041d6882.html" class="mw-redirect" title="Site policies">Site policies</a></i></li>
+<li>Do not enable the <i>opentowebcrawlers</i> setting (in <i>Settings &gt; Site administration &gt; Security &gt; <a href="0110860b4de758362cc79f71041d6882.html" class="mw-redirect" title="Site policies">Site policies</a></i>)</li>
+<li>Disable guest access</li>
+<li>Place enrollment keys on all courses or set Course Enrollable = No for all courses</li>
+<li>Ensure the enrolment key hint is disabled (which it is by default) in <i>Administration &gt; Site administration &gt; Plugins &gt; Enrolment &gt; Self enrolment.</i></li></ul>
+<h2><span id="Most_secure.2Fparanoid_file_permissions"></span><span class="mw-headline" id="Most_secure/paranoid_file_permissions">Most secure/paranoid file permissions</span></h2>
+<p><b>Note</b>: <u>The following information applies to Linux/Unix based installations only, as MS Windows permission system is quite different</u>.
+</p><p>Depending on your server set-up there are two different scenarios:
+</p>
+<ol><li>You are running Moodle on your own dedicated server.</li>
+<li>You are running Moodle on a shared hosting environment.</li></ol>
+<p>In the sections below, you are required to use the web service user account and group to set the permissions, so you need to know them. This can vary quite a bit from server to server but if this feature has not been disabled in your server, you can go to <i>http://your.moodle.site/admin/phpinfo.php</i> (logging in as admin), and then search for the line that reads 'User/Group', inside the 'apache' table. For example, I get 'www-data' for the user account and 'www-data' for the group too.
+</p>
+<h3><span class="mw-headline" id="Running_Moodle_on_a_dedicated_server">Running Moodle on a dedicated server</span></h3>
+<p>Assuming you are running Moodle on a sealed server (i.e. no user logins allowed on the machine) and that root takes care of the modifications to both moodle code and moodle config (config.php), then this are the most tight permissions I can think of:
+</p><p>1. moodledata directory and all of its contents (and subdirectories, includes sessions):
+</p>
+<pre>owner: apache user (apache, httpd, www-data, whatever; see above)
+group: apache group (apache, httpd, www-data, whatever; see above)
+permissions: 700 on directories, 600 on files
+</pre>
+<p>2. moodle directory and all of its contents and subdirectories (including config.php):
+</p>
+<pre>owner: root
+group: root
+permissions: 755 on directories, 644 on files.
+</pre>
+<p>If you allow local logins for regular users, then 2. should be:
+</p>
+<pre>owner: root
+group: apache group (apache, httpd, www-data, whatever; see above)
+permissions: 750 on directories, 640 on files.
+</pre>
+<p>Think of these permissions as the most paranoid ones. You can be secure enough with less tighter permissions, both in moodledata and moodle directories (and subdirectories).
+</p>
+<h3><span class="mw-headline" id="Running_Moodle_on_a_shared_hosting_environment">Running Moodle on a shared hosting environment</span></h3>
+<p>If you are running Moodle on a shared hosting environment, then above permissions are probably wrong. If you set 700 as the permission for directories (and 600 for files), you are probably denying the web service user account access to your directories and files.
+</p><p>If you want to tighten your permissions as much as possible, you will need to know:
+</p>
+<ol><li>the user account and the group the web service is running under (see above).</li>
+<li>the owner of the directories/files of both moodledata and the moodle directory (this should normally be your client user account), and the group of the directories/files. You can usually get this information from the file manager of your hosting control panel. Go to the moodle folder and pick any directory or file and try to view/change the permissions, owner and group of that file. That would normally show the current permissions, owner and group. Do the same for the moodledata directory.</li></ol>
+<p>Then, depending on the following scenarios you should use a different set of permissions (listed from more secure to less secure) for your moodledata directory:
+</p>
+<ol><li>if the web service account and the owner of the directories/files is the same, you should use 700 for directories and 600 for files.</li>
+<li>if the web service group and the group of the directories/files is the same, you should use 770 for directories and 660 for the files.</li>
+<li>if none of the above, you will need to use 777 for directories and 666 for files, which is less secure but it is your only option. 707 and 606 would be more secure, but it might or might not work, depending on your particular setup.</li></ol>
+<p>In fact, you just need to set moodledata the permissions specified above, as all the directories and files inside are created by the web service itself, and will have the right permissions.
+</p><p>Regarding the moodle directory, as long as the web service user account can read the files plus read and execute the directories, that should be enough. There is no need to grant write permission to the web service account/group on any of the files or subdirectories. The only drawback is that you will need to create the config.php by hand during the installation process, as Moodle will not be able to create it. But that should not be a big problem.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="ce451eda7d5a9ddacf31674d9e1f6ebe.html" title="Security FAQ">Security FAQ</a></li>
+<li><a rel="nofollow" class="external text" href="https://moodle.com/news/top-security-tips-for-moodle-administrators/">Top security tips for Moodle administrators article</a></li></ul>
+<p>Using Moodle forum discussions:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=39404">Guide to Securing your Moodle Server</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=93561">How to secure Moodle website from hacking</a> including recommendations on emergency recovery</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822154126
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.021 seconds
+Real time usage: 0.025 seconds
+Preprocessor visited node count: 60/1000000
+Post&#8208;expand include size: 530/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 41/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    2.960      1 Template:Security
+100.00%    2.960      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:2072-0!canonical and timestamp 20260822154126 and revision id 155031. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Security_recommendations&amp;oldid=155031">https://docs.moodle.org/502/en/index.php?title=Security_recommendations&amp;oldid=155031</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="42bdb4490cde9a6566ee16c6c64d3830.html" title="Category:Security">Security</a></li><li><a href="2aac34b4c717bbba405f973f3d7b4021.html" title="Category:Site administration">Site administration</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhl4g322">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhl4g3k6"></button>
+					<div class="collapse navbar-collapse igdhl4g3k6" id="igdhl4g3k6">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Security_recommendations" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Security_recommendations" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Security_recommendations&amp;oldid=155031" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Security_recommendations&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Recomendaciones_de_Seguridad" title="Recomendaciones de Seguridad – español" lang="es" hreflang="es" data-title="Recomendaciones de Seguridad" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Sécurité" title="Sécurité – français" lang="fr" hreflang="fr" data-title="Sécurité" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 23 February 2026, at 05:18.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":148,"wgPageParseReport":{"limitreport":{"cputime":"0.021","walltime":"0.025","ppvisitednodes":{"value":60,"limit":1000000},"postexpandincludesize":{"value":530,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":41,"limit":5000000},"timingprofile":["100.00%    2.960      1 Template:Security","100.00%    2.960      1 -total"]},"cachereport":{"timestamp":"20260822154126","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

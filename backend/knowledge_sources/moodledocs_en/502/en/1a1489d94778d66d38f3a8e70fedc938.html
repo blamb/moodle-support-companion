@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Moodle migration - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"7f259399991381c796de6574","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Moodle_migration","wgTitle":"Moodle migration","wgCurRevisionId":150406,"wgRevisionId":150406,"wgArticleId":5032,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Moodle_migration","wgRelevantArticleId":5032,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Moodle_migration">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Moodle_migration rootpage-Moodle_migration layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhk64tiv"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhk64tiv" id="igdhk64tiv">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Moodle+migration" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Moodle_migration">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Moodle_migration">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Moodle_migration">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="1a1489d94778d66d38f3a8e70fedc938.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Moodle_migration" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_migration&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_migration&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Moodle migration</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a> ► <a class="mw-selflink selflink">Moodle migration</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a></div>	
+<div class="content">
+<ul><li><a href="553207f76ae3b1e85403f96c2ca316f1.html" title="Installing Moodle">Installing Moodle</a></li>
+<li><a href="399ca91535c3410845bff1400293dbc5.html" title="Installation quick guide">Installation quick guide</a></li>
+<li><a href="37fc181470a569556f94c1f35940d0a7.html" title="Cron">Cron</a></li>
+<li><a href="081d50b0942d418fa28114398527e388.html" title="Nginx">Nginx</a></li>
+<li><a href="6831e4affebb174320f861bc76b08775.html" title="Apache">Apache</a></li>
+<li><a href="68065410acf60db421f4e2aac18bc951.html" title="Internet Information Services">IIS</a></li>
+<li><a href="838fe95223f139a5c86fa0eace52fb64.html" title="Configuring the Router">Routing</a></li>
+<li><a href="b8a47099f49d74586081af402e096238.html" title="Installing plugins">Installing plugins</a></li>
+<li><a href="52d1d262bc125752f9747df1abc77de6.html" title="Installation FAQ">Installation FAQ</a></li>
+<li><a href="b38923733584457a7e29bf0e898e9c97.html" title="Upgrading">Upgrading</a></li>
+<li><a href="451fc5f44047acbcf3c960e787eb56c6.html" title="Upgrade overview">Upgrade overview</a></li>
+<li><a href="784f6d5df0514efb399c81a6f803d2c7.html" title="Automatic updates deployment">Automatic updates deployment</a></li>
+<li><a href="14569a6d13e60324f1803b54b2ffb589.html" title="Git for Administrators">Git guide</a></li>
+<li><a href="8428d1ac0de33e2b0f542d6d962f1fa6.html" title="Administration via command line">Administration via command line</a></li>
+<li><a href="6aeead2c752a1a71fc9b37a62d913491.html" title="Upgrading FAQ">Upgrading FAQ</a></li>
+<li><a class="mw-selflink selflink">Moodle migration</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p>There may be times when you need to move your entire Moodle site from one server to another. For example, you might move a Moodle site from a shared hosting service's server to a dedicated server or VPS, from an old server to a new server, to a second (perhaps experimental) instance on the same server, or even between a server and a local Moodle installation on your computer. These scenarios are referred to as "migration," which is a broad term. Due to the variety of migration scenarios, it is most challenging to describe a common technique applicable to all. However, the general principles and steps will be outlined below.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Recommended_method"><span class="tocnumber">1</span> <span class="toctext">Recommended method</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Turn_on_maintenance_mode"><span class="tocnumber">1.1</span> <span class="toctext">Turn on maintenance mode</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Backup_the_Moodle_database_on_the_old_server"><span class="tocnumber">1.2</span> <span class="toctext">Backup the Moodle database on the old server</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Prepare_the_new_server"><span class="tocnumber">1.3</span> <span class="toctext">Prepare the new server</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Restore_the_database_backup_to_the_new_server"><span class="tocnumber">1.4</span> <span class="toctext">Restore the database backup to the new server</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Copy_moodledata_from_the_old_server_to_the_new_server"><span class="tocnumber">1.5</span> <span class="toctext">Copy moodledata from the old server to the new server</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Copy_the_Moodle_code_from_the_old_server_to_the_new_server"><span class="tocnumber">1.6</span> <span class="toctext">Copy the Moodle code from the old server to the new server</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Update_config.php_with_the_URL_of_the_new_server"><span class="tocnumber">1.7</span> <span class="toctext">Update config.php with the URL of the new server</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Test_the_copied_site"><span class="tocnumber">1.8</span> <span class="toctext">Test the copied site</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Update_links_containing_wwwroot_in_the_database"><span class="tocnumber">1.9</span> <span class="toctext">Update links containing wwwroot in the database</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Take_the_site_out_of_maintenance_mode"><span class="tocnumber">1.10</span> <span class="toctext">Take the site out of maintenance mode</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Quick_and_hacky_method"><span class="tocnumber">2</span> <span class="toctext">Quick and hacky method</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Other_considerations"><span class="tocnumber">3</span> <span class="toctext">Other considerations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Upgrade_Moodle_at_the_same_time?"><span class="tocnumber">3.1</span> <span class="toctext">Upgrade Moodle at the same time?</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#DNS_&amp;_masquerading_changes"><span class="tocnumber">3.2</span> <span class="toctext">DNS &amp; masquerading changes</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Internal_and_external_access"><span class="tocnumber">3.3</span> <span class="toctext">Internal and external access</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#reCAPTCHA"><span class="tocnumber">3.4</span> <span class="toctext">reCAPTCHA</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Other_Documentation"><span class="tocnumber">3.5</span> <span class="toctext">Other Documentation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Any_questions?"><span class="tocnumber">5</span> <span class="toctext">Any questions?</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Recommended_method">Recommended method</span></h2>
+<p>There are many ways to migrate a Moodle site.  This "recommended method" is one commonly used.
+</p><p>If you desire a Moodle version that is newer than the one you are migrating, this is referred to as "Upgrading," and you should do the upgrade before migrating or after migrating.  Refer to Moodle Docs about "Upgrading."
+</p>
+<h3><span class="mw-headline" id="Turn_on_maintenance_mode">Turn on maintenance mode</span></h3>
+<p>Place your current Moodle site into <a href="7c24d3197f3c64f699af1fac44e1e483.html" title="Maintenance mode">Maintenance mode</a> via <i>Site Administration &gt; Server &gt; Maintenance Mode</i> to prevent any further additions to the Moodle database. Don't let administrators login during the migration as they are not affected by the maintenance mode setting.
+</p>
+<h3><span class="mw-headline" id="Backup_the_Moodle_database_on_the_old_server">Backup the Moodle database on the old server</span></h3>
+<p>The right way to back up your database depends on which database system you are using. The instructions below is one example way to back up a MySQL database using a terminal application. You must modify each line based on your situation. It assumes that you have a folder called "backup_directory" and that a backup file currently exists.  The first line navigates to the backup directory.  The second line renames your existing backup to "old."  The third line is a MySQL command for "dumping" your database into a file called "moodle-database.sql. If you only write "-p" without your password, you will be prompted for it.  These lines can be converted into a script that you can run from command line on UNIX.  Some folks will create a UNIX cronjob to run the script regularly, such as every night.
+</p>
+<pre>cd /my/backup_directory
+mv moodle-database.sql.gz moodle-database-old.sql.gz
+mysqldump -h example.com -u myusername -p'mypassword' -C -Q -e --create-options mydatabasename &gt; moodle-database.sql
+</pre>
+<p>Another option would be to use a tool like phpMyAdmin to manually make a backup.
+</p><p>The documentation for your database will give more options.
+</p><p>Which ever method you use, it is paramount that you have a good backup.  Without a good backup, you will encounter problems and be wasting time.
+</p>
+<h3><span class="mw-headline" id="Prepare_the_new_server">Prepare the new server</span></h3>
+<p>Your new server must be capable of running Moodle so it must have a web server (e.g., Apache or Nginx,) a database (e.g.,  MySQL, MariaDB, or PostgreSQL) and the PHP scripting language.  The database and PHP version must be compatible with the Moodle version you plan to migrate.    
+</p><p>Consider installing a brand new trial Moodle on the new server to verify all requirements are satisfied and the location of the moodle code and moodledata directories are the same as on your old server. For help installing Moodle, review "Installing Moodle - MoodleDocs." In Moodle, go to Site Administration | Server | Environment to ascertain that everything is okay.  <i><b>Fix any problems before attempting your migration!</b></i>   
+</p><p>Following this check, move a copy of the config.php file to a safe location for reference, then delete the <b> new server </b> moodle and moodledata directories and "drop" the <b> new server </b> database so the files and database from your old server can be migrated to replace them. 
+</p>
+<h3><span class="mw-headline" id="Restore_the_database_backup_to_the_new_server">Restore the database backup to the new server</span></h3>
+<p>Create a database on your new server.  It should have the correct collation, typically utf8mb4_unicode_ci.  You create a database from a command line or from a database tool, such as phpMyAdmin.  It will not yet have any tables and table data in it.
+</p><p>Copy the database backup file to the new server.
+</p><p>Once you have created the new database on the new server and copied the database backup file to it, restore the backup with the following command (for MySQL).  Again, this code is only an example; you must modify it to match your Moodle.
+</p>
+<pre>mysql -p new_database &lt; moodle-database.sql</pre>
+<p>Depending on the size of your old Moodle backup file, the restore can time some time. 
+</p><p>For other databases, follow their instructions for restoring a backup. 
+</p>
+<h3><span class="mw-headline" id="Copy_moodledata_from_the_old_server_to_the_new_server">Copy moodledata from the old server to the new server</span></h3>
+<p>Copy the contents of your data directory (check for the value in <code>$CFG-&gt;dataroot</code> in your old config.php file) to the new server. This can be a lot of data, so consider using a good data copying tool like <a rel="nofollow" class="external text" href="https://rsync.samba.org/">rsync</a>. If using an FTP client, the transfer of the <code>filedir</code> folder must be in <b>BINARY</b> mode or the files will get corrupted in the process.  You might also consider "tarring" (i.e., zipping, or compressing) the old moodledata folder prior to copying it so that you only have one file to copy instead of thousands.
+</p><p>NB: It is not necessary to copy the contents of these directories:
+</p>
+<ul><li>/moodledata/cache</li>
+<li>/moodledata/localcache</li>
+<li>/moodledata/sessions</li>
+<li>/moodledata/temp</li>
+<li>/moodledata/trashdir</li></ul>
+<p>Omitting these files will reduce transfer time substantially.
+</p><p>Check the file permissions of the copied files. The web server needs read and write access.
+</p>
+<h3><span class="mw-headline" id="Copy_the_Moodle_code_from_the_old_server_to_the_new_server">Copy the Moodle code from the old server to the new server</span></h3>
+<p>Realize that your current Moodle might contain plugins and code changes, so it is recommended to move your entire Moodle code folder to the new server. You should be able to find your Moodle code folder. It is typically located somewhere in your webroot folder (e.g., /var/www or public_html) and commonly contains "moodle" in its name, but it can be any name. The folder's name can be found in config.php, and if you have found config.php, you have undoubtedly found the Moodle folder.    
+</p><p>Check the file permissions of the copied files. The web server needs read access.
+</p>
+<h3><span class="mw-headline" id="Update_config.php_with_the_URL_of_the_new_server">Update config.php with the URL of the new server</span></h3>
+<p>Moodle's config.php file contains information about your Moodle installation, and everything in it must be correct.  If your migration moves Moodle to a new URL, you need to check some settings in config.php.  Open the config.php file in your old Moodle that you just moved, and copare it with the config.php file that you moved to a safe spot from your "prepared" installation, above.  Most likely, you will need to update $CFG-&gt;wwwroot to the new URL location, and you will likely need to update $CFG-&gt;dataroot.
+</p><p>Also check the other properties, such as $CFG-&gt;dbname, $CFG-&gt;dbuser, and $CFG-&gt;dbpass.  Your best guide will be to look at the config.php file from your trial Moodle installation.  
+</p><p>While you're at it, potentially consider making a new config.php from the latest config-dist.php, to give you more config override options in the future, should you need them.
+</p>
+<h3><span class="mw-headline" id="Test_the_copied_site">Test the copied site</span></h3>
+<p>You should now be able to log into the new site as admin, and verify that most things are working.  If your copied site is not working, the first thing to check is usually the settings in config.php.  Again, they must be correct.  Another common problem is not having the correct database version or PHP version.  If your copied site is still not working, this would be a good time to ask for some help in the moodle.org forums, making sure to describe exactly what you have done and the exact error messages you see.  Be patient for help, a migration is can be challenging.
+</p>
+<h3><span class="mw-headline" id="Update_links_containing_wwwroot_in_the_database">Update links containing wwwroot in the database</span></h3>
+<p>The one thing we have not fixed is any internal links stored in the database. To fix these use the <a href="76a7c9afadd6a60caa62d1ad770f622a.html" title="Search and replace tool">Search and replace tool</a> by going to {wwwroot}/admin/tool/replace/index.php.
+</p><p>Enter the url for your old server (https://oldserver.com/) and new server (https://newserver.com/) and it will fix any links stored in the database.
+</p>
+<h3><span class="mw-headline" id="Take_the_site_out_of_maintenance_mode">Take the site out of maintenance mode</span></h3>
+<p>Test the migration some more, then when you are satisfied, remember to take the site out of maintenance mode.
+</p>
+<h2><span class="mw-headline" id="Quick_and_hacky_method">Quick and hacky method</span></h2>
+<p>If you have shell access on both servers, here is a quick command-line based method.
+</p>
+<ul><li>Set up a new empty database on the <b>new</b> server.</li>
+<li>Place your existing Moodle site into maintenance mode.</li>
+<li>Login to shell on the <b>old</b> existing server.</li>
+<li>Use rsync to copy <b>moodledata</b> and <b>public_html</b> or <b>moodle</b> folders (or whatever directory your Moodle install is in) to the new server - execute (replacing caps with your details; SOURCE = the directory you want to copy) for each directory:</li></ul>
+<dl><dd><dl><dd><code>rsync -av -e ssh SOURCE/ USERNAME@NEW_SERVER.COM:/PATH/TO/DESTINATION/</code></dd></dl></dd></dl>
+<ul><li>Dump existing database and move and import into database on new server by executing:</li></ul>
+<dl><dd><dl><dd><code>mysqldump --allow-keywords --opt -uMySQL_USERNAME -pPASSWORD DATABASE | ssh USER@DOMAIN "mysql -uMySQL_USERNAME -pPASSWORD DATABASE"</code></dd></dl></dd></dl>
+<ul><li>Replace any links in the database that contain the full site URL:</li></ul>
+<dl><dd><dl><dd><code>#sed -e 's/oldserver.com/newserver.com/g' oldmysqldump.sql &gt; newmysqldump.sql</code></dd></dl></dd></dl>
+<ul><li>On the <b>new server</b>, update <b>config.php</b> with relevant details where applicable (e.g. database name and user details, the wwwroot and the dataroot).</li>
+<li>Check ownership and permissions are correct on both moodle code and moodleData directories.</li>
+<li>Make sure everything is working.</li></ul>
+<p>Takes about 15 minutes for a small site. However, transferring several Gigabytes of data for a larger site can take hours depending on your network connection and hard drive read/write speed.
+</p><p>When you are happy all has gone well, set up redirects/make DNS changes if required, take new site out of maintenance mode and "switch off" old site. 
+</p>
+<ul><li>If you are switching the IP address from the old server to the new one, you will need to turn off the old server before firing up the new one to avoid IP addressing conflicts and confusion!</li></ul>
+<h2><span class="mw-headline" id="Other_considerations">Other considerations</span></h2>
+<h3><span id="Upgrade_Moodle_at_the_same_time.3F"></span><span class="mw-headline" id="Upgrade_Moodle_at_the_same_time?">Upgrade Moodle at the same time?</span></h3>
+<p>While doing the work of migrating Moodle, you might want to <a href="b38923733584457a7e29bf0e898e9c97.html" title="Upgrading">upgrade Moodle</a> to the latest version at the same time. On the other hand, if you do that, and something breaks, you won't be sure which change caused the problem, so the more cautious approach is to change one thing at a time, and test in between to verify that all is well. 
+</p><p>Also consider PHP Versions - if you're looking to upgrade PHP as part of the process on the new server, then you'll have to make sure the Moodle Version you're copying across supports both the PHP Versions.
+</p>
+<h3><span id="DNS_.26_masquerading_changes"></span><span class="mw-headline" id="DNS_&amp;_masquerading_changes">DNS &amp; masquerading changes</span></h3>
+<p>You may have had to change the DNS entries for the new Moodle site. If you have done so, it will take some time for the changes to replicate, so be patient. If your server is located behind a firewall, you may also have to change your firewall rules to allow access to the new server. See the <a href="3100a44ff5072649fc39dbae05087b4d.html" title="Masquerading"> masquerading docs</a>.
+</p>
+<h3><span class="mw-headline" id="Internal_and_external_access">Internal and external access</span></h3>
+<p>If you have a set up where your Moodle site can be accessed via a network and via the internet, ensure you check that the new site can be accessed internally and externally.
+</p>
+<h3><span class="mw-headline" id="reCAPTCHA">reCAPTCHA</span></h3>
+<p>If you migrate to a new domain and have setup <a href="b6d388a2ea2166f451cb9e8a93c4026a.html" title="Email-based self-registration">Email-based self-registration</a>, you need to create new API-Keys at google. You will find the explanation and links to google in <a href="b6d388a2ea2166f451cb9e8a93c4026a.html" title="Email-based self-registration">Email-based self-registration</a>.
+</p>
+<h3><span class="mw-headline" id="Other_Documentation">Other Documentation</span></h3>
+<p>One other thing to consider is to have a look at all the installation documents for everything you're going to migrate to - e.g. Webserver (<a href="6831e4affebb174320f861bc76b08775.html" title="Apache">Apache</a>/<a href="081d50b0942d418fa28114398527e388.html" title="Nginx">Nginx</a>/<a href="3ac4249ba2cbf317d282d165134daded.html" title="OpenLiteSpeed">OpenLiteSpeed</a>), <a href="b0cd9749b4df4e8c98a3d559d046d352.html" title="MariaDB">MariaDB</a>/<a href="b91f71678142951f89520aabd6b6ab45.html" title="MySQL">MySQL</a>, <a href="83650e1458408d473e108837eda43ce6.html" title="Redis cache store">Redis cache store</a>, <a href="8d6776e41f1623d31117f11b16014074.html" title="Microsoft 365">Microsoft 365</a> and also the initial <a href="553207f76ae3b1e85403f96c2ca316f1.html" title="Installing Moodle">Moodle Installation Guide</a> as more specific setup steps are present within each, but it'll also give you an idea as to what you may need to (re)setup on your new server as well.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="9a7509e03babc1def9f404e05acd8435.html" title="Site backup">Site backup</a></li>
+<li><a href="82a540b23d60cbd970fa6ed0c8acc64a.html" title="Site restore">Site restore</a></li>
+<li><a href="c2a342a5b913497746e49976cdc22342.html" title="Backup and restore FAQ">Backup and restore FAQ</a></li>
+<li><a href="d2fef13d731df9445395a9c2e0a9fd89.html" title="Performance recommendations">Performance recommendations</a></li></ul>
+<h2><span id="Any_questions.3F"></span><span class="mw-headline" id="Any_questions?">Any questions?</span></h2>
+<p>Please post in the <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/view.php?id=28">Installing and upgrading help forum</a> on moodle.org
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260822124938
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.019 seconds
+Real time usage: 0.023 seconds
+Preprocessor visited node count: 106/1000000
+Post&#8208;expand include size: 656/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 310/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    1.914      1 Template:Installing_Moodle
+100.00%    1.914      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:5032-0!canonical and timestamp 20260822124938 and revision id 150406. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Moodle_migration&amp;oldid=150406">https://docs.moodle.org/502/en/index.php?title=Moodle_migration&amp;oldid=150406</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="7f264aa70db3768dcef1896a8ec93e70.html" title="Category:Installation">Installation</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhk64vaj">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhk64vp9"></button>
+					<div class="collapse navbar-collapse igdhk64vp9" id="igdhk64vp9">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Moodle_migration" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Moodle_migration" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_migration&amp;oldid=150406" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_migration&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Migración_de_Moodle" title="Migración de Moodle – español" lang="es" hreflang="es" data-title="Migración de Moodle" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Migration_de_Moodle" title="Migration de Moodle – français" lang="fr" hreflang="fr" data-title="Migration de Moodle" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/Moodle移行" title="Moodle移行 – 日本語" lang="ja" hreflang="ja" data-title="Moodle移行" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Moodle-Migration" title="Moodle-Migration – Deutsch" lang="de" hreflang="de" data-title="Moodle-Migration" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 6 December 2024, at 22:21.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":104,"wgPageParseReport":{"limitreport":{"cputime":"0.019","walltime":"0.023","ppvisitednodes":{"value":106,"limit":1000000},"postexpandincludesize":{"value":656,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":310,"limit":5000000},"timingprofile":["100.00%    1.914      1 Template:Installing_Moodle","100.00%    1.914      1 -total"]},"cachereport":{"timestamp":"20260822124938","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

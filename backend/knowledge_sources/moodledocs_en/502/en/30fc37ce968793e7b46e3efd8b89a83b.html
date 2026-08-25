@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>LDAP authentication - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"91ce9c5a91bc0aba19402642","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"LDAP_authentication","wgTitle":"LDAP authentication","wgCurRevisionId":150879,"wgRevisionId":150879,"wgArticleId":2081,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Authentication","Pages requiring updating"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"LDAP_authentication","wgRelevantArticleId":2081,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/LDAP_authentication">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-LDAP_authentication rootpage-LDAP_authentication layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhkbzjh8"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhkbzjh8" id="igdhkbzjh8">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=LDAP+authentication" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/LDAP_authentication">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/LDAP_authentication">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/LDAP_authentication">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="30fc37ce968793e7b46e3efd8b89a83b.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:LDAP_authentication" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=LDAP_authentication&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=LDAP_authentication&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">LDAP authentication</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a>  ► <a href="236dc8d53a6146955905ab37c10ae1c1.html" title="Authentication">Authentication</a>  ►  <a class="mw-selflink selflink">LDAP authentication</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="236dc8d53a6146955905ab37c10ae1c1.html" title="Authentication">Authentication</a></div>	
+<div class="content">
+<ul><li><a href="56f71475ca5396fe5c368188b0c8a682.html" title="Managing authentication">Managing authentication</a></li>
+<li><a href="8cbfda637dd7e95bf073ff6a947aaee0.html" title="Manual accounts">Manual accounts</a></li>
+<li><a href="42871dbaab8add369ee3eccb5976cbed.html" title="No login">No login</a></li>
+<li><a href="b6d388a2ea2166f451cb9e8a93c4026a.html" title="Email-based self-registration">Email-based self-registration</a></li>
+<li><a href="b44394139ca450747843f44c94938068.html" title="External database authentication">External database</a></li>
+<li><a class="mw-selflink selflink">LDAP</a></li>
+<li><a href="9f1ad945da14dd10aab0c99ebf7e3af4.html" class="mw-redirect" title="LTI">LTI</a></li>
+<li><a href="1ae69e07d6d34d4d83c9c4ca596a0b36.html" title="No authentication">No authentication</a></li>
+<li><a href="e9d8f7e3af380059f76b8f5d4ab0fa61.html" title="OAuth 2 authentication">OAuth 2</a></li>
+<li><a href="a30d98018bff09d1ea2804e0db1a3cf0.html" title="Shibboleth">Shibboleth</a></li>
+<li><a href="042948956eb0db5e30d81315af28f4cd.html" title="Web services authentication">Web services</a></li>
+<li><a href="ad8b7b337c3e8d839e1aa452c1361cd5.html" title="Multi-factor authentication">Multi-factor authentication</a></li>
+<li><a href="78e268c6d634eff1236f431e82700f58.html" title="Authentication FAQ">Authentication FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p class="note"><i>This page requires updating.</i> Please do so and remove this template when finished.</p>
+<p><br>
+This document describes how to set up Lightweight Directory Access Protocol (LDAP) authentication in Moodle. We cover the basic, advanced and some trouble shooting sections to assist the user in the installation and administrating LDAP in Moodle. 
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Basic_Scenario"><span class="tocnumber">1</span> <span class="toctext">Basic Scenario</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Assumptions"><span class="tocnumber">1.1</span> <span class="toctext">Assumptions</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Enabling_LDAP_authentication"><span class="tocnumber">1.2</span> <span class="toctext">Enabling LDAP authentication</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#LDAP_Server_Settings"><span class="tocnumber">1.2.1</span> <span class="toctext">LDAP Server Settings</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Bind_settings"><span class="tocnumber">1.2.2</span> <span class="toctext">Bind settings</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#User_lookup_settings"><span class="tocnumber">1.2.3</span> <span class="toctext">User lookup settings</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Force_change_password"><span class="tocnumber">1.2.4</span> <span class="toctext">Force change password</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#LDAP_password_expiration_settings"><span class="tocnumber">1.2.5</span> <span class="toctext">LDAP password expiration settings</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Enable_user_creation"><span class="tocnumber">1.2.6</span> <span class="toctext">Enable user creation</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Assign_system_roles"><span class="tocnumber">1.2.7</span> <span class="toctext">Assign system roles</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#User_account_synchronisation"><span class="tocnumber">1.2.8</span> <span class="toctext">User account synchronisation</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#NTLM_SSO"><span class="tocnumber">1.2.9</span> <span class="toctext">NTLM SSO</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Data_Mapping"><span class="tocnumber">1.2.10</span> <span class="toctext">Data Mapping</span></a>
+<ul>
+<li class="toclevel-4 tocsection-14"><a href="#Custom_User_profile_fields"><span class="tocnumber">1.2.10.1</span> <span class="toctext">Custom User profile fields</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Enabling_the_LDAP_users_sync_job"><span class="tocnumber">2</span> <span class="toctext">Enabling the LDAP users sync job</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Active_Directory_help"><span class="tocnumber">3</span> <span class="toctext">Active Directory help</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Advanced_Scenarios_-_Multiple_servers_or_locations"><span class="tocnumber">4</span> <span class="toctext">Advanced Scenarios - Multiple servers or locations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Making_your_LDAP_directory_connection_resilient"><span class="tocnumber">4.1</span> <span class="toctext">Making your LDAP directory connection resilient</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Using_a_multi-domain_AD_environment"><span class="tocnumber">4.2</span> <span class="toctext">Using a multi-domain AD environment</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Connecting_to_Multiple_LDAP_Servers_NOT_in_the_Same_Forest_(Cloning)"><span class="tocnumber">4.3</span> <span class="toctext">Connecting to Multiple LDAP Servers NOT in the Same Forest (Cloning)</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Using_multiple_user_locations_(contexts)_in_your_LDAP_tree"><span class="tocnumber">4.4</span> <span class="toctext">Using multiple user locations (contexts) in your LDAP tree</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Using_LDAPS_(LDAP_over_SSL)"><span class="tocnumber">4.5</span> <span class="toctext">Using LDAPS (LDAP over SSL)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-23"><a href="#Enabling_LDAPS_on_your_directory_server"><span class="tocnumber">4.5.1</span> <span class="toctext">Enabling LDAPS on your directory server</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#Enabling_LDAPS_on_your_Moodle_server"><span class="tocnumber">4.5.2</span> <span class="toctext">Enabling LDAPS on your Moodle server</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#Linux_servers"><span class="tocnumber">5</span> <span class="toctext">Linux servers</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#Windows_servers"><span class="tocnumber">6</span> <span class="toctext">Windows servers</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#Appendices"><span class="tocnumber">7</span> <span class="toctext">Appendices</span></a>
+<ul>
+<li class="toclevel-2 tocsection-28"><a href="#Setting_Resource_Limits_RedHat_Directory_Server"><span class="tocnumber">7.1</span> <span class="toctext">Setting Resource Limits RedHat Directory Server</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="#Any_questions?"><span class="tocnumber">8</span> <span class="toctext">Any questions?</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#See_also"><span class="tocnumber">9</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Basic_Scenario">Basic Scenario</span></h2>
+<p>The simple and straightforward approach for most installations.
+</p>
+<h3><span class="mw-headline" id="Assumptions">Assumptions</span></h3>
+<p>Moodle supports several types of LDAP servers which have different directory structures, special configuration settings, etc. Even if using the same LDAP server type (e.g., MS Active Directory), each site could use a completely different directory structure to hold its user accounts, groups, etc. In order to be able to show example configuration settings in the sections below, we are going to assume a <b>hypothetical</b> Moodle site and LDAP server with the characteristics listed below.
+</p><p><b>IMPORTANT NOTICE</b>: be sure to check <i><b>your</b></i> Moodle site and LDAP server details (including its directory structure,) and adjust the settings to reflect your own setup.
+</p>
+<ol><li>Your Moodle site is located at <b><a rel="nofollow" class="external free" href="http://your.moodle.site/">http://your.moodle.site/</a></b></li>
+<li>You have configured your PHP installation with the LDAP extension. It is loaded and activated, and it shows when you go to <b><a rel="nofollow" class="external free" href="http://your.moodle.site/admin/phpinfo.php">http://your.moodle.site/admin/phpinfo.php</a></b> (logged in as user 'admin').</li>
+<li>Your LDAP server has <b>192.168.1.100</b> as its IP address.</li>
+<li>You are not using LDAP with SSL (also known as LDAPS) in your settings. This might prevent certain operations from working (e.g., you cannot update data if you are using MS Active Directory -- MS-AD from here on --), but should be OK if you just want to authenticate your users.</li>
+<li>You don't want your users to change their passwords the first time they log in into Moodle.</li>
+<li>You are using a single domain as the source of your authentication data in case you are using MS-AD (more on this in the Appendices).</li>
+<li>You are using a top level distinguished name (DN) of <b>dc=my,dc=organization,dc=domain</b> as the root of your LDAP tree.</li>
+<li>You have a non-privileged LDAP user account you will use to bind to the LDAP server. This is not necessary with certain LDAP servers, but MS-AD requires this and it won't hurt if you use it even if your LDAP server doesn't need it. Make sure <b>this account and its password don't expire</b>, and make this password as strong as possible. Remember you only need to type this password once, when configuring Moodle, so don't be afraid of making it as hard to guess as possible. Let's say this user account has a DN of <b>cn=ldap-user,dc=my,dc=organization,dc=domain</b>, and password <b>hardtoguesspassword</b>.</li>
+<li>All of your Moodle users are in an organizational unit (OU) called <b>moodleusers</b>, which is right under your LDAP root. That OU has a DN of <b>ou=moodleusers,dc=my,dc=organization,dc=domain</b>.</li>
+<li>You <b>don't</b> want your LDAP users' passwords to be stored in Moodle at all.</li></ol>
+<h3><span class="mw-headline" id="Enabling_LDAP_authentication">Enabling LDAP authentication</span></h3>
+<p>An administrator can enable LDAP authentication as follows:
+</p>
+<ol><li>Go to <i>Site administration &gt; Plugins &gt; Authentication &gt; Manage authentication</i> and click the eye icon opposite LDAP Server. When enabled, it will no longer be greyed out.</li>
+<li>Click the settings link, configure as required (see information below), then click the 'Save changes' button.</li></ol>
+<figure class="mw-default-size mw-halign-center" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:LDAPserversettings.png" class="mw-file-description"><img src="images_en/8/89/7f204a166527edd9fb53f248f0119fb8.png" decoding="async" width="658" height="328" class="mw-file-element" data-file-width="658" data-file-height="328"></a><figcaption></figcaption></figure>
+<p>Now, you just have to fill in the values. Let's go step by step.
+</p>
+<h4><span class="mw-headline" id="LDAP_Server_Settings">LDAP Server Settings</span></h4>
+<table border="1" cellspacing="0" cellpadding="5">
+<tbody><tr>
+<th>Field name
+</th>
+<th>Value to fill in
+</th></tr>
+<tr>
+<td>Host URL
+</td>
+<td>As the IP of your LDAP server is 192.168.1.100, type "<b>ldap://192.168.1.100</b>" (without the quotes), or just "<b>192.168.1.100</b>" (some people have trouble connecting with the first syntax, specially on MS Windows servers).
+</td></tr>
+<tr>
+<td>Version
+</td>
+<td>Unless you are using a really old LDAP server, <b>version 3</b> is the one you should choose.
+</td></tr>
+<tr>
+<td>LDAP Encoding
+</td>
+<td>Specify encoding used by LDAP server. Most probably utf-8.
+</td></tr></tbody></table>
+<p><a class="mw-selflink-fragment" href="#Table_of_Contents">Table of Contents</a>
+</p>
+<h4><span class="mw-headline" id="Bind_settings">Bind settings</span></h4>
+<table border="1" cellspacing="0" cellpadding="5">
+<tbody><tr>
+<th>Field name
+</th>
+<th>Value to fill in
+</th></tr>
+<tr>
+<td>Don't cache passwords
+</td>
+<td>As you <b>don't</b> want to store the users's password in Moodle's database, choose <b>Yes</b> here.
+</td></tr>
+<tr>
+<td>Distinguished Name
+</td>
+<td>This is the distinguished name of the bind user defined above. Just type "<b>cn=ldap-user,dc=my,dc=organization,dc=domain</b>" (without the quotes).
+</td></tr>
+<tr>
+<td>Password
+</td>
+<td>This is the bind user password defined above. Type "<b>hardtoguesspassword</b>" (without the quotes).
+</td></tr></tbody></table>
+<p><a class="mw-selflink-fragment" href="#Table_of_Contents">Table of Contents</a>
+</p>
+<h4><span class="mw-headline" id="User_lookup_settings">User lookup settings</span></h4>
+<table border="1" cellspacing="0" cellpadding="5">
+<tbody><tr>
+<th>Field name
+</th>
+<th>Value to fill in
+</th></tr>
+<tr>
+<td>User type
+</td>
+<td>Choose:
+<ul><li><b>Novell Edirectory</b> if your LDAP server is running Novell's eDdirectory.</li>
+<li><b>posixAccount (rfc2307)</b> if your LDAP server is running a RFC-2307 compatible LDAP server (choose this is your server is running OpenLDAP, including Mac OS X server).</li>
+<li><b>posixAccount (rfc2307bis)</b> if your LDAP server is running a RFC-2307bis compatible LDAP server.</li>
+<li><b>sambaSamAccount (v.3.0.7)</b> if your LDAP server is running with SAMBA's 3.x LDAP schema extension and you want to use it.</li>
+<li><b>MS ActiveDirectory</b> if your LDAP server is running Microsoft's Active Directory (MS-AD)</li></ul>
+</td></tr>
+<tr>
+<td>Contexts
+</td>
+<td>The DN of the context (container) where all of your Moodle users are found. Type <b>ou=moodleusers,dc=my,dc=organization,dc=domain</b> here.
+<p>On a Mac OS X Server, this is usually <b>cn=users,dc=my,dc=organization,dc=domain</b>.
+</p>
+</td></tr>
+<tr>
+<td>Search subcontexts
+</td>
+<td>If you have any sub organizational units (subcontexts) hanging from <b>ou=moodleusers,dc=my,dc=organization,dc=domain</b> and you want Moodle to search there too, set this to <b>yes</b>. Otherwise, set this to <b>no</b>.
+</td></tr>
+<tr>
+<td>Dereference aliases
+</td>
+<td>Sometimes your LDAP server will tell you that the real value you are searching for is in fact in another part of the LDAP tree (this is called an alias). If you want Moodle to 'dereference' the alias and fetch the real value from the original location, set this to <b>yes</b>. If you don't want Moodle to dereference it, set this to <b>no</b>. If you are using MS-AD, set this to <b>no</b>.
+</td></tr>
+<tr>
+<td>User attribute
+</td>
+<td>The attribute used to name/search users in your LDAP tree. This option takes a default value based on the <i>User type</i> value you chose above. <u>So unless you need something special, you don't need to fill this in</u>.
+<p>By the way, it's usually <b>cn</b> (Novell eDirectory and MS-AD) or <b>uid</b> (RFC-2037, RFC-2037bis and SAMBA 3.x LDAP extension), but if you are using MS-AD you could (and have to, if you intend to use NTLM SSO) use <b>sAMAccountName</b> (the pre-Windows 2000 logon account name) if you need too.
+</p><p><b>Correction</b>: With MS-AD <b>sAMAccountName</b> should be used anyway. With default value (<b>cn</b>) AD users will have to login with full name / password (Username: <b>John Doe</b>, Password: <b>john's_pass</b>). If you want to enable your users to login with domain username instead (Username: <b>johnd</b> Password: <b>john's_pass</b>), you should use <b>sAMAccountName</b>. Sadly, but logging in with DOMAIN\user or user@domain.com will not work anyway.
+</p><p>Note: You may wish to consider allowing extended characters in usernames in <i>Administration &gt; Site administration &gt; Security &gt; <a href="0110860b4de758362cc79f71041d6882.html" class="mw-redirect" title="Site policies">Site policies</a></i>. 
+</p>
+</td></tr>
+<tr>
+<td>Suspended attribute
+</td>
+<td>For Active Directory use <b>useraccountcontrol</b>.
+</td></tr>
+<tr>
+<td>Member attribute
+</td>
+<td>The attribute used to list the members of a given group. This option takes a default value based on the <i>User type</i> value you choosed above. <u>So unless you need something special, you don't need to fill this in.</u>
+<p>By the way, the usual values are <b>member</b> and <b>memberUid</b>.
+</p>
+</td></tr>
+<tr>
+<td>Member attribute uses dn
+</td>
+<td>Whether the member attribute contains distinguished names (Yes) or not (No). This must be set to Yes for Active Directory.
+</td></tr>
+<tr>
+<td>Object class
+</td>
+<td>The type of LDAP object used to search for users. This option takes a default value based on the <i>User type</i> value you chose above. <u>So unless you need something special, you don't need to fill this in.</u>
+<ul><li>If you leave it blank, the default value based on the <i>User type</i> selected above will be used (see below)</li>
+<li>If you provide "objectClass=some-string", then it will provide "(objectClass=some-string)" as the filter.</li>
+<li>If you provide a value that does not start with "(", it is assumed to be a value that should be set to "objectClass". So if you provide "some-string", then it will provide "(objectClass=some-string)" as the filter.</li>
+<li>If you provide a string that starts with a "(", then it will pass that as is. So if you provide "(&amp;(objectClass=user)(enabledMoodleUser=1))", then it will pass that as the filter.</li></ul>
+<p><b>Note</b>: In the last case, that feature can be used on interactive logins,
+</p><p>Here are the default values for each of the <i>ldap_user_type</i> values:
+</p>
+<ul><li><b>(objectClass=user)</b> for Novell eDirectory</li>
+<li><b>(objectClass=posixAccount)</b> for RFC-2037 and RFC-2037bis</li>
+<li><b>(objectClass=sambaSamAccount)</b> for SAMBA 3.0.x LDAP extension</li>
+<li><b>(objectClass=user)</b> for MS-AD</li>
+<li><b>(objectClass=*)</b> for Default</li></ul>
+<p>If you get an error about a problem with updating the ldap server (even if you have specified not to write changes back to the ldap server) try setting the ldap object class to * - see <a rel="nofollow" class="external free" href="http://moodle.org/mod/forum/discuss.php?d=70566">http://moodle.org/mod/forum/discuss.php?d=70566</a> for a discussion on this problem
+</p>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Force_change_password">Force change password</span></h4>
+<table border="1" cellspacing="0" cellpadding="5">
+<tbody><tr>
+<th>Field name
+</th>
+<th>Value to fill in
+</th></tr>
+<tr>
+<td>Force change password
+</td>
+<td><b>NOTE: This setting is only used when creating your users with the LDAP sync users task. It's not used if your users are created as part of their first login to moodle</b>.
+<p>Set this to <i>Yes</i> if you want to force your users to change their password on the first login into Moodle. Otherwise, set this to <i>no</i>. Bear in mind the password they are forced to change is the one stored in your LDAP server.
+</p><p><u>As you don't want your users to change their passwords in their first login, leave this set to <i>No</i></u>
+</p>
+</td></tr>
+<tr>
+<td>Use standard Change Password Page
+</td>
+<td>
+<ul><li>Setting this to <i>Yes</i> makes Moodle use its own standard password change page, everytime users want to change their passwords.</li>
+<li>Setting this to <i>No</i> makes Moodle use the page specified in the field called "Password change URL" (see below).</li></ul>
+<p>Bear in mind that changing your LDAP passwords from Moodle might require a LDAPS connection (this is actually a requirement for MS-AD). In addition to that, the bind user specified above must have the rights needed to change other users' passwords.
+</p><p>Also, code for changing passwords from Moodle for anything but Novell eDirectory and Active Directory is almost not tested, so this may or may not work for other LDAP servers.
+</p>
+</td></tr>
+<tr>
+<td>Password Format
+</td>
+<td>Specify how the new password is encrypted before sending it to the LDAP server: Plain text, MD5 hash or SHA-1 hash. MS-AD uses plain text, for example.
+</td></tr>
+<tr>
+<td>Password change URL
+</td>
+<td>Here you can specify a location at which your users can recover or change their username/password if they've forgotten it. This will be provided to users as a button on the login page and their user page. if you leave this blank the button will not be printed.
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="LDAP_password_expiration_settings">LDAP password expiration settings</span></h4>
+<table border="1" cellspacing="0" cellpadding="5">
+<tbody><tr>
+<th>Field name
+</th>
+<th>Value to fill in
+</th></tr>
+<tr>
+<td>Expiration
+</td>
+<td>
+<ul><li>Setting this to <i>No</i> will make Moodle not to check if the password of the user has expired or not.</li>
+<li>Setting this to <i>LDAP</i> will make Moodle check if the LDAP password of the user has expired or not, and warn them a number of days before the password expires. When the password has expired, a "Your password has expired" message is displayed, and if the user is able to change their password from Moodle, they are offered the option to do so.</li></ul>
+<p>Current code only deals with Novell eDirectory LDAP server and MS-AD.
+</p><p><u>So unless you have Novell eDirectory server or MS-AD, choose <i>No</i> here.</u>
+</p>
+</td></tr>
+<tr>
+<td>Expiration warning
+</td>
+<td>This value sets how many days in advance of password expiration the user is warned that her password is about to expire.
+</td></tr>
+<tr>
+<td>Expiration attribute.
+</td>
+<td>The LDAP user attribute used to check password expiration. This option takes a default value based on the <i>User type</i> value you chose above. <u>So unless you need something special, you don't need to fill this in.</u>
+</td></tr>
+<tr>
+<td>Grace logins
+</td>
+<td>This setting is specific to Novell eDirectory. If set to <i>Yes</i>, enable LDAP gracelogin support. After password has expired the user can login until gracelogin count is 0.
+<p><u>So unless you have Novell eDirectory server and want to allow gracelogin support, choose <i>No</i> here.</u>
+</p>
+</td></tr>
+<tr>
+<td>Grace login attribute
+</td>
+<td>This setting is currently not used in the code (and is specific to Novell eDirectory).
+<p><u>So you don't need to fill this in.</u>
+</p>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Enable_user_creation">Enable user creation</span></h4>
+<table border="1" cellspacing="0" cellpadding="5">
+<tbody><tr>
+<th>Field name
+</th>
+<th>Value to fill in
+</th></tr>
+<tr>
+<td>Create users externally
+</td>
+<td>New (anonymous) users can self-create user accounts on the external LDAP server and confirm them via email. If you enable this, remember to also configure module-specific options for user creation and to fill in some instructions in <i>auth_instructions</i> field in <i>Site administration &gt; Plugins &gt; Authentication &gt; Manage authentication</i>. Otherwise the new users won't be able to self-create new accounts.
+<p>Novell eDirectory and MS-AD can create users externally. You can also create users in RFC-2307 compliant servers. 
+</p>
+</td></tr>
+<tr>
+<td>Context for new users
+</td>
+<td>Specify the context where users are created. This context should be different from other users' contexts to prevent security issues.
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Assign_system_roles">Assign system roles</span></h4>
+<table border="1" cellspacing="0" cellpadding="5">
+<tbody><tr>
+<th>Field name
+</th>
+<th>Value to fill in
+</th></tr>
+<tr>
+<td>System role mapping
+</td>
+<td>This section lists all roles that have can be assigned in the System context - by default this will be "Manager context" and "Course creator context", but can be customisable in the <a href="fbb28a64ba8a0ed6668a4b4aeafec213.html" title="Creating custom roles">role definitions</a>.
+<p>To assign LDAP users to any of the roles, specify the DN containing all users who should be granted that role at the system level.
+</p><p>Thie DN is typically a posixGroup with a "memberUid" attribute for each user you want to be a creator. If your group is called <i>creators</i>, type <b>cn=creators,ou=moodleusers,dc=my,dc=organization,dc=domain</b> here. Each memberUid attribute contains the CN of a user who is authorized to be a creator. Do not use the user's full DN (e.g., not <b>memberUid: cn=JoeTeacher,ou=moodleusers,dc-my,dc=organizations,dc=domain</b>, but rather <b>memberUid: JoeTeacher</b>).
+</p><p>In eDirectory, the objectClass for a group is (by default) not <b>posixGroup</b> but <b>groupOfNames,</b> whose member attribute is <b>member,</b> not <b>memberUid,</b> and whose value is the full DN of the user in question. Although you can probably modify Moodle's code to use this field, a better solution is just to add a new <b>objectClass</b> attribute of <b>posixGroup</b> to your creators group and put the CNs for each creator in a <b>memberUid</b> attribute.
+</p><p>In MS Active Directory, you will need to create a security group for your creators to be part of and then add them all. If your ldap context above is 'ou=staff,dc=my,dc=org' then your group should then be 'cn=creators,ou=staff,dc=my,dc=org'. If some of the users are from other contexts and have been added to the same security group, you'll have to add these as separate contexts after the first one using the same format.
+</p><p>This section replaces the "Course creator" section found in Moodle 3.3. The upgrade process should migrate any DN specified to the new approach.
+</p>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="User_account_synchronisation">User account synchronisation</span></h4>
+<table border="1" cellspacing="0" cellpadding="5">
+<tbody><tr>
+<th>Field name
+</th>
+<th>Value to fill in
+</th></tr>
+<tr>
+<td>Removed ext user
+</td>
+<td>Specify what to do with internal user account during mass synchronization when user was removed from external source. Only suspended users are automatically revived if they reappear in ext source.
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="NTLM_SSO">NTLM SSO</span></h4>
+<table border="1" cellspacing="0" cellpadding="5">
+<tbody><tr>
+<th>Field name
+</th>
+<th>Value to fill in
+</th></tr>
+<tr>
+<td>Enable
+</td>
+<td>If you want to use NTLM SSO (see details at <a href="4280ec6e382b9723252d9bceeb02d788.html" title="NTLM authentication">NTLM_authentication</a>), choose <i>Yes</i> here. Otherwise, choose <i>No</i>.
+</td></tr>
+<tr>
+<td>Subnet
+</td>
+<td>Specify the subnets of the clients that will use NTLM SSO (see details at <a href="4280ec6e382b9723252d9bceeb02d788.html" title="NTLM authentication">NTLM_authentication</a>).
+</td></tr>
+<tr>
+<td>MS IE Fast Path?
+</td>
+<td>If all of you clients (or most of them) are using MS Internet Explorer, you can set this option to bypasses certain steps of the SSO login and speed up login times. This only works with MS Internet Explorer, but deals with other browsers in a sensible way (they are automatically sent to the plain login page).
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Data_Mapping">Data Mapping</span></h4>
+<table border="1" cellspacing="0" cellpadding="5">
+<tbody><tr>
+<th>Field name
+</th>
+<th>Value to fill in
+</th></tr>
+<tr>
+<td>First name
+</td>
+<td>The name of the attribute that holds the first name of your users in your LDAP server. This is usually <b>givenName</b> or <b>displayName</b>
+<p><u>This setting is optional</u>
+</p>
+</td></tr>
+<tr>
+<td>Surname
+</td>
+<td>The name of the attribute that holds the surname of your users in your LDAP server. This is usually <b>sn</b>.
+<p><u>This setting is optional</u>
+</p>
+</td></tr>
+<tr>
+<td>Email address
+</td>
+<td>The name of the attribute that holds the email address of your users in your LDAP server. This is usually <b>mail</b>.
+<p><u>This setting is optional</u>
+</p>
+</td></tr>
+<tr>
+<td>City/town
+</td>
+<td>The name of the attribute that holds the city/town of your users in your LDAP server. This is usually <b>l</b> (lowercase L) or <b>localityName</b> (not valid in MS-AD).
+<p><u>This setting is optional</u>
+</p>
+</td></tr>
+<tr>
+<td>Country
+</td>
+<td>The name of the attribute that holds the country of your users in your LDAP server. This is usually <b>c</b> or <b>countryName</b> (not valid in MS-AD).
+<p><u>This setting is optional</u>
+</p>
+</td></tr>
+<tr>
+<td>Language
+</td>
+<td><b>preferredLanguage</b>
+<p><u>This setting is optional</u>
+</p>
+</td></tr>
+<tr>
+<td>Description
+</td>
+<td><b>description</b>
+<p><u>This setting is optional</u>
+</p>
+</td></tr>
+<tr>
+<td>Webpage
+</td>
+<td><u>This setting is optional</u>
+</td></tr>
+<tr>
+<td>ID Number
+</td>
+<td>
+<p><u>This setting is optional</u>
+</p>
+</td></tr>
+<tr>
+<td>Institution
+</td>
+<td>
+<p><u>This setting is optional</u>
+</p>
+</td></tr>
+<tr>
+<td>Department
+</td>
+<td>The name of the attribute that holds the department name of your users in your LDAP server. This is usually <b>departmentNumber</b> (for posixAccount and maybe eDirectory) or <b>department</b> (for MS-AD).
+<p><u>This setting is optional</u>
+</p>
+</td></tr>
+<tr>
+<td>Phone 1
+</td>
+<td>The name of the attribute that holds the telephone number of your users in your LDAP server. This is usually <b>telephoneNumber</b>.
+<p><u>This setting is optional</u>
+</p>
+</td></tr>
+<tr>
+<td>Phone 2
+</td>
+<td>The name of the attribute that holds an additional telephone number of your users in your LDAP server. This can be <b>homePhone</b>, <b>mobile</b>, <b>pager</b>, <b>facsimileTelephoneNumber</b> or even others.
+<p><u>This setting is optional</u>
+</p>
+</td></tr>
+<tr>
+<td>Address
+</td>
+<td>The name of the attribute that holds the street address of your users in your LDAP server. This is usually <b>streetAddress</b> or <b>street'.</b>
+<p><u>This setting is optional</u>
+</p>
+</td></tr></tbody></table>
+<h5><span class="mw-headline" id="Custom_User_profile_fields">Custom User profile fields</span></h5>
+<p>Any user profile fields created in <i>Site administration &gt; Users &gt; Accounts &gt; User profile fields</i> should now automatically show up at the end of the Data mapping field list after the <b>Address</b> field. See example: <span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:ldapcustomuserprofilefields.jpg" class="mw-file-description"><img src="images_en/a/a9/fe8ea68aab4631fd2b36fad58ae060fa.jpg" decoding="async" width="421" height="591" class="mw-file-element" data-file-width="421" data-file-height="591"></a></span>
+</p>
+<h2><span class="mw-headline" id="Enabling_the_LDAP_users_sync_job">Enabling the LDAP users sync job</span></h2>
+<p>The LDAP users sync job (<i>\auth_ldap\task\sync_task</i>) <a href="9b3501d6968f4decc5503b86391b6b6d.html" title="Scheduled tasks">scheduled task</a> (new in Moodle 3.0; previously there was a CLI script, see <a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/MDL-51824">MDL-51824</a> for more info) is responsible for creating and updating user information, and suspending and deleting LDAP accounts. 
+</p><p>After enabling LDAP server authentication, an administrator needs to enable and configure the LDAP users sync job as follows:
+</p>
+<ol><li>Go to <i>Site administration &gt; Server &gt; Scheduled tasks</i> and click the gear icon opposite LDAP users sync job.</li>
+<li>Select the desired frequency of running and enable the task by un-ticking the disabled checkbox.</li></ol>
+<table class="alert alert-warning">
+<tbody><tr>
+<td style="padding: 0.7em 0.5em 0.5em;"><b>Warning:</b> It is important to make sure that all LDAP settings are working properly before enabling the LDAP users sync job (as well as backing up your database and moodledata folders), since incorrect LDAP configuration can result in users being wrongly deleted!
+</td></tr></tbody></table>
+<p><br>
+If you find that the script is not running through all of your users properly and you have over 1000 users in each LDAP container, this is because by default some LDAP stores such as MS AD only send back 1000 users at a time and PHP versions prior to 5.4 did not implement paged support for LDAP results. If you upgrade to PHP 5.4 or higher than Moodle will obtain all your users correctly. If you can't upgrade to PHP 5.4 you may be able to follow the instructions in <a rel="nofollow" class="external free" href="http://support.microsoft.com/kb/315071">http://support.microsoft.com/kb/315071</a> to set the Active Directory MaxPageSize setting to a number higher than your total number of users (both now and in future) to fix it. This is a forest-wide setting.
+</p>
+<h2><span class="mw-headline" id="Active_Directory_help">Active Directory help</span></h2>
+<p><a href="9ff15e96ebb959dea406b0e562fec3af.html" title="Active Directory">Active Directory</a> is Microsoft's directory service. It is included in Windows 2000 Server and later versions of their operating system. For more information about subjects below, <b><a href="9ff15e96ebb959dea406b0e562fec3af.html" title="Active Directory">please go here</a></b>.
+</p>
+<ul><li>Warning: The PHP LDAP module does not seem to be present</li>
+<li>LDAP-module cannot connect any LDAP servers</li>
+<li>Getting correct CNs for Contexts and Creators</li>
+<li>Getting the right user_attribute</li>
+<li>Installing ldp.exe Server Tool</li>
+<li>Example Active Directory Configuration</li>
+<li>Child Domains and the Global Catalog in MS Active Directory</li>
+<li>Enabling the Global Catalog</li>
+<li>Active Directory with Moodle 1.8</li>
+<li>MS Active Directory + SSL</li></ul>
+<h2><span class="mw-headline" id="Advanced_Scenarios_-_Multiple_servers_or_locations">Advanced Scenarios - Multiple servers or locations</span></h2>
+<p>For larger installations with multiple LDAP servers, or multiple locations (contexts) in a LDAP tree.
+</p>
+<h3><span class="mw-headline" id="Making_your_LDAP_directory_connection_resilient">Making your LDAP directory connection resilient</span></h3>
+<ul><li>Entering more than one name in the ldap_host_url field can provide some sort of resilience to your system. Simply use the syntax:</li></ul>
+<pre>ldap://my.first.server; ldap://my.second.server; ...
+</pre>
+<p>Of course, this will only work if all the servers share the same directory information, if using eDirectory you would need to ensure your servers have viability of all relevant tree partitions, or if using Active Directory the servers are holding the same information you need though replication - see notes on a multi-domain environment if this applies.
+</p><p>There is one drawback in Moodle 1.5 - 1.6 implementation of LDAP authentication&nbsp;: the auth_ldap_connect() function processes the servers sequentially, not in a round robin mode. Thus, if the primary server fails, you will have to wait for the connection to time out before switching to the following one.
+</p><p>See also: <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=17198">Using multiple LDAP servers - Our students are on separate domain</a> forum discussion
+</p>
+<h3><span class="mw-headline" id="Using_a_multi-domain_AD_environment">Using a multi-domain AD environment</span></h3>
+<ul><li>If you're running Active Directory with multiple domains and you have users in more than one domain you will want to configure Moodle to look at your Global Catalog server. Specifically your top level domain Global Catalog server. Here is a simple example of this kind of Active Directory layout:</li></ul>
+<pre>my.domain.ca (Root AD Domain)
+| - dc1.my.domain.ca (Domain Controller)
+| - dc2.my.domain.ca (Domain Controller)
+|
+| - - students.my.domain.ca (Sub AD Domain)
+| - - - dc1.students.my.domain.ca (Domain Controller)
+| - - - dc2.students.my.domain.ca (Domain Controller)
+|
+| - - faculty.my.domain.ca (Sub AD Domain)
+| - - - dc1.faculty.my.domain.ca (Domain Controller)
+| - - - dc2.faculty.my.domain.ca (Domain Controller)
+</pre>
+<p>In this example we have our top level domain (my.domain.ca) and two sub-domains. One sub-domain is for faculty accounts (faculty.my.domain.ca) and the other is for student accounts (students.my.domain.ca). Listed under each of those are two domain controllers.
+</p><p>Using the above example you'll want to use the following for accessing the Global Catalog over SSL:
+</p>
+<pre>ldaps://my.domain.ca:3269/
+</pre>
+<p>If you prefer to access your global catalog over a non-SSL connection you'll want to use:
+</p>
+<pre>ldap://my.domain.ca:3268/
+</pre>
+<p>We found if you didn't configure things this way you'd get errors like:
+</p>
+<pre> [Thu May 26 15:23:53 2011] [error] [client 192.168.xxx.xxx] PHP Warning:  ldap_search() [&lt;a href='function.ldap-search'&gt;function.ldap-search&lt;/a&gt;]: Search: Partial results and referral received in /xxx/xxx/moodle20/lib/ldaplib.php on line 241, referer: <a rel="nofollow" class="external free" href="http://moodle.my.domain.ca/moodle20/login/index.php">http://moodle.my.domain.ca/moodle20/login/index.php</a>
+ [Thu May 26 15:23:53 2011] [error] [client 192.168.xxx.xxx] PHP Warning:  ldap_first_entry(): supplied argument is not a valid ldap result resource in /xxx/xxx/moodle20/lib/ldaplib.php on line 248, referer: <a rel="nofollow" class="external free" href="http://moodle.my.domain.ca/moodle20/login/index.php">http://moodle.my.domain.ca/moodle20/login/index.php</a>
+</pre>
+<h3><span id="Connecting_to_Multiple_LDAP_Servers_NOT_in_the_Same_Forest_.28Cloning.29"></span><span class="mw-headline" id="Connecting_to_Multiple_LDAP_Servers_NOT_in_the_Same_Forest_(Cloning)">Connecting to Multiple LDAP Servers NOT in the Same Forest (Cloning)</span></h3>
+<ul><li>To connect to multiple LDAP Servers, you need to clone the ldap plugin and then set up the cloned version for the second server.  This can be done as many times as needed.</li>
+<li>To make this easier, I&ntilde;aki has created patch files that you can run to easily create the clones.  To use the clones, you will need to have access to the server and be familiar with patch files.  The instructions are provided in the README file.</li>
+<li>You can find the patch files in the following Git repository: <a rel="nofollow" class="external free" href="https://github.com/iarenaza/moodle-ldap-clones/tree/master">https://github.com/iarenaza/moodle-ldap-clones/tree/master</a></li></ul>
+<h3><span id="Using_multiple_user_locations_.28contexts.29_in_your_LDAP_tree"></span><span class="mw-headline" id="Using_multiple_user_locations_(contexts)_in_your_LDAP_tree">Using multiple user locations (contexts) in your LDAP tree</span></h3>
+<p>There is no need to use multiple user locations if your directory tree is flat, i.e. if all user accounts reside in a <b>ou=people,dc=my,dc=organization,dc=domain</b> or <b>ou=people,o=myorg</b> container. 
+</p><p>At the opposite, if you use the ACL mecanism to delegate user management, there are chances that your users will be stored in containers like <b>ou=students,ou=dept1,o=myorg</b> and <b>ou=students,ou=dept2,o=myorg</b> ...
+</p><p>Then there is an alternative&nbsp;:
+</p>
+<ul><li>Look at the <b>o=myorg</b> level with the ldap_search_sub attribute set to <b>yes</b>.</li>
+<li>Set the ldap_context to <b>ou=students,ou=dept1,o=myorg&nbsp;; ou=students,ou=dept2,o=myorg</b>.</li></ul>
+<p>Choosing between these two solutions supposes some sort of benchmarking, as the result depends heavily on the structure of your directory tree <b>and</b> on your LDAP software indexing capabilities. Simply note that there is a probability in such deep trees that two users share the same <i>common name</i> (cn), while having different <i>distinguished names</i>. Then only the second solution will have a deterministic result (returning always the same user).
+</p>
+<h3><span id="Using_LDAPS_.28LDAP_over_SSL.29"></span><span class="mw-headline" id="Using_LDAPS_(LDAP_over_SSL)">Using LDAPS (LDAP over SSL)</span></h3>
+<h4><span class="mw-headline" id="Enabling_LDAPS_on_your_directory_server">Enabling LDAPS on your directory server</span></h4>
+<ul><li><a href="9ff15e96ebb959dea406b0e562fec3af.html#MS_Active_Directory_.2B_SSL" title="Active Directory">Enabling LDAPS on MS Active Directory </a></li></ul>
+<h4><span class="mw-headline" id="Enabling_LDAPS_on_your_Moodle_server">Enabling LDAPS on your Moodle server</span></h4>
+<p>Enabling LDAPS on your server can be tricky and often it is hard to pinpoint where things are going wrong. There are also differences between Windows and Linux and even different versions and distributions of Linux. 
+</p><p><b>If you have not done so already you will need to decide upon your approach to establishing an SSL connection to your directory server:</b>
+</p>
+<ul><li>SSL connection with unverified self-signed certificate.</li></ul>
+<p>You can generate your own SSL certificate, and then instruct your Moodle server to ignore the fact that it is not valid. This setup is not as secure as others since you cannot be sure the server you are connecting to is not fake.
+</p>
+<ul><li>SSL connection with trusted self-signed certificate.</li></ul>
+<p>You can generate your own SSL certificate on your directory server, and then specifically trust this certificate by installing it on your Moodle server. 
+</p>
+<ul><li>SSL connection with verified certificate from Internet-trusted certificate authority (CA)</li></ul>
+<p>In this approach the LDAP server has an installed certificate from an Internet-based CA, this means that your directory server would have an Internet address &amp; host name. Your Moodle server must be trusting the certificate authority and have Internet access. This approach is not often used as it usually incurs a cost for the certificate, and it requires your directory server and Moodle server to be exposed to the Internet.
+</p>
+<h2><span class="mw-headline" id="Linux_servers">Linux servers</span></h2>
+<p><b>These instructions are for establishing a link using a trusted self-signed certificate.</b>
+</p><p><i>Note: written for a Red Hat Enterprise Linux 6 server, other Linux distributions may differ, especially in the location of the SSL certificates and OpenLdap config files, but the core principals are the same.</i>
+</p><p>To check that your directory server is online and accepting SSL connections on your LDAPS port (636), you can use try:
+</p>
+<pre>openssl s_client &ndash;connect &lt;ldap server ip address&gt;:636
+</pre>
+<p>Get your directory server&rsquo;s certificate (.crt) and upload to Moodle server's ssl certificate directory, on RHEL6 this is at <b>/etc/ssl/certs</b>
+</p><p>Convert your &lsquo;DER&rsquo; X509 certificate into a &lsquo;PEM&rsquo; public key certificate.
+</p>
+<pre>openssl x509 -in my_server_certificate.cer -inform DER -out my_server_certificate.pem -outform PEM
+</pre>
+<p>Create certificate hashes using c_rehash
+</p>
+<pre>c_rehash
+</pre>
+<p><i>If c_rehash is not installed install with: yum install /usr/bin/c_rehash</i>
+</p><p>Ensure you are able to access your LDAPS server by a DNS name, this may mean adding an entry to your host file (/etc/hosts)
+</p>
+<pre>&lt;ldap server ip address&gt;    my_server.mydomain.school
+</pre>
+<p>Verify your certificate to check that it is installed correctly
+</p>
+<pre>openssl verify -verbose -CApath /etc/ssl/certs /etc/ssl/certs/my_server_certificate.pem
+/etc/ssl/certs/my_server_certificate.pem: OK
+</pre>
+<p>You should now be able to connect to your LDAPS server over SSL without any errors
+</p>
+<pre>openssl s_client &ndash;connect &lt;ldap server DNS name&gt;:636
+</pre>
+<p>Edit your OpenLDAP config, on RHEL6 this is located at <b>/etc/openldap/ldap.conf</b>
+</p>
+<pre># Define location of a CA Cert
+TLS_CACERT /etc/ssl/certs/my_server_certificate.pem
+TLS_CACERTDIR /etc/ssl/certs
+</pre>
+<p>Finally, you may or may not need to restart Apache, before configuring Moodle to use ldaps://&lt;server DNS name&gt;
+</p>
+<pre>httpd -k restart
+</pre>
+<h2><span class="mw-headline" id="Windows_servers">Windows servers</span></h2>
+<p><b>These instructions are for establishing a link using an unverified self-signed certificate.</b>
+</p><p>You can tell PHP's OpenLDAP extension to disable SSL server certificate checking to do this you must create a directory called '<b>C:\OpenLDAP\sysconf\'</b> In this directory, create a file called <i>ldap.conf</i> with the following content:
+</p>
+<pre>TLS_REQCERT never
+</pre>
+<p><i>(If you are using certain versions of PHP 5.3.x you <b>may need to place the file at other locations</b>, <a rel="nofollow" class="external text" href="http://bugs.php.net/bug.php?id=48866">see PHP bug #48866</a>)</i>
+</p><p>Now you should be able to use <b>ldaps://</b> when connecting to your LDAP server.
+</p>
+<h2><span class="mw-headline" id="Appendices">Appendices</span></h2>
+<h3><span class="mw-headline" id="Setting_Resource_Limits_RedHat_Directory_Server">Setting Resource Limits RedHat Directory Server</span></h3>
+<p>Operational attributes can be set for the bind user DN using the command-line.
+One can simply use ldapmodify to add the following attributes:
+</p>
+<table border="1" cellspacing="0" cellpadding="5">
+<tbody><tr>
+<th>Attribute Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>nsLookThroughLimit
+</td>
+<td>Specifies how many entries are examined for a search operation. Giving this attribute a value of -1 indicates that there is no limit.
+</td></tr>
+<tr>
+<td>nsSizeLimit
+</td>
+<td>Specifies the maximum number of entries the server returns to a client application in response to a search operation. Giving this attribute a value of -1 indicates that there is no limit.
+</td></tr>
+<tr>
+<td>nsTimeLimit
+</td>
+<td>Specifies the maximum time the server spends processing a search operation. Giving this attribute a value of -1 indicates that there is no time limit.
+</td></tr>
+<tr>
+<td>nsIdleTimeout
+</td>
+<td>Specifies the time a connection to the server can be idle before the connection is dropped. The value is given in seconds. Giving this attribute a value of -1 indicates that there is no limit.
+</td></tr></tbody></table>
+<pre> LDAP Console Command-Line
+
+ ldapmodify -h redhat_dir_server -p 389 -D "cn=directory manager" -w secretpwd
+
+ dn: uid=MoodleAdmin,ou=system,dc=myschool,dc=edu
+ changetype: modify
+ add:nsSizeLimit
+ nsSizeLimit: 1000
+ </pre>
+<h2><span id="Any_questions.3F"></span><span class="mw-headline" id="Any_questions?">Any questions?</span></h2>
+<p>Please post in the <a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/view.php?id=42">Authentication forum</a> on moodle.org.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="4280ec6e382b9723252d9bceeb02d788.html" title="NTLM authentication">NTLM_authentication</a></li>
+<li><a href="9ff15e96ebb959dea406b0e562fec3af.html" title="Active Directory">Active_Directory</a></li>
+<li><a href="eb413066979c0b05cf833e12371b4660.html" title="LDAP enrolment">LDAP enrolment</a></li>
+<li><a rel="nofollow" class="external text" href="http://download.moodle.org/download.php/docs/en/how-to_guides/ldap_auth_and_enrolment_set-up.pdf">LDAP auth and enrolment set-up guide</a> (PDF 227KB)</li></ul>
+<p>Forum discussions:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/view.php?id=42">User authentication forum</a></li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=32168">PHP LDAP module does not seem to be present</a> forum discussion</li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=140901">Syncronisation with AUTH_LDAP_SYNC_USERS.PHP produces fewer accounts than it should</a> forum discussion</li>
+<li><a rel="nofollow" class="external text" href="http://moodle.org/mod/forum/discuss.php?d=17198">Using multiple LDAP servers</a> forum discussion</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260823004131
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.047 seconds
+Real time usage: 0.297 seconds
+Preprocessor visited node count: 127/1000000
+Post&#8208;expand include size: 1170/2097152 bytes
+Template argument size: 252/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 226/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.648      1 -total
+ 36.35%    2.053      1 Template:Authentication
+ 29.22%    1.650      1 Template:Update
+ 29.18%    1.648      1 Template:Warning
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:2081-0!canonical and timestamp 20260823004131 and revision id 150879. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=LDAP_authentication&amp;oldid=150879">https://docs.moodle.org/502/en/index.php?title=LDAP_authentication&amp;oldid=150879</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="00d535865630704a120a6cacf79bc2bc.html" title="Category:Authentication">Authentication</a></li><li><a href="d9e4fee0c3eee71cb267efdcdb2121f2.html" title="Category:Pages requiring updating">Pages requiring updating</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhkc16j4">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhkc179s"></button>
+					<div class="collapse navbar-collapse igdhkc179s" id="igdhkc179s">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/LDAP_authentication" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/LDAP_authentication" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=LDAP_authentication&amp;oldid=150879" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=LDAP_authentication&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/LDAP_authentication" title="LDAP authentication – español" lang="es" hreflang="es" data-title="LDAP authentication" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Utiliser_un_serveur_LDAP" title="Utiliser un serveur LDAP – français" lang="fr" hreflang="fr" data-title="Utiliser un serveur LDAP" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/LDAP認証" title="LDAP認証 – 日本語" lang="ja" hreflang="ja" data-title="LDAP認証" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/LDAP-Server" title="LDAP-Server – Deutsch" lang="de" hreflang="de" data-title="LDAP-Server" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 22 January 2025, at 17:27.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":574,"wgPageParseReport":{"limitreport":{"cputime":"0.047","walltime":"0.297","ppvisitednodes":{"value":127,"limit":1000000},"postexpandincludesize":{"value":1170,"limit":2097152},"templateargumentsize":{"value":252,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":226,"limit":5000000},"timingprofile":["100.00%    5.648      1 -total"," 36.35%    2.053      1 Template:Authentication"," 29.22%    1.650      1 Template:Update"," 29.18%    1.648      1 Template:Warning"]},"cachereport":{"timestamp":"20260823004131","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

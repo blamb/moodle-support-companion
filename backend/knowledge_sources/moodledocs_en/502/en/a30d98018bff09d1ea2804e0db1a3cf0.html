@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Shibboleth - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"b788d93328262608b6a28506","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Shibboleth","wgTitle":"Shibboleth","wgCurRevisionId":149707,"wgRevisionId":149707,"wgArticleId":2638,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Authentication"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Shibboleth","wgRelevantArticleId":2638,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Shibboleth">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Shibboleth rootpage-Shibboleth layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhkd15la"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhkd15la" id="igdhkd15la">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Shibboleth" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Shibboleth">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Shibboleth">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Shibboleth">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="a30d98018bff09d1ea2804e0db1a3cf0.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Shibboleth" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Shibboleth&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Shibboleth&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Shibboleth</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a>  ► <a href="236dc8d53a6146955905ab37c10ae1c1.html" title="Authentication">Authentication</a>  ►  <a class="mw-selflink selflink">Shibboleth</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="236dc8d53a6146955905ab37c10ae1c1.html" title="Authentication">Authentication</a></div>	
+<div class="content">
+<ul><li><a href="56f71475ca5396fe5c368188b0c8a682.html" title="Managing authentication">Managing authentication</a></li>
+<li><a href="8cbfda637dd7e95bf073ff6a947aaee0.html" title="Manual accounts">Manual accounts</a></li>
+<li><a href="42871dbaab8add369ee3eccb5976cbed.html" title="No login">No login</a></li>
+<li><a href="b6d388a2ea2166f451cb9e8a93c4026a.html" title="Email-based self-registration">Email-based self-registration</a></li>
+<li><a href="b44394139ca450747843f44c94938068.html" title="External database authentication">External database</a></li>
+<li><a href="30fc37ce968793e7b46e3efd8b89a83b.html" title="LDAP authentication">LDAP</a></li>
+<li><a href="9f1ad945da14dd10aab0c99ebf7e3af4.html" class="mw-redirect" title="LTI">LTI</a></li>
+<li><a href="1ae69e07d6d34d4d83c9c4ca596a0b36.html" title="No authentication">No authentication</a></li>
+<li><a href="e9d8f7e3af380059f76b8f5d4ab0fa61.html" title="OAuth 2 authentication">OAuth 2</a></li>
+<li><a class="mw-selflink selflink">Shibboleth</a></li>
+<li><a href="042948956eb0db5e30d81315af28f4cd.html" title="Web services authentication">Web services</a></li>
+<li><a href="ad8b7b337c3e8d839e1aa452c1361cd5.html" title="Multi-factor authentication">Multi-factor authentication</a></li>
+<li><a href="78e268c6d634eff1236f431e82700f58.html" title="Authentication FAQ">Authentication FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p><br>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#What_is_Shibboleth"><span class="tocnumber">1</span> <span class="toctext">What is Shibboleth</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Some_notable_Shibboleth_federations"><span class="tocnumber">2</span> <span class="toctext">Some notable Shibboleth federations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#UK_Access_Management_Federation_for_Education_and_Research"><span class="tocnumber">2.1</span> <span class="toctext">UK Access Management Federation for Education and Research</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Swiss_Authentication_and_Authorization_Infrastructure_(SWITCHaai)"><span class="tocnumber">2.2</span> <span class="toctext">Swiss Authentication and Authorization Infrastructure (SWITCHaai)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#auth/shibboleth/README.txt"><span class="tocnumber">3</span> <span class="toctext">auth/shibboleth/README.txt</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#A_sample_configuration_in_detail"><span class="tocnumber">4</span> <span class="toctext">A sample configuration in detail</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Notation"><span class="tocnumber">4.1</span> <span class="toctext">Notation</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Prerequisites"><span class="tocnumber">4.2</span> <span class="toctext">Prerequisites</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Configuring_service_provider"><span class="tocnumber">4.3</span> <span class="toctext">Configuring service provider</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Configuring_the_identity_provider"><span class="tocnumber">4.4</span> <span class="toctext">Configuring the identity provider</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#How_to_debug"><span class="tocnumber">5</span> <span class="toctext">How to debug</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="What_is_Shibboleth">What is Shibboleth</span></h2>
+<p><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Shibboleth_(software)">Shibboleth</a> is a single sign-on log-in system for computer networks and the Internet. It allows people to sign in using just one identity to various systems run by federations of different organizations or institutions. The federations are often universities or public service organizations. 
+</p><p>Shibboleth is a middleware architecture and an open-source implementation created by the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Internet2">Internet2</a> consortium, for federated identity-based authentication and authorization infrastructure based on <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language">SAML</a>. Federated identity allows for information about users in one security domain to be provided to other organizations in a common federation. This allows for cross-domain single sign-on and removes the need for content providers to maintain usernames and passwords. <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language">Identity providers (IdP's)</a> supply user information, while <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Service_provider_(SAML)">service providers (SP's)</a> consume this information and gate access to secure content.
+</p>
+<h2><span class="mw-headline" id="Some_notable_Shibboleth_federations">Some notable Shibboleth federations</span></h2>
+<h3><span class="mw-headline" id="UK_Access_Management_Federation_for_Education_and_Research">UK Access Management Federation for Education and Research</span></h3>
+<p>In the UK <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Becta">Becta</a> and <a rel="nofollow" class="external text" href="https://www.jisc.ac.uk/about-us">JISC</a> have implemented the education federation <a rel="nofollow" class="external text" href="https://www.ukfederation.org.uk/">UK Access Management Federation for Education and Research</a> using Shibboleth to provide single sign on. This means that education establishments in the UK using Moodle should be able to authenticate their users via Shibboleth if their organization joins the UK Access Management Federation and their users' identity is held by the identity provider the LA/RBC use. For maintained schools in the England and Wales this will probably mean contacting their Local Authority or Regional Broadband Consortium (RBC). A list of current UK federation members can be found <a rel="nofollow" class="external text" href="http://www.ukfederation.org.uk/content/Documents/MemberList">here</a>.
+</p>
+<h3><span id="Swiss_Authentication_and_Authorization_Infrastructure_.28SWITCHaai.29"></span><span class="mw-headline" id="Swiss_Authentication_and_Authorization_Infrastructure_(SWITCHaai)">Swiss Authentication and Authorization Infrastructure (SWITCHaai)</span></h3>
+<p>In Switzerland the <a rel="nofollow" class="external text" href="https://switch.ch/">SWITCH Foundation</a> runs the federation called <a rel="nofollow" class="external text" href="https://help.switch.ch/aai/">Swiss Authentication and Authorization Infrastructure (SWITCHaai)</a> encompassing about 160 institutions and a universal login  for all living in Switzerland under <a rel="nofollow" class="external text" href="https://www.switch.ch/edu-id">Switch edu-ID</a> covering around 900,000 users.
+</p>
+<h2><span id="auth.2Fshibboleth.2FREADME.txt"></span><span class="mw-headline" id="auth/shibboleth/README.txt">auth/shibboleth/README.txt</span></h2>
+<p>This the auth/shibboleth/README.txt file in the Moodle distribution:
+</p>
+<pre> Shibboleth Authentication for Moodle
+ -------------------------------------------------------------------------------
+ 
+ Requirements:
+ - Shibboleth Service Provider 1.3 or newer. Recommended is 2.1 or newer.
+ See documentation for your Shibboleth federation on how to set up Shibboleth.
+ 
+ Changes:
+ - 11. 2004: Created by Markus Hagman
+ - 05. 2005: Modifications to login process by Martin Dougiamas
+ - 05. 2005: Various extensions and fixes by Lukas Haemmerle
+ - 06. 2005: Adaptions to new field locks and plugin config structures by Martin
+             Langhoff and Lukas Haemmerle
+ - 10. 2005: Added better error messages and moved text to language directories
+ - 02. 2006: Simplified authentication so that authorization works properly
+             Added instructions for IIS
+ - 11. 2006: User capabilities are now loaded properly as of Moodle 1.7+
+ - 03. 2007: Adapted authentication method to Moodle 1.8
+ - 07. 2007: Fixed a but that caused problems with uppercase usernames
+ - 10. 2007: Removed the requirement for email address, surname and given name
+             attributes on request of Markus Hagman
+ - 11. 2007: Integrated WAYF Service in Moodle
+ - 12. 2008: Shibboleth 2.x and Single Logout support added
+ - 1.  2008: Added logout hook and moved Shibboleth config strings to utf8 auth
+             language files.
+ - 3.  2009: Added various improvements and bug fixes reported by Ina M&#65533;ller from
+             university Tuebingen and Peter Ellis of University of Washington
+ - 4.  2009: Added another requirement for logout regarding the call back script
+ - 6.  2009: Changed handler URL when integrated Discovery Service is used
+ - 10. 2009: Fixed HTML entity preservation in Shibboleth settings
+ 
+ Moodle Configuration with Dual login
+ -------------------------------------------------------------------------------
+ 1. Protect the directory moodle/auth/shibboleth/index.php with Shibboleth.
+    The page index.php in that directory actually logs in a Shibboleth user.
+    For Apache you have to define a rule like the following in the Apache config:
+ 
+ --
+ &lt;Directory  /path/to/moodle/auth/shibboleth/index.php&gt;
+       AuthType shibboleth
+       ShibRequireSession On
+       require valid-user
+ &lt;/Directory&gt;
+ --
+ 
+    To restrict access to Moodle, replace the access rule 'require valid-user'
+    with something that fits your needs, e.g. 'require affiliation student'.
+ 
+    For IIS you have protect the auth/shibboleth directory directly in the
+    RequestMap of the Shibboleth configuration file (shibboleth.xml or
+    shibboleth2.xml).
+ 
+ --
+ &lt;Path name="moodle" requireSession="false" &gt;
+    &lt;Path name="auth/shibboleth/index.php" requireSession="true" &gt;
+       &lt;AccessControl&gt;
+           ...
+       &lt;/AccessControl&gt;
+    &lt;/Path&gt;
+ &lt;/Path&gt;
+ --
+ 
+  Also see:
+  <a rel="nofollow" class="external free" href="https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPRequestMapper">https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPRequestMapper</a> and
+  <a rel="nofollow" class="external free" href="https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPAccessControl">https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPAccessControl</a>
+ 
+ 2. As Moodle admin, go to the 'Administrations &gt;&gt; Users &gt;&gt; Authentication' and
+    click on the the 'Shibboleth' settings.
+ 
+ 3. Fill in the fields of the form. The fields 'Username', 'First name',
+    'Surname', etc. should contain the name of the environment variables of the
+    Shibboleth attributes that you want to map onto the corresponding Moodle
+    variable (e.g. 'Shib-Person-surname' for the person's last name, refer
+    the Shibboleth documentation or the documentation of your Shibboleth
+    federation for information on which attributes are available).
+    Especially the 'Username' field is of great importance because
+    this attribute is used for the Moodle authentication of Shibboleth users.
+ 
+  #############################################################################
+  Shibboleth Attributes needed by Moodle:
+  For Moodle to work properly Shibboleth should at least provide the attribute
+  that is used as username in Moodle. It has to be unique for all Shibboleth
+  Be aware that Moodle converts the username to lowercase. So, the overall
+  behaviour of the username will be case-insensitive.
+  All attributes used for moodle must obey a certain length, otherwise Moodle
+  cuts off the ends. Consult the Moodle documentation for further information
+  on the maximum lengths for each field in the user profile.
+  #############################################################################
+ 
+ 4.a  If you want Shibboleth as your only authentication method with an external
+    Where Are You From (WAYF) Service , set the 'Alternate Login URL' in the
+    'Common settings' in 'Administrations &gt;&gt; Users &gt;&gt; Authentication Options'
+    to the the URL of the file 'moodle/auth/shibboleth/index.php'.
+    This will enforce Shibboleth login.
+ 
+ 4.b If you want to use the Moodle integrated WAYF service, you have to activate it
+   in the Moodle Shibboleth authentication settings by checking the
+   'Moodle WAYF Service' checkbox and providing a list of entity IDs in the
+   'Identity Providers' textarea together with a name and an optional
+   SessionInitiator URL, which usually is an absolute or relative URL pointing
+   to the same host. If no SessionInitiator URL is given, the default one
+   '/Shibboleth.sso' (only works for Shibboleth 1.3.x) will be used. For
+   Shibboleth 2.x you have to add '/Shibboleth.sso/DS' as a SessionInitiator.
+   Also see <a rel="nofollow" class="external free" href="https://wiki.shibboleth.net/confluence/display/SHIB/SessionInitiator">https://wiki.shibboleth.net/confluence/display/SHIB/SessionInitiator</a>
+   and <a rel="nofollow" class="external free" href="https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPSessionInitiator">https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPSessionInitiator</a>
+ 
+   Important Note: If you upgraded from a previous version of Moodle and now
+                   want to use the integrated WAYF, you have to make sure that
+                   in step 1 only the index.php script in
+                   moodle/auth/shibboleth/ is protected but *not* the other
+                   scripts and especially not the login.php script.
+ 
+   If you were using the integrated WAYF alread with Shibboleth 1.3, it could
+   be that the integrated WAYF is not working anymore after you updated Moodle.
+   The reason is that the implicitly set default SessionInitiator changed in
+   Moodle as well as in Shibboleth. For Shibboleth 1.3 one therefore has to
+   add /Shibboleth.sso as third parameter whereas this is /Shibboleth.sso/DS
+   for Shibboleth 2.x.
+ 
+ 5.  Save the changes for the 'Shibboleth settings'.
+ 
+   Important Note: If you went for 4.b (integrated WAYF service), saving the
+                   settings will overwrite the Moodle Alternate Login URL
+                   using the Moodle web root URL.
+ 
+ 6.  If you want to use Shibboleth in addition to another authentication method
+   not using the integrated WAYF service from 4.b, change the 'Instructions' in
+   'Administrations &gt;&gt; Users &gt;&gt; Manage authentication' to contain a link to the
+    moodle/auth/shibboleth/index.php file which is protected by
+    Shibboleth (see step 1.) and causes the Shibboleth login procedure to start.
+    You can also use HTML code in that field, e.g. to include an image as a
+    Shibboleth login button.
+ 
+    Note: As of now you cannot use dual login together with the integrated
+          WAYF service provided by Moodle (4.b).
+ 
+ 7. Save the authentication changes.
+ 
+ How the Shibboleth authentication works
+ --------------------------------------------------------------------------------
+ To get Shibboleth authenticated in Moodle a user basically must access the
+ Shibboleth-protected page /auth/shibboleth/index.php. If Shibboleth is the only
+ authentication method (see 4.a), this happens automatically when a user selects
+ his home organization in the Moodle WAYF service or if the alternate login URL
+ is configured to be the protected /auth/shibboleth/index.php
+ Otherwise, the user has to click on the link on the dual login page you
+ provided in step 5.b.
+ 
+ Moodle basically checks whether the Shibboleth attribute that you mapped
+ as the username is present. This attribute should only be present if a user is
+ Shibboleth authenticated.
+ 
+ If the user's Moodle account has not existed yet, it gets automatically created.
+ 
+ To prevent that every Shibboleth user can access your Moodle site you have to
+ adapt the 'require valid-user' line in your webserver's config  (see step 1) to
+ allow only specific users. If you defined some authorization rules in step 1,
+ these are checked by Shibboleth itself. Only users who met these rules
+ actually can access /auth/shibboleth/index.php and get logged in.
+ 
+ You can use Shibboleth AND another authentication method (it was tested with
+ manual login). So, if there are a few users that don't have a Shibboleth
+ login, you could create manual accounts for them and they could use the manual
+ login. For other authentication methods you first have to configure them and
+ then set Shibboleth as your authentication method. Users can log in only via one
+ authentication method unless they have two accounts in Moodle.
+ 
+ Shibboleth dual login with custom login page
+ --------------------------------------------------------------------------------
+ You can create a dual login page that better fits your needs. For this
+ to work, you have to set up the two authentication methods (e.g. 'Manual
+ Accounts' and 'Shibboleth') and specify an alternate login link to your own dual
+ login page. On that page you basically need a link to the Shibboleth-protected
+ page ('/auth/shibboleth/index.php') for the Shibboleth login and a
+ form that sends 'username' and 'password' to moodle/login/index.php. Set this
+ web page then als alternate login page.
+ Consult the Moodle documentation for further instructions and requirements.
+ 
+ How to customize the way the Shibboleth user data is used in Moodle
+ --------------------------------------------------------------------------------
+ Among the Shibboleth settings in Moodle there is a field that should contain a
+ path to a php file that can be used as data manipulation hook.
+ You can use this if you want to further process the way your Shibboleth
+ attributes are used in Moodle. Due to security reasons this file cannot be
+ located within the current site data directory ($CFG-&gt;dataroot).
+ 
+ Example 1: Your Shibboleth federation uses an attribute that specifies the
+          user's preferred language, but the content of this attribute is not
+          compatible with the Moodle data representation, e.g. the Shibboleth
+          attribute contains 'German' but Moodle needs a two letter value like
+          'de'.
+ 
+ Example 2: The country, city and street are provided in one Shibboleth attribute
+          and you want these values to be used in the Moodle user profile. So
+          You have to parse the corresponding attribute to fill the user fields.
+ 
+ If you want to use this hook you have to be a skilled PHP programmer. It is
+ strongly recommended that you take a look at the file
+ moodle/auth/shibboleth/auth.php, especially the function 'get_userinfo'
+ where this file is included.
+ 
+ The context of the file is the same as within this login function. So you
+ can directly edit the object $result.
+ 
+ Example file:
+ --
+ &lt;?php
+ 
+   // Set the zip code and the adress
+   if ($_SERVER[$this-&gt;config-&gt;field_map_address]&nbsp;!= <i>)</i>
+   {
+       // $address contains something like 'SWITCH$Limmatquai 138$CH-8021 Zurich'
+       // We want to split this up to get:
+       // institution, street, zipcode, city and country
+       $address = $_SERVER[$this-&gt;config-&gt;field_map_address];
+       list($institution, $street, $zip_city) = explode('$', $address);
+       preg_match('/ (.+)/', $zip_city, $regs);
+       $city = $regs[1];
+ 
+       preg_match('/(.+)-/',$zip_city, $regs);
+       $country = $regs[1];
+ 
+       $result["address"] = $street;
+       $result["city"] = $city;
+       $result["country"] = $country;
+       $result["department"] = $institution;
+       $result["description"] = "I am a Shibboleth user"; 
+   }
+&nbsp;?&gt;
+ --
+ 
+ How to upgrade your Service Provider to 2.x
+ -------------------------------------------------------------------------------
+ In case your upgrade your Service Provider 1.3.x to 2.x, be aware of the fact
+ that in version 2.0 the default behaviour regarding attribute propagation
+ changed.
+ 
+ While the Service Provider 1.3.x published the Shibboleth attributes to the
+ web server environment as HTTP Request headers, the Service Provider 2.x
+ publishes attributes as environment variables, which increases the security for
+ some platforms.
+ 
+ However, this change has the effect that the attribute names change.
+ E.g. while the surname attribute was published as 'HTTP_SHIB_PERSON_SURNAME'
+ with 1.3.x, this attribute will be available in $_SERVER['Shib-Person-surname']
+ or depending on your /etc/shibboleth/attribute-map.xml file just as
+ $_SERVER['sn'].
+ 
+ Because Moodle needs to know what Shibboleth attributes it shall map onto which
+ Moodle user profile field, one has to make sure the mapping is updated as well
+ after the Service Provider upgrade.
+ 
+ ********************************************************************************
+ Because you risk locking yourself out of Moodle it is strongly
+ recommended to use the following approach when upgrading the Service Provider:
+ 1. Enable manual authentication before the upgrade.
+ 2. Make sure that you have at least one manual account with administration
+    privileges working before upgrading your Service Provider to 2.x.
+ 3. After the SP upgrade, use this account to log into Moodle and adapt the
+    attribute mapping in 'Site Administration -&gt; Users -&gt; Shibboleth' to reflect
+    the changed attribute names.
+    You find the attribute names in the file /etc/shibboleth/attribute-map.xml
+    listed as the 'id' value of an attribute definition.
+ 4. If you are using the integrated WAYF, you may have to set the third parameter
+    of each entry to '/Shibboleth.sso/DS'
+ 5. Test the login with a Shibboleth account
+ 6. If all is working, disable manual authentication again
+ ********************************************************************************
+ 
+ How to add logout support
+ --------------------------------------------------------------------------------
+ In order make Moodle support Shibboleth logout, one has to make the Shibboleth
+ Service Provider (SP) aware of the Moodle logout capability. Only then the SP
+ can trigger Moodle's front or back channel logout handler.
+ 
+ To make the SP aware of the Moodle logout, you have to add the following to the
+ Shibboleth main configuration file shibboleth2.xml (usually in /etc/shibboleth/)
+ just before the &lt;MetadataProvider&gt; element.
+ 
+ --
+ &lt;Notify
+   Channel="back"
+   Location="<a rel="nofollow" class="external free" href="https:///#YOUR_MOODLE_HOSTNAME#/moodle/auth/shibboleth/logout.php">https://#YOUR_MOODLE_HOSTNAME#/moodle/auth/shibboleth/logout.php</a>" /&gt;
+ --
+ 
+ Then restart the Shibboleth daemon and check the log file for errors. If there
+ were no errors, you can test the logout feature by accessing Moodle,
+ authenticating via Shibboleth and the access the URL:
+ #YOUR_MOODLE_HOSTNAME#/Shibboleth.sso/Logout (assuming you have a standard
+ Shibboleth installation). If everything worked well, you should see a Shibboleth
+ page saying that you were successfully logged out and if you go back to Moodle
+ you also should be logged out from Moodle.
+ 
+ Requirements:
+ - PHP needs the Soap Extension, which maybe must installed manually:
+   More information is available here <a rel="nofollow" class="external free" href="http://ch.php.net/soap">http://ch.php.net/soap</a>
+ - Logout only works with Shibboleth Service Provider 2.1 or higher
+ - /moodle/auth/shibboleth/logout.php *must not* be protected by Shibboleth!
+   In case all of Moodle is protected with Shibboleth, you have to add something
+   like this to your Apache configuration after all the other require rules
+ 
+ --
+ &lt;Directory /path/to/moodle/auth/shibboleth/logout.php&gt;
+     AuthType shibboleth
+     ShibRequireSession Off
+     require shibboleth
+ &lt;/Directory&gt;
+ --
+ 
+ When using IIS, the same can be achieved by something like:
+ --
+ &lt;Path name="auth/shibboleth/logout.php" requireSession="false"&gt;
+ --
+   in the shibboleth2.xml RequestMap.
+ 
+ Limitations:
+ Single Logout is only supported when SAML2 is used at the SP and the IdP.
+ As of October 2009, the Shibboleth Identity Provider 2.1.4 does not yet support
+ Single Logout (SLO). Therefore, the single logout feature cannot be used yet
+ in a Shibboleth only setup but there may be other SAML2 products that could
+ be used as Identity Provider, e.g. SimpleSAML PHP.
+ 
+ One of the reasons why SLO isn't supported yet is because there aren't many
+ applications yet that were adapted to support front and back channel
+ logout. Hopefully, the Moodle logout helps to motivate the developers to
+ implement SLO. On the other hand, the easiest and safest way to log out
+ still is to tell users to quit their web browsers&nbsp;:)
+ 
+ Also see <a rel="nofollow" class="external free" href="https://wiki.shibboleth.net/confluence/display/SHIB2/SLOIssues">https://wiki.shibboleth.net/confluence/display/SHIB2/SLOIssues</a> and
+ <a rel="nofollow" class="external free" href="https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPLogoutInitiator">https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPLogoutInitiator</a> for some
+ background information on this topic.
+ 
+ --------------------------------------------------------------------------------
+ In case of problems and questions with Shibboleth authentication, contact
+ Lukas Haemmerle &lt;lukas.haemmerle@switch.ch&gt; or Markus Hagman &lt;hagman@hytti.uku.fi&gt;
+</pre>
+<h2><span class="mw-headline" id="A_sample_configuration_in_detail">A sample configuration in detail</span></h2>
+<p>Here are the steps required in a specific federation as an example to demonstrate the components involved.
+</p>
+<h3><span class="mw-headline" id="Notation">Notation</span></h3>
+<p>- The expressions in all caps are placeholders for their actual values. For example /PATH/TO/MOODLE in the document could mean /var/www/html/moodle in your server.
+</p><p>- The '#' in shell commands in the form '# COMMAND" means the COMMAND needs to be run as the super-user. It could be the user 'root' or a different user having sudo privileges. In the latter case he should prepend the command with sudo, as in '$ sudo COMMAND'. The '$' in that command denotes it is a non-privileged user.
+</p>
+<h3><span class="mw-headline" id="Prerequisites">Prerequisites</span></h3>
+<p>- You have your Moodle site running on Debian GNU/Linux or any of its derivatives like Ubuntu Linux.
+</p><p>-  This  documentation assumes that your Linux distribution uses the system manager Systemd. But you can easily change the commands for a different init system, typically SysV or Upstart.
+</p><p>- You are running the web server Apache2.
+</p><p>- Your site serves HTTPS on its default port 443. We write its URL as <a rel="nofollow" class="external free" href="https://domain/">https://DOMAIN</a>, where DOMAIN stands for your the domain name of your Moodle server. So if the URL of your Moodle is <a rel="nofollow" class="external free" href="https://lms.example.com/">https://lms.example.com/</a> then DOMAIN is lms.example.com.
+</p>
+<h3><span class="mw-headline" id="Configuring_service_provider">Configuring service provider</span></h3>
+<p>1. Install the Shibboleth module for Apache2
+</p><p>Install the Debian package libapache2-mod-shib, which contains the Apache module for Shibboleth service providers (SP) and its supporting Shib daemon:
+</p>
+<pre>   # apt install libapache2-mod-shib --no-install-recommends
+</pre>
+<p>It will create a directory /etc/shibboleth with a default set of configuration files and also install the system service shib.
+</p><p>2. Get federation metadata signing certificate federation-cert.pem
+</p>
+<pre>   # wget <a rel="nofollow" class="external free" href="https://federationregistry/signedmetadata/metadata-signer">https://FEDERATIONREGISTRY/signedmetadata/metadata-signer</a> -O /etc/shibboleth/federation-cert.pem
+</pre>
+<p>3. Edit the main Shibboleth configuration file /etc/shibboleth/shibboleth2.xml
+</p><p>3.1 Change the entityID in the ApplicationDefaults tag to your service
+</p>
+<pre>   &lt;ApplicationDefaults entityID="<a rel="nofollow" class="external free" href="https://domain/shibboleth">https://DOMAIN/shibboleth</a>"
+       REMOTE_USER="eppn subject-id pairwise-id persistent-id"
+       cipherSuites="DEFAULT:!EXP:!LOW:!aNULL:!eNULL:!DES:!IDEA:!SEED:!RC4:!3DES:!kRSA:!SSLv2:!SSLv3:!TLSv1:!TLSv1.1"&gt;
+</pre>
+<p>Notice that the end of the ApplicationDefaults tag is way below. So don't add one here!
+</p><p>3.2 Set the discovery server
+</p>
+<pre>           &lt;SSO  discoveryProtocol="SAMLDS" discoveryURL="<a rel="nofollow" class="external free" href="https://discoveryserver/">https://DISCOVERYSERVER</a>"&gt;
+             SAML2
+           &lt;/SSO&gt;
+</pre>
+<p>3.3 Set the MetadataProvider
+</p>
+<pre> &lt;MetadataProvider type="XML" url="<a rel="nofollow" class="external free" href="https://metadataprovider/signedmetadata/metadata.xml">https://METADATAPROVIDER/signedmetadata/metadata.xml</a>" legacyOrgName="true" backingFilePath="test-metadata.xml" maxRefreshDelay="7200"&gt;
+ 
+   &lt;MetadataFilter type="Signature" certificate="federation-cert.pem" verifyBackup="false" /&gt;
+ 
+   &lt;MetadataFilter type="RequireValidUntil" maxValidityInterval="864000" /&gt;
+ &lt;/MetadataProvider&gt;
+</pre>
+<p>3.4 Plan for the key and certificate files
+</p>
+<pre> &lt;CredentialResolver type="File" use="signing"  key="lms-signing-key.pem" certificate="lms-signing-cert.pem" /&gt;
+ &lt;CredentialResolver type="File" use="encryption" key="lms-encrypt-key.pem" certificate="lms-encrypt-cert.pem" /&gt;
+</pre>
+<p>4. Create SP metadata credentials
+</p>
+<pre> # /usr/sbin/shib-keygen -n lms-signing -e <a rel="nofollow" class="external free" href="https://domain/shibboleth">https://DOMAIN/shibboleth</a>
+ # /usr/sbin/shib-keygen -n lms-encrypt -e <a rel="nofollow" class="external free" href="https://domain/shibboleth">https://DOMAIN/shibboleth</a>
+</pre>
+<p>5. Start the shibboleth service for Apache
+</p><p>5.1 Test the configuration before starting the service:
+</p>
+<pre> # shibd -t /etc/shibboleth/shibboleth2.xml
+ [possible errors or warnings]
+ overall configuration is loadable, check console or log for non-fatal problems
+</pre>
+<p>You need to study the errors or warnings, if there are any, before continuing.
+</p><p>5.2 Start the service:
+</p>
+<pre> # systemctl start shibd
+</pre>
+<p><br>
+6. Enable Shibboleth on the Apache virtual host
+</p><p>6.1 To activate shibboleth login on Apache protect the /PATH/TO/MOODLE/auth/shibboleth/index.php file by Shibboleth. Also add the SSL certificates to the /etc/apache2/sites-available/SOMETHING.conf file:
+</p>
+<pre> &lt;IfModule mod_ssl.c&gt;
+ &lt;VirtualHost *:443&gt;
+ 
+     ServerName DOMAIN
+     ServerAdmin YOU@DOMAIN
+     DocumentRoot /PATH/TO/MOODLE
+ 
+     ErrorLog ${APACHE_LOG_DIR}/DOMAIN-error.log
+     CustomLog ${APACHE_LOG_DIR}/DOMAIN-access.log combined
+     
+     SSLCertificateFile /etc/ssl/certs/ssl-DOMAIN.crt
+     SSLCertificateKeyFile /etc/ssl/private/ssl-DOMAIN.key
+ 
+   &lt;Location /moodle&gt;
+      # just comment out
+      # ShibRequestSetting applicationId mdl
+   &lt;/Location&gt;
+ 
+   &lt;Directory /PATH/TO/MOODLE/auth/shibboleth/index.php&gt;
+     AuthType shibboleth
+     # just comment out the next line and add the two lines below that
+     # ShibRequestSetting applicationId mdl
+     ShibRequireSession On
+     require valid-user
+    &lt;/Directory&gt;
+ &lt;/VirtualHost&gt;
+ &lt;/IfModule&gt;
+</pre>
+<p>6.2 Activate Shibd and reload Apache
+</p>
+<pre>   # a2enmod shib
+   # systemctl reload apache2.service 
+</pre>
+<h3><span class="mw-headline" id="Configuring_the_identity_provider">Configuring the identity provider</span></h3>
+<p>7. Register the site with the federation
+</p><p>The site needs to be registered with the federation so that its WAYF go to the discovery service divert you to the correct IdP.
+</p><p>7.1 Get the metadata of the application
+</p><p>It is available at the URL <a rel="nofollow" class="external free" href="https://domain/Shibboleth.sso/Metadata">https://DOMAIN/Shibboleth.sso/Metadata</a>. 
+</p><p>7.2 Submit the metadata and your administrative information to the federation
+</p><p>Usually there is a web site at the federation for you to upload the metadata and enter various administrative information. The administrators of the federation must have shared the link with you. Follow the instructions on the screens.
+</p><p>Once the federation operator approves your request you will receive a SP registration link.
+</p><p><br>
+8. Enable and configure the Shibboleth plug-in in Moodle
+</p><p>Once you've registered successfully you have to configure the Shibboleth plug-in in Moodle. For that Moodle you have to enable it first.
+</p><p>8.1 Enable the Shibboleth plug-in in Moodle
+</p><p>As Moodle admin, go to the Site administration &gt; Plugins &gt; Authentication and enable Shibboleth by clicking on the "eye". 
+</p><p>8.2 Configure the Shibboleth plug-in in Moodle
+</p><p>Moodle needs the four fields 'Username', 'First name', 'Surname' and 'Email' at a minimum to create an account. So you should map them to corrosponding attributes in the IdP database. You have to set this data-mapping under <i>Site administration &gt; Plugins: Authentication &gt; Shibboleth</i> , etc. Here is again a typical set:
+</p><p>Username: eppn
+</p><p>Data mapping (First name): givenName
+</p><p>Data mapping (Surname): sn
+</p><p>Data mapping (Email address): mail
+</p><p>In all the above three set Update local to On every login and Lock value to Unlocked if empty.
+</p><p>In addition make the following changes:
+</p><p>Moodle WAYF service: No
+</p><p>Identity providers (auth_shibboleth | organization_selection): Delete everything in the box
+</p><p>Shibboleth Service Provider logout handler URL: /Shibboleth.sso/Logout
+</p><p>And save. The change will be immediately active, no need to restart any service!
+</p><p>Now you may visit &#8203;<a rel="nofollow" class="external free" href="https://domain/login/">https://DOMAIN/login/</a> and choose Shibboleth to be taken to the federation WAYF.
+</p>
+<h2><span class="mw-headline" id="How_to_debug">How to debug</span></h2>
+<ul><li>Visit <a rel="nofollow" class="external free" href="https://domain/Shibboleth.sso/Login">https://DOMAIN/Shibboleth.sso/Login</a>. You should be taken to the federation discovery service where you need to select your IdP. From there you'll be taken to your IdP login page. Once your credentials are accepted you'll be taken back to the Moodle site. Once in there visit <a rel="nofollow" class="external free" href="https://domain/Shibboleth.sso/Session">https://DOMAIN/Shibboleth.sso/Session</a>. It should show all the required attributes as in this example:</li></ul>
+<p>Some IdPs will only share a minimal set of user fields with your Moodle SP, which can cause problems:
+</p>
+<ul><li>Moodle errors relating to missing Shibboleth fields can be fixed by altering the data mappings within the Shibboleth authentication plugin, and ensuring that fields are not locked. The user will be asked to manually provide data if Shibboleth does not automatically provide the corresponding information.</li></ul>
+<ul><li>Moodle errors relating to invalid characters in username can be fixed by Allowing extended characters in usernames (found under Security &gt; Site policies).</li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://incommon.org/software/shibboleth/">Shibboleth Internet2 Website</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.ukfederation.org.uk/">UK Access Management Federation for Education and Research</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.ukfederation.org.uk/content/Documents/AttributeUsage">Current Core Attributes for the UK Federation</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260823010207
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.018 seconds
+Real time usage: 0.021 seconds
+Preprocessor visited node count: 44/1000000
+Post&#8208;expand include size: 663/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    2.044      1 Template:Authentication
+100.00%    2.044      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:2638-0!canonical and timestamp 20260823010207 and revision id 149707. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Shibboleth&amp;oldid=149707">https://docs.moodle.org/502/en/index.php?title=Shibboleth&amp;oldid=149707</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="00d535865630704a120a6cacf79bc2bc.html" title="Category:Authentication">Authentication</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhkd1848">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhkd18m5"></button>
+					<div class="collapse navbar-collapse igdhkd18m5" id="igdhkd18m5">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Shibboleth" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Shibboleth" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Shibboleth&amp;oldid=149707" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Shibboleth&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Shibboleth-Server" title="Shibboleth-Server – Deutsch" lang="de" hreflang="de" data-title="Shibboleth-Server" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Shibboleth" title="Shibboleth – español" lang="es" hreflang="es" data-title="Shibboleth" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Shibboleth" title="Shibboleth – français" lang="fr" hreflang="fr" data-title="Shibboleth" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/Shibboleth" title="Shibboleth – 日本語" lang="ja" hreflang="ja" data-title="Shibboleth" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 21 October 2024, at 07:39.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":145,"wgPageParseReport":{"limitreport":{"cputime":"0.018","walltime":"0.021","ppvisitednodes":{"value":44,"limit":1000000},"postexpandincludesize":{"value":663,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    2.044      1 Template:Authentication","100.00%    2.044      1 -total"]},"cachereport":{"timestamp":"20260823010207","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

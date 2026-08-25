@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Development:Question engine - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"f2556c4360e7c99a86cd934f","wgCanonicalNamespace":"Development","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":100,"wgPageName":"Development:Question_engine","wgTitle":"Question engine","wgCurRevisionId":79757,"wgRevisionId":79757,"wgArticleId":2743,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Developer","Quiz"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Development:Question_engine","wgRelevantArticleId":2743,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Question_engine","wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgInternalRedirectTargetUrl":"/502/en/Development:Question_engine","wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Development:Question_engine">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-100 ns-subject page-Development_Question_engine rootpage-Development_Question_engine layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkvo7met"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdkvo7met" id="igdkvo7met">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Development%3AQuestion+engine" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Question_engine">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Question_engine">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Question_engine">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-development" class="selected mw-list-item"><a href="https://docs.moodle.org/dev/Question_engine" title="View the subject page [c]" accesskey="c" class="selected ca-nstab-development">Development</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Development_talk:Question_engine&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Development:Question_engine&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Development:Question_engine&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-namespace">Development</span><span class="mw-page-title-separator">:</span><span class="mw-page-title-main">Question engine</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"><span class="mw-redirectedfrom">(Redirected from <a href="https://docs.moodle.org/502/en/index.php?title=Question_engine&amp;redirect=no" class="mw-redirect" title="Question engine">Question engine</a>)</span></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a class="mw-selflink selflink">Question development</a></div>
+<div class="content">
+<ul><li><a href="https://docs.moodle.org/dev/Goals_of_an_online_assessment_system" title="Development:Goals of an online assessment system">Meta-requirements</a></li>
+<li><a href="https://docs.moodle.org/dev/Question_database_structure" title="Development:Question database structure">Database structure</a></li>
+<li><a href="https://docs.moodle.org/dev/Quiz_state_diagrams" title="Development:Quiz state diagrams">State diagrams</a></li>
+<li><a href="https://docs.moodle.org/dev/Question_runtime_structures" title="Development:Question runtime structures">Runtime structures</a></li>
+<li><a href="https://docs.moodle.org/dev/Question_import/export_formats" title="Development:Question import/export formats">Import/export</a></li>
+<li><a href="https://docs.moodle.org/dev/Question_type_plugin_how_to" title="Development:Question type plugin how to">Making a new question type</a></li>
+<li><a href="https://docs.moodle.org/dev/Question_bank_consistency_check" title="Development:Question bank consistency check">Question bank consistency check</a></li>
+<li><a rel="nofollow" class="external text" href="http://cvs.moodle.org/moodle/question/">Code in CVS</a></li>
+<li><a rel="nofollow" class="external text" href="http://xref.moodle.org/nav.html?question/index.html">Cross-referenced Code</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+<p>Moodle has a powerful question engine with a modular structure to allow question type plug-ins. The question engine is responsible for rendering the questions and for processing student responses. It is used by the <a href="7507b5016131fc8e2980faeeaf1c2f18.html" class="mw-redirect" title="Quiz developer docs">quiz module</a> and it is planned that in future it will be used by the Lesson and other modules.
+</p><p>Historically the question engine started as a part of the quiz module. Only since Moodle 1.6 is it a separate core component of Moodle that can be used by any other Moodle component or module. During this restructuring the code was moved from mod/quiz/ to question/ and the tables and functions were renamed. Wherever the old table or function name contained 'quiz_' the new one will contain 'question_'
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Terminology"><span class="tocnumber">1</span> <span class="toctext">Terminology</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Questions"><span class="tocnumber">1.1</span> <span class="toctext">Questions</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Answers"><span class="tocnumber">1.2</span> <span class="toctext">Answers</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Attempts"><span class="tocnumber">1.3</span> <span class="toctext">Attempts</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Sessions,_States,_Events"><span class="tocnumber">1.4</span> <span class="toctext">Sessions, States, Events</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Code_documentation"><span class="tocnumber">2</span> <span class="toctext">Code documentation</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#API"><span class="tocnumber">3</span> <span class="toctext">API</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Organisation"><span class="tocnumber">4</span> <span class="toctext">Organisation</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Objects_and_data_structures"><span class="tocnumber">5</span> <span class="toctext">Objects and data structures</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Database_structure"><span class="tocnumber">5.1</span> <span class="toctext">Database structure</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Runtime_objects"><span class="tocnumber">5.2</span> <span class="toctext">Runtime objects</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Response_storage"><span class="tocnumber">6</span> <span class="toctext">Response storage</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Response_processing"><span class="tocnumber">7</span> <span class="toctext">Response processing</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Question_types"><span class="tocnumber">8</span> <span class="toctext">Question types</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Grades"><span class="tocnumber">9</span> <span class="toctext">Grades</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Penalty_mechanism"><span class="tocnumber">10</span> <span class="toctext">Penalty mechanism</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#What_it_is_for"><span class="tocnumber">10.1</span> <span class="toctext">What it is for</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#How_the_penalty_is_determined"><span class="tocnumber">10.2</span> <span class="toctext">How the penalty is determined</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Where_it_is_done_in_the_code"><span class="tocnumber">10.3</span> <span class="toctext">Where it is done in the code</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#Files_belonging_to_questions"><span class="tocnumber">11</span> <span class="toctext">Files belonging to questions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#File_areas"><span class="tocnumber">11.1</span> <span class="toctext">File areas</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Serving_files_and_access_checks"><span class="tocnumber">11.2</span> <span class="toctext">Serving files and access checks</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Terminology">Terminology</span></h2>
+<p>When talking about the question engine there are certain terms that can cause confusion because they can be used with different meanings. In Moodle we have adopted a certain terminology that will be explained below.
+</p>
+<h3><span class="mw-headline" id="Questions">Questions</span></h3>
+<p>A <b>question</b> is the set of definitions (question name, question text, possible answers, grading rules, feedback, etc.) that constitute a reusable assessment item. So it includes much more than what one would in everyday language call a question.
+In the terminology of the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/QTI">QTI</a> specification a 'question' is more appropriately called an <b>assessment item</b> or just 'item' for short. 
+</p><p>There are different types of questions, like for example multiple-choice questions or numerical questions. These are referred to as <b><a href="269391e04e3d733c529a97bdaae5baac.html#Question_types" class="mw-redirect" title="Question engine">question types</a></b> in Moodle.
+</p><p>Since version 1.5 Moodle is able to handle so-called <b><a href="https://docs.moodle.org/502/en/index.php?title=Adaptive_questions&amp;action=edit&amp;redlink=1" class="new" title="Adaptive questions (page does not exist)">Adaptive questions</a></b>, also known as 'adaptive items' in QTI speak. These are questions that interact with the student by going through several states depending on the student responses. For example a complicated mathematical question that is answered incorrectly, but is likely to be incorrect because of a common mistake, could provide the user with a hint towards this mistake, apply a penalty and allow a second attempt at this question. Quizzes can be run in 'adaptive mode', in which case Moodle provides buttons to mark each question individually.
+</p>
+<h3><span class="mw-headline" id="Answers">Answers</span></h3>
+<p>In Moodle the term '<b>answer'</b> is used exclusively for the <b>teacher-defined answers</b> of a question. It is easy to get confused between these teacher-defined answers and the answers that the students actually give. We have therefore adopted the convention to refer to the student-supplied answers as 'responses' and to reserve the term 'answers' to apply to teacher-defined answers. In question types that rely on teacher-supplied answers these are used in the grading process by comparing them with the student responses. Of course not all question types use teacher-defined answers but use some more intelligent way to process the student responses. 
+</p><p>Perhaps one should also stress that 'answer' is not always used in the sense of 'correct answer'. For example every choice in a multiple-choice question is referred to as an answer. Other systems use the term 'distractor' for wrong answers. 
+</p><p>In Moodle we always use the term '<b>responses'</b> to refer to the students' responses to a question. This term is always used in plural, although for some questiontypes there is only one possible response.
+</p><p>There is unfortunately, for historical reasons, one exception to the above rule: The question_states table has a field 'answer' whose purpose it actually is to hold the student's responses.
+</p>
+<h3><span class="mw-headline" id="Attempts">Attempts</span></h3>
+<p>In Moodle the term '<b>attempt'</b> is used in the sense of "Attempt at a quiz" (or another activity involving questions). Depending on the quiz settings, a student may be allowed several attempts at a quiz. An attempt is finished when the student clicks on the corresponding button on the attempt page. Students do not have to complete an attempt in one visit. They can navigate away from the quiz page and return later to continue the same attempt.
+</p><p>Each module that uses the question engine should hold its own data for the attempts in its own tables. When the module calls the question engine functions it is often expected to pass an attempt object.
+</p><p>Within one and the same quiz attempt a student may make several attempts at answering a particular question, at least if the questiontype allows it and the quiz is set up in adaptive mode. These will always be referred to as '<b>question sessions'</b> or sometimes 'attempts at a question, never just as 'attempts'.
+</p>
+<h3><span id="Sessions.2C_States.2C_Events"></span><span class="mw-headline" id="Sessions,_States,_Events">Sessions, States, Events</span></h3>
+<p>When a new attempt is started, a new <b>session</b> is started for each question. So in a sense a session is for a question what an attempt is for a whole quiz. A question session lasts no longer than an attempt and for each question there can only by one session within one attempt.
+</p><p>Moodle allows the student to interact with a question repeatedly within one session and each such interaction leads to a new <b>state</b>. The first state is created when the session is created. A new state is then created when a student saves, validates or submits an answer or .... The student's responses and, if appropriate, the results of response processing (grading) are stored in the new state that gets created.
+</p><p>The type of <b>event</b> that led to the creation of a particular state is saved along with the state. The types of events currently used are:
+</p>
+<dl><dt>open</dt>
+<dd>A new session has just been created and this is the opening state. Usually it doesn't hold student responses yet (except where a quiz attempt is based on a previous attempt because the 'attemptonlast' option is set).</dd>
+<dt>save</dt>
+<dd>The student has clicked the save button.</dd>
+<dt>validate</dt>
+<dd>The student has asked for his responses to be validated. This means it is checked that they are valid responses. In the case of mathematical questions which requires the input of a mathematical expression in some linear format the question type may want to display the validated result back to the student in typeset form. Similar things may apply to other subject-specific question types. If a student response is found to be invalid the student is told so but no penalty is applied. The invalid response is stored with the state.</dd>
+<dt>grade</dt>
+<dd>The student has pressed the submit button. The grade is calculated and stored with the attempt.</dd>
+<dt>duplicategrade</dt>
+<dd>The student has pressed the submit button but the response to this question has not actually changed. This happens a lot in quizzes with several questions on one page where the student may have changed the responses for one question only. I believe that states created by this type of event are not stored in the database.</dd>
+<dt>close</dt>
+<dd>The last state in a session which is now closed. Currently a session closes only when the attempt closes, either because the student requests it or because the timelimit elapses.</dd></dl>
+<p>There are now plans to introduce another event type
+</p>
+<dl><dt>submit</dt>
+<dd>The student has submitted his responses for grading but grading has not yet taken place. This will be used by teacher-marked question types like the essay questions for example.</dd></dl>
+<h2><span class="mw-headline" id="Code_documentation">Code documentation</span></h2>
+<p>The code is documented according to <a rel="nofollow" class="external text" href="http://www.phpdoc.org/">PHPdocumentor</a> conventions. The explanations here in the wiki are meant to complement this.
+</p><p>Inline comments should be used liberally in the code. The following conventions make it easier to search for comments with special meaning:
+</p>
+<ul><li>use TODO in comments about things that need to be done</li>
+<li>use&nbsp;??? in comments that are questions about the code</li></ul>
+<p>Code is organised into packages
+</p>
+<ul><li>Package questionbank - code that relates to the questionbank system
+<ul><li>Subpackage questiontypes - code that relates to the question types, including the question type base class.</li>
+<li>Subpackage importexport - code that relates to importing and exporting questions.</li></ul></li></ul>
+<p>Generally, the base classes default_questiontype and qformat_default should contain most of the documentation, since all question types should follow the same interface. There is no value in repeating the same information on all the various subclasses. The subclasses should concentrate on describing any new methods they have that do not come from the base class.
+</p><p>See the <a rel="nofollow" class="external text" href="http://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_phpDocumentor.quickstart.pkg.html#coding.phpcomments">PHPdocumentor manual</a> for more advice on writing good comments.
+</p><p>Moodle PHPdocs can be seen here: <a rel="nofollow" class="external free" href="http://phpdocs.moodle.org/">http://phpdocs.moodle.org/</a>.
+</p>
+<h2><span class="mw-headline" id="API">API</span></h2>
+<p>The library lib/questionlib.php contains all functions that need to be available to any module wanting to use questions (this is new in Moodle 1.6, in Moodle 1.5 this was part of mod/quiz/locallib.php). Loading this library instantiates all questiontype classes by loading the questiontype.php files
+</p><p>A description of the API still needs to be written. Also lib/questionlib.php should be cleaned up a bit to distinguish between the API functions and the helper functions.
+</p>
+<h2><span class="mw-headline" id="Organisation">Organisation</span></h2>
+<p>The default questiontype class is defined in <b>question/type/questiontype.php</b> (in Moodle 1.5 this was still in mod/quiz/locallib.php). The individual questiontypes extend this class in their own questiontype.php file. For documentation of the questiontype classes one should often look at the documentation of the default question type because much of the documentation that is in the default class is not repeated in the other questiontype classes.
+</p><p>While questiontypes are realized as classes, the question engine is not written in a truly object-oriented way. Instead it follows the Moodle model of using objects mostly only as alternatives to arrays to hold database records. So none of the question, attempt, and state objects that play a central role in the module have any methods. Only the questiontype objects have methods. Strangely enough the quiz module instantiates one object of each questiontype class at the start and then reuses their methods for the different questions. If one is used to the Moodle way of programming then this is easy enough to handle.
+</p>
+<h2><span class="mw-headline" id="Objects_and_data_structures">Objects and data structures</span></h2>
+<p>Key to understanding how the question engine works is to understand how the different kinds of object work together. The most important ones are:
+</p>
+<ul><li>Questions</li>
+<li>Attempts</li>
+<li>States</li></ul>
+<p>Questions are data created by the teacher. Attempts and States are data created by the student when interacting with a quiz. 
+</p><p>The Moodle quiz module allows students to make several attempts at a quiz. Data about such an <b>attempt</b> is stored in an attempt object. The Moodle question engine was optimized to deal with such attempts and therefore every module wanting to use the question engine also has to implement the attempt object and pass it to many of the question engine functions. The attempt object holds for example information about how the quiz was randomized for this attempt and the ordering of the questions and answers.
+</p><p>Moodle allows students to interact repeatedly with a single question. So for example the student might initially just save an answer, later mark it, then correct it if it was marked incorrect. When the student first views a question within a particular attempt a <b>question session</b> and the first question state is created. Each time the student interacts with the question a new <b>question state</b> is created. So states are indexed by user id, attempt id and question id.
+</p>
+<h3><span class="mw-headline" id="Database_structure">Database structure</span></h3>
+<p>All this data needs to be kept in Moodle's database. How this is achieved is explained on a separate page about the <b><a href="a2946a9403bd5e854fd661d28979b0df.html" class="mw-redirect" title="Quiz database structure">Quiz database structure</a></b>, which also contains a useful diagram.
+</p><p>As is customary in Moodle, most runtime objects simply represent the data from a particular database record. So for example a $quiz object has fields corresponding to all the fields in the <a href="a2946a9403bd5e854fd661d28979b0df.html#quiz" class="mw-redirect" title="Quiz database structure">quiz table</a>. In some cases the objects have some additional fields that are added at runtime. This is particularly the case for $question and $state objects. These additional fields are also described on the page about the <b><a href="a2946a9403bd5e854fd661d28979b0df.html" class="mw-redirect" title="Quiz database structure">Quiz database structure</a></b>. Many functions that are used to process these objects make use of the additional fields and it is therefore necessary to use the correct functions for creating these objects.
+</p>
+<h3><span class="mw-headline" id="Runtime_objects">Runtime objects</span></h3>
+<p>Some objects used by the quiz module are purely runtime object and do not correspond to a database table. The structure of these objects is explained in detail on a separate page about the <b><a href="https://docs.moodle.org/502/en/index.php?title=Quiz_runtime_objects&amp;action=edit&amp;redlink=1" class="new" title="Quiz runtime objects (page does not exist)">Quiz runtime objects</a></b>.
+</p><p>The main script of the quiz module is attempt.php which will have to deal with all these objects. Studying the <b><a href="3f9be21468d569c3441cf759c915cccf.html" class="mw-redirect" title="Quiz attempt">explanation of attempt.php</a></b> is therefore a good way to start to study the quiz module code.
+</p>
+<h2><span class="mw-headline" id="Response_storage">Response storage</span></h2>
+<p>The student's responses to a question are stored in <code>$state-&gt;responses</code>. Questiontypes are completely free to implement the storage mechanism of their responses (and other state information) the way they want. Still, the standard questiontypes all follow a similar model. The default storage model and the questiontype specific variations are explained below.
+</p><p>The flexibility for the questiontypes to choose their response storage mechanism freely and to convert from the storage model to the runtime model is provided by a set of three functions, which allow to initialise the runtime <code>$state-&gt;responses</code> field, to convert from the runtime to the storage model and vice versa:
+</p>
+<dl><dt><code>create_session_and_responses()</code></dt>
+<dd>Initializes the $state object, in particular the <code>$state-&gt;responses</code> field</dd></dl>
+<dl><dt><code>restore_session_and_responses()</code></dt>
+<dd>Loads the question type specific session data from the database into the <code>$state</code> object, in particular it loads the responses that have been saved for the given <code>$state</code> into the <code>$state-&gt;responses</code> field.</dd></dl>
+<dl><dt><code>save_session_and_responses()</code></dt>
+<dd>Saves the question type specific session data from the $state object to the database. In particular, for most questiontypes, it saves the responses from the <code>$state-&gt;responses</code> to the database.</dd></dl>
+<p>The generic quiz module code saves the contents form the <code>$state-&gt;responses['']</code> field to the answer field in the <a href="a2946a9403bd5e854fd661d28979b0df.html#quiz_states" class="mw-redirect" title="Quiz database structure">quiz_states table</a> and also automatically restores the contents of this field to <code>$state-&gt;responses['']</code>. This means that any questiontype, which only expects a single value as its response can skip the implementation of the three methods described above. All questiontypes that have multiple value responses need to implement these methods. 
+</p><p>The default questiontypes handle this problem by serializing/de-serializing the responses to/from the answer field in the quiz_states table. However, it is also possible (and may be better practice) to extend the quiz_states table with a questiontype specific table, i.e. take the id of the quiz_states record as a foreign key in the questiontype specific table. Because the value of <code>$state-&gt;responses['']</code> is set to the value of the answer field, questiontypes that serialize their response need to overwrite (in <code>save_session_and_responses()</code>) whatever value the generic code set this field to with their serialized value (usually achieved with a simple set_field). 
+</p><p>In the method <code>restore_session_and_responses()</code> the serialized value can be read from <code>$state-&gt;responses['']</code> because this is where the value from answer field of the quiz_states table has been moved. Care needs to be taken that this array value is then unset or the whole array overwritten, so that the array does not accidentally contain a value with the empty string index.
+</p>
+<h2><span class="mw-headline" id="Response_processing">Response processing</span></h2>
+<p>The runtime model for responses dictates the structure of the $state-&gt;responses array. Starting with the names of the form elements this section goes through the relevant processing steps and thus attempts to clarify why the keys of the $state-&gt;responses array can differ for different questiontypes; even more, it explains how the array keys are chosen and set.
+</p><p>Although it may initially seem strange to start with the naming convention of the form fields, the reason for this will become clear later on. The controls (i.e. the form fields) of a question get printed by the method <code>print_question_formulation_and_controls()</code>. The convention only dictates that the name of the control element(s) must begin with the value of <code>$question-&gt;name_prefix</code>. The <code>$question-&gt;name_prefix</code> is a string starting with "resp" followed by the question id and an underscore, e.g. <code>resp56_</code>. In the default case, when there is only a single control element (this includes the case of a list of equally named radio buttons), no postfix is appended to the name prefix. For questiontypes that allow or require multiple form elements, an arbitrary string can be appended to the name prefix to form the name of these form elements. The postfix must not include any relational data (i.e. ids of records in the quiz_answers table), because this can lead to problems with regrading of versioned questions.
+</p><p>After the printing of the question the server only sees it again when it is submitted. So the submitted data will contain several values indexed by strings starting with <code>respXX_</code>. Upon submission, the function <code>quiz_process_responses()</code> is called, which assigns the submitted responses to the state of the question with id XX, using the postfix (i.e. everything after the underscore) as array keys. In the default case with only one control element the name only consists of the name prefix. This explains why the default index of the <code>$state-&gt;responses</code> array is the empty string. The value of each array element is obviously the value that was submitted by the form, basically a raw response.
+</p><p>The function <code>quiz_process_responses()</code> in turn calls the questiontype specific method <code>grade_responses()</code> to assign a grade to the submitted responses and <code>compare_responses()</code> to determine whether the response was identical to the previous submission and to avoid regrading the same responses repeatedly. These questiontype specific functions need to be aware of the expected keys of the <code>$state-&gt;responses</code> array.
+</p><p>Finally, the methods <code>restore_session_and_responses()</code> and <code>save_session_and_responses()</code> also need to know the questiontype specific layout of the <code>$state-&gt;responses array</code> and restore or save the information, e.g. by converting from or to the data representation.
+</p>
+<h2><span class="mw-headline" id="Question_types">Question types</span></h2>
+<p><a href="https://docs.moodle.org/502/en/index.php?title=Template:Questiontype_developer_docs&amp;action=edit&amp;redlink=1" class="new" title="Template:Questiontype developer docs (page does not exist)">Template:Questiontype developer docs</a>
+The quiz module is itself modular and allows question type plug-ins. For each question type there should be a page, accessible via the menu at the right, which provides at least the details about
+</p>
+<ul><li>Database tables</li>
+<li>Response storage</li>
+<li>Question options object</li>
+<li>State options object</li></ul>
+<p><a href="https://docs.moodle.org/502/en/index.php?title=Development:Question_type_code_flow&amp;action=edit&amp;redlink=1" class="new" title="Development:Question type code flow (page does not exist)">Development:Question type code flow</a>
+</p><p>It is hoped that Moodlers will contribute a lot of non-core question types in the future. For this it would be good to start a <a href="4d467acd3f7453d1484df0704a84d319.html" class="mw-redirect" title="How to write a question type plugin">How to write a question type plugin</a>.
+</p>
+<h2><span class="mw-headline" id="Grades">Grades</span></h2>
+<p>The handling of grades is a bit complicated because there are so many different grades around that get rescaled and combined in various ways. This section should summarize how this is done and why.
+</p><p>The following grade fields are being used:
+</p>
+<ul><li>$question-&gt;defaultgrade</li></ul>
+<dl><dd><dl><dd>This is the default value for the maximum grade for this question. This is set up when the teacher creates the question and it is stored in an int(10) field in the <a href="a2946a9403bd5e854fd661d28979b0df.html#quiz_questions" class="mw-redirect" title="Quiz database structure">quiz_questions</a> table. However when the question is actually used in a particular quiz the teacher can overrule this default and this is stored in:</dd></dl></dd></dl>
+<ul><li>$question-&gt;maxgrade</li></ul>
+<dl><dd><dl><dd>This is the maximum grade that the teacher has assigned to this question in the context of the current quiz. This is by default equal to $questions-&gt;defaultgrade but the teacher can change this when editing the quiz. In the database it is stored in an int(10) field in the <a href="a2946a9403bd5e854fd661d28979b0df.html#quiz_question_instances" class="mw-redirect" title="Quiz database structure">quiz_question_instances table</a>.</dd></dl></dd></dl>
+<ul><li>$question-&gt;penalty</li></ul>
+<ul><li>$state-&gt;raw_grade</li>
+<li>$state-&gt;grade</li>
+<li>$state-&gt;penalty</li>
+<li>$state-&gt;sumpenalty</li></ul>
+<ul><li>$attempt-&gt;sumgrades</li></ul>
+<p>The maximum grades set by the teacher, $question-&gt;defaultgrade and $question-&gt;maxgrade, are integers. All student-obtained grades are in principle floating point numbers. For historical reasons they are stored in the database as varchar(10) fields. Care has to be taken when writing to the database to make sure all grades are correctly rounded and squeezed into a string of no more than 10 characters, otherwise the writing to database will fail, see bug 4220.
+</p><p>The final outcome of the calculation of the grade for a user at a particular quiz is stored in the 'grade' field of the <a href="a2946a9403bd5e854fd661d28979b0df.html#quiz_grades" class="mw-redirect" title="Quiz database structure">quiz_grades table</a>. This field has type double.
+</p>
+<h2><span class="mw-headline" id="Penalty_mechanism">Penalty mechanism</span></h2>
+<h3><span class="mw-headline" id="What_it_is_for">What it is for</span></h3>
+<p>When the quiz is run in adaptive mode the student can interact with a question repeatedly. So in particular the student can try again when he gets a wrong answer. Clearly the final mark for the question must reflect the fact that the student did not get it right originally. Therefore a penalty is subtracted from the final mark.
+</p>
+<h3><span class="mw-headline" id="How_the_penalty_is_determined">How the penalty is determined</span></h3>
+<p>First of all penalties are relevant only if a quiz is run in adaptive mode. Only in this case can a student have a second attempt and therefore only in this mode can there be any occasion to subtract a penalty.
+</p><p>Even in adaptive mode the penalty mechanism is only used when it is selected in the quiz options. If "Apply penalties" is set to "No" then the final mark for the question is the mark for the last graded response.
+</p><p>Each question has a 'penalty' field (which should really be called 'penaltyfactor') which is a number between 0 and 1. The penalty for a wrong response is calculated as the product ($quiz-&gt;penalty * $quiz-&gt;grade), i.e., as the product of the penaltyfactor with the maximum achievable grade for the question. This product is stored in $state-&gt;penalty. So $quiz-&gt;penalty is the fraction of the maximum grade that is subtracted as a penalty for each wrong response.
+</p><p>The $quiz-&gt;penalty field has a default value of 0.1, both in the database and in mod/quiz/defaults.php. This default can of course be overwritten by the admin on the quiz configuration page. This admin-selected default is (as usual for admin defaults) stored in $CFG-&gt;quiz_penalty. The teacher can choose a different penalty factor for each individual question when adding or editing a question. (In Moodle 1.8 the default value of 0.1 is actually hardcoded at line 87 of moodle/question/type/edit_question_form.php)
+</p><p>Now if a student makes repeated wrong attempts (or partially correct attempts) the penalties for all these attempts are added up in $state-&gt;sumpenalties. The mark for the question is then calculated as the mark for the last graded response minus the sum of the penalties.
+</p><p>One curious fact about $state-&gt;sumpenalties is that, for efficiency reasons, it is not stored in the quiz_states table but instead in the 'sumpenalty' field of the quiz_newest_states table. That way it only has to be stored once per attempt rather than once per response.
+</p>
+<h3><span class="mw-headline" id="Where_it_is_done_in_the_code">Where it is done in the code</span></h3>
+<p>The function quiz_apply_penalty_and_timelimit() subtracts the penalty in $state-&gt;sumpenalty from the raw grade in $state-&gt;raw_grade to obtain $state-&gt;grade for the response. However it is ensured that the grade of a new attempt at the question never falls below the previously achieved grade. This function also increases $state-&gt;sumpenalty by the amount in $state-&gt;penalty. The assumption is that $state-&gt;penalty has just been set appropriately by the code calling this function, e.g., quiz_process_responses.
+</p>
+<h2><span class="mw-headline" id="Files_belonging_to_questions">Files belonging to questions</span></h2>
+<p>This talks about the situation in relation to the Moodle 2.0 file API.
+</p>
+<h3><span class="mw-headline" id="File_areas">File areas</span></h3>
+<p>There are various file areas associated with each question.
+</p><p>For example there is a file are 'questiontext', belonging to the 'question' core component, which stores any images or other embedded files used by the question text. There are also 'generalfeedback' and 'question_answer' file areas.
+</p><p>There may also be some file areas specific to each question type. For example the 'qtype_multichoice' component has a 'correctfeedback' file area (among others).
+</p><p>All these file areas belong to the context that is the context of $question-&gt;category.
+</p>
+<h3><span class="mw-headline" id="Serving_files_and_access_checks">Serving files and access checks</span></h3>
+<p>This is a bit complicated because, although the files belong to the question system or a particular question type, then whether the user should be able to see a particular file (for example an image in the general feedback) is influenced by whichever part of Moodle is using the question (for example the quiz module or question preview).
+</p><p>The easiest way to explain is probably to show the call-stack for determining whether a particular image is displayed, then you can go and read the code.
+</p><p>For the request .../pluginfile.php/123/question/questiontext/234/345/image.png for an impage in the questiontext of a question in a quiz attempt.
+</p><p>(here, 123 is the contextid, 234 if the attemptid (corresponding to question_attempts.id) and 345 is the questionid.)
+</p>
+<ol><li>pluginfile.php</li>
+<li>question_pluginfile() <i>in lib/questionlib.php</i></li>
+<li>quiz_question_pluginfile() <i>in mod/quiz/lib.php</i></li>
+<li>quiz_attempt-&gt;check_file_access() <i>in mod/quiz/attemptlib.php</i></li>
+<li>question-&gt;check_file_access() <i>in lib/questionlib.php</i></li>
+<li>qtype_<i>whatever</i>-&gt;check_file_access() <i>in question/type/whatever/quetsiontype.php</i></li></ol>
+<p>If, instead, the question was appearing in the question preview pop-up window, the call stack would be
+</p>
+<ol><li>pluginfile.php</li>
+<li>question_pluginfile() <i>in lib/questionlib.php</i></li>
+<li><b>question_preview_question_pluginfile()</b> <i>in question/previewlib.php</i></li>
+<li>question-&gt;check_file_access() <i>in lib/questionlib.php</i></li>
+<li>qtype_<i>whatever</i>-&gt;check_file_access() <i>in question/type/whatever/quetsiontype.php</i></li></ol>
+<p>(the different bit is highlighted in bold).
+</p><p>If, instead, the image url was .../pluginfile.php/123/qtype_multichoice/correctfeedback/234/345/image.png, the call stack would be
+</p>
+<ol><li>pluginfile.php</li>
+<li><b>qtype_multichoice_pluginfile()</b> <i>in question/type/multichoice/lib.php</i></li>
+<li>question_pluginfile() <i>in lib/questionlib.php</i></li>
+<li>quiz_question_pluginfile() <i>in mod/quiz/lib.php</i></li>
+<li>quiz_attempt-&gt;check_file_access() <i>in mod/quiz/attemptlib.php</i></li>
+<li>question-&gt;check_file_access() <i>in lib/questionlib.php</i></li>
+<li>qtype_multichoice-&gt;check_file_access() <i>in question/type/multichoice/quetsiontype.php</i></li></ol>
+<p>Roughly speaking, qtype_whatever-&gt;check_file_access() takes the same $question, $state and $options objects as print_question_formulation_and_controls, so, for example, you can do the same permissions check when trying to access a file in the feedback as was done when deciding whether to display the feedback.
+</p><p>The quiz_question_pluginfile or question_preview_question_pluginfile functions are responsible for getting the right $question, $state, $options based on the $attemptid and $questionid in the URL. They also do some basic access checks.
+</p><p>All the other functions are really just about dispatching the request to the right place to be handled.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260823025647
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.021 seconds
+Real time usage: 0.053 seconds
+Preprocessor visited node count: 110/1000000
+Post&#8208;expand include size: 884/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 96/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    8.836      1 -total
+ 85.03%    7.513      1 Template:Question_development
+ 11.96%    1.057      1 Template:Questiontype_developer_docs
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:2743-0!canonical and timestamp 20260823025647 and revision id 79757. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Development:Question_engine&amp;oldid=79757">https://docs.moodle.org/502/en/index.php?title=Development:Question_engine&amp;oldid=79757</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="d7b6770687f1584dd7077ddf50ca2429.html" title="Category:Developer">Developer</a></li><li><a href="66eedc42cfbcf3ba75beae122b9d4e4e.html" title="Category:Quiz">Quiz</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdkvo7oj2">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkvo7p08"></button>
+					<div class="collapse navbar-collapse igdkvo7p08" id="igdkvo7p08">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Development:Question_engine" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Development:Question_engine" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Development:Question_engine&amp;oldid=79757" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Development:Question_engine&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 23 December 2010, at 13:24.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":246,"wgPageParseReport":{"limitreport":{"cputime":"0.021","walltime":"0.053","ppvisitednodes":{"value":110,"limit":1000000},"postexpandincludesize":{"value":884,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":96,"limit":5000000},"timingprofile":["100.00%    8.836      1 -total"," 85.03%    7.513      1 Template:Question_development"," 11.96%    1.057      1 Template:Questiontype_developer_docs"]},"cachereport":{"timestamp":"20260823025647","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

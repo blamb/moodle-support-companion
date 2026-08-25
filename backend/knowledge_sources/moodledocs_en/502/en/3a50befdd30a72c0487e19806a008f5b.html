@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Moodle app offline features - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"3b076da22e08e1af56a53eb0","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Moodle_app_offline_features","wgTitle":"Moodle app offline features","wgCurRevisionId":155359,"wgRevisionId":155359,"wgArticleId":23351,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Mobile"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Moodle_app_offline_features","wgRelevantArticleId":23351,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Moodle_app_offline_features">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Moodle_app_offline_features rootpage-Moodle_app_offline_features layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhvies64"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhvies64" id="igdhvies64">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Moodle+app+offline+features" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Moodle_app_offline_features">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Moodle_app_offline_features">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Moodle_app_offline_features">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="3a50befdd30a72c0487e19806a008f5b.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Moodle_app_offline_features&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_app_offline_features&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_app_offline_features&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Moodle app offline features</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="1918e3fa11efe08518ff2fe0f0f45420.html" title="Managing a Moodle site">Managing a Moodle site</a> ► <a href="af8649a57b5df278b970e2f0135f54d1.html" title="Moodle app">Moodle app</a> ► <a class="mw-selflink selflink">Moodle app offline features</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="af8649a57b5df278b970e2f0135f54d1.html" title="Moodle app">Moodle app</a></div>	
+<div class="content">
+<ul><li><a href="b2f5a026dbf703734c1cc7760547b03f.html" title="Moodle app features">Moodle app features</a></li>
+<li><a class="mw-selflink selflink">Moodle app offline features</a></li>
+<li><a href="186b4bc3b0b473318e46c85cbcda536a.html" title="New for mobile">New for mobile</a></li>
+<li><a href="e535dd1f9031fa081d316af3905f8325.html" title="Moodle app plans">Moodle app plans</a></li>
+<li><a href="7a348ea1eafdbe19e9ea49c63c7f4ede.html" title="Moodle app guide for admins">Moodle app guide for admins</a></li>
+<li><a href="6e2914f711148c3220a9f762972efcf6.html" title="Moodle app notifications">Moodle app notifications</a></li>
+<li><a href="786555db20cd25f7325099879333c2bb.html" title="Creating mobile-friendly courses">Creating mobile-friendly courses</a></li>
+<li><a href="701eedc3e337238fbfb7196bfbd1a212.html" title="Plugins with mobile app support">Plugins with mobile app support</a></li>
+<li><a href="1bb655d96f6443b0cf8102db2d014070.html" title="Privacy in the Moodle app">Privacy in the Moodle app</a></li>
+<li><a href="c81594a0668a7af36df530228d2bf24f.html" title="Moodle app security">Moodle app security</a></li>
+<li><a href="e375c4a947f496fa5d2cc15164da27fd.html" title="Moodle app FAQ">Moodle app FAQ</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<p><br>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#How_does_the_app_store_data_for_offline_use?"><span class="tocnumber">2</span> <span class="toctext">How does the app store data for offline use?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Why_doesn%E2%80%99t_the_app_pre-fetch/cache_more_data?"><span class="tocnumber">2.1</span> <span class="toctext">Why doesn&rsquo;t the app pre-fetch/cache more data?</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#What_does_the_app_consider_to_be_a_large_file?"><span class="tocnumber">2.2</span> <span class="toctext">What does the app consider to be a large file?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Course_features_offline_support"><span class="tocnumber">3</span> <span class="toctext">Course features offline support</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Assessment"><span class="tocnumber">3.1</span> <span class="toctext">Assessment</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Other_activities"><span class="tocnumber">3.2</span> <span class="toctext">Other activities</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#What_other_features_work_offline?"><span class="tocnumber">4</span> <span class="toctext">What other features work offline?</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Synchronisation"><span class="tocnumber">5</span> <span class="toctext">Synchronisation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#What_happens_with_the_student_activity_after_synchronisation?"><span class="tocnumber">5.1</span> <span class="toctext">What happens with the student activity after synchronisation?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Configuration_options"><span class="tocnumber">6</span> <span class="toctext">Configuration options</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Moodle_App_Plans"><span class="tocnumber">7</span> <span class="toctext">Moodle App Plans</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>We live in a hyper-connected 5G world and we think the Internet is everywhere, but we usually forget about: 
+</p>
+<ul><li>Underdeveloped and developing countries</li>
+<li>Rural areas in big countries</li>
+<li>Kids with restricted data plans</li>
+<li>Shared internet connection in schools/classrooms</li>
+<li>Aerial and maritime traffic</li></ul>
+<p>One of the most powerful features of the Moodle app is that it enables us to work offline.
+</p><p>Students can browse course contents offline and participate in activities, then once they are connected back to the Internet, the app will synchronise all the necessary information with their Moodle site.
+</p>
+<h2><span id="How_does_the_app_store_data_for_offline_use.3F"></span><span class="mw-headline" id="How_does_the_app_store_data_for_offline_use?">How does the app store data for offline use?</span></h2>
+<ul><li>While browsing the site and its contents, though note that external contents (e.g. YouTube videos) are not downloaded and embedded files (audio, video) are not always downloaded (it depends on the user connection and file size)</li>
+<li>When the user downloads content by the download icon
+<ul><li>The user can use the &ldquo;cloud&rdquo; icon to download specific content or a complete section or course</li>
+<li>The user gets alerted when downloading large files</li>
+<li>If a resource has been updated in the server, a refresh icon will be shown.</li></ul></li></ul>
+<h3><span id="Why_doesn.E2.80.99t_the_app_pre-fetch.2Fcache_more_data.3F"></span><span class="mw-headline" id="Why_doesn&rsquo;t_the_app_pre-fetch/cache_more_data?">Why doesn&rsquo;t the app pre-fetch/cache more data?</span></h3>
+<ol><li>Because the user may have a monthly data plan</li>
+<li>Because the device storage space may be limited</li>
+<li>Massive data download might impact on the server performance</li></ol>
+<h3><span id="What_does_the_app_consider_to_be_a_large_file.3F"></span><span class="mw-headline" id="What_does_the_app_consider_to_be_a_large_file?">What does the app consider to be a large file?</span></h3>
+<ul><li>If the user is connected to a Wi-Fi network: large file &gt;= 20MB</li>
+<li>If the user is connected to a data network:  large file &gt;= 2MB</li></ul>
+<h2><span class="mw-headline" id="Course_features_offline_support">Course features offline support</span></h2>
+<ul><li>All course resources can be downloaded for offline (except URL)</li>
+<li>All course activities are supported (except Chat and External tool)</li>
+<li>Additional (non-standard) plugins usually don&rsquo;t work offline</li>
+<li>Some functionality for certain activity modules does not work offline, see below for more information.</li></ul>
+<h3><span class="mw-headline" id="Assessment">Assessment</span></h3>
+<p>The offline mode is disabled by default in Quiz and Lesson, however, the teacher can decide if they want to enable it.
+</p>
+<ul><li>A quiz may be attempted offline only if:
+<ul><li>There is no time limit set</li>
+<li>The question behavior is deferred feedback (with or without CBM) only</li>
+<li>New in <b>Moodle 4.3.1</b>  - the Quiz uses sequential navigation.</li>
+<li>There is no network address requirement</li></ul></li></ul>
+<p>For detailed information about Quiz and how it works offline please see <a href="4e51cef0119a8453f9124be50b886b1d.html" title="Moodle Mobile quiz offline attempts">Moodle Mobile quiz offline attempts</a>.
+</p>
+<h3><span class="mw-headline" id="Other_activities">Other activities</span></h3>
+<ul><li>SCORM and H5P packages are downloaded to the user&rsquo;s device by default, there are settings to control this behaviour in order to prevent the packages from being downloaded (check this support pages for more information, <a href="c6d702da346f73a30e04a739977ae3df.html" title="Moodle app SCORM player">Moodle app SCORM player</a> and <a href="0f29dbbc92fb20b549f47bf950c7d0a1.html" title="Moodle app H5P support">Moodle app H5P support</a>).</li>
+<li>Wiki editing is not supported offline</li>
+<li>Glossaries entries can&rsquo;t be deleted/updated offline</li>
+<li>Text assignment submissions can&rsquo;t be edited offline</li>
+<li>Activities configured with availability conditions cannot be/are not downloaded for offline (the user will have to reconnect to be able to see activities unlocked by conditions recently met)</li></ul>
+<h2><span id="What_other_features_work_offline.3F"></span><span class="mw-headline" id="What_other_features_work_offline?">What other features work offline?</span></h2>
+<p>Apart from resources and activities certain course and site functionality are also available offline.
+</p><p>The offline support for completion is only for marking courses or activities completed (when viewed).
+</p><p>Conditioned activities are not downloaded for offline.
+</p>
+<ul><li>Participants</li>
+<li>Grades</li>
+<li>Completion</li>
+<li>Notes</li>
+<li>Messaging</li>
+<li>Notifications</li>
+<li>Calendar events</li>
+<li>Private files</li>
+<li>Badges</li>
+<li>Blogs</li>
+<li>Rating</li>
+<li>Comments</li></ul>
+<h2><span class="mw-headline" id="Synchronisation">Synchronisation</span></h2>
+<p>Synchronisation works differently depending on the device
+</p>
+<ul><li>Android: The app must be opened but it can be in the background (you can be using a different app).</li>
+<li>iOS (iPhone, iPad): The app must be opened and in the foreground (it has to be the device active app).</li>
+<li>Desktop: The app must be opened but it can be in the background (minimised).</li></ul>
+<p>&#128267;The battery is the key factor, mobile OS limits its usage
+</p><p>There are two ways of synchronising data:
+</p>
+<ul><li>Automatic
+<ul><li>Runs regularly, every 10 minutes</li></ul></li>
+<li>Manual
+<ul><li>The user will see a message indicating there is data pending synchronisation</li></ul></li></ul>
+<h3><span id="What_happens_with_the_student_activity_after_synchronisation.3F"></span><span class="mw-headline" id="What_happens_with_the_student_activity_after_synchronisation?">What happens with the student activity after synchronisation?</span></h3>
+<p>Actions performed offline are logged and stored into the system with the synchronisation time, not with the time when they happened.
+We are exploring ways to improve reporting via Moodle&rsquo;s xAPI support.
+</p><p>For more information about how synchronisation works see <a href="3b4c0cc32a66c1cda3c86c65a147b448.html" title="Moodle app synchronization">Moodle app synchronization</a>.
+</p>
+<h2><span class="mw-headline" id="Configuration_options">Configuration options</span></h2>
+<p>Site administrators can decide if they want:
+</p>
+<ul><li>Disable completely the offline mode</li>
+<li>Disable all courses downloading</li>
+<li>Disable individual courses downloading</li></ul>
+<p>For disabling the previous features, please see <a href="7a348ea1eafdbe19e9ea49c63c7f4ede.html" title="Moodle app guide for admins">Moodle app guide for admins</a>.
+</p><p>Users can decide if they want to allow synchronisation only when connected to a Wi-Fi network or also when using a data network.
+</p>
+<h2><span class="mw-headline" id="Moodle_App_Plans">Moodle App Plans</span></h2>
+<p>When using the Moodle App, site admins can choose to subscribe to a paid plan or use the free version. 
+</p><p>Plans limit the download of complete courses in one click.
+</p><p>Students can still download individual contents or sections.
+</p><p>We recommend a <a rel="nofollow" class="external text" href="https://apps.moodle.com/local/apps/signup_site.php?plan=premium&amp;origin=moodledocs">Premium plan subscription</a>.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="c6d702da346f73a30e04a739977ae3df.html" title="Moodle app SCORM player">Moodle app SCORM player</a></li>
+<li><a href="0f29dbbc92fb20b549f47bf950c7d0a1.html" title="Moodle app H5P support">Moodle app H5P support</a></li>
+<li><a href="27d97e86e51d73d7086534b5564a90e8.html" title="Moodle Mobile quiz">Moodle Mobile quiz</a></li>
+<li><a href="3b4c0cc32a66c1cda3c86c65a147b448.html" title="Moodle app synchronization">Moodle app synchronization</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=LqwG2XfSSiQ">Use case: Scaling school leadership training through app-based Moodle learning</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=nk3SJuDduNs">Use case: Reaching every learner; Scalable offline-first Moodle for African education</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822134841
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.012 seconds
+Real time usage: 0.016 seconds
+Preprocessor visited node count: 52/1000000
+Post&#8208;expand include size: 631/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    2.598      1 Template:Mobile
+100.00%    2.598      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:23351-0!canonical and timestamp 20260822134841 and revision id 155359. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Moodle_app_offline_features&amp;oldid=155359">https://docs.moodle.org/502/en/index.php?title=Moodle_app_offline_features&amp;oldid=155359</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="a479330450f1c1c65cafad679774cd9f.html" title="Category:Mobile">Mobile</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhvietvq">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhvieu8a"></button>
+					<div class="collapse navbar-collapse igdhvieu8a" id="igdhvieu8a">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Moodle_app_offline_features" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Moodle_app_offline_features" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_app_offline_features&amp;oldid=155359" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Moodle_app_offline_features&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Características_de_Moodle_app_sin_conexión" title="Características de Moodle app sin conexión – español" lang="es" hreflang="es" data-title="Características de Moodle app sin conexión" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 16 April 2026, at 09:43.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":93,"wgPageParseReport":{"limitreport":{"cputime":"0.012","walltime":"0.016","ppvisitednodes":{"value":52,"limit":1000000},"postexpandincludesize":{"value":631,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    2.598      1 Template:Mobile","100.00%    2.598      1 -total"]},"cachereport":{"timestamp":"20260822134841","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

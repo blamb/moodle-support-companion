@@ -17,6 +17,8 @@ import logging
 import re
 from typing import List, Dict
 
+from ..config import MOODLE_VERSION
+
 logger = logging.getLogger(__name__)
 
 
@@ -236,8 +238,11 @@ def _check_structure(ctx) -> List[HealthIssue]:
 # AI audit — open-ended review of the course structure by Claude
 # ---------------------------------------------------------------------------
 
-_AUDIT_SYSTEM = """You are a Moodle 4.5 course configuration auditor for Thompson Rivers University's LT&I team. You review parsed course structure (from a .mbz backup) and identify configuration problems that could generate support tickets.
-
+# The body carries a literal JSON template, so only the first line — the one
+# naming the Moodle release — is interpolated.
+_AUDIT_SYSTEM = (
+    f"You are a Moodle {MOODLE_VERSION} course configuration auditor for Thompson Rivers University's LT&I team. You review parsed course structure (from a .mbz backup) and identify configuration problems that could generate support tickets.\n"
+    """
 Focus on issues a rule-based checker would miss: cross-cutting problems (e.g. gradebook aggregation inconsistent with how activities are weighted, completion conditions that can never be satisfied, restricted-access chains that lock students out, quiz/assignment settings that conflict with the course's apparent design), not generic style advice.
 
 Respond with ONLY a JSON array (no prose, no code fences). Each element:
@@ -250,6 +255,7 @@ Respond with ONLY a JSON array (no prose, no code fences). Each element:
 }
 
 Only report findings you have concrete evidence for in the provided structure. If the configuration looks healthy, return []."""
+)
 
 _VALID_SEVERITIES = {"high", "medium", "low", "info"}
 

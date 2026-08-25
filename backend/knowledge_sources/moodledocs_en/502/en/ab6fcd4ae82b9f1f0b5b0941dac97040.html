@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Google Apps Integration - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"4256d600c53b4ec8923facab","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Google_Apps_Integration","wgTitle":"Google Apps Integration","wgCurRevisionId":132934,"wgRevisionId":132934,"wgArticleId":19163,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Plugin"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Google_Apps_Integration","wgRelevantArticleId":19163,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Google_Apps_Integration">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Google_Apps_Integration rootpage-Google_Apps_Integration layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdj1h7m5l"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdj1h7m5l" id="igdj1h7m5l">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Google+Apps+Integration" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Google_Apps_Integration">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Google_Apps_Integration">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Google_Apps_Integration">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="ab6fcd4ae82b9f1f0b5b0941dac97040.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Google_Apps_Integration&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Google_Apps_Integration&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Google_Apps_Integration&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Google Apps Integration</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Getting_started"><span class="tocnumber">2</span> <span class="toctext">Getting started</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Identifying_needs"><span class="tocnumber">2.1</span> <span class="toctext">Identifying needs</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Considerations"><span class="tocnumber">2.2</span> <span class="toctext">Considerations</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Download_the_plugins_package"><span class="tocnumber">2.3</span> <span class="toctext">Download the plugins package</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Creating_a_project_in_the_Google_Developers_Console"><span class="tocnumber">2.4</span> <span class="toctext">Creating a project in the Google Developers Console</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Authentication"><span class="tocnumber">3</span> <span class="toctext">Authentication</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Credentials_stored_in_Moodle"><span class="tocnumber">3.1</span> <span class="toctext">Credentials stored in Moodle</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Plugin:_GSAML_plugin"><span class="tocnumber">3.1.1</span> <span class="toctext">Plugin: GSAML plugin</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Block:_User_Sync_block"><span class="tocnumber">3.1.2</span> <span class="toctext">Block: User Sync block</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Credentials_stored_in_Google"><span class="tocnumber">3.2</span> <span class="toctext">Credentials stored in Google</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#Plugin:_OAuth2_plugin"><span class="tocnumber">3.2.1</span> <span class="toctext">Plugin: OAuth2 plugin</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-13"><a href="#Credentials_stored_in_other_identity_provider"><span class="tocnumber">3.3</span> <span class="toctext">Credentials stored in other identity provider</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#Plugin:_OneLogin_plugin"><span class="tocnumber">3.3.1</span> <span class="toctext">Plugin: OneLogin plugin</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Plugin:_Customized_OAuth2_plugin"><span class="tocnumber">3.3.2</span> <span class="toctext">Plugin: Customized OAuth2 plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Plugins_and_configurations"><span class="tocnumber">4</span> <span class="toctext">Plugins and configurations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Google_Apps_menu"><span class="tocnumber">4.1</span> <span class="toctext">Google Apps menu</span></a>
+<ul>
+<li class="toclevel-3 tocsection-18"><a href="#Block:_Google_Apps_block"><span class="tocnumber">4.1.1</span> <span class="toctext">Block: Google Apps block</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-19"><a href="#Mail_integration"><span class="tocnumber">4.2</span> <span class="toctext">Mail integration</span></a>
+<ul>
+<li class="toclevel-3 tocsection-20"><a href="#Block:_Gmail_block"><span class="tocnumber">4.2.1</span> <span class="toctext">Block: Gmail block</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-21"><a href="#Drive_integration"><span class="tocnumber">4.3</span> <span class="toctext">Drive integration</span></a>
+<ul>
+<li class="toclevel-3 tocsection-22"><a href="#Plugin:_Google_Drive_repository"><span class="tocnumber">4.3.1</span> <span class="toctext">Plugin: Google Drive repository</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Plugin:_Google_Drive_portfolio"><span class="tocnumber">4.3.2</span> <span class="toctext">Plugin: Google Drive portfolio</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-24"><a href="#Google+_integration"><span class="tocnumber">4.4</span> <span class="toctext">Google+ integration</span></a>
+<ul>
+<li class="toclevel-3 tocsection-25"><a href="#Plugin:_Picasa_Web_Album_repository_(Google+_Photos)"><span class="tocnumber">4.4.1</span> <span class="toctext">Plugin: Picasa Web Album repository (Google+ Photos)</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#Plugin:_Picasa_Web_Album_portfolio_(Google+_Photos)"><span class="tocnumber">4.4.2</span> <span class="toctext">Plugin: Picasa Web Album portfolio (Google+ Photos)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-27"><a href="#Youtube_integration"><span class="tocnumber">4.5</span> <span class="toctext">Youtube integration</span></a>
+<ul>
+<li class="toclevel-3 tocsection-28"><a href="#Configuration:_Youtube_video_repository"><span class="tocnumber">4.5.1</span> <span class="toctext">Configuration: Youtube video repository</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-29"><a href="#Hangouts_integration"><span class="tocnumber">4.6</span> <span class="toctext">Hangouts integration</span></a>
+<ul>
+<li class="toclevel-3 tocsection-30"><a href="#Block:_Hangouts"><span class="tocnumber">4.6.1</span> <span class="toctext">Block: Hangouts</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="#Block:_Students_Hangouts"><span class="tocnumber">4.6.2</span> <span class="toctext">Block: Students Hangouts</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="#Configuration:_Embedding_Hangouts"><span class="tocnumber">4.6.3</span> <span class="toctext">Configuration: Embedding Hangouts</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-33"><a href="#Calendar_integration"><span class="tocnumber">4.7</span> <span class="toctext">Calendar integration</span></a>
+<ul>
+<li class="toclevel-3 tocsection-34"><a href="#Configuration:_Calendar_syncing"><span class="tocnumber">4.7.1</span> <span class="toctext">Configuration: Calendar syncing</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-35"><a href="#Classroom_integration"><span class="tocnumber">4.8</span> <span class="toctext">Classroom integration</span></a>
+<ul>
+<li class="toclevel-3 tocsection-36"><a href="#Configuration:_Importing_grades"><span class="tocnumber">4.8.1</span> <span class="toctext">Configuration: Importing grades</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-37"><a href="#Other_integrations"><span class="tocnumber">4.9</span> <span class="toctext">Other integrations</span></a>
+<ul>
+<li class="toclevel-3 tocsection-38"><a href="#Plugin:_Fusion_Tables_export"><span class="tocnumber">4.9.1</span> <span class="toctext">Plugin: Fusion Tables export</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="#UK_Open_University_plugins"><span class="tocnumber">4.9.2</span> <span class="toctext">UK Open University plugins</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>This guide shows how to integrate Moodle and Google to take the maximum advantage of both platforms working together. This guide is divided in two principal sections, authentication and plugins. The proper functioning of the plugins depends on the correct authentication deployment.
+</p><p><br>
+</p>
+<h2><span class="mw-headline" id="Getting_started">Getting started</span></h2>
+<h3><span class="mw-headline" id="Identifying_needs">Identifying needs</span></h3>
+<p>It&rsquo;s important to detect the following variables before start.
+Planning on a centralized authentication. Which authorization mechanism prefers the institution?
+</p>
+<ul><li>Login using Google Apps credentials</li>
+<li>Login using Moodle credentials</li>
+<li>Login using centralized login mechanism</li></ul>
+<p>PHP version
+</p>
+<ul><li>&lt; 5.5</li>
+<li>&gt;= 5.5</li></ul>
+<p>Moodle version
+</p>
+<ul><li>Moodle 1.x</li>
+<li>Moodle 2.0 - 2.6</li>
+<li>&gt;= Moodle 2.7</li></ul>
+<h3><span class="mw-headline" id="Considerations">Considerations</span></h3>
+<p>This guide only applies to 2.x versions, if you are running an 1.x version you can update to 2.x following <a rel="nofollow" class="external text" href="https://docs.moodle.org/27/en/Upgrading_to_Moodle_2.0">this guide</a>.
+</p>
+<h3><span class="mw-headline" id="Download_the_plugins_package">Download the plugins package</span></h3>
+<p>All the plugins explained in this guide are available to download in <a rel="nofollow" class="external text" href="https://github.com/jrschumacher/moodle-google_apps">this package</a>.  Some of them are already installed as default, therefore it is not necessary to replace them. For latest versions of each plugin you can download separately.
+</p>
+<h3><span class="mw-headline" id="Creating_a_project_in_the_Google_Developers_Console">Creating a project in the Google Developers Console</span></h3>
+<p>Follow <a rel="nofollow" class="external text" href="https://developers.google.com/console/help/new/#managingprojects">this guide</a> that shows how to create a project in Google Developers Console.
+</p><p><br>
+</p>
+<h2><span class="mw-headline" id="Authentication">Authentication</span></h2>
+<p>The first step is to centralize the authentication process. If your institution already has a centralized directory we can still use it and just connect both Moodle and Google to it. If you prefer to use the Moodle or Google credentials, you need to know which are the right modules that will help in each case. These are the possible authentication scenarios: 
+</p>
+<h3><span class="mw-headline" id="Credentials_stored_in_Moodle">Credentials stored in Moodle</span></h3>
+<p>If you choose Moodle as identity provider, you can implement an SSO solution in order to preserve the session between systems and avoid direct connections to database. One of the principal SSO protocols is SAML which can be integrated through a third party plugin that runs a SAML server within Moodle. Google Apps will connect to Moodle SAML endpoint and rely on the Moodle stored credentials. Remember that username and email address must match in both sides.
+</p><p>The required plugins are:
+</p>
+<h4><span class="mw-headline" id="Plugin:_GSAML_plugin">Plugin: GSAML plugin</span></h4>
+<ul><li>Description: This plugin enables Moodle as a SAML server and is ready to configure Google Apps as a SAML client.</li>
+<li>Included in Moodle: No</li>
+<li>Path: auth/gsaml</li>
+<li>Configuration parameters:
+<ul><li>Domain Name: Google Apps Domain (e.g., yourschool.edu)</li>
+<li>RSA key: Plain-text from the RSA key (pem) file. Note that the SAML service supports RSA signed keys only.</li>
+<li>SSL signing certificate: Plain-text from the X.509 Certificate file here. Note that this is the same file you will upload to Google.</li></ul></li>
+<li>More information: <a rel="nofollow" class="external text" href="http://www.appsedudemo.com/home/lmsthirdparty/moodlegeneral/moodle-auth-gsaml">Admin guide</a></li>
+<li>Plugin page: Moodle <a rel="nofollow" class="external text" href="https://github.com/jrschumacher/moodle-google_apps/tree/master/auth/gsaml">plugin page</a> (outdated)</li></ul>
+<h4><span class="mw-headline" id="Block:_User_Sync_block">Block: User Sync block</span></h4>
+<ul><li>Description: This tool syncs users from Moodle to Google. It can create, update and delete users. Users can be synced by an event or by a cron process.</li>
+<li>Included in Moodle: No</li>
+<li>Path: blocks/gdata</li>
+<li>Configuration parameters:
+<ul><li>Google Apps username: This is the username (without domain) used to administer your Google Apps account. For example, if you login to Google Apps as 'foo@yourschool.edu', your username is 'foo'.</li>
+<li>Google Apps password: This is the password associated with the above username.</li>
+<li>Google Apps domain: This is the domain associated with your Google Apps account. For example, if you login to Google Apps as 'foo@yourschool.edu', your domain is 'yourschool.edu'.</li>
+<li>Use Google Apps email (Yes/No): Update Moodle's user record with the email from the Google Apps domain. The update will occur during the Moodle to Google Apps synchronization.</li>
+<li>Enable events (Yes/No): If this setting is enabled, then a Moodle user's account will be instantly updated in Google Apps when the user edits his/her account in Moodle's standard edit profile interface. Also, if a Moodle user's account is deleted, then the associated Google Apps account will also be instantly deleted. This only applies to Moodle accounts that are currently being synchronized to Google Apps. This feature is \"best attempt\" only, so failures will fallback to the cron to perform the synchronization.</li>
+<li>Cron interval (minutes): Enter in how often the Moodle to Google Apps synchronization should be executed on the cron. Enter zero to stop running the synchronization.</li>
+<li>Cron expire (hours): When the synchronization runs, it locks the cron from being executed again until it has finished. This setting is used to determine when that lock has expired. Consider setting this to a high value especially on first runs with a lot of users.</li></ul></li>
+<li>Considerations:
+<ul><li>Supported from version 2.0 to 2.6.5+.</li>
+<li>Moodle credentials are stored in a database and the passwords are hashed on different algorithms depending the PHP version that is used. Moodle uses the MD5 hashing algorithm on PHP &lt; 5.5 and BCrypt on PHP &gt;= 5.5. Only clear text, MD5 and SHA1 passwords are supported for Google Apps password syncing proposes. For changing hash algorithm follow <a rel="nofollow" class="external text" href="https://sites.google.com/a/appsedudemo.com/site/home/lmsthirdparty/moodlegeneral/moodle-changing-bcrypt-to-md5">this guide</a>.</li></ul></li>
+<li>More information: <a rel="nofollow" class="external text" href="https://docs.moodle.org/24/en/Google_Apps_Integration#User_Sync_Block_Settings">Admin guide</a></li>
+<li>Plugin page: Moodle <a rel="nofollow" class="external text" href="https://github.com/jrschumacher/moodle-google_apps/tree/master/blocks/gdata">plugin page</a></li></ul>
+<p>Follow <a rel="nofollow" class="external text" href="http://www.appsedudemo.com/home/lmsthirdparty/moodlegeneral/moodle-auth-gsaml">this guide</a> to configure properly both plugins.
+</p>
+<h3><span class="mw-headline" id="Credentials_stored_in_Google">Credentials stored in Google</span></h3>
+<p>Users can login to Moodle using the Google Apps stored credentials through OAuth2 sign in method. Remember that OpenID 2.0 authentication method is deprecated and it has been migrated to OAuth 2.0 (OpenID Connect). In this case user and mail fields must match in both platforms. Moodle has a third party plugin that has been already configured to support Google Apps service.
+</p>
+<h4><span class="mw-headline" id="Plugin:_OAuth2_plugin">Plugin: OAuth2 plugin</span></h4>
+<ul><li>Description: This plugin is ready to connect to Google Apps server just configuring the project information of the Google developers console.</li>
+<li>Included in Moodle: No</li>
+<li>Path: auth/googleoauth2</li>
+<li>Configuration parameters:
+<ul><li>Google Client ID: Your client ID can be generated in the Google console.</li>
+<li>Google Client secret: Your client Secret can be generated in the Google console.</li></ul></li>
+<li>More information: <a rel="nofollow" class="external text" href="https://github.com/mouneyrac/moodle-auth_googleoauth2">Admin guide</a></li>
+<li>Plugin page: <a rel="nofollow" class="external text" href="https://moodle.org/plugins/view.php?plugin=auth_googleoauth2">Moodle plugin page</a></li></ul>
+<p>Follow <a rel="nofollow" class="external text" href="http://mouneyrac.github.io/moodle-auth_googleoauth2/">this guide</a> to configure properly the plugin.
+</p>
+<h3><span class="mw-headline" id="Credentials_stored_in_other_identity_provider">Credentials stored in other identity provider</span></h3>
+<p>If the organization is using an existing identity provider (e.g. LDAP, Active Directory, DB, etc) it is recommended to configure an SSO solution in order to allow access to Moodle and Google with the same credentials and to keep alive the session between them. We recommend installing and configuring an Access Management Solution like OpenAM that works as a SAML/OAuth2 server to interconnect the institution's systems. If you only configure the LDAP plugin in Moodle, it will use same credentials but it won&rsquo;t start a session in Google and the Google related plugins will request to user to login again. This is why the SSO server is important.
+</p><p>Two options are available in order to connect Moodle to an SSO server. You can either install a SAML client or an OAuth2 client, depending the type of SSO server you are using. If you don&rsquo;t have an SSO server please follow <a rel="nofollow" class="external text" href="http://www.appsedudemo.com/home/simple-sign-on/installing-openam">this guide</a> that explains how to install an Access Management Solution ( OpenAM ).
+</p><p>-First case: Connecting to a SAML server
+</p>
+<h4><span class="mw-headline" id="Plugin:_OneLogin_plugin">Plugin: OneLogin plugin</span></h4>
+<ul><li>Description: This plugin works as a SAML client and connects to your SAML server (like SimpleSAML, OpenAM, etc) displaying the authorization mechanism and getting back to Moodle with a logged in status.</li>
+<li>Included in Moodle: No</li>
+<li>Path: auth/onelogin_saml</li>
+<li>Configuration parameters:
+<ul><li>SSO Identity Provider URL: Single sign-on identity provider URL for your server SSO SAML Issuer URL: SAML Issuer URL for your company</li>
+<li>Automatically create users? (Yes/No)&nbsp;: Check to automatically create local user accounts which do not already exist. By default, the accounts are created without a password, and the user must login via SAML identity verification.</li>
+<li>Certificate Key: Secret digital security encryption certificate key.</li></ul></li>
+<li>More information: <a rel="nofollow" class="external text" href="https://onelogin.zendesk.com/hc/en-us/articles/201173644-Configuring-SAML-for-Moodle2">Admin guide</a></li>
+<li>Plugin page: <a rel="nofollow" class="external text" href="https://moodle.org/plugins/view.php?plugin=auth_onelogin_saml">Moodle plugin page</a></li></ul>
+<p>Follow <a rel="nofollow" class="external text" href="http://www.appsedudemo.com/home/simple-sign-on/adapting-existing-system-to-connect-to-openam-via-saml-using-onelogin-developed-client">this guide</a> to configure properly the plugin ( based on OpenAM ).
+</p><p>-Second case: Connecting to an OAuth2 server
+</p>
+<h4><span class="mw-headline" id="Plugin:_Customized_OAuth2_plugin">Plugin: Customized OAuth2 plugin</span></h4>
+<ul><li>Description: This plugin needs some code edited in order to connect with your own SSO server.</li>
+<li>Included in Moodle: No</li>
+<li>Path: auth/googleoauth2</li>
+<li>Configuration parameters:
+<ul><li>Google Client ID: Your client ID can be generated in the Google console.</li>
+<li>Google Client secret: Your client Secret can be generated in the Google console.</li></ul></li>
+<li>More information: <a rel="nofollow" class="external text" href="http://mouneyrac.github.io/moodle-auth_googleoauth2/">Admin guide</a></li>
+<li>Plugin page: <a rel="nofollow" class="external text" href="https://moodle.org/plugins/view.php?plugin=auth_googleoauth2">Moodle plugin page</a></li></ul>
+<p>Follow <a rel="nofollow" class="external text" href="http://www.appsedudemo.com/home/simple-sign-on/adapting-existing-systems-to-connect-with-openam-via-oauth2-using-a-generic-code-library">this guide</a> to configure properly the plugin ( based on OpenAM ).
+</p><p><br>
+</p>
+<h2><span class="mw-headline" id="Plugins_and_configurations">Plugins and configurations</span></h2>
+<p>Some of this plugins are already installed in Moodle 2.x, some others require to be installed (just copying the files to their respective directory) and the rest are Moodle features that can be configured to integrate with Google services.
+</p>
+<h3><span class="mw-headline" id="Google_Apps_menu">Google Apps menu</span></h3>
+<h4><span class="mw-headline" id="Block:_Google_Apps_block">Block: Google Apps block</span></h4>
+<ul><li>Description: A Google Apps block on the Moodle Front Page displays links to Google Start Page, Google Docs, Google Calendar and Gmail.</li>
+<li>Included in Moodle: No</li>
+<li>Path: blocks/gaccess</li>
+<li>Configuration parameters:
+<ul><li>Domain Name: This is your Google Apps Domain Name (e.g., yourschool.edu)</li>
+<li>New Window Links (Yes/No): If selected links will open in new window.</li>
+<li>Show GMail Link (Yes/No): If selected GMail link will be shown.</li>
+<li>Show Google Drive Link (Yes/No): If selected Google Drive link will be shown.</li>
+<li>Show Google+ Link (Yes/No): If selected Google+ link will be shown.</li>
+<li>Show Google Calendar Link (Yes/No): If selected Google Calendar link will be shown.</li>
+<li>Show Google Classroom Link (Yes/No): If selected Google Classroom link will be shown.</li>
+<li>More information: <a rel="nofollow" class="external text" href="https://docs.moodle.org/24/en/Google_Apps_Integration#Google_Apps_Block_Settings">Admin guide</a></li>
+<li>Plugin page: <a rel="nofollow" class="external text" href="https://github.com/jrschumacher/moodle-google_apps/tree/master/blocks/gdata">Moodle plugin page</a></li></ul></li></ul>
+<h3><span class="mw-headline" id="Mail_integration">Mail integration</span></h3>
+<h4><span class="mw-headline" id="Block:_Gmail_block">Block: Gmail block</span></h4>
+<ul><li>Description: A Gmail block in Moodle that displays the latest Gmail messages on the Moodle Front Page.</li>
+<li>Included in Moodle: No</li>
+<li>Path: blocks/gmail</li>
+<li>Configuration parameters:
+<ul><li>Domain Name: This is your Google Apps Domain Name (e.g., yourschool.edu)</li>
+<li>User Name from: This is the Moodle user field that the Google User is derived from - defaults to username, but email is another possibility</li>
+<li>OAuth Consumer Secret: This is the same value you find on Google's Manage OAuth Access page under Advanced tools.</li>
+<li>Unread Message Count: The number of unread messages you would like displayed in the gmail block. Leave as zero for no limit.</li>
+<li>New Window Links (Yes/No): If selected links will open in new window.</li>
+<li>Show First Name (Yes/No): Show the author's first name next to their message.</li>
+<li>Show Last Name (Yes/No): Show the author's last name next to their message.</li></ul></li>
+<li>More information: <a rel="nofollow" class="external text" href="https://docs.moodle.org/24/en/Google_Apps_Integration#Gmail_Block">Admin guide</a></li>
+<li>Plugin page: <a rel="nofollow" class="external text" href="https://github.com/jrschumacher/moodle-google_apps/tree/master/blocks/gmail">Moodle plugin page</a></li>
+<li>Considerations:
+<ul><li>This plugin only works when we use Moodle as identity provider, GSAML plugin is enabled and the SSO configuration is enabled in Google Apps.</li></ul></li></ul>
+<h3><span class="mw-headline" id="Drive_integration">Drive integration</span></h3>
+<h4><span class="mw-headline" id="Plugin:_Google_Drive_repository">Plugin: Google Drive repository</span></h4>
+<ul><li>Description: This is a repository add-on that pulls files from Google Drive to Moodle.</li>
+<li>Included in Moodle: Yes</li>
+<li>Path: /repository/googledrive</li>
+<li>Configuration parameters:
+<ul><li>Repository plugin name: Name to be displayed.</li>
+<li>Client ID: Developer console project ID.</li>
+<li>Secret: Developer console project Secret.</li></ul></li>
+<li>More information: <a rel="nofollow" class="external text" href="f57f9aa193c6f8ef1bd5dd468a095f14.html">Admin guide</a></li></ul>
+<h4><span class="mw-headline" id="Plugin:_Google_Drive_portfolio">Plugin: Google Drive portfolio</span></h4>
+<ul><li>Description: This is a portfolio add-on that push files from your computer to Google Drive and then to Moodle.</li>
+<li>Included in Moodle: Yes</li>
+<li>Path: /portfolio/googledocs</li>
+<li>Configuration parameters:
+<ul><li>Repository plugin name: Name to be displayed.</li>
+<li>Client ID: Developer console project ID.</li>
+<li>Secret: Developer console project Secret.</li></ul></li>
+<li>More information: <a rel="nofollow" class="external text" href="56310ce0b3f942a0ba37973cf7fb032b.html">Admin guide</a></li></ul>
+<h3><span id="Google.2B_integration"></span><span class="mw-headline" id="Google+_integration">Google+ integration</span></h3>
+<h4><span id="Plugin:_Picasa_Web_Album_repository_.28Google.2B_Photos.29"></span><span class="mw-headline" id="Plugin:_Picasa_Web_Album_repository_(Google+_Photos)">Plugin: Picasa Web Album repository (Google+ Photos)</span></h4>
+<ul><li>Description: This is a repository add-on that pulls photos from Picasa to Moodle.</li>
+<li>Included in Moodle: Yes</li>
+<li>Path: /repository/picasa</li>
+<li>Configuration parameters:
+<ul><li>Repository plugin name: Name to be displayed.</li>
+<li>Client ID: Developer console project ID.</li>
+<li>Secret: Developer console project Secret.</li></ul></li>
+<li>More information: <a rel="nofollow" class="external text" href="c9a335197ed9d24a93f73b1c8314725d.html">Admin guide</a></li></ul>
+<h4><span id="Plugin:_Picasa_Web_Album_portfolio_.28Google.2B_Photos.29"></span><span class="mw-headline" id="Plugin:_Picasa_Web_Album_portfolio_(Google+_Photos)">Plugin: Picasa Web Album portfolio (Google+ Photos)</span></h4>
+<ul><li>Description: This is a portfolio add-on that pushes photos to Picasa from Moodle.</li>
+<li>Included in Moodle: Yes</li>
+<li>Path: /portfolio/picasa</li>
+<li>Configuration parameters:
+<ul><li>Repository plugin name: Name to be displayed.</li>
+<li>Client ID: Developer console project ID.</li>
+<li>Secret: Developer console project Secret.</li></ul></li>
+<li>More information: <a rel="nofollow" class="external text" href="f630ebc2b5eaf5d693d8c741e7ea820d.html">Admin guide</a></li></ul>
+<h3><span class="mw-headline" id="Youtube_integration">Youtube integration</span></h3>
+<h4><span class="mw-headline" id="Configuration:_Youtube_video_repository">Configuration: Youtube video repository</span></h4>
+<ul><li>Description: This is a repository add-on that pulls videos from Youtube to Moodle.</li>
+<li>Included in Moodle: Yes</li>
+<li>Path: /repository/youtube</li>
+<li>Configuration parameters:
+<ul><li>Repository plugin name: Name to be displayed.</li></ul></li>
+<li>More information: <a rel="nofollow" class="external text" href="132870c60ae8da515179b3f7d5b46566.html">Admin guide</a></li></ul>
+<h3><span class="mw-headline" id="Hangouts_integration">Hangouts integration</span></h3>
+<h4><span class="mw-headline" id="Block:_Hangouts">Block: Hangouts</span></h4>
+<ul><li>Description: a plugin for Hangouts integration.</li>
+<li>Included in Moodle: No</li>
+<li>Configuration: Install block</li>
+<li>More information: <a rel="nofollow" class="external text" href="http://www.moodlenews.com/2016/video-moodle-google-hangout-integration-by-paradisosol/">Moodlenews</a></li></ul>
+<h4><span class="mw-headline" id="Block:_Students_Hangouts">Block: Students Hangouts</span></h4>
+<ul><li>Description: a plugin for Hangouts integration.</li>
+<li>Included in Moodle: No</li>
+<li>Configuration: Install block (WIP - Beta)</li>
+<li>More information: <a rel="nofollow" class="external text" href="https://github.com/nadavkav/moodle-block_google_hangout">Github</a></li></ul>
+<h4><span class="mw-headline" id="Configuration:_Embedding_Hangouts">Configuration: Embedding Hangouts</span></h4>
+<ul><li>Description: There&rsquo;s no a plugin for Hangouts integration, but it can be used embedding the URLs.</li>
+<li>Included in Moodle: No</li>
+<li>Configuration:</li>
+<li>More information: <a rel="nofollow" class="external text" href="http://www.appsedudemo.com/home/lmsthirdparty/moodlegeneral/moodle-and-google-hangouts-integration">Admin guide</a></li></ul>
+<h3><span class="mw-headline" id="Calendar_integration">Calendar integration</span></h3>
+<h4><span class="mw-headline" id="Configuration:_Calendar_syncing">Configuration: Calendar syncing</span></h4>
+<ul><li>Description: There&rsquo;s no a plugin for Google Calendar, but the Moodle calendar has an option * to import external calendars.</li>
+<li>Included in Moodle: No</li>
+<li>Configuration:</li>
+<li>More information: <a rel="nofollow" class="external text" href="b5e94e86ecc71174508fac1a3f3a7bac.html#Google_calendar">Admin guide</a></li></ul>
+<h3><span class="mw-headline" id="Classroom_integration">Classroom integration</span></h3>
+<h4><span class="mw-headline" id="Configuration:_Importing_grades">Configuration: Importing grades</span></h4>
+<ul><li>Description: There&rsquo;s no a plugin for Google Classroom, but Classroom grades can be exported and imported into Moodle.</li>
+<li>Included in Moodle: No</li>
+<li>Configuration:
+<ul><li>Exporting grades from Google Classroom <a rel="nofollow" class="external text" href="https://support.google.com/edu/classroom/answer/6020294?hl=en">guide</a></li>
+<li>Adapting format to Google Classroom <a rel="nofollow" class="external text" href="http://www.appsedudemo.com/home/lmsthirdparty/moodlegeneral/adapt-classroom-assignment-grades-to-moodle-format">guide</a></li>
+<li>Importing grades to Moodle <a rel="nofollow" class="external text" href="https://docs.moodle.org/27/en/Grade_import">guide</a></li></ul></li>
+<li>More information:</li></ul>
+<h3><span class="mw-headline" id="Other_integrations">Other integrations</span></h3>
+<h4><span class="mw-headline" id="Plugin:_Fusion_Tables_export">Plugin: Fusion Tables export</span></h4>
+<ul><li>Description: Export grades to a Google Fusion Table</li>
+<li>Included in Moodle: No</li>
+<li>Path: /grade/export/fusion</li>
+<li>Configuration:</li>
+<li>More information: <a rel="nofollow" class="external text" href="https://github.com/piersharding/moodle-google/tree/master/grade/export/fusion">Admin guide</a></li></ul>
+<h4><span class="mw-headline" id="UK_Open_University_plugins">UK Open University plugins</span></h4>
+<ul><li><a rel="nofollow" class="external text" href="http://www.open.ac.uk/blogs/douls/?p=241">Moodle Portfolio activity</a> (Uses Google drive collections/folders) (outdated)</li>
+<li><a rel="nofollow" class="external text" href="http://www.open.ac.uk/blogs/douls/?p=262">Google Collaborative activity</a> (outdated)</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822220515
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.030 seconds
+Real time usage: 0.041 seconds
+Preprocessor visited node count: 116/1000000
+Post&#8208;expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:19163-0!canonical and timestamp 20260822220515 and revision id 132934. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Google_Apps_Integration&amp;oldid=132934">https://docs.moodle.org/502/en/index.php?title=Google_Apps_Integration&amp;oldid=132934</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="25a190cf836432207b62ebb9ebca358b.html" title="Category:Plugin">Plugin</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdj1h7ord">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdj1h7p31"></button>
+					<div class="collapse navbar-collapse igdj1h7p31" id="igdj1h7p31">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Google_Apps_Integration" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Google_Apps_Integration" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Google_Apps_Integration&amp;oldid=132934" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Google_Apps_Integration&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 8 January 2019, at 23:32.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":156,"wgPageParseReport":{"limitreport":{"cputime":"0.030","walltime":"0.041","ppvisitednodes":{"value":116,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260822220515","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

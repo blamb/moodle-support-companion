@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Integrate Moodle, LDAP and SIMS.net - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"835855ca2596c9628db4e31d","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Integrate_Moodle,_LDAP_and_SIMS.net","wgTitle":"Integrate Moodle, LDAP and SIMS.net","wgCurRevisionId":150514,"wgRevisionId":150514,"wgArticleId":8130,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Contributed code"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Integrate_Moodle,_LDAP_and_SIMS.net","wgRelevantArticleId":8130,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Integrate_Moodle,_LDAP_and_SIMS.net">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Integrate_Moodle_LDAP_and_SIMS_net rootpage-Integrate_Moodle_LDAP_and_SIMS_net layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjd7auls"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdjd7auls" id="igdjd7auls">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Integrate+Moodle%2C+LDAP+and+SIMS.net" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Integrate_Moodle,_LDAP_and_SIMS.net">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Integrate_Moodle,_LDAP_and_SIMS.net">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Integrate_Moodle,_LDAP_and_SIMS.net">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="71d5d8acf3eeda4bc98d32f1fe4219a5.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Integrate_Moodle,_LDAP_and_SIMS.net" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Integrate_Moodle,_LDAP_and_SIMS.net&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Integrate_Moodle,_LDAP_and_SIMS.net&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Integrate Moodle, LDAP and SIMS.net</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Integrate_SIMS.net_and_LDAP_(SIMS2AD)"><span class="tocnumber">1</span> <span class="toctext">Integrate SIMS.net and LDAP (SIMS2AD)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Introduction"><span class="tocnumber">1.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#SIMS2AD_-_Account_Creator_(Unpublished)"><span class="tocnumber">1.2</span> <span class="toctext">SIMS2AD - Account Creator (Unpublished)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Introduction_2"><span class="tocnumber">1.2.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#IMPORTANT_-_Please_Read"><span class="tocnumber">1.2.2</span> <span class="toctext">IMPORTANT - Please Read</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#SIMS2AD_-_Access_Manager"><span class="tocnumber">1.3</span> <span class="toctext">SIMS2AD - Access Manager</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Introduction_3"><span class="tocnumber">1.3.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Script_Usage_Details"><span class="tocnumber">1.3.2</span> <span class="toctext">Script Usage Details</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Add_a_new_view_to_MS_SQL_Server"><span class="tocnumber">1.3.3</span> <span class="toctext">Add a new view to MS SQL Server</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#MS_SQL_2005_Server_View"><span class="tocnumber">1.3.4</span> <span class="toctext">MS SQL 2005 Server View</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Setting_Up_a_Scheduled_Task"><span class="tocnumber">1.3.5</span> <span class="toctext">Setting Up a Scheduled Task</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Required_Logon_Script_Changes"><span class="tocnumber">1.3.6</span> <span class="toctext">Required Logon Script Changes</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Integrate_Moodle_and_LDAP_(MOODLE2LDAP)"><span class="tocnumber">2</span> <span class="toctext">Integrate Moodle and LDAP (MOODLE2LDAP)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Introduction_4"><span class="tocnumber">2.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Setting_up_LDAP_Authentication"><span class="tocnumber">2.2</span> <span class="toctext">Setting up LDAP Authentication</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Integrate_Moodle_and_SIMS.net_(SIMS2MOODLE)"><span class="tocnumber">3</span> <span class="toctext">Integrate Moodle and SIMS.net (SIMS2MOODLE)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Prerequisite"><span class="tocnumber">3.1</span> <span class="toctext">Prerequisite</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#SIMS2Moodle_-_Enrolment_Plug-in"><span class="tocnumber">3.2</span> <span class="toctext">SIMS2Moodle - Enrolment Plug-in</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#Introduction_5"><span class="tocnumber">3.2.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Create_Moodle_SIMS.net_Course_Template"><span class="tocnumber">3.2.2</span> <span class="toctext">Create Moodle SIMS.net Course Template</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Download"><span class="tocnumber">3.2.3</span> <span class="toctext">Download</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Moodle_Settings"><span class="tocnumber">3.2.4</span> <span class="toctext">Moodle Settings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-23"><a href="#SIMS2MOODLE_-_SIMS.net_Timetable_Block"><span class="tocnumber">3.3</span> <span class="toctext">SIMS2MOODLE - SIMS.net Timetable Block</span></a>
+<ul>
+<li class="toclevel-3 tocsection-24"><a href="#Introduction_6"><span class="tocnumber">3.3.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#Prerequisite_2"><span class="tocnumber">3.3.2</span> <span class="toctext">Prerequisite</span></a>
+<ul>
+<li class="toclevel-4 tocsection-26"><a href="#IMPORTANT:_IF_UPGRADING"><span class="tocnumber">3.3.2.1</span> <span class="toctext">IMPORTANT: IF UPGRADING</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-27"><a href="#Download_the_Block"><span class="tocnumber">3.3.3</span> <span class="toctext">Download the Block</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="#Install_SIMS.net_Timetable_Block_for_Moodle"><span class="tocnumber">3.3.4</span> <span class="toctext">Install SIMS.net Timetable Block for Moodle</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="#Configure_SIMS.net_Timetable_Block_for_Moodle"><span class="tocnumber">3.3.5</span> <span class="toctext">Configure SIMS.net Timetable Block for Moodle</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h1><span id="Integrate_SIMS.net_and_LDAP_.28SIMS2AD.29"></span><span class="mw-headline" id="Integrate_SIMS.net_and_LDAP_(SIMS2AD)">Integrate SIMS.net and LDAP (SIMS2AD)</span></h1>
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>For SIMS2AD and SIMS2MOODLE modules to work every student  and teacher's LDAP account MUST have the employeeID field set. These need to be set to the following.
+</p>
+<ol><li>Students = UPN</li>
+<li>Staff = SIMS.net Teacher Code</li></ol>
+<p>Please note that if the account that you configure under Bind Settings/Distinguished Name does NOT have admin privileges on the domain (as best practise suggests), you may need to perform the following changes on your domain as well:
+</p>
+<ul><li>Load Active Directory Users and Computers</li>
+<li>Right click on the domain itself (domain.com), select 'Delegate Control...'</li>
+<li>Click 'Next', and then select the LDAP user that is configured under Bind Settings/Distinguished Name</li>
+<li>Under 'Delegate the following common tasks', click 'Read all user information'</li>
+<li>Click 'Finish'</li></ul>
+<p>This will allow the user account to read the employeeID attribute, which by default can only be read by domain admins.
+</p>
+<h2><span id="SIMS2AD_-_Account_Creator_.28Unpublished.29"></span><span class="mw-headline" id="SIMS2AD_-_Account_Creator_(Unpublished)">SIMS2AD - Account Creator (Unpublished)</span></h2>
+<h3><span class="mw-headline" id="Introduction_2">Introduction</span></h3>
+<hr>
+<p>SIMS2AD - Account Creator is a moodle block that administers the process of LDAP account creation automatically.
+</p>
+<h3><span class="mw-headline" id="IMPORTANT_-_Please_Read">IMPORTANT - Please Read</span></h3>
+<hr>
+<p>SIMS2AD Vbscript has been retired. It is in the process of being converted to a moodle block. The main aim of this is to improve configuration and quality.
+</p>
+<h2><span class="mw-headline" id="SIMS2AD_-_Access_Manager">SIMS2AD - Access Manager</span></h2>
+<h3><span class="mw-headline" id="Introduction_3">Introduction</span></h3>
+<hr>
+<p>SIMS2AD - Access Manager allows non technical members of staff to control student access to an education establishments computer network via SIMS.net.
+<br>
+</p>
+<h3><span class="mw-headline" id="Script_Usage_Details">Script Usage Details</span></h3>
+<p>The Vbscript will run every 5 minutes, every day <br>
+A log file is created in the same folder as the script; this holds a log of all processed changes.
+</p>
+<h3><span class="mw-headline" id="Add_a_new_view_to_MS_SQL_Server">Add a new view to MS SQL Server</span></h3>
+<hr>
+<ol><li>Open SQL Server Management Studio</li>
+<li>Use the Object Explorer window to browse to the database and the folder called &lsquo;Views&rsquo;.
+<ul><li>[Server]\[Instance] -&gt; Database -&gt; sims -&gt; Views</li></ul></li>
+<li>Right-click the &lsquo;Views&rsquo; folder and select &lsquo;New View&rsquo;.</li>
+<li>Close the Add Table dialog box &ndash; Copy and Paste the query below into the Query box</li>
+<li>Save the View via File, Save [the temporary name of the view] .</li>
+<li>Enter the above name for the new &lsquo;View&rsquo; and click &lsquo;OK&rsquo;.</li>
+<li>If you refresh the list of views by right-clicking the &lsquo;Views&rsquo; folder you will see the new view near the top of the list.</li>
+<li>Close SQL Server management Studio.</li></ol>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="MS_SQL_2005_Server_View">MS SQL 2005 Server View</span></h3>
+<hr>
+<pre>Name: vbs_admanager
+</pre>
+<p>Query to paste in:
+</p>
+<pre>SELECT     TOP (100) PERCENT sims.stud_via_student_browse.unique_pupil_no, sims.stud_via_student_browse.forename, 
+                      sims.stud_via_student_browse.surname, sims.udf_field.description AS type, sims.udf_lookup_value.description
+FROM         sims.udf_value INNER JOIN
+                      sims.udf_field ON sims.udf_value.field_id = sims.udf_field.field_id INNER JOIN
+                      sims.stud_via_student_browse ON sims.udf_value.entity_id = sims.stud_via_student_browse.person_id INNER JOIN
+                      sims.udf_lookup_value ON sims.udf_value.lookup_value_id = sims.udf_lookup_value.lookup_value_id
+WHERE     (sims.udf_field.active = 'T')
+</pre>
+<p><b>Script</b>
+</p>
+<hr>
+<p>The <a rel="nofollow" class="external text" href="https://docs.moodle.org/en/SIMS2AD_access_manager.vbs">SIMS2AD Access Manager</a> script needs to copied to D:\SIMS2AD on the SIMS Server.<br>
+The latest version of the script is available from:-
+</p>
+<pre>https://docs.moodle.org/en/SIMS2AD_access_manager.vbs
+</pre>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Setting_Up_a_Scheduled_Task">Setting Up a Scheduled Task</span></h3>
+<hr>
+<p>A scheduled task needs to be created to run the SIMS2AD Access Manager Script.<br>
+This Task will need to run every 5 minutes from 08:00 AM to 20:00 PM 
+</p>
+<ol><li>Open Control Panel</li>
+<li>Open Scheduled Tasks
+<ul><li>This will open the Schedule Task Windows</li></ul></li>
+<li>Add Scheduled Task
+<ul><li>This will open the Schedule Task Wizard</li></ul></li>
+<li>Click Next</li>
+<li>Click Browse and Navigate to D:\SIMS2AD Folder</li>
+<li>Select SIMS2AD_Access_Manager.vbs</li>
+<li>Give the name "SIMS2AD Access Manager"</li>
+<li>Select Daily</li>
+<li>Click Next</li>
+<li>Click Next as these Settings will be modified later.</li>
+<li>Enter the user account details that will be used to run the script</li>
+<li>Click Next</li>
+<li>Tick the box
+<ul><li>This will open Advance Properties Window</li></ul></li>
+<li>Click Finish</li>
+<li>Click the Schedule Tab</li>
+<li>Set the Start Time 08:00 AM</li>
+<li>Click the Advance Button
+<ul><li>This will open an Advance Settings Window</li></ul></li>
+<li>Set a Start date</li>
+<li>Tick Repeat Task</li>
+<li>Set it to repeat every 5 minutes</li>
+<li>Select Duration and set at 12 hours</li>
+<li>Click OK</li>
+<li>Click Apply</li>
+<li>Click OK</li></ol>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Required_Logon_Script_Changes">Required Logon Script Changes</span></h3>
+<hr>
+<p>The below code needs to be added to the beginning of the Kixtart Logon Script.<br>
+This will check the current time and see if the user belongs to a group that has restricted computer access.<br>
+If the user has logged on during a restricted time a message box will be displayed informing of this and then forcefully log them off.<br>
+</p>
+<pre>IF ((@time &gt; "20:00:00") AND (@time &lt; "08:50:00"))
+	If InGroup("SIMS2AD_LessonOnly_E4") or InGroup("SIMS2AD_LessonOnly_L4") or InGroup("SIMS2AD_Lesson_Evening_Only_E4") 
+        or InGroup("SIMS2AD_Lesson_Evening_Only_L4")
+	
+                MESSAGEBOX ("Your Computer Access Been Restricted, For More Information Please Speak To Your Director Of Year", 
+                "IT SERVICES", 16, 15)
+                $RC = LogOff(0)
+	endif
+endif
+IF ((@time &gt; "11:15:00") AND (@time &lt; "11:35:00"))
+	If InGroup("SIMS2AD_LessonOnly_E4") or InGroup("SIMS2AD_LessonOnly_L4") or InGroup("SIMS2AD_Lesson_Evening_Only_E4") 
+        or InGroup("SIMS2AD_Lesson_Evening_Only_L4")
+		
+                MESSAGEBOX ("Your Computer Access Been Restricted, For More Information Please Speak To Your Director Of Year",
+                "IT SERVICES", 16, 15)
+                $RC = LogOff(0)
+	endif
+endif
+IF ((@time &gt; "12:35:00") AND (@time &lt; "13:35:00"))
+	If InGroup("SIMS2AD_LessonOnly_E4")  or InGroup("SIMS2AD_Lesson_Evening_Only_E4") 
+
+                MESSAGEBOX ("Your Computer Access Been Restricted, For More Information Please Speak To Your Director Of Year", 
+                "IT SERVICES", 16, 15)
+                $RC = LogOff(0)
+	endif
+endif
+IF ((@time &gt; "13:35:00") AND (@time &lt; "14:35:00"))
+	If InGroup("SIMS2AD_LessonOnly_L4") or InGroup("SIMS2AD_Lesson_Evening_Only_L4")
+
+		MESSAGEBOX ("Your Computer Access Been Restricted, For More Information Please Speak To Your Director Of Year", 
+                "IT SERVICES", 16, 15)
+		$RC = LogOff(0)
+	endif
+endif
+IF ((@time &gt; "16:35:00") AND (@time &lt; "18:00:00"))
+	If InGroup("SIMS2AD_LessonOnly_E4") or InGroup("SIMS2AD_LessonOnly_L4") or InGroup("SIMS2AD_Lesson_Evening_Only_E4") 
+        or InGroup("SIMS2AD_Lesson_Evening_Only_L4")
+
+		MESSAGEBOX ("Your Computer Access Been Restricted, For More Information Please Speak To Your Director Of Year", 
+                "IT SERVICES", 16, 15)
+		$RC = LogOff(0)
+	endif
+endif
+IF ((@time &gt; "18:00:00") AND (@time &lt; "20:00:00"))
+	If InGroup("SIMS2AD_LessonOnly_E4") or InGroup("SIMS2AD_LessonOnly_L4")
+
+		MESSAGEBOX ("Your Computer Access Been Restricted, For More Information Please Speak To Your Director Of Year", 
+                "IT SERVICES", 16, 15)
+		$RC = LogOff(0)
+	endif
+endif
+
+</pre>
+<hr>
+<h1><span id="Integrate_Moodle_and_LDAP_.28MOODLE2LDAP.29"></span><span class="mw-headline" id="Integrate_Moodle_and_LDAP_(MOODLE2LDAP)">Integrate Moodle and LDAP (MOODLE2LDAP)</span></h1>
+<h2><span class="mw-headline" id="Introduction_4">Introduction</span></h2>
+<p>MOODLE2LDAP is the process of linking moodle to LDAP, this will allow users to authenticate and underpin SIMS2AD - Account Creator Moodle Block.
+</p>
+<h2><span class="mw-headline" id="Setting_up_LDAP_Authentication">Setting up LDAP Authentication</span></h2>
+<ol><li>Login to moodle as the admin user.</li>
+<li>Under Site Administration
+<ul><li>Users - &gt; Authentication -&gt; LDAP Server</li></ul></li>
+<li>Set the Following Fields as follows
+<ul><li><b>LDAP server settings</b>
+<ul><li>Host Url = ldap://server.domain.com/</li>
+<li>Version = 3</li>
+<li>LDAP encoding = utf-8</li></ul></li>
+<li><b>Bind settings</b>
+<ul><li>Hide passwords = Yes</li>
+<li>Distinguished Name = cn=LDAP Guest,cn=Users,dc=domain,dc=com</li>
+<li>Password = Password of LDAP Guest Account</li></ul></li>
+<li><b>User lookup settings</b>
+<ul><li>User type = MS Active Directory</li>
+<li>Contexts = cn=LDAP Guest,cn=Users,dc=domain,dc=com</li>
+<li>Search subcontexts = Yes</li>
+<li>Dereference aliases = Yes</li>
+<li>User attribute = sAMAccountName</li>
+<li>Member attribute = member</li></ul></li>
+<li><b>Force change password</b>
+<ul><li>Force change password = No</li>
+<li>Use standard Change Password Page = No</li></ul></li>
+<li><b>LDAP password expiration settings</b>
+<ul><li>Expiration = No</li></ul></li>
+<li><b>Enable user creation</b>
+<ul><li>Create users externally = No</li></ul></li>
+<li><b>Data Mapping</b>
+<ul><li>First Name = givenName</li>
+<li>Surname = sn</li>
+<li>Email address = mail</li>
+<li>Description = description</li>
+<li>ID number = employeeID</li>
+<li>Department = department</li></ul></li></ul></li>
+<li>Click Save</li></ol>
+<p><br>
+</p>
+<h1><span id="Integrate_Moodle_and_SIMS.net_.28SIMS2MOODLE.29"></span><span class="mw-headline" id="Integrate_Moodle_and_SIMS.net_(SIMS2MOODLE)">Integrate Moodle and SIMS.net (SIMS2MOODLE)</span></h1>
+<h2><span class="mw-headline" id="Prerequisite">Prerequisite</span></h2>
+<p>Moodle requires FreeTDS to be installed for it to work with MS SQL 2005. 
+</p>
+<ol><li><a rel="nofollow" class="external text" href="https://docs.moodle.org/en/Installing_MSSQL_for_PHP#Using_FreeTDS_on_Unix">Install FreeTDS on Linux</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.moodle.org/en/Installing_MSSQL_for_PHP#Using_FreeTDS_on_Windows">Install FreeTDS on Windows</a></li></ol>
+<h2><span class="mw-headline" id="SIMS2Moodle_-_Enrolment_Plug-in">SIMS2Moodle - Enrolment Plug-in</span></h2>
+<h3><span class="mw-headline" id="Introduction_5">Introduction</span></h3>
+<p>SIMS2Moodle - Enrolment Plug-in is a part preconfigured version of moodle's external database plug-in tailored for use with SIMS.net.
+</p>
+<h3><span class="mw-headline" id="Create_Moodle_SIMS.net_Course_Template">Create Moodle SIMS.net Course Template</span></h3>
+<hr>
+<p>Before the plug-in is installed it is best to create a template from which moodle will create any new SIMS.net courses 
+</p>
+<ol><li>Login to moodle as the admin user.</li>
+<li>Under Site Administration
+<ul><li>Courses - &gt; Add/Edit Courses</li></ul></li>
+<li>Click Miscellaneous</li>
+<li>Click New Course Button</li>
+<li>Set the Following Fields as follows
+<ul><li><b>General</b>
+<ul><li>Full name = SIMS Template Course</li>
+<li>Short name = simstemplate</li>
+<li>Course ID number = simstemplate</li>
+<li>Format = Topics Format</li>
+<li>Number of weeks/topics = 10</li>
+<li>Course Start Date = 1st Sept</li>
+<li>Hidden sections = Hidden sections are shown in collapsed form</li>
+<li>News Items to show = 5</li>
+<li>Show gradebook to students = Yes</li>
+<li>Show activity reports = No</li>
+<li>Maximum upload size = [Maximum Size Allowed]</li>
+<li>Is this a meta course? = No</li></ul></li>
+<li><b>Enrolments</b>
+<ul><li>Enrolment Plugins = Site Default (Internal Enrolment)</li>
+<li>Default role = Site Default (Student)</li>
+<li>Course enrollable = Yes</li>
+<li>Start date = Disabled</li>
+<li>End date = Disabled</li>
+<li>Enrolment duration = Unlimited</li></ul></li>
+<li><b>Enrolment expiry notification</b>
+<ul><li>Notify = No</li>
+<li>Notify Students = No</li>
+<li>Threshold = 10 days</li></ul></li>
+<li><b>Groups</b>
+<ul><li>Group mode = No Groups</li>
+<li>Force = No</li>
+<li>Default grouping = No</li></ul></li>
+<li><b>Availability</b>
+<ul><li>Availability = This course is available to students</li>
+<li>Enrolment key = [Blank]</li>
+<li>Guest access = Do Not Allow Guest In</li></ul></li>
+<li><b>Language</b>
+<ul><li>Force language = No</li></ul></li>
+<li><b>Role renaming</b>
+<ul><li>[All Fields are Blank]</li></ul></li></ul></li></ol>
+<h3><span class="mw-headline" id="Download">Download</span></h3>
+<hr>
+<p>The <a rel="nofollow" class="external text" href="http://www.uctc.e-sussex.sch.uk/moodle_sims.net_enrolment_plugin.zip">SIMS.net Enrolment Plug-in</a> files needs to copied to the 'moodle\enrol' folder on the Moodle server.<br>
+The latest version of the files are available from:-
+</p>
+<pre>http://www.uctc.e-sussex.sch.uk/moodle_sims.net_enrolment_plugin.zip
+</pre>
+<h3><span class="mw-headline" id="Moodle_Settings">Moodle Settings</span></h3>
+<hr>
+<p>On the plug-in have been downloaded and installed.
+</p>
+<ol><li>Login to moodle as the admin user.</li>
+<li>Under Site Administration
+<ul><li>Courses - &gt; Add/Edit Courses</li></ul></li>
+<li>Click Add New Category
+<ul><li>Parent Category  = Top</li>
+<li>Category Name  = SIMS Courses</li></ul></li>
+<li>Click Save</li>
+<li>Under Site Administration
+<ul><li>Courses - &gt; Enrolments</li></ul></li>
+<li>Enable SIMS.net</li>
+<li>Click Edit</li>
+<li>Set the Following Fields as follows
+<ul><li><b>SIMS.net Server Settings</b>
+<ul><li>enrol_dbtype = mssql</li>
+<li>enrol_dbhost = sims.school.lan</li>
+<li>enrol_dbport = 1427 (1427 is default for MS SQL 2005)</li>
+<li>enrol_dbuser = sa</li>
+<li>enrol_dbpass = [SA Password]</li></ul></li></ul></li></ol>
+<ol><li><ul><li><b>Academic Setting</b>
+<ul><li>enrol_dbacyear = 2009 (or current academic year)</li></ul></li></ul></li>
+<li>Click Save</li></ol>
+<h2><span class="mw-headline" id="SIMS2MOODLE_-_SIMS.net_Timetable_Block">SIMS2MOODLE - SIMS.net Timetable Block</span></h2>
+<h3><span class="mw-headline" id="Introduction_6">Introduction</span></h3>
+<hr>
+<p>SIMS2MOODLE - SIMS.net Timetable Block V1.2 now has ability  to auto install, upgrade and remove views on Microsoft SQL Server 2005.<br>
+</p>
+<h3><span class="mw-headline" id="Prerequisite_2">Prerequisite</span></h3>
+<hr>
+<p>SIMS2MOODLE - Timetable block requires SIMS2MOODLE - Enrolment Plug-in to be installed and configured.  SIMS2MOODLE - Enrolment Plug-in does not have to be enabled if auto enrolment is not needed.
+</p>
+<h4><span class="mw-headline" id="IMPORTANT:_IF_UPGRADING">IMPORTANT: IF UPGRADING</span></h4>
+<hr>
+<p>If you are upgrading from a version before the release of 1.0, please do the following:-
+</p>
+<ol><li>Uninstall the SIMS.net Timetable block from moodle.</li>
+<li>Delete the folders \blocks\simstimetable and \mod\simstimtable</li>
+<li>Delete the view mdl_student_timetable from SQL Server Management Studio</li></ol>
+<p>If you are upgrading from release of 1.1, please do the following:-
+</p>
+<ol><li>Please install SIMS.net Enrolment Plug-in.</li></ol>
+<h3><span class="mw-headline" id="Download_the_Block">Download the Block</span></h3>
+<hr>
+<p>The <a rel="nofollow" class="external text" href="http://www.uctc.e-sussex.sch.uk/moodle_sims.net_timetable_block.zip">SIMS.net Timetable Block</a> files needs to copied to the 'moodle\blocks' folder on the Moodle server.<br>
+The latest version of the files are available from:-
+</p>
+<pre>http://www.uctc.e-sussex.sch.uk/moodle_sims.net_timetable_block.zip
+</pre>
+<h3><span class="mw-headline" id="Install_SIMS.net_Timetable_Block_for_Moodle">Install SIMS.net Timetable Block for Moodle</span></h3>
+<hr>
+<ol><li>Copy simstimetable folder to the blocks folder in moodle</li>
+<li>Login to moodle as the admin account</li>
+<li>Click on Notifications
+<ul><li>A message should state that the block has been successfully installed.</li></ul></li>
+<li>Click Modules -&gt; Blocks -&gt; SIMS.net Timetable to configure the block. (You will have to configure the 'Lesson Labels' field at the very least for your school's timetable).</li></ol>
+<h3><span class="mw-headline" id="Configure_SIMS.net_Timetable_Block_for_Moodle">Configure SIMS.net Timetable Block for Moodle</span></h3>
+<hr>
+<p>Every schools timetable is slightly different, so the block will need to be configured. 
+</p><p><b>Block Title:</b> This text will be displayed as the block title.<br>
+<b>Link Text:</b> This is the text of the timetable url.<br>
+<b>No. Weeks:</b> Number of weeks timetabled in SIMS.net. (Only 1 or 2 supported)<br>
+<b>Separator:</b> The separator is the character using in the SIMS.net to separate the day from the period name e.g. Fri:1, so the separator will be ":"<br>
+<b>Lesson Labels:</b> These are the names all there periods that are timetabled in SIMS.net separated with a ","<br>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260823020426
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.019 seconds
+Real time usage: 0.021 seconds
+Preprocessor visited node count: 116/1000000
+Post&#8208;expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 3257/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:8130-0!canonical and timestamp 20260823020426 and revision id 150514. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Integrate_Moodle,_LDAP_and_SIMS.net&amp;oldid=150514">https://docs.moodle.org/502/en/index.php?title=Integrate_Moodle,_LDAP_and_SIMS.net&amp;oldid=150514</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="27cec39c9633dd48770872338440a43c.html" title="Category:Contributed code">Contributed code</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdjd7axa1">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdjd7axlq"></button>
+					<div class="collapse navbar-collapse igdjd7axlq" id="igdjd7axlq">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Integrate_Moodle,_LDAP_and_SIMS.net" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Integrate_Moodle,_LDAP_and_SIMS.net" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Integrate_Moodle,_LDAP_and_SIMS.net&amp;oldid=150514" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Integrate_Moodle,_LDAP_and_SIMS.net&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 12 December 2024, at 16:15.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":211,"wgPageParseReport":{"limitreport":{"cputime":"0.019","walltime":"0.021","ppvisitednodes":{"value":116,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":3257,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260823020426","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

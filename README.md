@@ -9,7 +9,7 @@ This is **not a chatbot**. It's a deliberative diagnostic tool designed for tech
 ## What It Does
 
 - **Diagnostic Conversations** — Guides technologists through structured EXPLORE → DIAGNOSE → RESOLVE phases, prompting follow-up questions before jumping to conclusions
-- **Knowledge Base Search** — Semantic search across Moodle documentation, TRU FAQs, WordPress content, and internal DOCX files using vector embeddings
+- **Knowledge Base Search** — Semantic search across the Moodle 5.2 documentation, TRU FAQs, WordPress content, and internal DOCX files using vector embeddings
 - **Moodle URL Parsing** — Automatically extracts course IDs, module types, and activity IDs from pasted `moodle.tru.ca` URLs
 - **Course Context Upload** — Analyze `.mbz` course backups, screenshots (via Claude vision), or saved HTML pages to understand course configuration
 - **Course Health Checks** — Automated detection of common configuration issues (completion tracking gaps, gradebook problems, naming issues)
@@ -70,18 +70,61 @@ Open **http://localhost:5173** in your browser.
 
 ### Knowledge Base Ingestion
 
-Place your source documents in the `data/` directory:
+Source documents are committed under `backend/knowledge_sources/`, which the
+Dockerfile copies into the image, so the deployed container can ingest without
+any extra setup:
 
-- `data/moodle-html/` — Moodle documentation HTML exports
-- `data/wordpress-xml/` — WordPress WXR XML exports
-- `data/tru-box-xml/` — TRU Box WordPress XML exports
-- `data/faq-docx/` — FAQ documents in DOCX format
+- `moodledocs_en/<version>/en/` — the MoodleDocs HTML export
+- `olproduction.WordPress.*.xml` — OL Production WordPress export
+- `trubox.WordPress.*.xml` — TRU Box WordPress export
+- `TRU Moodle FAQ.docx` — the FAQ document
+
+Only the HTML the parser actually reads is committed — `images_en/`, `skins/`,
+and the CSS are excluded, which takes the export from 300 MB to about 19 MB
+compressed. The full export can also live at the repo root as
+`moodledocs_en/<version>/en/` (gitignored); config prefers that copy locally and
+falls back to `backend/knowledge_sources/` in the container. Both yield the same
+2,671 documents.
 
 Then trigger ingestion:
 
 ```bash
 curl -X POST http://localhost:8000/api/ingest
 ```
+
+Or run the pipeline directly:
+
+```bash
+cd backend && python -m app.ingestion.pipeline
+```
+
+Ingestion resets the vector store and rebuilds it from scratch, so keep a copy
+of `data/chroma_db/` if you need to roll back. If no source file is found at all
+the run aborts before the reset and returns `aborted_no_sources`, leaving the
+existing store intact rather than emptying it.
+
+### Upgrading to a new Moodle release
+
+The Moodle version lives in one place — `MOODLE_VERSION` in
+`backend/app/config.py` (overridable with the `MOODLE_VERSION` env var). It
+drives the system prompt, the knowledge-base tool description, the course-health
+auditor, which documentation export gets ingested, and the `docs.moodle.org`
+links handed back to technologists.
+
+To upgrade:
+
+1. Download the MoodleDocs HTML export for the new release and unpack it as
+   `moodledocs_en/<code>/en/` — the code is `major * 100 + minor`, so 5.2 is
+   `502`. (`MOODLE_DOCS_DIR` in the environment overrides the lookup entirely.)
+2. Copy the `.html` files (excluding `images_en/` and `resources/`) into
+   `backend/knowledge_sources/moodledocs_en/<code>/en/` and commit them, so the
+   new docs ship in the container.
+3. Set `MOODLE_VERSION` to the new release.
+4. Re-run ingestion locally, and `POST /api/ingest` against the deployment.
+
+The export stores the same wiki page under several hashes (once per link that
+reached it, anchors included); the parser keeps the longest copy of each page so
+duplicates don't crowd out search results.
 
 ## Project Structure
 

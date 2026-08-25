@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Multi-tenancy Configuration - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"4c7b6797387daa8c0c4fe23d","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Multi-tenancy_Configuration","wgTitle":"Multi-tenancy Configuration","wgCurRevisionId":156123,"wgRevisionId":156123,"wgArticleId":25662,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Workplace"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Multi-tenancy_Configuration","wgRelevantArticleId":25662,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Multi-tenancy_Configuration">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Multi-tenancy_Configuration rootpage-Multi-tenancy_Configuration layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkp2x4aw"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdkp2x4aw" id="igdkp2x4aw">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Multi-tenancy+Configuration" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Multi-tenancy_Configuration">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Multi-tenancy_Configuration">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Multi-tenancy_Configuration">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="e0d576ce14e1b6aad14e610e4cb9f000.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Multi-tenancy_Configuration&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Multi-tenancy_Configuration&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Multi-tenancy_Configuration&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Multi-tenancy Configuration</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="5005ef9062eb9f52704277d7e5764a8a.html" title="Moodle Workplace">Moodle Workplace</a></div>	
+<div class="content">
+<ul><li><b>Multi-tenancy</b></li>
+<li><a href="6fec4c5dcd9d154ff23d46e2e133d435.html" title="Multi-tenancy">&gt; Overview</a></li>
+<li><a class="mw-selflink selflink">&gt; Configuration</a></li>
+<li><a href="ce34a82518ebec7a6808ac76e6c77bf7.html" title="Multi-tenancy Use cases">&gt; Use cases</a></li>
+<li><a href="8e6a9e7e9040793fef1a2decfe26fa09.html" title="Multi-tenancy Tenants">&gt; Tenants</a></li>
+<li><a href="78748f6e7f5532770c492310e5d4abc5.html" title="Multi-tenancy Technical">&gt; Technical</a></li>
+<li><a href="24af730ae0df0835ebaf33795be5027d.html" title="Programs">Programs</a></li>
+<li><a href="64281e9b4c1975d18f3275e75580176d.html" title="Certifications">Certifications</a></li>
+<li><a href="e71b0cf0176eb80673cd157945822828.html" title="Dynamic rules">Dynamic rules</a></li>
+<li><a href="fc0a853d3881e4fc65d1b41f74e5b14d.html" title="Organisation structure">Organisations</a></li>
+<li><a href="dfeacc84bc200bd03ef249e87a91fa91.html" title="Report builder">Report builder</a></li>
+<li><a href="d99f766a0cfcbdabde4fbcb06919e924.html" title="Custom pages">Custom pages</a></li>
+<li><a href="9c1741fa79af3ca782b4f84eb29f4389.html" title="Certificates">Certificates</a></li>
+<li><a href="a561ccaef5590a82764540b46d322997.html" title="Catalogue">Learning catalogue</a></li>
+<li><a href="1d466d8ced71062fd319faa436dc6ea9.html" title="Migrations">Migrations</a></li></ul>
+<hr>
+<ul><li><a href="2654643b183ad0020e11d2b7c7ef55ea.html" title="Teams">Teams &amp; Managers</a></li>
+<li><a href="b199a356b44bc512734bbdb6650fe404.html" title="Staff">Staff &amp; Learners</a></li>
+<li><a href="0dfa327dd98a4c57cb9d46f1b0c4bea1.html" title="Appointments">Trainers</a></li>
+<li><a href="a44b2e342c2d0deff379b452bfae8393.html" title="Moodle Workplace App">Workplace App</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div class="alert alert-info"> <span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:workplacelogo.png" class="mw-file-description"><img src="images_en/thumb/b/b6/workplacelogo.png/634acbf0524aef964358ae94d60d8582.png" decoding="async" width="24" height="24" class="mw-file-element" srcset="/502/en/images_en/thumb/b/b6/workplacelogo.png/36px-workplacelogo.png 1.5x, /502/en/images_en/thumb/b/b6/workplacelogo.png/48px-workplacelogo.png 2x" data-file-width="248" data-file-height="248"></a></span> This feature is part of <b><a href="5005ef9062eb9f52704277d7e5764a8a.html" title="Moodle Workplace">Moodle Workplace</a></b>&trade;, which is available through <a rel="nofollow" class="external text" href="https://moodle.com/workplace/">Moodle Certified Partners and Service Providers</a> only.</div>
+
+<hr>
+<div class="alert alert-success"> <b>This page is intended for </b> Administrators</div>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Managing_tenants"><span class="tocnumber">1</span> <span class="toctext">Managing tenants</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Tenant_Users"><span class="tocnumber">1.1</span> <span class="toctext">Tenant Users</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Multi-tenant_support_for_user_profile_fields"><span class="tocnumber">1.2</span> <span class="toctext">Multi-tenant support for user profile fields</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Tenant_Details"><span class="tocnumber">1.3</span> <span class="toctext">Tenant Details</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Tenant_Roles"><span class="tocnumber">1.4</span> <span class="toctext">Tenant Roles</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Tenant_Authentication"><span class="tocnumber">1.5</span> <span class="toctext">Tenant Authentication</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Tenant_Branding"><span class="tocnumber">1.6</span> <span class="toctext">Tenant Branding</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Images"><span class="tocnumber">1.6.1</span> <span class="toctext">Images</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Colours"><span class="tocnumber">1.6.2</span> <span class="toctext">Colours</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Advanced"><span class="tocnumber">1.6.3</span> <span class="toctext">Advanced</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Tenant_Dashboard"><span class="tocnumber">1.7</span> <span class="toctext">Tenant Dashboard</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Archiving_and_Deleting_Tenants"><span class="tocnumber">2</span> <span class="toctext">Archiving and Deleting Tenants</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#User_Tour_Tenant_selector"><span class="tocnumber">3</span> <span class="toctext">User Tour Tenant selector</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Managing_tenants">Managing tenants</span></h2><p>
+The main administrator or a user with the capability <a href="Capabilities/tool/cdd4efe3634eab06f8c7e53688f328db.html" title="Capabilities/tool/tenant:manage">tool/tenant:manage</a> can manage tenants through <b>Site administration &gt; Users &gt; Organisation &gt; Manage tenants</b> or directly via the <b>All tenants</b> icon in the Workplace launcher.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multi-tenancy_-_Managing_tenants.png" class="mw-file-description"><img alt="" src="images_en/thumb/b/bb/Multi-tenancy_-_Managing_tenants.png/3b530165556c394537f4c25907e1f91f.png" decoding="async" width="900" height="378" class="mw-file-element" srcset="/502/en/images_en/thumb/b/bb/Multi-tenancy_-_Managing_tenants.png/1350px-Multi-tenancy_-_Managing_tenants.png 1.5x, /502/en/images_en/thumb/b/bb/Multi-tenancy_-_Managing_tenants.png/1800px-Multi-tenancy_-_Managing_tenants.png 2x" data-file-width="2946" data-file-height="1238"></a><figcaption></figcaption></figure>
+<p><br>
+</p><p>For each active tenant, you view the following information: the <b>Tenant name</b>, the number of assigned <b>Users</b>, the <b>Category</b>, its <b>Sort order</b>, if the tenant is <b>Shown in the login selector</b>, up to two <b>Login URL</b>s, and the <b>Edit</b> and <b>Archive</b> actions.
+</p><p>A default tenant has been created during installation, and at least one user (the site admin account) has already been assigned to it. After <a href="a3610c525151bb8c7a5731d3d6a5cf37.html" title="Moodle Workplace Installation">upgrading from Moodle LMS</a> to Moodle Workplace, all users will belong to the default tenant.
+</p><p>Each tenant can have a top-level course category attached to it. Note that a course category can only be attached to a single tenant.
+</p><p>To create a new tenant, click on the <b>+New tenant button</b>. A pop-up screen will appear, displaying a range of tenant details.
+</p>
+<ul><li><b>Tenant name</b> (Required): Name of the tenant. This is the name of the tenant. While multiple tenants can share the same name, it is advisable to use distinct names for different tenants.</li>
+<li><b>Site name</b> and <b>Site short name</b>: These are essentially the full site name and the short name used in the site settings for the front page, found under <b>Site administration &gt; Front page settings</b>. Once a tenant is active (either by selecting it via the tenant switcher or when a user belongs to a tenant), the tenant settings will override the site settings. The site shortname will be displayed in the header if the field 'Header logo' (in the <a class="mw-selflink-fragment" href="#Tenant_Branding">tenant branding configuration</a>) is left empty.</li>
+<li><b>Description:</b> A descriptive summary of the tenant's purpose.</li>
+<li><b>ID number</b>: This is a unique identifier for your tenant. It is used when uploading users via the upload user tool or connecting to external systems through web services, as well as in the login URL. Two HTML data attributes, <code>[data-tenantid="{tenant_id}"]</code> and <code>[data-tenantidnumber="{tenant_idnumber}"]</code>, help customize styles for specific tenants. However, the tenant ID number must be specified for these attributes to function.</li>
+<li><b>Login URL</b>: There are two options for accessing the login directly: one includes the ID number, and the other uses an internal numeric tenant ID (the default tenant always has ID=1 and cannot be changed). The internal tenant ID is not available during tenant creation, so the login URLs are displayed as tenantid={ID} and tenant={IDNUMBER}, respectively</li>
+<li><b>Show this tenant in the login selector</b>: By enabling this option, this tenant will be listed on the login page of every tenant as an alternative login page. For details, refer to the section describing the <a href="78748f6e7f5532770c492310e5d4abc5.html#Login_and_signup_tenant_selector" title="Multi-tenancy Technical">Login tenant selector</a>.</li>
+<li><b>Course category</b> Courses belonging to a particular tenant must be located in a tenant category. There are three options for <b>Course category</b> selection:
+<ul><li><b>No category</b> (default): No tenant category is selected.</li>
+<li><b>Create a new category</b>: A top-level course category with the same name as the tenant name will be created.</li>
+<li><b>Choose an existing category</b>: All top-level categories that are not already assigned to other tenants will be available for selection.</li></ul></li></ul><p>
+Moodle Workplace also supports courses that are <a href="8e6a9e7e9040793fef1a2decfe26fa09.html#Shared_Content" title="Multi-tenancy Tenants">shared across tenants</a>.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multi-tenancy_-_New_tenant.png" class="mw-file-description"><img src="images_en/thumb/e/ea/Multi-tenancy_-_New_tenant.png/266d39705ceeaf1adb34fa77adbd568f.png" decoding="async" width="448" height="600" class="mw-file-element" srcset="/502/en/images_en/thumb/e/ea/Multi-tenancy_-_New_tenant.png/673px-Multi-tenancy_-_New_tenant.png 1.5x, /502/en/images_en/thumb/e/ea/Multi-tenancy_-_New_tenant.png/897px-Multi-tenancy_-_New_tenant.png 2x" data-file-width="1440" data-file-height="1926"></a><figcaption></figcaption></figure>
+<p><br>
+Three roles are created automatically during the Workplace installation and are assigned automatically to the following users:
+</p>
+<ul><li><a href="78748f6e7f5532770c492310e5d4abc5.html#Tenant_administrator_role" title="Multi-tenancy Technical">Tenant administrator</a>: Assigned to the tenant administrator (in the system context).</li>
+<li><a href="https://docs.moodle.org/502/en/index.php?title=Tenant_administrator_in_course_category_role&amp;action=edit&amp;redlink=1" class="new" title="Tenant administrator in course category role (page does not exist)">Tenant administrator in the course category</a>: Assigned to the tenant administrator (in the context of the tenant's course category). This role is also known as <b>tenant manager</b>.</li>
+<li><a href="78748f6e7f5532770c492310e5d4abc5.html#Tenant_user_role" title="Multi-tenancy Technical">Tenant user</a>: Assigned to all tenant users (in the context of the tenant's course category). By default, this role only has the capability 'moodle/category:viewcourselist'</li></ul>
+<p>You cannot delete these three roles or change their assignments. However, as a site administrator, you can modify these roles if necessary. For example, the "Tenant administrator" role by default includes the capability <a href="Capabilities/tool/08061e29d6fdc51074972855b9d2f001.html" title="Capabilities/tool/tenant:managetheme">tool/tenant:managetheme</a>, which allows the tenant administrator to change the appearance of their tenant (logo and colours). The main administrator may decide to restrict theme customisation to a central level and prohibit this capability in the "Tenant administrator" role. The same applies to the <a href="Capabilities/tool/0fa6327593a1f9071a72aa1f451cffe8.html" title="Capabilities/tool/tenant:manageusers">tool/tenant:manageusers</a> capability.
+</p><p>After adding a tenant, you will be redirected to the <b>Users</b> tab, where you should add a tenant administrator.
+</p>
+<h3><span class="mw-headline" id="Tenant_Users">Tenant Users</span></h3>
+<p>When dealing with tenant users, two fundamental rules apply:
+</p>
+<ol><li><b>A user is always assigned to a tenant; that is, an account cannot be tenantless</b>.</li>
+<li><b>A user cannot be assigned to more than one tenant; an account always belongs to a single tenant and a single tenant only.</b> This rule might be relaxed in the future.</li></ol>
+<p>The following diagram illustrates how users are assigned to tenants:
+</p>
+<figure class="mw-halign-center" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multi-tenancy_-_Users_and_tenants.png" class="mw-file-description"><img src="images_en/thumb/5/52/Multi-tenancy_-_Users_and_tenants.png/7cec6ec8e23d020ce4e141360134d123.png" decoding="async" width="815" height="457" class="mw-file-element" srcset="/502/en/images_en/thumb/5/52/Multi-tenancy_-_Users_and_tenants.png/1223px-Multi-tenancy_-_Users_and_tenants.png 1.5x, /502/en/images_en/thumb/5/52/Multi-tenancy_-_Users_and_tenants.png/1630px-Multi-tenancy_-_Users_and_tenants.png 2x" data-file-width="2183" data-file-height="1224"></a><figcaption></figcaption></figure>
+<p><br>
+</p><p><br>
+Each user belongs to precisely one tenant. Each tenant can have zero, one, or many tenant administrators. By default, a tenant admin has permission to manage tenant users, manage tenant roles, configure authentication settings, and adjust tenant branding.
+</p><p>When a new user account is created&mdash;whether through self-registration, manual entry, batch upload, or via web services&mdash;it is always attached to the default tenant unless specified otherwise.
+</p><p>
+You can manage all tenant users and add new users to the tenant in the <b>Users</b> tab. The required capability is <a href="Capabilities/tool/0fa6327593a1f9071a72aa1f451cffe8.html" title="Capabilities/tool/tenant:manageusers">tool/tenant:manageusers</a>.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multi-tenancy_-_Users.png" class="mw-file-description"><img alt="" src="images_en/thumb/5/55/Multi-tenancy_-_Users.png/748d019482e4990ea58a807b2244fd8b.png" decoding="async" width="843" height="900" class="mw-file-element" srcset="/502/en/images_en/thumb/5/55/Multi-tenancy_-_Users.png/1265px-Multi-tenancy_-_Users.png 1.5x, /502/en/images_en/thumb/5/55/Multi-tenancy_-_Users.png/1687px-Multi-tenancy_-_Users.png 2x" data-file-width="2016" data-file-height="2151"></a><figcaption></figcaption></figure><p>
+To add a new tenant user manually, select the <b>+New User</b> button. The screen will display the same information as the standard user form, plus an additional <b>Tenant administration</b> section at the bottom, where you can assign the user tenant administration rights to the user.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multi-tenancy_-_New_user.png" class="mw-file-description"><img alt="" src="images_en/thumb/8/89/Multi-tenancy_-_New_user.png/84f6edfa20b996bc2f73b86857f6593b.png" decoding="async" width="600" height="162" class="mw-file-element" srcset="/502/en/images_en/thumb/8/89/Multi-tenancy_-_New_user.png/900px-Multi-tenancy_-_New_user.png 1.5x, /502/en/images_en/thumb/8/89/Multi-tenancy_-_New_user.png/1200px-Multi-tenancy_-_New_user.png 2x" data-file-width="1626" data-file-height="438"></a><figcaption></figcaption></figure>
+<p><br>
+</p><p>If a course category has been assigned to the tenant, the tenant administrator is automatically assigned the tenant manager role in that category. This means they have permission to create courses, assign roles, etc. Access to course management is available through <b>Workplace launcher &gt; Courses</b>.
+</p><p>Using the drop-down menu at the bottom, an administrators can perform a number of actions. By default, that is without granting or denying permissions, the following actions are available to tenant administrators and site administrators, respectively:
+</p>
+<table class="wikitable" style="text-align: center">
+<caption>
+</caption>
+<tbody><tr>
+<th>Action
+</th>
+<th>Tenant Admin
+</th>
+<th>Site Admin
+</th></tr>
+<tr>
+<td>Confirm accounts
+</td>
+<td>X
+</td>
+<td>X
+</td></tr>
+<tr>
+<td>Send a message
+</td>
+<td>
+</td>
+<td>X
+</td></tr>
+<tr>
+<td>Delete users
+</td>
+<td>X
+</td>
+<td>X
+</td></tr>
+<tr>
+<td>Force password change
+</td>
+<td>
+</td>
+<td>X
+</td></tr>
+<tr>
+<td>Add to cohort
+</td>
+<td>
+</td>
+<td>X
+</td></tr>
+<tr>
+<td>Suspend users
+</td>
+<td>X
+</td>
+<td>X
+</td></tr>
+<tr>
+<td>Activate user accounts (unsuspend users)
+</td>
+<td>X
+</td>
+<td>X
+</td></tr>
+<tr>
+<td>Resend confirmation emails
+</td>
+<td>X
+</td>
+<td>X
+</td></tr>
+<tr>
+<td>Resend user authentication factors
+</td>
+<td>
+</td>
+<td>X
+</td></tr>
+<tr>
+<td>Allocate to <a rel="nofollow" class="external text" href="https://docs.moodle.org/405/en/Programs">program</a>
+</td>
+<td>
+</td>
+<td>X
+</td></tr>
+<tr>
+<td>Allocate or <a rel="nofollow" class="external text" href="https://docs.moodle.org/405/en/Certifications">certification</a>
+</td>
+<td>
+</td>
+<td>X
+</td></tr>
+<tr>
+<td>Add to tenant administrators (role)
+</td>
+<td>
+</td>
+<td>X
+</td></tr>
+<tr>
+<td>Remove from tenant administrators (role)
+</td>
+<td>
+</td>
+<td>X
+</td></tr>
+<tr>
+<td>Move between tenants*
+</td>
+<td>
+</td>
+<td>X
+</td></tr></tbody></table><p>
+* To move users between tenants the <a rel="nofollow" class="external text" href="https://docs.moodle.org/405/en/Capabilities/tool/tenant:allocate">tool/tenant:allocate</a> capability required. None of the user data, such as courses or certification completion, will be affected by this.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multi-tenancy_-_Move_between_tenants.png" class="mw-file-description"><img src="images_en/thumb/f/f5/Multi-tenancy_-_Move_between_tenants.png/e2e3510278fdfa0a86c9f556cdc61572.png" decoding="async" width="600" height="320" class="mw-file-element" srcset="/502/en/images_en/thumb/f/f5/Multi-tenancy_-_Move_between_tenants.png/900px-Multi-tenancy_-_Move_between_tenants.png 1.5x, /502/en/images_en/thumb/f/f5/Multi-tenancy_-_Move_between_tenants.png/1200px-Multi-tenancy_-_Move_between_tenants.png 2x" data-file-width="1566" data-file-height="834"></a><figcaption></figcaption></figure><p>As a tenant administrator, you can batch upload users via the <a href="d4564b5ac7036ef83d6ca81440914b64.html#Tenant_allocation" title="Upload users in Moodle Workplace">Upload users</a> tool. A tenant is matched by its tenant ID number.
+</p><p>If the user has the <a href="Capabilities/tool/558981741b92af646e60135d8074c261.html" title="Capabilities/tool/tenant:allocate">tool/tenant:allocate</a> capability, they can specify a tenant when uploading users (both for creating new users and updating existing ones). If the user does not have this capability, they can only be create and update users in their own tenant.
+</p><p>Since a user cannot be tenantless, it is not possible to remove tenant allocation. However, you can move a user from one tenant to another tenant by replacing the old tenant with the new value in the CSV file.
+</p>
+<h3><span class="mw-headline" id="Multi-tenant_support_for_user_profile_fields">Multi-tenant support for user profile fields</span></h3>
+<p>Moodle's <a href="https://docs.moodle.org/502/en/index.php?title=user_profile_fields&amp;action=edit&amp;redlink=1" class="new" title="user profile fields (page does not exist)">user profile fields</a> have been extended to allow the definition of different user profile fields per each tenant. When creating or editing a user profile category in <b>Site administration &gt; Users &gt; User profile fields</b>, the following three self-explanatory options are available:
+</p>
+<ul><li>This category is available to all tenants (including future ones)</li>
+<li>This category is available to the following tenants...</li>
+<li>This category is available to all tenants except the following...</li></ul>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multi-tenancy_-_User_profile_fields.png" class="mw-file-description"><img alt="" src="images_en/thumb/a/a4/Multi-tenancy_-_User_profile_fields.png/323b82207c9f41779335dcff0aaee1f9.png" decoding="async" width="900" height="561" class="mw-file-element" srcset="/502/en/images_en/thumb/a/a4/Multi-tenancy_-_User_profile_fields.png/1350px-Multi-tenancy_-_User_profile_fields.png 1.5x, /502/en/images_en/a/a4/Multi-tenancy_-_User_profile_fields.png 2x" data-file-width="1618" data-file-height="1008"></a><figcaption></figcaption></figure>
+<p><br>
+</p><p>When profile fields belong to tenant-specific categories, they will only appear in the profile for users in those tenants; this includes sign-up and edit forms.
+</p><p>A tenant admin has permission to edit locked profile fields for users in their tenant.
+</p><p>User profile fields can be defined as identity fields (found under <b>Site administration &gt; Users &gt; User permissions</b>), which means that various user reports across Moodle Workplace will display the fields relevant to the current tenant.
+</p>
+<h3><span class="mw-headline" id="Tenant_Details">Tenant Details</span></h3>
+<p>In the <b>Details</b> tab, the meta-information about the tenant can be modified. The screen is identical to the one used when you created a <a class="mw-selflink-fragment" href="#Managing_tenants">new tenant</a>.
+</p><p>If a tenant admin needs to view the details of its tenant, this is the only place they can view this information.
+</p>
+<h3><span class="mw-headline" id="Tenant_Roles">Tenant Roles</span></h3>
+<p>The <b>Roles</b> tab is where the available roles and their assignment to users in the current tenant are displayed and managed.  
+</p><p>By default, the <a href="78748f6e7f5532770c492310e5d4abc5.html#Tenant_administrator_role" title="Multi-tenancy Technical">Tenant administrator role</a> includes the capability <a href="Capabilities/tool/0fa6327593a1f9071a72aa1f451cffe8.html" title="Capabilities/tool/tenant:manageusers">tool/tenant:manageusers</a>. Unless this capability has been removed from the role by the main administrator, the tenant administrator can create and edit users within their tenant.
+</p><p>The tenant administrator can also assign other roles to their users, such as <a href="042d32bd621471bc2e24a61866ef989e.html#Program_manager_role" title="Programs Technical">Program manager</a> or <a href="75216859cd6ff1e669ca509259025052.html#Organisation_structure_manager_role" title="Organisation Technical">Organisation structure manager</a> in the system context.
+</p><p>Cross-tenant roles are labelled with a <b>Cross-tenant permissions</b> tag.
+</p><p>
+If the tenant has its own course category, the tenant administrator also has the role of <a href="78748f6e7f5532770c492310e5d4abc5.html#Tenant_administrator_in_course_category_role" title="Multi-tenancy Technical">Tenant administrator in course category</a> in this course category and can assign roles in the context of this course category, such as "Course creator". For easier management, a single page lists all the roles that the tenant administrator can assign in both the System and Category contexts, accessible via <b>Workplace launcher &gt; Users &gt; Roles</b>.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multi-tenancy_-_Roles.png" class="mw-file-description"><img alt="" src="images_en/thumb/a/a7/Multi-tenancy_-_Roles.png/e74d20416a55fa2c74068699b370375c.png" decoding="async" width="821" height="900" class="mw-file-element" srcset="/502/en/images_en/thumb/a/a7/Multi-tenancy_-_Roles.png/1232px-Multi-tenancy_-_Roles.png 1.5x, /502/en/images_en/thumb/a/a7/Multi-tenancy_-_Roles.png/1643px-Multi-tenancy_-_Roles.png 2x" data-file-width="1672" data-file-height="1832"></a><figcaption></figcaption></figure><p>Each tenant user is automatically assigned the role <a href="78748f6e7f5532770c492310e5d4abc5.html#Tenant_user_role" title="Multi-tenancy Technical">Tenant user</a> in the context of their tenant category. Even a site administrator cannot edit this role or assign it to any users manually to avoid confusion.
+</p><h3><span class="mw-headline" id="Tenant_Authentication">Tenant Authentication</span></h3>
+<p>Moodle Workplace supports multi-tenancy for authentication, allowing you to configure different authentication options for each tenant. In the <b>Authentication</b> tab, all authentication plugins enabled in <b>Site administration &gt; Plugins &gt; Authentication &gt; Manage authentication</b> are displayed.
+</p><p>
+Authentication methods that fully support multi-tenancy can be configured individually using the cogwheel icon. Authentication plugins that do not (yet) support multi-tenancy (indicated by the lock symbol) cannot be configured at the tenant level. Additionally, you can deactivate individual authentication plugins via the <b>Hide</b> icon.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multi-tenancy_-_Authentication.png" class="mw-file-description"><img alt="" src="images_en/thumb/c/cb/Multi-tenancy_-_Authentication.png/beeaabd6827d148d82d304932e007e3f.png" decoding="async" width="900" height="480" class="mw-file-element" srcset="/502/en/images_en/c/cb/Multi-tenancy_-_Authentication.png 1.5x" data-file-width="1316" data-file-height="702"></a><figcaption></figcaption></figure>
+<p><br>
+</p><p>
+To override selected authentication settings, such as authentication instructions and allowed domains, click the <b>Common settings</b> link. Here, you can modify general authentication settings for each tenant.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multi-tenancy_-_Common_settings.png" class="mw-file-description"><img src="images_en/thumb/3/31/Multi-tenancy_-_Common_settings.png/4646f280e5455bf26511957749022ce0.png" decoding="async" width="686" height="820" class="mw-file-element" srcset="/502/en/images_en/thumb/3/31/Multi-tenancy_-_Common_settings.png/1029px-Multi-tenancy_-_Common_settings.png 1.5x, /502/en/images_en/thumb/3/31/Multi-tenancy_-_Common_settings.png/1372px-Multi-tenancy_-_Common_settings.png 2x" data-file-width="1610" data-file-height="1924"></a><figcaption></figcaption></figure>
+<p><br>
+</p><p>Site administrators can enforce certain settings for all tenants using the <b>Force for all tenants</b> option in the Common settings section under <b>Site administration &gt; Plugins &gt; Authentication &gt; Manage authentication</b>.
+</p><p>Tenant administrators can override common settings or settings for multi-tenant authentication plugins through the <b>Authentication</b> tab. This feature requires the <a href="Capabilities/tool/3fcef118ef6d33ac7599d3da9e176d23.html" title="Capabilities/tool/tenant:overridesettings"><b>tool/tenant:overridesettings</b></a> capability, which has to enabled for the Tenant admin role in the System context.
+</p><p>For more information on configuring authentication plugins in a multi-tenancy setup, please refer to the <a href="78748f6e7f5532770c492310e5d4abc5.html#Multi-tenancy_authentication" title="Multi-tenancy Technical">Multi-tenancy authentication</a> section.
+</p>
+<h3><span class="mw-headline" id="Tenant_Branding">Tenant Branding</span></h3>
+<p>The <b>Branding</b> tab allows you to customise the look and feel of the tenant (the required capability is <a href="Capabilities/tool/08061e29d6fdc51074972855b9d2f001.html" title="Capabilities/tool/tenant:managetheme">tool/tenant:managetheme</a>). The available categories are <b>Images</b>, <b>Colours</b>, and <b>Advanced:</b>
+</p>
+<h4><span class="mw-headline" id="Images">Images</span></h4>
+<p>The <b>Images</b> category on the Branding tab allows you to manage the pictures displayed on your site:
+</p>
+<ul><li><b>Header logo</b>: The company logo shown in the navigation bar.</li>
+<li><b>Login logo</b>: The organization logo displayed above the username and password fields on the login screen. This is often the same as the header logo.</li>
+<li><b>Tenant selector logo</b>: This logo appears on the login tenant selector if enabled. If not specified, the Login logo will be used.</li>
+<li><b>Login background image</b>: The picture displayed on the login screen.</li>
+<li><b>Favicon</b>: The icon associated with this site, typically shown in the browser's address bar.</li></ul>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="https://docs.moodle.org/502/en/File:Multi-tenancy_-_Branding_-_Grey_tones_hue.jpg" class="mw-file-description"><img src="images_en/thumb/e/e5/Multi-tenancy_-_Branding_-_Grey_tones_hue.jpg/08202224624ecc7b5092102f2b165438.jpg" decoding="async" width="300" height="200" class="mw-file-element" srcset="/502/en/images_en/thumb/e/e5/Multi-tenancy_-_Branding_-_Grey_tones_hue.jpg/450px-Multi-tenancy_-_Branding_-_Grey_tones_hue.jpg 1.5x, /502/en/images_en/thumb/e/e5/Multi-tenancy_-_Branding_-_Grey_tones_hue.jpg/600px-Multi-tenancy_-_Branding_-_Grey_tones_hue.jpg 2x" data-file-width="800" data-file-height="534"></a><figcaption></figcaption></figure>
+<h4><span class="mw-headline" id="Colours">Colours</span></h4>
+<p>The <b>Colours</b> category on the Branding tab allows you to specify the primary colour of your site:
+</p>
+<ul><li><b>Primary colour</b>: This is the colour used for all links and serves as the accent colour of the site.</li>
+<li><b>Match gray tones hue with primary colour</b>: When enabled, shades of grey are automatically generated based on the tenant primary colour. This feature reinforces the brand identity while maintaining a consistent user experience.</li></ul>
+<h4><span class="mw-headline" id="Advanced">Advanced</span></h4>
+<p>The Advanced category on the Branding tab includes settings that can only be edited by users with the <a href="Capabilities/tool/3312feeac250efc9a1e7010ec0f12970.html" title="Capabilities/tool/tenant:managethemeadvanced">tool/tenant:managethemeadvanced</a> capability. By default, only site administrators have this capability, but it can be added to the tenant admin role if needed.
+</p><p>The following settings are available in the Advanced category
+</p>
+<ul><li><b>Footer text</b>: Text displayed at the bottom of all pages, for example, a copyright disclaimer.</li>
+<li><b>No-reply address</b>: The site-wide no-reply address (<code>noreplyaddress</code>) is specified in <b>Administration &gt; Server &gt; Email &gt; Outgoing mail configuration</b>. Here, you can provide tenant-specific email address.</li>
+<li><b>Support name</b>: The name of the person or other entity providing support via the support form or support page.</li>
+<li><b>Link to 'Contact site support'</b>: The URL of a support page. If left empty it will link to a contact form.</li>
+<li><b>Support availability</b>: Determines who has access to contact site support from the footer.</li></ul><p>
+The support-related fields are configured at the site level by default. By selecting <b>Override</b>, you can provide new values that apply only to users in this tenant.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multi-tenancy_-_Support.png" class="mw-file-description"><img src="images_en/thumb/e/e8/Multi-tenancy_-_Support.png/2223934b012e6331a7c2600acef83578.png" decoding="async" width="900" height="623" class="mw-file-element" srcset="/502/en/images_en/thumb/e/e8/Multi-tenancy_-_Support.png/1350px-Multi-tenancy_-_Support.png 1.5x, /502/en/images_en/thumb/e/e8/Multi-tenancy_-_Support.png/1800px-Multi-tenancy_-_Support.png 2x" data-file-width="2506" data-file-height="1734"></a><figcaption></figcaption></figure>
+<p><br>
+Settings placed in the <b>Show more...</b> area may impact the site's accessibility and user experience. The default values fully comply with accessibility standards.
+</p>
+<ul><li><b>Navigation bar colour</b>: The background colour of the top navigation bar</li>
+<li><b>Primary button colour</b>: The colour of the main action buttons</li>
+<li><b>Custom SCSS</b>: Any valid custom SCSS code</li></ul><p>
+By clicking the <b>Reset tenant appearance</b> button, you can select which elements will be restored to their default values.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multi-tenancy_-_Reset_appearance.png" class="mw-file-description"><img src="images_en/thumb/b/b6/Multi-tenancy_-_Reset_appearance.png/43a790222b9b12e573f9745399a56ae7.png" decoding="async" width="900" height="455" class="mw-file-element" srcset="/502/en/images_en/thumb/b/b6/Multi-tenancy_-_Reset_appearance.png/1350px-Multi-tenancy_-_Reset_appearance.png 1.5x, /502/en/images_en/thumb/b/b6/Multi-tenancy_-_Reset_appearance.png/1800px-Multi-tenancy_-_Reset_appearance.png 2x" data-file-width="2646" data-file-height="1338"></a><figcaption></figcaption></figure>
+<div class="alert alert-info"><b>Note:</b> Resetting tenant appearance cannot be undone!</div>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Tenant_Dashboard">Tenant Dashboard</span></h3>
+<p>By default all tenants' dashboards are linked to the content defined in the 'Default site dashboard page' (<b>Site administration &gt; Appearance &gt; Default site dashboard page</b>). Any modifications made to the site default dashboard will be reflected for new users in any tenant. Users with the <a href="Capabilities/tool/96df1618c3a93240d376020a109c92ac.html" title="Capabilities/tool/tenant:managedashboard">tool/tenant:managedashboard</a> capability (Site and tenant admins by default) can define a tenant-specific dashboard with the same editing capabilities as the core <a href="70dd8ac06b7468e50d2522933453c982.html" title="Dashboard">Dashboard</a>. Tenant administrators can manage their tenant's dashboard and reset the configuration for tenant users.
+</p><p><br>
+</p><p>
+Once the button "<b>Create personalised dashboard</b>..." is clicked, the tenant dashboard will no longer be linked to the content defined in 'Default site dashboard page'. Instead, it will become an independent dashboard page that can be configured individually via the <b>Edit Dashboard</b> button.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multitenancy_-_Dashboard_linked.png" class="mw-file-description"><img alt="" src="images_en/thumb/1/1d/Multitenancy_-_Dashboard_linked.png/45136f3c73a0ff024dc4158578d4cdae.png" decoding="async" width="900" height="354" class="mw-file-element" srcset="/502/en/images_en/thumb/1/1d/Multitenancy_-_Dashboard_linked.png/1350px-Multitenancy_-_Dashboard_linked.png 1.5x, /502/en/images_en/thumb/1/1d/Multitenancy_-_Dashboard_linked.png/1800px-Multitenancy_-_Dashboard_linked.png 2x" data-file-width="1838" data-file-height="722"></a><figcaption></figcaption></figure>
+<p><br>
+</p><p>
+The Dashboard status will change from <b>Linked</b> to <b>Un-linked</b>. When the <b>Remove personalised dashboard, use site default dashboard</b>... button is clicked, the tenant dashboard will be re-linked to the content defined in 'Default site dashboard page'.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multitenancy_-_Dashboard_unlinked.png" class="mw-file-description"><img alt="" src="images_en/thumb/7/70/Multitenancy_-_Dashboard_unlinked.png/5b3db978b832ac9f972a325f2768f05a.png" decoding="async" width="900" height="447" class="mw-file-element" srcset="/502/en/images_en/thumb/7/70/Multitenancy_-_Dashboard_unlinked.png/1350px-Multitenancy_-_Dashboard_unlinked.png 1.5x, /502/en/images_en/thumb/7/70/Multitenancy_-_Dashboard_unlinked.png/1800px-Multitenancy_-_Dashboard_unlinked.png 2x" data-file-width="1838" data-file-height="912"></a><figcaption></figcaption></figure>
+<p><br>
+The dashboard for new tenant users will be created from the default dashboard. Existing users will not be affected by changes to the linked or un-linked dashboard. However, their dashboards can be manually reset by clicking the <b>Reset dashboard for all users</b>... button.
+</p>
+<h2><span class="mw-headline" id="Archiving_and_Deleting_Tenants">Archiving and Deleting Tenants</span></h2>
+<p>Moodle Workplace supports the  and deleting of tenants. The complete tenant archiving and deletion process is shown in the following workflow:
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/link%3Dhttps://docs.moodle.org/405/en/File:Multi-tenancy_-_Archiving_process.png" title="link=https://docs.moodle.org/405/en/File:Multi-tenancy - Archiving process.png"><img src="images_en/thumb/7/7c/Multi-tenancy_-_Archiving_process.png/0b5241275e3e0b4a75ae75a337bca474.png" decoding="async" width="900" height="466" class="mw-file-element" srcset="/502/en/images_en/7/7c/Multi-tenancy_-_Archiving_process.png 1.5x" data-file-width="1180" data-file-height="611"></a><figcaption></figcaption></figure>
+<p><br>
+</p><p>To archive a tenant, select the <b>Archive</b> action next to the tenant in the <b>Active tenants</b> tab.
+</p><p>If the <b>tenant has no users</b>, it will be archived and can accessed from the <b>Archived</b> <b>tenants</b> tab, where the following actions are available:
+</p>
+<ul><li><b>Restore</b>: The tenant will be restored, retaining all its settings, roles, and theme variables.</li>
+<li><b>Delete</b>: The tenant will be permanently removed. This action cannot be undone!</li></ul>
+<p>If the <b>tenant has users</b>, they will be suspended, and the tenant will be archived. You can access the archived tenant from the <b>Archived</b> <b>tenants</b> tab, where the following actions are available:
+</p>
+<ul><li><b>Restore</b>: The tenant will be restored, and all its users will be activated (unsuspended). The tenant retains all its settings, roles, and theme variables.</li>
+<li><b>Activate users into tenant ...</b>: All users of the archived tenant will be allocated to the selected tenant. Users will keep their previous roles in the new tenant, including tenant administrators. This reallocation does not apply to users who have already been (manually) allocated to another tenant.</li>
+<li><b>Delete</b>: The tenant will be permanently removed, and all its users deleted. This action cannot be undone!</li></ul>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multi-tenancy_-_Archiving_and_deleting.png" class="mw-file-description"><img src="images_en/thumb/7/76/Multi-tenancy_-_Archiving_and_deleting.png/07a9070f9660c3ffc9dcea203d10eed6.png" decoding="async" width="900" height="467" class="mw-file-element" srcset="/502/en/images_en/thumb/7/76/Multi-tenancy_-_Archiving_and_deleting.png/1350px-Multi-tenancy_-_Archiving_and_deleting.png 1.5x, /502/en/images_en/thumb/7/76/Multi-tenancy_-_Archiving_and_deleting.png/1800px-Multi-tenancy_-_Archiving_and_deleting.png 2x" data-file-width="2600" data-file-height="1350"></a><figcaption></figcaption></figure>
+<div class="alert alert-info"><b>Note:</b> The default tenant cannot be archived.</div>
+<p><br>
+</p>
+<h2><span class="mw-headline" id="User_Tour_Tenant_selector">User Tour Tenant selector</span></h2><p>
+The tenant user tour selector allows you to customise onboarding <a href="https://docs.moodle.org/502/en/User_tours" title="User tours">tours</a> by tenant.</p><figure class="mw-halign-center" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Multi-tenancy_-_User_tours.png" class="mw-file-description"><img src="images_en/thumb/8/81/Multi-tenancy_-_User_tours.png/1a029e48b4c99fef5a7b375bc8909e34.png" decoding="async" width="600" height="319" class="mw-file-element" srcset="/502/en/images_en/thumb/8/81/Multi-tenancy_-_User_tours.png/900px-Multi-tenancy_-_User_tours.png 1.5x, /502/en/images_en/thumb/8/81/Multi-tenancy_-_User_tours.png/1200px-Multi-tenancy_-_User_tours.png 2x" data-file-width="1220" data-file-height="648"></a><figcaption></figcaption></figure><p>You can create different user tours for different tentants by selecting one or many tenants when creating a new user tour.</p>
+<!-- 
+NewPP limit report
+Cached time: 20260822232220
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.060 seconds
+Real time usage: 0.297 seconds
+Preprocessor visited node count: 121/1000000
+Post&#8208;expand include size: 1463/2097152 bytes
+Template argument size: 97/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 1/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   13.188      1 -total
+ 54.89%    7.239      1 Template:WorkplaceMenuMulti-tenancy
+ 23.40%    3.086      1 Template:Target_Audience
+ 20.46%    2.698      1 Template:Workplace_Only
+ 19.49%    2.570      2 Template:Note
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:25662-0!canonical and timestamp 20260822232220 and revision id 156123. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Multi-tenancy_Configuration&amp;oldid=156123">https://docs.moodle.org/502/en/index.php?title=Multi-tenancy_Configuration&amp;oldid=156123</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="08f1cd224f4501ea8a1a05323a55ba30.html" title="Category:Workplace">Workplace</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdkp2x7vf">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkp2x87s"></button>
+					<div class="collapse navbar-collapse igdkp2x87s" id="igdkp2x87s">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Multi-tenancy_Configuration" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Multi-tenancy_Configuration" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Multi-tenancy_Configuration&amp;oldid=156123" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Multi-tenancy_Configuration&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 6 August 2026, at 08:11.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":149,"wgPageParseReport":{"limitreport":{"cputime":"0.060","walltime":"0.297","ppvisitednodes":{"value":121,"limit":1000000},"postexpandincludesize":{"value":1463,"limit":2097152},"templateargumentsize":{"value":97,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1,"limit":5000000},"timingprofile":["100.00%   13.188      1 -total"," 54.89%    7.239      1 Template:WorkplaceMenuMulti-tenancy"," 23.40%    3.086      1 Template:Target_Audience"," 20.46%    2.698      1 Template:Workplace_Only"," 19.49%    2.570      2 Template:Note"]},"cachereport":{"timestamp":"20260822232220","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

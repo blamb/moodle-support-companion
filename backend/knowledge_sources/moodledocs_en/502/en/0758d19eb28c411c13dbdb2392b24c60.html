@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Dynamic rules Configuration - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"f6baebf9c13ca66bd8985750","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Dynamic_rules_Configuration","wgTitle":"Dynamic rules Configuration","wgCurRevisionId":155557,"wgRevisionId":155557,"wgArticleId":25611,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Workplace"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Dynamic_rules_Configuration","wgRelevantArticleId":25611,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Dynamic_rules_Configuration">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Dynamic_rules_Configuration rootpage-Dynamic_rules_Configuration layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkpgf56o"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdkpgf56o" id="igdkpgf56o">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Dynamic+rules+Configuration" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Dynamic_rules_Configuration">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Dynamic_rules_Configuration">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Dynamic_rules_Configuration">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="0758d19eb28c411c13dbdb2392b24c60.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Dynamic_rules_Configuration&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dynamic_rules_Configuration&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dynamic_rules_Configuration&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Dynamic rules Configuration</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="5005ef9062eb9f52704277d7e5764a8a.html" title="Moodle Workplace">Moodle Workplace</a></div>	
+<div class="content">
+<ul><li><a href="6fec4c5dcd9d154ff23d46e2e133d435.html" title="Multi-tenancy">Multi-tenancy</a></li>
+<li><a href="24af730ae0df0835ebaf33795be5027d.html" title="Programs">Programs</a></li>
+<li><a href="64281e9b4c1975d18f3275e75580176d.html" title="Certifications">Certifications</a></li>
+<li><b>Dynamic rules</b></li>
+<li><a href="e71b0cf0176eb80673cd157945822828.html" title="Dynamic rules">&gt; Overview</a></li>
+<li><a class="mw-selflink selflink">&gt; Configuration</a></li>
+<li><a href="5b72f1bf839e62df68931ea68d97fcb3.html" title="Dynamic rules Use cases">&gt; Use cases</a></li>
+<li><a href="2d39c501b2f821505e418e3a34ec8e61.html" title="Dynamic rules Tenants">&gt; Tenants</a></li>
+<li><a href="0984bf878734cc0384a8db80ec174017.html" title="Dynamic rules Technical">&gt; Technical</a></li>
+<li><a href="fc0a853d3881e4fc65d1b41f74e5b14d.html" title="Organisation structure">Organisations</a></li>
+<li><a href="dfeacc84bc200bd03ef249e87a91fa91.html" title="Report builder">Report builder</a></li>
+<li><a href="d99f766a0cfcbdabde4fbcb06919e924.html" title="Custom pages">Custom pages</a></li>
+<li><a href="9c1741fa79af3ca782b4f84eb29f4389.html" title="Certificates">Certificates</a></li>
+<li><a href="a561ccaef5590a82764540b46d322997.html" title="Catalogue">Learning catalogue</a></li>
+<li><a href="1d466d8ced71062fd319faa436dc6ea9.html" title="Migrations">Migrations</a></li></ul>
+<hr>
+<ul><li><a href="2654643b183ad0020e11d2b7c7ef55ea.html" title="Teams">Teams &amp; Managers</a></li>
+<li><a href="b199a356b44bc512734bbdb6650fe404.html" title="Staff">Staff &amp; Learners</a></li>
+<li><a href="0dfa327dd98a4c57cb9d46f1b0c4bea1.html" title="Appointments">Trainers</a></li>
+<li><a href="a44b2e342c2d0deff379b452bfae8393.html" title="Moodle Workplace App">Workplace App</a></li></ul></div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div class="alert alert-info"> <span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:workplacelogo.png" class="mw-file-description"><img src="images_en/thumb/b/b6/workplacelogo.png/634acbf0524aef964358ae94d60d8582.png" decoding="async" width="24" height="24" class="mw-file-element" srcset="/502/en/images_en/thumb/b/b6/workplacelogo.png/36px-workplacelogo.png 1.5x, /502/en/images_en/thumb/b/b6/workplacelogo.png/48px-workplacelogo.png 2x" data-file-width="248" data-file-height="248"></a></span> This feature is part of <b><a href="5005ef9062eb9f52704277d7e5764a8a.html" title="Moodle Workplace">Moodle Workplace</a></b>&trade;, which is available through <a rel="nofollow" class="external text" href="https://moodle.com/workplace/">Moodle Certified Partners and Service Providers</a> only.</div>
+
+<hr>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Managing_dynamic_rules"><span class="tocnumber">1</span> <span class="toctext">Managing dynamic rules</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Rules_header"><span class="tocnumber">2</span> <span class="toctext">Rules header</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Rule_conditions"><span class="tocnumber">3</span> <span class="toctext">Rule conditions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#General_conditions"><span class="tocnumber">3.1</span> <span class="toctext">General conditions</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Certifications"><span class="tocnumber">3.2</span> <span class="toctext">Certifications</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Organisation_structure"><span class="tocnumber">3.3</span> <span class="toctext">Organisation structure</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Program"><span class="tocnumber">3.4</span> <span class="toctext">Program</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Multi-tenancy"><span class="tocnumber">3.5</span> <span class="toctext">Multi-tenancy</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Rule_actions"><span class="tocnumber">4</span> <span class="toctext">Rule actions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#General_actions"><span class="tocnumber">4.1</span> <span class="toctext">General actions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Notification_placeholders"><span class="tocnumber">4.1.1</span> <span class="toctext">Notification placeholders</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Multi-language_support_in_notifications"><span class="tocnumber">4.1.2</span> <span class="toctext">Multi-language support in notifications</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Dynamic_rules_notifications"><span class="tocnumber">4.1.3</span> <span class="toctext">Dynamic rules notifications</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#Courses"><span class="tocnumber">4.2</span> <span class="toctext">Courses</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Certifications_2"><span class="tocnumber">4.3</span> <span class="toctext">Certifications</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Organisation_structure_2"><span class="tocnumber">4.4</span> <span class="toctext">Organisation structure</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Program_2"><span class="tocnumber">4.5</span> <span class="toctext">Program</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Multi-tenancy_2"><span class="tocnumber">4.6</span> <span class="toctext">Multi-tenancy</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Rule_details"><span class="tocnumber">5</span> <span class="toctext">Rule details</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Rules_enabling_and_processing"><span class="tocnumber">6</span> <span class="toctext">Rules enabling and processing</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Rules_archiving_and_deletion"><span class="tocnumber">7</span> <span class="toctext">Rules archiving and deletion</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Rules_reporting"><span class="tocnumber">8</span> <span class="toctext">Rules reporting</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Managing_dynamic_rules">Managing dynamic rules</span></h2>
+<p>You can access the management of dynamic rules through <b>Site administration &gt; Dynamic rules</b> or directly via the <b>Dynamic rules</b> icon in the Workplace launcher.
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Dynamic_rules_-_Manage.png" class="mw-file-description"><img src="images_en/thumb/4/4f/Dynamic_rules_-_Manage.png/ce90a951062eca70dce8a368d6e56f9e.png" decoding="async" width="900" height="210" class="mw-file-element" srcset="/502/en/images_en/thumb/4/4f/Dynamic_rules_-_Manage.png/1350px-Dynamic_rules_-_Manage.png 1.5x, /502/en/images_en/thumb/4/4f/Dynamic_rules_-_Manage.png/1800px-Dynamic_rules_-_Manage.png 2x" data-file-width="2792" data-file-height="652"></a><figcaption></figcaption></figure>
+<p>For each rule the following information is shown:
+</p>
+<ul><li><b>Enabled</b> / <b>Disabled</b> icon</li>
+<li><b>Name</b> of the rule</li>
+<li><b>Scheduled task</b> and <b>Shared space</b> labels (optional)</li>
+<li><b>Tags</b> that have been applied to the rule</li>
+<li>Specified rule <b>Conditions</b></li>
+<li>Specified rule <b>Actions</b></li>
+<li><b>Apply on</b>: Date when the rule was applied for the first time (the label <b>Future</b> is displayed for date later than today)</li>
+<li><b>Created</b>: Rule's creation date</li>
+<li><b>Actions</b>:
+<ul><li><b>Duplicate</b> dynamic rule</li>
+<li><b>Archive</b> dynamic rule</li>
+<li><b>View report</b></li></ul></li></ul>
+<hr>
+<p>The process for creating a new dynamic rule is as follows:
+</p>
+<ol><li>Add a new rule clicking the <b>+New rule</b> button</li>
+<li>Specify the <a class="mw-selflink-fragment" href="#Rules_header">rules header</a></li>
+<li>Add one or more <a class="mw-selflink-fragment" href="#Rule_conditions">rules conditions</a></li>
+<li>Add one or more <a class="mw-selflink-fragment" href="#Rule_actions">rules actions</a></li>
+<li><a class="mw-selflink-fragment" href="#Rules_enabling_and_processing">Enable the rule</a></li></ol>
+<h2><span class="mw-headline" id="Rules_header">Rules header</span></h2>
+<p>The rules header serves as a descriptive wrapper for all elements of the rule body and includes the following options:
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Dynamic_rules_-_New_rule.png" class="mw-file-description"><img alt="" src="images_en/thumb/8/87/Dynamic_rules_-_New_rule.png/bfbbb6a4a29bcef729f10284b6189df4.png" decoding="async" width="600" height="478" class="mw-file-element" srcset="/502/en/images_en/thumb/8/87/Dynamic_rules_-_New_rule.png/900px-Dynamic_rules_-_New_rule.png 1.5x, /502/en/images_en/thumb/8/87/Dynamic_rules_-_New_rule.png/1200px-Dynamic_rules_-_New_rule.png 2x" data-file-width="1608" data-file-height="1280"></a><figcaption></figcaption></figure><p><b>Name:</b> This does not need to be unique, but it is recommended to give each rule a unique and meaningful label.
+</p><p><b>Rule action limits:</b> This option defines the maximum number of times the actions can apply. Once users meet the rule conditions, the actions will be applied. These actions will not apply again if users continue to meet the conditions. However, if a user stops meeting the conditions and then matches them again, the actions may be applied once more. This setting specifies the maximum number of times actions should (re-)apply. Once the <b>Rule action limits</b> setting is enabled, you can choose from two options to limit the number of times the matching process occurs:
+</p>
+<ul><li>Can't be applied more than X times <b>ever</b></li>
+<li>Can't be applied more than X times <b>per</b> Y minutes/hours/days/weeks/seconds</li></ul>
+<p>The <b>rule action limits</b> feature allows you to control how often a rule's action can be triggered:
+</p>
+<ul><li><b>No rule action limits</b> is the default setting and should be used when you cannot predict when conditions will be met and when immediate actions are expected. For example, the successful completion of a course may trigger the award of a competency or badge.</li></ul>
+<ul><li>The <b>ever matching mode</b> is preferred when you know that a condition will only be met a certain number of times. For instance, this is useful for issuing a certificate to all users who completed an archived course after migrating historical data.</li>
+<li>The <b>per matching mode</b> is beneficial if a delay in executing the action is acceptable. For example, notifying a manager after a team member has attended a seminar does not need to happen immediately and is usually sufficient once a day.</li></ul>
+<p><br>
+If the <b>Include suspended users</b> option is enabled, the rule will evaluate the conditions for users whose accounts have been suspended. Keep in mind that some actions may not fully apply to suspended users; for example, they will never receive notifications.
+</p><p><b>Tags:</b> To organize and categorize your rules, you can select or enter tags.
+</p><p><b>Start date:</b> The selected start date marks the beginning for evaluating the rule. Events affecting conditions, such as "course completed," can occur at any time before or after the selected date.
+</p><p><b>End date</b> (optional)<b>:</b> The selected end date serves as the fixed deadline for evaluating this rule.
+</p><p>These user-defined time frames let you schedule dynamic rules to run in the future.
+</p>
+<h2><span class="mw-headline" id="Rule_conditions">Rule conditions</span></h2>
+<p>Conditions represent the IF part of a dynamic rule.
+</p><p>On the <b>Conditions</b> tab, you will find a listing of predefined conditions for each entity that can be evaluated to trigger actions. Each condition has its editable properties; for example, using the drop-down menu lets you select a course that has to be completed, as well as the completion date and time parameters.
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Dynamic_rules_-_Conditions.png" class="mw-file-description"><img alt="" src="images_en/thumb/e/ea/Dynamic_rules_-_Conditions.png/47ff7c7ca051f509e826e6fe2fee8677.png" decoding="async" width="900" height="583" class="mw-file-element" srcset="/502/en/images_en/thumb/e/ea/Dynamic_rules_-_Conditions.png/1350px-Dynamic_rules_-_Conditions.png 1.5x, /502/en/images_en/thumb/e/ea/Dynamic_rules_-_Conditions.png/1800px-Dynamic_rules_-_Conditions.png 2x" data-file-width="2022" data-file-height="1310"></a><figcaption></figcaption></figure>
+<p>Some conditions support the selection of multiple entities, most of which support the configuration of the <b>Criteria</b> when several entities have been selected:
+</p>
+<ul><li><b>All</b> criteria have been met: actions are triggered when all selected items are satisfied</li>
+<li><b>At least one</b> criterion has been met: actions are triggered only once, that is when the second item is satisfied, actions will not be triggered again</li>
+<li><b>Every time</b> the criterion has been met (coming soon): Equivalent of creating multiple rules, one for each item</li></ul>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Dynamic_rules_-_Multi-select.png" class="mw-file-description"><img src="images_en/thumb/0/00/Dynamic_rules_-_Multi-select.png/eb587ce534ebcc982af24d21f3967c89.png" decoding="async" width="900" height="477" class="mw-file-element" srcset="/502/en/images_en/thumb/0/00/Dynamic_rules_-_Multi-select.png/1350px-Dynamic_rules_-_Multi-select.png 1.5x, /502/en/images_en/thumb/0/00/Dynamic_rules_-_Multi-select.png/1800px-Dynamic_rules_-_Multi-select.png 2x" data-file-width="1832" data-file-height="970"></a><figcaption></figcaption></figure>
+<p><br>
+Only those conditions that the current user has the capability to add are listed. Some conditions may be listed but not available, which is the case if no entities associated with the condition exist in the system; for instance, the "Course completed" condition can only be added if there is at least one course the user (dynamic rule creator or editor) has rights to see users within.
+</p><p>Once the conditions part has been configured, click on <b>Save Changes</b>. You can always return later and change the settings of your rules using the <b>Edit condition</b> or <b>Delete condition</b> icons. If users have previously matched rule conditions, the conditions part becomes read-only. Actions can be edited at any point.
+</p><p>Modification or removal of conditions and actions from other users requires appropriate editing capabilities. For example, if one user adds the condition "User enrolled" and another user does not have access to this particular course, the condition will be read-only, indicated by the lock symbol. If a rule is invalid and <a href="e71b0cf0176eb80673cd157945822828.html#Rules_Enabling_and_Processing" title="Dynamic rules">processing</a> is not possible, the broken condition or action can be modified or deleted without the required permissions.
+At the bottom of the tab, you can check how many users would meet these conditions. By clicking on the <b>View matching users</b> link, you can view the complete user listing.
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Dynamic_rules_-_Matching_users.png" class="mw-file-description"><img src="images_en/thumb/6/64/Dynamic_rules_-_Matching_users.png/33c4639e9886ff728a8b324b24b817c3.png" decoding="async" width="450" height="46" class="mw-file-element" srcset="/502/en/images_en/6/64/Dynamic_rules_-_Matching_users.png 1.5x" data-file-width="562" data-file-height="58"></a><figcaption></figcaption></figure>
+<p>Most dynamic rule conditions are <b>event-based</b>, which means that when a particular requirement is matched (for example, &ldquo;Course completed&rdquo;), the event will trigger the rule. However, some conditions are not activated by events but run as a <b>scheduled task</b>. For example, if you want to perform an action upon users who did not complete a course, the condition "Course not completed" will instead scan the courses periodically (on <a href="9fed8aed6bd20d84147ad0ceb0ed4567.html" class="mw-redirect" title="cron">cron</a> run), looking for users that match this condition. If the system finds one or more users that match this condition, the rule will be triggered.
+</p>
+<h3><span class="mw-headline" id="General_conditions">General conditions</span></h3>
+<p>This category contains conditions based on cohort membership, course completion and enrolment, and user-related criteria.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<td><b>Condition name</b>
+</td>
+<td><b>Setting(s)</b>
+</td>
+<td><b>Multi-select</b>
+</td>
+<td><b>Scheduled</b>
+</td>
+<td><b>Prerequisites</b>
+</td></tr>
+<tr>
+<td>User is member of cohort
+</td>
+<td>
+<ul><li>Cohort &lt;cohort&gt;</li>
+<li>Added to cohort on or after this date and time &lt;datetime&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>Cohort has to exist
+<p>Permission to view cohort 
+</p>
+</td></tr>
+<tr>
+<td>User is not member of cohort
+</td>
+<td>
+<ul><li>Cohort &lt;cohort&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Cohort has to exist
+<p>Permission to view cohort 
+</p>
+</td></tr>
+<tr>
+<td>User has achieved competency
+</td>
+<td>
+<ul><li>Select competency &lt;competency&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Competency has to exist
+<p>Permission to view competencies
+</p>
+</td></tr>
+<tr>
+<td>Course completed
+</td>
+<td>
+<ul><li>Course &lt;course&gt;</li>
+<li>Completion date
+<ul><li>Any time</li>
+<li>After &lt;datetime&gt;</li>
+<li>Before &lt;datetime&gt;</li></ul></li>
+<li>Course grade
+<ul><li>Any</li>
+<li>Less than &lt;percentage&gt;</li>
+<li>Greater than &lt;percentage&gt;</li>
+<li>Range &lt;percentage_from&gt; &lt;percentage_to&gt;</li></ul></li></ul>
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>Course has to exist
+<p>Permission to see at least one user
+</p>
+</td></tr>
+<tr>
+<td>Course last access
+</td>
+<td>
+<ul><li>Course &lt;course&gt;</li>
+<li>The user's last course access
+<ul><li>Ever</li>
+<li>Never</li>
+<li>Before &lt;datetime&gt;</li>
+<li>After &lt;datetime&gt;</li>
+<li>During the last &lt;period&gt;</li>
+<li>Prior to the last &lt;period&gt;</li></ul></li></ul>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Course has to exist
+<p>Permission to see at least one user
+</p>
+</td></tr>
+<tr>
+<td>Course not completed
+</td>
+<td>
+<ul><li>Course &lt;course&gt;</li></ul>
+<p>This condition is applied to users regardless of their enrolment on the course.
+</p>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Course has to exist
+<p>Permission to see at least one user
+</p>
+</td></tr>
+<tr>
+<td>Time since user was created
+</td>
+<td>
+<ul><li>Creation date
+<ul><li>During the last &lt;period&gt;</li>
+<li>Prior to the last &lt;period&gt;</li></ul></li></ul>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Capability to view user details
+</td></tr>
+<tr>
+<td>User enrolled
+</td>
+<td>
+<ul><li>Course &lt;course&gt;</li>
+<li>Enrolment method &lt;enrolment&gt;</li>
+<li>Enrolment start date and time is on or after &lt;datetime&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>At least one course has to exist Permission to view participants in course
+</td></tr>
+<tr>
+<td>User first login
+</td>
+<td>The user's first login was
+<ul><li>Not set (initial setting; cannot be selected)</li>
+<li>Range &lt;start date&gt; &lt;end date&gt;</li>
+<li>During the last &lt;period&gt;</li>
+<li>Ever (user has logged on sometime in the past)</li>
+<li>Never (user has an account but has never logged in)</li></ul>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Capability to view user details
+</td></tr>
+<tr>
+<td>User last login
+</td>
+<td>
+<ul><li>The user's last login was
+<ul><li>Not set (initial setting; cannot be selected)</li>
+<li>Prior to the last &lt;period&gt;</li>
+<li>During the last &lt;period&gt;</li>
+<li>Ever (user has logged on sometime in the past)</li>
+<li>Never (user has an account but has never logged in)</li></ul></li></ul>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Capability to view user details
+</td></tr>
+<tr>
+<td>User not enrolled
+</td>
+<td>
+<ul><li>Course &lt;course&gt;</li>
+<li>Enrolment method &lt;enrolment&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>At least one course has to exist
+<p>Permission to view participants in course 
+</p>
+</td></tr>
+<tr>
+<td>User profile field
+</td>
+<td>Profile field with type-specific matching operations. Custom profile fields are fully supported.
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>Capability to view user details
+<p>For custom fields, the visibility status has to be set to "All"
+</p>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Certifications">Certifications</span></h3>
+<p>This category contains conditions based on certification-related criteria.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<td><b>Condition name</b>
+</td>
+<td><b>Setting(s)</b>
+</td>
+<td><b>Multi-Select</b>
+</td>
+<td><b>Scheduled</b>
+</td>
+<td><b>Prerequisite</b>
+</td></tr>
+<tr>
+<td>Certification certified
+</td>
+<td>
+<ul><li>Certification &lt;certifications&gt;</li>
+<li>Criteria
+<ul><li>All of the selected certifications have been certified</li>
+<li>At least one of the selected certifications is certified</li>
+<li>Every time a user is certified in any of the selected certifications (<i>Not available yet</i>)</li></ul></li>
+<li>Certified date on or after &lt;datetime&gt;</li>
+<li>Option to configure the execution of action-related recertifications
+<ul><li>Only execute actions when the user status changes from "not certified" to "certified"</li>
+<li>Always execute actions on all re-certifications</li></ul></li></ul>
+</td>
+<td>Yes
+</td>
+<td>No
+</td>
+<td>Certifications have to exist
+<p>Permission to allocate users
+</p><p>Permission to edit certification
+</p>
+</td></tr>
+<tr>
+<td>Certification expired
+</td>
+<td>
+<ul><li>Certification &lt;certification&gt;</li>
+<li>Expired date on or after &lt;datetime&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Certifications have to exist
+<p>Permission to allocate users
+</p><p>Permission to edit certification
+</p>
+</td></tr>
+<tr>
+<td>Certification not certified
+</td>
+<td>
+<ul><li>Certification &lt;certification&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Certifications have to exist
+<p>Permission to allocate users
+</p><p>Permission to edit certification
+</p>
+</td></tr>
+<tr>
+<td>Certification overdue
+</td>
+<td>
+<ul><li>Certification &lt;certification&gt;</li>
+<li>Due date on or after &lt;datetime&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Certifications have to exist
+<p>Permission to allocate users
+</p><p>Permission to edit certification
+</p>
+</td></tr>
+<tr>
+<td>Certification suspended
+</td>
+<td>
+<ul><li>Certification &lt;certification&gt;</li>
+<li>Suspended date on or after &lt;datetime&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>Certifications have to exist
+<p>Permission to allocate users
+</p><p>Permission to edit certification
+</p>
+</td></tr>
+<tr>
+<td>Recertification grace period ends
+</td>
+<td>
+<ul><li>Certification &lt;certification&gt;</li>
+<li>Recertification grace period ends on or before &lt;datetime&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>Certifications have to exist
+<p>Permission to allocate users
+</p><p>Permission to edit certification
+</p>
+</td></tr>
+<tr>
+<td>Recertification period started
+</td>
+<td>
+<ul><li>Certification &lt;certification&gt;</li>
+<li>Recertification started on or after &lt;datetime&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>Certifications have to exist
+<p>Permission to allocate users
+</p><p>Permission to edit certification
+</p>
+</td></tr>
+<tr>
+<td>Users allocated to certification
+</td>
+<td>
+<ul><li>Certification &lt;certification&gt;</li>
+<li>Allocated date on or after &lt;datetime&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>Certifications have to exist
+<p>Permission to allocate users
+</p><p>Permission to edit certification
+</p>
+</td></tr>
+<tr>
+<td>Users not allocated to certification
+</td>
+<td>
+<ul><li>Certification &lt;certification&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>Certifications have to exist
+<p>Permission to allocate users
+</p><p>Permission to edit certification
+</p>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Organisation_structure">Organisation structure</span></h3>
+<p>This category contains conditions dealing with jobs, departments and positions.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<td><b>Condition name</b>
+</td>
+<td><b>Setting(s)</b>
+</td>
+<td><b>Multi-Select</b>
+</td>
+<td><b>Scheduled</b>
+</td>
+<td><b>Prerequisite</b>
+</td></tr>
+<tr>
+<td>User is in department
+</td>
+<td>
+<ul><li>Department &lt;departments&gt;</li>
+<li>Include subdepartments</li>
+<li>Criteria
+<ul><li>User has jobs in all of the selected departments</li>
+<li>User has a job in any of the selected departments</li>
+<li>Every time a user gets a job in any of the selected departments (<i>Not available yet</i>)</li></ul></li>
+<li>Job start date is on or after &lt;datetime&gt;</li></ul>
+</td>
+<td>Yes
+</td>
+<td>No
+</td>
+<td>Departments have to exist
+<p>Permission to assign jobs
+</p>
+</td></tr>
+<tr>
+<td>User is manager
+</td>
+<td>
+<ul><li>Any</li>
+<li>Select
+<ul><li>Manager</li>
+<li>Manager (assigned manually)</li>
+<li>Department lead</li></ul></li></ul>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>
+</td></tr>
+<tr>
+<td>User is not in department
+</td>
+<td>
+<ul><li>Department &lt;departments&gt;</li>
+<li>Include subdepartments</li></ul>
+</td>
+<td>Yes
+</td>
+<td>Yes
+</td>
+<td>Departments have to exist
+<p>Permission to assign jobs
+</p>
+</td></tr>
+<tr>
+<td>User has position
+</td>
+<td>
+<ul><li>Position &lt;positions&gt;</li>
+<li>Include subposition</li>
+<li>Critiera
+<ul><li>User has jobs in all of the selected positions</li>
+<li>User has a job in any of the selected positions</li>
+<li>Every time a user gets a job in any of the selected positions (<i>Not available yet</i>)</li></ul></li>
+<li>Job start date is on or after &lt;datetime&gt;</li></ul>
+</td>
+<td>Yes
+</td>
+<td>No
+</td>
+<td>Positions have to exist
+<p>Permission to assign jobs
+</p>
+</td></tr>
+<tr>
+<td>User doesn't have position
+</td>
+<td>
+<ul><li>Position &lt;positions&gt;</li>
+<li>Include subposition</li></ul>
+</td>
+<td>Yes
+</td>
+<td>Yes
+</td>
+<td>Positions have to exist
+<p>Permission to assign jobs
+</p>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Program">Program</span></h3>
+<p>This category contains conditions based on program criteria.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<td><b>Condition name</b>
+</td>
+<td><b>Setting(s)</b>
+</td>
+<td><b>Multi-Select</b>
+</td>
+<td><b>Scheduled</b>
+</td>
+<td><b>Prerequisite</b>
+</td></tr>
+<tr>
+<td>Program completed
+</td>
+<td>
+<ul><li>Program &lt;programs&gt;</li>
+<li>Criteria
+<ul><li>All of the selected programs have been completed</li>
+<li>At least one of the selected programs is completed</li>
+<li>Every time a user completes any of the selected programs (<i>Not available yet</i>)</li></ul></li>
+<li>Completion date on or after &lt;datetime&gt;</li></ul>
+</td>
+<td>Yes
+</td>
+<td>No
+</td>
+<td>Programs have to exist
+<p>Permission to allocate users
+</p><p>Permission to edit program
+</p>
+</td></tr>
+<tr>
+<td>Program not completed
+</td>
+<td>
+<ul><li>Program &lt;program&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Programs have to exist
+<p>Permission to allocate users
+</p><p>Permission to edit program
+</p>
+</td></tr>
+<tr>
+<td>Program overdue
+</td>
+<td>
+<ul><li>Program &lt;program&gt;</li>
+<li>Due date on or after &lt;datetime&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Programs have to exist
+<p>Permission to allocate users
+</p><p>Permission to edit program
+</p>
+</td></tr>
+<tr>
+<td>Program suspended
+</td>
+<td>
+<ul><li>Program &lt;program&gt;</li>
+<li>Suspended date on or after &lt;datetime&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Programs have to exist
+<p>Permission to allocate users
+</p><p>Permission to edit program
+</p>
+</td></tr>
+<tr>
+<td>Users allocated to program
+</td>
+<td>
+<ul><li>Program &lt;program&gt;</li>
+<li>Allocation date on or after &lt;datetime&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>Programs have to exist
+<p>Permission to allocate users
+</p><p>Permission to edit program
+</p>
+</td></tr>
+<tr>
+<td>Users not allocated to program
+</td>
+<td>
+<ul><li>Program &lt;program&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>Programs have to exist
+<p>Permission to allocate users
+</p><p>Permission to edit program
+</p>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Multi-tenancy">Multi-tenancy</span></h3>
+<p>This category contains conditions based on tenant criteria (see also information on <a rel="nofollow" class="external text" href="2d39c501b2f821505e418e3a34ec8e61.html">Cross-tenant Dynamic Rules</a>). It will only appear in dynamic rules in Shared space. 
+</p>
+<table class="wikitable">
+<tbody><tr>
+<td><b>Condition name</b>
+</td>
+<td><b>Setting(s)</b>
+</td>
+<td><b>Multi-Select</b>
+</td>
+<td><b>Scheduled</b>
+</td>
+<td><b>Prerequisite</b>
+</td></tr>
+<tr>
+<td>Users allocated to tenant
+</td>
+<td>
+<ul><li>Tenant &lt;tenant&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>Only available in Shared Space
+</td></tr>
+<tr>
+<td>Users not allocated to tenant
+</td>
+<td>
+<ul><li>Tenant &lt;tenant&gt;</li></ul>
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>Only available in Shared Space
+</td></tr></tbody></table>
+<p><b>Note</b>: when a multi-tenancy condition is used and you wish to allocate <a class="mw-selflink-fragment" href="#Courses">Courses</a> in the Rules Actions section, you can only select courses that are available across tenants.
+</p>
+<h2><span class="mw-headline" id="Rule_actions">Rule actions</span></h2>
+<p>Conditions represent the THEN part of a dynamic rule.
+</p><p>In the <b>Actions</b> tab, you will find a list of actions that will be executed once the previously defined conditions have been met. You have to pick an element from the list of actions and configure its properties to add actions.
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Dynamic_rules_-_actions.png" class="mw-file-description"><img alt="" src="images_en/thumb/9/9e/Dynamic_rules_-_actions.png/fcc7e6af79b638ff83907a575cb6fc7a.png" decoding="async" width="900" height="506" class="mw-file-element" srcset="/502/en/images_en/thumb/9/9e/Dynamic_rules_-_actions.png/1350px-Dynamic_rules_-_actions.png 1.5x, /502/en/images_en/thumb/9/9e/Dynamic_rules_-_actions.png/1800px-Dynamic_rules_-_actions.png 2x" data-file-width="2186" data-file-height="1230"></a><figcaption></figcaption></figure>
+<p>Only those actions that the current user has the capability to add are listed. Some actions may be listed but not available, which is the case if no entities associated with the actions exist in the system; for instance, the "Award badge" action can only be added if there is at least one badge on your system.
+</p>
+<h3><span class="mw-headline" id="General_actions">General actions</span></h3>
+<p>This category contains general actions not belonging to any particular category.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<td><b>Action name</b>
+</td>
+<td><b>Setting(s)</b>
+</td>
+<td><b>Prerequisite</b>
+</td></tr>
+<tr>
+<td>Award badge
+</td>
+<td>
+<ul><li>Select badge &lt;badge&gt;</li></ul>
+</td>
+<td>Badges have to exist
+<p>Badge criteria has to be set to &ldquo;Manual issue by role&rdquo;
+</p><p>Permission to issue badge
+</p>
+</td></tr>
+<tr>
+<td>Issue certificate
+</td>
+<td>
+<ul><li>Select certificate &lt;certificate&gt;</li>
+<li>Expiry date
+<ul><li>Never</li>
+<li>Select &lt;datetime&gt;</li>
+<li>After &lt;period&gt;</li></ul></li></ul>
+</td>
+<td>Certificates have to exist
+<p>Permission to issue certificate
+</p>
+</td></tr>
+<tr>
+<td>Add to cohort
+</td>
+<td>
+<ul><li>Cohort &lt;cohort&gt;</li></ul>
+</td>
+<td>Cohorts have to exist
+<p>Permission to add users to cohorts
+</p>
+</td></tr>
+<tr>
+<td>Remove from cohort
+</td>
+<td>
+<ul><li>Cohort &lt;cohort&gt;</li></ul>
+</td>
+<td>Cohorts have to exist
+<p>Permission to remove users from cohort 
+</p>
+</td></tr>
+<tr>
+<td>Award competency
+</td>
+<td>
+<ul><li>Select competency &lt;competency&gt;</li></ul>
+</td>
+<td>Competencies have to exist
+<p>Permission to award competency
+</p><p>Note that this action is not available to tenant admins.
+</p>
+</td></tr>
+<tr>
+<td>Delete users
+</td>
+<td>None (Actions deletes all affected users)
+</td>
+<td>Permission to delete users
+</td></tr>
+<tr>
+<td>Assign learning plan
+</td>
+<td>
+<ul><li>Select learning plan &lt;learning plan&gt;</li></ul>
+</td>
+<td>Learning plans have to exist
+<p>Permission to assign learning plan (core/competency:planmanage)
+Note that this action is not available to tenant admins.
+</p>
+</td></tr>
+<tr>
+<td>Un-assign learning plan
+</td>
+<td>
+<ul><li>Select learning plan &lt;learning plan&gt;</li></ul>
+</td>
+<td>Learning plans have to exist
+<p>Permission to assign learning plan (core/competency:planmanage)
+Note that this action is not available to tenant admins.
+</p>
+</td></tr>
+<tr>
+<td>Notification
+</td>
+<td>
+<ul><li>Subject: title of notification to be sent out</li>
+<li>Body: Message text in HTML, including images and <a class="mw-selflink-fragment" href="#Notification_placeholders">notification placeholders</a></li>
+<li>Send to
+<ul><li>Matching users</li>
+<li>Department lead</li>
+<li>Manager</li>
+<li>Manually assigned manager</li></ul></li></ul>
+<p>Notifications will be sent directly to the user and their direct department lead(s) or manager(s), respectively. That is, leads and managers higher up in the hierarchy will not be sent any notifications.
+</p><p><a class="mw-selflink-fragment" href="#Multi-language_support_in_notifications">Multi-language content</a> is fully supported for notifications.
+</p>
+</td>
+<td>Permission to send messages
+</td></tr>
+<tr>
+<td>Suspend users
+</td>
+<td>None (Actions suspends all affected users)
+</td>
+<td>Permission to suspend users
+</td></tr>
+<tr>
+<td>Unsuspend users
+</td>
+<td>None (Actions unsuspends all affected users)
+</td>
+<td>Permission to unsuspend users
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Notification_placeholders">Notification placeholders</span></h4>
+<p>A range of placeholders can be used in the notification body; these placeholders will then be replaced with the appropriate values when the message is sent. All placeholders are enclosed in double curly brackets, for example {{userfullname}}.
+</p><p>The placeholders available in the message's body change depending on the conditions that have been selected. To see the list of available placeholders, you need to expand the <b>Available placeholders</b> list.
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Dynamic_rules_-_notifications.png" class="mw-file-description"><img alt="" src="images_en/thumb/8/8b/Dynamic_rules_-_notifications.png/700217f5faa71a74becd221bafe778d7.png" decoding="async" width="465" height="678" class="mw-file-element" srcset="/502/en/images_en/thumb/8/8b/Dynamic_rules_-_notifications.png/698px-Dynamic_rules_-_notifications.png 1.5x, /502/en/images_en/thumb/8/8b/Dynamic_rules_-_notifications.png/931px-Dynamic_rules_-_notifications.png 2x" data-file-width="1634" data-file-height="2380"></a><figcaption></figcaption></figure>
+<p>The table shows all the message placeholders, grouped by condition category (including prerequisites):
+</p>
+<table class="wikitable">
+<tbody><tr>
+<td><b>Condition category (Prerequisite)</b>
+</td>
+<td><b>Notification Placeholder</b>
+</td>
+<td><b>Description</b>
+</td></tr>
+<tr>
+<td rowspan="4">
+<p><b>Users</b>
+</p><p>(always available) 
+</p>
+</td>
+<td>{{username}}
+</td>
+<td>Username
+</td></tr>
+<tr>
+<td>{{useremail}}
+</td>
+<td>Email address
+</td></tr>
+<tr>
+<td>{{userfirstname}}
+</td>
+<td>First name
+</td></tr>
+<tr>
+<td>{{userfullname}}
+</td>
+<td>Full name
+</td></tr>
+<tr>
+<td rowspan="4">
+<p><b>Site</b>
+</p><p>(always available) 
+</p>
+</td>
+<td>{{sitefullname}}
+</td>
+<td>Full site name
+</td></tr>
+<tr>
+<td>{{siteshortname}}
+</td>
+<td>Site short name
+</td></tr>
+<tr>
+<td>{{sitelink}}
+</td>
+<td>Site link
+</td></tr>
+<tr>
+<td>{{sitelinkspecific}}
+</td>
+<td>Site link specific for the tenant
+</td></tr>
+<tr>
+<td rowspan="7">
+<p><b>Courses</b>
+</p><p>(Course completed, Course not completed)
+</p>
+</td>
+<td>{{courseid}}
+</td>
+<td>Internal course ID used in URLs
+</td></tr>
+<tr>
+<td>{{coursefullname}}
+</td>
+<td>Course full name
+</td></tr>
+<tr>
+<td>{{courseshortname}}
+</td>
+<td>Course short name
+</td></tr>
+<tr>
+<td>{{courseurl}}
+</td>
+<td>Course URL
+</td></tr>
+<tr>
+<td>{{coursecompletiondate}}
+</td>
+<td>Course completion date
+</td></tr>
+<tr>
+<td>{{coursegrade}}
+</td>
+<td>Course grade
+</td></tr>
+<tr>
+<td>{{coursecustomfield_&lt;name&gt;}}
+</td>
+<td>Course custom field
+</td></tr>
+<tr>
+<td rowspan="4">
+<p><b>Programs and Certifications</b>
+</p><p>(any programs or certifications condition)
+</p>
+</td>
+<td>{{programid}}
+</td>
+<td>Internal program ID used in URLs
+</td></tr>
+<tr>
+<td>{{programname}}
+</td>
+<td>Program name
+</td></tr>
+<tr>
+<td>{{programcompletedcourses}}
+</td>
+<td>Courses completed in program
+</td></tr>
+<tr>
+<td>{{programcompletiondate}}
+</td>
+<td>Program completion date
+</td></tr>
+<tr>
+<td rowspan="9">
+<p><b>Certifications</b>
+</p><p>(any certifications condition)
+</p>
+</td>
+<td>{{certificationid}}
+</td>
+<td>Internal certification ID used in URLs
+</td></tr>
+<tr>
+<td>{{certificationname}}
+</td>
+<td>Certification name
+</td></tr>
+<tr>
+<td>{{certificationdate}}
+</td>
+<td>Certification date
+</td></tr>
+<tr>
+<td>{{certificationexpirydate}}
+</td>
+<td>Certification expiry date
+</td></tr>
+<tr>
+<td>{{expirydatetimestamp}}
+</td>
+<td>Certification expiry date timestamp
+</td></tr>
+<tr>
+<td>{{certificationreopen}}
+</td>
+<td>Recertification start date
+</td></tr>
+<tr>
+<td>{{certificationprogramname}}
+</td>
+<td>Initial program name for this certification
+</td></tr>
+<tr>
+<td>{{recertificationprogramname}}
+</td>
+<td>Recertification program name
+</td></tr>
+<tr>
+<td>{{certificationgraceperiodend}}
+</td>
+<td>Grace period end date
+</td></tr>
+<tr>
+<td rowspan="5"><b>User enroled</b>
+</td>
+<td>{{courseid}}
+</td>
+<td>Internal course ID used in URLs
+</td></tr>
+<tr>
+<td>{{coursefullname}}
+</td>
+<td>Course full name
+</td></tr>
+<tr>
+<td>{{courseshortname}}
+</td>
+<td>Course short name
+</td></tr>
+<tr>
+<td>{{courseurl}}
+</td>
+<td>Course URL
+</td></tr>
+<tr>
+<td>{{coursecustomfield_&lt;name&gt;}}
+</td>
+<td>Course custom field
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Multi-language_support_in_notifications">Multi-language support in notifications</span></h4>
+<p>Both, the <b>Subject</b> and the <b>Body</b> fields support multi-language content. The <a href="72ff9b4786bdd39e731f2594e5b44810.html" title="Multi-language content filter">Multi-language content filter</a> has to be enabled and configured to allow notifications in multiple languages. Once activated, the Multi-language content filter supports the <code>&lt;span lang="xx"class="multilang"&gt;</code> tag, where <code>xx</code> represents the language pack code, for example, <code>en</code> for English or <code>de</code> for German. 
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Dynamic_rules_multi-language.png" class="mw-file-description"><img alt="" src="images_en/thumb/8/80/Dynamic_rules_multi-language.png/55fc5b464e357160fc27972b44bc74d8.png" decoding="async" width="900" height="366" class="mw-file-element" srcset="/502/en/images_en/thumb/8/80/Dynamic_rules_multi-language.png/1350px-Dynamic_rules_multi-language.png 1.5x, /502/en/images_en/thumb/8/80/Dynamic_rules_multi-language.png/1800px-Dynamic_rules_multi-language.png 2x" data-file-width="2172" data-file-height="884"></a><figcaption></figcaption></figure>
+<p>Notifications will be sent in the recipient's language. Thus, if a German speaking manager has an Italian speaking team member, the manager will receive the message in German while the team member will receive the message in Italian. Using multi-lingual notifications can also cater for cultural idiosyncrasies such as calling staff in by first name in some countries and by surname in others. 
+</p><p>Multi-language support in notifications also works with the <a rel="nofollow" class="external text" href="https://moodle.org/plugins/filter_multilang2">Multilang2 plugin</a> which some institutions might prefer over the built-in multi-language content filter.
+</p>
+<h4><span class="mw-headline" id="Dynamic_rules_notifications">Dynamic rules notifications</span></h4>
+<p>Dynamic rules notifications are enabled by default, using Moodle's standard <a href="b094e7441478a193776f1c57de59a2ff.html" title="Notifications">Notifications</a> mechanism. To configure the default settings for dynamic rules  notifications, navigate to <b>General &gt; Messaging &gt; Notification settings</b> and scroll down to the <b>Dynamic rules</b> section.
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Dynamic_rules_-_Notifications_defaults.png" class="mw-file-description"><img src="images_en/thumb/8/84/Dynamic_rules_-_Notifications_defaults.png/e763af35699b9825d5d6569ad1be4349.png" decoding="async" width="900" height="158" class="mw-file-element" srcset="/502/en/images_en/thumb/8/84/Dynamic_rules_-_Notifications_defaults.png/1350px-Dynamic_rules_-_Notifications_defaults.png 1.5x, /502/en/images_en/thumb/8/84/Dynamic_rules_-_Notifications_defaults.png/1800px-Dynamic_rules_-_Notifications_defaults.png 2x" data-file-width="2704" data-file-height="474"></a><figcaption></figcaption></figure>
+<p><br>
+Here, you can specify the default setting for the <b>Notification action for dynamic rule tool</b> for each enabled channel. Unless you lock the settings, users have the option to override this setting in the <b>Notification settings</b> in their <b>Preferences</b>.
+</p>
+<h3><span class="mw-headline" id="Courses">Courses</span></h3>
+<p>This category contains two course-related actions.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<td><b>Action name</b>
+</td>
+<td><b>Setting(s)</b>
+</td>
+<td><b>Prerequisite</b>
+</td></tr>
+<tr>
+<td>Enrol users into a course
+</td>
+<td>
+<ul><li>Course &lt;course&gt;</li>
+<li>Role &lt;role&gt;: the course role the users will be granted</li>
+<li>End date &lt;datetime&gt;: the <b>Enrolment ends</b> course setting will be set to the selected date; the <b>Enrolment starts</b> setting to the date of the execution of the rule</li>
+<li>Duration &lt;period&gt;: the <b>Enrolment duration</b> course setting will be set to the selection period; otherwise, it will be <b>Unlimited</b>.</li>
+<li>Group name: the name of the group the users will be added to. Note that the group has to exist; otherwise, this setting will be ignored.</li></ul>
+<p>Note: The enrolment will be activated immediately after the action has been executed.
+</p><p>Note: The <b>Dynamic rules</b> enrolment method must be enabled in the site administration for automatic course enrolment to function.
+</p>
+</td>
+<td>Courses have to exist
+</td></tr>
+<tr>
+<td>Unenrol users from a course
+</td>
+<td>
+<ul><li>Course &lt;course&gt;</li>
+<li>Enrolment method &lt;methods&gt;</li>
+<li>Action
+<ul><li><b>Disable enrolment</b>: The user's access to the course is disabled, but the course role isn't removed. This is equivalent to suspending the user's enrollment; it still appears in the grade book and completion report, the user just can't access the course anymore.</li>
+<li><b>Disable enrolment and remove roles</b>: This is the same as the previous step, plus the user's course role is removed. That way, access to the course is suspended, and its appearance in the completion report is hidden, but the user is still enrolled in the course.</li>
+<li><b>Unenrol user from course</b>: The user is no longer enrolled in the course, and all records, such as the progress report, have been removed</li></ul></li></ul>
+</td>
+<td>Courses have to exist
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Certifications_2">Certifications</span></h3>
+<p>This category contains two certification-related actions.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<td><b>Action name</b>
+</td>
+<td><b>Setting(s)</b>
+</td>
+<td><b>Prerequisite</b>
+</td></tr>
+<tr>
+<td>Allocate users to certifications
+</td>
+<td>
+<ul><li>Certification &lt;certification&gt;</li>
+<li>Start date
+<ul><li>Keep certification defaults</li>
+<li>Select date &lt;datetime&gt;</li></ul></li>
+<li>With suspended users
+<ul><li>Do not modify allocations</li>
+<li>Unsuspend, change the program start/end dates</li>
+<li>Unsuspend, leave the existing program start/end dates</li></ul></li></ul>
+</td>
+<td>Certifications have to exist
+</td></tr>
+<tr>
+<td>Deallocate users from certifications
+</td>
+<td>
+<ul><li>Certification &lt;certification&gt;</li>
+<li>Action
+<ul><li>Deallocate user from certification</li>
+<li>Suspend existing allocation</li></ul></li></ul>
+<p>Note: Users can only be unallocated if another dynamic rule allocated them. Users who were allocated manually will not be affected. 
+</p>
+</td>
+<td>Certifications have to exist
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Organisation_structure_2">Organisation structure</span></h3>
+<p>This category contains the following jobs-related actions:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<td><b>Action name</b>
+</td>
+<td><b>Setting(s)</b>
+</td>
+<td><b>Prerequisite</b>
+</td></tr>
+<tr>
+<td>Assign job
+</td>
+<td>
+<ul><li>Department &lt;department&gt;</li>
+<li>Position &lt;position&gt;</li>
+<li>Start date
+<ul><li>Date of rule execution</li>
+<li>Date of user creation</li>
+<li>Select date &lt;date&gt;</li></ul></li>
+<li>End date
+<ul><li>None</li>
+<li>Relative to start date &lt;period&gt;</li>
+<li>Select date &lt;date&gt;</li></ul></li></ul>
+</td>
+<td>Departments and positions have to exist
+</td></tr>
+<tr>
+<td>End all jobs
+</td>
+<td>
+<ul><li>Department &lt;department&gt;</li>
+<li>Position &lt;position&gt;</li>
+<li>End date
+<ul><li>Day before rule execution</li>
+<li>Date of rule execution</li>
+<li>Select date &lt;date&gt;</li></ul></li>
+<li>Target
+<ul><li>Active jobs only</li>
+<li>All jobs</li></ul></li></ul>
+</td>
+<td>Departments and positions have to exist
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Program_2">Program</span></h3>
+<p>This category contains two program-related actions.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<td><b>Action name</b>
+</td>
+<td><b>Setting(s)</b>
+</td>
+<td><b>Prerequisite</b>
+</td></tr>
+<tr>
+<td>Allocate users to programs
+</td>
+<td>
+<ul><li>Program &lt;program&gt;</li>
+<li>Start date
+<ul><li>Keep program defaults</li>
+<li>Select date &lt;datetime&gt;</li></ul></li>
+<li>With suspended users
+<ul><li>Do not modify allocations</li>
+<li>Unsuspend, change the program start/end dates</li>
+<li>Unsuspend, leave the existing program start/end dates</li></ul></li></ul>
+</td>
+<td>Programs have to exist
+</td></tr>
+<tr>
+<td>Deallocate users from programs
+</td>
+<td>
+<ul><li>Program &lt;program&gt;</li>
+<li>Action
+<ul><li>Deallocate user from program</li>
+<li>Suspend existing allocation</li></ul></li></ul>
+<p>Note: Users can only be unallocated if another dynamic rule allocated them. Users who were allocated manually will not be affected.
+</p>
+</td>
+<td>Programs have to exist
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Multi-tenancy_2">Multi-tenancy</span></h3>
+<p>This category contains a single action to assign users to a tenant (see also information on <a rel="nofollow" class="external text" href="2d39c501b2f821505e418e3a34ec8e61.html#Cross-tenant_Dynamic_Rules">Cross-tenant Dynamic Rules</a>).
+</p>
+<table class="wikitable">
+<tbody><tr>
+<td><b>Action name</b>
+</td>
+<td><b>Setting(s)</b>
+</td>
+<td><b>Prerequisite</b>
+</td></tr>
+<tr>
+<td>Allocate users to tenant
+</td>
+<td>
+<ul><li>Tenant &lt;tenant&gt;</li></ul>
+</td>
+<td>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Rule_details">Rule details</span></h2>
+<p>This tab displays the same information when creating a dynamic rule. All values can be edited.
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Dynamic_rules_-_Details.png" class="mw-file-description"><img src="images_en/thumb/d/de/Dynamic_rules_-_Details.png/762c91df83e7f01014050aa8fd330a57.png" decoding="async" width="900" height="571" class="mw-file-element" srcset="/502/en/images_en/thumb/d/de/Dynamic_rules_-_Details.png/1350px-Dynamic_rules_-_Details.png 1.5x, /502/en/images_en/thumb/d/de/Dynamic_rules_-_Details.png/1800px-Dynamic_rules_-_Details.png 2x" data-file-width="1884" data-file-height="1196"></a><figcaption></figcaption></figure>
+<h2><span class="mw-headline" id="Rules_enabling_and_processing">Rules enabling and processing</span></h2>
+<p>A dynamic rule has to be enabled before it becomes active. A rule requires at least one condition and one action to be enabled.
+</p><p>Prior to processing a rule, each condition and action is validated for correctness. If at some future point a rule fails validation (for example, a course or program no longer exists), it will be disabled automatically and will be flagged as containing an error. To re-enable such a rule, you must edit it and correct each erroneous condition and action.
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Dynamic_rules_-_Errors.png" class="mw-file-description"><img src="images_en/thumb/d/dd/Dynamic_rules_-_Errors.png/e25eb0af535cfb2b4018f0b893734345.png" decoding="async" width="900" height="92" class="mw-file-element" srcset="/502/en/images_en/thumb/d/dd/Dynamic_rules_-_Errors.png/1350px-Dynamic_rules_-_Errors.png 1.5x, /502/en/images_en/thumb/d/dd/Dynamic_rules_-_Errors.png/1800px-Dynamic_rules_-_Errors.png 2x" data-file-width="2452" data-file-height="250"></a><figcaption></figcaption></figure>
+<p>A user can edit a rule only if they have permission to edit all conditions and actions in the rule. If any condition or action contains errors, the user can edit the rule only if they have permission to edit all other conditions and actions and add the condition or action containing an error.
+</p><p>For any event-based conditions (i.e. those that depend on an action taking place, such as enrolling a user on a course), any matching conditions are evaluated immediately. The corresponding rule will be executed for the user affected by the event condition (i.e. the user enrolled on a course). All rules that contain non-event-based conditions (scheduled tasks) will be executed during each cron run. Rules, where all conditions are event-based, are excluded from cron processing, but they are processed as ad-hoc cron tasks only once when enabled (so that it is applied to users who matched conditions at the point of enabling the rule).
+</p>
+<h2><span class="mw-headline" id="Rules_archiving_and_deletion">Rules archiving and deletion</span></h2>
+<p>The archiving of a dynamic rule takes place via the <b>Archive</b> option beside the rule. Archived dynamic rules are still available for current and future reports, which might be required in an auditing scenario or when an error has occurred.
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Dynamic_rules_-_Archiving.png" class="mw-file-description"><img src="images_en/thumb/2/21/Dynamic_rules_-_Archiving.png/79c274d92449af84f7ded2d232199660.png" decoding="async" width="900" height="156" class="mw-file-element" srcset="/502/en/images_en/thumb/2/21/Dynamic_rules_-_Archiving.png/1350px-Dynamic_rules_-_Archiving.png 1.5x, /502/en/images_en/thumb/2/21/Dynamic_rules_-_Archiving.png/1800px-Dynamic_rules_-_Archiving.png 2x" data-file-width="2654" data-file-height="460"></a><figcaption></figcaption></figure>
+<p>Archived rules are preserved for future reference and can be unarchived via the <b>Unarchive</b> option. It can further be removed permanently using the <b>Delete</b> option.
+</p>
+<h2><span class="mw-headline" id="Rules_reporting">Rules reporting</span></h2>
+<p>Moodle Workplace keeps an internal log, protocolling all rule executions. You can view the log of a rule via the <b>View report</b> option. The following information is displayed for every user that matches the condition: <b>First name / Last name</b>, <b>Email address</b>, <b>Matched at</b>, <b>Processed at</b>, and the <b>Status</b> (Completed, In Progress or Failed).
+</p><p>In the action menu, you have the option to <b>See details</b> about the protocol for the selected user.
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Dynamic_rules_-_reporting.png" class="mw-file-description"><img alt="" src="images_en/thumb/5/51/Dynamic_rules_-_reporting.png/75fb8800773ed251311145c51ae74f57.png" decoding="async" width="900" height="327" class="mw-file-element" srcset="/502/en/images_en/thumb/5/51/Dynamic_rules_-_reporting.png/1350px-Dynamic_rules_-_reporting.png 1.5x, /502/en/images_en/thumb/5/51/Dynamic_rules_-_reporting.png/1800px-Dynamic_rules_-_reporting.png 2x" data-file-width="2342" data-file-height="850"></a><figcaption></figcaption></figure>
+<!-- 
+NewPP limit report
+Cached time: 20260823025048
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.077 seconds
+Real time usage: 0.295 seconds
+Preprocessor visited node count: 273/1000000
+Post&#8208;expand include size: 1193/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 712/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.830      1 Template:WorkplaceMenuDynamic_rules
+100.00%    5.830      1 -total
+ 48.75%    2.842      1 Template:Workplace_Only
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:25611-0!canonical and timestamp 20260823025048 and revision id 155557. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Dynamic_rules_Configuration&amp;oldid=155557">https://docs.moodle.org/502/en/index.php?title=Dynamic_rules_Configuration&amp;oldid=155557</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="08f1cd224f4501ea8a1a05323a55ba30.html" title="Category:Workplace">Workplace</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdkpgf9b2">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkpgf9p1"></button>
+					<div class="collapse navbar-collapse igdkpgf9p1" id="igdkpgf9p1">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Dynamic_rules_Configuration" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Dynamic_rules_Configuration" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dynamic_rules_Configuration&amp;oldid=155557" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Dynamic_rules_Configuration&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 5 May 2026, at 04:25.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":750,"wgPageParseReport":{"limitreport":{"cputime":"0.077","walltime":"0.295","ppvisitednodes":{"value":273,"limit":1000000},"postexpandincludesize":{"value":1193,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":712,"limit":5000000},"timingprofile":["100.00%    5.830      1 Template:WorkplaceMenuDynamic_rules","100.00%    5.830      1 -total"," 48.75%    2.842      1 Template:Workplace_Only"]},"cachereport":{"timestamp":"20260823025048","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Booking module - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"2ff1fe14c6141f5a27b8ef31","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Booking_module","wgTitle":"Booking module","wgCurRevisionId":152950,"wgRevisionId":152950,"wgArticleId":12705,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Plugin"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Booking_module","wgRelevantArticleId":12705,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="b3936baf3db1a102e3e01e51f94cc8d2.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Booking_module">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Booking_module rootpage-Booking_module layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdj09kits"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdj09kits" id="igdj09kits">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Booking+module" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Booking_module">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Booking_module">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Booking_module">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="b257515414361d15ae186aa59b6b7d0e.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Booking_module&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Booking_module&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Booking_module&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Booking module</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock">
+<table class="infobox">
+
+<tbody><tr>
+<th><b><a class="mw-selflink selflink">Booking module</a></b>
+</th></tr>
+<tr>
+<td>Type
+</td>
+<td>Other, Activity module, Booking
+</td></tr>
+<tr>
+<td>Set
+</td>
+<td>N/A
+</td></tr>
+<tr>
+<td>Downloads
+</td>
+<td><a rel="nofollow" class="external free" href="https://moodle.org/plugins/mod_booking">https://moodle.org/plugins/mod_booking</a>
+</td></tr>
+<tr>
+<td>Issues
+</td>
+<td><a rel="nofollow" class="external free" href="https://github.com/Wunderbyte-GmbH/moodle-mod_booking/issues">https://github.com/Wunderbyte-GmbH/moodle-mod_booking/issues</a>
+</td></tr>
+<tr>
+<td>Discussion
+</td>
+<td><a rel="nofollow" class="external free" href="https://github.com/Wunderbyte-GmbH/moodle-mod_booking/issues">https://github.com/Wunderbyte-GmbH/moodle-mod_booking/issues</a>
+</td></tr>
+<tr>
+<td>Maintainer(s)
+</td>
+<td><a href="https://docs.moodle.org/502/en/index.php?title=User:David_Bogner&amp;action=edit&amp;redlink=1" class="new"><bdi>David Bogner</bdi></a>
+</td></tr>
+</tbody></table>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#About"><span class="tocnumber">1</span> <span class="toctext">About</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Key_Features"><span class="tocnumber">2</span> <span class="toctext">Key Features</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#How_to_use_the_booking_module"><span class="tocnumber">3</span> <span class="toctext">How to use the booking module</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Prerequisites"><span class="tocnumber">3.1</span> <span class="toctext">Prerequisites</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#General_Configuration"><span class="tocnumber">3.2</span> <span class="toctext">General Configuration</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Managing_Events_and_Booking_Options"><span class="tocnumber">3.3</span> <span class="toctext">Managing Events and Booking Options</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Editing_and_Managing_Bookings"><span class="tocnumber">3.4</span> <span class="toctext">Editing and Managing Bookings</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Permissions"><span class="tocnumber">3.5</span> <span class="toctext">Permissions</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Handling_Bugs"><span class="tocnumber">3.6</span> <span class="toctext">Handling Bugs</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Adding_a_New_Booking_Option"><span class="tocnumber">3.7</span> <span class="toctext">Adding a New Booking Option</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Special_User_Profile_Fields"><span class="tocnumber">3.8</span> <span class="toctext">Special User Profile Fields</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#CSV_import"><span class="tocnumber">4</span> <span class="toctext">CSV import</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Example_csv_file_as_PDF"><span class="tocnumber">4.1</span> <span class="toctext">Example csv file as PDF</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Extra_Fields"><span class="tocnumber">4.2</span> <span class="toctext">Extra Fields</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#CSV_import_-_activity_completion"><span class="tocnumber">5</span> <span class="toctext">CSV import - activity completion</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Credits"><span class="tocnumber">6</span> <span class="toctext">Credits</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="About">About</span></h2>
+<p>The Booking Module for Moodle is a powerful and flexible tool designed to streamline event, course, and appointment bookings. Whether you're managing online training, in-person workshops, or resource reservations, this module helps keep everything organized within your Moodle environment.
+</p><p>Handling event sign-ups, course registrations, and resource allocations can be complex, but the Booking Module makes it easy with its intuitive, automated system. Users can quickly register for events, while administrators maintain full control over availability, notifications, and reporting.
+</p><p>
+With extensive features and customization options, the module is ideal for educational institutions, corporate training programs, and public events. It&rsquo;s particularly well-suited for managing recurring course or event bookings in Moodle. Additionally, it integrates seamlessly with Wunderbyte&rsquo;s Shopping Cart Plugin for paid bookings and supports Moodle&rsquo;s native Payment System. Events, also known as "booking options," can be created individually or linked to existing Moodle courses.</p>
+<h2><span class="mw-headline" id="Key_Features">Key Features</span></h2>
+<ul><li><b>Flexible Booking Management</b>
+<ul><li>Easily create and manage bookings for courses, training sessions, events, or any other resource.</li>
+<li>Set limits on the number of participants and define waiting, or notification lists for overbooked sessions.</li></ul></li>
+<li><b>Customizable Booking Options</b>
+<ul><li>Offer different booking options, such as single or recurring sessions.</li>
+<li>Define multiple timeslots, locations, and instructors for each booking instance.</li>
+<li>Set booking periods with opening and closing dates.</li></ul></li>
+<li><b>User-Friendly Booking Interface</b>
+<ul><li>Students and teachers can book with just a few clicks using an intuitive and mobile-friendly interface.</li>
+<li>Users can review their booked events, cancel registrations, and receive email confirmations.</li></ul></li>
+<li><b>Automated Notifications and Reminders</b>
+<ul><li>Send automated email reminders and confirmations to participants.</li>
+<li>Notify administrators and facilitators when new bookings are made.</li></ul></li>
+<li><b>Integration with Moodle Activities and Completion Tracking</b>
+<ul><li>Link bookings with Moodle courses, activities, and completion tracking.</li>
+<li>Restrict access to certain bookings based on course enrollment or prerequisites like manual confirmation.</li></ul></li>
+<li><b>Roles and Permissions Management</b>
+<ul><li>Control who can create, manage, and view bookings with Moodle's role-based access control system.</li>
+<li>Assign different permissions to teachers, managers, and students.</li></ul></li>
+<li><b>Payment Integration</b>
+<ul><li>Connect with payment gateways to charge users for bookings (optional).</li>
+<li>Track payment statuses within the booking module.</li></ul></li></ul>
+<h2><span class="mw-headline" id="How_to_use_the_booking_module">How to use the booking module</span></h2>
+<h3><span class="mw-headline" id="Prerequisites">Prerequisites</span></h3>
+<p>To ensure the Booking Plugin functions correctly, the following plugins must be installed in this order:
+</p>
+<ul><li><b>Mandatory Plugins</b>:
+<ul><li><code>local_wunderbyte_table</code> &ndash; Required for displaying booking entries.</li>
+<li><code>mod_booking</code> &ndash; The core booking module.</li></ul></li>
+<li><b>Optional Third-Party Plugins</b>:
+<ul><li><code>customfield_dynamic</code> &ndash; Enables multiple selections for custom booking options.</li>
+<li><code>local_entities</code> &ndash; Used to create locations such as institutes, lecture halls, and seminar rooms.</li>
+<li><code>local_shopping_cart</code> &ndash; Connects payment providers like Payunity, mpay24, Stripe, and PayPal for paid bookings.</li></ul></li></ul>
+<h3><span class="mw-headline" id="General_Configuration">General Configuration</span></h3>
+<ol><li><b>Adding a Booking Activity</b>
+<ul><li>Navigate to <b>Add an activity &gt; Booking</b>.</li>
+<li>Assign a general name (not the event name). The booking text will be shown at the top of the page.</li>
+<li>Set a <b>default booking limit</b> (this can also be defined per event).</li>
+<li>Define a <b>time period</b> for booking availability.</li>
+<li>Enable <b>email settings</b> for automated notifications.</li>
+<li>The <b>policy page</b> is highly recommended for outlining terms and conditions.</li>
+<li>Click <b>Save and display</b>.</li></ul></li>
+<li><b>Configuring a Booking Instance</b>
+<ul><li>Create a course in Moodle where the booking instance will be added.</li>
+<li>Adjust <b>global settings</b> via <b>Site Administration &gt; Plugins &gt; Booking</b> to configure instance templates, pricing, semesters, and rules.</li>
+<li>Enable <b>Booking Rules (PRO)</b> for automated actions like reminders or cancellation notices.</li>
+<li>Customize booking views, permissions, and restrictions for different roles (e.g., managers, teachers, students).</li></ul></li></ol>
+<h3><span class="mw-headline" id="Managing_Events_and_Booking_Options">Managing Events and Booking Options</span></h3>
+<ul><li>Click on <b>Manage X responses</b> at the top-right corner of the booking instance.</li>
+<li>Under the <b>Manage</b> column, find the latest <b>Edit this booking option</b> link.</li>
+<li>Enter the <b>event name</b> in the &lsquo;Booking&rsquo; field.</li>
+<li>Set <b>booking limits</b> and <b>time restrictions</b> (optional).</li>
+<li>The <b>description</b> is crucial, as it will appear in the booking table.</li>
+<li>Click <b>Save and add new</b> to create additional booking options.</li></ul>
+<h3><span class="mw-headline" id="Editing_and_Managing_Bookings">Editing and Managing Bookings</span></h3>
+<ul><li>Delete individual user bookings if needed.</li>
+<li>Remove an entire event along with its bookings.</li>
+<li>Download a list of booked users as an <b>.xls file</b> for each event or export all bookings in one file.</li></ul>
+<h3><span class="mw-headline" id="Permissions">Permissions</span></h3>
+<ul><li>Navigate to <b>Settings &gt; Permissions</b>.</li>
+<li>Under <b>Advanced role override</b>, select a role (e.g., Manager, Teacher).</li>
+<li>In the <b>Activity: Booking</b> table, tick <b>Allow</b> for relevant permissions.</li>
+<li>Click <b>Save changes</b>.</li></ul>
+<h3><span class="mw-headline" id="Handling_Bugs">Handling Bugs</span></h3>
+<ul><li>Most known bugs have been fixed except for an issue in <b>IE8</b>, where deleting users via the &lsquo;Edit this booking option&rsquo; page does not work. Users should be advised to avoid using IE.</li></ul>
+<h3><span class="mw-headline" id="Adding_a_New_Booking_Option">Adding a New Booking Option</span></h3>
+<ol><li>Go to <b>Manage XX bookings</b>.</li>
+<li>Click <b>Edit booking option</b>, make no changes, and click <b>Save and add new</b>.</li></ol>
+<h3><span class="mw-headline" id="Special_User_Profile_Fields">Special User Profile Fields</span></h3>
+<ul><li>If additional user information is required (e.g., phone numbers), custom user profile fields can be defined in <b>Site Administration &gt; User Profile Fields</b>.</li>
+<li>Mark them as <b>required</b> so users must complete them before booking a course.</li></ul>
+<p><br>
+</p><p>For a hands-on experience with the Booking Module, visit our showroom via showroom.wunderbyte.at, where you can explore a fully functional demo course. It <b>includes detailed documentation</b> and an overview of the benefits of using the PRO version, helping you understand its advanced features in a real Moodle environment. 
+</p>
+<h2><span class="mw-headline" id="CSV_import">CSV import</span></h2>
+<p>Create booking options and add users.
+</p><p>Fields in CSV file are (must be in this order):
+</p>
+<ol><li>name - name of booking option</li>
+<li>startdate - start date, 0 for no date</li>
+<li>enddate - end date, 0 for no date</li>
+<li>institution - institution</li>
+<li>institutionaddress - institution address</li>
+<li>teacheremail - teacher email - to match in users table</li>
+<li>useremail - user email to match with user in Moodle</li>
+<li>finished - if user has completed activity</li>
+<li>maxanswers - max. number of participants (default 0)</li>
+<li>maxoverbooking - max. number of places on waiting list (default 0)</li>
+<li>limitanswers - limit the number of participants Help with Limit the number of participants (1 for limiting or 0 to disable)</li>
+<li>location - location ex. room number</li>
+<li>courseid (optional) - The course id</li></ol>
+<h4><span class="mw-headline" id="Example_csv_file_as_PDF">Example csv file as PDF</span></h4>
+<p>You can try to extract line by line and put the content in a plain text editor, then save the text file as csv in order to have a properly formatted csv for the import.
+</p>
+<h4><span class="mw-headline" id="Extra_Fields">Extra Fields</span></h4>
+<p>Some of you may need to enrol to the current course and/or to a group automatically named after the booking option name. To do so, first ensure that the flag in the booking options is <b>enabled</b>, then you must add an extra <b>field</b> to the .csv file, immediately after <b>location</b>. This extra field is <b>courseid</b> and it must contain the exact course id. If the courseid is missing or incorrect, users will be added to the booking instance but <b>not</b> <b>enrolled</b> in the course, unless they are already enrolled.
+</p><p><i>Note: This behavior has been tested on Moodle Core 4.2. It may have changed in future versions and should be re-verified accordingly.</i><a href="https://docs.moodle.org/502/en/File:testimport-csv.pdf" title="File:testimport-csv.pdf">File:testimport-csv.pdf</a>
+</p>
+<h2><span class="mw-headline" id="CSV_import_-_activity_completion">CSV import - activity completion</span></h2>
+<p>Fields in CSV:
+</p>
+<ol><li>OptionID - Option ID</li>
+<li>UserID - User ID</li>
+<li>CourseCompleted - 1 - competed, 0 - not completed</li></ol>
+<p><br>
+</p>
+<ul><li>Field delimiter: , (coma)</li>
+<li>Enclosure field: " (quotation mark)</li>
+<li>Escape character: \ (backslash)</li>
+<li>Date parse format - format of startdate and enddate fields.</li></ul>
+<h2><span class="mw-headline" id="Credits">Credits</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://wunderbyte.at/">Wunderbyte GmbH (Product owner)</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.edulabs.org/">Edulabs.org (former maintainer)</a></li>
+<li>David Bogner (Lead maintainer)</li>
+<li><a rel="nofollow" class="external text" href="http://www.princic.net/">Andra&#382; Prin&#269;i&#269;</a></li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li>Documentation: <a rel="nofollow" class="external free" href="https://showroom.wunderbyte.at/mod/book/view.php?id=934">https://showroom.wunderbyte.at/mod/book/view.php?id=934</a></li>
+<li>Showroom of Wunderbyte - Booking demo course: <a rel="nofollow" class="external free" href="https://showroom.wunderbyte.at/course/view.php?id=58">https://showroom.wunderbyte.at/course/view.php?id=58</a></li>
+<li>The Booking Academy: <a rel="nofollow" class="external free" href="https://showroom.wunderbyte.at/course/index.php?categoryid=5">https://showroom.wunderbyte.at/course/index.php?categoryid=5</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822130118
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.021 seconds
+Real time usage: 0.030 seconds
+Preprocessor visited node count: 74/1000000
+Post&#8208;expand include size: 445/2097152 bytes
+Template argument size: 223/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.171      1 Template:Infobox_plugin
+100.00%    3.171      1 -total
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:12705-0!canonical and timestamp 20260822130118 and revision id 152950. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Booking_module&amp;oldid=152950">https://docs.moodle.org/502/en/index.php?title=Booking_module&amp;oldid=152950</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="25a190cf836432207b62ebb9ebca358b.html" title="Category:Plugin">Plugin</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdj09kq59">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdj09ks6e"></button>
+					<div class="collapse navbar-collapse igdj09ks6e" id="igdj09ks6e">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Booking_module" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Booking_module" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Booking_module&amp;oldid=152950" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Booking_module&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 13 May 2025, at 09:35.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":242,"wgPageParseReport":{"limitreport":{"cputime":"0.021","walltime":"0.030","ppvisitednodes":{"value":74,"limit":1000000},"postexpandincludesize":{"value":445,"limit":2097152},"templateargumentsize":{"value":223,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    3.171      1 Template:Infobox_plugin","100.00%    3.171      1 -total"]},"cachereport":{"timestamp":"20260822130118","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

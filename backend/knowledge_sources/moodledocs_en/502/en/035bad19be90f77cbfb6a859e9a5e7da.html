@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Report builder Configuration - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"19eb02f94a26a572411afc22","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Report_builder_Configuration","wgTitle":"Report builder Configuration","wgCurRevisionId":155542,"wgRevisionId":155542,"wgArticleId":25679,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Workplace"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Report_builder_Configuration","wgRelevantArticleId":25679,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="593ae70845242c812b361a340a53fb46.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.pygments%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Report_builder_Configuration">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Report_builder_Configuration rootpage-Report_builder_Configuration layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkdpxdpn"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdkdpxdpn" id="igdkdpxdpn">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Report+builder+Configuration" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Report_builder_Configuration">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Report_builder_Configuration">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Report_builder_Configuration">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="035bad19be90f77cbfb6a859e9a5e7da.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="new mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Talk:Report_builder_Configuration&amp;action=edit&amp;redlink=1" rel="discussion" class="new ca-talk" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Report_builder_Configuration&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Report_builder_Configuration&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Report builder Configuration</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">	
+<div class="header"><a href="5005ef9062eb9f52704277d7e5764a8a.html" title="Moodle Workplace">Moodle Workplace</a></div>	
+<div class="content">
+<ul><li><a href="6fec4c5dcd9d154ff23d46e2e133d435.html" title="Multi-tenancy">Multi-tenancy</a></li>
+<li><a href="24af730ae0df0835ebaf33795be5027d.html" title="Programs">Programs</a></li>
+<li><a href="64281e9b4c1975d18f3275e75580176d.html" title="Certifications">Certifications</a></li>
+<li><a href="e71b0cf0176eb80673cd157945822828.html" title="Dynamic rules">Dynamic rules</a></li>
+<li><a href="fc0a853d3881e4fc65d1b41f74e5b14d.html" title="Organisation structure">Organisations</a></li>
+<li><b>Report builder</b></li>
+<li><a href="dfeacc84bc200bd03ef249e87a91fa91.html" title="Report builder">&gt; Overview</a></li>
+<li><a class="mw-selflink selflink">&gt; Configuration</a></li>
+<li><a href="a4212593ac780e130bde4823703b9914.html" title="Report builder Use cases">&gt; Use cases</a></li>
+<li><a href="c27a87077cabc4e0f8c9f3735c7fef04.html" title="Report builder Tenants">&gt; Tenants</a></li>
+<li><a href="c00a3a87672b98fb33b147008116d2d4.html" title="Report builder Technical">&gt; Technical</a></li>
+<li><a href="d99f766a0cfcbdabde4fbcb06919e924.html" title="Custom pages">Custom pages</a></li>
+<li><a href="9c1741fa79af3ca782b4f84eb29f4389.html" title="Certificates">Certificates</a></li>
+<li><a href="a561ccaef5590a82764540b46d322997.html" title="Catalogue">Learning catalogue</a></li>
+<li><a href="1d466d8ced71062fd319faa436dc6ea9.html" title="Migrations">Migrations</a></li></ul>
+<hr>
+<ul><li><a href="2654643b183ad0020e11d2b7c7ef55ea.html" title="Teams">Teams &amp; Managers</a></li>
+<li><a href="b199a356b44bc512734bbdb6650fe404.html" title="Staff">Staff &amp; Learners</a></li>
+<li><a href="0dfa327dd98a4c57cb9d46f1b0c4bea1.html" title="Appointments">Trainers</a></li>
+<li><a href="a44b2e342c2d0deff379b452bfae8393.html" title="Moodle Workplace App">Workplace App</a></li></ul></div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div class="alert alert-info"> <span typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:workplacelogo.png" class="mw-file-description"><img src="images_en/thumb/b/b6/workplacelogo.png/634acbf0524aef964358ae94d60d8582.png" decoding="async" width="24" height="24" class="mw-file-element" srcset="/502/en/images_en/thumb/b/b6/workplacelogo.png/36px-workplacelogo.png 1.5x, /502/en/images_en/thumb/b/b6/workplacelogo.png/48px-workplacelogo.png 2x" data-file-width="248" data-file-height="248"></a></span> This feature is part of <b><a href="5005ef9062eb9f52704277d7e5764a8a.html" title="Moodle Workplace">Moodle Workplace</a></b>&trade;, which is available through <a rel="nofollow" class="external text" href="https://moodle.com/workplace/">Moodle Certified Partners and Service Providers</a> only.</div>
+
+<hr>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Managing_custom_reports"><span class="tocnumber">1</span> <span class="toctext">Managing custom reports</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_custom_reports"><span class="tocnumber">2</span> <span class="toctext">Creating custom reports</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Report_Editor"><span class="tocnumber">2.1</span> <span class="toctext">Report Editor</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Configuring_fields"><span class="tocnumber">2.2</span> <span class="toctext">Configuring fields</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Aggregation_and_Grouping"><span class="tocnumber">2.3</span> <span class="toctext">Aggregation and Grouping</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Report_settings"><span class="tocnumber">2.4</span> <span class="toctext">Report settings</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Conditions"><span class="tocnumber">2.4.1</span> <span class="toctext">Conditions</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Filters"><span class="tocnumber">2.4.2</span> <span class="toctext">Filters</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Sorting"><span class="tocnumber">2.4.3</span> <span class="toctext">Sorting</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Card_View"><span class="tocnumber">2.4.4</span> <span class="toctext">Card View</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Report_Audiences"><span class="tocnumber">2.5</span> <span class="toctext">Report Audiences</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Scheduling_Reports"><span class="tocnumber">2.6</span> <span class="toctext">Scheduling Reports</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Report_Access"><span class="tocnumber">2.7</span> <span class="toctext">Report Access</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Data_visualisation"><span class="tocnumber">3</span> <span class="toctext">Data visualisation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Block_settings"><span class="tocnumber">3.1</span> <span class="toctext">Block settings</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Visualisation"><span class="tocnumber">3.2</span> <span class="toctext">Visualisation</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Advanced"><span class="tocnumber">3.3</span> <span class="toctext">Advanced</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Chart_and_table_layout"><span class="tocnumber">3.4</span> <span class="toctext">Chart and table layout</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#Edit_chart_layout"><span class="tocnumber">3.4.1</span> <span class="toctext">Edit chart layout</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Edit_table_layout"><span class="tocnumber">3.4.2</span> <span class="toctext">Edit table layout</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-21"><a href="#Exporting_charts"><span class="tocnumber">3.5</span> <span class="toctext">Exporting charts</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Managing_custom_reports">Managing custom reports</span></h2>
+<p>You can access the management of custom reports via <b>Site administration &gt; Reports &gt; Manage custom reports</b>, or directly via the <b>Report builder</b> icon in the Workplace launcher. This functionality is  available only if the <b>Enable custom reports</b> setting (<code>enablecustomreports</code>) in <b>Site administration &gt; General &gt; Advanced features</b> is enabled.
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_builder_-_Manage.png" class="mw-file-description"><img src="images_en/thumb/0/04/Report_builder_-_Manage.png/af95e79d8be243d2354e27d7db34a9b7.png" decoding="async" width="900" height="334" class="mw-file-element" srcset="/502/en/images_en/thumb/0/04/Report_builder_-_Manage.png/1350px-Report_builder_-_Manage.png 1.5x, /502/en/images_en/thumb/0/04/Report_builder_-_Manage.png/1800px-Report_builder_-_Manage.png 2x" data-file-width="3332" data-file-height="1236"></a><figcaption></figcaption></figure>
+<p>For each report, the following information is shown:
+</p>
+<ul><li><b>Name</b> of the rule</li>
+<li><b>Shared space</b> labels (optional)</li>
+<li><b>Report source</b> (see below)</li>
+<li><b>Tags</b> that have been applied to the report</li>
+<li><b>Time created</b>: Report's creation date</li>
+<li><b>Time modified</b>: Last report's modification date</li>
+<li><b>Modified by</b>: User who modified the report</li>
+<li><b>Actions</b>:
+<ul><li>Edit report content</li>
+<li>Edit report details</li>
+<li>View report</li>
+<li>Duplicate report</li>
+<li>Delete report (cannot be undone)</li></ul></li></ul>
+<h2><span class="mw-headline" id="Creating_custom_reports">Creating custom reports</span></h2>
+<p>To create a new report, select the <b>New report</b> button.
+</p><p>A report contains two required settings: <b>Name</b> (displayed whenever the report is being made available to users) and <b>Report source</b> (defines where the data for the report will come from). When the <b>Include default setup</b> option is enabled, the report will be populated with several predefined columns, conditions, and filters. If the <b>Remove any duplicate rows</b> setting is enabled and identical rows exist, only a single row will be retained. This setting does not apply if report columns are aggregated. Additionally, optional <b>Tags</b> can be provided for improved report management and more powerful filtering.
+</p><p>
+If <a href="c00a3a87672b98fb33b147008116d2d4.html#Custom_report_fields" title="Report builder Technical">Custom report fields</a> have been defined, they will be displayed in a separate section on the screen. Here, we have three custom fields: <b>Type</b>, <b>Public</b>, and <b>Review</b>.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_Builder_-_New_report.png" class="mw-file-description"><img alt="" src="images_en/thumb/e/ea/Report_Builder_-_New_report.png/82fa2bd68af57cdda0e22cc5892bd43a.png" decoding="async" width="900" height="878" class="mw-file-element" srcset="/502/en/images_en/thumb/e/ea/Report_Builder_-_New_report.png/1350px-Report_Builder_-_New_report.png 1.5x, /502/en/images_en/e/ea/Report_Builder_-_New_report.png 2x" data-file-width="1610" data-file-height="1570"></a><figcaption></figcaption></figure>
+<p><br>
+The following report sources are available in Moodle Workplace, grouped by report plugin:
+</p>
+<ul><li><b>Site</b>
+<ul><li><b>Badges</b>: Badge details, badges issued, badges received, and courses</li>
+<li><b>Blogs</b>: Blog content, tags, users, and courses</li>
+<li><b>Cohorts</b>: Cohorts and cohort members</li>
+<li><b>Comments</b>: Comments and users</li>
+<li><b>Competencies</b>: Competency frameworks, competencies, and related user information</li>
+<li><b>Course categories</b>: Category details and courses, cohorts, roles, and users</li>
+<li><b>Course participants</b>: Course details, user enrolments, course completion, jobs, and tenants</li>
+<li><b>Courses</b>: Courses and course categories</li>
+<li><b>Groups</b>: Course, groups, groupings, and assigned users</li>
+<li><b>Files</b>: Files and users</li>
+<li><b>Groups</b>: Groups, groupings, and group memberships</li>
+<li><b>Notes</b>: Notes, recipients, authors, and courses</li>
+<li><b>Roles</b>: Roles, role assignments, contexts, and users</li>
+<li><b>Tags</b>: Tag collections, tags, tag instances, and tag authors</li>
+<li><b>Task logs</b>: Tasks and users</li>
+<li><b>User badges</b>: Badges issued to users in courses, including badge details</li>
+<li><b>Users</b>: Users and their job assignments</li></ul></li>
+<li><b>Forum</b>
+<ul><li><b>Forum posts</b>: Forums, discussions, and post alongside their courses and users</li></ul></li>
+<li><b>Appointment</b>
+<ul><li><a href="0dfa327dd98a4c57cb9d46f1b0c4bea1.html" title="Appointments">Appointments</a>: Seminars, sessions and participants</li></ul></li>
+<li><b>Certificate manager</b>
+<ul><li><b>Certificate templates</b>: Available certificate templates</li>
+<li><b>Issued certificates</b>: Issued certificates to users</li></ul></li>
+<li><b>Certifications</b>
+<ul><li><b>Certification users allocation and completion</b>: Certification details, including users&rsquo; progress information</li>
+<li><b>Certification users historical completion</b>: Certification details and historical certifications completion</li>
+<li><b>Certifications</b>: Certification details</li></ul></li>
+<li><b><a href="c00a3a87672b98fb33b147008116d2d4.html#Data_Store" title="Report builder Technical">Datastore</a></b>
+<ul><li><b>Course completion from datastore</b>: Data in Workplace datastore</li>
+<li><b>Historical site information</b>: Information on active number of users and logins (requires \tool_datastore\task\siteinfo to run in <a href="9b3501d6968f4decc5503b86391b6b6d.html" title="Scheduled tasks">Scheduled tasks</a>)</li></ul></li>
+<li><b>Program</b>
+<ul><li><b>Program users allocation and completion</b>: Program details, including users&rsquo; progress information</li>
+<li><b>Programs</b>: Program details</li></ul></li>
+<li><b>Workplace</b>
+<ul><li><b>Course reset for individual user</b>: Course resetting data during recertification</li></ul></li></ul>
+<p><br>
+Once you have created the report, you will be redirected to the actual report builder.
+</p>
+<h3><span class="mw-headline" id="Report_Editor">Report Editor</span></h3>
+<p>The interface of the report builder is divided into three panels:
+</p>
+<ul><li><b>Columns sidebar</b> (left): Shows the list of available data fields grouped by entities, including a live search option. To add a field to the report, simply select the respective field name.</li>
+<li><b>Preview window</b> (middle): Shows the data according to the current report configuration. Column headings and <a class="mw-selflink-fragment" href="#Aggregation_and_Grouping">aggregation methods</a> can be edited inline. To grasp a view of what the report will look like to users, select the <b>Preview</b> button.</li>
+<li><b>Settings sidebar</b> (right): Lets you configure <a class="mw-selflink-fragment" href="#Conditions">conditions</a>, <a class="mw-selflink-fragment" href="#Filters">filters</a>, <a class="mw-selflink-fragment" href="#Sorting">sorting</a>, and <a class="mw-selflink-fragment" href="#Card_View">card view</a> options.</li></ul>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_builder_-_Interface.png" class="mw-file-description"><img alt="" src="images_en/thumb/0/04/Report_builder_-_Interface.png/50a4af2bea197937e19cb36a34f643a6.png" decoding="async" width="900" height="353" class="mw-file-element" srcset="/502/en/images_en/thumb/0/04/Report_builder_-_Interface.png/1350px-Report_builder_-_Interface.png 1.5x, /502/en/images_en/thumb/0/04/Report_builder_-_Interface.png/1800px-Report_builder_-_Interface.png 2x" data-file-width="3310" data-file-height="1298"></a><figcaption></figcaption></figure>
+<p><br>
+Viewers also have the option to download the table data in various formats, namely CSV, XLSX, HTML, JSON, ODS, and PDF. You can reduce or rearrange the options in that list in <b>Site administration &gt; Plugins &gt; Data formats &gt; Manage data formats</b>.
+</p>
+<h3><span class="mw-headline" id="Configuring_fields">Configuring fields</span></h3>
+<p>In the left-hand side panel of the report generator, you will see all available fields for the selected report source, which have been grouped into entities. Each entity can be expanded or collapsed for better usability. You can also search for field entries to limit the number of displayed items.
+</p><p>To add columns to the report, click on the selected field in the list on the left. The column will be added automatically as the rightmost column in the table. You can then rearrange the column order via the standard Move handle. To remove a column, click on the standard delete icon.
+</p><p>The following field types are available to be added as columns to a report:
+</p>
+<ul><li><b>Text fields</b>: For example, full name, job, or program name. Some text fields are preprocessed by the report generator to support additional functionality:
+<ul><li><b>Hyperlinked text fields</b>: Mainly to direct viewers directly to entries, for example, to a user profile or a program</li>
+<li><b>Highlighted text fields</b>: To visualise a status, for example, status fields in programs and certifications</li>
+<li><b>Calculated text fields</b>: To provide a numeric value, for example, the number of courses in a certification or the course progress for each user as a percentage</li>
+<li><b>Grouped text fields</b>: To provide multiple data points as a single cell, for example, all users registered for an appointment. The values are available one per line or comma-separated.</li></ul></li>
+<li><b>Image fields</b>: For example, program icon or user picture</li>
+<li><b>Actions</b>: For example, sending a message to a user or viewing a progress report</li></ul>
+<p><br>
+Custom fields, such as custom user profile fields or custom program fields, are fully supported by the report generator. However, if the visibility of a custom field can be configured (for example, custom user profile fields), it has to be set to "Visible to everyone" for the field to appear in the list of available fields.
+</p>
+<h3><span class="mw-headline" id="Aggregation_and_Grouping">Aggregation and Grouping</span></h3>
+<p>The Workplace report generator supports various aggregation and grouping operations at the column level. Depending on the data field selected, a set of possible aggregation methods is offered. Here is a full list of methods, along with their SQL function used internally:
+</p>
+<ul><li><b>Average</b>: Average of all (numeric) values / AVG()</li>
+<li><b>Count</b>: Number of values in column / COUNT()</li>
+<li><b>Count distinct</b>: Number of unique values in column / COUNT DISTINCT()</li>
+<li><b>Comma separate values</b>: List of data points, separated by comma / GROUP_CONCAT()</li>
+<li><b>Comma separate distinct values</b>: List of unique data points, separated by comma / GROUP_CONCAT(DISTINCT)</li>
+<li><b>Date</b>: Grouping by the timestamp rounded down to the start of the day (only for date and time fields). Example: an event happening on 26/01/26 at 10:00 and then at 11:00 would group to two events on the same day (26/01/26) / GROUP BY</li>
+<li><b>Maximum</b>: Biggest (numeric) value in column / MAX()</li>
+<li><b>Minimum</b>: Smallest (numeric) value in column / MIN()</li>
+<li><b>Percentage</b>: Ratio of (boolean) values in percent / AVG()</li>
+<li><b>Sum</b>: Sum of all (numeric) values in column / SUM()</li></ul><p>
+An aggregate function calculates on a set of values and returns a single value. Because an aggregate function operates on a set of values, it regularly applies grouping to fields, which divides the result set into groups of value, where the aggregate function returns a single value for each group. In the examples below, you can see the impact on grouping on the Seminar field, once the <b>Average</b> function has been applied to the Capacity field.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_Builder_-_Aggregation.png" class="mw-file-description"><img alt="" src="images_en/thumb/0/06/Report_Builder_-_Aggregation.png/b36c7d8f0cad73ba79eaf7123ccf2dab.png" decoding="async" width="900" height="333" class="mw-file-element" srcset="/502/en/images_en/thumb/0/06/Report_Builder_-_Aggregation.png/1350px-Report_Builder_-_Aggregation.png 1.5x, /502/en/images_en/thumb/0/06/Report_Builder_-_Aggregation.png/1800px-Report_Builder_-_Aggregation.png 2x" data-file-width="5012" data-file-height="1854"></a><figcaption></figcaption></figure>
+<h3><span class="mw-headline" id="Report_settings">Report settings</span></h3>
+<p>The accordion panel on the right lets you define <a class="mw-selflink-fragment" href="#Conditions">conditions</a> and <a class="mw-selflink-fragment" href="#Filters">filters</a>, set the default <a class="mw-selflink-fragment" href="#Sorting">sorting</a> order, and configure <a class="mw-selflink-fragment" href="#Card_View">card view</a> options.
+</p>
+<h4><span class="mw-headline" id="Conditions">Conditions</span></h4>
+<p>Conditions let you limit the number of data that is being presented to the report viewer. They are a predefined set of criteria that are applied when viewing a report. Conditions cannot be changed in viewing mode. Depending on the selected report source, the available conditions might differ slightly from the list of available fields.
+</p><p>
+There is a special condition related to users called <b>Relation to the report viewer</b>, which specifies which users should be listed in a report relative to the person viewing it. Using this condition, it is possible to create a single report that shows different results to different users, depending on their department or managerial duties.</p><figure class="mw-default-size mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_Builder_-_Conditions.png" class="mw-file-description"><img src="images_en/thumb/f/fd/Report_Builder_-_Conditions.png/40b0b63689c7935ceee25964c419b91a.png" decoding="async" width="300" height="367" class="mw-file-element" srcset="/502/en/images_en/thumb/f/fd/Report_Builder_-_Conditions.png/450px-Report_Builder_-_Conditions.png 1.5x, /502/en/images_en/thumb/f/fd/Report_Builder_-_Conditions.png/600px-Report_Builder_-_Conditions.png 2x" data-file-width="730" data-file-height="894"></a><figcaption></figcaption></figure>
+<p><br>
+The first relation is called <b>Themselves</b>, which limits the report to information relating to the report viewer. The <b>Customise</b>... option provides the following two user relations:
+</p>
+<ul><li><b>Reports to the report viewer</b>: For users with a managerial position, this option will include users who report to the user viewing the report.</li>
+<li><b>Direct reports only</b>: This narrows down the previous option to users who <b>report directly</b> to the user viewing the report. A direct report is a manager user in a position that is a direct child of the managers position.</li>
+<li><b>In the same department as the report viewer</b>: Includes users of the same department (optionally including sub-departments) as the user viewing the report.</li></ul>
+<p>If both options are selected, it is possible to combine them with the AND and OR Boolean operators to refine the report content further. According to the user who is viewing the report, both relations take effect, meaning it will return different results according to the report viewer and/or their own position within the organisation.
+</p>
+<h4><span class="mw-headline" id="Filters">Filters</span></h4>
+<p>Filters are a predefined set of criteria that are not applied automatically but are available for report viewers (via the <b>Filters</b> icon). Viewers of the report then have the ability to reduce the amount of data further via filters.
+</p><p>There is no limit to the number of filters in a report. Furthermore, the list of filters is not limited to the fields shown in the report - you might add a filter to narrow down the search by fields that are not shown in the report but available in the data.
+</p>
+<h4><span class="mw-headline" id="Sorting">Sorting</span></h4><p>
+Sorting defines the initial order that fields are being ordered by.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_Builder_-_Sorting.png" class="mw-file-description"><img src="images_en/thumb/b/b6/Report_Builder_-_Sorting.png/d7b9c3d61524fd5e31e61789bc6fc6de.png" decoding="async" width="407" height="546" class="mw-file-element" srcset="/502/en/images_en/thumb/b/b6/Report_Builder_-_Sorting.png/611px-Report_Builder_-_Sorting.png 1.5x, /502/en/images_en/b/b6/Report_Builder_-_Sorting.png 2x" data-file-width="730" data-file-height="978"></a><figcaption></figcaption></figure><p>Once a field has been selected, the sorting order can be reversed by toggling the <b>Up/Down</b> icon. When in viewing mode, the order of all selected fields will initially be applied. Once a user has clicked on a column name, the data will be sorted by this field. When the same column is clicked again, the sort order will be reversed.
+</p><h4><span class="mw-headline" id="Card_View">Card View</span></h4>
+<p>The card view feature supports responsive layout design in the report builder. Card View allows the configuration of the report layout for narrow views when the block is in the sidebar or a smaller device is used. A report will automatically switch to card view when displayed on small screens or in a narrow container via the <a class="mw-selflink-fragment" href="#Data_visualisation">Report and chart block</a> or <a href="d7159a945e7973c21dd6cff9b15aceb6.html" class="mw-redirect" title="Report builder report block">Report block</a>, for instance, on the dashboard.
+</p><p>
+The card view also drives the layout and content of reports in the <a href="a44b2e342c2d0deff379b452bfae8393.html" title="Moodle Workplace App">Moodle Workplace app</a>.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_Builder_-_Card_view_I.png" class="mw-file-description"><img src="images_en/thumb/b/b3/Report_Builder_-_Card_view_I.png/693aaa318251b9c4e9135d7adbec1113.png" decoding="async" width="461" height="519" class="mw-file-element" srcset="/502/en/images_en/thumb/b/b3/Report_Builder_-_Card_view_I.png/692px-Report_Builder_-_Card_view_I.png 1.5x, /502/en/images_en/b/b3/Report_Builder_-_Card_view_I.png 2x" data-file-width="730" data-file-height="822"></a><figcaption></figcaption></figure><p>The following card view configuration options are available for every custom report:
+</p><ul><li><b>Columns visible</b>: indicates the number of columns that will be displayed expanded in the card view.</li>
+<li><b>First column title</b>: whether the first column title is shown or not.</li></ul><p>
+In the screenshot below, the number of columns always visible has been set to 3 with the first column title hidden.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_Builder_-_Card_view_II.png" class="mw-file-description"><img alt="" src="images_en/thumb/8/8e/Report_Builder_-_Card_view_II.png/598bf34bd3cede38a92c4b6be4a535ad.png" decoding="async" width="590" height="900" class="mw-file-element" srcset="/502/en/images_en/8/8e/Report_Builder_-_Card_view_II.png 1.5x" data-file-width="776" data-file-height="1183"></a><figcaption></figcaption></figure>
+<h3><span class="mw-headline" id="Report_Audiences">Report Audiences</span></h3><p>
+Report audiences indicate which users have access to the report. They can also be used as recipients in <a class="mw-selflink-fragment" href="#Scheduling_Reports">scheduled reports</a>. To access audiences, select the <b>Audiences</b> tab of a report.</p><figure class="mw-halign-center" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_builder_-_Audiences.png" class="mw-file-description"><img src="images_en/thumb/7/7d/Report_builder_-_Audiences.png/c460a2129a7e98f324202774e7dc1f25.png" decoding="async" width="900" height="517" class="mw-file-element" srcset="/502/en/images_en/thumb/7/7d/Report_builder_-_Audiences.png/1350px-Report_builder_-_Audiences.png 1.5x, /502/en/images_en/thumb/7/7d/Report_builder_-_Audiences.png/1800px-Report_builder_-_Audiences.png 2x" data-file-width="2328" data-file-height="1338"></a><figcaption></figcaption></figure>
+<p><br>
+In addition to selecting which position and department within an organisation should be included, it is also possible to manually select individual users and/or e-mail addresses. You can create the following audiences:
+</p>
+<ul><li><b>General</b>
+<ul><li><b>All users</b>: Use this audience to give access to all users in the tenant to any report</li>
+<li><b>Assigned system role</b>: Select at least one system role</li>
+<li><b>Manually added users</b>: Select at least one user (via name or e-mail address). Only email addresses of registered users being are supported as schedule recipients.</li>
+<li><b>Member of cohort</b>: Select at least one cohort</li>
+<li><b>Site administrators</b>: Grant access to all site admins</li></ul></li>
+<li><b>Organisation structure</b>
+<ul><li><b>Job assignments</b>: Select a <b>Department</b> and a <b>Position</b>, and optionally include subdepartments and subpositions, respectively</li>
+<li><b>Managers</b>: Make reports available to managers. The Manager type options available are <b>Manager</b>, <b>Manager (assigned manually)</b>, and <b>Department Lead</b>.</li></ul></li>
+<li><b>Multi-tenancy</b>
+<ul><li><b>Tenant administrators</b>: Grant access to the admins in the tenant</li></ul></li></ul>
+<p><br>
+To confirm which users now have access to the report, switch to the <a class="mw-selflink-fragment" href="#Report_Access">Access</a> tab.
+</p>
+<h3><span class="mw-headline" id="Scheduling_Reports">Scheduling Reports</span></h3><p>
+All reports are available as <b>pull reports</b>; that is, users have to select and view a report proactively. The <b>report scheduler</b> lets you configure the automatic delivery of reports to specific audiences, also known as <b>push reports</b>.</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_builder_-_Schedules.png" class="mw-file-description"><img alt="" src="images_en/thumb/2/27/Report_builder_-_Schedules.png/e5ba6be284dedc571351843c864514df.png" decoding="async" width="900" height="260" class="mw-file-element" srcset="/502/en/images_en/thumb/2/27/Report_builder_-_Schedules.png/1350px-Report_builder_-_Schedules.png 1.5x, /502/en/images_en/thumb/2/27/Report_builder_-_Schedules.png/1800px-Report_builder_-_Schedules.png 2x" data-file-width="2996" data-file-height="866"></a><figcaption></figcaption></figure>
+<p><br>
+To access the scheduler, select the <b>Schedules</b> tab of a report and select the <b>+ New Schedule</b> button at the top right.
+</p><p>Each schedule contains four parts:
+</p>
+<ul><li><b>General</b>
+<ul><li><b>Schedule name</b> is only used in the list of schedules</li>
+<li><b>Format</b>: Any file format that has been allowed in <b>Site administration &gt; Plugins &gt; Data formats &gt; Manage data formats</b></li>
+<li><b>Starting from</b>: Specifies when the report is to be sent for the first time</li>
+<li><b>Recurrence</b>: Lets you specify whether the report should be sent once (<b>None</b>) or sent frequently: <b>Daily</b>, <b>Daily (weekdays only), Weekly</b>, <b>Monthly</b>, <b>Annually</b></li>
+<li><b>View report data as</b>: You can specify as which user the created report will be viewed as.
+<ul><li><b>Schedule creator</b> (default): The generated report will contain data as if viewed by the user who created the schedule</li>
+<li><b>Schedule recipient</b>: The generated report will contain data as if viewed by the recipient; that is, each user will potentially receive a different (personalised) report</li>
+<li><b>Select user</b>: If a user is selected, the report data will be included as if viewed by the selected user; that is, all recipients will receive the same report</li></ul></li></ul></li>
+<li><b>Audience</b>: To select which users will receive the scheduled report, you need to select at least one <a class="mw-selflink-fragment" href="#Report_Audiences">report audience</a>. Scheduling a report will not be possible without any audiences, which have to be created first.</li></ul>
+<ul><li><b>Message content</b>: Standard elements of any email message, namely <b>Subject</b> and <b>Message</b>.</li>
+<li><b>Advanced</b>:
+<ul><li><b>If the report is empty</b>: Choose an option what should happen when the report to be sent contains no data. The self-explanatory options are <b>Send message with empty report</b> (default), <b>Send message without report</b>, and <b>Don't send message</b>.</li></ul></li></ul>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_builder_-_New_schedule.png" class="mw-file-description"><img alt="" src="images_en/thumb/5/5e/Report_builder_-_New_schedule.png/0ab21b5d7e7fe2f1aa36d2881c72c81e.png" decoding="async" width="555" height="745" class="mw-file-element" srcset="/502/en/images_en/thumb/5/5e/Report_builder_-_New_schedule.png/833px-Report_builder_-_New_schedule.png 1.5x, /502/en/images_en/thumb/5/5e/Report_builder_-_New_schedule.png/1110px-Report_builder_-_New_schedule.png 2x" data-file-width="1616" data-file-height="2168"></a><figcaption></figcaption></figure><p>The <a href="9fed8aed6bd20d84147ad0ceb0ed4567.html" class="mw-redirect" title="cron">cron</a> process triggers the execution of the report. If you want to send a report straight away, select the <b>Send schedule</b> option from the actions in the list of schedules.
+</p><h3><span class="mw-headline" id="Report_Access">Report Access</span></h3>
+<p>By default, all users with permission <a href="Capabilities/moodle/39cf8306f5eae013f9c4cc0ea0a1e988.html" title="Capabilities/moodle/reportbuilder:view">moodle/reportbuilder:view</a> or <a href="Capabilities/moodle/3434c336e53f3551650c77c99a70b838.html" title="Capabilities/moodle/reportbuilder:edit">moodle/reportbuilder:edit</a> can view all custom reports defined in their tenant. Additional <a class="mw-selflink-fragment" href="#Report_Audiences">audiences</a> can be specified to grant access to a report.
+</p><p>
+To see who can view the report, select the <b>Access</b> tab of a report. Users who can see all reports in the tenant are labelled "Can view all reports"</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_builder_-_Access.png" class="mw-file-description"><img alt="" src="images_en/thumb/8/85/Report_builder_-_Access.png/007a87f244121022bbd2fac432f99314.png" decoding="async" width="900" height="433" class="mw-file-element" srcset="/502/en/images_en/thumb/8/85/Report_builder_-_Access.png/1350px-Report_builder_-_Access.png 1.5x, /502/en/images_en/thumb/8/85/Report_builder_-_Access.png/1800px-Report_builder_-_Access.png 2x" data-file-width="1932" data-file-height="930"></a><figcaption></figcaption></figure>
+<p><br>
+In addition to granting user access to reports, it is also possible to specify which users should be listed in any given report. To achieve this, the "Relation to the report viewer" <a class="mw-selflink-fragment" href="#Conditions">condition</a> should be added to the report. This allows a manager to create a single report for others to view information about themselves or users in their departments or reporting lines. The condition takes effect according to the user who is viewing the report, meaning it will return different results according to the report viewer and/or their own position within the organisation.
+</p>
+<h2><span class="mw-headline" id="Data_visualisation">Data visualisation</span></h2><p>
+The <b>Report and Chart</b> block allows you to embed reports with charts, supporting pie, bar, and line chart types. You can add charts to the dashboard, inside courses, or in any location that permits adding Moodle Workplace blocks. </p><div class="alert alert-info"><b>Note:</b> There exists also a <a href="472de04c764abc22aa6f4db1602ea44f.html" title="Report block">Report block</a> for Moodle Workplace and Moodle LMS. It contains all the features of the <b>Report and chart</b> block, except the visualisation elements.</div>
+<p>For guidance on adding and managing blocks, refer to the <a href="be83455689517f8db7f281724a51d4a4.html" title="Block settings">Block settings</a> page. Once you add a block, the standard sections <b>Where this block appears</b> and <b>On this page</b> will be available for configuration.
+</p><p>Ensure that the capability <b>block/reportchart:addinstance</b> is allowed for any user who should be able to add the block. 
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_and_chart_block_-_Annotated.png" class="mw-file-description"><img src="images_en/thumb/3/31/Report_and_chart_block_-_Annotated.png/26845cbeae91924302b87349fda31b6d.png" decoding="async" width="519" height="833" class="mw-file-element" srcset="/502/en/images_en/thumb/3/31/Report_and_chart_block_-_Annotated.png/779px-Report_and_chart_block_-_Annotated.png 1.5x, /502/en/images_en/thumb/3/31/Report_and_chart_block_-_Annotated.png/1039px-Report_and_chart_block_-_Annotated.png 2x" data-file-width="1112" data-file-height="1783"></a><figcaption></figcaption></figure>
+<p>The <b>Report and chart</b> block contains the following elements: 
+</p>
+<table class="wikitable">
+<caption>
+</caption>
+<tbody><tr>
+<th colspan="4">(1) Report title
+</th></tr>
+<tr>
+<td>(2)
+</td>
+<td>Chart, Report, All toggle
+</td>
+<td>(6)
+</td>
+<td>Edit chart configuration
+</td></tr>
+<tr>
+<td>(3)
+</td>
+<td>Report header
+</td>
+<td>(7)
+</td>
+<td>Edit table layout
+</td></tr>
+<tr>
+<td>(4)
+</td>
+<td>Full-screen mode toggle
+</td>
+<td>(8)
+</td>
+<td>Refresh report data
+</td></tr>
+<tr>
+<td>(5)
+</td>
+<td>Report filter options
+</td>
+<td>(9)
+</td>
+<td>Report footer
+</td></tr></tbody></table>
+<p>Toggle preferences (such as "Show chart and report") carried out the by users are saved between sessions. 
+</p><p>If the block has been configured in a way that it shows no data, the following warning will be shown. You have to adjust settings in the report source or revisit applied filters. 
+</p>
+<figure class="mw-default-size mw-halign-center" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_and_chart_block_-_No_data.png" class="mw-file-description"><img src="images_en/thumb/7/74/Report_and_chart_block_-_No_data.png/72271c6d8fba132e6b11287049f2857b.png" decoding="async" width="300" height="117" class="mw-file-element" srcset="/502/en/images_en/thumb/7/74/Report_and_chart_block_-_No_data.png/450px-Report_and_chart_block_-_No_data.png 1.5x, /502/en/images_en/thumb/7/74/Report_and_chart_block_-_No_data.png/600px-Report_and_chart_block_-_No_data.png 2x" data-file-width="1506" data-file-height="586"></a><figcaption></figcaption></figure>  
+<p>The <b>Report and chart</b> block contains the following sections: 
+</p>
+<h3><span class="mw-headline" id="Block_settings">Block settings</span></h3>
+<p>The <b>Block title</b> appears in the heading of each block (1). You must select a report from the drop-down list.
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_and_chart_block_-_Block_settings.png" class="mw-file-description"><img src="images_en/thumb/2/2d/Report_and_chart_block_-_Block_settings.png/3133bf966e763e4dc73ff419548e5a65.png" decoding="async" width="600" height="371" class="mw-file-element" srcset="/502/en/images_en/thumb/2/2d/Report_and_chart_block_-_Block_settings.png/900px-Report_and_chart_block_-_Block_settings.png 1.5x, /502/en/images_en/thumb/2/2d/Report_and_chart_block_-_Block_settings.png/1200px-Report_and_chart_block_-_Block_settings.png 2x" data-file-width="1738" data-file-height="1076"></a><figcaption></figcaption></figure>
+<h3><span class="mw-headline" id="Visualisation">Visualisation</span></h3>
+<p>The following settings determine how the data of the selected report will be presented:
+</p>
+<ul><li><b>Chart type</b>: Choose between <b>Line chart</b>, <b>Bar chart</b> or <b>Pie chart</b></li>
+<li><b>Rows per page</b>: Specify the number of rows displayed. If multiple pages are available and the data is shown as a table, a page navigator will allow users to browse through the data. For graphs, this determines the number of data points, bars, and pie segments, respectively.</li>
+<li><b>Block view</b>: If the <b>Show chart and report</b> option is selected, a toggle will appear in the block, allowing users to switch between <b>Chart</b>, <b>Report</b>, and <b>All</b> (3). If the <b>Show chart only</b> option is selected, the toggle and the <b>Filters</b> button (5) will be hidden.</li>
+<li><b>Enable expanded view</b>: If selected, the same options available the block view will appear. The expanded view allows users to display the report in full-screen mode via the <b>Expand</b> button(4).</li>
+<li><b>Header</b>: Contains the text displayed above the report (3).</li>
+<li><b>Footer</b>: Contains the text displayed below the report (9).</li></ul>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_and_chart_block_-_Visualisation.png" class="mw-file-description"><img src="images_en/thumb/5/5f/Report_and_chart_block_-_Visualisation.png/ba35924af87224d03015a8a675c77603.png" decoding="async" width="600" height="357" class="mw-file-element" srcset="/502/en/images_en/thumb/5/5f/Report_and_chart_block_-_Visualisation.png/900px-Report_and_chart_block_-_Visualisation.png 1.5x, /502/en/images_en/thumb/5/5f/Report_and_chart_block_-_Visualisation.png/1200px-Report_and_chart_block_-_Visualisation.png 2x" data-file-width="1420" data-file-height="844"></a><figcaption></figcaption></figure>
+<h3><span class="mw-headline" id="Advanced">Advanced</span></h3>
+<p>The <b>Report and chart</b> block supports automatic on-screen data refreshing to keep reports up to date. Once <b>Auto refresh</b> is enabled, you can specify the time interval.
+</p><p>
+If the <b>Display refresh button</b> option is selected, the time of the last report update and a button to manually refresh the report will be displayed at the bottom of the block (8).</p><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_and_chart_block_-_Advanced.png" class="mw-file-description"><img src="images_en/thumb/d/d1/Report_and_chart_block_-_Advanced.png/83e79b30621ccbf5034ec4454915db76.png" decoding="async" width="600" height="406" class="mw-file-element" srcset="/502/en/images_en/thumb/d/d1/Report_and_chart_block_-_Advanced.png/900px-Report_and_chart_block_-_Advanced.png 1.5x, /502/en/images_en/thumb/d/d1/Report_and_chart_block_-_Advanced.png/1200px-Report_and_chart_block_-_Advanced.png 2x" data-file-width="1744" data-file-height="1180"></a><figcaption></figcaption></figure>
+<h3><span class="mw-headline" id="Chart_and_table_layout">Chart and table layout</span></h3>
+<p>The layout of both the chart and the table can be further customised. Ensure that editing mode is turned on.
+</p>
+<h4><span class="mw-headline" id="Edit_chart_layout">Edit chart layout</span></h4>
+<p>Once you select the <b>Edit chart</b> button (6), you can select which columns to use in a chart. The <b>Chart columns</b> section has the following options:
+</p>
+<ul><li><b>X-axis</b>: Select the column to be used for the horizontal axis (or equivalent in a pie chart)</li>
+<li><b>Y-axis</b>: Select the column to be used for the vertical axis (or equivalent in a pie chart)</li></ul>
+<p>Only numeric columns can be selected as chart series, which prevents visual errors and ensures the accuracy of your reporting data.
+</p><p>However, <a href="https://docs.moodle.org/502/en/index.php?title=Aggregation_and_Grouping&amp;action=edit&amp;redlink=1" class="new" title="Aggregation and Grouping (page does not exist)">aggregation</a> influences the column type: when a text column uses a numeric aggregation method, it is treated as an integer and can then be plotted on a chart&rsquo;s Y-axis. For instance, applying the <b>Count</b> or <b>Count Distinct</b> aggregation to a text field produces a numeric result, allowing it to be used in charts just like any other numeric field.
+</p><p>By default, Moodle Workplace selects the first numeric column from the report source as the chart series (the Y-axis). Non-numeric columns will be ignored during this default selection process. This prevents visual errors and ensures that a meaningful numeric value is chosen by default, which aligns with best practices for chart visualisation. You still have full control to manually select any available column for the X and Y axes, as long as a valid numeric column is selected for the chart series.
+</p><p>Additionally, you can change the <b>Aspect ratio</b> of the graph. In addition to popular rations like 16:9 or 4:3, you can specify a <b>Custom</b> ratio. This is particularly useful for creating narrow graphs, such as a 5:1 ratio. The aspect ratio only affects the height of the graph; the width will always fill the container.
+</p><p>The <b>Additional JSON</b> option allows the addidion of custom JSON objects to adjust the chart's appearance. If the entered code is invalid, an error will be displayed when you attempt to save changes. You can refer to the <a rel="nofollow" class="external text" href="https://www.chartjs.org/docs/latest/">ChartJS documentation</a> for guidance. In particular, these sub-pages might be useful: <a rel="nofollow" class="external text" href="https://www.chartjs.org/docs/latest/configuration/elements.html">www.chartjs.org/<bdi>docs</bdi>/latest/configuration/elements.html</a>, <a rel="nofollow" class="external text" href="https://www.chartjs.org/docs/latest/general/options.html">www.chartjs.org/<bdi>docs</bdi>/latest/general/options.html</a>, and  <a rel="nofollow" class="external text" href="https://www.chartjs.org/docs/latest/axes/styling.html">www.chartjs.org/<bdi>docs</bdi>/latest/axes/styling.html</a>.
+</p><p>
+For example, if you wish to add a chart title, use the following JSON:</p><div class="mw-highlight mw-highlight-lang-json-object mw-content-ltr" dir="ltr"><pre><span></span><span class="p">{</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Custom Report Title"</span><span class="p">}</span>
+</pre></div><figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_and_chart_block_-_Chart_layout.png" class="mw-file-description"><img src="images_en/thumb/1/1c/Report_and_chart_block_-_Chart_layout.png/6d3cfd32333627ab63e8f95fca797df3.png" decoding="async" width="600" height="600" class="mw-file-element" srcset="/502/en/images_en/thumb/1/1c/Report_and_chart_block_-_Chart_layout.png/900px-Report_and_chart_block_-_Chart_layout.png 1.5x, /502/en/images_en/thumb/1/1c/Report_and_chart_block_-_Chart_layout.png/1200px-Report_and_chart_block_-_Chart_layout.png 2x" data-file-width="1968" data-file-height="1968"></a><figcaption></figcaption></figure>
+<h4><span class="mw-headline" id="Edit_table_layout">Edit table layout</span></h4>
+<p>The table columns are specified in the Report editor. You can change the table view using the <b>Edit table</b> button (7), where the following styles are available:
+</p>
+<ul><li><b>Adaptive</b>: If sufficient space is available, the data is displayed as a table. If the screen or block is too narrow to show all columents, it will switch to the cards view.</li>
+<li><b>Cards</b>: The data is shown in card view, as defined in the report's card view configuration. The settings <b>Columns visisble</b> and <b>First column title</b> are taken into account.</li>
+<li><b>Table</b>: The data is shown in table view</li></ul>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_and_chart_block_-_Table_layout.png" class="mw-file-description"><img src="images_en/thumb/9/9c/Report_and_chart_block_-_Table_layout.png/5af079d5c8c2781b997c486b343a3317.png" decoding="async" width="600" height="153" class="mw-file-element" srcset="/502/en/images_en/thumb/9/9c/Report_and_chart_block_-_Table_layout.png/900px-Report_and_chart_block_-_Table_layout.png 1.5x, /502/en/images_en/thumb/9/9c/Report_and_chart_block_-_Table_layout.png/1200px-Report_and_chart_block_-_Table_layout.png 2x" data-file-width="1422" data-file-height="362"></a><figcaption></figcaption></figure><p>Users can limit the displayed data using the <b>Filters</b> button (6). The options available are derived from the filter settings in the report. Filter values are stored on a per-user basis.
+</p><h3><span class="mw-headline" id="Exporting_charts">Exporting charts</span></h3>
+<p>If you wish to export a chart, you can use the native <b>Save image</b> function from your browser vie a left-click on the image.
+</p>
+<figure class="mw-halign-center mw-image-border" typeof="mw:File/Frameless"><a href="https://docs.moodle.org/502/en/File:Report_builder_-_Export_chart.png" class="mw-file-description"><img src="images_en/thumb/b/be/Report_builder_-_Export_chart.png/3bc3ce2cf4a57d5d193211ff57e950fa.png" decoding="async" width="600" height="468" class="mw-file-element" srcset="/502/en/images_en/thumb/b/be/Report_builder_-_Export_chart.png/900px-Report_builder_-_Export_chart.png 1.5x, /502/en/images_en/thumb/b/be/Report_builder_-_Export_chart.png/1200px-Report_builder_-_Export_chart.png 2x" data-file-width="1538" data-file-height="1200"></a><figcaption></figcaption></figure>
+<p>The menu might look different depending on the browser used, installed browser extensions, and system settings.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260823023931
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.093 seconds
+Real time usage: 0.467 seconds
+Preprocessor visited node count: 129/1000000
+Post&#8208;expand include size: 1421/2097152 bytes
+Template argument size: 174/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 355/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    8.090      1 -total
+ 63.83%    5.164      1 Template:WorkplaceMenuReport_builder
+ 32.66%    2.642      1 Template:Note
+ 30.83%    2.494      1 Template:Workplace_Only
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:25679-0!canonical and timestamp 20260823023931 and revision id 155542. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Report_builder_Configuration&amp;oldid=155542">https://docs.moodle.org/502/en/index.php?title=Report_builder_Configuration&amp;oldid=155542</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="08f1cd224f4501ea8a1a05323a55ba30.html" title="Category:Workplace">Workplace</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdkdpxiif">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdkdpxj62"></button>
+					<div class="collapse navbar-collapse igdkdpxj62" id="igdkdpxj62">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Report_builder_Configuration" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Report_builder_Configuration" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Report_builder_Configuration&amp;oldid=155542" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Report_builder_Configuration&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 3 May 2026, at 21:43.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":999,"wgPageParseReport":{"limitreport":{"cputime":"0.093","walltime":"0.467","ppvisitednodes":{"value":129,"limit":1000000},"postexpandincludesize":{"value":1421,"limit":2097152},"templateargumentsize":{"value":174,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":355,"limit":5000000},"timingprofile":["100.00%    8.090      1 -total"," 63.83%    5.164      1 Template:WorkplaceMenuReport_builder"," 32.66%    2.642      1 Template:Note"," 30.83%    2.494      1 Template:Workplace_Only"]},"cachereport":{"timestamp":"20260823023931","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

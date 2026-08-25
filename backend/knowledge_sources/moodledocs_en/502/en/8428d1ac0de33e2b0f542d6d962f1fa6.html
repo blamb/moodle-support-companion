@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Administration via command line - MoodleDocs</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"91e79c19cf3f65d438a627dd","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Administration_via_command_line","wgTitle":"Administration via command line","wgCurRevisionId":156176,"wgRevisionId":156176,"wgArticleId":9122,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation","New features"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Administration_via_command_line","wgRelevantArticleId":9122,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.chameleon":"ready","zzz.ext.bootstrap.styles":"ready","ext.embedVideo.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.ve","ext.moderation.ajaxhook","ext.moderation.notify.desktop","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","mmv.bootstrap","ext.bootstrap.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="593ae70845242c812b361a340a53fb46.css?lang=en&amp;modules=ext.embedVideo.styles%7Cext.pygments%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.chameleon%7Czzz.ext.bootstrap.styles&amp;only=styles&amp;skin=chameleon">
+<script async="" src="81302fc7fa3a74e3406f8bf91a10a3f2.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=chameleon"></script>
+<meta name="generator" content="MediaWiki 1.43.5">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="rest.php/v1/337b8e5fd45b2b6a2b2cc90a14a42999.html" title="MoodleDocs (en)">
+<link rel="EditURI" type="application/rsd+xml" href="bd9abfa15a46fefaa2f4d0dc8c7d576f.xml?action=rsd">
+<link rel="canonical" href="https://docs.moodle.org/en/Administration_via_command_line">
+<link rel="license" href="https://docs.moodle.org/dev/License">
+<link rel="alternate" type="application/atom+xml" title="MoodleDocs Atom feed" href="https://docs.moodle.org/502/en/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWYJYEY9P5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HC6176H"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+
+	gtag("config", "G-QWYJYEY9P5");
+	gtag("config", "G-PT4HC6176H");
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Administration_via_command_line rootpage-Administration_via_command_line layout-moodledocs skin-chameleon action-view skin--responsive">
+		
+		<nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-white justify-content-start" style="z-index: 1040;">
+			<div class="waffle-menu">
+				<a href="https://moodle.org/" class="navbar-brand position-md-fixed d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+					<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="logo mr-1" height="42px" alt="Moodle.org">
+				</a>
+				<button class="navbar-toggler mt-2 mr-2" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon ml-2"></span>
+
+				</button>
+			</div>
+
+			<a href="https://moodle.org/">
+				<img src="https://docs.moodle.org/skin/img/moodle_logo_tm.svg" class="d-md-none mt-2 ml-3" alt="Moodle.org" style="height:32px !important;">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="sitetopnavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item Forums">
+						<a class="nav-link" href="https://moodle.org/course"><span>Forums</span></a>
+					</li>
+					<li class="nav-item documentation">
+						<a class="nav-link active" aria-current="page" href="https://docs.moodle.org/"><span>Documentation</span></a>
+					</li>
+					<li class="nav-item plugins">
+						<a class="nav-link" href="https://marketplace.moodle.com/"><span>Moodle Marketplace</span></a>
+					</li>
+					<li class="nav-item download">
+						<a class="nav-link" href="https://download.moodle.org/"><span>Downloads</span></a>
+					</li>
+					<li class="nav-item demo">
+						<a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a>
+					</li>
+					<li class="nav-item development">
+						<a class="nav-link" href="https://moodledev.io/"><span>Development</span></a>
+					</li>
+					<li class="nav-item translation">
+						<a class="nav-link" href="https://lang.moodle.org/"><span>Translation</span></a>
+					</li>
+					<li class="nav-item tracker">
+						<a class="nav-link" href="https://moodle.atlassian.net/"><span>Tracker</span></a>
+					</li>
+					<li class="nav-item search d-none d-md-flex">
+						<a class="nav-link icon-no-margin" href="https://moodle.org/public/search"><span class="sr-only">Search</span>
+							<i class="fa fa-search icon"></i>
+						</a>
+					</li>
+
+					  <hr height="8px" style="background: lightgray;">
+            <li class="nav-item search-mob d-flex d-lg-none">
+                <a class="nav-link icon-no-margin" href="https://moodle.org/public/search">
+                    <i class="fa fa-search icon mr-2"></i>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item search d-flex d-lg-none">
+                <a class="moodle_sites nav-link icon-no-margin" onclick="open_sites_menu()" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+                    <svg width="18" height="18" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+                        <circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+                    </svg>
+                    <span class="mx-2 ">Moodle Sites <img class="ml-5 mt-n1" src="https://docs.moodle.org/skin/img/arrow-r.svg" style="width:10px !important; height:10px!important;">
+                    </span>
+                </a>
+            </li>
+
+					<div class="d-none d-md-flex">
+					<li class="nav-item menu">
+						<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" aria-label="Other Moodle sites" aria-controls="moodleDocsMenuDots" title="Other Moodle sites">
+							<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="3" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="3" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="11" cy="19.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="3.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="11.5" r="3" fill="#194866"></circle>
+								<circle cx="19" cy="19.5" r="3" fill="#194866"></circle>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" id="moodleDocsMenuDots">
+							<div class="p-3 pathways">
+								<div class="pb-1 heading">What are you looking for?</div>
+								<hr>
+								<p>
+									Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+									<br>
+									<a href="https://moodle.com/">Moodle.com <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Our social network to share and curate open educational resources.<br>
+									<br>
+									<a href="https://moodle.net/">MoodleNet <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+								<hr>
+								<p>
+									Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+									<br>
+									<a href="https://moodle.academy/">Moodle Academy <i class="fa fa-long-arrow-right icon"></i></a>
+								</p>
+							</div>
+						</div>
+					</li>
+					</div>
+				</ul>
+
+				<ul class="sites-nav navbar-nav d-none">
+					<a onclick="close_sites_menu()"> 
+					<img class="ml-n1 back" src="https://docs.moodle.org/skin/img/arrow-left.svg" width="24" height="24">
+					</a>
+					<div class="pt-2 pathways">
+						<p>
+							<a href="https://moodle.com/">Moodle.com</a>
+							<br>
+							Learn about Moodle's products, like Moodle LMS or Moodle Workplace, or find a Moodle Certified Service Provider.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.net/">MoodleNet</a>
+							<br>
+							Our social network to share and curate open educational resources.<br>
+						</p>
+						<hr>
+						<p>
+							<a href="https://moodle.academy/">Moodle Academy</a>
+							<br>
+							Courses and programs to develop your skills as a Moodle educator, administrator, designer or developer.<br>
+						</p>
+					</div>
+				</ul>
+			</div>
+
+		</nav>
+
+	<script>
+
+			function open_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.remove('d-none');
+				document.querySelector('.navbar-nav').style.display = 'none';
+				document.querySelector(".sites-nav").style.display = 'block';
+			}
+
+			function close_sites_menu() {
+
+				document.querySelector(".sites-nav").classList.add('d-none');
+				document.querySelector('.navbar-nav').style.display = 'block';
+				document.querySelector(".sites-nav").style.display = 'none';
+			}
+
+	</script>
+
+		
+	
+	<div class="container-fluid">
+		<div class="row" id="moodlesitestopnavbarpadding">
+			<div class="col-4 col" id="frontpagelogo">
+					<a href="https://docs.moodle.org/" class="navbar-brand">
+						<h1 id="moodlesitename"><span>Documentation</span></h1>
+					</a>
+				
+			</div>
+			<div class="col" id="navbarhorizontaltop">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible" role="navigation" id="mw-navigation">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhk4wwe1"><span class="navbar-toggler-text">Menu</span></button>
+					<div class="collapse navbar-collapse igdhk4wwe1" id="igdhk4wwe1">
+						<div class="navbar-nav"><div class="nav-item"><a class="nav-link fas fa-angle-left"  href="1a8433190dfc4c7df372d24eb0864962.html">Main page</a></div><div class="nav-item"><a class="nav-link fas fa-book"  href="46050f65bdc6f5012ba008dc441ad4be.html">Table of contents</a></div><div class="nav-item"><a class="nav-link fas fa-globe"  href="https://docs.moodle.org/overview">Docs overview</a></div><div class="nav-item"><a class="nav-link fas fa-history"  href="https://docs.moodle.org/502/en/Special:RecentChanges">Recent changes</a></div>
+						</div>
+						<div class="navbar-nav right">
+							<!-- search form -->
+							<div  id="p-search" class="p-search navbar-form" role="search"  >
+								<form  id="searchform" class="mw-search" action="https://docs.moodle.org/502/en/index.php" >
+									<input type="hidden" name="title" value=" Special:Search" />
+									<div class="input-group">
+										<input type="search" name="search" placeholder="Search MoodleDocs" aria-label="Search MoodleDocs" autocapitalize="none" title="Search MoodleDocs [f]" accesskey="f" id="searchInput" class="form-control">
+										<div class="input-group-append">
+											<button value="Go" id="searchGoButton" name="go" type="submit" class="go-btn searchGoButton" aria-label="Go to page" title="Go to a page with this exact name if it exists"></button>
+											<button value="Search" id="mw-searchButton" name="fulltext" type="submit" class="search-btn mw-searchButton" aria-label="Go to page" title="Search the pages for this text"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							<!-- personal tools -->
+							<div class="navbar-tools navbar-nav" >
+								<div class="navbar-tool dropdown">
+									<a class="navbar-usernotloggedin" href="#" data-toggle="dropdown" data-boundary="viewport" title="You are not logged in.">
+									</a>
+									<div class="p-personal-tools dropdown-menu">
+										<div id="pt-login" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Special:UserLogin&amp;returnto=Administration+via+command+line" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="pt-login">Log in</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Content navigation -->
+				<div class="mb-3 pagetools p-contentnavigation" id="p-contentnavigation"><div class="dropdown"><button class="btn btn-link btn-sm p-0 dropdown-toggle" type="button" id="moodleDocsVersionLinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i>&nbsp;&nbsp;5.2 docs</button><div class="dropdown-menu" aria-labelledby="moodleDocsVersionLinks"><a class="dropdown-item" href="https://docs.moodle.org/501/en/Administration_via_command_line">5.1 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/500/en/Administration_via_command_line">5.0 docs</a>
+<a class="dropdown-item" href="https://docs.moodle.org/405/en/Administration_via_command_line">4.5 docs</a>
+</div></div>
+					<!-- namespaces -->
+					<div id="p-namespaces" class="p-namespaces">
+						<div class="tab-group">
+							<div id="ca-nstab-main" class="selected mw-list-item"><a href="8428d1ac0de33e2b0f542d6d962f1fa6.html" title="View the content page [c]" accesskey="c" class="selected ca-nstab-main">Article</a></div>
+							<div id="ca-talk" class="mw-list-item"><a href="https://docs.moodle.org/502/en/Talk:Administration_via_command_line" rel="discussion" title="Discussion about the content page [t]" accesskey="t" class="ca-talk">Page Comments</a></div>
+						</div>
+					</div>
+					<!-- views -->
+					<div id="p-views" class="p-views">
+						<div class="tab-group">
+							<div id="ca-viewsource" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Administration_via_command_line&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="ca-viewsource">View source</a></div>
+							<div id="ca-history" class="mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Administration_via_command_line&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="ca-history">View history</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-auto mx-auto col">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- start the content area -->
+				<div id="content" class="mw-body content"><a id="top" class="top"></a>
+					<div id="mw-indicators" class="mw-indicators"></div>
+						<div class="contentHeader">
+						<!-- title of the page -->
+						<h1 id="firstHeading" class="firstHeading"><span class="mw-page-title-main">Administration via command line</span></h1>
+						<!-- tagline; usually goes something like "From WikiName" primary purpose of this seems to be for printing to identify the source of the content -->
+						<div id="siteSub" class="siteSub">From MoodleDocs</div>
+						<!-- subtitle line; used for various things like the subpage hierarchy -->
+						<div id="contentSub" class="small contentSub"><div id="mw-content-subtitle"></div></div><div id="jump-to-nav" class="mw-jump jump-to-nav">Jump to:<a href="#mw-navigation">navigation</a>, <a href="#p-search">search</a></div>
+					</div>
+					<div id="bodyContent" class="bodyContent">
+						<!-- body text -->
+
+						<div class="navtrail"><a href="1a8433190dfc4c7df372d24eb0864962.html" title="Main page">Main page</a> ► <a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a> ► <a class="mw-selflink selflink">Administration via command line</a></div>
+
+						<div class="row">
+
+						<div class="col-md-4 col-lg-3 order-md-2"><div class="sideblock right">
+<div class="header"><a href="460c04e5210e1bbdd84ffde0bc48b531.html" title="Installation">Installation</a></div>	
+<div class="content">
+<ul><li><a href="553207f76ae3b1e85403f96c2ca316f1.html" title="Installing Moodle">Installing Moodle</a></li>
+<li><a href="399ca91535c3410845bff1400293dbc5.html" title="Installation quick guide">Installation quick guide</a></li>
+<li><a href="37fc181470a569556f94c1f35940d0a7.html" title="Cron">Cron</a></li>
+<li><a href="081d50b0942d418fa28114398527e388.html" title="Nginx">Nginx</a></li>
+<li><a href="6831e4affebb174320f861bc76b08775.html" title="Apache">Apache</a></li>
+<li><a href="68065410acf60db421f4e2aac18bc951.html" title="Internet Information Services">IIS</a></li>
+<li><a href="838fe95223f139a5c86fa0eace52fb64.html" title="Configuring the Router">Routing</a></li>
+<li><a href="b8a47099f49d74586081af402e096238.html" title="Installing plugins">Installing plugins</a></li>
+<li><a href="52d1d262bc125752f9747df1abc77de6.html" title="Installation FAQ">Installation FAQ</a></li>
+<li><a href="b38923733584457a7e29bf0e898e9c97.html" title="Upgrading">Upgrading</a></li>
+<li><a href="451fc5f44047acbcf3c960e787eb56c6.html" title="Upgrade overview">Upgrade overview</a></li>
+<li><a href="784f6d5df0514efb399c81a6f803d2c7.html" title="Automatic updates deployment">Automatic updates deployment</a></li>
+<li><a href="14569a6d13e60324f1803b54b2ffb589.html" title="Git for Administrators">Git guide</a></li>
+<li><a class="mw-selflink selflink">Administration via command line</a></li>
+<li><a href="6aeead2c752a1a71fc9b37a62d913491.html" title="Upgrading FAQ">Upgrading FAQ</a></li>
+<li><a href="1a1489d94778d66d38f3a8e70fedc938.html" title="Moodle migration">Moodle migration</a></li></ul>
+</div>
+</div></div>
+
+						<div class="col-md-8 col-lg-9"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml encoding="UTF-8"><html><body><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Running_CLI_scripts"><span class="tocnumber">1</span> <span class="toctext">Running CLI scripts</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Upgrading"><span class="tocnumber">2</span> <span class="toctext">Upgrading</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#PHP_Extra_Memory"><span class="tocnumber">2.1</span> <span class="toctext">PHP Extra Memory</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Installation"><span class="tocnumber">3</span> <span class="toctext">Installation</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Maintenance_mode"><span class="tocnumber">4</span> <span class="toctext">Maintenance mode</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Offline_mode"><span class="tocnumber">5</span> <span class="toctext">Offline mode</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Custom_site_defaults"><span class="tocnumber">6</span> <span class="toctext">Custom site defaults</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Reset_user_password"><span class="tocnumber">7</span> <span class="toctext">Reset user password</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Display_manual_login_form"><span class="tocnumber">8</span> <span class="toctext">Display manual login form</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Converting_InnoDB_to_Barracuda"><span class="tocnumber">9</span> <span class="toctext">Converting InnoDB to Barracuda</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Changing_tables_to_compressed_row_format"><span class="tocnumber">9.1</span> <span class="toctext">Changing tables to compressed row format</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Converting_character_set_and_collation"><span class="tocnumber">9.2</span> <span class="toctext">Converting character set and collation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Running_cron_via_command_line"><span class="tocnumber">10</span> <span class="toctext">Running cron via command line</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Scheduled_tasks"><span class="tocnumber">11</span> <span class="toctext">Scheduled tasks</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Ad_hoc_tasks"><span class="tocnumber">11.1</span> <span class="toctext">Ad hoc tasks</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Database_transfer"><span class="tocnumber">12</span> <span class="toctext">Database transfer</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Purge_caches"><span class="tocnumber">13</span> <span class="toctext">Purge caches</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Kill_all_sessions"><span class="tocnumber">14</span> <span class="toctext">Kill all sessions</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Backup,_restore_and_import_of_courses_or_modules"><span class="tocnumber">15</span> <span class="toctext">Backup, restore and import of courses or modules</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Deleting_courses"><span class="tocnumber">16</span> <span class="toctext">Deleting courses</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Fix_course_/_module_sequences"><span class="tocnumber">17</span> <span class="toctext">Fix course / module sequences</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Fix_orphaned_question_categories"><span class="tocnumber">18</span> <span class="toctext">Fix orphaned question categories</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Search_and_replace_text"><span class="tocnumber">19</span> <span class="toctext">Search and replace text</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Build_theme_CSS_cache"><span class="tocnumber">20</span> <span class="toctext">Build theme CSS cache</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#Get_and_set_configuration_values"><span class="tocnumber">21</span> <span class="toctext">Get and set configuration values</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#E-mail_flag_for_users"><span class="tocnumber">22</span> <span class="toctext">E-mail flag for users</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#Dashboard_reset"><span class="tocnumber">23</span> <span class="toctext">Dashboard reset</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#Managing_plugins_via_command_line"><span class="tocnumber">24</span> <span class="toctext">Managing plugins via command line</span></a>
+<ul>
+<li class="toclevel-2 tocsection-29"><a href="#List_and_uninstall_Moodle_plugins"><span class="tocnumber">24.1</span> <span class="toctext">List and uninstall Moodle plugins</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-30"><a href="#See_also"><span class="tocnumber">25</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Running_CLI_scripts">Running CLI scripts</span></h2>
+<p>If you have shell access to your web server, you may find various CLI (command line interface) scripts useful during Moodle administration. Core admin CLI tools are located in the <code>admin/cli/*</code> folder. Other plugins may provide CLI functionality via scripts in their own <code>cli</code> folder.
+</p><p>To avoid problems with access control, you should run them as the owner of the web server process. It is especially important for CLI installation and upgrade as they create new files in moodledata directory and the web server has to have write access to them. In Linux distributions, the user that runs the web server is usually apache or www-data or httpd or something similar. As a root, you will probably want to execute Moodle CLI scripts like this:
+</p>
+<pre>   $ cd /path/to/your/moodle/dir
+   $ sudo -u apache /usr/bin/php admin/cli/somescript.php --params
+</pre>
+<p>Most of the scripts accept common --help (or -h) parameter to display the full usage information, for example:
+</p>
+<pre>   $ sudo -u apache /usr/bin/php admin/cli/install.php --help
+</pre>
+<div class="alert alert-info"><b>Note:</b> These scripts are supposed to be run under the identity of the web server user. Examples on this page use the <tt>apache</tt> user for illustration. The particular value depends on your OS distribution and local set-up. Typical values may be <tt>apache</tt>, <tt>www-data</tt> or <tt>httpd</tt>.</div>
+<h2><span class="mw-headline" id="Upgrading">Upgrading</span></h2>
+<p>Moodle can be upgraded from the command line. As with the installation script, there is either interactive or non-interactive mode of the upgrade. The script itself does not put the site into the maintenance mode, you have to do it on your own. Also, the script does not backup any data.
+</p>
+<div class="alert alert-info"><b>Note:</b>  As mentioned above, the upgrade php script does not perform a backup of the Moodle site data. Before running this script, make sure you have taken a proper site backup including the software, data directory, and database before you perform the upgrade.</div>
+<p>To run the interactive upgrade, execute the following command:
+</p>
+<pre>   $ sudo -u apache /usr/bin/php admin/cli/upgrade.php
+</pre>
+<p>Upgrading via command line is a very comfortable way of Moodle upgrade if you use Git checkout of the Moodle source code (see <a href="14569a6d13e60324f1803b54b2ffb589.html" title="Git for Administrators">Git for Administrators</a>). See the following procedure how to upgrade your site within several seconds to the most recent version while preserving your eventual local customizations tracked in git repository:
+</p>
+<pre>   $ cd /var/www/sites/moodle/htdocs/
+   $ sudo -u apache /usr/bin/php admin/cli/maintenance.php --enable
+   $ git pull
+   $ sudo -u apache /usr/bin/php admin/cli/upgrade.php
+   $ sudo -u apache /usr/bin/php admin/cli/maintenance.php --disable
+</pre>
+<p>Alternatively, instead of using git, the updated Moodle package can be downloaded from the Moodle site using the wget command, and then extracted with the tar command.
+</p>
+<pre>   $ wget https://download.moodle.org/download.php/direct/stable405/moodle-4.5.1.tgz
+   $ tar -xvzf moodle-4.5.1.tgz
+</pre>
+<p>Note that the path must contain "/direct/", or else wget will not work.
+</p>
+<h4><span class="mw-headline" id="PHP_Extra_Memory">PHP Extra Memory</span></h4>
+<p>Depending on your environment setup, to perform a CLI upgrade you *may* need to run PHP explicitly with more memory.<br>
+This is only required if PHP is failing due to out of memory conditions.
+</p><p>For example:
+</p>
+<pre>$ sudo -u apache /usr/bin/php --memory_limit=16G admin/cli/upgrade.php
+</pre>
+<p>The amount of memory will vary between Moodle LMS versions and your specific environment.
+</p>
+<h2><span class="mw-headline" id="Installation">Installation</span></h2>
+<p>There are two modes of installing Moodle from the command line. In interactive mode, the install script asks you for all data needed to properly set up new Moodle site. In non-interactive mode, you must provide all required data as the script parameters and then the new site is installed silently. The parameters can be passed in the interactive mode, too. The provided values are then used as the default values during the interactive session.
+</p>
+<pre>   $ sudo -u apache /usr/bin/php admin/cli/install.php --lang=cs
+</pre>
+<p>If your arguments contain some specials characters for Linux-based systems, don't forget to <i>escape</i> them with a backslash. For example, if you want to create an admin with <i>pa$sword</i> as password you should wrote <i>pa\$sword</i> instead!
+</p><p>If required, the database install may be skipped, with just config.php populated.
+</p>
+<pre>  $ sudo -u apache /usr/bin/php admin/cli/install.php --skip-database
+</pre>
+<p>If config.php already exists admin/cli/install_database.php must be used instead, for example:
+</p>
+<pre> $ sudo -u apache /usr/bin/php admin/cli/install_database.php --agree-license \
+   --adminpass='secret' --fullname='My Site' --shortname='My Site' \
+   --adminemail=admin@example.com --supportemail=support@example.com
+</pre>
+<h2><span class="mw-headline" id="Maintenance_mode">Maintenance mode</span></h2>
+<p>To switch your site into the maintenance mode via CLI, you can use
+</p>
+<pre>   $ sudo -u apache /usr/bin/php admin/cli/maintenance.php --enable
+</pre>
+<p>To turn maintenance mode off, execute the same script with the --disable parameter:
+</p>
+<pre>   $ sudo -u apache /usr/bin/php admin/cli/maintenance.php --disable
+</pre>
+<p>If you don't want to enable maintenance mode immediately, but show a countdown to your users, execute the same script with the --enablelater parameter and the number of minutes which the countdown should run:
+</p>
+<pre>   $ sudo -u apache /usr/bin/php admin/cli/maintenance.php --enablelater=10
+</pre>
+<p>This script will also create and remove the climaintenance.html file for "Offline" mode.
+</p>
+<h2><span class="mw-headline" id="Offline_mode">Offline mode</span></h2>
+<p>In some situations, you may want to switch your Moodle site into offline mode so that it is not accessible via the web but you can not stop the web server completely (typically because there are other web pages and applications running there). If a file called <code>climaintenance.html</code> exists in the root folder of moodledata directory, Moodle will automatically display the contents of that file instead of any other page.
+</p>
+<pre>   $ cd /var/www/sites/moodle/moodledata/
+   $ echo '&lt;h1&gt;Sorry, maintenance in progress&lt;/h1&gt;' &gt; climaintenance.html
+</pre>
+<p>You can prepare a nice formatted HTML page to inform your users about the server being down and keep in the moodledata directory under a name like <code>climaintenance.off</code> and rename it to the <code>climaintenance.html</code> if needed.
+</p>
+<h2><span class="mw-headline" id="Custom_site_defaults">Custom site defaults</span></h2>
+<p>During the install and upgrade via CLI, Moodle sets the administration variables to the default values. You can use different defaults. See <a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/MDL-17850">MDL-17850</a> for details. Shortly, all you need to do is to add a file <code>local/defaults.php</code> into your Moodle installation. The format of the file is like
+</p>
+<div class="mw-highlight mw-highlight-lang-php mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="nv">$defaults</span><span class="p">[</span><span class="s1">'pluginname'</span><span class="p">][</span><span class="s1">'settingname'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'settingvalue'</span><span class="p">;</span> <span class="c1">// for plugins</span>
+<span class="nv">$defaults</span><span class="p">[</span><span class="s1">'moodle'</span><span class="p">][</span><span class="s1">'settingname'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'settingvalue'</span><span class="p">;</span>     <span class="c1">// for core settings</span>
+</pre></div>
+<p>These defaults are used during install, upgrade and are also displayed as defaults on Site administration pages.
+</p>
+<h2><span class="mw-headline" id="Reset_user_password">Reset user password</span></h2>
+<p>If you happen to forget your admin password (or you want to set a password for any other user on the site), you can use reset_password.php script. The script sets the correctly salted password for the given user.
+</p>
+<pre>   $ sudo -u apache /usr/bin/php admin/cli/reset_password.php
+</pre>
+<h2><span class="mw-headline" id="Display_manual_login_form">Display manual login form</span></h2>
+<p>If you hide the manual login form then find that you can no longer log in, you can display it again using the command line
+</p>
+<pre>php admin/cli/cfg.php --name=showloginform --set=1
+</pre>
+<h2><span class="mw-headline" id="Converting_InnoDB_to_Barracuda">Converting InnoDB to Barracuda</span></h2>
+<p>Newer versions of MySQL and MariaDB have an improved file format called Barracuda. To take advantage of this:
+</p>
+<ol><li>Ensure your version of MySQL/MariaDB is using Barracuda with the large index key prefix (innodb_large_prefix). See below for details.</li>
+<li>Change to the compressed row format (see <a href="#Changing_tables_to_compressed_row_format">Changing tables to compressed row format</a>)</li>
+<li>Change the character set and collation for full Unicode support (see <a href="#Converting_character_set_and_collation">Converting character set and collation</a>).</li></ol>
+<p><br>
+If you have MySQL 8.0.0 or later, or MariaDB 10.3.0 or later, then these versions only support Barracuda with the large index key prefix. For earlier versions to check if MySQL/MariaDB is using Barracuda run the following statement in the MySQL/MariaDB client or phpMyAdmin SQL tab:
+</p>
+<pre>SHOW GLOBAL VARIABLES WHERE variable_name IN ('innodb_file_format', 'innodb_large_prefix', 'innodb_file_per_table');
+</pre>
+<p>If your settings do not match any of the tables below, see <a href="b91f71678142951f89520aabd6b6ab45.html#Configure_full_UTF-8_support" title="MySQL">Configure full UTF-8 support</a> for how to change these settings:
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:phpMyAdmin1.png" class="mw-file-description"><img alt="innodb_file_format=Barracuda;innodb_file_per_table=ON;innodb_large_prefix=ON" src="images_en/c/ca/f4f75e0cc5a45e582f94857b6c18175f.png" decoding="async" width="232" height="84" class="mw-file-element" data-file-width="232" data-file-height="84"></a></span> or <span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:phpMyAdmin2.png" class="mw-file-description"><img alt="innodb_file_format=(blank);innodb_file_per_table=ON;innodb_large_prefix=(blank)" src="images_en/d/da/7a1085f1b89a4b68b1a43dd997aa9557.png" decoding="async" width="201" height="84" class="mw-file-element" data-file-width="201" data-file-height="84"></a></span> or <span class="mw-default-size" typeof="mw:File"><a href="https://docs.moodle.org/502/en/File:phpMyAdmin3.png" class="mw-file-description"><img alt="innodb_file_per_table=ON" src="images_en/6/6b/2b30a1b8f14bedb4e058667da74a5d2e.png" decoding="async" width="205" height="45" class="mw-file-element" data-file-width="205" data-file-height="45"></a></span>
+</p><p>If your settings match one of these tables then MySQL/MariaDB is using Barracuda with the large index key prefix.
+</p>
+<h3><span class="mw-headline" id="Changing_tables_to_compressed_row_format">Changing tables to compressed row format</span></h3>
+<p>This script changes tables with many text columns to use ROW_FORMAT=COMPRESSED. This change isn't required but is recommended. If the database error <i>Row size too large (&gt; 8126)</i> occurs when using Moodle then run this script to fix this.
+</p><p><b>Note:</b> If you have MariaDB version 10.6.0 to 10.6.6 or version 10.7.0 to 10.7.2 you must upgrade to a later version before running this script. See <a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/MDL-72131">MDL-72131</a> for details.
+</p><p>To view tables requiring conversion, use the --list option:
+</p>
+<pre>$ php admin/cli/mysql_compressed_rows.php --list
+</pre>
+<p>Here is an example output:
+</p>
+<pre>mdl_data                            Compact     (needs fixing) 
+mdl_data_fields                     Compact     (needs fixing)
+mdl_enrol_paypal                    Compact     (needs fixing)
+</pre>
+<p>To proceed with the conversion, run the command using the fix option:
+</p>
+<pre>$ php admin/cli/mysql_compressed_rows.php --fix
+</pre>
+<p>Successful table conversion will be reported in the output, for example:
+</p>
+<pre>mdl_data                   ... Compressed
+mdl_data_fields            ... Compressed
+mdl_enrol_paypal           ... Compressed
+</pre>
+<p>If you get errors due to insufficient privileges to run these commands use --showsql to generate the required SQL commands:
+</p>
+<pre>$ php admin/cli/mysql_compressed_rows.php --showsql
+</pre>
+<p>You can then copy the generated SQL into your MySQL/MariaDB client running as the 'root' user.
+</p>
+<h3><span class="mw-headline" id="Converting_character_set_and_collation">Converting character set and collation</span></h3>
+<p>This script changes the Moodle database tables to enable full Unicode support.
+</p>
+<pre>$ php admin/cli/mysql_collation.php --collation=utf8mb4_unicode_ci
+</pre>
+<p>After making this change edit config.php and change the 'dbcollation' to 'utf8mb4_unicode_ci' in the $CFG-&gt;dboptions array.
+</p><p>For further details see: <a href="d2f49dc90000cf624a41582caa774aaf.html" title="MySQL full unicode support">MySQL full unicode support</a>
+</p>
+<h2><span class="mw-headline" id="Running_cron_via_command_line">Running cron via command line</span></h2>
+<p>In versions 1.x, you could execute admin/cron.php either from command line or via the web. Since Moodle 2.0, only admin/cli/cron.php script can be run via command line.
+</p>
+<h2><span class="mw-headline" id="Scheduled_tasks">Scheduled tasks</span></h2>
+<p>Scheduled tasks are automatically run by the cron script, but the specific tasks which run on each cron iteration are determined by the scheduled tasks configuration. It is possible to override the scheduled tasks configuration and run a single scheduled task immediately using the admin/cli/scheduled_task.php script. 
+</p><p>This script accepts the following arguments:
+</p>
+<pre>--list - list all the known scheduled tasks. The tasks are listed by the class name used to run the task. This class name is required as the argument to the next option in order to run a specific task immediately.
+</pre>
+<pre>--execute=&lt;task&gt; - Runs a single scheduled task immediately - regardless of scheduling settings. This will even run disabled tasks. Tasks will still use locking to prevent concurrent execution of the same task - even on clusters. The format of the &lt;task&gt; argument must be the same as returned by the --list option above.
+</pre>
+<pre>--disable=&lt;task&gt; - Disables a single scheduled task. The format of the &lt;task&gt; argument must be the same as returned by the --list option above.
+</pre>
+<pre>--enable=&lt;task&gt; - Enables a single scheduled task. The format of the &lt;task&gt; argument must be the same as returned by the --list option above.
+</pre>
+<pre>--showsql - Shows sql queries before they are execute
+</pre>
+<pre>--showdebugging - Shows developer debugging info
+</pre>
+<p><b>Note:</b> You must escape the "\" with an extra \ when using the --execute command. Take the following for example:
+</p>
+<pre>php admin/cli/scheduled_task.php --list</pre>
+<p>will return something like:
+</p>
+<pre>== List of scheduled tasks (http://yourserver.com/moodle) ==
+\enrol_imsenterprise\task\cron_task                10 * * * * *      ASAP
+\logstore_legacy\task\cleanup_task                 * 5 * * * *       ASAP
+\logstore_standard\task\cleanup_task               * 4 * * * *       Wednesday, November 12, 2014, 4:35 AM
+\mod_forum\task\cron_task                          * * * * * *       ASAP
+\core\task\automated_backup_task                   50 * * * * *      ASAP
+
+...
+</pre>
+<p>To run the first task in that list, you would execute
+</p>
+<pre>php admin/cli/scheduled_task.php --execute='\enrol_imsenterprise\task\cron_task'
+</pre>
+<p>Be aware of the single quotes. Without them, you would need to use double backlashes to avoid escaping by the shell.
+</p>
+<h3><span class="mw-headline" id="Ad_hoc_tasks">Ad hoc tasks</span></h3>
+<p><a href="37fc181470a569556f94c1f35940d0a7.html#Low_latency_adhoc_tasks" title="Cron">Ad hoc tasks</a> are low-latency tasks that are normally run by the cron. You can run just the queued ad hoc tasks with admin/cli/adhoc_task.php.
+</p><p>This script accepts the following options and arguments:
+</p>
+<pre> -h, --help                Print out this help
+     --showsql             Show sql queries before they are executed
+     --showdebugging       Show developer level debugging information
+ -e, --execute             Run all queued adhoc tasks
+ -k, --keep-alive=N        Keep this script alive for N seconds and poll for new adhoc tasks
+ -i  --ignorelimits        Ignore task_adhoc_concurrency_limit and task_adhoc_max_runtime limits
+ -f, --force               Run even if cron is disabled
+</pre>
+<p>For example to run the currently queued ad hoc tasks:
+</p>
+<pre>sudo -u apache php admin/cli/adhoc_task.php -e
+</pre>
+<p>See also the improvements to ad hoc tasks in <a href="9b3501d6968f4decc5503b86391b6b6d.html#Ad_hoc_tasks" title="Scheduled tasks">Scheduled_tasks#Ad_hoc_tasks</a>
+</p>
+<h2><span class="mw-headline" id="Database_transfer">Database transfer</span></h2>
+<p>A command line script for <a href="3b0fa72096b43a265d8cc95dc70e2254.html" title="Database transfer">Database transfer</a> may be found in <i>admin/tool/dbtransfer/cli/migrate.php</i>.
+</p>
+<h2><span class="mw-headline" id="Purge_caches">Purge caches</span></h2>
+<p>You can purge caches using this script:
+</p>
+<pre> php admin/cli/purge_caches.php
+</pre>
+<h2><span class="mw-headline" id="Kill_all_sessions">Kill all sessions</span></h2>
+<p>If needed for administrative reasons, you can kill all user sessions using this script:
+</p>
+<pre>php admin/cli/kill_all_sessions.php --run
+</pre>
+<p>As a result, all users will be logged out from Moodle.
+</p><p><span class="small-info-right"><a href="4559ca34b9e04e34424b54f6039900b9.html" title="Category:New features">New feature<br>in <b>Moodle 5.2</b>!</a></span>
+From Moodle 5.2, the script supports targeted session termination and runs in dry mode by default.
+</p><p>To terminate sessions for specific users only, pass a comma-separated list of user IDs with <code>--for-users</code>:
+</p>
+<pre>php admin/cli/kill_all_sessions.php --for-users=2,3,4 --run
+</pre>
+<p>Without <code>--run</code>, the script runs in dry mode &mdash; it reports what would happen without making any changes. This is useful for verifying which sessions will be terminated before executing.
+</p><p>Options:
+</p>
+<ul><li><code>--for-users=&lt;id,id,...&gt;</code> &mdash; Comma-separated list of user IDs whose sessions should be terminated. If omitted, all sessions are terminated.</li>
+<li><code>--run</code> &mdash; Execute the termination. Without this option, the script runs in dry mode.</li></ul>
+<h2><span id="Backup.2C_restore_and_import_of_courses_or_modules"></span><span class="mw-headline" id="Backup,_restore_and_import_of_courses_or_modules">Backup, restore and import of courses or modules</span></h2>
+<p>See Backup via CLI in <a href="d1b446b10a0e278070a3a2b68ec3de60.html" title="Course backup">Course backup</a> and Restore via CLI in <a href="8ed54550c139400f0c10a941cfad4b31.html" title="Course restore">Course restore</a> (new in 3.10 onwards). Courses or individual modules can be copied directly on the command line with import.php (in 4.4 onwards). See Import via CLI in <a href="ccfeb94fb0acbb1d2ac9e0729704e1d2.html" title="Course copy">Course copy</a>.
+</p>
+<h2><span class="mw-headline" id="Deleting_courses">Deleting courses</span></h2>
+<p>Courses can be deleted via CLI if you know the course id:
+</p>
+<pre>sudo -u www-data /usr/bin/php admin/cli/delete_course.php --courseid=123456
+</pre>
+<p><span class="small-info-right"><a href="4559ca34b9e04e34424b54f6039900b9.html" title="Category:New features">New feature<br>in <b>Moodle 5.2</b>!</a></span>
+From Moodle 5.2, courses can also be deleted by shortname or id number:
+</p>
+<pre>sudo -u www-data /usr/bin/php admin/cli/delete_course.php --shortname=mycourseshortname
+sudo -u www-data /usr/bin/php admin/cli/delete_course.php --idnumber=COURSE001
+</pre>
+<h2><span id="Fix_course_.2F_module_sequences"></span><span class="mw-headline" id="Fix_course_/_module_sequences">Fix course / module sequences</span></h2>
+<p>In rare cases (such as after upgrading from a very old version of Moodle), the course / section / module sequence data can be out of sync. This can cause various problems for affected courses, such as sections not appearing, backups failing, pages not displaying etc. There is a specific check to check for errors caused by this problem, and to fix the data in the database if they are found. To run this script please use the command below:
+</p>
+<pre> php admin/cli/fix_course_sequence.php -c=* --fix
+</pre>
+<p>This will check every course in Moodle and report which ones had errors and were fixed.
+</p>
+<h2><span class="mw-headline" id="Fix_orphaned_question_categories">Fix orphaned question categories</span></h2>
+<p>When a quiz is created, a new question category for the quiz is automatically created. In versions of Moodle prior to 2.9.1, if the quiz is deleted, the question category and any questions in the category remain in database. These orphaned question categories may be fixed by running the admin/cli/fix_orphaned_question_categories.php script with the --fix option.
+</p>
+<h2><span class="mw-headline" id="Search_and_replace_text">Search and replace text</span></h2>
+<p>This script can be used to search and replace text throughout the whole database. Use carefully and backup first always. More info in <a href="76a7c9afadd6a60caa62d1ad770f622a.html" title="Search and replace tool">Search and replace tool</a>.
+</p>
+<pre> php admin/tool/replace/cli/replace.php --search=//oldsitehost --replace=//newsitehost
+</pre>
+<h2><span class="mw-headline" id="Build_theme_CSS_cache">Build theme CSS cache</span></h2>
+<p>If Moodle is not running in theme designer mode it will keep a copy of the compiled CSS on local disk and serve that to the browser when it requests a page. If there isn't a copy on local disk then a copy will be built the first time a page within Moodle is requested. 
+</p><p>With this script you can pre-compile the cached CSS files for themes within Moodle to avoid having a user wait for the theme to compile during the first page request.
+</p>
+<pre> php admin/cli/build_theme_css.php --themes=boost
+</pre>
+<h2><span class="mw-headline" id="Get_and_set_configuration_values">Get and set configuration values</span></h2>
+<p>Displays the current value of the given setting, or set the given setting to the specified value.
+</p>
+<pre>$ php admin/cli/cfg.php [--component=&lt;componentname&gt;] [--json] [--shell-arg]
+$ php admin/cli/cfg.php --name=&lt;configname&gt; [--component=&lt;componentname&gt;] [--shell-arg] [--no-eol]
+$ php admin/cli/cfg.php --name=&lt;configname&gt; [--component=&lt;componentname&gt;] --set=&lt;value&gt;
+$ php admin/cli/cfg.php --name=&lt;configname&gt; [--component=&lt;componentname&gt;] --unset
+$ php admin/cli/cfg.php [--help|-h]
+</pre>
+<p>Examples:
+</p>
+<pre>$ php admin/cli/cfg.php --name=langmenu
+</pre>
+<p>will display the value of <i>Display language menu</i> in <i>Site administration &gt; Language &gt; Language settings</i> (0 for <i>No</i> or 1 for <i>Yes</i>).
+</p>
+<pre>$ php cfg.php --name=maxsizetodownload --component=folder
+</pre>
+<p>will display the value of <i>Maximum folder download size (MB)</i> accessible from <i>Site administration &gt; Plugins &gt; Activity modules &gt; Folder</i>.
+</p>
+<pre>$ php admin/cli/cfg.php --name=langmenu --set=0
+</pre>
+<p>will disable the <i>Language menu</i>.
+</p>
+<h2><span class="mw-headline" id="E-mail_flag_for_users">E-mail flag for users</span></h2>
+<p><b>New in 4.2</b> 
+The CLI script to change the email flag for one or many users at a time can be found on the page <a href="8c5b56344af6b3d6047178368c0c31a4.html" title="E-Mail flag for users">E-Mail flag for users</a>
+</p>
+<h2><span class="mw-headline" id="Dashboard_reset">Dashboard reset</span></h2>
+<p>If you make changes to the dashboard and want all users to have their dashboard reset to reflect the changes this can be done on the cli:
+</p>
+<pre>php admin/cli/dashboard_reset.php -e
+</pre>
+<h2><span class="mw-headline" id="Managing_plugins_via_command_line">Managing plugins via command line</span></h2>
+<h3><span class="mw-headline" id="List_and_uninstall_Moodle_plugins">List and uninstall Moodle plugins</span></h3>
+<p>Moodle includes a handy command-line tool to display a list of plugins and remove plugins.
+</p>
+<pre>$ php admin/cli/uninstall_plugins.php
+</pre>
+<p>This command line tool accepts the following arguments.
+</p><p>Options:
+</p>
+<pre>    -h --help                   Print this help.
+    --show-all                  Displays a list of all installed plugins.
+    --show-contrib              Displays a list of all third-party installed plugins.
+    --show-missing              Displays a list of plugins missing from disk.
+    --purge-missing             Uninstall all missing from disk plugins.
+    --plugins=&lt;plugin name&gt;     A comma separated list of plugins to be uninstalled. E.g. mod_assign,mod_forum
+    --run                       Execute uninstall. If this option is not set, then the script will be run in a dry mode.
+    --showsql                   Show sql queries before they are executed.
+    --showdebugging             Show developer level debugging information.
+</pre>
+<p>Dry Mode does everything the script would normally do except for actually making any changes. This is useful when you want to test the validity of your command.
+</p><p>Run this command from the Moodle wwwroot directory. Here are some examples:
+</p>
+<pre>    # php admin/cli/uninstall_plugins.php  --show-all
+       Prints tab-separated list of all installed plugins.
+    # php admin/cli/uninstall_plugins.php  --show-contrib
+       Prints tab-separated list of all third-party installed plugins.
+    # php admin/cli/uninstall_plugins.php  --show-missing
+</pre>
+<blockquote><p>        Prints tab-separated list of all missing from disk plugins.</p></blockquote>
+<pre>    # php admin/cli/uninstall_plugins.php  --purge-missing
+       A dry run of uninstalling all missing plugins. This will NOT uninstall the plugin. To actually uninstall, you need to add the '--run' arguments.
+    # php admin/cli/uninstall_plugins.php  --purge-missing --run
+       Run uninstall of all missing plugins.
+    # php admin/cli/uninstall_plugins.php  --plugins=mod_assign,mod_forum
+       A dry run of uninstalling mod_assign and mod_forum plugins. This will NOT uninstall the plugin. To actually uninstall, you need to add the '--run' arguments.
+    # php admin/cli/uninstall_plugins.php  --plugins=mod_assign,mod_forum --run
+       Run uninstall for mod_assign and mod_forum plugins.
+</pre>
+<p>This tool does not perform all of the steps needed to fully uninstall a plugin. You must then:
+</p>
+<ul><li>Remove the files belonging to the plugin manually;</li>
+<li><a class="mw-selflink-fragment" href="#Upgrading">Update the Moodle database</a> as previously described.</li></ul>
+<p>If you skip one or both of these steps, you will be prompted to update the Moodle database or re-install the plugin the next time you log in as a site administrator and access the Site Administration &gt; Notifications page.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/MDL-35736">MDL-35736</a> - Manage plugins via command-line</li>
+<li><a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/MDL-35736">MDL-35736</a> - Manage plugins via command-line</li>
+<li><a rel="nofollow" class="external text" href="https://tracker.moodle.org/browse/MDL-36237">MDL-36237</a> - Resort course list via CLI</li>
+<li><a rel="nofollow" class="external text" href="http://moosh-online.com/">MOOSH</a> - MOOdle SHell. It is a command-line tool that will allow you to perform many of the most common Moodle tasks.</li>
+<li>MOOSH 2 - for moodle core versions 5.1 and above.  See link moosh2 link off the MOOSH link above.</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260822110335
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show&#8208;toc]
+CPU time usage: 0.042 seconds
+Real time usage: 0.218 seconds
+Preprocessor visited node count: 170/1000000
+Post&#8208;expand include size: 1593/2097152 bytes
+Template argument size: 548/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post&#8208;expand size: 1955/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   16.331      1 -total
+ 45.10%    7.365      2 Template:New_features
+ 24.19%    3.951      1 Template:Installing_Moodle
+ 21.18%    3.459      2 Template:Note
+ 20.60%    3.365      1 Template:Version
+-->
+
+<!-- Saved in parser cache with key 502docs_en:pcache:idhash:9122-0!canonical and timestamp 20260822110335 and revision id 156176. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs.moodle.org/502/en/index.php?title=Administration_via_command_line&amp;oldid=156176">https://docs.moodle.org/502/en/index.php?title=Administration_via_command_line&amp;oldid=156176</a>"</div>
+</body></html>
+</div>
+
+						</div>
+
+						<!-- end body text -->
+					</div>
+					<!-- category links -->
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://docs.moodle.org/502/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="7f264aa70db3768dcef1896a8ec93e70.html" title="Category:Installation">Installation</a></li><li><a href="4559ca34b9e04e34424b54f6039900b9.html" title="Category:New features">New features</a></li></ul></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mt-3 mb-4 col">
+				<!-- navigation bar -->
+				<nav class="p-navbar collapsible mb-2" role="navigation" id="mw-navigation-igdhk4wzer">
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#igdhk4wzzz"></button>
+					<div class="collapse navbar-collapse igdhk4wzzz" id="igdhk4wzzz">
+						<div class="navbar-nav">
+						<!-- toolbox -->
+						<div class="nav-item p-tb-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-tb-toggle" data-toggle="dropdown" data-boundary="viewport">Tools</a>
+							<div class="dropdown-menu">
+								<div id="t-whatlinkshere" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:WhatLinksHere/Administration_via_command_line" title="A list of all wiki pages that link here [j]" accesskey="j" class="nav-link t-whatlinkshere">What links here</a></div>
+								<div id="t-recentchangeslinked" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:RecentChangesLinked/Administration_via_command_line" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k" class="nav-link t-recentchangeslinked">Related changes</a></div>
+								<div id="t-specialpages" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q" class="nav-link t-specialpages">Special pages</a></div>
+								<div id="t-print" class="nav-item mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p" class="nav-link t-print">Printable version</a></div>
+								<div id="t-permalink" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Administration_via_command_line&amp;oldid=156176" title="Permanent link to this revision of this page" class="nav-link t-permalink">Permanent link</a></div>
+								<div id="t-info" class="nav-item mw-list-item"><a href="https://docs.moodle.org/502/en/index.php?title=Administration_via_command_line&amp;action=info" title="More information about this page" class="nav-link t-info">Page information</a></div>
+							</div>
+						</div>
+						<!-- languages -->
+						<div class="nav-item p-lang-dropdown dropup">
+							<a href="#" class="nav-link dropdown-toggle p-lang-toggle" data-toggle="dropdown" data-boundary="viewport">In other languages</a>
+							<div class="dropdown-menu">
+								<div class="interlanguage-link interwiki-fr nav-item mw-list-item"><a href="https://docs.moodle.org/fr/Administration_en_ligne_de_commande" title="Administration en ligne de commande – français" lang="fr" hreflang="fr" data-title="Administration en ligne de commande" data-language-autonym="Français" data-language-local-name="français" class="interlanguage-link-target nav-link">Français</a></div>
+								<div class="interlanguage-link interwiki-de nav-item mw-list-item"><a href="https://docs.moodle.org/de/Administration_über_Kommandozeile" title="Administration über Kommandozeile – Deutsch" lang="de" hreflang="de" data-title="Administration über Kommandozeile" data-language-autonym="Deutsch" data-language-local-name="Deutsch" class="interlanguage-link-target nav-link">Deutsch</a></div>
+								<div class="interlanguage-link interwiki-es nav-item mw-list-item"><a href="https://docs.moodle.org/es/Administración_por_línea_de_comando" title="Administración por línea de comando – español" lang="es" hreflang="es" data-title="Administración por línea de comando" data-language-autonym="Español" data-language-local-name="español" class="interlanguage-link-target nav-link">Español</a></div>
+								<div class="interlanguage-link interwiki-it nav-item mw-list-item"><a href="https://docs.moodle.org/it/Amministrazione_via_linea_di_comando" title="Amministrazione via linea di comando – italiano" lang="it" hreflang="it" data-title="Amministrazione via linea di comando" data-language-autonym="Italiano" data-language-local-name="italiano" class="interlanguage-link-target nav-link">Italiano</a></div>
+								<div class="interlanguage-link interwiki-ja nav-item mw-list-item"><a href="https://docs.moodle.org/ja/コマンドライン経由の管理" title="コマンドライン経由の管理 – 日本語" lang="ja" hreflang="ja" data-title="コマンドライン経由の管理" data-language-autonym="日本語" data-language-local-name="日本語" class="interlanguage-link-target nav-link">日本語</a></div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- footer links -->
+				<div id="footer-info" class="footer-info">
+					<!-- info -->
+					<div> This page was last edited on 2 August 2026, at 00:59.</div>
+					<div>Content is available under <a class="external" rel="nofollow" href="https://docs.moodle.org/dev/License">GNU General Public License</a> unless otherwise noted.</div>
+				</div>
+				<!-- places -->
+				<div id="footer-places" class="footer-places">
+					<div><a href="2494bc452bb33b701a6d36bc89824678.html">Privacy</a></div>
+					<div><a href="9063bca7d86bd69a57404eee41226cd3.html">About Moodle Docs</a></div>
+					<div><a href="820e6dbd2bd7b6b1819cada5b266bf15.html">Disclaimers</a></div>
+					<div><a href="https://docs.moodle.org/en/MoodleDocs:Accessibility_statement">Accessibility statement</a></div>
+				</div>
+			</div>
+			<div class="col">
+				<!-- footer icons -->
+				<div id="footer-icons" class="justify-content-end footer-icons">
+					<!-- poweredby -->
+					<div><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="resources/assets/03cffe2f016c4029fc0d926ff43b6b50.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></div>
+				</div>
+			</div>
+		</div>
+	</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":166,"wgPageParseReport":{"limitreport":{"cputime":"0.042","walltime":"0.218","ppvisitednodes":{"value":170,"limit":1000000},"postexpandincludesize":{"value":1593,"limit":2097152},"templateargumentsize":{"value":548,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1955,"limit":5000000},"timingprofile":["100.00%   16.331      1 -total"," 45.10%    7.365      2 Template:New_features"," 24.19%    3.951      1 Template:Installing_Moodle"," 21.18%    3.459      2 Template:Note"," 20.60%    3.365      1 Template:Version"]},"cachereport":{"timestamp":"20260822110335","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>
