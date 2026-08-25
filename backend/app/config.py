@@ -19,6 +19,14 @@ else:
 
 CHROMA_DB_PATH = DATA_DIR / "chroma_db"
 
+# A prebuilt vector index is baked into the image at build time (see Dockerfile)
+# at a FIXED path, independent of DATA_DIR. At runtime DATA_DIR is the Railway
+# volume mount (e.g. /data), which is empty and differs from the build-time path,
+# so on startup the app seeds CHROMA_DB_PATH from this prebuilt copy if the live
+# store is empty. This survives the build/runtime path difference and works
+# whether or not /data is a persistent volume.
+PREBUILT_CHROMA_DIR = BACKEND_ROOT.parent / "prebuilt_data" / "chroma_db"
+
 # The Moodle release TRU's instance is running. Everything that needs to name
 # a version — the system prompt, tool descriptions, the documentation export we
 # ingest, the docs.moodle.org links we hand out — derives from this one value.
