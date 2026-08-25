@@ -39,3 +39,6 @@ data/mbz_uploads/
 # under backend/knowledge_sources/ so it ships in the container.
 /moodledocs_en/
 
+
+# Prebuilt index staged locally for testing; built fresh during Docker build
+/prebuilt_data/
