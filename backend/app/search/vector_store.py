@@ -154,7 +154,7 @@ def get_source_stats() -> list[dict]:
         return []
 
     # Query for each known source
-    sources = ["moodle_docs", "olproduction", "trubox", "tru_faq"]
+    sources = ["moodle_docs", "olproduction", "trubox", "orientation", "tru_faq"]
     stats = []
 
     for source_name in sources:
